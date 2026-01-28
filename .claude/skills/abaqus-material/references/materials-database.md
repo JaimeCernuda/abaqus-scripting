@@ -3,6 +3,23 @@
 Ready-to-use material property sets for common engineering materials.
 All values in SI (mm-tonne-s-N-MPa) units.
 
+## Quick Copy Patterns
+
+**Need steel fast?**
+```python
+mat = model.Material(name='Steel'); mat.Elastic(table=((210000.0, 0.3),)); mat.Density(table=((7.85e-9,),))
+```
+
+**Need aluminum fast?**
+```python
+mat = model.Material(name='Aluminum'); mat.Elastic(table=((68900.0, 0.33),)); mat.Density(table=((2.70e-9,),))
+```
+
+**Need titanium fast?**
+```python
+mat = model.Material(name='Titanium'); mat.Elastic(table=((113800.0, 0.34),)); mat.Density(table=((4.43e-9,),))
+```
+
 ## Metals
 
 ### Steel - Mild/Structural (ASTM A36)
@@ -236,3 +253,55 @@ material.Conductivity(table=((50.0,),))        # mW/(mm·K)
 material.SpecificHeat(table=((5.0e11,),))      # mJ/(tonne·K)
 material.Expansion(table=((12.0e-6,),))        # 1/K
 ```
+
+## Material Selection Guide
+
+| Application | Recommended Material | Key Properties |
+|-------------|---------------------|----------------|
+| General structural | Steel (Mild) | High E, good yield |
+| Lightweight | Aluminum 6061-T6 | Low density, decent strength |
+| High strength-to-weight | Ti-6Al-4V | Best strength/density ratio |
+| Corrosion resistance | SS 304/316 | Chemical stability |
+| High performance | Steel 4340 | Very high yield |
+| Cost-effective | Steel (Mild) | Cheapest option |
+
+## Common Material Pairs for Comparison
+
+### Steel vs Aluminum (Weight Saving Study)
+```python
+# Steel reference
+steel = model.Material(name='Steel')
+steel.Elastic(table=((210000.0, 0.30),))
+steel.Density(table=((7.85e-9,),))
+
+# Aluminum alternative (65% lighter, 67% less stiff)
+aluminum = model.Material(name='Aluminum')
+aluminum.Elastic(table=((68900.0, 0.33),))
+aluminum.Density(table=((2.70e-9,),))
+```
+
+### Elastic vs Elastic-Plastic (Nonlinearity Study)
+```python
+# Linear elastic
+steel_elastic = model.Material(name='Steel_Elastic')
+steel_elastic.Elastic(table=((210000.0, 0.30),))
+steel_elastic.Density(table=((7.85e-9,),))
+
+# Elastic-plastic with hardening
+steel_plastic = model.Material(name='Steel_Plastic')
+steel_plastic.Elastic(table=((210000.0, 0.30),))
+steel_plastic.Plastic(table=((250.0, 0.0), (400.0, 0.20),))
+steel_plastic.Density(table=((7.85e-9,),))
+```
+
+## Unit Conversion Reference
+
+If you have properties in other units:
+
+| From | To | Multiply by |
+|------|-----|-------------|
+| GPa | MPa | 1000 |
+| kg/m³ | tonne/mm³ | 1e-12 |
+| W/(m·K) | mW/(mm·K) | 1 |
+| J/(kg·K) | mJ/(tonne·K) | 1e9 |
+| 1/°C | 1/K | 1 (same) |

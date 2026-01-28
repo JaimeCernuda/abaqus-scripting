@@ -1,6 +1,6 @@
 ---
 name: abaqus-optimization
-description: Configure topology and shape optimization in Abaqus using Tosca - design responses, objectives, constraints, and manufacturing restrictions.
+description: Configure Tosca optimization. Use when user mentions design response, objective function, optimization constraint, or SIMP penalty. Base module for topology/shape optimization.
 allowed-tools:
   - Read
   - Write
@@ -12,218 +12,118 @@ allowed-tools:
 
 # Abaqus Optimization Skill
 
+This skill configures optimization tasks in Abaqus. It's the **base module** - for complete workflows, route to `/abaqus-topology-optimization` or `/abaqus-shape-optimization`.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Create a TopologyTask for material distribution optimization
-- Define design responses (volume, strain energy, frequency, stress)
-- Set optimization objectives (minimize compliance, maximize frequency)
-- Add optimization constraints (volume fraction, displacement limit)
-- Define frozen regions (where material must stay)
-- Add manufacturing constraints (member size, symmetry, draw direction)
+**Route here when user mentions:**
+- "design response", "objective function", "optimization constraint"
+- "SIMP penalty", "material interpolation"
+- Low-level optimization setup (not complete workflows)
 
-**Do NOT use for:**
-- Complete TO workflow (use `/abaqus-topology-optimization` instead)
-- Shape optimization workflow (use `/abaqus-shape-optimization`)
-- Running the optimization (use `/abaqus-job` with OptimizationProcess)
+**Route elsewhere:**
+- Complete topology optimization workflow → `/abaqus-topology-optimization`
+- Complete shape optimization workflow → `/abaqus-shape-optimization`
+- Running the optimization → `/abaqus-job`
 
-**Note:** Requires full Abaqus license with Tosca module.
+## Prerequisites
 
-## Key Decisions
+Before optimization setup:
+1. ✅ Working static analysis that converges
+2. ✅ Appropriate mesh density
+3. ✅ Full Abaqus license with Tosca (not Learning Edition)
 
-### 1. Objective Selection
+## Workflow: Setting Up Optimization
 
-| Goal | Response | Objective |
-|------|----------|-----------|
-| Maximum stiffness | strain_energy | MINIMIZE_MAXIMUM |
-| Minimum weight | volume | MINIMIZE |
-| Maximum frequency | eigenfrequency | MAXIMIZE_MINIMUM |
-| Minimum stress | stress | MINIMIZE_MAXIMUM |
+### Step 1: Understand User's Goal
 
-### 2. Common Constraint Combinations
+Ask if unclear:
+- **What to optimize?** Weight, stiffness, frequency, stress?
+- **What constraints?** Volume limit, stress limit, displacement limit?
+- **Manufacturing?** Casting (draw direction), additive (min feature size)?
 
-| Scenario | Objective | Constraint |
-|----------|-----------|------------|
-| Stiffness with weight limit | Min compliance | Volume ≤ 30% |
-| Weight with stiffness | Min volume | Compliance ≤ X |
-| Weight with stress limit | Min volume | Stress ≤ σ_allow |
+### Step 2: Choose Objective-Constraint Pair
 
-### 3. Manufacturing Constraints
+| User Wants | Objective | Constraint |
+|------------|-----------|------------|
+| Lightest structure that's stiff enough | Minimize volume | Compliance ≤ limit |
+| Stiffest structure at given weight | Minimize compliance | Volume ≤ 30% |
+| Avoid resonance | Maximize frequency | Volume ≤ target |
+| Reduce peak stress | Minimize max stress | Volume ≤ target |
 
-| Constraint | Purpose | Value |
-|------------|---------|-------|
-| Min member size | Prevent thin features | 3-5mm |
-| Max member size | Limit thick sections | 10-20mm |
-| Draw direction | Enable mold extraction | Vector |
-| Symmetry | Mirror geometry | Plane |
+**Most common:** Minimize compliance with volume ≤ 30%
 
-## Required Inputs
+### Step 3: Define Design Responses
 
-| Input | Required |
-|-------|----------|
-| Task type | YES (Topology or Shape) |
-| Design region | YES (MODEL or specific set) |
-| Objective | YES |
-| Volume constraint | Typically YES |
+Design responses are the quantities optimization tracks:
 
-## Common Patterns
+| Response | When to Use |
+|----------|-------------|
+| `VOLUME` | Almost always (for volume constraint) |
+| `STRAIN_ENERGY` | Stiffness optimization |
+| `EIGENFREQUENCY` | Vibration/resonance |
+| `STRESS` | Stress-constrained design |
+| `DISPLACEMENT` | Deflection limit |
 
-### Create Topology Task
-```python
-model.TopologyTask(
-    name='TopoTask',
-    region=MODEL,
-    materialInterpolationTechnique=SIMP,
-    materialInterpolationPenalty=3.0,
-    freezeBoundaryConditionRegions=ON,
-    freezeLoadRegions=ON,
-    objectiveFunctionDeltaStopCriteria=0.001
-)
-```
+### Step 4: Set Objective Function
 
-### Design Responses
+The objective is what gets optimized:
+- `MINIMIZE_MAXIMUM` - For compliance, stress
+- `MAXIMIZE_MINIMUM` - For frequency
 
-```python
-task = model.optimizationTasks['TopoTask']
+### Step 5: Add Constraints
 
-# Volume response
-task.SingleTermDesignResponse(
-    name='volume',
-    region=MODEL,
-    identifier=VOLUME
-)
+Constraints limit the design space:
+- `RELATIVE_LESS_THAN_EQUAL` - Percentage (volume ≤ 30%)
+- `ABSOLUTE_LESS_THAN_EQUAL` - Fixed value (stress ≤ 200 MPa)
 
-# Strain energy (compliance)
-task.SingleTermDesignResponse(
-    name='strain_energy',
-    region=MODEL,
-    identifier=STRAIN_ENERGY,
-    stepOptions=LAST_STEP
-)
+### Step 6: Consider Manufacturing
 
-# Eigenfrequency
-task.SingleTermDesignResponse(
-    name='frequency',
-    region=MODEL,
-    identifier=EIGENFREQUENCY,
-    modes=(1,)  # First mode
-)
+| Constraint | Purpose |
+|------------|---------|
+| Min member size | Prevents thin, unmanufacturable features (3-5mm typical) |
+| Symmetry | Mirrors design about plane |
+| Draw direction | Enables mold/casting extraction |
+| Overhang angle | For additive manufacturing |
 
-# Displacement
-task.SingleTermDesignResponse(
-    name='displacement',
-    region=assembly.sets['MonitorPoint'],
-    identifier=DISPLACEMENT,
-    dof=2  # U2
-)
+### Step 7: Freeze Critical Regions
 
-# Maximum stress
-task.SingleTermDesignResponse(
-    name='max_stress',
-    region=MODEL,
-    identifier=STRESS,
-    stressComponent=MISES,
-    operation=MAXIMUM
-)
-```
+Always freeze:
+- BC application regions (mounting points)
+- Load application regions
+- Functional surfaces (mating interfaces)
 
-### Objective Functions
+## Key Parameters
 
-```python
-# Minimize compliance (maximize stiffness)
-task.ObjectiveFunction(
-    name='MinCompliance',
-    objectives=((task.designResponses['strain_energy'], MINIMIZE_MAXIMUM, 1.0, 0.0),)
-)
+| Parameter | Recommended | Notes |
+|-----------|-------------|-------|
+| SIMP penalty | 3.0 | Higher = sharper boundaries |
+| Volume fraction | 0.3-0.4 | Start conservative |
+| Min member size | 3× mesh size | Prevents checkerboard |
+| Design cycles | 30-50 | More for complex geometry |
 
-# Maximize frequency
-task.ObjectiveFunction(
-    name='MaxFreq',
-    objectives=((task.designResponses['frequency'], MAXIMIZE_MINIMUM, 1.0, 0.0),)
-)
-```
+## Validation Checklist
 
-### Constraints
-
-```python
-# Volume constraint (30% of original)
-task.OptimizationConstraint(
-    name='VolConstraint',
-    designResponse='volume',
-    restrictionMethod=RELATIVE_LESS_THAN_EQUAL,
-    restrictionValue=0.30
-)
-
-# Displacement constraint
-task.OptimizationConstraint(
-    name='DispConstraint',
-    designResponse='displacement',
-    restrictionMethod=ABSOLUTE_LESS_THAN_EQUAL,
-    restrictionValue=1.0  # Max 1mm
-)
-
-# Stress constraint
-task.OptimizationConstraint(
-    name='StressConstraint',
-    designResponse='max_stress',
-    restrictionMethod=ABSOLUTE_LESS_THAN_EQUAL,
-    restrictionValue=200.0  # Max 200 MPa
-)
-```
-
-### Frozen Regions
-```python
-task.FrozenArea(name='FreezeMounting', region=assembly.sets['MountingRegion'])
-task.FrozenArea(name='FreezeLoad', region=assembly.sets['LoadRegion'])
-```
-
-### Manufacturing Constraints
-
-```python
-# Minimum member size
-task.GeometricRestriction(
-    name='MinSize',
-    technique=MEMBER_SIZE,
-    region=MODEL,
-    minSize=3.0  # mm
-)
-
-# Symmetry
-task.GeometricRestriction(
-    name='SymY',
-    symmetric=SYMMETRIC,
-    axis=AXIS_2  # Y-axis
-)
-
-# Draw direction (casting)
-task.GeometricRestriction(
-    name='DrawDir',
-    technique=STAMP,
-    region=MODEL,
-    stampDirection=((0, 0, 0), (0, 1, 0))  # Pull in +Y
-)
-```
-
-### Create Optimization Process
-```python
-opt_process = mdb.OptimizationProcess(
-    name='Optimization',
-    model='MyModel',
-    task='TopoTask',
-    maxDesignCycle=50,
-    dataSaveFrequency=OPT_DATASAVE_EVERY_CYCLE
-)
-```
+After setup, verify:
+- [ ] Task created with correct region
+- [ ] At least one design response defined
+- [ ] Objective function set
+- [ ] Volume or other constraint defined
+- [ ] BC/load regions frozen
+- [ ] Manufacturing constraint if needed
 
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "Checkerboard" | No filtering | Add min member size |
-| "Disconnected regions" | Poor load path | Add frozen regions |
-| "Not converging" | Infeasible | Relax volume fraction |
-| "License error" | No Tosca | Requires full license |
+| Problem | Likely Cause | Solution |
+|---------|--------------|----------|
+| Checkerboard pattern | No min member size | Add `GeometricRestriction` |
+| Disconnected result | Load path broken | Freeze more regions |
+| Not converging | Constraint too tight | Relax volume fraction |
+| "License error" | No Tosca module | Requires full Abaqus |
 
-## API Reference
+## Code Patterns
 
-For detailed parameters: [Optimization API](../../docs/abaqus-api/modules/optimization.md)
+For actual API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)
+- [Troubleshooting Guide](references/troubleshooting.md)

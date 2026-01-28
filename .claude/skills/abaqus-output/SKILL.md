@@ -1,6 +1,6 @@
 ---
 name: abaqus-output
-description: Configure output requests in Abaqus - field outputs, history outputs, and output database settings.
+description: Configure output requests - field outputs, history outputs. Use when user asks what results to save, output variables, reduce output file size, or history output.
 allowed-tools:
   - Read
   - Write
@@ -12,188 +12,98 @@ allowed-tools:
 
 # Abaqus Output Skill
 
+Configure what results to save from Abaqus analyses. Controls field outputs (full-field data for contour plots) and history outputs (time series at specific points).
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Request specific field outputs (S, U, RF, etc.)
-- Set up history outputs at specific locations
-- Control output frequency to manage file size
-- Request energy outputs for validation
-- Configure restart output
-- Request contact-specific outputs
+**Route here when user mentions:**
+- "What results should I save?" / "Output variables"
+- "Track displacement over time" / "History output"
+- "ODB file too large" / "Reduce output"
+- "Monitor a specific node"
 
-**Do NOT use for:**
-- Extracting results from ODB → use `/abaqus-odb`
-- Running the analysis → use `/abaqus-job`
-- Post-processing or visualization → use `/abaqus-odb`
+**Route elsewhere:**
+- Extracting/reading results from ODB → `/abaqus-odb`
+- Running the analysis → `/abaqus-job`
 
 ## Key Decisions
 
 ### 1. Field vs History Output
 
-| Type | What | When |
-|------|------|------|
-| Field Output | All nodes/elements | Contour plots, full-field results |
-| History Output | Specific locations | Time series, monitoring points |
+| Type | Use For | Data Scope |
+|------|---------|------------|
+| Field Output | Contour plots, full-field visualization | All nodes/elements |
+| History Output | Time series plots, monitoring | Specific points/regions |
 
-### 2. What Variables to Request
+### 2. Common Output Variables
 
-| Analysis | Essential Variables |
-|----------|---------------------|
+| Variable | Description |
+|----------|-------------|
+| S | Stress tensor (includes Mises) |
+| U | Displacement |
+| RF | Reaction forces |
+| E | Total strain |
+| PE, PEEQ | Plastic strain |
+| V, A | Velocity, acceleration (dynamic) |
+| NT, HFL | Temperature, heat flux (thermal) |
+| CSTRESS, CDISP | Contact stress/displacement |
+
+### 3. Analysis-Specific Recommendations
+
+| Analysis Type | Essential Variables |
+|---------------|---------------------|
 | Static | S, U, RF |
 | Dynamic | S, U, V, A, RF, ENER |
 | Thermal | NT, HFL, RFL |
 | Contact | CSTRESS, CDISP, COPEN |
 | Plastic | S, PE, PEEQ |
-| Modal | U (mode shapes) |
 
-### 3. Output Frequency
+### 4. Output Frequency
 
-| Concern | frequency | Guidance |
-|---------|-----------|----------|
-| Full detail | 1 | Every increment |
-| Balanced | 5-10 | Every N increments |
-| Space-saving | 20+ or numIntervals | Fixed number of frames |
+| Scenario | Setting | Effect |
+|----------|---------|--------|
+| Full detail | frequency=1 | Every increment (large files) |
+| Balanced | frequency=5-10 | Every N increments |
+| Space-saving | numIntervals=20 | Fixed number of frames |
 
-## Required Inputs
+## What to Ask User
 
-| Input | Required | Default |
-|-------|----------|---------|
-| Step name | YES | - |
-| Variables | YES | (S, U, RF) |
-| Frequency | NO | 1 |
+If unclear, ask:
+1. **What results do you need?** Stress, displacement, reaction forces?
+2. **Track a specific point over time?** → Need history output
+3. **Large model or long analysis?** → May need reduced frequency
 
-## Common Patterns
+## Workflow: Configuring Output
 
-### Basic Field Output
-```python
-model.FieldOutputRequest(
-    name='F-Output-1',
-    createStepName='LoadStep',
-    variables=('S', 'U', 'RF')
-)
-```
+### Step 1: Identify Needed Variables
+Based on analysis type: Static needs S, U, RF minimum. Dynamic adds V, A, energy.
 
-### Comprehensive Field Output
-```python
-model.FieldOutputRequest(
-    name='AllFields',
-    createStepName='LoadStep',
-    variables=(
-        'S', 'E', 'U', 'RF',  # Basic
-        'PEEQ', 'PE',          # Plastic
-        'ENER',                # Energy
-    ),
-    frequency=1
-)
-```
+### Step 2: Create Field Output Request
+Required: Step name + variables tuple. Optional: frequency, region.
 
-### History Output at Point
-```python
-# Create set for monitoring
-monitor_vertex = instance.vertices.findAt(((x, y, z),))
-assembly.Set(vertices=monitor_vertex, name='MonitorPoint')
+### Step 3: Create History Output (if needed)
+For time-series: Create node set at location, then HistoryOutputRequest with that region. Use component variables (U1, U2, U3).
 
-model.HistoryOutputRequest(
-    name='H-Output-1',
-    createStepName='LoadStep',
-    variables=('U1', 'U2', 'U3', 'RF1', 'RF2', 'RF3'),
-    region=assembly.sets['MonitorPoint'],
-    frequency=1
-)
-```
+### Step 4: Manage File Size (large models)
+Options: Reduce frequency, use numIntervals, limit variables, output to specific regions only.
 
-### Energy History (Global)
-```python
-model.HistoryOutputRequest(
-    name='Energies',
-    createStepName='LoadStep',
-    variables=(
-        'ALLSE',   # Strain energy
-        'ALLKE',   # Kinetic energy
-        'ALLWK',   # External work
-        'ETOTAL',  # Total energy (should be ~constant)
-    ),
-    frequency=1
-)
-```
+## Validation Checklist
 
-### Contact Output
-```python
-model.FieldOutputRequest(
-    name='ContactOutput',
-    createStepName='LoadStep',
-    variables=('CSTRESS', 'CDISP', 'COPEN', 'CSLIP')
-)
-```
-
-### Reduced Frequency
-```python
-# Every 10th increment
-model.FieldOutputRequest(
-    name='Sparse',
-    createStepName='LoadStep',
-    variables=('S', 'U'),
-    frequency=10
-)
-
-# Fixed number of output frames
-model.FieldOutputRequest(
-    name='Fixed20',
-    createStepName='LoadStep',
-    variables=('S', 'U'),
-    numIntervals=20
-)
-```
-
-### Output for Specific Region
-```python
-model.FieldOutputRequest(
-    name='CriticalRegion',
-    createStepName='LoadStep',
-    variables=('S', 'PE', 'PEEQ'),
-    region=assembly.sets['StressConcentration'],
-    frequency=1
-)
-```
-
-### Delete Default Output
-```python
-if 'F-Output-1' in model.fieldOutputRequests:
-    del model.fieldOutputRequests['F-Output-1']
-```
-
-### Restart Request
-```python
-model.RestartRequest(
-    name='Restart',
-    createStepName='LoadStep',
-    frequency=10  # Every 10 increments
-)
-```
-
-## Common Output Variables
-
-| Variable | Description |
-|----------|-------------|
-| S | Stress tensor (S11, S22, S33, S12, S13, S23, Mises) |
-| E | Total strain |
-| U | Displacement (U1, U2, U3, magnitude) |
-| RF | Reaction force (RF1, RF2, RF3) |
-| V | Velocity (dynamic) |
-| A | Acceleration (dynamic) |
-| PEEQ | Equivalent plastic strain |
-| NT | Nodal temperature |
-| ENER | Energy densities |
+- [ ] Field output covers essential variables (S, U, RF)
+- [ ] History output region/set exists before referencing
+- [ ] Frequency appropriate for analysis length
+- [ ] Contact analysis has contact-specific outputs
 
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "Variable not available" | Wrong element type or analysis | Check compatibility |
-| "ODB file too large" | Too much output | Reduce frequency or variables |
-| "No history output" | Bad region specification | Verify set exists |
+| Problem | Cause | Solution |
+|---------|-------|----------|
+| "Variable not available" | Wrong element/analysis type | Check compatibility |
+| ODB file too large | Too much output | Reduce frequency or variables |
+| No history data | Bad region spec | Verify set exists |
 
-## API Reference
+## Code Patterns
 
-For detailed parameters: [Output API](../../docs/abaqus-api/modules/output.md)
+For API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)

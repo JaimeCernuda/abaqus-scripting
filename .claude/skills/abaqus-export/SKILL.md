@@ -1,6 +1,6 @@
 ---
 name: abaqus-export
-description: Export Abaqus geometry and results to external formats - STL, STEP, INP, images, and data files.
+description: Export Abaqus geometry and results. Use when user mentions exporting to STL, STEP, CSV, or generating input files for external use.
 allowed-tools:
   - Read
   - Write
@@ -12,170 +12,98 @@ allowed-tools:
 
 # Abaqus Export Skill
 
+Export geometry and results from Abaqus to external formats for 3D printing, CAD exchange, data analysis, or archival.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Export part geometry to STEP/IGES for CAD
-- Export mesh to STL for 3D printing
-- Write input file (.inp) for external submission
-- Export results to CSV for analysis
-- Export topology optimization result as STL
-- Generate images from CAE
+**Route here when user mentions:**
+- "Export to STL" / "Convert to STL" / "3D printing"
+- "Save as STEP" / "Export to CAD"
+- "Generate input file" / "Write INP"
+- "Export results to CSV" / "Export to Excel"
+- "Save the mesh" / "Extract mesh data"
+- "Export deformed shape" / "Export topology result"
 
-**Do NOT use for:**
-- Reading ODB results → use `/abaqus-odb`
-- Importing CAD files → use `/abaqus-geometry`
-- Running analysis → use `/abaqus-job`
+**Route elsewhere:**
+- Reading ODB results → `/abaqus-odb`
+- Importing CAD files → `/abaqus-geometry`
+- Running analysis → `/abaqus-job`
 
 ## Key Decisions
 
-### Export Format Selection
+### What Format to Use?
 
-| Format | Use Case |
-|--------|----------|
-| STEP | CAD import, further design work |
-| IGES | Legacy CAD systems |
-| STL | 3D printing, visualization |
-| INP | External Abaqus submission |
-| CSV | Data analysis, spreadsheets |
-| PNG/SVG | Reports, presentations |
+| Need | Format | Requires |
+|------|--------|----------|
+| 3D printing | STL (double precision) | Meshed part |
+| CAD exchange | STEP | Part geometry |
+| Legacy CAD | IGES | Part geometry |
+| Data analysis | CSV | ODB file |
+| Archive/HPC | INP | Complete model |
+| Reports/images | PNG/SVG | GUI session |
 
-## Required Inputs
+### What to Export?
 
-| Input | Required |
-|-------|----------|
-| Source (part, ODB) | YES |
-| Output path | YES |
-| Format | YES |
+| Source | Available Formats |
+|--------|------------------|
+| Part geometry | STL, STEP, IGES, SAT |
+| Assembly | STL, SAT |
+| Mesh data | CSV (nodes, elements) |
+| Results (U, S, RF) | CSV |
+| Time history | CSV |
+| Model definition | INP |
+| Topology result | STL (with density threshold) |
 
-## Common Patterns
+## What to Ask User
 
-### Export Part to STEP
-```python
-part = mdb.models['Model'].parts['Part-1']
-part.writeStepFile('part_export.step')
-```
+If unclear, ask:
+1. **What format?** STL, STEP, CSV, INP?
+2. **What to export?** Geometry, mesh, or results?
+3. **Which parts/steps?** Specific part name, all parts, specific time step?
+4. **For TO results:** What density threshold? (0.3-0.5 typical)
 
-### Export Part to IGES
-```python
-part.writeIgesFile('part_export.igs')
-```
+## Workflow
 
-### Write Input File
-```python
-job = mdb.Job(name='Export', model='Model')
-job.writeInput(consistencyChecking=OFF)
-# Creates Export.inp
-```
+### Exporting Geometry (STL/STEP/IGES)
 
-### Export Field Data to CSV
-```python
-from odbAccess import openOdb
-import csv
+1. **Identify the part** - Get part name from model
+2. **Check if meshed** - STL requires mesh; STEP works on geometry
+3. **Call export method** - Use appropriate API call
+4. **Verify output** - Check file was created
 
-odb = openOdb('job.odb', readOnly=True)
-frame = odb.steps['LoadStep'].frames[-1]
+### Exporting Results to CSV
 
-with open('displacements.csv', 'w', newline='') as f:
-    writer = csv.writer(f)
-    writer.writerow(['NodeID', 'U1', 'U2', 'U3', 'Magnitude'])
+1. **Open the ODB** - Use `openOdb()` with `readOnly=True`
+2. **Navigate to frame** - Find correct step and frame (typically last)
+3. **Extract field output** - U (displacement), S (stress), etc.
+4. **Write CSV** - Loop through values, write rows
+5. **Close ODB** - Always close when done
 
-    for value in frame.fieldOutputs['U'].values:
-        writer.writerow([
-            value.nodeLabel,
-            value.data[0], value.data[1], value.data[2],
-            value.magnitude
-        ])
+### Generating Input File
 
-odb.close()
-```
+1. **Create job object** - Job needs model name
+2. **Call writeInput()** - Creates `JobName.inp`
+3. **Verify INP created** - Check file exists
 
-### Export Stress to CSV
-```python
-with open('stress.csv', 'w', newline='') as f:
-    writer = csv.writer(f)
-    writer.writerow(['ElementID', 'Mises'])
+### Exporting TO Result
 
-    for value in frame.fieldOutputs['S'].values:
-        if hasattr(value, 'mises'):
-            writer.writerow([value.elementLabel, value.mises])
-```
-
-### Export TO Result to STL (GUI)
-
-After topology optimization:
-1. Open: `Optimization/TOSCA_POST/Optimization.odb`
-2. Go to Optimization module
-3. Select Optimization > Extract > STL
-4. Set density threshold (0.3-0.5)
-5. Export
-
-### Export TO Result Script
-```python
-# Run in CAE with GUI
-session.openOdb(name='Optimization/TOSCA_POST/Optimization.odb')
-
-session.writeStlFiles(
-    odbPath='Optimization/TOSCA_POST/Optimization.odb',
-    outputPath='optimized.stl',
-    threshold=0.3  # Density threshold
-)
-```
-
-### Export Image from CAE
-```python
-# Requires GUI session
-session.printOptions.setValues(rendition=COLOR, vpDecorations=OFF)
-session.printToFile(fileName='result_image', format=PNG, canvasObjects=(vp,))
-
-# High resolution
-session.printToFile(
-    fileName='result_hq',
-    format=PNG,
-    resolution=300  # DPI
-)
-
-# Vector format
-session.printToFile(fileName='result_vector', format=SVG)
-```
-
-### Batch Export Results
-```python
-import os
-from odbAccess import openOdb
-
-def export_summary(odb_path, output_dir):
-    os.makedirs(output_dir, exist_ok=True)
-    job_name = os.path.splitext(os.path.basename(odb_path))[0]
-    odb = openOdb(odb_path, readOnly=True)
-
-    with open(os.path.join(output_dir, f'{job_name}_summary.txt'), 'w') as f:
-        for step_name, step in odb.steps.items():
-            frame = step.frames[-1]
-            f.write(f"Step: {step_name}\n")
-
-            if 'U' in frame.fieldOutputs:
-                max_u = max(v.magnitude for v in frame.fieldOutputs['U'].values)
-                f.write(f"  Max displacement: {max_u:.6f} mm\n")
-
-            if 'S' in frame.fieldOutputs:
-                max_s = max(v.mises for v in frame.fieldOutputs['S'].values
-                           if hasattr(v, 'mises'))
-                f.write(f"  Max von Mises: {max_s:.2f} MPa\n")
-
-    odb.close()
-```
+1. **Locate TO ODB** - Usually `Optimization/TOSCA_POST/Optimization.odb`
+2. **Set density threshold** - 0.3-0.5 typical (lower = more material)
+3. **Export STL** - Use session method or GUI
 
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
+| Problem | Cause | Solution |
+|---------|-------|----------|
 | "Cannot write STL - no mesh" | Part not meshed | Mesh part first |
-| "STEP export failed" | Invalid geometry | Try IGES instead |
-| "Large file size" | Fine mesh | Coarsen for visualization |
+| "STEP export failed" | Invalid geometry | Try IGES or SAT |
+| Large STL file | Fine mesh | Coarsen mesh for viz |
+| Permission denied | File open elsewhere | Close file first |
+| Image export fails | noGUI mode | Run with GUI |
 
-## API Reference
+## Code Patterns
 
-For detailed parameters:
-- [Part API](../../docs/abaqus-api/modules/part.md)
-- [ODB API](../../docs/abaqus-api/modules/odb.md)
+For API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)
+- [Troubleshooting Guide](references/troubleshooting.md)

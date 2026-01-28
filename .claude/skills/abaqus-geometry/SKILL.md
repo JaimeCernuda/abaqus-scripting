@@ -1,6 +1,6 @@
 ---
 name: abaqus-geometry
-description: Create and manipulate Abaqus geometry - parts, sketches, extrusions, revolutions, CAD import, and assembly operations. Use for any geometry creation task. Handles primitives (box, cylinder), parametric shapes (sketch + extrude), and CAD file import (STEP, IGES). Does not handle meshing or analysis setup.
+description: Create and manipulate Abaqus geometry - parts, sketches, extrusions, CAD import. Use for any geometry creation task including box, cylinder, or STEP/IGES import.
 allowed-tools:
   - Read
   - Write
@@ -12,231 +12,131 @@ allowed-tools:
 
 # Abaqus Geometry Skill
 
+Create parts, assemblies, and import CAD files for finite element analysis.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Create primitive shapes (box, cylinder, sphere)
-- Build parametric geometry (sketch + extrude/revolve)
-- Import CAD files (STEP, IGES, Parasolid)
-- Add features (holes, fillets, chamfers)
-- Create partitions for BC/load application
-- Set up assembly with instances
-- Create sets and surfaces for analysis
+**Route here when user mentions:**
+- "create a box/beam/plate/bracket"
+- "draw geometry", "make a cylinder/tube"
+- "import STEP/IGES file"
+- "extrude", "revolve", "create assembly"
+- "position the parts", "build a component"
 
-**Do NOT use for:**
-- Meshing the geometry → use `/abaqus-mesh`
-- Defining materials/sections → use `/abaqus-material`
-- Applying loads or BCs → use `/abaqus-load`, `/abaqus-bc`
+**Route elsewhere:**
+- Meshing the geometry -> `/abaqus-mesh`
+- Defining materials/sections -> `/abaqus-material`
+- Applying loads or BCs -> `/abaqus-load`, `/abaqus-bc`
+- Full analysis workflow -> `/abaqus-static-analysis`
 
 ## Key Decisions
 
 ### 1. How to Create Geometry?
 
-| Method | Best For | Complexity |
-|--------|----------|------------|
-| Primitive (box, cylinder) | Simple shapes, quick setup | Low |
-| Sketch + Extrude | Prismatic shapes with cross-section | Medium |
-| Sketch + Revolve | Axisymmetric parts (pipes, discs) | Medium |
-| CAD Import (STEP) | Complex/existing designs | High |
+| Shape | Approach |
+|-------|----------|
+| Box, plate, beam | Sketch rectangle + extrude |
+| Cylinder, tube | Sketch circle + extrude |
+| Pipe, disc, shaft | Sketch profile + revolve |
+| Complex/existing | Import STEP/IGES |
+| Quick prototype | Primitives |
 
 **Decision guidance:**
-- **Simple box/bracket?** Use sketch + extrude
-- **Round/axisymmetric?** Use sketch + revolve
-- **Existing CAD model?** Import STEP file
-- **Quick prototype?** Use primitives
+- Simple prismatic shape? -> Sketch + extrude
+- Axisymmetric part? -> Sketch + revolve
+- Existing CAD model? -> Import STEP file
 
-### 2. Coordinate System and Origin
+### 2. Where to Place Origin?
 
 | Origin Location | When to Use |
 |-----------------|-------------|
 | Corner (0,0,0) | Asymmetric parts, easier coordinate math |
 | Center (0,0,0) | Symmetric parts, rotation about center |
-| Custom | Match existing assembly or constraints |
 
 ### 3. Part vs Instance Coordinates
 
-| Coordinate System | Use |
-|-------------------|-----|
-| Part coordinates | Geometry creation, section assignment |
-| Assembly/Instance coordinates | BCs, loads, sets, finding faces |
+| Context | Use |
+|---------|-----|
+| Geometry creation, section assignment | Part coordinates |
+| BCs, loads, sets, finding faces | Instance/assembly coordinates |
 
 **Important:** After creating an instance, use `instance.faces.findAt()` not `part.faces.findAt()`.
 
-## Required Inputs
+## What to Ask User
 
-| Input | Required | Guidance |
-|-------|----------|----------|
-| Shape type | YES | Primitive, sketch+extrude, or CAD import |
-| Dimensions | YES | In mm (using mm-tonne-s-N-MPa system) |
-| Part name | NO | Default: 'Part-1' |
+If unclear, ask:
+- **Shape type?** Box, cylinder, imported CAD?
+- **Dimensions?** Length, width, height in mm
+- **Origin location?** Corner or center?
+- **Import file available?** Path to STEP/IGES?
+- **Features needed?** Holes, fillets, chamfers?
 
-## Common Patterns
+## Workflow
 
-### Box (Sketch + Extrude)
-```python
-from abaqus import *
-from abaqusConstants import *
-from caeModules import *
+### Step 1: Create Model and Part
 
-# Create model and part
-model = mdb.Model(name='MyModel')
-part = model.Part(name='Box', dimensionality=THREE_D, type=DEFORMABLE_BODY)
+Create the model container, then a 3D deformable part.
 
-# Sketch rectangle in XY plane
-sketch = model.ConstrainedSketch(name='BoxSketch', sheetSize=200.0)
-sketch.rectangle(point1=(0.0, 0.0), point2=(LENGTH, HEIGHT))
+### Step 2: Define Geometry
 
-# Extrude in Z direction
-part.BaseSolidExtrude(sketch=sketch, depth=WIDTH)
-```
+Choose approach based on shape:
+- **Sketch + Extrude:** Draw 2D profile, extrude to 3D
+- **Sketch + Revolve:** Draw profile, revolve around axis (360 degrees for full solid)
+- **CAD Import:** Open STEP/IGES, create part from geometry file
 
-### Cylinder
-```python
-part = model.Part(name='Cylinder', dimensionality=THREE_D, type=DEFORMABLE_BODY)
-sketch = model.ConstrainedSketch(name='CylSketch', sheetSize=200.0)
-sketch.CircleByCenterPerimeter(center=(0.0, 0.0), point1=(RADIUS, 0.0))
-part.BaseSolidExtrude(sketch=sketch, depth=HEIGHT)
-```
+### Step 3: Add Features (Optional)
 
-### Revolved Solid (Pipe, Disc)
-```python
-part = model.Part(name='Pipe', dimensionality=THREE_D, type=DEFORMABLE_BODY)
-sketch = model.ConstrainedSketch(name='RevSketch', sheetSize=200.0)
+Add secondary features if needed:
+- Cut holes using cut extrude
+- Round edges with fillet
+- Partition cells for BC/load regions
 
-# Construction line = rotation axis (Y-axis here)
-sketch.ConstructionLine(point1=(0.0, -100.0), point2=(0.0, 100.0))
+### Step 4: Create Assembly Instance
 
-# Cross-section (must be on one side of axis)
-sketch.rectangle(point1=(INNER_RADIUS, 0.0), point2=(OUTER_RADIUS, HEIGHT))
+Create root assembly with Cartesian datum, then create instance from part.
 
-# Revolve 360° around axis
-part.BaseSolidRevolve(sketch=sketch, angle=360.0, flipRevolveDirection=OFF)
-```
+### Step 5: Create Sets and Surfaces
 
-### Import STEP File
-```python
-step_file = mdb.openStep('path/to/file.step', scaleFromFile=OFF)
-part = model.PartFromGeometryFile(
-    name='Imported',
-    geometryFile=step_file,
-    dimensionality=THREE_D,
-    type=DEFORMABLE_BODY
-)
-```
-
-### Add Hole (Cut Extrude)
-```python
-# Create sketch on top face
-top_face = part.faces.findAt(((LENGTH/2, HEIGHT, WIDTH/2),))
-sketch = model.ConstrainedSketch(name='HoleSketch', sheetSize=50.0,
-                                  transform=part.MakeSketchTransform(sketchPlane=top_face[0]))
-
-# Draw circle for hole
-sketch.CircleByCenterPerimeter(center=(LENGTH/2, WIDTH/2), point1=(LENGTH/2 + HOLE_RADIUS, WIDTH/2))
-
-# Cut through
-part.CutExtrude(
-    sketchPlane=top_face[0],
-    sketch=sketch,
-    depth=HEIGHT,  # Through entire height
-    flipExtrudeDirection=ON
-)
-```
-
-### Fillet Edges
-```python
-edges = part.edges.findAt(((x, y, z),))
-part.Round(radius=FILLET_RADIUS, edgeList=edges)
-```
-
-### Create Partition (for BC/Load Regions)
-```python
-# Partition by datum plane
-datum = part.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=50.0)
-part.PartitionCellByDatumPlane(datumPlane=part.datums[datum.id], cells=part.cells)
-```
-
-### Assembly Setup
-```python
-assembly = model.rootAssembly
-assembly.DatumCsysByDefault(CARTESIAN)
-instance = assembly.Instance(name='Part-1', part=part, dependent=ON)
-```
-
-### Position Instance
-```python
-# Translate
-assembly.translate(instanceList=('Part-1',), vector=(dx, dy, dz))
-
-# Rotate about Z-axis
-assembly.rotate(
-    instanceList=('Part-1',),
-    axisPoint=(0, 0, 0),
-    axisDirection=(0, 0, 1),
-    angle=90.0
-)
-```
-
-### Create Sets and Surfaces
-```python
-# Set from face (use instance coordinates!)
-face = instance.faces.findAt(((x, y, z),))
-assembly.Set(faces=face, name='MyFaceSet')
-
-# Surface for loads/contact
-assembly.Surface(side1Faces=face, name='MySurface')
-
-# Cells by bounding box
-cells = instance.cells.getByBoundingBox(xMin=0, yMin=0, zMin=0, xMax=50, yMax=100, zMax=20)
-assembly.Set(cells=cells, name='DesignRegion')
-```
+Create named sets/surfaces on **instance** (not part) for:
+- BC regions
+- Load application surfaces
+- Design regions (for optimization)
 
 ## Finding Entities
 
-### By Exact Coordinates
-```python
-# Point must be EXACTLY on the face/edge/vertex
-face = instance.faces.findAt(((x, y, z),))
-```
+Two methods to locate faces/edges:
+1. **findAt()** - Exact coordinates (point must be ON the entity)
+2. **getByBoundingBox()** - Tolerant box search (better for automation)
 
-### By Bounding Box
-```python
-# More tolerant - finds entities within box
-faces = instance.faces.getByBoundingBox(
-    xMin=-0.1, yMin=0, zMin=0,
-    xMax=0.1, yMax=100, zMax=50
-)
-```
+Combine multiple entities with `+` operator.
 
-### Multiple Entities
-```python
-face1 = instance.faces.findAt(((x1, y1, z1),))
-face2 = instance.faces.findAt(((x2, y2, z2),))
-combined = face1 + face2
-```
+## Common Pitfalls
 
-## Troubleshooting
-
-| Error | Cause | Solution |
-|-------|-------|----------|
+| Problem | Cause | Solution |
+|---------|-------|----------|
+| "Sketch is not closed" | Gap in sketch entities | Ensure lines connect to form closed loop |
 | "Cannot find face at coordinates" | Point not exactly on face | Use bounding box or verify coordinates |
-| "Sketch is not closed" | Gap in sketch entities | Ensure all lines connect to form closed loop |
-| "Cannot mesh this geometry" | Complex shape or thin features | Add partitions, use virtual topology |
-| "Part has no cells" | 2D sketch, not extruded | Call `BaseSolidExtrude()` or similar |
-| "Instance already exists" | Duplicate instance name | Use unique name or delete existing |
+| "Part has no cells" | Sketch not extruded | Call BaseSolidExtrude or similar |
+| "Instance already exists" | Duplicate name | Use unique name or delete existing |
 
-## Geometry Checklist
+## Validation Checklist
 
 Before proceeding to mesh/analysis:
 - [ ] Part created with correct dimensions
 - [ ] Geometry is watertight (no gaps)
 - [ ] Instance created in assembly
-- [ ] Sets created for BC/load regions (use instance, not part)
-- [ ] Partitions added if needed for local mesh control or region selection
+- [ ] Sets created on **instance** for BC/load regions
+- [ ] Partitions added if needed for region selection
 
-## API Reference
+## Units
 
-For detailed parameters:
-- [Part API](../../docs/abaqus-api/modules/part.md)
-- [Sketcher API](../../docs/abaqus-api/modules/sketcher.md)
-- [Assembly API](../../docs/abaqus-api/modules/assembly.md)
+All dimensions use consistent units (mm-tonne-s-N-MPa):
+- Length: mm
+- Coordinates: mm
+
+## Code Patterns
+
+For API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)
+- [Troubleshooting Guide](references/troubleshooting.md)

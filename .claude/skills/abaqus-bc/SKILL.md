@@ -1,6 +1,6 @@
 ---
 name: abaqus-bc
-description: Define boundary conditions in Abaqus - fixed supports, displacements, symmetry, and other constraints. Use when constraining structural degrees of freedom to prevent rigid body motion or apply kinematic conditions. Does not handle loads (forces, pressures) or contact constraints.
+description: Define boundary conditions - fixed supports, displacements, symmetry. Use when user mentions fixed, pinned, clamped, supported, or constrained. Does NOT handle loads or forces.
 allowed-tools:
   - Read
   - Write
@@ -12,211 +12,128 @@ allowed-tools:
 
 # Abaqus Boundary Conditions Skill
 
+This skill defines boundary conditions (BCs) in Abaqus models. BCs constrain motion and prevent rigid body movement.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Fix a face/edge/vertex (Encastre - all DOFs constrained)
-- Apply displacement constraints (prescribed motion)
-- Define symmetry planes (half/quarter models)
-- Constrain specific degrees of freedom (roller, pinned)
-- Apply velocity or acceleration BCs (dynamics)
-- Set temperature BCs (thermal analysis)
+**Route here when user mentions:**
+- "fixed", "encastre", "clamped", "welded"
+- "pinned", "hinged", "simply supported"
+- "roller", "sliding support"
+- "symmetry", "half model", "quarter model"
+- "constrain", "prevent movement"
+- "prescribed displacement", "move by X mm"
+- "rigid body motion error"
 
-**Do NOT use for:**
-- Applying forces or pressures → use `/abaqus-load`
-- Contact between parts → use `/abaqus-interaction`
-- Initial conditions (initial stress, temperature) → use `/abaqus-field`
+**Route elsewhere:**
+- Forces, pressures, gravity → `/abaqus-load`
+- Contact between parts → `/abaqus-interaction`
+- Initial temperature/stress → `/abaqus-field`
 
 ## Key Decisions
 
-### 1. What Type of Support?
+### Step 1: What Type of Support?
 
-| Support Type | DOFs Fixed | Physical Meaning | Use Case |
-|--------------|------------|------------------|----------|
-| Encastre | All 6 | Welded, bolted, embedded | Most common for fixed end |
-| Pinned | U1, U2, U3 | Ball joint, hinge | Rotation allowed |
-| Roller | 1 translation | Sliding support | Free in-plane motion |
-| Symmetry | Normal disp + 2 rotations | Symmetric geometry/loading | Half/quarter models |
+| User Describes | BC Type | DOFs Constrained | Physical Meaning |
+|----------------|---------|------------------|------------------|
+| "Fixed", "clamped", "welded" | Encastre | All 6 | Fully rigid connection |
+| "Pinned", "hinged" | DisplacementBC | U1, U2, U3 only | Rotation allowed |
+| "Roller", "sliding" | DisplacementBC | 1 translation | Free in-plane motion |
+| "Half model", "symmetric" | XsymmBC/YsymmBC/ZsymmBC | Normal + 2 rotations | Symmetry plane |
+| "Move it 5mm" | DisplacementBC | Specified value | Prescribed motion |
 
-### 2. Rigid Body Motion Check
+**Default choice:** Encastre for fixed supports (most common).
 
-For 3D static analysis, you must constrain **at least 6 DOFs total** to prevent:
+### Step 2: Which Step to Apply?
+
+| BC Purpose | Apply In | Reason |
+|------------|----------|--------|
+| Fixed support | Initial | Active before loads |
+| Prescribed displacement | Load step | Applied with loading |
+| Released BC | Later step | Use FREED to release |
+
+**Default:** Apply supports in 'Initial' step.
+
+### Step 3: Rigid Body Motion Check
+
+For 3D static analysis, constrain at least 6 DOFs total:
 - 3 translations (X, Y, Z)
-- 3 rotations (about X, Y, Z)
+- 3 rotations (about X, Y, Z axes)
 
 | Configuration | Stability |
 |---------------|-----------|
-| One face fixed (Encastre) | Fully constrained (most common) |
-| One vertex fixed + symmetry | May be sufficient |
-| Three pinned points | Check they prevent all rotation |
+| One face Encastre | Fully constrained |
+| Three pinned points (non-collinear) | Fully constrained |
+| One vertex + symmetry planes | May be sufficient |
 
-**Warning sign:** "Zero pivot" or "Rigid body motion" error = insufficient constraints.
+**"Zero pivot" error = insufficient constraints.**
 
-### 3. Which Step to Apply BC?
+### Step 4: Symmetry Plane Selection
 
-| BC Type | Step | Reason |
-|---------|------|--------|
-| Fixed support | Initial | Always active, set before loads |
-| Prescribed displacement | Load step | Applied with loading |
-| Released BC | Later step | Use `FREED` to release in subsequent step |
+| Symmetry BC | Apply When | Constrains |
+|-------------|------------|------------|
+| XsymmBC | Symmetric about YZ plane (X=const) | U1, UR2, UR3 |
+| YsymmBC | Symmetric about XZ plane (Y=const) | U2, UR1, UR3 |
+| ZsymmBC | Symmetric about XY plane (Z=const) | U3, UR1, UR2 |
 
-## Required Inputs
+Apply symmetry BC to the face AT the symmetry plane.
 
-| Input | Required | Guidance |
-|-------|----------|----------|
-| BC Type | YES | Encastre, Displacement, Symmetry, etc. |
-| Region | YES | Face, edge, vertex, or node set |
-| Step | NO | Default 'Initial' for supports |
-| Values | For Displacement | Specific values or UNSET to leave free |
+## What to Ask User
 
-## Common Patterns
+If unclear, ask:
 
-### Encastre (Fully Fixed)
-```python
-# Find the face (coordinates must be ON the face)
-fixed_face = instance.faces.findAt(((0.0, HEIGHT/2, WIDTH/2),))
-fixed_region = assembly.Set(faces=fixed_face, name='FixedSupport')
+1. **Where is it supported?**
+   - "Which face/edge is fixed?"
+   - "Where does it mount to the frame?"
 
-# Apply Encastre (all 6 DOFs = 0)
-model.EncastreBC(
-    name='Fixed',
-    createStepName='Initial',
-    region=fixed_region
-)
-```
+2. **What type of support?**
+   - "Fully fixed (welded) or can it rotate (pinned)?"
+   - "Free to slide in any direction?"
 
-### Displacement BC (Pinned, Roller)
-```python
-# Pinned: translations fixed, rotations free
-model.DisplacementBC(
-    name='Pinned',
-    createStepName='Initial',
-    region=region,
-    u1=0.0, u2=0.0, u3=0.0,
-    ur1=UNSET, ur2=UNSET, ur3=UNSET  # Rotations free
-)
+3. **Is the model symmetric?**
+   - "Can we use half symmetry to reduce model size?"
+   - "Is the loading also symmetric?"
 
-# Roller: only Z direction fixed
-model.DisplacementBC(
-    name='RollerZ',
-    createStepName='Initial',
-    region=region,
-    u1=UNSET, u2=UNSET, u3=0.0,  # Only Z constrained
-    ur1=UNSET, ur2=UNSET, ur3=UNSET
-)
+4. **Any prescribed motion?**
+   - "Does anything move by a known amount?"
+   - "Is this a displacement-controlled test?"
 
-# Prescribed displacement (apply 5mm downward in load step)
-model.DisplacementBC(
-    name='Applied',
-    createStepName='LoadStep',
-    region=region,
-    u1=UNSET, u2=-5.0, u3=UNSET
-)
-```
+## Validation Checklist
 
-### Symmetry BCs
-```python
-# X-Symmetry: plane perpendicular to X-axis
-# Constrains U1 (normal displacement) and UR2, UR3 (tangent rotations)
-model.XsymmBC(name='SymX', createStepName='Initial', region=region)
+Before running analysis:
+- [ ] At least one region has fixed support
+- [ ] All 6 rigid body modes constrained
+- [ ] BCs applied in correct step
+- [ ] Symmetry planes match actual symmetry (geometry AND loads)
+- [ ] No conflicting BCs on same DOF
 
-# Y-Symmetry
-model.YsymmBC(name='SymY', createStepName='Initial', region=region)
+After analysis:
+- [ ] Reaction forces at supports balance applied loads
+- [ ] No "zero pivot" or "rigid body motion" warnings
+- [ ] Displacements at fixed regions are zero
 
-# Z-Symmetry
-model.ZsymmBC(name='SymZ', createStepName='Initial', region=region)
-```
+## Common Mistakes
 
-**Symmetry guidance:**
-- Use X-symmetry when the model is symmetric about a YZ plane
-- Apply to the face AT the symmetry plane
-- Reduces model size by 2x (or 4x with two symmetry planes)
-
-### Temperature BC (Thermal)
-```python
-model.TemperatureBC(
-    name='HotEnd',
-    createStepName='HeatStep',
-    region=region,
-    magnitude=100.0  # Fixed temperature value
-)
-```
-
-### Velocity BC (Dynamic)
-```python
-model.VelocityBC(
-    name='Impact',
-    createStepName='Step-1',
-    region=region,
-    v1=0.0, v2=-1000.0, v3=0.0,  # mm/s downward
-    vr1=UNSET, vr2=UNSET, vr3=UNSET
-)
-```
-
-## Finding Regions
-
-### By Coordinates (Most Common)
-```python
-# Point must be EXACTLY on the face
-face = instance.faces.findAt(((x, y, z),))
-region = assembly.Set(faces=face, name='MySet')
-```
-
-### By Bounding Box (Approximate Location)
-```python
-faces = instance.faces.getByBoundingBox(
-    xMin=-0.01, yMin=0, zMin=0,
-    xMax=0.01, yMax=100, zMax=50  # Small tolerance around x=0
-)
-region = assembly.Set(faces=faces, name='XZeroFace')
-```
-
-### Multiple Faces
-```python
-face1 = instance.faces.findAt(((x1, y1, z1),))
-face2 = instance.faces.findAt(((x2, y2, z2),))
-region = assembly.Set(faces=face1 + face2, name='CombinedSet')
-```
-
-## Modifying BCs in Later Steps
-
-### Release a DOF
-```python
-# Initial: fully fixed
-model.DisplacementBC(name='Support', createStepName='Initial', region=region,
-                     u1=0.0, u2=0.0, u3=0.0)
-
-# LoadStep: release U1
-model.boundaryConditions['Support'].setValuesInStep(
-    stepName='LoadStep',
-    u1=FREED  # Now free to move in X
-)
-```
-
-### Deactivate Entirely
-```python
-model.boundaryConditions['Support'].deactivate(stepName='ReleaseStep')
-```
+| Mistake | Symptom | Fix |
+|---------|---------|-----|
+| Missing BC | Zero pivot error | Add Encastre to a face |
+| Over-constraint | Warning in .dat file | Remove redundant BC |
+| BC on wrong region | Model flies away | Verify findAt coordinates |
+| Symmetry without symmetric load | Wrong results | Ensure loads are also symmetric |
+| Pinned beam (no rotation) | Unrealistic stress | Use Encastre or add rotational stiffness |
 
 ## Troubleshooting
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| "Zero pivot" / "Rigid body motion" | Insufficient constraints | Add more BCs to prevent all 6 rigid body modes |
-| "Face not found at coordinates" | Point not exactly on face | Use bounding box method or verify coordinates |
-| "Over-constraint warning" | Conflicting BCs | Review if multiple BCs act on same DOF |
-| "BC has no effect" | Applied to wrong region | Verify region set contains expected entities |
-| "Negative eigenvalue" | Structure unstable or buckling | Check for proper support, may need stabilization |
+| "Zero pivot" | Insufficient constraints | Add more BCs |
+| "Negative eigenvalue" | Unstable / buckling | Check supports, may need stabilization |
+| "Face not found" | Wrong findAt coordinates | Use bounding box method |
+| "Over-constraint" | Conflicting BCs | Remove duplicate BC on same DOF |
 
-## BC Checklist
+## Code Patterns
 
-Before running analysis:
-- [ ] At least one region has fixed support (Encastre or equivalent)
-- [ ] All 6 rigid body modes are constrained
-- [ ] BCs applied in correct step (Initial for supports, Load step for prescribed displacement)
-- [ ] Symmetry planes match actual model symmetry
-- [ ] No conflicting BCs on same DOF
-
-## API Reference
-
-For detailed parameters: [BC API](../../docs/abaqus-api/modules/bc.md)
+For API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)
+- [Troubleshooting Guide](references/troubleshooting.md)

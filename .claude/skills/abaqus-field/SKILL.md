@@ -1,6 +1,6 @@
 ---
 name: abaqus-field
-description: Define initial conditions and predefined fields in Abaqus - initial temperature, stress, velocity, and imported fields.
+description: Define initial conditions and predefined fields. Use when user mentions initial temperature, pre-stress, residual stress, or import from previous analysis.
 allowed-tools:
   - Read
   - Write
@@ -12,183 +12,108 @@ allowed-tools:
 
 # Abaqus Field Skill
 
+This skill defines initial conditions and predefined fields in Abaqus. Use it to set starting states or import results from previous analyses.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Set initial temperature distribution
-- Apply pre-stress or residual stress
-- Define initial velocity (explicit dynamics)
-- Import temperature from thermal analysis to structural
-- Define custom field variables
-- Set up geostatic stress (soils)
-- Apply bolt pre-tension
+**Route here when user mentions:**
+- "initial temperature", "starting temperature", "the part starts at..."
+- "pre-stress", "residual stress", "initial stress"
+- "initial velocity" (for impact/explicit dynamics)
+- "import temperature from thermal analysis"
+- "transfer results from previous analysis"
+- "bolt pre-tension", "bolt preload"
 
-**Do NOT use for:**
-- Temperature boundary conditions (fixed T) → use `/abaqus-bc`
-- Heat flux or convection loads → use `/abaqus-load`
-- Time-varying amplitudes → use `/abaqus-amplitude`
+**Route elsewhere:**
+- Fixed temperature boundary conditions → `/abaqus-bc`
+- Heat flux, convection, radiation loads → `/abaqus-load`
+- Time-varying fields via amplitude → `/abaqus-amplitude`
 
 ## Key Decisions
 
-### 1. Field Type Selection
+### Field Type Selection
 
-| Need | Field Type | Typical Use |
-|------|------------|-------------|
-| Starting temperature | Initial Temperature | Thermal stress from uniform T |
-| Residual stress | Initial Stress | Pre-stressed members |
-| Impact velocity | Initial Velocity | Explicit dynamics |
-| Temperature from other analysis | Predefined Temperature | Sequential thermal-structural |
+| User Need | Field Type | Typical Use |
+|-----------|------------|-------------|
+| Starting temperature | Temperature | Thermal stress from uniform T |
+| Residual stress | Stress | Pre-stressed members |
+| Impact velocity | Velocity | Explicit dynamics |
+| From other analysis | Predefined Temperature | Sequential thermal-structural |
 | Custom variable | Predefined Field | User-defined behaviors |
 
-### 2. Distribution Type
+### Distribution Type
 
-| Type | When |
-|------|------|
+| Type | When to Use |
+|------|-------------|
 | UNIFORM | Same value everywhere |
 | FROM_FILE | Import from ODB or FIL |
 | ANALYTICAL_FIELD | Expression-based (X, Y, Z) |
 | USER_DEFINED | Via user subroutine |
 
-## Required Inputs
+## What to Ask User
 
-| Input | Required | Guidance |
-|-------|----------|----------|
-| Field type | YES | Temperature, Stress, Velocity, etc. |
-| Region | YES | Where to apply |
-| Distribution | YES | Uniform, from file, analytical |
-| Value(s) | YES | Magnitude or file path |
+If information is missing, ask:
+1. **What initial condition?** Temperature, stress, velocity, or custom field?
+2. **Uniform or varying?** Same value everywhere or position-dependent?
+3. **Import from ODB?** If transferring, which file/step/frame?
+4. **Region?** Entire model or specific region?
+5. **Value(s)?** Magnitude, stress components, or velocity vector?
 
-## Common Patterns
+## Workflow: Setting Up Fields
 
-### Initial Temperature (Uniform)
-```python
-model.Temperature(
-    name='InitialTemp',
-    createStepName='Initial',
-    region=region,
-    distributionType=UNIFORM,
-    magnitude=25.0  # Starting temperature
-)
-```
+### Step 1: Identify Field Type
+Match user request to field type:
+- Temperature values → Temperature field
+- Stress state → Stress field
+- Moving parts → Velocity field
+- Previous analysis results → FROM_FILE distribution
 
-### Initial Stress (Pre-tension)
-```python
-model.Stress(
-    name='InitialStress',
-    createStepName='Initial',
-    region=region,
-    distributionType=UNIFORM,
-    sigma11=100.0,  # Pre-stress in X direction
-    sigma22=0.0,
-    sigma33=0.0,
-    sigma12=0.0, sigma13=0.0, sigma23=0.0
-)
-```
+### Step 2: Define Region
+Determine where the field applies:
+- Entire model (assembly set)
+- Specific part instance
+- Element set or node set
 
-### Initial Velocity (Impact)
-```python
-model.Velocity(
-    name='InitialVelocity',
-    createStepName='Initial',
-    region=region,
-    velocity1=0.0,
-    velocity2=-5000.0,  # 5 m/s downward (mm/s)
-    velocity3=0.0
-)
-```
+### Step 3: Set Values or Import
+For uniform fields: specify single magnitude or component values.
+For imported fields: ODB path, step name, increment number.
 
-### Temperature from Thermal Analysis ODB
-```python
-# Import temperature results from previous thermal analysis
-model.Temperature(
-    name='TempFromODB',
-    createStepName='Step-1',
-    region=region,
-    distributionType=FROM_FILE,
-    fileName='thermal_analysis.odb',
-    beginStep=1,
-    beginIncrement=1,
-    endStep=1,
-    endIncrement=LAST_INCREMENT
-)
-```
-
-### Analytical Temperature Field
-```python
-# Temperature varies with position
-model.ExpressionField(
-    name='TempGradient',
-    expression='20 + 80*X/100'  # Linear gradient
-)
-
-model.Temperature(
-    name='AnalyticalTemp',
-    createStepName='Initial',
-    region=region,
-    distributionType=ANALYTICAL_FIELD,
-    field='TempGradient'
-)
-```
-
-### Bolt Pre-Tension
-```python
-# Apply bolt pre-load
-model.BoltLoad(
-    name='BoltPretension',
-    createStepName='Pretension',
-    region=bolt_cross_section,
-    magnitude=10000.0,  # N
-    boltMethod=APPLY_FORCE
-)
-
-# Fix bolt length in subsequent step
-model.loads['BoltPretension'].setValuesInStep(
-    stepName='LoadStep',
-    boltMethod=FIX_LENGTH
-)
-```
-
-### Predefined Field Variable
-```python
-# Custom field variable (e.g., moisture)
-model.Field(
-    name='Moisture',
-    createStepName='Step-1',
-    region=region,
-    distributionType=UNIFORM,
-    fieldVariableNum=1,
-    magnitude=0.5
-)
-```
+### Step 4: Verify Step
+Initial conditions use `createStepName='Initial'`.
+Predefined fields in analysis steps use the step name.
 
 ## Sequential Thermal-Structural Workflow
 
 1. Run thermal analysis, save ODB
-2. In structural model, import temperature as predefined field
-3. Temperature causes thermal strain via expansion coefficient
+2. Import temperature as predefined field in structural model
+3. Temperature causes thermal strain (requires expansion coefficient)
 
-```python
-# In structural model
-model.Temperature(
-    name='FromThermal',
-    createStepName='StructuralStep',
-    region=region,
-    distributionType=FROM_FILE,
-    fileName='thermal_model.odb',
-    beginStep=1,
-    endIncrement=LAST_INCREMENT
-)
-```
+## Key Parameters
+
+| Parameter | Notes |
+|-----------|-------|
+| `createStepName` | 'Initial' for initial conditions, step name for predefined |
+| `distributionType` | UNIFORM, FROM_FILE, ANALYTICAL_FIELD |
+| `fileName` | ODB path for FROM_FILE distribution |
+| `beginStep/endStep` | Frame selection for ODB import |
+
+## Validation Checklist
+
+- [ ] Correct field type for the physics
+- [ ] Region covers intended elements/nodes
+- [ ] Step name is correct (Initial vs analysis step)
+- [ ] For FROM_FILE: ODB exists and contains required data
+- [ ] For thermal stress: material has expansion coefficient
 
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "Field not applied" | Wrong region or step | Verify region covers elements |
-| "Cannot read from ODB" | ODB locked or wrong path | Close other sessions, check path |
-| "Temperature mismatch" | Mesh incompatibility | Use mapping tolerance options |
-| "Initial stress equilibrium" | Stress not self-equilibrating | Review stress field consistency |
+| Problem | Likely Cause | Solution |
+|---------|--------------|----------|
+| Field not applied | Wrong region or step | Verify region covers elements |
+| Cannot read from ODB | ODB locked or wrong path | Close other sessions, check path |
+| Temperature mismatch | Mesh incompatibility | Use mapping tolerance options |
+| Stress equilibrium error | Stress not self-equilibrating | Review stress field consistency |
 
-## API Reference
+## Code Patterns
 
-For detailed parameters: [Field API](../../docs/abaqus-api/modules/field.md)
+For API syntax and code examples, see `references/` folder.

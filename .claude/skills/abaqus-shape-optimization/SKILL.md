@@ -1,6 +1,6 @@
 ---
 name: abaqus-shape-optimization
-description: Workflow for shape optimization - optimize surface shapes to minimize stress concentrations or improve performance.
+description: Optimize fillet/notch geometry. Use when user mentions stress concentration, fillet optimization, reshaping surfaces, or reducing peak stress. Moves surfaces only.
 allowed-tools:
   - Read
   - Write
@@ -11,256 +11,128 @@ allowed-tools:
   - Skill
 ---
 
-# Abaqus Shape Optimization Workflow
+# Abaqus Shape Optimization Skill
+
+Optimize surface geometry to reduce stress concentrations. Shape optimization moves existing surfaces without adding or removing material.
 
 ## When to Use This Skill
 
-**USE for:**
-- Reducing stress concentrations at fillets/notches
-- Optimizing surface contours for uniform stress
-- Improving fatigue life through shape changes
-- Weight reduction with smooth geometry changes
-- Designs that must be traditionally manufactured
+**Route here when user mentions:**
+- "stress concentration", "reduce peak stress"
+- "fillet optimization", "optimize fillet radius"
+- "reshape surface", "smooth geometry"
+- "improve fatigue life", "notch optimization"
 
-**Do NOT use for:**
-- Adding/removing material (holes, organic forms) → use `/abaqus-topology-optimization`
-- Complete redesign of part → topology optimization first
-- Quick lightweight concepts → topology optimization
+**Route elsewhere:**
+- Adding/removing material (holes, organic forms) → `/abaqus-topology-optimization`
+- Low-level optimization setup → `/abaqus-optimization`
+- Running the optimization job → `/abaqus-job`
 
-## Key Decisions
-
-### 1. Shape vs Topology?
+## Shape vs Topology Optimization
 
 | Aspect | Shape Optimization | Topology Optimization |
 |--------|-------------------|----------------------|
-| Changes | Surface positions | Material presence |
+| What changes | Surface positions | Material presence |
 | Result | Smooth surfaces | Holes, organic forms |
 | Manufacturing | Traditional machining | Often needs AM/casting |
 | Design freedom | Limited | High |
-| Use case | Refine existing design | Conceptual design |
+| Best for | Refine existing design | Conceptual design |
 
-### 2. Objective Selection
+**Rule of thumb:** Use shape optimization when you have a good design with local stress issues. Use topology when starting fresh or need major redesign.
 
-| Objective | Effect |
-|-----------|--------|
-| Minimize max stress | Reduce stress concentrations |
-| Minimize stress variation | Uniform stress distribution |
-| Maximize stiffness | Minimize compliance |
-| Target stress | Match specific stress value |
+## Prerequisites
 
-### 3. Design Region
+Before shape optimization:
+1. ✅ Working static analysis that converges
+2. ✅ Identified high-stress surface region
+3. ✅ Full Abaqus license with Tosca (not Learning Edition)
 
-Only select surfaces that:
-- Can be modified in manufacturing
-- Are not functional interfaces
-- Don't have attached features
+## Workflow: Shape Optimization
 
-## Required Inputs
+### Step 1: Run Baseline Analysis
 
-| Input | Required | Guidance |
-|-------|----------|----------|
-| Geometry | YES | Part with stress concentrations |
-| Design surfaces | YES | Which surfaces can move |
-| Movement limits | YES | Max growth/shrink (mm) |
-| Objective | YES | What to minimize/maximize |
-| Constraints | Optional | Volume, displacement limits |
+Run static analysis to identify stress concentrations. Note peak stress location and magnitude for comparison baseline.
 
-## Workflow Steps
+### Step 2: Identify Design Surfaces
 
-1. **Identify problem** - Run static analysis, find stress concentration
-2. **Define design region** - Select surfaces to optimize
-3. **Set movement limits** - How much can surfaces move
-4. **Configure optimization** - Objective, constraints
-5. **Run optimization** - Submit process
-6. **Validate result** - Compare before/after stress
+Ask user if unclear: Which surfaces can be modified? Which must remain fixed?
 
-## Shape Optimization Example
+Only select surfaces that can be modified in manufacturing, are not functional interfaces, and don't have attached features.
 
-```python
-from abaqus import *
-from abaqusConstants import *
-from caeModules import *
+### Step 3: Define Movement Limits
 
-# ============= PARAMETERS =============
-LENGTH = 100.0
-HEIGHT = 50.0
-THICKNESS = 10.0
+Get maximum growth/shrink (mm). Typical values: 3-10mm depending on part size.
 
-E = 210000.0
-NU = 0.3
-MESH_SIZE = 3.0
+### Step 4: Choose Objective
 
-MAX_SHAPE_CHANGE = 5.0  # mm
+| User Goal | Objective | Design Response |
+|-----------|-----------|-----------------|
+| Reduce stress concentration | MINIMIZE_MAXIMUM | STRESS (MISES) |
+| Uniform stress distribution | MINIMIZE_MAXIMUM | MAX_PRINCIPAL_STRESS |
+| Maximize stiffness | MINIMIZE_MAXIMUM | STRAIN_ENERGY |
 
-# ============= MODEL =============
-model = mdb.Model(name='ShapeOpt')
+### Step 5: Add Constraints and Geometric Restrictions
 
-# ============= GEOMETRY (L-bracket) =============
-part = model.Part(name='Bracket', dimensionality=THREE_D, type=DEFORMABLE_BODY)
-sketch = model.ConstrainedSketch(name='Sketch', sheetSize=200.0)
+Protect critical regions: BC surfaces, load surfaces, mating interfaces, precision features.
 
-# L-shape profile with sharp corner (stress concentration)
-sketch.Line(point1=(0, 0), point2=(LENGTH, 0))
-sketch.Line(point1=(LENGTH, 0), point2=(LENGTH, HEIGHT/2))
-sketch.Line(point1=(LENGTH, HEIGHT/2), point2=(LENGTH/3, HEIGHT/2))
-sketch.Line(point1=(LENGTH/3, HEIGHT/2), point2=(LENGTH/3, HEIGHT))
-sketch.Line(point1=(LENGTH/3, HEIGHT), point2=(0, HEIGHT))
-sketch.Line(point1=(0, HEIGHT), point2=(0, 0))
+Common constraints: volume ≤ initial, maintain planar surfaces, mesh quality.
 
-part.BaseSolidExtrude(sketch=sketch, depth=THICKNESS)
+### Step 6: Run Optimization
 
-# ============= MATERIAL =============
-material = model.Material(name='Steel')
-material.Elastic(table=((E, NU),))
-material.Density(table=((7.85e-9,),))
+Set design cycles (20-30) and submit the optimization process.
 
-model.HomogeneousSolidSection(name='Section', material='Steel')
-part.SectionAssignment(region=part.Set(cells=part.cells, name='All'), sectionName='Section')
+## Key Parameters
 
-# ============= ASSEMBLY =============
-assembly = model.rootAssembly
-instance = assembly.Instance(name='Bracket-1', part=part, dependent=ON)
+| Parameter | Recommended | Notes |
+|-----------|-------------|-------|
+| Max movement | 3-10mm | Based on part size |
+| Design cycles | 20-30 | More for complex shapes |
+| Mesh quality | MEDIUM | Balance speed/quality |
+| Smoothing | LAPLACIAN | Prevents mesh distortion |
 
-# ============= STEP =============
-model.StaticStep(name='Load', previous='Initial')
-model.FieldOutputRequest(name='F-Output', createStepName='Load', variables=('S', 'U'))
+## What to Ask User
 
-# ============= BCs AND LOADS =============
-bottom = instance.faces.findAt(((LENGTH/2, 0, THICKNESS/2),))
-assembly.Set(faces=bottom, name='Fixed')
-model.EncastreBC(name='Fixed', createStepName='Initial', region=assembly.sets['Fixed'])
-
-top = instance.faces.findAt(((LENGTH/6, HEIGHT, THICKNESS/2),))
-assembly.Surface(side1Faces=top, name='LoadSurf')
-model.Pressure(name='Load', createStepName='Load',
-               region=assembly.surfaces['LoadSurf'], magnitude=10.0)
-
-# ============= MESH =============
-part.seedPart(size=MESH_SIZE)
-elemType = mesh.ElemType(elemCode=C3D8R, elemLibrary=STANDARD)
-part.setElementType(regions=(part.cells,), elemTypes=(elemType,))
-part.generateMesh()
-
-# ============= SHAPE OPTIMIZATION =============
-# Create shape task
-model.ShapeTask(name='ShapeTask', region=MODEL)
-
-# Design responses
-task = model.optimizationTasks['ShapeTask']
-
-task.SingleTermDesignResponse(
-    name='max_stress',
-    region=MODEL,
-    identifier=STRESS,
-    stressComponent=MISES,
-    operation=MAXIMUM,
-    stepOptions=LAST_STEP
-)
-
-task.SingleTermDesignResponse(
-    name='volume',
-    region=MODEL,
-    identifier=VOLUME
-)
-
-# Objective: minimize maximum stress
-task.ObjectiveFunction(
-    name='MinStress',
-    objectives=((task.designResponses['max_stress'], MINIMIZE_MAXIMUM, 1.0, 0.0),)
-)
-
-# Constraint: don't increase volume
-task.OptimizationConstraint(
-    name='VolumeLimit',
-    designResponse='volume',
-    restrictionMethod=RELATIVE_LESS_THAN_EQUAL,
-    restrictionValue=1.0
-)
-
-# Define design surfaces (inner corner area)
-inner_faces = instance.faces.getByBoundingBox(
-    xMin=LENGTH/3-15, yMin=HEIGHT/2-15, zMin=0,
-    xMax=LENGTH/3+15, yMax=HEIGHT/2+15, zMax=THICKNESS
-)
-assembly.Set(faces=inner_faces, name='DesignSurfaces')
-
-# Shape design variables
-task.designVariables = (
-    ('DesignSurfaces', MAX_SHAPE_CHANGE, -MAX_SHAPE_CHANGE),
-)
-
-# ============= OPTIMIZATION PROCESS =============
-opt = mdb.OptimizationProcess(
-    name='ShapeOptimization',
-    model='ShapeOpt',
-    task='ShapeTask',
-    maxDesignCycle=30
-)
-
-# ============= SAVE =============
-mdb.saveAs('ShapeOptimization.cae')
-print("Shape optimization ready. Run: opt.submit()")
-```
-
-## Design Variable Definition
-
-```python
-# (region_name, max_growth, max_shrink)
-task.designVariables = (
-    ('FilletSurfaces', 5.0, -5.0),  # ±5mm movement
-    ('CornerSurfaces', 3.0, -3.0),  # ±3mm movement
-)
-```
-
-## Geometric Restrictions
-
-```python
-# Keep certain surfaces fixed
-task.GeometricRestriction(
-    name='FixedSurf',
-    surfaces=fixed_surfaces,
-    movement=FIXED
-)
-
-# Maintain planar surface
-task.GeometricRestriction(
-    name='StayPlanar',
-    surfaces=planar_surfaces,
-    movement=PLANAR
-)
-
-# Mesh quality during shape change
-task.GeometricRestriction(
-    name='MeshQuality',
-    meshQualityTechnique=LAPLACIAN_SMOOTHING
-)
-```
-
-## Post-Processing
-
-After optimization:
-1. Compare initial vs optimized stress
-2. Export modified geometry
-3. Run final validation FEA
-4. Check manufacturability
-
-## Troubleshooting
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "Mesh distortion" | Too much shape change | Reduce movement limits |
-| "No improvement" | Wrong design surfaces | Check surface selection |
-| "Convergence failure" | Aggressive optimization | Smaller steps, add smoothing |
+If not specified, clarify:
+1. **Which surface to reshape?** - "The inner fillet at the L-bracket corner"
+2. **Maximum allowed movement?** - "Up to 5mm growth, 3mm shrink"
+3. **Stress reduction target?** - "Reduce from 450 MPa to under 300 MPa"
+4. **Volume constraint?** - "Keep volume within 5% of original"
 
 ## Validation Checklist
 
-- [ ] Initial analysis shows stress concentration
-- [ ] Design surfaces selected correctly
-- [ ] Movement limits are reasonable
-- [ ] Constraint prevents volume increase
-- [ ] Final stress is lower than initial
+After optimization completes, verify:
+- [ ] Peak stress reduced at critical location
+- [ ] Volume constraint satisfied
+- [ ] Geometry still manufacturable
+- [ ] No mesh distortion warnings
+- [ ] Results converged (objective stable)
 
-## API Reference
+## Post-Processing
 
-For optimization setup: `/abaqus-optimization`
-For static analysis: `/abaqus-static-analysis`
+1. Compare initial vs optimized stress contours
+2. Export modified geometry if needed
+3. Run final validation FEA on optimized shape
+4. Check manufacturability with CAM or manufacturing engineer
+
+## Troubleshooting
+
+| Problem | Likely Cause | Solution |
+|---------|--------------|----------|
+| Mesh distortion | Movement limits too large | Reduce max growth/shrink |
+| No improvement | Wrong design surfaces | Verify surface selection |
+| Convergence failure | Aggressive optimization | Add smoothing, smaller steps |
+| Volume increase | No volume constraint | Add volume ≤ initial constraint |
+| "License error" | No Tosca module | Requires full Abaqus |
+
+## Code Patterns
+
+For actual API syntax and code examples, see:
+- [Shape Optimization API](references/shape-optimization-api.md)
+- [Design Variable Setup](references/design-variables.md)
+- [Geometric Restrictions](references/geometric-restrictions.md)
+
+## Related Skills
+
+- `/abaqus-optimization` - Base optimization API and concepts
+- `/abaqus-topology-optimization` - For material removal optimization
+- `/abaqus-static-analysis` - Required baseline analysis

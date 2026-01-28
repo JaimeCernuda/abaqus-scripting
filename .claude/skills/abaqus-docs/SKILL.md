@@ -1,6 +1,6 @@
 ---
 name: abaqus-docs
-description: Download and manage abqpy API documentation for offline reference. Use when setting up the project or needing to refresh documentation.
+description: Download and manage abqpy API documentation. Use when user asks about API documentation, API reference, or downloading Abaqus docs.
 allowed-tools:
   - Read
   - Write
@@ -8,79 +8,90 @@ allowed-tools:
   - Bash(python:*)
 ---
 
-# Abaqus Documentation Downloader
+# Abaqus Documentation Skill
+
+Navigate and access Abaqus Python API documentation for parameter lookups and method reference.
 
 ## When to Use This Skill
 
-**USE when you need to:**
-- Set up API documentation for a new project
-- Refresh outdated local documentation
-- Access offline API reference
-- Look up specific Abaqus Python API methods
+**Route here when user asks:**
+- "Where is the API documentation?"
+- "What parameters does X take?"
+- "What methods are available for Material/Part/Mesh?"
+- "Show me the API reference for..."
+- "Download/refresh the docs"
 
-**Do NOT use for:**
-- Learning Abaqus concepts (use other skills for guidance)
-- Running analyses → use workflow skills
-- Checking syntax for specific modules → read the downloaded docs directly
+**Route elsewhere:**
+- Learning concepts or workflows -> specific analysis skills
+- Running analyses -> `/abaqus-static-analysis`, `/abaqus-dynamic-analysis`, etc.
+- Quick code examples -> module-specific skills like `/abaqus-material`
 
-## What Gets Downloaded
+## Documentation Location
 
-The script crawls the abqpy documentation and extracts:
+All API documentation is pre-downloaded at:
 
-| Module | Content |
-|--------|---------|
-| mdb | Model database operations |
-| odb | Output database access |
-| part | Part creation and features |
-| sketcher | 2D sketch operations |
-| assembly | Instance and assembly |
-| material | Material definitions |
-| property | Section properties |
-| mesh | Meshing operations |
-| step | Analysis step types |
-| load | Load definitions |
-| bc | Boundary conditions |
-| interaction | Contact and connectors |
-| amplitude | Time-varying definitions |
-| field | Initial/predefined fields |
-| output | Output requests |
-| optimization | Tosca optimization |
-| job | Job management |
+`.claude/docs/abaqus-api/modules/`
 
-## Usage
+## Module Index
 
-### Download Documentation
-```bash
-uv run .claude/skills/abaqus-docs/scripts/download_abqpy_docs.py
-```
+| Task | Documentation File |
+|------|-------------------|
+| Model database | `modules/mdb.md` |
+| Model internals | `modules/mdb_model.md` |
+| Part creation | `modules/part.md` |
+| 2D sketching | `modules/sketcher.md` |
+| Assembly/instances | `modules/assembly.md` |
+| Material properties | `modules/material.md` |
+| Section properties | `modules/property.md` |
+| Meshing | `modules/mesh.md` |
+| Analysis steps | `modules/step.md` |
+| Loads | `modules/load.md` |
+| Boundary conditions | `modules/bc.md` |
+| Contact/ties | `modules/interaction.md` |
+| Time-varying definitions | `modules/amplitude.md` |
+| Initial/predefined fields | `modules/field.md` |
+| Output requests | `modules/output.md` |
+| Topology optimization | `modules/optimization.md` |
+| Job management | `modules/job.md` |
+| Results access | `modules/odb.md` |
 
-### Force Refresh
-```bash
-uv run .claude/skills/abaqus-docs/scripts/download_abqpy_docs.py --force
-```
+## How to Use
 
-## Output Location
+### Answering API Questions
 
-Documentation is saved to:
-```
-.claude/docs/abaqus-api/
-├── README.md           # Index and usage
-├── index.json          # Structured index
-└── modules/
-    ├── mdb.md
-    ├── odb.md
-    ├── part.md
-    └── ...
-```
+1. Identify which module the user needs from the index above
+2. Read the relevant documentation file
+3. Extract specific method signatures, parameters, or examples
 
-## Dependencies
+### Common Lookups
 
-Install with:
-```bash
-uv add crawl4ai httpx beautifulsoup4 markdownify
-```
+| User Asks About | Read This Module |
+|-----------------|------------------|
+| Creating geometry | `part.md`, `sketcher.md` |
+| Positioning parts | `assembly.md` |
+| Defining materials | `material.md` |
+| Creating sections | `property.md` |
+| Generating mesh | `mesh.md` |
+| Setting up analysis | `step.md` |
+| Applying forces | `load.md` |
+| Fixing supports | `bc.md` |
+| Defining contact | `interaction.md` |
+| Running analysis | `job.md` |
+| Extracting results | `odb.md` |
 
-## Source URLs
+## Refreshing Documentation
 
-- Main documentation: https://hailin.wang/abqpy/en/2025/reference/
-- GitHub: https://github.com/haiiliin/abqpy
+If documentation is missing or outdated:
+1. Run the download script at `.claude/skills/abaqus-docs/scripts/download_abqpy_docs.py`
+2. Use `--force` flag to overwrite existing files
+
+## Documentation Sources
+
+- **Primary**: https://hailin.wang/abqpy/en/2025/reference/
+- **GitHub**: https://github.com/haiiliin/abqpy
+
+## Code Patterns
+
+For actual API syntax and code examples, see:
+- `references/api-quick-ref.md`
+- `references/common-patterns.md`

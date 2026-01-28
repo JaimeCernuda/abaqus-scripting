@@ -1,6 +1,6 @@
 ---
 name: abaqus-load
-description: Define loads in Abaqus - forces, pressures, tractions, thermal loads, and gravity. Use when applying external forces or thermal inputs to structures. Handles point loads, distributed loads, and body forces. Does not handle boundary conditions (constraints) or contact forces.
+description: Apply forces and pressures to structures. Use when user asks to apply a force, add pressure, put a load on, or mentions gravity, point loads, or distributed forces.
 allowed-tools:
   - Read
   - Write
@@ -12,238 +12,128 @@ allowed-tools:
 
 # Abaqus Load Skill
 
+Apply mechanical and thermal loads to FEA models - forces, pressures, gravity, and heat flux.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Apply point forces to vertices/nodes
-- Apply distributed forces (traction) to surfaces
-- Apply pressure (normal to surface)
-- Add gravity or other body forces
-- Define thermal loads (heat flux, convection)
-- Create time-varying loads with amplitudes
+**Route here when user mentions:**
+- "Apply a force", "add pressure", "put a load on"
+- "Gravity", "self-weight", "body force"
+- "Point load", "distributed load", "traction"
+- "Heat flux", "thermal load"
+- "Force in the X/Y/Z direction"
 
-**Do NOT use for:**
-- Constraining motion (fixed, pinned) → use `/abaqus-bc`
-- Prescribed displacements → use `/abaqus-bc`
-- Contact forces between parts → use `/abaqus-interaction`
-- Initial temperature fields → use `/abaqus-field`
+**Route elsewhere:**
+- Fixed supports, displacements, symmetry → `/abaqus-bc`
+- Contact forces between parts → `/abaqus-interaction`
+- Initial temperature fields, pre-stress → `/abaqus-field`
+- Time-varying load profiles → `/abaqus-amplitude`
 
 ## Key Decisions
 
 ### 1. Which Load Type?
 
-| Scenario | Load Type | Units |
-|----------|-----------|-------|
-| Force at a point | ConcentratedForce | N |
-| Force spread over surface | SurfaceTraction | MPa (force/area) |
-| Normal force on surface | Pressure | MPa (+ = compression) |
+| User Describes | Load Type | Units |
+|----------------|-----------|-------|
+| Force at a point/vertex | ConcentratedForce | N |
+| Force spread over surface | SurfaceTraction | MPa |
+| Normal pressure on surface | Pressure | MPa |
 | Force along edge | LineLoad | N/mm |
 | Self-weight, acceleration | Gravity | mm/s² |
-| Heat input | SurfaceHeatFlux | mW/mm² |
+| Heat input to surface | SurfaceHeatFlux | mW/mm² |
+| Convective cooling/heating | FilmCondition | mW/(mm²·K) |
 
-### 2. Force vs Traction Conversion
+### 2. When to Convert Force to Traction
 
-If you have a **total force** but need to apply it as **traction**:
+If user gives **total force** but it must be **distributed**:
 
 ```
 Traction (MPa) = Total Force (N) / Surface Area (mm²)
 ```
 
-**Example:** 1000 N on a 50×20mm face = 1000 / (50×20) = 1.0 MPa
+**Example:** 1000 N on a 50×20mm face = 1000 / 1000 = 1.0 MPa
 
-### 3. Pressure Sign Convention
+## Sign Conventions
 
-| Pressure Value | Effect |
-|----------------|--------|
-| Positive (+) | Compression (pushes into surface) |
-| Negative (-) | Tension (pulls away from surface) |
+| Load Type | Positive (+) | Negative (-) |
+|-----------|--------------|--------------|
+| Pressure | Compression (into surface) | Tension (away from surface) |
+| Force components (cf1, cf2, cf3) | Positive axis direction | Negative axis direction |
+| Gravity | Positive axis acceleration | Negative axis (comp2=-9810 for -Y) |
 
-### 4. Direction Specification
+## What to Ask User
 
-| Load Type | Direction Method |
-|-----------|-----------------|
-| ConcentratedForce | cf1, cf2, cf3 (X, Y, Z components) |
+If not specified, clarify:
+
+| Question | Why It Matters |
+|----------|----------------|
+| Force magnitude? | Required for all loads |
+| Direction (X, Y, Z)? | Needed for directional loads |
+| Point or distributed? | Determines ConcentratedForce vs SurfaceTraction |
+| Which surface/vertex? | Defines load application region |
+| Constant or time-varying? | May need amplitude definition |
+
+## Direction Specification
+
+| Load Type | How Direction Works |
+|-----------|---------------------|
+| ConcentratedForce | cf1, cf2, cf3 = X, Y, Z components |
 | SurfaceTraction | directionVector=((origin), (endpoint)) |
 | Pressure | Always normal to surface (no direction needed) |
-| Gravity | comp1, comp2, comp3 (acceleration components) |
+| Gravity | comp1, comp2, comp3 = acceleration components |
+| LineLoad | comp1, comp2, comp3 = force/length components |
 
-## Required Inputs
+## Common Scenarios
 
-| Input | Required | Guidance |
-|-------|----------|----------|
-| Load type | YES | Based on physical scenario |
-| Region | YES | Surface, edge, or vertex |
-| Magnitude | YES | Force (N), Pressure (MPa), etc. |
-| Direction | Depends | Required for directional loads |
-| Step | NO | Default: first analysis step |
+### Standard Gravity Setup
+- Acceleration: comp2 = -9810 mm/s² (for -Y direction)
+- **Requires material density defined** - without it, gravity has no effect
 
-## Common Patterns
+### Pressure vs Traction
+- **Pressure**: Always normal to surface, simpler to define
+- **Traction**: Arbitrary direction, use when force isn't perpendicular
 
-### Concentrated Force (Point Load)
-```python
-# Find vertex
-vertex = instance.vertices.findAt(((LENGTH, HEIGHT/2, WIDTH/2),))
-region = assembly.Set(vertices=vertex, name='LoadPoint')
-
-# Apply force (components in X, Y, Z)
-model.ConcentratedForce(
-    name='PointLoad',
-    createStepName='LoadStep',
-    region=region,
-    cf1=0.0,       # X component (N)
-    cf2=-1000.0,   # Y component (N) - negative = downward
-    cf3=0.0        # Z component (N)
-)
-```
-
-### Surface Traction (Distributed Force)
-```python
-# Find face and create surface
-load_face = instance.faces.findAt(((LENGTH, HEIGHT/2, WIDTH/2),))
-load_surface = assembly.Surface(side1Faces=load_face, name='LoadSurface')
-
-# Direction vector: from origin point to direction point
-model.SurfaceTraction(
-    name='DistributedLoad',
-    createStepName='LoadStep',
-    region=load_surface,
-    magnitude=10.0,  # MPa (force per area)
-    directionVector=((0, 0, 0), (0, -1, 0)),  # Points in -Y direction
-    distributionType=UNIFORM,
-    traction=GENERAL
-)
-```
-
-### Pressure (Normal to Surface)
-```python
-# Pressure always acts normal to the surface
-model.Pressure(
-    name='InternalPressure',
-    createStepName='LoadStep',
-    region=surface,
-    magnitude=10.0  # MPa, positive = compression
-)
-
-# Tension (suction) - negative value
-model.Pressure(
-    name='Suction',
-    createStepName='LoadStep',
-    region=surface,
-    magnitude=-5.0  # Pulls away from surface
-)
-```
-
-### Gravity
-```python
-# Requires density in material definition!
-model.Gravity(
-    name='Gravity',
-    createStepName='LoadStep',
-    comp2=-9810.0  # mm/s² (g in -Y direction)
-)
-```
-
-**Important:** Gravity requires material density. Without density, gravity has no effect.
-
-### Line Load (Force on Edge)
-```python
-edge = instance.edges.findAt(((x, y, z),))
-region = assembly.Set(edges=edge, name='LoadEdge')
-
-model.LineLoad(
-    name='EdgeLoad',
-    createStepName='LoadStep',
-    region=region,
-    comp1=0.0,     # N/mm in X
-    comp2=-10.0,   # N/mm in Y
-    comp3=0.0      # N/mm in Z
-)
-```
-
-### Heat Flux (Thermal)
-```python
-model.SurfaceHeatFlux(
-    name='HeatIn',
-    createStepName='HeatStep',
-    region=surface,
-    magnitude=100.0  # mW/mm²
-)
-```
-
-### Convection (Thermal)
-```python
-model.FilmCondition(
-    name='Convection',
-    createStepName='HeatStep',
-    region=surface,
-    definition=EMBEDDED_COEFF,
-    filmCoeff=10.0,        # mW/(mm²·K)
-    sinkTemperature=25.0   # Ambient temperature (°C or K)
-)
-```
+### Thermal Loads
+- Heat flux: Direct heat input (mW/mm²)
+- Film condition: Convection with ambient temperature
 
 ## Time-Varying Loads
 
-### Create Amplitude First
-```python
-model.TabularAmplitude(
-    name='LoadRamp',
-    data=(
-        (0.0, 0.0),   # (time, amplitude factor)
-        (0.5, 1.0),   # Full load at t=0.5
-        (1.0, 0.5),   # Half load at t=1.0
-    )
-)
-```
+For loads that change over time:
+1. First define amplitude using `/abaqus-amplitude`
+2. Reference amplitude name when creating load
 
-### Apply Load with Amplitude
-```python
-model.ConcentratedForce(
-    name='VaryingLoad',
-    createStepName='LoadStep',
-    region=region,
-    cf2=-1000.0,
-    amplitude='LoadRamp'  # References the amplitude by name
-)
-```
+## Modifying Loads Across Steps
 
-## Modifying Loads in Steps
-
-### Change Magnitude
-```python
-# Original load
-model.ConcentratedForce(name='Load', createStepName='Step-1',
-                        region=region, cf2=-500.0)
-
-# Increase in Step-2
-model.loads['Load'].setValuesInStep(stepName='Step-2', cf2=-1000.0)
-```
-
-### Deactivate Load
-```python
-model.loads['Load'].deactivate(stepName='UnloadStep')
-```
+| Action | Method |
+|--------|--------|
+| Change magnitude | setValuesInStep() |
+| Turn off load | deactivate() |
+| Different load in each step | Create load with step name |
 
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "Load region not found" | Typo in surface/set name | Check spelling matches exactly |
-| "Zero reaction forces" | Load direction wrong or magnitude too small | Verify direction vector and units |
-| "Gravity has no effect" | Material missing density | Add `material.Density(table=...)` |
-| "Equilibrium not achieved" | Load too large for material/geometry | Reduce load or improve convergence settings |
-| "Negative eigenvalue" | Structure unstable under load | Check BCs, may need stabilization |
+| Problem | Likely Cause | Solution |
+|---------|--------------|----------|
+| Zero reaction forces | Wrong direction or tiny magnitude | Check direction vector and units |
+| Gravity has no effect | Missing density | Add density to material definition |
+| Load region not found | Typo in set/surface name | Verify name matches exactly |
+| Equilibrium not achieved | Load too large | Reduce magnitude or improve convergence |
+| Negative eigenvalue | Structure unstable | Check BCs provide adequate support |
 
-## Load Checklist
+## Validation Checklist
 
-Before running:
+Before running analysis:
 - [ ] Load applied to correct region (surface, vertex, edge)
 - [ ] Direction matches physical scenario
 - [ ] Magnitude in correct units (N, MPa, mW/mm²)
-- [ ] Load in correct step (not Initial unless prescribed displacement)
+- [ ] Load assigned to correct step (not Initial)
 - [ ] Density defined if using gravity
-- [ ] Reactions should equal applied loads (equilibrium check)
+- [ ] Reactions should balance applied loads
 
-## API Reference
+## Code Patterns
 
-For detailed parameters: [Load API](../../docs/abaqus-api/modules/load.md)
+For API syntax and implementation examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)
+- [Troubleshooting Guide](references/troubleshooting.md)

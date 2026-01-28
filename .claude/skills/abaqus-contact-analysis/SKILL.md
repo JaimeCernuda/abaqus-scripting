@@ -1,6 +1,6 @@
 ---
 name: abaqus-contact-analysis
-description: Complete workflow for contact analysis - surface-to-surface contact, friction, and multi-body problems.
+description: Analyze multi-body contact. Use when user mentions parts touching, friction between surfaces, bolt-plate contact, press fit, or assembly with contact.
 allowed-tools:
   - Read
   - Write
@@ -13,234 +13,146 @@ allowed-tools:
 
 # Abaqus Contact Analysis Workflow
 
+This skill guides multi-body contact analysis setup. It's a **workflow skill** - use it when analyzing assemblies where surfaces touch, slide, or separate.
+
 ## When to Use This Skill
 
-**USE for:**
-- Bolted/clamped joint analysis
-- Press fits and interference fits
-- Bearing and gear contact
-- Impact between bodies
-- Assembly simulation
-- Any problem where surfaces touch
+**Route here when user mentions:**
+- "Parts touching each other"
+- "Contact between surfaces"
+- "Friction between parts"
+- "Bolt and plate contact"
+- "Press fit / interference fit"
+- "Multi-body assembly"
+- "Parts sliding on each other"
+- "Impact analysis"
+- "Bearing contact"
 
-**Do NOT use for:**
-- Single-body analysis with no contact → use `/abaqus-static-analysis`
-- Permanent connections → use tie constraint via `/abaqus-interaction`
-- Just defining contact properties → use `/abaqus-interaction`
+**Route elsewhere:**
+- Single-body analysis → `/abaqus-static-analysis`
+- Just defining contact properties → `/abaqus-interaction`
+- Only boundary conditions → `/abaqus-bc`
 
-## Key Decisions
+## Prerequisites
 
-### 1. Contact Formulation
-
-| Formulation | When to Use |
-|-------------|-------------|
-| Surface-to-surface | General contact (recommended) |
-| Node-to-surface | Legacy, special cases |
-| General contact | Many bodies, automatic detection |
-| Self-contact | Folding, buckling |
-
-### 2. Master vs Slave Selection
-
-| Role | Should Be |
-|------|-----------|
-| Master | Stiffer, coarser mesh |
-| Slave | Softer, finer mesh |
-
-**Rule:** Slave surface nodes cannot penetrate master surface.
-
-### 3. Contact Behavior
-
-| Type | Description | When |
-|------|-------------|------|
-| Hard contact | No penetration | Most cases |
-| Soft contact | Pressure-overclosure | Rubber, foam |
-| Frictionless | No tangential resistance | Lubricated |
-| Friction | Coulomb friction | Dry contact |
-| Tied | No separation or slip | Bonded joint |
-
-### 4. Friction Coefficients
-
-| Interface | μ |
-|-----------|---|
-| Frictionless | 0.0 |
-| Lubricated steel | 0.1-0.2 |
-| Dry steel | 0.3-0.5 |
-| Rubber on metal | 0.5-0.8 |
-
-## Required Inputs
-
-| Input | Required | Guidance |
-|-------|----------|----------|
-| Parts/geometry | YES | Separate parts that contact |
-| Contact surfaces | YES | Which surfaces touch |
-| Contact property | YES | Normal + tangential behavior |
-| Friction (if any) | Depends | Coefficient value |
-| Initial gap | Check | May need adjustment |
+Before contact analysis setup:
+1. Separate parts exist (at least two bodies)
+2. Parts are positioned in assembly with appropriate gap/interference
+3. Material properties defined for all parts
+4. Basic understanding of which surfaces will touch
 
 ## Workflow Steps
 
-1. **Geometry** - Create separate parts
-2. **Assembly** - Position with appropriate gap/interference
-3. **Contact surfaces** - Define master and slave
-4. **Contact property** - Normal and tangential behavior
-5. **Contact interaction** - Link surfaces with property
-6. **Step** - Nonlinear static (nlgeom=ON usually needed)
-7. **Run and check** - Verify contact established
+### Step 1: Identify Contact Pairs
 
-## Complete Contact Example
+Ask the user:
+- Which surfaces will touch?
+- Is there an initial gap or interference?
+- Will surfaces slide or remain bonded?
 
-```python
-from abaqus import *
-from abaqusConstants import *
-from caeModules import *
+### Step 2: Determine Master vs Slave
 
-# ============= PARAMETERS =============
-BLOCK_SIZE = 50.0
-PLATE_LENGTH = 150.0
-PLATE_WIDTH = 100.0
-PLATE_THICK = 10.0
-GAP = 0.5  # Initial gap
+| Role | Should Be |
+|------|-----------|
+| Master | Stiffer material, coarser mesh |
+| Slave | Softer material, finer mesh |
 
-E = 210000.0
-NU = 0.3
-DENSITY = 7.85e-9
-FRICTION = 0.3
-MESH_SIZE = 5.0
+**Rule:** Slave surface nodes cannot penetrate master surface.
 
-# ============= MODEL =============
-model = mdb.Model(name='ContactAnalysis')
+### Step 3: Choose Contact Type
 
-# ============= GEOMETRY (Two Parts) =============
-# Block
-block = model.Part(name='Block', dimensionality=THREE_D, type=DEFORMABLE_BODY)
-sketch1 = model.ConstrainedSketch(name='BlockSketch', sheetSize=200.0)
-sketch1.rectangle(point1=(0, 0), point2=(BLOCK_SIZE, BLOCK_SIZE))
-block.BaseSolidExtrude(sketch=sketch1, depth=BLOCK_SIZE)
+| Scenario | Approach |
+|----------|----------|
+| Permanently bonded surfaces | Tie constraint (no slip/separation) |
+| Sliding with friction | Surface-to-surface contact |
+| Frictionless contact | Surface-to-surface, no tangential |
+| Many bodies touching | General contact (auto detection) |
+| Surface folding on itself | Self-contact |
 
-# Plate
-plate = model.Part(name='Plate', dimensionality=THREE_D, type=DEFORMABLE_BODY)
-sketch2 = model.ConstrainedSketch(name='PlateSketch', sheetSize=300.0)
-sketch2.rectangle(point1=(0, 0), point2=(PLATE_LENGTH, PLATE_WIDTH))
-plate.BaseSolidExtrude(sketch=sketch2, depth=PLATE_THICK)
+### Step 4: Define Contact Property
 
-# ============= MATERIAL =============
-material = model.Material(name='Steel')
-material.Elastic(table=((E, NU),))
-material.Density(table=((DENSITY,),))
+Configure normal behavior:
+- **Hard contact** - Most cases, no penetration allowed
+- **Soft contact** - For rubber, foam, or gradual engagement
 
-model.HomogeneousSolidSection(name='Section', material='Steel')
-block.SectionAssignment(region=block.Set(cells=block.cells, name='All'), sectionName='Section')
-plate.SectionAssignment(region=plate.Set(cells=plate.cells, name='All'), sectionName='Section')
+Configure tangential behavior (if not tied):
+- **Frictionless** - Lubricated surfaces
+- **Friction (Coulomb)** - Specify coefficient
 
-# ============= ASSEMBLY =============
-assembly = model.rootAssembly
+### Step 5: Set Friction Coefficient
 
-plateInst = assembly.Instance(name='Plate-1', part=plate, dependent=ON)
-blockInst = assembly.Instance(name='Block-1', part=block, dependent=ON)
+| Interface | Typical Value |
+|-----------|---------------|
+| Frictionless | 0.0 |
+| Lubricated steel | 0.1-0.2 |
+| Dry steel-on-steel | 0.3-0.5 |
+| Rubber on metal | 0.5-0.8 |
 
-# Position block above plate with gap
-dx = (PLATE_LENGTH - BLOCK_SIZE) / 2
-dy = (PLATE_WIDTH - BLOCK_SIZE) / 2
-dz = PLATE_THICK + GAP
-assembly.translate(instanceList=('Block-1',), vector=(dx, dy, dz))
+Ask user if unsure about their specific interface.
 
-# ============= CONTACT SURFACES =============
-# Slave: block bottom
-block_bottom = blockInst.faces.findAt(((dx + BLOCK_SIZE/2, dy + BLOCK_SIZE/2, PLATE_THICK + GAP),))
-assembly.Surface(side1Faces=block_bottom, name='BlockBottom')
+### Step 6: Create Analysis Step
 
-# Master: plate top
-plate_top = plateInst.faces.findAt(((PLATE_LENGTH/2, PLATE_WIDTH/2, PLATE_THICK),))
-assembly.Surface(side1Faces=plate_top, name='PlateTop')
+Contact analysis typically requires:
+- Nonlinear geometry (nlgeom=ON)
+- Smaller initial increment (0.1)
+- More increments allowed (100+)
+- Minimum increment for convergence (1e-8)
 
-# ============= CONTACT PROPERTY =============
-model.ContactProperty('ContactProp')
-model.interactionProperties['ContactProp'].TangentialBehavior(
-    formulation=PENALTY,
-    table=((FRICTION,),)
-)
-model.interactionProperties['ContactProp'].NormalBehavior(
-    pressureOverclosure=HARD,
-    allowSeparation=ON
-)
+### Step 7: Request Contact Outputs
 
-# ============= CONTACT INTERACTION =============
-model.SurfaceToSurfaceContactStd(
-    name='Contact-1',
-    createStepName='Initial',
-    master=assembly.surfaces['PlateTop'],
-    slave=assembly.surfaces['BlockBottom'],
-    sliding=FINITE,
-    interactionProperty='ContactProp'
-)
+Essential output variables:
+- CSTRESS - Contact pressure and shear
+- CDISP - Contact displacement
+- COPEN - Gap opening distance
+- CSLIP - Accumulated slip
 
-# ============= STEP (Nonlinear) =============
-model.StaticStep(
-    name='Load',
-    previous='Initial',
-    nlgeom=ON,
-    initialInc=0.1,
-    minInc=1e-8,
-    maxNumInc=100
-)
+## Key Decisions
 
-model.FieldOutputRequest(name='F-Output', createStepName='Load',
-                         variables=('S', 'U', 'CSTRESS', 'CDISP'))
+| User Need | Configuration |
+|-----------|---------------|
+| Bonded joint (welded, glued) | Tie constraint |
+| Bolted connection | Friction contact + preload |
+| Press fit | Interference + friction |
+| Bearing load | Frictionless or low friction |
+| Impact/crash | Explicit dynamics + general contact |
 
-# ============= BCs AND LOADS =============
-# Fix plate bottom
-plate_bottom = plateInst.faces.findAt(((PLATE_LENGTH/2, PLATE_WIDTH/2, 0),))
-assembly.Set(faces=plate_bottom, name='PlateFixed')
-model.EncastreBC(name='Fixed', createStepName='Initial', region=assembly.sets['PlateFixed'])
+## What to Ask User
 
-# Pressure on block top
-block_top = blockInst.faces.findAt(((dx + BLOCK_SIZE/2, dy + BLOCK_SIZE/2, PLATE_THICK + GAP + BLOCK_SIZE),))
-assembly.Surface(side1Faces=block_top, name='BlockTop')
-model.Pressure(name='PushDown', createStepName='Load',
-               region=assembly.surfaces['BlockTop'], magnitude=10.0)
+1. **Surfaces:** Which surfaces will touch?
+2. **Motion:** Will parts slide, separate, or stay bonded?
+3. **Friction:** Dry contact, lubricated, or frictionless?
+4. **Gap/interference:** Initial configuration?
+5. **Loading:** What pushes the parts together?
 
-# ============= MESH =============
-block.seedPart(size=MESH_SIZE)
-plate.seedPart(size=MESH_SIZE)
-elemType = mesh.ElemType(elemCode=C3D8R, elemLibrary=STANDARD)
-block.setElementType(regions=(block.cells,), elemTypes=(elemType,))
-plate.setElementType(regions=(plate.cells,), elemTypes=(elemType,))
-block.generateMesh()
-plate.generateMesh()
+## Validation Checklist
 
-# ============= RUN =============
-mdb.saveAs('ContactAnalysis.cae')
-job = mdb.Job(name='ContactAnalysis', model='ContactAnalysis')
-job.submit()
-job.waitForCompletion()
-```
-
-## Contact Outputs
-
-| Variable | Description |
-|----------|-------------|
-| CSTRESS | Contact stress (CPRESS, CSHEAR) |
-| CDISP | Contact displacement |
-| COPEN | Opening distance |
-| CSLIP | Accumulated slip |
+After setup, verify:
+- [ ] Master/slave assigned correctly (stiffer = master)
+- [ ] Contact property has normal behavior defined
+- [ ] Tangential behavior set (friction or frictionless)
+- [ ] nlgeom=ON in analysis step
+- [ ] Contact outputs requested (CSTRESS, CDISP)
+- [ ] Boundary conditions don't overconstrain
 
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
+| Problem | Likely Cause | Solution |
+|---------|--------------|----------|
 | "Severe discontinuity" | Contact chattering | Add stabilization, smaller increments |
 | "Too much penetration" | Wrong master/slave | Swap roles, refine slave mesh |
-| "Contact not detected" | Surfaces too far | Use adjust=ON or reduce gap |
-| "Convergence failure" | Difficult nonlinearity | Smaller increments, check setup |
+| "Contact not detected" | Surfaces too far apart | Use adjust=ON or reduce gap |
+| "Convergence failure" | Difficult nonlinearity | Smaller increments, check friction |
 
-## Validation
+## Code Patterns
 
-- [ ] Master/slave assigned correctly (stiffer = master)
-- [ ] Contact property defined (normal + tangential)
-- [ ] nlgeom=ON in step (usually needed)
-- [ ] Contact outputs requested (CSTRESS, CDISP)
-- [ ] Results show expected contact area
+For API syntax and code examples, see:
+- [Contact API Reference](references/contact-api.md)
+- [Common Contact Patterns](references/contact-patterns.md)
+- [Contact Examples](references/contact-examples.md)
 
-## API Reference
+## Related Skills
 
-For contact details: `/abaqus-interaction`
+- `/abaqus-interaction` - Contact property details
+- `/abaqus-bc` - Boundary conditions
+- `/abaqus-step` - Nonlinear step settings
+- `/abaqus-dynamic-analysis` - For impact problems

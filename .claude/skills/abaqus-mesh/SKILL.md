@@ -1,6 +1,6 @@
 ---
 name: abaqus-mesh
-description: Generate finite element meshes for Abaqus analysis. Use when part geometry is complete and needs discretization. Helps choose between hex (C3D8R), tet (C3D10), or shell (S4R) elements based on geometry complexity and accuracy needs. Handles seed sizing, mesh controls, and quality verification. Does not modify part geometry.
+description: Generate finite element meshes. Use when user mentions mesh, elements, nodes, refine mesh, mesh size, or asks about element types like C3D8R, C3D10, S4R.
 allowed-tools:
   - Read
   - Write
@@ -12,40 +12,53 @@ allowed-tools:
 
 # Abaqus Mesh Skill
 
+Generate finite element meshes for Abaqus models. Discretizes geometry into elements and nodes for analysis.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Discretize completed geometry into finite elements
-- Choose appropriate element types for your analysis
-- Control mesh density (global or local refinement)
-- Verify mesh quality before analysis
-- Estimate node count for Learning Edition limits
+**Route here when user mentions:**
+- "Mesh the part", "generate mesh"
+- "Element size", "mesh size", "refine mesh"
+- "Element type", "C3D8R", "C3D10", "S4R"
+- "Too many nodes", "Learning Edition limit"
+- "Mesh quality", "check elements"
 
-**Do NOT use for:**
-- Modifying part geometry (add features, fillets) → use `/abaqus-geometry`
-- Creating partitions for load/BC application → use `/abaqus-geometry`
-- Mesh-based results extraction → use `/abaqus-odb`
+**Route elsewhere:**
+- Creating or modifying geometry → `/abaqus-geometry`
+- Creating partitions for loads/BCs → `/abaqus-geometry`
+- Extracting mesh-based results → `/abaqus-odb`
 
-**Prerequisites:** Geometry must be complete. Sections should be assigned before meshing (material assignment).
+## Prerequisites
 
-## Key Decisions
+Before meshing:
+1. Geometry must be complete
+2. Sections should be assigned (material assignment)
 
-### 1. Element Type Selection
+## Workflow: Generating a Mesh
 
-| Geometry | Element | Code | Best For |
-|----------|---------|------|----------|
-| Simple box/prism | Hex, reduced integration | C3D8R | General purpose, fast |
-| Complex freeform | Tet, quadratic | C3D10 | Meshes anything, accurate |
-| Thin-walled (t/L < 0.1) | Shell | S4R | Efficient for plates/shells |
+### Step 1: Understand User's Goal
+
+Ask if unclear:
+- **Target mesh size?** Coarse (fast) or fine (accurate)?
+- **Hex or tet elements?** Simple geometry → hex; complex → tet
+- **Local refinement?** Stress concentrations need finer mesh
+
+### Step 2: Choose Element Type
+
+| Geometry | Recommended | Code | Notes |
+|----------|-------------|------|-------|
+| Simple box/prism | Hex, reduced | C3D8R | Fast, accurate, try first |
+| Complex freeform | Tet, quadratic | C3D10 | Meshes anything |
+| Thin-walled (t/L < 0.1) | Shell | S4R | Plates, shells |
 | Slender beams (L/d > 10) | Beam | B31 | Frames, trusses |
 
 **Decision guidance:**
-- **Can it be hex-meshed?** Try C3D8R first - best accuracy-to-cost ratio
-- **Complex shape?** Use C3D10 (tet) - meshes any geometry
-- **Thin structure?** Use S4R shell - captures bending without through-thickness elements
-- **Explicit dynamics?** C3D8R works well; avoid C3D20R (expensive)
+- Can it be hex-meshed? → Try C3D8R first
+- Complex shape or holes? → Use C3D10 (tet)
+- Thin structure? → Use S4R shell
+- Explicit dynamics? → C3D8R works well
 
-### 2. Mesh Size Selection
+### Step 3: Choose Mesh Size
 
 | Use Case | Element Size | Guideline |
 |----------|--------------|-----------|
@@ -56,112 +69,58 @@ allowed-tools:
 
 **Rule of thumb:** At least 3 elements across any feature you care about.
 
-### 3. Learning Edition Limits (1000 nodes max)
+### Step 4: Check Learning Edition Limits
+
+Learning Edition allows max 1000 nodes.
 
 | Box Dimensions (mm) | Max Element Size |
 |--------------------|------------------|
-| 100 × 100 × 100 | 20mm |
-| 100 × 50 × 30 | 10mm |
-| 50 × 50 × 50 | 12mm |
-| 200 × 100 × 50 | 25mm |
+| 100 x 100 x 100 | 20mm |
+| 100 x 50 x 30 | 10mm |
+| 50 x 50 x 50 | 12mm |
+| 200 x 100 x 50 | 25mm |
 
 **Estimation formula:** `nodes ≈ (L/size + 1) × (W/size + 1) × (H/size + 1)`
 
-## Required Inputs
+### Step 5: Apply Local Refinement (If Needed)
 
-| Input | Required | Default | Guidance |
-|-------|----------|---------|----------|
-| Element size | YES | Auto | Start coarse, refine as needed |
-| Element type | NO | C3D8R | Change for complex geometry or specific needs |
-| Mesh technique | NO | Free | Structured for simple shapes, Free for complex |
+Refine mesh near:
+- Holes and notches (stress concentrations)
+- Fillets and sharp corners
+- Load/BC application points
 
-## Common Patterns
+Options:
+- Edge seeds with smaller size
+- Edge seeds with specific element count
+- Biased mesh (graded density)
 
-### Basic Meshing
-```python
-# 1. Seed the part (controls element size)
-part.seedPart(size=5.0, deviationFactor=0.1, minSizeFactor=0.1)
+### Step 6: Generate and Verify
 
-# 2. Set element type
-elemType1 = mesh.ElemType(elemCode=C3D8R, elemLibrary=STANDARD)
-elemType2 = mesh.ElemType(elemCode=C3D6, elemLibrary=STANDARD)  # Wedge fallback
-elemType3 = mesh.ElemType(elemCode=C3D4, elemLibrary=STANDARD)  # Tet fallback
-part.setElementType(regions=(part.cells,), elemTypes=(elemType1, elemType2, elemType3))
+After mesh generation, check:
+- [ ] Node count within limits
+- [ ] Element count reasonable
+- [ ] No mesh quality warnings
+- [ ] Elements exist in all regions
 
-# 3. Generate mesh
-part.generateMesh()
+## Element Type Reference
 
-# 4. Check counts (IMPORTANT for Learning Edition)
-print(f"Nodes: {len(part.nodes)}, Elements: {len(part.elements)}")
-```
+### 3D Solid Elements
 
-### Tetrahedral Mesh (Complex Geometry)
-```python
-# Use when hex meshing fails or geometry is complex
-part.setMeshControls(
-    regions=part.cells,
-    elemShape=TET,
-    technique=FREE
-)
+| Code | Type | Nodes | Use Case |
+|------|------|-------|----------|
+| C3D8R | Hex, reduced | 8 | General purpose (recommended) |
+| C3D8 | Hex, full | 8 | Bending-dominated, no hourglass |
+| C3D20R | Hex, quadratic | 20 | High accuracy, expensive |
+| C3D4 | Tet, linear | 4 | Complex geometry (less accurate) |
+| C3D10 | Tet, quadratic | 10 | Complex geometry (better accuracy) |
 
-# C3D10 is more accurate than C3D4 for tets
-elemType = mesh.ElemType(elemCode=C3D10, elemLibrary=STANDARD)
-part.setElementType(regions=(part.cells,), elemTypes=(elemType,))
+### Shell Elements
 
-part.seedPart(size=5.0)
-part.generateMesh()
-```
-
-### Local Refinement
-```python
-# Refine specific edges (e.g., around stress concentration)
-edges = part.edges.findAt(((x, y, z),))
-part.seedEdgeBySize(edges=edges, size=1.0, constraint=FINER)
-
-# Or specify number of elements along edge
-part.seedEdgeByNumber(edges=edges, number=10)
-
-# Graded mesh (bias) - dense at one end, coarse at other
-part.seedEdgeByBias(
-    biasMethod=SINGLE,
-    end1Edges=edges,
-    ratio=5.0,  # Size ratio from end1 to end2
-    number=20
-)
-```
-
-### Structured Mesh (Simple Shapes)
-```python
-# For regular shapes that can be structured-meshed
-part.setMeshControls(
-    regions=part.cells,
-    elemShape=HEX,
-    technique=STRUCTURED
-)
-part.seedPart(size=5.0)
-part.generateMesh()
-```
-
-### Verify Mesh Quality
-```python
-# Check for warnings
-part.verifyMeshQuality(criterion=ANALYSIS_CHECKS)
-
-# Get element/node counts
-n_nodes = len(part.nodes)
-n_elements = len(part.elements)
-
-# For Learning Edition: abort if over limit
-if n_nodes > 1000:
-    raise ValueError(f"Node count {n_nodes} exceeds Learning Edition limit. Increase mesh size.")
-```
-
-### Delete and Regenerate
-```python
-part.deleteMesh()
-part.seedPart(size=NEW_SIZE)
-part.generateMesh()
-```
+| Code | Type | Nodes | Use Case |
+|------|------|-------|----------|
+| S4R | Quad, reduced | 4 | General purpose (recommended) |
+| S4 | Quad, full | 4 | No hourglass |
+| S3 | Triangle | 3 | Complex surfaces |
 
 ## Mesh Quality Guidelines
 
@@ -171,36 +130,19 @@ part.generateMesh()
 | Jacobian | > 0.5 | 0.1-0.5 | < 0.1 |
 | Min angle (quad) | > 45° | 30-45° | < 30° |
 
-**If quality is poor:** Refine locally, improve geometry, or use higher-order elements.
-
-## Element Type Reference
-
-### 3D Solid Elements
-| Code | Type | Nodes | Use Case |
-|------|------|-------|----------|
-| C3D8R | Hex, reduced integration | 8 | General purpose (recommended) |
-| C3D8 | Hex, full integration | 8 | Bending-dominated, no hourglass |
-| C3D20R | Hex, quadratic reduced | 20 | High accuracy, stress concentration |
-| C3D4 | Tet, linear | 4 | Complex geometry (less accurate) |
-| C3D10 | Tet, quadratic | 10 | Complex geometry (better accuracy) |
-
-### Shell Elements
-| Code | Type | Nodes | Use Case |
-|------|------|-------|----------|
-| S4R | Quad, reduced | 4 | General purpose (recommended) |
-| S4 | Quad, full | 4 | No hourglass |
-| S3 | Triangle | 3 | Complex surfaces |
-
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "Cannot mesh region" | Geometry too complex for hex mesh | Switch to TET with FREE technique |
-| "Element distortion warning" | Poor element shapes | Refine locally or improve geometry |
-| "Exceeded node limit" | Mesh too fine for Learning Edition | Increase element size |
-| "No mesh controls assigned" | Cells don't have mesh technique set | Call `setMeshControls()` before generating |
-| "Mesh connectivity error" | Gaps between instances | Use tied constraint or merge instances |
+| Problem | Likely Cause | Solution |
+|---------|--------------|----------|
+| "Cannot mesh region" | Geometry too complex for hex | Switch to TET with FREE technique |
+| "Element distortion" | Poor element shapes | Refine locally or fix geometry |
+| "Exceeded node limit" | Mesh too fine | Increase element size |
+| "No mesh controls" | Missing mesh technique | Set mesh controls before generating |
+| Mesh won't generate | Gaps in geometry | Check geometry, merge if needed |
 
-## API Reference
+## Code Patterns
 
-For detailed parameters: [Mesh API](../../docs/abaqus-api/modules/mesh.md)
+For API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)
+- [Element Library](references/element-library.md)

@@ -14,176 +14,147 @@ allowed-tools:
 
 # Abaqus Master Skill
 
-This is the master orchestrator for all Abaqus FEA tasks. It routes requests to the appropriate specialized skills based on the user's needs.
+Master orchestrator for all Abaqus FEA tasks. Routes requests to specialized skills based on user intent.
 
-## How to Use This Skill
+## When to Use This Skill
 
-When a user asks for any Abaqus-related task:
-1. Identify the analysis type from keywords and context
-2. Route to the appropriate workflow or module skill
-3. Gather required inputs systematically
+**You are here because** the user mentioned FEA, Abaqus, structural analysis, or simulation. Your job is to:
+1. Understand what the user wants
+2. Route to the appropriate specialized skill
+3. Ask clarifying questions if unclear
 
-## Analysis Type Decision Tree
+## Routing Guide: User Intent to Skill
 
-### Primary Decision: What Physics?
+### Analysis Workflows (Complete End-to-End)
 
-```
-User Request
-    │
-    ├── "stress", "displacement", "strength", "deflection", "load"
-    │   └── Is it time-varying?
-    │       ├── NO → /abaqus-static-analysis
-    │       └── YES → /abaqus-dynamic-analysis
-    │
-    ├── "frequency", "modal", "vibration", "resonance", "natural"
-    │   └── /abaqus-modal-analysis
-    │
-    ├── "optimize", "topology", "minimize weight", "lightweighting"
-    │   └── Shape or topology?
-    │       ├── Redistribute material → /abaqus-topology-optimization
-    │       └── Change surface shape → /abaqus-shape-optimization
-    │
-    ├── "impact", "crash", "dynamic", "explicit", "transient"
-    │   └── /abaqus-dynamic-analysis
-    │
-    ├── "heat", "thermal", "temperature", "conduction"
-    │   └── Is there structural coupling?
-    │       ├── Thermal only → /abaqus-thermal-analysis
-    │       └── Thermal + structural → /abaqus-coupled-analysis
-    │
-    ├── "contact", "friction", "touching", "multi-body"
-    │   └── /abaqus-contact-analysis
-    │
-    ├── "fatigue", "durability", "cycles", "life"
-    │   └── /abaqus-fatigue-analysis
-    │
-    └── Not clear → Ask clarifying questions
-```
+| User Says | Route To |
+|-----------|----------|
+| "stress", "displacement", "strength", "deflection", "will it break" | `/abaqus-static-analysis` |
+| "frequency", "modal", "vibration", "resonance", "natural modes" | `/abaqus-modal-analysis` |
+| "impact", "crash", "drop test", "transient", "explicit" | `/abaqus-dynamic-analysis` |
+| "heat", "temperature", "conduction", "cooling", "thermal" | `/abaqus-thermal-analysis` |
+| "thermal stress", "thermal expansion", "heat + deformation" | `/abaqus-coupled-analysis` |
+| "contact", "friction", "parts touching", "assembly", "bolt" | `/abaqus-contact-analysis` |
+| "fatigue", "cycles", "durability", "life prediction" | `/abaqus-fatigue-analysis` |
+| "optimize weight", "topology", "minimize material" | `/abaqus-topology-optimization` |
+| "reduce stress concentration", "smooth shape", "fillet" | `/abaqus-shape-optimization` |
 
-### Boundary Between Similar Analyses
+### Module Skills (Single Tasks)
 
-| If User Says... | But Also... | Route To |
-|-----------------|-------------|----------|
+| Task | Route To |
+|------|----------|
+| Create geometry, import CAD | `/abaqus-geometry` |
+| Define material properties | `/abaqus-material` |
+| Generate mesh | `/abaqus-mesh` |
+| Apply supports/constraints | `/abaqus-bc` |
+| Apply forces/pressures | `/abaqus-load` |
+| Configure analysis steps | `/abaqus-step` |
+| Define contact/ties | `/abaqus-interaction` |
+| Time-varying definitions | `/abaqus-amplitude` |
+| Initial/predefined fields | `/abaqus-field` |
+| Configure outputs | `/abaqus-output` |
+| Submit/monitor jobs | `/abaqus-job` |
+| Extract results from ODB | `/abaqus-odb` |
+| Optimization task setup | `/abaqus-optimization` |
+| Export STL/STEP/INP | `/abaqus-export` |
+| API documentation | `/abaqus-docs` |
+
+## Decision Tables
+
+### Distinguishing Similar Analyses
+
+| User Says | Plus This | Route To |
+|-----------|-----------|----------|
 | "stress analysis" | "with temperature" | `/abaqus-coupled-analysis` |
 | "optimize" | "just shape, not holes" | `/abaqus-shape-optimization` |
-| "dynamic" | "find frequencies" | `/abaqus-modal-analysis` |
-| "dynamic" | "impact/crash" | `/abaqus-dynamic-analysis` |
+| "optimize" | "remove material, add holes" | `/abaqus-topology-optimization` |
+| "dynamic" | "find frequencies first" | `/abaqus-modal-analysis` |
+| "dynamic" | "impact or crash" | `/abaqus-dynamic-analysis` |
+| "vibration" | "mode shapes" | `/abaqus-modal-analysis` |
 | "vibration" | "forced response" | `/abaqus-dynamic-analysis` |
+| "thermal" | "just temperature" | `/abaqus-thermal-analysis` |
+| "thermal" | "stress from heating" | `/abaqus-coupled-analysis` |
 
-## Module Skills (Building Blocks)
+### Static vs Dynamic Decision
 
-For fine-grained control or when building custom workflows:
+| Condition | Analysis Type |
+|-----------|---------------|
+| Load applied slowly, constant | Static |
+| Load varies with time | Dynamic |
+| Inertia effects important | Dynamic |
+| Finding mode shapes only | Modal |
+| Pre-stress then modes | Static + Modal |
 
-| Task | Module Skill | When to Use Directly |
-|------|--------------|---------------------|
-| Create geometry | `/abaqus-geometry` | Just need part/assembly |
-| Define material | `/abaqus-material` | Adding material to existing model |
-| Create mesh | `/abaqus-mesh` | Just meshing, no analysis |
-| Apply BCs | `/abaqus-bc` | Adding constraints |
-| Apply loads | `/abaqus-load` | Adding forces/pressures |
-| Configure step | `/abaqus-step` | Specific step settings |
-| Contact/ties | `/abaqus-interaction` | Multi-body connections |
-| Time profiles | `/abaqus-amplitude` | Time-varying definitions |
-| Initial conditions | `/abaqus-field` | Temperature, stress fields |
-| Output requests | `/abaqus-output` | Custom output variables |
-| Run job | `/abaqus-job` | Submission and monitoring |
-| Extract results | `/abaqus-odb` | Post-processing |
-| TO settings | `/abaqus-optimization` | Tosca task configuration |
-| Export geometry | `/abaqus-export` | STL, STEP, INP export |
-| Get API docs | `/abaqus-docs` | Download documentation |
+## What to Ask If Unclear
 
-## Required Information Checklist
+### Missing Analysis Intent
+> "What do you want to find out? Options:
+> - Stress and displacement (static analysis)
+> - Natural frequencies (modal analysis)
+> - Impact/crash response (dynamic analysis)
+> - Temperature distribution (thermal)"
 
-### For ANY Analysis
+### Missing Geometry
+> "What are the dimensions of your part?"
 
-| Input | Required | Default | Ask If Missing |
-|-------|----------|---------|----------------|
-| Geometry | YES | - | "What are the dimensions?" |
-| Material | YES | Steel | "What material?" |
-| BCs | YES | - | "How is it supported?" |
-| Loads | YES* | - | "What loads?" (*not for modal) |
-| Analysis type | YES | Static | "What do you want to find out?" |
+### Missing Constraints
+> "How is the structure supported? (fixed, pinned, roller)"
 
-### Analysis-Specific Requirements
+### Missing Loads
+> "What loads are applied? (force, pressure, displacement)"
 
-| Analysis | Additional Required |
-|----------|---------------------|
-| Static | - |
-| Modal | Density (for mass matrix) |
-| Dynamic | Density, time parameters |
-| Thermal | Conductivity, heat sources/sinks |
-| Topology opt | Volume fraction, frozen regions |
-| Contact | Surface definitions, contact properties |
+### Ambiguous Optimization
+> "What kind of optimization?
+> - Topology: Redistribute material, add holes (requires full license)
+> - Shape: Modify surface only, reduce stress concentrations"
 
-## Multi-Analysis Scenarios
+## Required Information by Analysis Type
 
-Sometimes users need combinations:
+| Analysis | Geometry | Material | BCs | Loads | Extra |
+|----------|----------|----------|-----|-------|-------|
+| Static | Yes | Yes | Yes | Yes | - |
+| Modal | Yes | Yes (with density) | Yes | No | Number of modes |
+| Dynamic | Yes | Yes (with density) | Yes | Yes | Time period |
+| Thermal | Yes | Yes (conductivity) | Yes | Heat/convection | - |
+| Topology | Yes | Yes | Yes | Yes | Volume fraction |
+| Contact | Yes | Yes | Yes | Yes | Contact pairs |
 
-| Scenario | Approach |
-|----------|----------|
-| "Static then modal" | Run static first, then modal on same model |
-| "Thermal stress" | Use `/abaqus-coupled-analysis` (sequential coupling) |
-| "Optimize for vibration" | Topology opt with frequency constraint (advanced) |
-| "Check buckling" | Static analysis, then eigenvalue buckling step |
+## License Limitations
 
-## Escalation Paths
+| Feature | Learning Edition | Full License |
+|---------|------------------|--------------|
+| Max nodes | 1000 | Unlimited |
+| Static analysis | Yes | Yes |
+| Modal analysis | Yes | Yes |
+| Topology optimization | No | Yes (Tosca) |
+| Shape optimization | No | Yes (Tosca) |
 
-### When to Ask Questions
+**If user has Learning Edition + optimization request:**
+> "Topology optimization requires a full Abaqus license with Tosca. Would you like a static analysis instead?"
 
-- **Ambiguous analysis type:** "Do you want to find stress (static) or natural frequencies (modal)?"
-- **Missing critical input:** "Where is the structure supported?"
-- **Conflicting requirements:** "You mentioned both optimization and fatigue - which is the primary goal?"
+## Units System (All Skills)
 
-### When to Recommend Different Approach
-
-- **Learning Edition + topology opt:** "Topology optimization requires full Abaqus license. Would you like a static analysis instead?"
-- **Very large model:** "This may exceed Learning Edition limits. Consider using symmetry or coarser mesh."
-- **Complex contact:** "Multi-body contact is complex. Shall we start with a simplified tie constraint?"
-
-## Units System
-
-All Abaqus skills use consistent SI units (mm-tonne-s-N-MPa):
-
-| Quantity | Unit | Typical Value |
-|----------|------|---------------|
+| Quantity | Unit | Example |
+|----------|------|---------|
 | Length | mm | 100.0 |
 | Force | N | 1000.0 |
-| Stress/Modulus | MPa | 210000.0 |
-| Density | tonne/mm³ | 7.85e-9 |
-| Time | s | 1.0 |
-| Temperature | °C or K | 20.0 |
+| Stress | MPa | 210000.0 |
+| Density | tonne/mm^3 | 7.85e-9 |
+| Temperature | C or K | 20.0 |
 
-## Running Abaqus Scripts
+## Running Scripts
 
-```bash
-# With GUI (interactive)
-abaqus cae script=script_name.py
+| Mode | Command | Use Case |
+|------|---------|----------|
+| With GUI | `abaqus cae script=name.py` | Interactive |
+| Headless | `abaqus cae noGUI=name.py` | Automated |
+| Post-process | `abaqus python name.py` | ODB only |
+| Submit job | `abaqus job=Name interactive` | Run analysis |
 
-# Headless (faster, no display)
-abaqus cae noGUI=script_name.py
+## References
 
-# Post-processing only (ODB access)
-abaqus python script_name.py
-
-# Submit job
-abaqus job=JobName interactive
-```
-
-## Quick Reference: Workflow Skills
-
-| Workflow | Skill | Primary Use |
-|----------|-------|-------------|
-| Static structural | `/abaqus-static-analysis` | Stress, displacement, reactions |
-| Modal/frequency | `/abaqus-modal-analysis` | Natural frequencies, mode shapes |
-| Topology opt | `/abaqus-topology-optimization` | Weight minimization |
-| Shape opt | `/abaqus-shape-optimization` | Surface optimization |
-| Explicit dynamics | `/abaqus-dynamic-analysis` | Impact, crash |
-| Heat transfer | `/abaqus-thermal-analysis` | Temperature distribution |
-| Thermomechanical | `/abaqus-coupled-analysis` | Thermal + structural |
-| Contact | `/abaqus-contact-analysis` | Multi-body contact |
-| Fatigue | `/abaqus-fatigue-analysis` | Durability analysis |
-
-## API Documentation
-
-For detailed Abaqus Python API syntax, use `/abaqus-docs` to download and reference:
-- [API Documentation](../../docs/abaqus-api/README.md)
+For detailed information, see:
+- `references/routing-guide.md` - Complete routing decision tree
+- `references/workflow-matrix.md` - Skill dependencies
+- `references/common-patterns.md` - Code examples
+- `references/units-systems.md` - Unit conversions

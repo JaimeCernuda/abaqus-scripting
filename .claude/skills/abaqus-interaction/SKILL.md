@@ -1,6 +1,6 @@
 ---
 name: abaqus-interaction
-description: Define contact and interactions in Abaqus - contact pairs, tie constraints, connectors, cohesive behavior. Use for multi-body contact problems.
+description: Define contact and interactions - contact pairs, tie constraints, connectors. Use when user mentions contact, friction, tie, parts touching, or bonded surfaces.
 allowed-tools:
   - Read
   - Write
@@ -12,171 +12,137 @@ allowed-tools:
 
 # Abaqus Interaction Skill
 
+Define contact pairs, tie constraints, coupling, and connectors between parts in an assembly.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Define contact between two surfaces (with friction, separation)
-- Create tie constraints (join different meshes permanently)
-- Add coupling constraints (distribute load from point to surface)
-- Define connector elements (springs, dampers, joints)
-- Set up cohesive behavior (adhesive, delamination)
-- Create rigid body constraints
+**Route here when user mentions:**
+- "Contact between surfaces"
+- "Friction", "sliding contact", "frictionless"
+- "Tie constraint", "bonded surfaces", "welded"
+- "Parts touching", "parts can separate"
+- "Coupling", "connector", "spring element"
+- "Join different meshes"
 
-**Do NOT use for:**
-- Fixed supports or prescribed displacements → use `/abaqus-bc`
-- Applied forces or pressures → use `/abaqus-load`
-- Contact in optimization context → combine with `/abaqus-optimization`
+**Route elsewhere:**
+- Complete contact analysis workflow → `/abaqus-contact-analysis`
+- Fixed supports or displacements → `/abaqus-bc`
+- Applied forces or pressures → `/abaqus-load`
 
 ## Key Decisions
 
 ### 1. What Type of Connection?
 
-| Connection Type | When to Use | Key Feature |
-|-----------------|-------------|-------------|
-| Contact | Parts can separate and slide | Friction, gap |
-| Tie | Permanent join, different meshes | No relative motion |
-| Coupling | Distribute load from point to area | Reference point control |
-| Connector | Springs, dampers, joints | Stiffness/damping |
-| Cohesive | Adhesive bonds, delamination | Damage initiation |
+| User Describes | Interaction Type | Key Feature |
+|----------------|------------------|-------------|
+| Welded, glued, bonded | Tie constraint | Permanent, no relative motion |
+| Parts can slide and separate | Surface-to-surface contact | Friction, gap allowed |
+| Load from point to surface | Coupling | Reference point control |
+| Spring, damper, hinge | Connector | Stiffness/damping behavior |
+| Adhesive, delamination | Cohesive | Damage initiation criteria |
 
 ### 2. Contact Formulation
 
-| Formulation | Best For |
-|-------------|----------|
-| Surface-to-surface | General contact (recommended) |
-| Node-to-surface | Legacy, special cases |
-| General contact | Automatic detection (explicit) |
-| Self-contact | Folding, buckling |
+| Formulation | When to Use |
+|-------------|-------------|
+| Surface-to-surface | General contact (recommended default) |
+| Node-to-surface | Legacy compatibility, special cases |
+| General contact | Automatic detection (explicit dynamics) |
+| Self-contact | Folding, buckling, large deformation |
 
-### 3. Friction Values
+### 3. Typical Friction Coefficients
 
 | Surface Pair | Friction Coefficient |
 |--------------|---------------------|
 | Frictionless | 0.0 |
-| Lubricated metal | 0.1-0.3 |
-| Dry metal | 0.3-0.5 |
-| Rubber on surface | 0.5-0.8 |
-| Rough (no slip) | Use ROUGH formulation |
+| Lubricated metal | 0.1 - 0.3 |
+| Dry metal-to-metal | 0.3 - 0.5 |
+| Rubber on surface | 0.5 - 0.8 |
+| No slip (rough) | Use ROUGH formulation |
 
-## Required Inputs
+## What to Ask User
 
-| Input | Required | Guidance |
-|-------|----------|----------|
-| Master surface | YES | Usually stiffer/coarser mesh |
-| Slave surface | YES | Usually finer mesh or softer |
-| Contact property | YES | Normal + tangential behavior |
-| Friction | If friction | Coefficient value |
+If unclear, ask:
 
-## Common Patterns
+1. **Bonded or sliding?**
+   - Bonded (no relative motion) → Tie constraint
+   - Sliding allowed → Contact with friction
 
-### Surface-to-Surface Contact
-```python
-# Create surfaces
-master_face = instance1.faces.findAt(((x1, y1, z1),))
-master_surf = assembly.Surface(side1Faces=master_face, name='MasterSurf')
+2. **Friction coefficient?**
+   - If not specified, suggest typical value for material pair
+   - Frictionless is valid for lubricated or normal-dominant cases
 
-slave_face = instance2.faces.findAt(((x2, y2, z2),))
-slave_surf = assembly.Surface(side1Faces=slave_face, name='SlaveSurf')
+3. **Which surface is master/slave?**
+   - User may not know - guide them (see below)
 
-# Contact property with friction
-model.ContactProperty('IntProp')
-model.interactionProperties['IntProp'].TangentialBehavior(
-    formulation=PENALTY,
-    table=((0.3,),)  # Friction coefficient
-)
-model.interactionProperties['IntProp'].NormalBehavior(
-    pressureOverclosure=HARD,
-    allowSeparation=ON
-)
+4. **Can surfaces separate?**
+   - Yes → `allowSeparation=ON`
+   - No (always in contact) → `allowSeparation=OFF`
 
-# Create interaction
-model.SurfaceToSurfaceContactStd(
-    name='Contact-1',
-    createStepName='Initial',
-    master=master_surf,
-    slave=slave_surf,
-    sliding=FINITE,
-    interactionProperty='IntProp'
-)
-```
+## Master/Slave Selection Guidelines
 
-### Frictionless Contact
-```python
-model.ContactProperty('Frictionless')
-model.interactionProperties['Frictionless'].TangentialBehavior(
-    formulation=FRICTIONLESS
-)
-model.interactionProperties['Frictionless'].NormalBehavior(
-    pressureOverclosure=HARD,
-    allowSeparation=ON
-)
-```
+| Criterion | Master Surface | Slave Surface |
+|-----------|----------------|---------------|
+| Stiffness | Stiffer body | Softer body |
+| Mesh density | Coarser mesh | Finer mesh |
+| Size | Larger surface | Smaller surface |
+| Geometry | Flat/convex | Curved/concave |
 
-### Tie Constraint
-```python
-# Permanently join surfaces (no slip, no separation)
-model.Tie(
-    name='Tie-1',
-    master=master_surf,
-    slave=slave_surf,
-    positionTolerance=0.1,
-    adjust=ON,
-    tieRotations=ON
-)
-```
+**When in doubt:** The coarser mesh should be master.
 
-### Coupling (Distribute Point Load)
-```python
-# Create reference point
-ref_point = assembly.ReferencePoint(point=(x, y, z))
-ref_region = assembly.Set(
-    referencePoints=(assembly.referencePoints[ref_point.id],),
-    name='RP'
-)
+## Workflow: Setting Up Interactions
 
-# Couple RP to surface
-model.Coupling(
-    name='Coupling-1',
-    controlPoint=ref_region,
-    surface=surface,
-    influenceRadius=WHOLE_SURFACE,
-    couplingType=KINEMATIC
-)
-```
+### Step 1: Identify Contact Pairs
 
-### Connector (Spring)
-```python
-# Create connector section
-model.ConnectorSection(name='Spring', assembledType=AXIAL)
-model.sections['Spring'].setValues(
-    behaviorOptions=(
-        ConnectorElasticity(components=(1,), table=((1000.0,),)),  # K=1000 N/mm
-    )
-)
+List all surfaces that interact. For each pair determine:
+- Type (contact vs tie)
+- Master and slave assignment
+- Friction requirements
 
-# Create wire and assign
-assembly.WirePolyLine(points=((point1, point2),), meshable=OFF)
-```
+### Step 2: Create Surfaces
 
-### Self-Contact
-```python
-model.SelfContactStd(
-    name='SelfContact',
-    createStepName='Step-1',
-    surface=surface,
-    interactionProperty='IntProp'
-)
-```
+Surfaces must be defined on assembly instances before creating interactions.
 
-## Troubleshooting
+### Step 3: Define Contact Properties
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| "Contact not detected" | Surfaces too far apart | Use adjust=ON or reduce gap |
-| "Severe discontinuity" | Contact chattering | Add stabilization, smaller increments |
-| "Negative eigenvalue with contact" | Improper master/slave | Swap master and slave |
-| "Overclosure too large" | Initial interference | Use shrink fit or adjust geometry |
+For contact interactions, define:
+- **Normal behavior:** Hard contact, allow separation
+- **Tangential behavior:** Friction formulation and coefficient
 
-## API Reference
+### Step 4: Create Interaction
 
-For detailed parameters: [Interaction API](../../docs/abaqus-api/modules/interaction.md)
+Assign contact property to surface pair in appropriate step.
+
+### Step 5: Verify Setup
+
+Check for:
+- Correct master/slave assignment
+- Appropriate initial gap/overclosure
+- Contact pair is active in correct step
+
+## Common Gotchas
+
+| Symptom | Likely Cause | Solution |
+|---------|--------------|----------|
+| Contact not detected | Surfaces too far apart | Use `adjust=ON` or reduce initial gap |
+| Severe discontinuity warnings | Contact chattering | Add stabilization, use smaller increments |
+| Negative eigenvalue | Wrong master/slave | Swap master and slave surfaces |
+| Overclosure too large | Initial interference | Use shrink fit option or adjust geometry |
+| Tie not working | Surfaces not close enough | Increase position tolerance |
+
+## Validation Checklist
+
+Before running analysis:
+- [ ] All contacting surface pairs identified
+- [ ] Master/slave correctly assigned
+- [ ] Contact properties defined (normal + tangential)
+- [ ] Interaction assigned to correct step
+- [ ] Initial gaps/overclosures within tolerance
+- [ ] Friction coefficient appropriate for materials
+
+## Code Patterns
+
+For API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md)
+- [Common Patterns](references/common-patterns.md)
+- [Troubleshooting Guide](references/troubleshooting.md)

@@ -1,6 +1,6 @@
 ---
 name: abaqus-topology-optimization
-description: Complete workflow for topology optimization using Tosca - from design space definition through optimized geometry export. Use to minimize weight while maintaining stiffness. Handles design responses, objectives, constraints, frozen regions, and manufacturing restrictions. Requires full Abaqus license with Tosca module (not available in Learning Edition).
+description: Complete workflow for topology optimization using Tosca. Use to minimize weight while maintaining stiffness. Requires full Abaqus license (not Learning Edition).
 allowed-tools:
   - Read
   - Write
@@ -13,330 +13,125 @@ allowed-tools:
 
 # Abaqus Topology Optimization Workflow
 
+Complete workflow for topology optimization - determining optimal material distribution to minimize weight while maintaining structural performance.
+
 ## When to Use This Skill
 
-**USE for:**
-- Minimize weight while maintaining stiffness
-- Maximize stiffness for given weight budget
-- Generate organic, efficient load-carrying structures
-- Conceptual design exploration
-- Lightweighting existing designs
+**Triggers:** topology optimization, minimize weight, lightweight design, organic structure, generative design, where to remove material, material efficiency, design for additive
 
-**Do NOT use for:**
-- Shape optimization (surface changes only) → use `/abaqus-shape-optimization`
-- Size optimization (thickness, dimensions) → manual or scripted parametric
-- Frequency-constrained optimization → combine with modal (advanced)
-- Learning Edition users → Tosca requires full license
+**USE for:** Minimize weight while maintaining stiffness, maximize stiffness for given weight, generate organic load-carrying structures
 
-**Prerequisites:**
-- Full Abaqus license with Tosca module
-- Clear definition of design space (where material can exist)
-- Known load cases and boundary conditions
+**Do NOT use for:** Shape optimization (surface only) -> `/abaqus-shape-optimization`, Learning Edition users -> Tosca requires full license
 
-## Key Decisions
+## Important: License Required
 
-### 1. Volume Fraction Target
+Topology optimization requires a **full Abaqus license with Tosca module**. NOT available in Learning Edition.
 
-| Volume Fraction | Result | When to Use |
-|-----------------|--------|-------------|
-| 20-30% | Aggressive lightweighting | Weight-critical (aerospace) |
-| 30-40% | Balanced | General structural |
-| 40-50% | Conservative | Safety-critical, fatigue |
+## Prerequisites
 
-**Rule of thumb:** Start at 30%, adjust based on stress/displacement results.
-
-### 2. Objective Function
-
-| Objective | Description | When |
-|-----------|-------------|------|
-| Min compliance (max stiffness) | Minimize strain energy | Most common |
-| Min weight with stress constraint | Minimize volume | Stress-limited designs |
-| Max frequency | Raise natural frequency | Vibration avoidance |
-
-**Default:** Minimize compliance (maximize stiffness) with volume constraint.
-
-### 3. Manufacturing Constraints
-
-| Constraint | Effect | When to Use |
-|------------|--------|-------------|
-| Minimum member size | Prevents thin features | Always (3-5mm typical) |
-| Maximum member size | Prevents thick blobs | Casting, heat treatment |
-| Draw direction | Enables mold extraction | Casting, molding |
-| Symmetry plane | Mirror geometry | Balanced loads, aesthetics |
-| Overhang angle | Supports for AM | Additive manufacturing |
-
-### 4. Mesh Size for TO
-
-| Element Size | Design Freedom | Compute Time |
-|--------------|----------------|--------------|
-| 1-2mm | Maximum | Very long |
-| 2-4mm | High | Moderate |
-| 4-6mm | Medium | Fast |
-
-**Guideline:** At least 3 elements across expected minimum member thickness.
-
-## Required Inputs
-
-### CRITICAL (Must Ask)
-
-| Input | What to Ask |
-|-------|-------------|
-| Design space | "What is the bounding volume where material can exist?" |
-| Frozen regions | "Which areas must remain solid? (BC/load attachment)" |
-| Volume fraction | "What percentage of material should remain? (20-50%)" |
-| Loads | "What loads act on the structure?" |
-| BCs | "Where is the structure supported/mounted?" |
-
-### WITH DEFAULTS
-
-| Input | Default | When to Change |
-|-------|---------|----------------|
-| Objective | Min compliance | If stress/frequency is primary concern |
-| Min member size | 3mm | Adjust for manufacturing process |
-| Material | Steel | If different material specified |
-| Max iterations | 50 | Increase if not converging |
+1. Working static analysis that converges
+2. Design space defined (bounding volume for material)
+3. Clear objective (usually max stiffness at target weight)
+4. Known load cases and boundary conditions
 
 ## Workflow Steps
 
 ### Phase 1: Setup Base Model
-```
-/abaqus-geometry → Design space with partitions for frozen regions
-/abaqus-material → Elastic properties + density (required!)
-/abaqus-mesh → Fine mesh (2-5mm typical)
-/abaqus-bc → Fixed supports (these regions become frozen)
-/abaqus-load → Applied forces (these regions become frozen)
-/abaqus-step → Static step for stiffness optimization
-```
+
+1. `/abaqus-geometry` - Design space with partitions for frozen regions
+2. `/abaqus-material` - Elastic properties + **density (required for TO)**
+3. `/abaqus-mesh` - Fine mesh (2-5mm typical for TO)
+4. `/abaqus-bc` - Fixed supports (these regions become frozen)
+5. `/abaqus-load` - Applied forces (these regions become frozen)
+6. `/abaqus-step` - Static step for stiffness optimization
 
 ### Phase 2: Configure Optimization
-```
-/abaqus-optimization → Task, responses, objectives, constraints
-```
 
-1. Create TopologyTask
+Use `/abaqus-optimization` for detailed API patterns.
+
+1. Create TopologyTask with SIMP interpolation
 2. Define design responses (volume, strain energy)
 3. Set objective function (minimize compliance)
-4. Add constraints (volume ≤ target)
-5. Define frozen regions (BC and load areas)
+4. Add constraints (volume <= target fraction)
+5. Define frozen regions (BC and load attachment areas)
 6. Add manufacturing constraints (min member size)
 
 ### Phase 3: Run and Post-Process
-```
-/abaqus-job → Submit OptimizationProcess
-/abaqus-odb → View density distribution
-/abaqus-export → STL export at density threshold
-```
 
-## Validation Checkpoints
+1. `/abaqus-job` - Submit OptimizationProcess
+2. `/abaqus-odb` - View density distribution
+3. `/abaqus-export` - STL export at density threshold (0.3-0.5 typical)
+
+## Key Decisions
+
+| Goal | Objective | Constraint |
+|------|-----------|------------|
+| Stiffest at weight | Minimize compliance | Volume <= X% |
+| Lightest that works | Minimize volume | Compliance <= Y |
+| Avoid resonance | Maximize frequency | Volume <= X% |
+
+**Most common:** Minimize compliance with volume constraint at 30%.
+
+### Volume Fraction
+
+| Fraction | Use Case |
+|----------|----------|
+| 20-30% | Aggressive (aerospace) |
+| 30-40% | Balanced (general) |
+| 40-50% | Conservative (safety-critical) |
+
+### Manufacturing Constraints
+
+| Constraint | When to Use |
+|------------|-------------|
+| Minimum member size | Always (3-5mm typical) |
+| Draw direction | Casting, molding |
+| Symmetry plane | Balanced loads, aesthetics |
+| Overhang angle | Additive manufacturing |
+
+## What to Ask User
+
+**Critical:**
+- Design space: "What is the bounding volume where material can exist?"
+- Frozen regions: "Which areas must remain solid? (BC/load attachment)"
+- Volume fraction: "What percentage of material should remain? (20-50%)"
+- Loads and BCs: "What loads and supports act on the structure?"
+
+**With Defaults:**
+- Objective: Min compliance (change if stress/frequency is primary)
+- Min member size: 3mm (adjust for manufacturing)
+- Material: Steel (if not specified)
+- Max iterations: 50 (increase if not converging)
+- SIMP penalty: 3.0 (higher for sharper boundaries)
+
+## Validation
 
 | Stage | Check |
 |-------|-------|
 | Base model | Static analysis runs, results sensible |
-| Optimization setup | No errors in task definition |
 | After iteration 5 | Objective decreasing, no disconnection |
 | Convergence | Objective stable (< 0.1% change) |
 | Final design | Load path intact, no floating regions |
 
-## Complete Script Template
-
-```python
-# topology_optimization.py
-# Run with: abaqus cae noGUI=topology_optimization.py
-# NOTE: Requires full Abaqus license with Tosca
-
-from abaqus import *
-from abaqusConstants import *
-from caeModules import *
-
-# ============= PARAMETERS =============
-LENGTH = 100.0      # Design space length (mm)
-WIDTH = 40.0        # Design space width (mm)
-HEIGHT = 20.0       # Design space height (mm)
-FROZEN_SIZE = 10.0  # Frozen region at each end (mm)
-
-E = 210000.0        # Young's modulus (MPa)
-NU = 0.3
-DENSITY = 7.85e-9   # tonne/mm³ (REQUIRED for TO)
-
-VOLUME_FRACTION = 0.30   # Target: 30% material
-MIN_MEMBER_SIZE = 3.0    # Minimum feature size (mm)
-MAX_ITERATIONS = 50
-MESH_SIZE = 2.5          # Fine mesh for TO
-
-FORCE = 1000.0      # Applied force (N)
-
-# ============= MODEL =============
-model = mdb.Model(name='TopologyOpt')
-if 'Model-1' in mdb.models:
-    del mdb.models['Model-1']
-
-# ============= GEOMETRY =============
-part = model.Part(name='DesignSpace', dimensionality=THREE_D, type=DEFORMABLE_BODY)
-sketch = model.ConstrainedSketch(name='Sketch', sheetSize=200.0)
-sketch.rectangle(point1=(0, 0), point2=(LENGTH, WIDTH))
-part.BaseSolidExtrude(sketch=sketch, depth=HEIGHT)
-
-# Partitions for frozen regions
-datum1 = part.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=FROZEN_SIZE)
-datum2 = part.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=LENGTH-FROZEN_SIZE)
-part.PartitionCellByDatumPlane(datumPlane=part.datums[datum1.id], cells=part.cells)
-part.PartitionCellByDatumPlane(datumPlane=part.datums[datum2.id], cells=part.cells)
-
-# Part sets
-part.Set(cells=part.cells, name='AllCells')
-
-# ============= MATERIAL =============
-material = model.Material(name='Steel')
-material.Elastic(table=((E, NU),))
-material.Density(table=((DENSITY,),))  # REQUIRED for volume calculation
-
-model.HomogeneousSolidSection(name='Section', material='Steel')
-part.SectionAssignment(region=part.sets['AllCells'], sectionName='Section')
-
-# ============= ASSEMBLY =============
-assembly = model.rootAssembly
-assembly.DatumCsysByDefault(CARTESIAN)
-instance = assembly.Instance(name='DesignSpace-1', part=part, dependent=ON)
-
-# Assembly sets for BCs/loads
-fixed_face = instance.faces.findAt(((0, WIDTH/2, HEIGHT/2),))
-assembly.Set(faces=fixed_face, name='FixedFace')
-
-load_face = instance.faces.findAt(((LENGTH, WIDTH/2, HEIGHT/2),))
-assembly.Surface(side1Faces=load_face, name='LoadSurface')
-
-# Frozen regions (cells at BC and load ends)
-mount_cells = instance.cells.findAt(((FROZEN_SIZE/2, WIDTH/2, HEIGHT/2),))
-assembly.Set(cells=mount_cells, name='FrozenMount')
-
-load_cells = instance.cells.findAt(((LENGTH-FROZEN_SIZE/2, WIDTH/2, HEIGHT/2),))
-assembly.Set(cells=load_cells, name='FrozenLoad')
-
-# ============= STEP =============
-model.StaticStep(name='Load', previous='Initial')
-model.FieldOutputRequest(name='F-Output', createStepName='Load',
-                         variables=('S', 'U', 'RF', 'ENER'))
-
-# ============= BCs AND LOADS =============
-model.EncastreBC(name='Fixed', createStepName='Initial', region=assembly.sets['FixedFace'])
-
-area = WIDTH * HEIGHT
-model.SurfaceTraction(
-    name='Load',
-    createStepName='Load',
-    region=assembly.surfaces['LoadSurface'],
-    magnitude=FORCE/area,
-    directionVector=((0,0,0), (0,-1,0)),
-    distributionType=UNIFORM,
-    traction=GENERAL
-)
-
-# ============= MESH =============
-part.seedPart(size=MESH_SIZE)
-elemType = mesh.ElemType(elemCode=C3D8R, elemLibrary=STANDARD, hourglassControl=ENHANCED)
-part.setElementType(regions=(part.cells,), elemTypes=(elemType,))
-part.generateMesh()
-
-print(f"Mesh: {len(part.nodes)} nodes, {len(part.elements)} elements")
-
-# ============= TOPOLOGY OPTIMIZATION =============
-# Create task
-model.TopologyTask(
-    name='TopoTask',
-    region=MODEL,
-    materialInterpolationTechnique=SIMP,
-    materialInterpolationPenalty=3.0,
-    freezeBoundaryConditionRegions=ON,
-    freezeLoadRegions=ON,
-    objectiveFunctionDeltaStopCriteria=0.001
-)
-
-task = model.optimizationTasks['TopoTask']
-
-# Design responses
-task.SingleTermDesignResponse(name='volume', region=MODEL, identifier=VOLUME)
-task.SingleTermDesignResponse(name='strain_energy', region=MODEL,
-                              identifier=STRAIN_ENERGY, stepOptions=LAST_STEP)
-
-# Objective: minimize strain energy (maximize stiffness)
-task.ObjectiveFunction(
-    name='MinCompliance',
-    objectives=((task.designResponses['strain_energy'], MINIMIZE_MAXIMUM, 1.0, 0.0),)
-)
-
-# Constraint: volume <= target
-task.OptimizationConstraint(
-    name='VolumeConstraint',
-    designResponse='volume',
-    restrictionMethod=RELATIVE_LESS_THAN_EQUAL,
-    restrictionValue=VOLUME_FRACTION
-)
-
-# Frozen regions
-task.FrozenArea(name='FreezeMounting', region=assembly.sets['FrozenMount'])
-task.FrozenArea(name='FreezeLoad', region=assembly.sets['FrozenLoad'])
-
-# Manufacturing: minimum member size
-task.GeometricRestriction(
-    name='MinMember',
-    technique=MEMBER_SIZE,
-    region=MODEL,
-    minSize=MIN_MEMBER_SIZE
-)
-
-# ============= OPTIMIZATION PROCESS =============
-opt_process = mdb.OptimizationProcess(
-    name='TopologyOptimization',
-    model='TopologyOpt',
-    task='TopoTask',
-    maxDesignCycle=MAX_ITERATIONS,
-    dataSaveFrequency=OPT_DATASAVE_EVERY_CYCLE
-)
-
-# ============= SAVE =============
-mdb.saveAs('TopologyOptimization.cae')
-
-print("\n" + "="*60)
-print("TOPOLOGY OPTIMIZATION READY")
-print("="*60)
-print(f"Design space: {LENGTH} x {WIDTH} x {HEIGHT} mm")
-print(f"Volume fraction: {VOLUME_FRACTION*100:.0f}%")
-print(f"Min member size: {MIN_MEMBER_SIZE} mm")
-print(f"\nTo run: opt_process.submit(); opt_process.waitForCompletion()")
-```
-
-## Post-Processing
-
-### View Results
-```bash
-abaqus cae database=TopologyOptimization/TOSCA_POST/TopologyOptimization.odb
-```
-
-### Export STL
-1. Open post ODB in Abaqus/CAE
-2. Optimization module → Extract → STL
-3. Set density threshold (0.3-0.5 typical)
-4. Export for CAD import
-
 ## Troubleshooting
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Checkerboard pattern | Numerical instability | Add min member size constraint |
-| Not converging | Infeasible constraints | Relax volume fraction, check frozen regions |
-| Disconnected regions | Insufficient frozen areas | Add more frozen regions along load path |
-| Thin features | No min member size | Add GeometricRestriction |
-| Takes forever | Mesh too fine | Coarsen mesh, reduce iterations |
+| Issue | Solution |
+|-------|----------|
+| Checkerboard pattern | Add min member size constraint |
+| Not converging | Relax volume fraction, check frozen regions |
+| Disconnected regions | Add more frozen regions along load path |
+| Takes forever | Coarsen mesh, reduce iterations |
+| License error | Requires full Abaqus with Tosca |
 
-## Feedback Loops
+## Code Patterns
 
-- **If base analysis fails:** Fix BCs/loads before optimization
-- **If checkerboard pattern:** Add minimum member size
-- **If disconnected:** Increase volume fraction or add frozen regions
-- **If not converging:** Relax constraints, increase iterations
-- **If result not manufacturable:** Add appropriate manufacturing constraints
+For API syntax and code examples, see:
+- `/abaqus-optimization` - Task, response, objective, constraint API
+- `references/common-patterns.md` - Complete TO code patterns
 
-## API Reference
+## Related Skills
 
-For optimization-specific parameters: `/abaqus-optimization`
-For base model setup: `/abaqus-static-analysis`
+- `/abaqus-optimization` - Base optimization API details
+- `/abaqus-static-analysis` - Required before optimization
+- `/abaqus-shape-optimization` - Alternative for surface-only changes
+- `/abaqus-export` - Export optimized geometry

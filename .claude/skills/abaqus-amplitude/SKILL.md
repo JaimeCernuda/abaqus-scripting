@@ -1,6 +1,6 @@
 ---
 name: abaqus-amplitude
-description: Define time-varying amplitudes in Abaqus for loads, BCs, and other time-dependent quantities.
+description: Define time-varying amplitudes. Use when user mentions ramp, time-varying, cyclic, pulse, or gradually increasing loads. Does NOT handle static constant loads.
 allowed-tools:
   - Read
   - Write
@@ -12,162 +12,118 @@ allowed-tools:
 
 # Abaqus Amplitude Skill
 
+This skill defines time-varying load and boundary condition profiles in Abaqus. Amplitudes act as multipliers that scale loads/BCs over time.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Ramp a load up/down over time
-- Apply sinusoidal or cyclic loading
-- Define impulse or impact loading
-- Create smooth transitions (avoid sudden load application)
-- Apply earthquake or vibration excitation
-- Define temperature history for transient thermal
+**Route here when user mentions:**
+- "Gradually increase the load", "ramp up the force"
+- "Cyclic loading", "sinusoidal excitation"
+- "Pulse load", "impulse", "impact loading"
+- "Time-varying boundary condition", "loading history"
+- "Smooth transition", "avoid sudden load application"
+- "Earthquake input", "harmonic excitation"
 
-**Do NOT use for:**
-- Constant loads (no amplitude needed)
-- Initial conditions → use `/abaqus-field`
-- Step transitions (use step sequence instead)
+**Route elsewhere:**
+- Constant static loads (no amplitude needed) → `/abaqus-load`
+- Initial conditions, predefined fields → `/abaqus-field`
+- Dynamic analysis setup → `/abaqus-dynamic-analysis`
+
+## Workflow: Defining Amplitudes
+
+### Step 1: Understand User's Load Profile
+
+Ask if unclear:
+- **What shape?** Ramp, sinusoidal, pulse, decay, custom?
+- **What timing?** Duration, frequency, peak time?
+- **What magnitude?** Amplitude is a multiplier (0.0-1.0 typical)
+
+### Step 2: Choose Amplitude Type
+
+| User Describes | Amplitude Type | Key Parameters |
+|----------------|----------------|----------------|
+| Linear increase/decrease | TabularAmplitude | Time-value pairs |
+| Smooth transition (no shock) | SmoothStepAmplitude | Time-value pairs |
+| Sinusoidal/harmonic | PeriodicAmplitude | Frequency, coefficients |
+| Exponential decay | DecayAmplitude | Initial, decayTime |
+| Custom time history | TabularAmplitude | User-provided data |
+| Sudden on/off | TabularAmplitude | Step-like data points |
+
+**Most common:** TabularAmplitude with linear ramp (0,0) to (1,1)
+
+### Step 3: Determine Time Reference
+
+| Setting | When to Use |
+|---------|-------------|
+| `timeSpan=STEP` | Time relative to current step start (most common) |
+| `timeSpan=TOTAL` | Time from analysis beginning (multi-step analyses) |
+
+### Step 4: Define Data Points
+
+For TabularAmplitude and SmoothStepAmplitude:
+- Data is (time, amplitude_factor) pairs
+- Time values must be strictly increasing
+- Factor typically ranges 0.0 to 1.0 (can exceed if needed)
+- Factor multiplies the load/BC magnitude
+
+### Step 5: Apply to Load or BC
+
+Amplitudes are referenced by name when creating:
+- Loads: ConcentratedForce, Pressure, Gravity, etc.
+- BCs: DisplacementBC, VelocityBC, etc.
 
 ## Key Decisions
 
-### 1. Amplitude Type Selection
+### Common Load Profiles
 
-| Load Profile | Amplitude Type | Use Case |
-|--------------|----------------|----------|
-| Custom time-value | TabularAmplitude | General purpose |
-| Smooth ramp | SmoothStepAmplitude | Avoid sudden jumps |
-| Sinusoidal | PeriodicAmplitude | Harmonic loading |
-| Exponential decay | DecayAmplitude | Damped response |
-| Modulated wave | ModulatedAmplitude | Complex vibration |
+| Profile | Data Pattern | Use Case |
+|---------|--------------|----------|
+| Linear ramp | (0,0), (1,1) | Quasi-static loading |
+| Ramp up/down | (0,0), (0.5,1), (1,0) | Load cycle |
+| Hold at peak | (0,0), (0.1,1), (1,1) | Ramp then sustain |
+| Triangular pulse | (0,0), (0.001,1), (0.002,0) | Impact/impulse |
+| Step function | (0,0), (0,1), (1,1) | Sudden application |
 
-### 2. Time Reference
+### Smooth vs. Tabular
 
-| Option | Meaning | When |
-|--------|---------|------|
-| STEP | Time relative to step start | Most common |
-| TOTAL | Time from analysis start | Multi-step |
+| Use SmoothStepAmplitude when | Use TabularAmplitude when |
+|------------------------------|---------------------------|
+| Dynamic analysis (avoid shocks) | Static analysis |
+| Convergence issues from sudden loads | Exact load profile needed |
+| Continuous derivatives required | Step functions needed |
 
-## Required Inputs
+## What to Ask User
 
-| Input | Required | Guidance |
-|-------|----------|----------|
-| Amplitude type | YES | Based on load profile needed |
-| Time-value data | YES | (time, factor) pairs |
-| Name | YES | Referenced by load/BC |
+| Input | Required | How to Get |
+|-------|----------|------------|
+| Load profile shape | YES | Ask: "How should the load vary over time?" |
+| Peak time | YES | Ask: "When should the load reach its maximum?" |
+| Duration | YES | Typically matches step time |
+| Frequency (if cyclic) | If periodic | Ask: "What frequency in Hz?" |
+| Smooth or sudden | Recommended | Ask if dynamic analysis |
 
-## Common Patterns
+## Validation Checklist
 
-### Linear Ramp
-```python
-model.TabularAmplitude(
-    name='Ramp',
-    data=(
-        (0.0, 0.0),   # Start at zero
-        (1.0, 1.0),   # Full load at t=1
-    ),
-    timeSpan=STEP
-)
-```
-
-### Ramp Up and Down
-```python
-model.TabularAmplitude(
-    name='RampUpDown',
-    data=(
-        (0.0, 0.0),
-        (0.5, 1.0),   # Peak at midpoint
-        (1.0, 0.0),   # Back to zero
-    )
-)
-```
-
-### Step Function (Sudden)
-```python
-model.TabularAmplitude(
-    name='Step',
-    data=(
-        (0.0, 0.0),
-        (0.0, 1.0),   # Instant jump
-        (1.0, 1.0),   # Hold
-    )
-)
-```
-
-### Smooth Ramp (No Shock)
-```python
-model.SmoothStepAmplitude(
-    name='SmoothRamp',
-    data=(
-        (0.0, 0.0),
-        (1.0, 1.0),
-    )
-)
-```
-
-### Sinusoidal
-```python
-# A * sin(2*pi*f*t)
-model.PeriodicAmplitude(
-    name='Sine',
-    frequency=10.0,      # 10 Hz
-    start=0.0,
-    a_0=0.0,             # No DC offset
-    data=((0.0, 1.0),)   # (cosine, sine) coefficients
-)
-```
-
-### Impulse
-```python
-model.TabularAmplitude(
-    name='Impulse',
-    data=(
-        (0.0, 0.0),
-        (0.001, 1.0),
-        (0.002, 0.0),
-    )
-)
-```
-
-### Exponential Decay
-```python
-model.DecayAmplitude(
-    name='Decay',
-    initial=1.0,
-    maximum=1.0,
-    start=0.0,
-    decayTime=0.5  # Time constant
-)
-```
-
-### Apply Amplitude to Load
-```python
-model.ConcentratedForce(
-    name='VaryingLoad',
-    createStepName='LoadStep',
-    region=region,
-    cf2=-1000.0,
-    amplitude='Ramp'  # Reference amplitude by name
-)
-```
-
-### Apply Amplitude to BC
-```python
-model.DisplacementBC(
-    name='Prescribed',
-    createStepName='LoadStep',
-    region=region,
-    u1=10.0,
-    amplitude='Sine'
-)
-```
+After defining amplitude:
+- [ ] Time values are strictly increasing
+- [ ] Factor range is appropriate (usually 0.0-1.0)
+- [ ] timeSpan matches analysis intent (STEP vs TOTAL)
+- [ ] Amplitude name matches what load/BC references
+- [ ] For dynamic: smooth transitions to avoid numerical shocks
+- [ ] For periodic: frequency and coefficients are correct
 
 ## Troubleshooting
 
-| Error | Cause | Solution |
-|-------|-------|----------|
+| Problem | Likely Cause | Solution |
+|---------|--------------|----------|
 | "Amplitude not monotonic in time" | Time values not increasing | Fix time sequence |
-| "Sudden load causes convergence issues" | No smooth transition | Use SmoothStepAmplitude |
-| "Amplitude exceeds 1.0" | Misunderstanding purpose | Amplitude is multiplier; adjust magnitude in load |
+| Convergence issues with sudden load | Discontinuity in profile | Use SmoothStepAmplitude |
+| Load too high/low | Misunderstanding multiplier | Amplitude is factor; adjust load magnitude |
+| Wrong timing in multi-step | STEP vs TOTAL confusion | Check timeSpan setting |
 
-## API Reference
+## Code Patterns
 
-For detailed parameters: [Amplitude API](../../docs/abaqus-api/modules/amplitude.md)
+For API syntax and code examples, see:
+- [API Quick Reference](references/api-quick-ref.md) - Full parameter details
+- [Common Patterns](references/common-patterns.md) - Ready-to-use snippets
+- [Troubleshooting Guide](references/troubleshooting.md) - Error solutions

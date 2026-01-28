@@ -1,6 +1,6 @@
 ---
 name: abaqus-odb
-description: Extract and analyze results from Abaqus ODB files - field outputs, history outputs, and post-processing operations.
+description: Read analysis results. Use when user asks about maximum stress, extracting displacements, reaction forces, or exporting results. Post-processes ODB files.
 allowed-tools:
   - Read
   - Write
@@ -13,171 +13,99 @@ allowed-tools:
 
 # Abaqus ODB Skill
 
+This skill reads and extracts analysis results from Abaqus ODB files.
+
 ## When to Use This Skill
 
-**USE when you need to:**
-- Extract maximum stress/displacement values
-- Read reaction forces
-- Get nodal/element results at specific locations
-- Export results to CSV or text
-- Extract eigenfrequencies from modal analysis
-- Generate analysis reports
-- Process time history data
+**Route here when user mentions:**
+- "What is the maximum stress?", "extract displacement"
+- "Get reaction forces", "post-process the ODB"
+- "Export results to CSV", "what are the eigenfrequencies?"
 
-**Do NOT use for:**
-- Running the analysis → use `/abaqus-job`
-- Configuring output requests → use `/abaqus-output`
-- Exporting geometry (STL, STEP) → use `/abaqus-export`
+**Route elsewhere:**
+- Running the analysis → `/abaqus-job`
+- Configuring what output to save → `/abaqus-output`
+- Exporting geometry (STL, STEP) → `/abaqus-export`
 
 ## Key Decisions
 
-### 1. What to Extract?
+### 1. What Result is Needed?
 
-| Goal | Field/Method |
-|------|--------------|
-| Maximum stress | S → find max mises |
-| Maximum displacement | U → find max magnitude |
-| Reaction forces | RF → sum all values |
-| Eigenfrequencies | Frame descriptions |
-| Time history | historyOutputs |
+| Need | Field | Notes |
+|------|-------|-------|
+| Displacement | `U` | Use `.magnitude` for total |
+| Stress | `S` | Use `.mises` for von Mises |
+| Reaction force | `RF` | Sum components for total |
+| Strain | `E` | Similar structure to stress |
+| Temperature | `NT` | Thermal analysis results |
+| Eigenfrequency | Frame description | Parse from frame metadata |
 
-### 2. Read-Only vs Modify
+### 2. Which Step/Frame?
 
-| Purpose | Mode |
-|---------|------|
-| Extract data | readOnly=True |
-| Add custom fields | readOnly=False |
+| Scenario | Frame Selection |
+|----------|-----------------|
+| Final results | `step.frames[-1]` |
+| All time history | Loop all frames |
+| Specific time | Find by `frameValue` |
+| Modal analysis | Each frame = mode |
 
-## Required Inputs
+### 3. Location: Global Max or Specific?
 
-| Input | Required |
-|-------|----------|
-| ODB path | YES |
-| Step name | YES (for specific step) |
-| Variable names | YES (S, U, RF, etc.) |
+| Need | Approach |
+|------|----------|
+| Overall maximum | Loop all values, find max |
+| Specific node | Filter by `nodeLabel` |
+| Subset/region | Use `getSubset(region=...)` |
 
-## Common Patterns
+### 4. Export Format?
 
-### Open ODB
-```python
-from odbAccess import openOdb
+| Format | Use Case |
+|--------|----------|
+| Print to console | Quick check |
+| CSV file | Spreadsheet analysis |
+| Text report | Documentation |
 
-odb = openOdb('MyJob.odb', readOnly=True)
-# ... work with ODB
-odb.close()
-```
+## What to Ask User
 
-### Find Maximum Displacement
-```python
-step = odb.steps['LoadStep']
-frame = step.frames[-1]  # Last frame
+If unclear, ask:
+1. **What result?** Stress, displacement, reaction force, frequency?
+2. **Which step/frame?** Final, specific time, or all?
+3. **Location?** Maximum anywhere, or specific node/region?
+4. **Output format?** Print, CSV, or report?
 
-disp_field = frame.fieldOutputs['U']
-max_disp = max(v.magnitude for v in disp_field.values)
-print(f"Max displacement: {max_disp:.6f} mm")
-```
+## Workflow
 
-### Find Maximum Von Mises Stress
-```python
-stress_field = frame.fieldOutputs['S']
-max_mises = max(v.mises for v in stress_field.values if hasattr(v, 'mises'))
-print(f"Max von Mises: {max_mises:.2f} MPa")
-```
+1. **Open ODB** - Use `readOnly=True` for extraction
+2. **Navigate to step/frame** - List steps with `odb.steps.keys()`
+3. **Get field output** - Access via `frame.fieldOutputs['U']`
+4. **Extract values** - Loop `field.values`, use `.magnitude`, `.mises`
+5. **Close ODB** - Always close when done
 
-### Sum Reaction Forces
-```python
-rf_field = frame.fieldOutputs['RF']
-total_rf = [0.0, 0.0, 0.0]
-for value in rf_field.values:
-    total_rf[0] += value.data[0]
-    total_rf[1] += value.data[1]
-    total_rf[2] += value.data[2]
-print(f"Total reaction: {total_rf}")
-```
+## Common Tasks
 
-### Extract at Specific Node
-```python
-node_label = 100
-for value in frame.fieldOutputs['U'].values:
-    if value.nodeLabel == node_label:
-        print(f"Node {node_label}: U = {value.data}")
-        break
-```
-
-### Extract from Set
-```python
-instance = odb.rootAssembly.instances['PART-1']
-node_set = instance.nodeSets['MYREGION']
-subset = frame.fieldOutputs['U'].getSubset(region=node_set)
-for value in subset.values:
-    print(f"Node {value.nodeLabel}: {value.data}")
-```
-
-### Get Eigenfrequencies (Modal)
-```python
-step = odb.steps['Frequency']
-frequencies = []
-for frame in step.frames:
-    if frame.description:
-        freq = float(frame.description.split('=')[-1].strip())
-        frequencies.append(freq)
-print(f"Natural frequencies: {frequencies}")
-```
-
-### History Output
-```python
-history_region = odb.steps['LoadStep'].historyRegions['Node ASSEMBLY.1']
-u2_data = history_region.historyOutputs['U2'].data
-for time, value in u2_data:
-    print(f"Time {time}: U2 = {value}")
-```
-
-### Export to CSV
-```python
-import csv
-
-with open('results.csv', 'w', newline='') as f:
-    writer = csv.writer(f)
-    writer.writerow(['NodeID', 'U1', 'U2', 'U3', 'Magnitude'])
-
-    for value in frame.fieldOutputs['U'].values:
-        writer.writerow([
-            value.nodeLabel,
-            value.data[0], value.data[1], value.data[2],
-            value.magnitude
-        ])
-```
-
-### Generate Summary Report
-```python
-def generate_report(odb_path):
-    odb = openOdb(odb_path, readOnly=True)
-
-    for step_name, step in odb.steps.items():
-        frame = step.frames[-1]
-        print(f"\nStep: {step_name}")
-
-        if 'U' in frame.fieldOutputs:
-            max_u = max(v.magnitude for v in frame.fieldOutputs['U'].values)
-            print(f"  Max displacement: {max_u:.6f} mm")
-
-        if 'S' in frame.fieldOutputs:
-            max_s = max(v.mises for v in frame.fieldOutputs['S'].values
-                       if hasattr(v, 'mises'))
-            print(f"  Max von Mises: {max_s:.2f} MPa")
-
-    odb.close()
-```
+| Task | Approach |
+|------|----------|
+| Max displacement | Loop U values, find max magnitude |
+| Max von Mises stress | Loop S values, find max mises |
+| Total reaction force | Sum RF components across all nodes |
+| Displacement at node | Filter by nodeLabel |
+| Results in region | Use getSubset with node/element set |
+| Eigenfrequencies | Parse frame.description in frequency step |
+| Time history | Use historyRegions and historyOutputs |
+| Export to CSV | Write values with csv module |
 
 ## Troubleshooting
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| "ODB locked" | Another process has it | Delete .lck file or close other sessions |
+| "ODB locked" | Another process has it | Delete `.lck` file |
 | "Key not found" | Wrong variable name | List available keys first |
-| "No values" | Output not requested | Check FieldOutputRequest |
-| "AttributeError: mises" | Element type doesn't have mises | Check element formulation |
+| "No values" | Output not requested | Check FieldOutputRequest in model |
+| "AttributeError: mises" | Element has no mises | Check element formulation |
 
-## API Reference
+## Code Patterns
 
-For detailed parameters: [ODB API](../../docs/abaqus-api/modules/odb.md)
+For API syntax and code examples, see:
+- [ODB Extraction Patterns](references/extraction-patterns.md)
+- [Common Queries](references/common-queries.md)
+- [Export Templates](references/export-templates.md)
