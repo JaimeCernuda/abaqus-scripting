@@ -1,0 +1,33 @@
+======================================================================
+HOLE SURFACE NODE ANALYSIS
+======================================================================
+
+UPPER HOLE - Testing X-direction assumption:
+  Centerline: along X axis at Y=132.17, Z=12.5
+  Looking for surface nodes at radius ~6.35mm from this line
+
+  Found 40 nodes on cylindrical surface
+  X range: -9.00 to 9.00 (span: 18.00 mm)
+  ==> X span > 15mm: CONFIRMS X-DIRECTION HOLE
+
+UPPER HOLE - Testing Z-direction assumption:
+  Centerline: along Z axis at Y=132.17, X=0
+  Looking for surface nodes at radius ~6.35mm from this line
+
+  Found 18 nodes on cylindrical surface
+  Z range: 0.00 to 25.00 (span: 25.00 mm)
+  ==> Z span > 20mm: Would indicate Z-DIRECTION HOLE
+
+======================================================================
+CONCLUSION:
+======================================================================
+UPPER HOLE IS X-DIRECTION (span = 18.0mm through thickness)
+
+
+LOWER LEFT HOLE - Testing X-direction:
+  Found 40 surface nodes, X span: 18.0mm
+  ==> CONFIRMS X-DIRECTION HOLE
+
+LOWER RIGHT HOLE - Testing X-direction:
+  Found 40 surface nodes, X span: 18.0mm
+  ==> CONFIRMS X-DIRECTION HOLE

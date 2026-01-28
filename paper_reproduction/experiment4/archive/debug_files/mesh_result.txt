@@ -1,0 +1,3 @@
+Nodes: 868
+Elements: 3036
+OK: Within node limit

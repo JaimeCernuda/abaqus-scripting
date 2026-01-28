@@ -1,0 +1,9 @@
+Cells: 1
+Faces: 21
+Edges: 54
+Vertices: 38
+Section assignments: 1
+Cell 0: 21 faces
+
+Materials: ['IN718']
+Sections: ['SolidSection']

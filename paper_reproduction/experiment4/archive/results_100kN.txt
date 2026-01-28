@@ -1,0 +1,7 @@
+Job_100kN Results (100 kN vertical load)
+==================================================
+Max von Mises stress: 1148.03 MPa
+Max Y displacement: 0.9370 mm
+Max PEEQ (plastic strain): 0.067031
+
+NOTE: Stress exceeds yield (980 MPa) - plastic deformation occurred

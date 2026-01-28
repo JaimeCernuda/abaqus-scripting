@@ -1,0 +1,41 @@
+Base geometry created
+
+=== UPPER PIN HOLE ===
+Upper face (inner) found: ['Face object']
+Edge indices on face: (3, 44, 46, 47)
+  Edge 3: pt=(-9.0, 146.2, 6.2) v1=(-9.0,146.2,0.0) v2=(-9.0,146.2,25.0)
+  Edge 44: pt=(-9.0, 118.2, 6.2) v1=(-9.0,118.2,0.0) v2=(-9.0,118.2,25.0)
+  Edge 46: pt=(-9.0, 125.2, 25.0) v1=(-9.0,118.2,25.0) v2=(-9.0,146.2,25.0)
+  Edge 47: pt=(-9.0, 125.2, 0.0) v1=(-9.0,118.2,0.0) v2=(-9.0,146.2,0.0)
+Found vertical edge 46 at Z=25.0
+UPPER PIN HOLE CUT SUCCESS
+
+=== LOWER RIGHT PIN HOLE ===
+Lower right face (inner) found: ['Face object']
+Edge indices on face: (19, 21, 22, 23)
+  Edge 19: pt=(14.3, 0.0, 6.2) v1=(14.3,0.0,0.0) v2=(14.3,0.0,25.0)
+  Edge 21: pt=(14.3, 7.0, 25.0) v1=(14.3,0.0,25.0) v2=(14.3,28.0,25.0)
+  Edge 22: pt=(14.3, 28.0, 6.2) v1=(14.3,28.0,0.0) v2=(14.3,28.0,25.0)
+  Edge 23: pt=(14.3, 7.0, 0.0) v1=(14.3,0.0,0.0) v2=(14.3,28.0,0.0)
+Found vertical edge 21 at Z=25.0
+LOWER RIGHT PIN HOLE CUT SUCCESS
+
+=== LOWER LEFT PIN HOLE ===
+Lower left face found: ['Face object']
+Edge indices on face: (39, 41, 42, 43)
+  Edge 39: pt=(-32.3, 0.0, 6.2) v1=(-32.3,0.0,0.0) v2=(-32.3,0.0,25.0)
+  Edge 41: pt=(-32.3, 7.0, 25.0) v1=(-32.3,0.0,25.0) v2=(-32.3,28.0,25.0)
+  Edge 42: pt=(-32.3, 28.0, 6.2) v1=(-32.3,28.0,0.0) v2=(-32.3,28.0,25.0)
+  Edge 43: pt=(-32.3, 7.0, 0.0) v1=(-32.3,0.0,0.0) v2=(-32.3,28.0,0.0)
+Found vertical edge 41 at Z=25.0
+LOWER LEFT PIN HOLE CUT SUCCESS
+
+=== VERIFYING HOLES ===
+Circular edge 0 at (-32.3, 7.7, 12.5) with radius 6.35
+Circular edge 1 at (-14.3, 20.4, 12.5) with radius 6.35
+Circular edge 2 at (14.3, 7.7, 12.5) with radius 6.35
+Circular edge 3 at (32.3, 20.4, 12.5) with radius 6.35
+Circular edge 4 at (-9.0, 125.8, 12.5) with radius 6.35
+Circular edge 5 at (9.0, 138.5, 12.5) with radius 6.35
+Total pin hole edges found: 6
+SUCCESS: All 3 holes appear to exist!

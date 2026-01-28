@@ -1,0 +1,22 @@
+======================================================================
+DEFINITIVE VOID DIRECTION CHECK
+======================================================================
+
+UPPER HOLE CHECK:
+--------------------------------------------------
+
+Test 1: Check for void at X=0, Y=132, Z=12.5 (X-dir hole center)
+  NO nodes found near X=0, Y=132, Z=12.5
+  ==> VOID EXISTS here - CONFIRMS X-direction hole
+
+Test 2: Check for void at X=0, Y=132, Z=5 (Z-dir hole interior)
+  Found 1 nodes near X=0, Y=132, Z=5
+    Node at (0.00, 132.17, 6.15)
+  ==> Material EXISTS here - NO Z-direction hole
+
+Test 3: Scan along X axis at Y=132, Z=12.5
+  No nodes found at Y=132, Z=12.5
+
+======================================================================
+FINAL VERDICT:
+======================================================================

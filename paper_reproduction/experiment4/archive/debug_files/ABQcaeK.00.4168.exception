@@ -1,0 +1,38 @@
+<Description>
+   ABAQUS/ABQcaeK rank 0 received the ABORT signal
+
+</Description>
+
+<Context>
+   CAE
+</Context>
+
+<Callstack>
+</Callstack>
+
+<Memory>
+   <Current>            0 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>          31 GB </Physical>
+   <Limit>              0 GB </Limit>
+   <Accessible>        31 GB </Accessible>
+   <Free>              17 GB </Free>
+   <Allocator>            DL </Allocator>
+</Memory>
+
+<Swap>
+       <Size>          58 GB </Size>
+       <Used>          26 GB </Used>
+       <Free>          32 GB </Free>
+</Swap>
+
+<Directories>
+  <current> D:\Libraries\Documents\projects\Abaqus\paper_reproduction\experiment4 </current> <free>    131 GB </free>   <used>    821 GB </used> 
+     <temp> C:\Users\jaime\AppData\Local\Temp </temp>    <free>     26 GB </free>
+</Directories>
+
+<Installation>
+     <Version> Learning Edition 2025 2025 HF2 </Version>
+       <Build> 2025_03_14-08.12.51 RELr427 199052 </Build>
+</Installation>
+

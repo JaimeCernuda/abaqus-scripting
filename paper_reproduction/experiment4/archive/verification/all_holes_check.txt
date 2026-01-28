@@ -1,0 +1,137 @@
+======================================================================
+SEARCHING FOR ALL CIRCULAR FEATURES / HOLES
+======================================================================
+
+Node count by Y position:
+  Y=   0.0: 40 nodes <-- High node count (possible circular feature)
+  Y=   3.0: 1 nodes
+  Y=   4.0: 6 nodes
+  Y=   5.0: 15 nodes
+  Y=   6.0: 7 nodes
+  Y=   7.0: 9 nodes
+  Y=   8.0: 11 nodes
+  Y=  10.0: 24 nodes <-- High node count (possible circular feature)
+  Y=  11.0: 6 nodes
+  Y=  12.0: 4 nodes
+  Y=  14.0: 28 nodes <-- High node count (possible circular feature)
+  Y=  16.0: 1 nodes
+  Y=  17.0: 4 nodes
+  Y=  18.0: 30 nodes <-- High node count (possible circular feature)
+  Y=  19.0: 3 nodes
+  Y=  20.0: 12 nodes
+  Y=  21.0: 9 nodes
+  Y=  22.0: 3 nodes
+  Y=  23.0: 15 nodes
+  Y=  24.0: 12 nodes
+  Y=  25.0: 2 nodes
+  Y=  26.0: 1 nodes
+  Y=  27.0: 3 nodes
+  Y=  28.0: 24 nodes <-- High node count (possible circular feature)
+  Y=  29.0: 4 nodes
+  Y=  30.0: 9 nodes
+  Y=  33.0: 2 nodes
+  Y=  35.0: 22 nodes <-- High node count (possible circular feature)
+  Y=  37.0: 4 nodes
+  Y=  38.0: 4 nodes
+  Y=  39.0: 1 nodes
+  Y=  40.0: 3 nodes
+  Y=  42.0: 22 nodes <-- High node count (possible circular feature)
+  Y=  45.0: 5 nodes
+  Y=  46.0: 3 nodes
+  Y=  47.0: 2 nodes
+  Y=  48.0: 2 nodes
+  Y=  49.0: 20 nodes <-- High node count (possible circular feature)
+  Y=  51.0: 4 nodes
+  Y=  53.0: 1 nodes
+  Y=  54.0: 4 nodes
+  Y=  55.0: 3 nodes
+  Y=  56.0: 10 nodes
+  Y=  57.0: 10 nodes
+  Y=  62.0: 10 nodes
+  Y=  63.0: 10 nodes
+  Y=  64.0: 10 nodes
+  Y=  67.0: 1 nodes
+  Y=  68.0: 10 nodes
+  Y=  69.0: 13 nodes
+  Y=  70.0: 2 nodes
+  Y=  71.0: 12 nodes
+  Y=  74.0: 11 nodes
+  Y=  75.0: 30 nodes <-- High node count (possible circular feature)
+  Y=  76.0: 7 nodes
+  Y=  77.0: 22 nodes <-- High node count (possible circular feature)
+  Y=  78.0: 18 nodes <-- High node count (possible circular feature)
+  Y=  79.0: 4 nodes
+  Y=  80.0: 11 nodes
+  Y=  81.0: 21 nodes <-- High node count (possible circular feature)
+  Y=  82.0: 7 nodes
+  Y=  83.0: 5 nodes
+  Y=  84.0: 5 nodes
+  Y=  85.0: 2 nodes
+  Y=  86.0: 3 nodes
+  Y=  87.0: 11 nodes
+  Y=  88.0: 3 nodes
+  Y=  89.0: 7 nodes
+  Y=  90.0: 1 nodes
+  Y=  92.0: 1 nodes
+  Y=  93.0: 12 nodes
+  Y=  94.0: 6 nodes
+  Y=  97.0: 1 nodes
+  Y= 100.0: 14 nodes
+  Y= 102.0: 1 nodes
+  Y= 104.0: 1 nodes
+  Y= 106.0: 11 nodes
+  Y= 109.0: 1 nodes
+  Y= 112.0: 16 nodes <-- High node count (possible circular feature)
+  Y= 114.0: 1 nodes
+  Y= 116.0: 4 nodes
+  Y= 117.0: 6 nodes
+  Y= 118.0: 10 nodes
+  Y= 119.0: 1 nodes
+  Y= 120.0: 1 nodes
+  Y= 121.0: 1 nodes
+  Y= 122.0: 10 nodes
+  Y= 123.0: 7 nodes
+  Y= 124.0: 1 nodes
+  Y= 125.0: 6 nodes
+  Y= 126.0: 5 nodes
+  Y= 127.0: 3 nodes
+  Y= 128.0: 12 nodes
+  Y= 129.0: 4 nodes
+  Y= 132.0: 14 nodes
+  Y= 134.0: 2 nodes
+  Y= 135.0: 3 nodes
+  Y= 136.0: 2 nodes
+  Y= 137.0: 11 nodes
+  Y= 139.0: 9 nodes
+  Y= 140.0: 2 nodes
+  Y= 141.0: 5 nodes
+  Y= 142.0: 8 nodes
+  Y= 146.0: 20 nodes <-- High node count (possible circular feature)
+
+======================================================================
+ANALYZING POTENTIAL CIRCULAR FEATURES:
+======================================================================
+
+UPPER REGION (Y = 118 to 146) - Expected: 1 pin hole
+  Nodes found: 117
+  X range: 18.0 mm
+  Z range: 25.0 mm
+
+MIDDLE REGION (Y = 28 to 118) - Expected: NO pin holes
+  Nodes found: 468
+    Y~40: 33 nodes, X range=61.9, Z range=25.0
+    Y~50: 27 nodes, X range=59.6, Z range=25.0
+    Y~60: 10 nodes, X range=51.4, Z range=25.0
+    Y~70: 38 nodes, X range=45.3, Z range=25.0
+    Y~80: 87 nodes, X range=31.8, Z range=25.0
+    Y~90: 12 nodes, X range=12.9, Z range=25.0
+      WARNING: Possible circular feature detected!
+    Y~100: 15 nodes, X range=14.8, Z range=25.0
+      WARNING: Possible circular feature detected!
+
+LOWER REGION (Y = 0 to 28) - Expected: 2 pin holes
+  Nodes found: 268
+  Left block nodes: 132
+  Right block nodes: 136
+
+======================================================================

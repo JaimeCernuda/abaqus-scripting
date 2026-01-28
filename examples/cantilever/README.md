@@ -1,17 +1,7 @@
 # Cantilever Beam - Abaqus Python Scripting Workflow
 
 A step-by-step demonstration of finite element analysis using the Abaqus Scripting Interface.
-```
-    FIXED                                                    LOAD
-    (Encastre)                                               ↓ 1000 N
-    ▓▓▓▓▓╔════════════════════════════════════════════════════╗
-    ▓▓▓▓▓║                                                    ║
-    ▓▓▓▓▓║              STEEL BEAM                            ║
-    ▓▓▓▓▓║              100 × 10 × 10 mm                      ║
-    ▓▓▓▓▓║                                                    ║
-    ▓▓▓▓▓╚════════════════════════════════════════════════════╝
-    x=0                                                    x=100
-```
+
 
 ---
 

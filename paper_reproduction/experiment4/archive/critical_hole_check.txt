@@ -1,0 +1,49 @@
+======================================================================
+CRITICAL PIN HOLE VERIFICATION
+======================================================================
+
+==================================================
+CHECKING UPPER HOLE REGION
+  Y range: 125 to 140
+  X range: -15 to 15
+==================================================
+  Nodes found: 73
+  X range: -9.00 to 9.00 (span: 18.00 mm)
+  Y range: 125.12 to 139.99 (span: 14.86 mm)
+  Z range: 0.00 to 25.00 (span: 25.00 mm)
+
+  ANALYSIS:
+    X span: 18.0mm, Z span: 25.0mm
+    VERDICT: UNCLEAR - needs visual inspection
+
+==================================================
+CHECKING LOWER_LEFT HOLE REGION
+  Y range: 7 to 21
+  X range: -35 to -10
+==================================================
+  Nodes found: 69
+  X range: -32.30 to -14.30 (span: 18.00 mm)
+  Y range: 7.00 to 21.00 (span: 14.00 mm)
+  Z range: 0.00 to 25.00 (span: 25.00 mm)
+
+  ANALYSIS:
+    X span: 18.0mm, Z span: 25.0mm
+    VERDICT: UNCLEAR - needs visual inspection
+
+==================================================
+CHECKING LOWER_RIGHT HOLE REGION
+  Y range: 7 to 21
+  X range: 10 to 35
+==================================================
+  Nodes found: 71
+  X range: 14.30 to 32.30 (span: 18.00 mm)
+  Y range: 7.00 to 21.00 (span: 14.00 mm)
+  Z range: 0.00 to 25.00 (span: 25.00 mm)
+
+  ANALYSIS:
+    X span: 18.0mm, Z span: 25.0mm
+    VERDICT: UNCLEAR - needs visual inspection
+
+======================================================================
+OVERALL VERDICT:
+======================================================================

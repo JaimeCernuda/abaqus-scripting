@@ -1,0 +1,17 @@
+reference/
+paper/
+.old/
+
+# Python
+__pycache__/
+*.pyc
+
+# Abaqus lock files only
+*.lck
+
+# Virtual environment
+.venv/
+
+# IDE
+.idea/
+*.swp

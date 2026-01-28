@@ -1,0 +1,3 @@
+Lower left faces: 1
+Lower right faces: 1
+Upper faces: 1

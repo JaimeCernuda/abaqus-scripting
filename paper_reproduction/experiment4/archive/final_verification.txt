@@ -1,0 +1,43 @@
+======================================================================
+EXPERIMENT 4 - FINAL RESULTS VERIFICATION
+======================================================================
+
+Job_20kN.odb: 20 kN load
+  Max Stress: 380.72 MPa
+  Max Displacement: 0.0965 mm
+  Max PEEQ: 0.0000
+
+Job_60kN.odb: 60 kN load
+  Max Stress: 982.39 MPa
+  Max Displacement: 0.2829 mm
+  Max PEEQ: 0.0010
+
+Job_100kN.odb: 100 kN load
+  Max Stress: 1148.03 MPa
+  Max Displacement: 1.4173 mm
+  Max PEEQ: 0.0670
+
+======================================================================
+VERIFICATION COMPLETE
+============================================================================================================================================
+DEFINITIVE VOID DIRECTION CHECK
+======================================================================
+
+UPPER HOLE CHECK:
+--------------------------------------------------
+
+Test 1: Check for void at X=0, Y=132, Z=12.5 (X-dir hole center)
+  NO nodes found near X=0, Y=132, Z=12.5
+  ==> VOID EXISTS here - CONFIRMS X-direction hole
+
+Test 2: Check for void at X=0, Y=132, Z=5 (Z-dir hole interior)
+  Found 1 nodes near X=0, Y=132, Z=5
+    Node at (0.00, 132.17, 6.15)
+  ==> Material EXISTS here - NO Z-direction hole
+
+Test 3: Scan along X axis at Y=132, Z=12.5
+  No nodes found at Y=132, Z=12.5
+
+======================================================================
+FINAL VERDICT:
+======================================================================

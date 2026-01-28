@@ -1,0 +1,15 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Job_FatigueTest_v16
+Abaqus Learning Edition 2025
+Begin Analysis Input File Processor
+1/27/2026 10:13:00 AM
+Run pre.exe
+1/27/2026 10:13:01 AM
+Abaqus Error: Analysis Input File Processor exited with an error - Please see the 
+Job_FatigueTest_v16.dat file for possible error messages if the file exists.
+Begin SIM Wrap-up
+1/27/2026 10:13:01 AM
+Run SMASimUtility.exe
+1/27/2026 10:13:01 AM
+End SIM Wrap-up
+Abaqus/Analysis exited with errors

@@ -1,0 +1,18 @@
+# -*- coding: mbcs -*-
+from mesh import *
+mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'].deleteMesh()
+mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'].setMeshControls(
+    elemShape=TET, regions=
+    mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'].cells, 
+    technique=FREE)
+mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'].seedPart(
+    deviationFactor=0.1, minSizeFactor=0.1, size=7.0)
+mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'].setElementType(
+    elemTypes=(ElemType(elemCode=C3D4, elemLibrary=STANDARD), ), regions=(
+    mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'].cells, ))
+mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'].generateMesh()
+del mdb.models['Experiment4_TO_Specimen'].rootAssembly.instances['TO_Specimen-1']
+mdb.models['Experiment4_TO_Specimen'].rootAssembly.Instance(dependent=OFF, 
+    name='TO_Specimen-1', part=
+    mdb.models['Experiment4_TO_Specimen'].parts['TO_Specimen'])
+#* A meshed part can only be instanced as dependent.

@@ -1,0 +1,47 @@
+============================================================
+HOLE ORIENTATION VERIFICATION
+============================================================
+
+For X-direction holes (correct):
+  - Circular edges at DIFFERENT X values (front/back of block)
+  - Circular edges at SAME Z values (within the hole)
+
+For Z-direction holes (WRONG):
+  - Circular edges at SAME X values
+  - Circular edges at DIFFERENT Z values (front/back)
+
+============================================================
+Found 6 circular edges with radius ~6.35 mm
+
+UPPER HOLE EDGES (Y > 100):
+  Edge 4 at X=-9.0, Y=125.8, Z=12.5
+  Edge 5 at X=9.0, Y=138.5, Z=12.5
+  X span: 18.0 mm, Z span: 0.0 mm
+  --> CORRECT: Hole goes through X-direction (horizontal)
+
+LOWER HOLE EDGES (Y < 50):
+  Edge 0 at X=-32.3, Y=7.7, Z=12.5
+  Edge 1 at X=-14.3, Y=20.4, Z=12.5
+  Edge 2 at X=14.3, Y=7.7, Z=12.5
+  Edge 3 at X=32.3, Y=20.4, Z=12.5
+
+  Lower LEFT hole edges:
+    X=-32.3, Y=7.7, Z=12.5
+    X=-14.3, Y=20.4, Z=12.5
+    X span: 18.0 mm, Z span: 0.0 mm
+    --> CORRECT: X-direction hole
+
+  Lower RIGHT hole edges:
+    X=14.3, Y=7.7, Z=12.5
+    X=32.3, Y=20.4, Z=12.5
+    X span: 18.0 mm, Z span: 0.0 mm
+    --> CORRECT: X-direction hole
+
+============================================================
+CONCLUSION:
+  UPPER HOLE: Correct (X-direction)
+  LOWER LEFT: Correct (X-direction)
+  LOWER RIGHT: Correct (X-direction)
+
+*** ALL HOLES CORRECTLY ORIENTED IN X-DIRECTION ***
+============================================================

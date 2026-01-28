@@ -1,0 +1,36 @@
+======================================================================
+SPECIMEN GEOMETRY AND PIN HOLE LOCATION VERIFICATION
+======================================================================
+
+OVERALL MODEL BOUNDING BOX:
+  X: -32.3 to 32.3 (width: 64.6 mm)
+  Y: 0.0 to 146.2 (height: 146.2 mm)
+  Z: 0.0 to 25.0 (thickness: 25.0 mm)
+
+EXPECTED SPECIMEN REGIONS:
+  UPPER BLOCK (top support): Y = 118 to 146 mm
+  NECK/CENTER: Y = 28 to 118 mm
+  LOWER BLOCKS (bottom supports): Y = 0 to 28 mm
+
+UPPER PIN HOLE LOCATION:
+  X range: -9.0 to 9.0
+  Y range: 125.8 to 138.5
+  Z range: 6.2 to 18.9
+
+  Pin hole center Y: 132.2 mm
+
+======================================================================
+LOCATION VERIFICATION:
+======================================================================
+
+  Pin hole Y center (132.2) is in UPPER BLOCK region (Y > 118)
+  STATUS: CORRECT - Pin hole is in the TOP SUPPORT
+
+======================================================================
+
+LOWER PIN HOLES:
+  Lower Left pin center Y: 14.0 mm
+  Lower Right pin center Y: 14.0 mm
+  STATUS: CORRECT - Both lower pins are in bottom blocks
+
+======================================================================

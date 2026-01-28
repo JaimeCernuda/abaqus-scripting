@@ -1,0 +1,76 @@
+1
+
+   Abaqus Learning Edition 2025                                  Date 27-Jan-2026   Time 10:13:00
+   
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+ ***ERROR: in keyword *BOUNDARY, file "Job_FatigueTest_v16.inp", line 43: 
+           Unknown assembly node set LOWERLEFTPINHOLE
+ ***NOTE: DUE TO AN INPUT ERROR THE ANALYSIS PRE-PROCESSOR HAS BEEN UNABLE TO 
+          INTERPRET SOME DATA.  SUBSEQUENT ERRORS MAY BE CAUSED BY THIS OMISSION
+
+ ***ERROR: in keyword *BOUNDARY, file "Job_FatigueTest_v16.inp", line 43: 
+           Unknown assembly node set LOWERLEFTPINHOLE
+
+ ***ERROR: in keyword *BOUNDARY, file "Job_FatigueTest_v16.inp", line 47: 
+           Unknown assembly node set LOWERRIGHTPINHOLE
+
+ ***ERROR: in keyword *BOUNDARY, file "Job_FatigueTest_v16.inp", line 47: 
+           Unknown assembly node set LOWERRIGHTPINHOLE
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *heading
+  *coupling, constraintname=ASSEMBLY_UPPERPINCOUPLING, refnode=ASSEMBLY_UPPERRP, surface
+
+ ***ERROR: SPECIFIED SURFACE ASSEMBLY_UPPERPINSURFACE DOES NOT EXIST. THIS 
+           SURFACE MUST BE DEFINED.
+
+ ***ERROR: AN ERROR HAS OCCURRED WHILE PROCESSING THE COUPLING OPTION. PLEASE 
+           CHECK THE DATA FILE FOR THE APPROPRIATE ERROR MESSAGES.
+  *coupling, constraintname=ASSEMBLY_UPPERPINCOUPLING, refnode=ASSEMBLY_UPPERRP, surface
+
+ ***ERROR: SPECIFIED SURFACE ASSEMBLY_UPPERPINSURFACE DOES NOT EXIST. THIS 
+           SURFACE MUST BE DEFINED.
+
+ ***ERROR: AN ERROR HAS OCCURRED WHILE PROCESSING THE COUPLING OPTION. PLEASE 
+           CHECK THE DATA FILE FOR THE APPROPRIATE ERROR MESSAGES.
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+
+ ***ERROR: THIS MODEL HAS EITHER INCORRECT OR NO ELEMENT DEFINITIONS.
+
+
+
+
+
+          THE PROGRAM HAS DISCOVERED     9 FATAL ERRORS
+
+               ** EXECUTION IS TERMINATED **
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =      0.0    
+       SYSTEM TIME (SEC)    =      0.0    
+       TOTAL CPU TIME (SEC) =      0.0    
+       WALLCLOCK TIME (SEC) =            0

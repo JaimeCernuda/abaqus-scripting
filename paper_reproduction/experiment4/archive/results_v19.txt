@@ -1,0 +1,5 @@
+Job_v19 Results (20 kN vertical load)
+==================================================
+Max von Mises stress: 380.72 MPa
+Max Y displacement: 0.0641 mm
+Max PEEQ (plastic strain): 0.000000
