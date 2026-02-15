@@ -16,6 +16,7 @@ PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
 os.chdir(PROJECT_DIR)
 
 NUM_CPUS = int(os.environ.get('ABAQUS_NUM_CPUS', '1'))
+MESH_SIZE = float(os.environ.get('ABAQUS_MESH_SIZE', '3.0'))
 
 print("\n" + "=" * 70)
 print("EXPERIMENT 5: TOPOLOGY OPTIMIZATION SETUP")

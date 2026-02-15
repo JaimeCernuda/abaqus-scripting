@@ -8,9 +8,11 @@
 #SBATCH --mem=32G
 #SBATCH -o exp5_tosca_%j.out
 #SBATCH -e exp5_tosca_%j.err
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=${CHPC_EMAIL:-}
 
 # ============================================================================
-# Experiment 5: Topology Optimization on CHPC
+# Experiment 5: Topology Optimization on CHPC (full pipeline)
 # ============================================================================
 
 unset SLURM_GTIDS
@@ -33,7 +35,7 @@ echo "============================================"
 
 # Step 1: Create design space
 echo ""
-echo "[1/4] Creating design space..."
+echo "[1/6] Creating design space..."
 abaqus cae noGUI=scripts/create_design_space.py
 if [ $? -ne 0 ]; then
     echo "ERROR: Design space creation failed"
@@ -42,7 +44,7 @@ fi
 
 # Step 2: Setup optimization
 echo ""
-echo "[2/4] Setting up optimization..."
+echo "[2/6] Setting up optimization..."
 abaqus cae noGUI=scripts/setup_optimization.py
 if [ $? -ne 0 ]; then
     echo "ERROR: Optimization setup failed"
@@ -51,7 +53,7 @@ fi
 
 # Step 3: Run topology optimization
 echo ""
-echo "[3/4] Running topology optimization..."
+echo "[3/6] Running topology optimization..."
 abaqus optimization job=Experiment5_TO cpus=$SLURM_NTASKS interactive
 if [ $? -ne 0 ]; then
     echo "ERROR: Optimization run failed"
@@ -60,8 +62,30 @@ fi
 
 # Step 4: Extract results
 echo ""
-echo "[4/4] Extracting results..."
+echo "[4/6] Extracting results..."
 abaqus python scripts/extract_results.py
+
+# Step 5: Extract convergence history
+echo ""
+echo "[5/6] Extracting convergence history..."
+abaqus python scripts/monitor_convergence.py || echo "WARNING: Convergence extraction failed"
+
+# Step 6: Capture density contour screenshots
+echo ""
+echo "[6/6] Capturing screenshots..."
+mkdir -p screenshots
+if command -v xvfb-run &> /dev/null; then
+    xvfb-run -a abaqus cae script=scripts/capture_to_results.py || echo "WARNING: Screenshot capture failed"
+elif command -v Xvfb &> /dev/null; then
+    Xvfb :99 -screen 0 1024x768x24 &
+    XVFB_PID=$!
+    export DISPLAY=:99
+    sleep 2
+    abaqus cae script=scripts/capture_to_results.py || echo "WARNING: Screenshot capture failed"
+    kill $XVFB_PID 2>/dev/null
+else
+    echo "WARNING: No Xvfb available, skipping screenshots"
+fi
 
 echo ""
 echo "============================================"
