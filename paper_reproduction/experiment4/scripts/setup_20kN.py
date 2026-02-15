@@ -1,10 +1,15 @@
-﻿import os
+import os
 from abaqus import *
 from abaqusConstants import *
 from caeModules import *
 
-os.chdir(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4')
-openMdb(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4/Experiment4_TO_Specimen_v19.cae')
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
+os.chdir(PROJECT_DIR)
+
+NUM_CPUS = int(os.environ.get('ABAQUS_NUM_CPUS', '1'))
+
+openMdb(os.path.join(PROJECT_DIR, 'Experiment4_TO_Specimen.cae'))
 
 model = mdb.models['Experiment4_TO_Specimen']
 part = model.parts['TO_Specimen']
@@ -74,10 +79,12 @@ model.ConcentratedForce(name='VerticalLoad_20kN', createStepName='FatigueTest',
 
 model.fieldOutputRequests['F-Output-1'].setValues(variables=('S', 'E', 'PE', 'PEEQ', 'U', 'RF'))
 
-job_name = 'Job_v19'
-mdb.Job(name=job_name, model='Experiment4_TO_Specimen', type=ANALYSIS, numCpus=1)
+job_name = 'Job_20kN'
+if job_name in mdb.jobs.keys():
+    del mdb.jobs[job_name]
+mdb.Job(name=job_name, model='Experiment4_TO_Specimen', type=ANALYSIS, numCpus=NUM_CPUS)
 
-mdb.saveAs(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4/Experiment4_TO_Specimen_v19.cae')
+mdb.saveAs(os.path.join(PROJECT_DIR, 'Experiment4_TO_Specimen.cae'))
 
 # Write input
 mdb.jobs[job_name].writeInput()

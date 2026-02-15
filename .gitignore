@@ -1,13 +1,12 @@
 reference/
 paper/
 .old/
+docs/
+iowarp/
 
 # Python
 __pycache__/
 *.pyc
-
-# Abaqus lock files only
-*.lck
 
 # Virtual environment
 .venv/
@@ -15,3 +14,47 @@ __pycache__/
 # IDE
 .idea/
 *.swp
+
+# Abaqus output files
+*.odb
+*.dat
+*.sta
+*.msg
+*.com
+*.prt
+*.sim
+*.lck
+*.log
+*.mdl
+*.stt
+*.pac
+*.sel
+*.rpy
+*.rpy.*
+*.rec
+*.SMABulk
+*.SMAFocus
+*.exception
+*.pes
+*.pmg
+*.cid
+*.023
+*.sdb
+*.ipf
+*.ipo
+*.abq
+*.res
+*.fil
+
+# Abaqus scratch/temp
+abaqus.rpy
+abaqus.rpy.*
+*.odb_f
+*.jnl
+
+# Abaqus input files (regenerated from scripts)
+*.inp
+
+# SLURM output
+*.out
+*.err

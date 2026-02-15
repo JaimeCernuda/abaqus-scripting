@@ -273,7 +273,7 @@ model.optimizationTasks['TopoTask'].OptimizationConstraint(
     restrictionMethod=RELATIVE_LESS_THAN_EQUAL,
     restrictionValue=VOLUME_FRACTION
 )
-print(f"  - Created volume constraint: <= {VOLUME_FRACTION*100}% of original")
+print("  - Created volume constraint: <= {}% of original".format(VOLUME_FRACTION * 100))
 
 # ============================================================================
 # GEOMETRIC RESTRICTIONS (Manufacturing Constraints)
@@ -342,7 +342,7 @@ opt_process = mdb.OptimizationProcess(
     saveEvery=None
 )
 
-print(f"  - Created optimization process: {MAX_ITERATIONS} max iterations")
+print("  - Created optimization process: {} max iterations".format(MAX_ITERATIONS))
 
 # ============================================================================
 # SAVE MODEL

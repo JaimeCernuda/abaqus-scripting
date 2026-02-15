@@ -4,14 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This repository contains Abaqus Python scripts for finite element analysis (FEA) and topology optimization. Scripts use the Abaqus Scripting Interface (Python 2.7 embedded in Abaqus) and must be executed through the Abaqus interpreter.
+Repository of Abaqus Python scripts for finite element analysis (FEA) and topology optimization. Scripts use the Abaqus Scripting Interface (Python 2.7 embedded in Abaqus) and must be executed through the Abaqus interpreter—not standard Python.
 
 ## Running Scripts
 
-Scripts cannot be run with standard Python. Use the Abaqus interpreter:
-
 ```bash
-# With GUI (opens Abaqus CAE)
+# With GUI
 abaqus cae script=script_name.py
 
 # Headless (faster, no GUI)
@@ -27,16 +25,43 @@ abaqus job=JobName interactive
 abaqus cae database=ModelName.odb
 ```
 
-When Claude Code is running commands use the form
+When Claude Code runs Abaqus commands, always use the full `.bat` path:
 ```
-Bash("C:/SIMULIA/Commands/abaqus.bat" information=release 2>&1) timeout: 30s  
+"C:/SIMULIA/Commands/abaqus.bat" cae noGUI=script_name.py 2>&1
 ```
 
 ## Project Structure
 
-- **cantilever/**: Step-by-step FEA workflow (geometry → model → analysis → post-process)
-- **cube/**: Simple compression example
-- **TO/**: Topology optimization examples (requires full Abaqus license with Tosca)
+```
+examples/
+  cantilever/         # 4-step progressive FEA tutorial (geometry → model → analysis → post-process)
+  cube/               # Simple compression validation example
+  topology_optimization/  # TO scripts (requires full license with Tosca)
+
+paper_reproduction/
+  experiment4/        # Final working model: IN718 fatigue specimen with 3 load cases (20/60/100 kN)
+    scripts/          # Production scripts (create_geometry, setup_*kN, extract_*_results)
+    archive/          # Iterative development history (v2–v19+, debug scripts)
+  experiment1-3/      # Earlier iterations
+
+reference/            # Topology optimization checklists and specifications
+
+.claude/skills/       # 22+ specialized Claude Code skills for FEA task routing
+  abaqus/             # Master skill: routes user intent to specialized skills
+  abaqus-static-analysis/, abaqus-modal-analysis/, ...  # Analysis workflow skills
+  abaqus-geometry/, abaqus-material/, abaqus-mesh/, ...  # Module skills
+  docs/abaqus-api/    # 13 API module reference documents (mdb, part, material, mesh, odb, etc.)
+```
+
+## Architecture: Skills System
+
+The `.claude/skills/` directory implements a hierarchical routing system:
+
+1. **Master skill** (`abaqus/SKILL.md`) — interprets user intent and routes to the right specialized skill
+2. **Analysis skills** — complete end-to-end workflows (static, modal, dynamic, thermal, coupled, contact, fatigue, topology/shape optimization)
+3. **Module skills** — single-purpose tasks (geometry, material, mesh, bc, load, step, interaction, amplitude, field, output, job, odb, export, docs)
+
+Each skill contains a `SKILL.md` (activation criteria, questions to ask) and a `references/` directory (API quick-reference, patterns, troubleshooting). The master skill's `references/workflow-matrix.md` documents dependencies between skills.
 
 ## Key Abaqus API Patterns
 
@@ -53,32 +78,17 @@ All scripts follow this workflow:
 ## Units
 
 All scripts use consistent units (mm-tonne-s-N-MPa):
-- Length: mm
-- Force: N
-- Stress/Modulus: MPa
-- Density: tonne/mm³ (e.g., steel = 7.85e-9)
+- Length: mm | Force: N | Stress/Modulus: MPa | Density: tonne/mm³ (steel = 7.85e-9)
 
 ## Limitations
 
 - **Learning Edition**: Limited to 1000 nodes. Increase `MESH_SIZE` if exceeded.
 - **Topology Optimization**: Requires full license with Tosca module (not available in Learning Edition).
-- **noGUI mode**: Some GUI-only features (viewport operations) don't work headless.
+- **noGUI mode**: Viewport operations (screenshots, display settings) don't work headless.
 
-## IDE Support
+## Tooling
 
-Install `abqpy` in a separate environment for type hints in VS Code:
-```bash
-pip install abqpy
-```
-This provides autocompletion only—scripts must still run through Abaqus.
-
-## PATH Setup
-
-Ensure Abaqus commands are accessible:
-```bash
-# Add to PATH
-C:\SIMULIA\Commands
-
-# Verify installation
-abaqus information=release
-```
+- **Package manager**: `uv` (see `pyproject.toml`). The project has no runtime dependencies—Abaqus provides its own Python 2.7 environment.
+- **Workspace member**: `.claude/skills/abaqus-docs` has its own `pyproject.toml` with web scraping deps (`crawl4ai`, `beautifulsoup4`, `httpx`, `markdownify`).
+- **IDE support**: Install `abqpy` separately (`pip install abqpy`) for type hints. Scripts still run through Abaqus only.
+- **PATH**: Ensure `C:\SIMULIA\Commands` is on PATH. Verify with `abaqus information=release`.

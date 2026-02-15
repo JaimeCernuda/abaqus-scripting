@@ -7,7 +7,9 @@ from abaqus import *
 from abaqusConstants import *
 from visualization import *
 
-os.chdir(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4')
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
+os.chdir(PROJECT_DIR)
 
 # Get current viewport
 vp = session.viewports['Viewport: 1']

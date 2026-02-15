@@ -1,10 +1,12 @@
-﻿import os
+import os
 from odbAccess import *
 from abaqusConstants import *
 
-os.chdir(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4')
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
+os.chdir(PROJECT_DIR)
 
-odb = openOdb(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4/Job_100kN.odb')
+odb = openOdb(os.path.join(PROJECT_DIR, 'Job_100kN.odb'))
 
 step = odb.steps['FatigueTest']
 frame = step.frames[-1]

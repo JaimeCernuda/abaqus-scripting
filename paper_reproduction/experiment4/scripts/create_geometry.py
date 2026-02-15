@@ -6,6 +6,11 @@ Experiment 4: TO Specimen v11 - Debug edge finding and try different approach
 from abaqus import *
 from abaqusConstants import *
 from caeModules import *
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
+os.chdir(PROJECT_DIR)
 
 # =============================================================================
 # DIMENSIONS
@@ -43,7 +48,7 @@ NECK_BOT_Y = NECK_TOP_Y - 12.0
 JUNCTION_Y = BLOCK_HEIGHT_Y + 35.0
 JUNCTION_HALF_W = 4.0
 
-log_file = open(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4/geometry_debug_v19.txt', 'w')
+log_file = open(os.path.join(PROJECT_DIR, 'geometry_debug.txt'), 'w')
 
 def log(msg):
     log_file.write(msg + '\n')
@@ -320,4 +325,4 @@ assembly.Instance(name=part_name+'-1', part=part, dependent=ON)
 # =============================================================================
 # SAVE
 # =============================================================================
-mdb.saveAs(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4/Experiment4_TO_Specimen_v19.cae')
+mdb.saveAs(os.path.join(PROJECT_DIR, 'Experiment4_TO_Specimen.cae'))

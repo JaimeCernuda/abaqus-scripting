@@ -132,7 +132,7 @@ part.generateMesh()
 
 num_elements = len(part.elements)
 num_nodes = len(part.nodes)
-print(f"  Mesh: {num_elements} elements, {num_nodes} nodes")
+print("  Mesh: {} elements, {} nodes".format(num_elements, num_nodes))
 
 # =============================================================================
 # TOPOLOGY OPTIMIZATION SETUP
@@ -193,42 +193,43 @@ mdb.saveAs(pathName='MBB_Beam.cae')
 print("\n" + "="*70)
 print("MODEL CREATED SUCCESSFULLY")
 print("="*70)
-print(f"""
+print("""
 Summary:
-  - Design space: {LENGTH} x {HEIGHT} mm
-  - Elements: {num_elements}
-  - Target volume: {VOLUME_FRACTION*100}% of original
-  - Max iterations: {MAX_CYCLES}
+  - Design space: {length} x {height} mm
+  - Elements: {elems}
+  - Target volume: {vol}% of original
+  - Max iterations: {cycles}
 
 Expected result:
   The optimizer will generate a truss-like structure that efficiently
   transfers the load from top-left to the supports, similar to:
-  
+
      LOAD
-       ↓
-       ●━━━━━━━━━━━━━━━━━━━━━━━━━━●
-       ┃╲                      ╱┃
-       ┃  ╲                  ╱  ┃
-       ┃    ╲              ╱    ┃
-       ┃      ╲          ╱      ┃
-       ┃        ╲      ╱        ┃
-       ┃          ╲  ╱          ┃
-       ┃            ╳            ┃
-       ┃          ╱  ╲          ┃
-       ┃        ╱      ╲        ┃
-       ┃      ╱          ╲      ┃
-       ┃    ╱              ╲    ┃
-       ┃  ╱                  ╲  ┃
-       ┃╱                      ╲┃
-    ▓▓▓●━━━━━━━━━━━━━━━━━━━━━━━━━━●
+       v
+       *==========================*
+       |\\                      /|
+       |  \\                  /  |
+       |    \\              /    |
+       |      \\          /      |
+       |        \\      /        |
+       |          \\  /          |
+       |            X            |
+       |          /  \\          |
+       |        /      \\        |
+       |      /          \\      |
+       |    /              \\    |
+       |  /                  \\  |
+       |/                      \\|
+    ###*==========================*
     FIXED                      ROLLER
 
 To run:
   1. Open MBB_Beam.cae in Abaqus/CAE
   2. Optimization > Process Manager > Submit
-  
+
 Or uncomment the submit lines at the end of this script.
-""")
+""".format(length=LENGTH, height=HEIGHT, elems=num_elements,
+           vol=VOLUME_FRACTION * 100, cycles=MAX_CYCLES))
 
 # Uncomment to run:
 # mdb.optimizationProcesses['MBB_Optimization'].submit()

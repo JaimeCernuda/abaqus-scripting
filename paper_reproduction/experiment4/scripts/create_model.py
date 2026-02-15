@@ -1,13 +1,17 @@
-﻿import os
+import os
 from abaqus import *
 from abaqusConstants import *
 from caeModules import *
 import mesh
 
-os.chdir(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4')
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
+os.chdir(PROJECT_DIR)
+
+MESH_SIZE = float(os.environ.get('ABAQUS_MESH_SIZE', '3.0'))
 
 # Run the geometry script first to get a fresh part
-execfile(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4/scripts/create_geometry_v19.py')
+execfile(os.path.join(SCRIPT_DIR, 'create_geometry.py'))
 
 model = mdb.models['Experiment4_TO_Specimen']
 part = model.parts['TO_Specimen']
@@ -18,9 +22,10 @@ del assembly.instances['TO_Specimen-1']
 
 # MESH ON PART BEFORE creating instance
 part.setMeshControls(regions=part.cells, elemShape=TET, technique=FREE)
-part.seedPart(size=7.0, deviationFactor=0.1, minSizeFactor=0.1)
-elemType1 = mesh.ElemType(elemCode=C3D4, elemLibrary=STANDARD)
-part.setElementType(regions=(part.cells,), elemTypes=(elemType1,))
+part.seedPart(size=MESH_SIZE, deviationFactor=0.1, minSizeFactor=0.1)
+elemType1 = mesh.ElemType(elemCode=C3D10, elemLibrary=STANDARD)
+elemType2 = mesh.ElemType(elemCode=C3D4, elemLibrary=STANDARD)
+part.setElementType(regions=(part.cells,), elemTypes=(elemType1, elemType2))
 part.generateMesh()
 
 with open('mesh_final.txt', 'w') as f:
@@ -43,5 +48,5 @@ region = part.Set(cells=part.cells, name='AllCells')
 part.SectionAssignment(region=region, sectionName='SolidSection')
 
 # Save
-mdb.saveAs(r'D:/Libraries/Documents/projects/Abaqus/paper_reproduction/experiment4/Experiment4_TO_Specimen_v19.cae')
+mdb.saveAs(os.path.join(PROJECT_DIR, 'Experiment4_TO_Specimen.cae'))
 print('Model saved with {} nodes'.format(len(part.nodes)))
