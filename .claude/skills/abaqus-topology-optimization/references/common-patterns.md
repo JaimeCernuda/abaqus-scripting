@@ -3,10 +3,12 @@
 ## Maximize Stiffness at 30% Volume (Most Common)
 
 ```python
-task.SingleTermDesignResponse(name='vol', region=MODEL, identifier=VOLUME)
-task.SingleTermDesignResponse(name='SE', region=MODEL, identifier=STRAIN_ENERGY)
+# Abaqus 2025: identifier is a string, ObjectiveFunction uses 5-tuple
+task.SingleTermDesignResponse(name='vol', region=MODEL, identifier='VOLUME')
+task.SingleTermDesignResponse(name='SE', region=MODEL, identifier='STRAIN_ENERGY')
 task.ObjectiveFunction(name='Obj',
-    objectives=((task.designResponses['SE'], MINIMIZE_MAXIMUM, 1.0, 0.0),))
+    objectives=((OFF, 'SE', 1.0, 0.0, ''),),
+    target=MINIMIZE)
 task.OptimizationConstraint(name='VolCon', designResponse='vol',
     restrictionMethod=RELATIVE_LESS_THAN_EQUAL, restrictionValue=0.3)
 ```
@@ -95,3 +97,30 @@ model.TopologyTask(
     objectiveFunctionDeltaStopCriteria=0.001
 )
 ```
+
+## Complete Workflow: Setup + Submit from CAE Script
+
+```python
+# 1. Define task, design responses, objective, constraints (see patterns above)
+# ...
+
+# 2. Save the model
+mdb.saveAs(pathName='MyModel.cae')
+
+# 3. Create prototype job (required by OptimizationProcess)
+mdb.Job(name='MyModel', model='MyModel', numCpus=4, numDomains=4)
+
+# 4. Create and submit optimization process
+opt_process = mdb.OptimizationProcess(
+    name='MyOptimization',
+    model='MyModel',
+    task='TopoTask',
+    prototypeJob='MyModel',
+    maxDesignCycle=50)
+opt_process.submit(validate=False)
+opt_process.waitForCompletion()
+```
+
+**WARNING:** Do NOT use `abaqus optimization task=X` directly from the CLI.
+The `task=` flag expects a Tosca `.par` parameter file, not a CAE task name.
+Always use `OptimizationProcess.submit()` from within a CAE script instead.

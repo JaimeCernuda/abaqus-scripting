@@ -13,7 +13,11 @@ from abaqusConstants import *
 from caeModules import *
 import mesh
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+try:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    # __file__ is not defined inside Abaqus CAE; use cwd instead
+    SCRIPT_DIR = os.path.join(os.getcwd(), 'scripts')
 PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
 os.chdir(PROJECT_DIR)
 

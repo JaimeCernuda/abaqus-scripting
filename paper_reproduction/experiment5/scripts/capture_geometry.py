@@ -11,7 +11,10 @@ from abaqus import *
 from abaqusConstants import *
 from visualization import *
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+try:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    SCRIPT_DIR = os.path.join(os.getcwd(), 'scripts')
 PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
 os.chdir(PROJECT_DIR)
 
@@ -38,7 +41,7 @@ vp.partDisplay.meshOptions.setValues(meshTechnique=ON)
 # Capture screenshot
 session.printToFile(
     fileName='screenshots/geometry_mesh',
-    format=PNG,
+    format=SVG,
     canvasObjects=(vp,)
 )
 

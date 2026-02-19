@@ -11,12 +11,16 @@ from abaqus import *
 from abaqusConstants import *
 from caeModules import *
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+try:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    SCRIPT_DIR = os.path.join(os.getcwd(), 'scripts')
 PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
 os.chdir(PROJECT_DIR)
 
 NUM_CPUS = int(os.environ.get('ABAQUS_NUM_CPUS', '1'))
 MESH_SIZE = float(os.environ.get('ABAQUS_MESH_SIZE', '3.0'))
+MAX_DESIGN_CYCLES = int(os.environ.get('ABAQUS_MAX_CYCLES', '50'))
 
 print("\n" + "=" * 70)
 print("EXPERIMENT 5: TOPOLOGY OPTIMIZATION SETUP")
@@ -25,7 +29,7 @@ print("=" * 70)
 # =============================================================================
 # LOAD DESIGN SPACE
 # =============================================================================
-print("\n[1/6] Loading design space...")
+print("\n[1/7] Loading design space...")
 
 openMdb(os.path.join(PROJECT_DIR, 'Experiment5_TO.cae'))
 
@@ -56,7 +60,7 @@ LB_RIGHT_XMAX = HALF_WIDTH
 # =============================================================================
 # STEP
 # =============================================================================
-print("[2/6] Creating analysis step...")
+print("[2/7] Creating analysis step...")
 
 model.StaticStep(name='LoadStep', previous='Initial',
                  initialInc=1.0, maxInc=1.0, minInc=1e-6)
@@ -67,7 +71,7 @@ model.FieldOutputRequest(name='F-Output-1', createStepName='LoadStep',
 # =============================================================================
 # BOUNDARY CONDITIONS AND LOADS
 # =============================================================================
-print("[3/6] Applying boundary conditions and loads...")
+print("[3/7] Applying boundary conditions and loads...")
 
 # Find pin hole surfaces
 lower_left_faces = instance.faces.getByBoundingCylinder(
@@ -121,7 +125,7 @@ print("  BCs and 20 kN load applied")
 # =============================================================================
 # TOPOLOGY OPTIMIZATION TASK
 # =============================================================================
-print("[4/6] Setting up topology optimization...")
+print("[4/7] Setting up topology optimization...")
 
 opt_task = model.TopologyTask(
     name='TopoTask',
@@ -137,28 +141,28 @@ print("  Created topology task (SIMP, penalty=3.0)")
 # =============================================================================
 # DESIGN RESPONSES
 # =============================================================================
-print("[5/6] Defining design responses and constraints...")
+print("[5/7] Defining design responses and constraints...")
 
 # Strain energy (minimize = maximize stiffness)
 model.optimizationTasks['TopoTask'].SingleTermDesignResponse(
     name='strain_energy',
     region=MODEL,
-    identifier=STRAIN_ENERGY,
-    stepOptions=LAST_STEP
+    identifier='STRAIN_ENERGY'
 )
 
 # Volume (constrain)
 model.optimizationTasks['TopoTask'].SingleTermDesignResponse(
     name='volume',
     region=MODEL,
-    identifier=VOLUME
+    identifier='VOLUME'
 )
 
 # Objective: minimize strain energy
+# Abaqus 2025 tuple format: (suppress, designResponse, weight, referenceValue, stepName)
 model.optimizationTasks['TopoTask'].ObjectiveFunction(
     name='MinStrainEnergy',
-    objectives=((model.optimizationTasks['TopoTask'].designResponses['strain_energy'],
-                 MINIMIZE_MAXIMUM, 1.0, 0.0),)
+    objectives=((OFF, 'strain_energy', 1.0, 0.0, ''),),
+    target=MINIMIZE
 )
 
 # Constraint: volume <= 40%
@@ -215,42 +219,93 @@ for part_set_name, frozen_name in frozen_sets.items():
 # =============================================================================
 
 # Minimum member size to prevent checkerboard
-model.optimizationTasks['TopoTask'].MinMemberSize(
+model.optimizationTasks['TopoTask'].TopologyMemberSize(
     name='MinSize',
     region=MODEL,
-    minWidth=MESH_SIZE
+    minThickness=MESH_SIZE * 2.0,
+    sizeRestriction=MINIMUM
 )
-print("  Minimum member size: {} mm".format(MESH_SIZE))
+print("  Minimum member size: {} mm".format(MESH_SIZE * 2.0))
 
 # =============================================================================
-# OPTIMIZATION PROCESS
+# SAVE
 # =============================================================================
-print("[6/6] Creating optimization process...")
+print("[6/7] Saving model...")
 
-MAX_ITERATIONS = 50
-
-opt_process = mdb.OptimizationProcess(
-    name='Experiment5_TO',
-    model='Experiment5_TO',
-    task='TopoTask',
-    description='IN718 specimen topology optimization - 20kN primary load',
-    maxDesignCycle=MAX_ITERATIONS,
-    dataSaveFrequency=OPT_DATASAVE_EVERY_CYCLE,
-    saveInitial=True,
-    saveFirst=True,
-    saveLast=True,
-    saveEvery=None
-)
-
-# Save
 mdb.saveAs(os.path.join(PROJECT_DIR, 'Experiment5_TO.cae'))
 
 print("\n" + "=" * 70)
 print("Optimization setup complete")
-print("  Max iterations: {}".format(MAX_ITERATIONS))
 print("  Volume fraction: 40%")
 print("  Frozen regions: 3 pin areas")
 print("  CAE saved: Experiment5_TO.cae")
 print("=" * 70)
-print("\nTo run:")
-print("  abaqus optimization job=Experiment5_TO cpus={} interactive".format(NUM_CPUS))
+
+# =============================================================================
+# CREATE OPTIMIZATION PROCESS
+# =============================================================================
+print("\n[7/7] Creating optimization process...")
+
+# Prototype job (required by OptimizationProcess as the FEA template)
+mdb.Job(name='Experiment5_FEA', model='Experiment5_TO',
+        numCpus=NUM_CPUS, numDomains=NUM_CPUS)
+print("  Created prototype job: Experiment5_FEA")
+
+# Create OptimizationProcess
+try:
+    opt_process = mdb.OptimizationProcess(
+        name='Experiment5_Optimization',
+        model='Experiment5_TO',
+        task='TopoTask',
+        prototypeJob='Experiment5_FEA',
+        maxDesignCycle=MAX_DESIGN_CYCLES)
+except TypeError:
+    # Fallback if prototypeJob not accepted in this Abaqus version
+    print("  WARNING: prototypeJob not accepted, trying without it...")
+    opt_process = mdb.OptimizationProcess(
+        name='Experiment5_Optimization',
+        model='Experiment5_TO',
+        task='TopoTask',
+        maxDesignCycle=MAX_DESIGN_CYCLES)
+
+print("  Max design cycles: {}".format(MAX_DESIGN_CYCLES))
+
+# Generate .par + input files for CLI submission (avoids submit() segfault)
+import sys
+import traceback
+print("  Calling writeParAndInputFiles()...")
+sys.stdout.flush()
+try:
+    opt_process.writeParAndInputFiles()
+    print("  writeParAndInputFiles() succeeded")
+except KeyError as e:
+    print("  KeyError from writeParAndInputFiles(): {}".format(e))
+    traceback.print_exc()
+    print("  Falling back: writing .inp manually...")
+    sys.stdout.flush()
+    mdb.jobs['Experiment5_FEA'].writeInput()
+    print("  Written: Experiment5_FEA.inp")
+except Exception as e:
+    print("  ERROR: {} - {}".format(type(e).__name__, e))
+    traceback.print_exc()
+sys.stdout.flush()
+
+# Save CAE with everything defined
+mdb.saveAs(os.path.join(PROJECT_DIR, 'Experiment5_TO.cae'))
+
+# List what was generated
+import glob
+par_files = glob.glob(os.path.join(PROJECT_DIR, '*.par'))
+for d in os.listdir(PROJECT_DIR):
+    sub = os.path.join(PROJECT_DIR, d)
+    if os.path.isdir(sub):
+        par_files += glob.glob(os.path.join(sub, '*.par'))
+if par_files:
+    for pf in par_files:
+        print("  Generated: {}".format(pf))
+else:
+    print("  No .par files found — .inp file available for manual Tosca setup")
+
+print("\n" + "=" * 70)
+print("Optimization setup complete")
+print("=" * 70)

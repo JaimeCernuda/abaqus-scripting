@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=test_slurm
-#SBATCH --account=owner-gpu-guest
+#SBATCH --account=hochhalter
 #SBATCH --partition=kingspeak
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

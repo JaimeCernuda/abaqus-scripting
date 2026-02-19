@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=exp5_validate
-#SBATCH --account=owner-gpu-guest
+#SBATCH --account=hochhalter
 #SBATCH --partition=kingspeak
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
@@ -14,6 +14,7 @@
 # ============================================================================
 # Experiment 5: Validation - Density-filtered analysis under all load cases
 # Run AFTER topology optimization completes
+# Screenshots are captured separately on Frisco nodes (see CHPC_GUIDE.md)
 # ============================================================================
 
 unset SLURM_GTIDS
@@ -32,7 +33,7 @@ echo "============================================"
 
 # Step 1: Create and run validation jobs (density-filtered, 20/60/100 kN)
 echo ""
-echo "[1/3] Creating and running validation analysis jobs..."
+echo "[1/2] Creating and running validation analysis jobs..."
 abaqus cae noGUI=scripts/setup_validation_jobs.py
 if [ $? -ne 0 ]; then
     echo "ERROR: Validation job creation failed"
@@ -41,25 +42,8 @@ fi
 
 # Step 2: Compare optimized vs Experiment 4 baseline
 echo ""
-echo "[2/3] Running comparison against baseline..."
+echo "[2/2] Running comparison against baseline..."
 abaqus python scripts/run_validation.py
-
-# Step 3: Capture validation stress screenshots
-echo ""
-echo "[3/3] Capturing validation screenshots..."
-mkdir -p screenshots
-if command -v xvfb-run &> /dev/null; then
-    xvfb-run -a abaqus cae script=scripts/capture_to_results.py || echo "WARNING: Screenshot capture failed"
-elif command -v Xvfb &> /dev/null; then
-    Xvfb :99 -screen 0 1024x768x24 &
-    XVFB_PID=$!
-    export DISPLAY=:99
-    sleep 2
-    abaqus cae script=scripts/capture_to_results.py || echo "WARNING: Screenshot capture failed"
-    kill $XVFB_PID 2>/dev/null
-else
-    echo "WARNING: No Xvfb available, skipping screenshots"
-fi
 
 echo ""
 echo "============================================"

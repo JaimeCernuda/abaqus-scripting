@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=test_abaqus
-#SBATCH --account=owner-gpu-guest
+#SBATCH --account=hochhalter
 #SBATCH --partition=kingspeak
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
@@ -10,7 +10,8 @@
 #SBATCH -e test_abaqus_%j.err
 
 # ============================================================================
-# Stage 1: Prove Abaqus runs and screenshot capture works
+# Stage 1: Prove Abaqus runs — geometry + mesh creation
+# Screenshots are captured separately on Frisco nodes (see CHPC_GUIDE.md)
 # ============================================================================
 
 unset SLURM_GTIDS
@@ -23,49 +24,30 @@ export ABAQUS_MESH_SIZE=3.0
 cd $HOME/Abaqus/paper_reproduction/experiment5
 
 echo "============================================"
-echo "Stage 1: Abaqus Geometry + Screenshot Test"
+echo "Stage 1: Abaqus Geometry + Mesh Test"
 echo "Started: $(date)"
 echo "============================================"
 
-# Step 1: Create design space (geometry + mesh)
+# Create design space (geometry + mesh)
 echo ""
-echo "[1/2] Creating design space..."
+echo "[1/1] Creating design space..."
 abaqus cae noGUI=scripts/create_design_space.py
 if [ $? -ne 0 ]; then
     echo "FAILED: Geometry creation failed"
     exit 1
 fi
-echo "PASSED: Experiment5_TO.cae created"
 
-# Step 2: Capture screenshot (test xvfb-run)
-echo ""
-echo "[2/2] Capturing geometry screenshot..."
-mkdir -p screenshots
-
-if command -v xvfb-run &> /dev/null; then
-    echo "  Using xvfb-run for headless rendering..."
-    xvfb-run -a abaqus cae script=scripts/capture_geometry.py
-elif command -v Xvfb &> /dev/null; then
-    echo "  Using manual Xvfb..."
-    Xvfb :99 -screen 0 1024x768x24 &
-    XVFB_PID=$!
-    export DISPLAY=:99
-    sleep 2
-    abaqus cae script=scripts/capture_geometry.py
-    kill $XVFB_PID 2>/dev/null
+# Verify outputs
+if [ -f "Experiment5_TO.cae" ]; then
+    echo "PASSED: Experiment5_TO.cae created"
 else
-    echo "  WARNING: No Xvfb available, trying direct (may fail)..."
-    abaqus cae script=scripts/capture_geometry.py
-fi
-
-if [ -f screenshots/geometry_mesh.png ]; then
-    echo "PASSED: Screenshot captured"
-else
-    echo "WARNING: Screenshot not captured (xvfb may not be available)"
-    echo "  Geometry creation still succeeded — Abaqus works."
+    echo "FAILED: Experiment5_TO.cae not found"
+    exit 1
 fi
 
 echo ""
 echo "============================================"
 echo "Stage 1 Complete: $(date)"
+echo "NOTE: Capture screenshots on Frisco with:"
+echo "  vglrun -c proxy abaqus cae script=scripts/capture_geometry.py"
 echo "============================================"

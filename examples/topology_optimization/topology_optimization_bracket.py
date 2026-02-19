@@ -237,16 +237,15 @@ print("  - Created topology task with SIMP method")
 model.optimizationTasks['TopoTask'].SingleTermDesignResponse(
     name='volume',
     region=MODEL,
-    identifier=VOLUME
+    identifier='VOLUME'
 )
 print("  - Created volume design response")
 
 # Strain energy design response (what we'll minimize = maximize stiffness)
 model.optimizationTasks['TopoTask'].SingleTermDesignResponse(
-    name='strain_energy', 
+    name='strain_energy',
     region=MODEL,
-    identifier=STRAIN_ENERGY,
-    stepOptions=LAST_STEP  # Use results from final step
+    identifier='STRAIN_ENERGY'
 )
 print("  - Created strain energy design response")
 
@@ -255,10 +254,11 @@ print("  - Created strain energy design response")
 # ============================================================================
 
 # Minimize strain energy = Maximize stiffness
+# Abaqus 2025 tuple format: (suppress, designResponse, weight, referenceValue, stepName)
 model.optimizationTasks['TopoTask'].ObjectiveFunction(
     name='MinStrainEnergy',
-    objectives=((model.optimizationTasks['TopoTask'].designResponses['strain_energy'], 
-                 MINIMIZE_MAXIMUM, 1.0, 0.0),)
+    objectives=((OFF, 'strain_energy', 1.0, 0.0, ''),),
+    target=MINIMIZE
 )
 print("  - Created objective function: minimize strain energy (maximize stiffness)")
 
@@ -328,18 +328,17 @@ print("\n" + "-"*70)
 print("CREATING OPTIMIZATION PROCESS")
 print("-"*70)
 
+# Create prototype job (required by OptimizationProcess as FEA template)
+mdb.Job(name='BracketOptimization', model='BracketOptimization')
+
 # Create the optimization process (this is like creating a Job)
 opt_process = mdb.OptimizationProcess(
-    name='BracketOptimization',
+    name='BracketOptProcess',
     model='BracketOptimization',
     task='TopoTask',
+    prototypeJob='BracketOptimization',
     description='Topology optimization of bracket connecting two regions',
-    maxDesignCycle=MAX_ITERATIONS,
-    dataSaveFrequency=OPT_DATASAVE_EVERY_CYCLE,
-    saveInitial=True,
-    saveFirst=True,
-    saveLast=True,
-    saveEvery=None
+    maxDesignCycle=MAX_ITERATIONS
 )
 
 print("  - Created optimization process: {} max iterations".format(MAX_ITERATIONS))
@@ -363,7 +362,7 @@ print("""
 To run the optimization:
 
 Option 1 - From this script (uncomment the lines below):
-    opt_process.submit()
+    opt_process.submit(validate=False)
     opt_process.waitForCompletion()
 
 Option 2 - From Abaqus/CAE GUI:
@@ -371,19 +370,19 @@ Option 2 - From Abaqus/CAE GUI:
     2. Go to Optimization module
     3. Select Optimization > Process > Submit
 
-Option 3 - From command line:
-    abaqus optimization job=BracketOptimization interactive
-
 After optimization completes:
-    - Results in: BracketOptimization/TOSCA_POST/
+    - Results in: BracketOptProcess/TOSCA_POST/
     - Open the .odb file to view optimization progression
     - Extract optimized geometry: Optimization > Extract > STL
+
+NOTE: Do NOT use 'abaqus optimization task=X' from the CLI without a .par file.
+      Use the OptimizationProcess.submit() method from within CAE instead.
 
 """)
 
 # Uncomment to actually run the optimization:
 # print("Submitting optimization...")
-# opt_process.submit()
+# opt_process.submit(validate=False)
 # opt_process.waitForCompletion()
 # print("Optimization complete!")
 

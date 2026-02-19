@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=test_validate
-#SBATCH --account=owner-gpu-guest
+#SBATCH --account=hochhalter
 #SBATCH --partition=kingspeak
 #SBATCH --nodes=1
 #SBATCH --ntasks=8
@@ -12,6 +12,7 @@
 # ============================================================================
 # Stage 3: Prove density-filtered validation works (20 kN only)
 # Requires: Stage 2 to have completed (TOSCA_POST exists)
+# Screenshots are captured separately on Frisco nodes (see CHPC_GUIDE.md)
 # ============================================================================
 
 unset SLURM_GTIDS
@@ -38,7 +39,7 @@ fi
 
 # Step 1: Create and run 20 kN validation job
 echo ""
-echo "[1/3] Setting up density-filtered validation (20 kN)..."
+echo "[1/2] Setting up density-filtered validation (20 kN)..."
 abaqus cae noGUI=scripts/setup_validation_jobs.py
 if [ $? -ne 0 ]; then
     echo "FAILED: Validation job creation failed"
@@ -55,26 +56,8 @@ fi
 
 # Step 2: Run comparison (will show 20 kN only, skip missing 60/100)
 echo ""
-echo "[2/3] Running comparison against Experiment 4 baseline..."
+echo "[2/2] Running comparison against Experiment 4 baseline..."
 abaqus python scripts/run_validation.py || echo "WARNING: Comparison had issues (Exp4 baseline may not exist yet)"
-
-# Step 3: Capture validation screenshots
-echo ""
-echo "[3/3] Capturing validation screenshots..."
-mkdir -p screenshots
-
-if command -v xvfb-run &> /dev/null; then
-    xvfb-run -a abaqus cae script=scripts/capture_to_results.py
-elif command -v Xvfb &> /dev/null; then
-    Xvfb :99 -screen 0 1024x768x24 &
-    XVFB_PID=$!
-    export DISPLAY=:99
-    sleep 2
-    abaqus cae script=scripts/capture_to_results.py
-    kill $XVFB_PID 2>/dev/null
-else
-    echo "WARNING: No Xvfb available, skipping screenshots"
-fi
 
 echo ""
 echo "============================================"
@@ -91,4 +74,3 @@ for f in Validation_20kN.odb validation_results.txt validation_comparison.csv; d
         echo "  [  ] $f (not found)"
     fi
 done
-ls screenshots/val_*.png 2>/dev/null && echo "  [OK] Validation screenshots" || echo "  [  ] No validation screenshots"

@@ -19,12 +19,11 @@ model.TopologyTask(
 ```python
 task = model.optimizationTasks['TaskName']
 
-# Volume
-task.SingleTermDesignResponse(name='volume', region=MODEL, identifier=VOLUME)
+# Volume (identifier is a plain string in Abaqus 2025)
+task.SingleTermDesignResponse(name='volume', region=MODEL, identifier='VOLUME')
 
 # Strain energy (stiffness)
-task.SingleTermDesignResponse(name='energy', region=MODEL,
-                               identifier=STRAIN_ENERGY, stepOptions=LAST_STEP)
+task.SingleTermDesignResponse(name='energy', region=MODEL, identifier='STRAIN_ENERGY')
 
 # Compliance
 task.SingleTermDesignResponse(name='compliance', region=MODEL, identifier=COMPLIANCE)
@@ -48,16 +47,17 @@ task.SingleTermDesignResponse(name='stress', region=MODEL,
 ## Objective Function
 
 ```python
+# Abaqus 2025 requires a 5-element tuple:
+# (suppress, designResponseName, weight, referenceValue, stepName)
 task.ObjectiveFunction(
     name='Objective',
-    objectives=((designResponse, targetType, weight, referenceValue),)
+    objectives=((OFF, 'strain_energy', 1.0, 0.0, ''),),
+    target=MINIMIZE
 )
 
-# targetType options:
-# - MINIMIZE_MAXIMUM  (minimize the max value - good for compliance)
-# - MAXIMIZE_MINIMUM  (maximize the min value - good for frequency)
-# - MINIMIZE          (minimize the response)
-# - MAXIMIZE          (maximize the response)
+# target options: MINIMIZE, MAXIMIZE
+# suppress: OFF (active) or ON (suppressed)
+# stepName: '' for default, or specific step name
 ```
 
 ## Optimization Constraints
@@ -116,13 +116,26 @@ task.GeometricRestriction(
 ## Run Optimization Process
 
 ```python
+# 1. Create a prototype Job first (required as FEA template)
+mdb.Job(name='ModelName', model='ModelName', numCpus=4, numDomains=4)
+
+# 2. Create OptimizationProcess with prototypeJob (required in Abaqus 2025)
 opt = mdb.OptimizationProcess(
     name='OptProcess',
     model='ModelName',
     task='TaskName',
-    maxDesignCycle=50,
-    dataSaveFrequency=OPT_DATASAVE_EVERY_CYCLE
+    prototypeJob='ModelName',
+    maxDesignCycle=50
 )
-opt.submit()
+
+# 3. Submit from within CAE (do NOT use 'abaqus optimization task=X' CLI)
+opt.submit(validate=False)
 opt.waitForCompletion()
 ```
+
+### Abaqus 2025 Notes
+
+- **`prototypeJob`** is required — it references a regular `mdb.Job` that serves as the FEA template
+- **`task=` CLI flag** expects a Tosca `.par` parameter file, NOT a CAE task name — use `OptimizationProcess.submit()` from within CAE instead
+- **ObjectiveFunction tuple** needs 5 elements: `(suppress, designResponse, weight, referenceValue, stepName)`
+- **`identifier`** for `SingleTermDesignResponse` is a plain string (`'STRAIN_ENERGY'`, `'VOLUME'`), not a symbolic constant

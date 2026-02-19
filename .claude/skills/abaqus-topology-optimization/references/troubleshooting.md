@@ -10,6 +10,33 @@
 | "Not converging" | Too strict constraint | Relax volume fraction |
 | "Thin features" | No min member constraint | Add GeometricRestriction |
 | "Takes forever" | Mesh too fine | Coarsen mesh, reduce iterations |
+| "Cannot find parameter file" | CLI `task=` expects `.par` file | Use `OptimizationProcess.submit()` from CAE instead |
+| "ObjectiveFunction expected 5 got 4" | Abaqus 2025 5-tuple format | Use `(OFF, 'response_name', weight, refValue, '')` |
+
+### Cannot Find Parameter File
+
+The `abaqus optimization task=TopoTask` CLI command expects a Tosca `.par` parameter file, **not** a CAE task name. If you set up your optimization in CAE (via `model.TopologyTask`), the `.par` file is never generated.
+
+**Solution:** Create an `OptimizationProcess` in your CAE script and call `submit()`:
+```python
+mdb.Job(name='MyModel', model='MyModel', numCpus=4, numDomains=4)
+opt = mdb.OptimizationProcess(
+    name='MyOpt', model='MyModel', task='TopoTask',
+    prototypeJob='MyModel', maxDesignCycle=50)
+opt.submit(validate=False)
+opt.waitForCompletion()
+```
+
+### ObjectiveFunction Tuple Error (Abaqus 2025)
+
+In Abaqus 2025, `ObjectiveFunction.objectives` requires a **5-element tuple**: `(suppress, designResponseName, weight, referenceValue, stepName)`. Older 4-element tuples will fail.
+
+**Solution:**
+```python
+task.ObjectiveFunction(name='Obj',
+    objectives=((OFF, 'strain_energy', 1.0, 0.0, ''),),
+    target=MINIMIZE)
+```
 
 ## Learning Edition Limitation
 
