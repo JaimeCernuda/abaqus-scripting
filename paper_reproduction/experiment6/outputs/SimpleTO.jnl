@@ -1,0 +1,88 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(name='SimpleTO')
+del mdb.models['Model-1']
+mdb.models['SimpleTO'].Part(dimensionality=THREE_D, name='Block', type=
+    DEFORMABLE_BODY)
+mdb.models['SimpleTO'].ConstrainedSketch(name='BlockSketch', sheetSize=200.0)
+mdb.models['SimpleTO'].sketches['BlockSketch'].rectangle(point1=(0.0, 0.0), 
+    point2=(100.0, 40.0))
+mdb.models['SimpleTO'].parts['Block'].BaseSolidExtrude(depth=20.0, sketch=
+    mdb.models['SimpleTO'].sketches['BlockSketch'])
+mdb.models['SimpleTO'].Material(name='Steel')
+mdb.models['SimpleTO'].materials['Steel'].Elastic(table=((210000.0, 0.3), ))
+mdb.models['SimpleTO'].materials['Steel'].Density(table=((7.85e-09, ), ))
+mdb.models['SimpleTO'].HomogeneousSolidSection(material='Steel', name='Section'
+    , thickness=None)
+mdb.models['SimpleTO'].parts['Block'].Set(cells=
+    mdb.models['SimpleTO'].parts['Block'].cells, name='AllCells')
+mdb.models['SimpleTO'].parts['Block'].SectionAssignment(region=
+    mdb.models['SimpleTO'].parts['Block'].sets['AllCells'], sectionName=
+    'Section')
+mdb.models['SimpleTO'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['SimpleTO'].rootAssembly.Instance(dependent=ON, name='Block-1', 
+    part=mdb.models['SimpleTO'].parts['Block'])
+mdb.models['SimpleTO'].StaticStep(initialInc=1.0, maxInc=1.0, minInc=1e-06, 
+    name='LoadStep', previous='Initial')
+mdb.models['SimpleTO'].FieldOutputRequest(createStepName='LoadStep', name=
+    'F-Output-1', variables=('S', 'U', 'RF', 'ENER'))
+mdb.models['SimpleTO'].rootAssembly.Set(faces=
+    mdb.models['SimpleTO'].rootAssembly.instances['Block-1'].faces.getSequenceFromMask(
+    mask=('[#1 ]', ), ), name='FixedFace')
+mdb.models['SimpleTO'].rootAssembly.Surface(name='LoadSurface', side1Faces=
+    mdb.models['SimpleTO'].rootAssembly.instances['Block-1'].faces.getSequenceFromMask(
+    mask=('[#4 ]', ), ))
+mdb.models['SimpleTO'].EncastreBC(createStepName='Initial', name='Fixed', 
+    region=mdb.models['SimpleTO'].rootAssembly.sets['FixedFace'])
+mdb.models['SimpleTO'].Pressure(createStepName='LoadStep', magnitude=1.0, name=
+    'Load', region=mdb.models['SimpleTO'].rootAssembly.surfaces['LoadSurface'])
+mdb.models['SimpleTO'].parts['Block'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=5.0)
+mdb.models['SimpleTO'].parts['Block'].setElementType(elemTypes=(ElemType(
+    elemCode=C3D8R, elemLibrary=STANDARD), ElemType(elemCode=C3D6, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D4, elemLibrary=STANDARD)), 
+    regions=(mdb.models['SimpleTO'].parts['Block'].cells, ))
+mdb.models['SimpleTO'].parts['Block'].generateMesh()
+# Save by u6074059 on 2026_02_19-12.17.28; build 2025 2024_09_20-07.00.46 RELr427 198590
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['SimpleTO'].TopologyTask(materialInterpolationPenalty=3.0, 
+    materialInterpolationTechnique=SIMP, name='TopoTask', 
+    objectiveFunctionDeltaStopCriteria=0.001, region=MODEL)
+mdb.models['SimpleTO'].optimizationTasks['TopoTask'].SingleTermDesignResponse(
+    identifier='STRAIN_ENERGY', name='strain_energy', region=MODEL)
+mdb.models['SimpleTO'].optimizationTasks['TopoTask'].SingleTermDesignResponse(
+    identifier='VOLUME', name='volume', region=MODEL)
+mdb.models['SimpleTO'].optimizationTasks['TopoTask'].ObjectiveFunction(name=
+    'MinSE', objectives=((OFF, 'strain_energy', 1.0, 0.0, ''), ), target=
+    MINIMIZE)
+mdb.models['SimpleTO'].optimizationTasks['TopoTask'].OptimizationConstraint(
+    designResponse='volume', name='VolConstraint', restrictionMethod=
+    RELATIVE_LESS_THAN_EQUAL, restrictionValue=0.5)
+mdb.Job(model='SimpleTO', name='SimpleTO_FEA', numCpus=1, numDomains=1)
+mdb.OptimizationProcess(maxDesignCycle=3, model='SimpleTO', name='SimpleTO_Opt'
+    , prototypeJob='SimpleTO_FEA', task='TopoTask')
+# Save by u6074059 on 2026_02_19-12.17.28; build 2025 2024_09_20-07.00.46 RELr427 198590
