@@ -1,0 +1,23 @@
+============================================
+Experiment 6: Simple TO on Notchpeak
+Started: Sun Feb 15 19:47:49 MST 2026
+Node: notch309
+CPUs: 1, Max cycles: 3
+============================================
+
+Running: abaqus cae noGUI=scripts/run_topology_optimization.py
+/uufs/notchpeak.peaks/sys/var/slurm/slurmd.spool/notch309//job11006048/slurm_script: line 43: abaqus: command not found
+
+Exit code: 127
+
+Files created:
+total 1
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 15 19:47 .
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 15 18:51 ..
+-rw-r--r-- 1 u6074059 hochhalter   61 Feb 15 19:47 abaqus_v6.env
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 15 19:01 chpc
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 15 18:52 scripts
+
+============================================
+Complete: Sun Feb 15 19:47:49 MST 2026
+============================================

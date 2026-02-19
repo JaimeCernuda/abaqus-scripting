@@ -1,0 +1,71 @@
+============================================
+Experiment 6: Simple TO on Notchpeak
+Started: Sun Feb 15 19:50:56 MST 2026
+Node: notch309
+CPUs: 1, Max cycles: 3
+============================================
+
+Running: abaqus cae noGUI=scripts/run_topology_optimization.py
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<10 out of 11 licenses remain available>.
+
+*** ABAQUS/ABQcaeK rank 0 terminated by signal 11
+
+*** ERROR CATEGORY:  CAE
+
+Abaqus Error: cae exited with an error code -11 (-0XB).
+
+Exit code: 1
+
+Files created:
+total 86
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 15 19:51 .
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 15 18:51 ..
+-rw-r--r-- 1 u6074059 hochhalter       0 Feb 15 19:51 abaqus_acis.log
+-rw-r--r-- 1 u6074059 hochhalter    1447 Feb 15 19:51 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter      61 Feb 15 19:50 abaqus_v6.env
+-rw-r--r-- 1 u6074059 hochhalter    3054 Feb 15 19:51 ABQcaeK.00.2111378.exception
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 15 19:50 chpc
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 15 18:52 scripts
+-rw-r--r-- 1 u6074059 hochhalter 1048576 Feb 15 19:51 SimpleTO.cae
+-rw-r--r-- 1 u6074059 hochhalter    4005 Feb 15 19:51 SimpleTO.jnl
+-rw-r--r-- 1 u6074059 hochhalter     384 Feb 15 19:51 SimpleTO.rec
+ABQcaeK.00.2111378.exception
+
+Exception files:
+--- ABQcaeK.00.2111378.exception ---
+<Description>
+      ABAQUS/ABQcaeK rank 0 encountered a SEGMENTATION VIOLATION referencing location (nil)
+
+</Description>
+
+
+<Context>
+   CAE
+</Context>
+
+
+<Memory>
+   <Current>            0 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>         377 GB </Physical>
+   <Limit>              0 GB </Limit>
+   <Accessible>       377 GB </Accessible>
+   <Free>             321 GB </Free>
+   <Allocator>            DL </Allocator>
+   <HugePages>         never </HugePages>
+</Memory>
+
+<Swap>
+       <Size>          95 GB </Size>
+       <Used>           0 GB </Used>
+       <Free>          95 GB </Free>
+</Swap>
+
+<Directories>
+  <current> /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment6 </current> <free>   8191 GB </free>   <used>  66314 GB </used> 
+
+============================================
+Complete: Sun Feb 15 19:51:02 MST 2026
+============================================
