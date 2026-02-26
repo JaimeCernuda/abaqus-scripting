@@ -1,0 +1,123 @@
+============================================
+Experiment 7c: Import + TO Setup + writePar
+Started: Thu Feb 19 15:22:08 MST 2026
+Node: notch081
+============================================
+CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7c
+Files: airbeam_vol.inp
+
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<8 out of 11 licenses remain available>.
+
+*** ABAQUS/ABQcaeK rank 0 terminated by signal 11
+
+*** ERROR CATEGORY:  CAE
+
+Abaqus Error: cae exited with an error code -11 (-0XB).
+
+============================================
+Exit code: 1
+Finished: Thu Feb 19 15:22:11 MST 2026
+============================================
+
+Files in run_7c/:
+total 716
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 19 15:22 .
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 19 15:22 ..
+-rw-r--r-- 1 u6074059 hochhalter       0 Feb 19 15:22 abaqus_acis.log
+-rw-r--r-- 1 u6074059 hochhalter    4262 Feb 19 15:22 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter    3349 Feb 19 15:22 ABQcaeK.00.1746358.exception
+-rw-r--r-- 1 u6074059 hochhalter 1048576 Feb 19 15:22 airbeam_7c.cae
+-rw-r--r-- 1 u6074059 hochhalter    1696 Feb 19 15:22 airbeam_7c.jnl
+-rw-r--r-- 1 u6074059 hochhalter     410 Feb 19 15:22 airbeam_7c.rec
+-rw-r--r-- 1 u6074059 hochhalter  286847 Feb 19 15:22 airbeam_FEA.inp
+-rwxr-xr-x 1 u6074059 hochhalter  336480 Feb 19 15:22 airbeam_vol.inp
+
+=== abaqus.rpy (script output) ===
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-07.00.46 RELr427 198590
+# Run by u6074059 on Thu Feb 19 15:22:09 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.36719, 1.36719), width=201.25, 
+    height=135.625)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    '/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/scripts/run_7c.py', 
+    __main__.__dict__)
+#: ======================================================================
+#:   Phase 1: Import airbeam_vol.inp into CAE
+#: ======================================================================
+#: The model "airbeam" has been created.
+#: The part "PART-1" has been imported from the input file.
+#: The model "airbeam" has been imported from an input file. 
+#: Please scroll up to check for error and warning messages.
+#:   [OK] ModelFromInputFile
+#: ======================================================================
+#:   Phase 2: Discovery
+#: ======================================================================
+#:   Parts: ['PART-1']
+#:   Instance: 'PART-1-1'
+#:   Assembly sets: ['FORCE1', 'FROZEN_ELEMENTS', 'SPC11', 'SPC13']
+#:   Steps: ['Initial', 'Step-1']
+#:   frozen_elements: 'FROZEN_ELEMENTS' (252 elements)
+#: ======================================================================
+#:   Phase 3: Create TopologyTask
+#: ======================================================================
+#:   [OK] TopologyTask
+#: ======================================================================
+#:   Phase 4: Design Responses
+#: ======================================================================
+#:   [OK] DRESP strain_energy
+#:   [OK] DRESP volume
+#:   Design responses: ['strain_energy', 'volume']
+#: ======================================================================
+#:   Phase 5: Objective Function (minimize strain energy)
+#: ======================================================================
+#:   [OK] ObjectiveFunction
+#: ======================================================================
+#:   Phase 6: Volume Constraint (<= 50%)
+#: ======================================================================
+#:   [OK] OptimizationConstraint vol_limit
+#: ======================================================================
+#:   Phase 7: Frozen Area
+#: ======================================================================
+#:   [OK] FrozenArea (set 'FROZEN_ELEMENTS')
+#: ======================================================================
+#:   Phase 8: Prototype Job + OptimizationProcess
+#: ======================================================================
+#:   [OK] Prototype Job
+#:   mdb.jobs: ['airbeam_FEA']
+#:   [OK] Job.writeInput()
+#:   airbeam_FEA.inp generated (286847 bytes)
+#: The optimization process "airbeam_Opt" has been created.
+#:   [OK] OptimizationProcess
+#:   mdb.optimizationProcesses: ['airbeam_Opt']
+#: ======================================================================
+#:   Phase 9: Save CAE
+#: ======================================================================
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7c/airbeam_7c.cae".
+#:   [OK] saveAs
+#: ======================================================================
+#:   Phase 10: writeParAndInputFiles()
+#: ======================================================================
+#:   [FAIL] writeParAndInputFiles(): KeyError - 'airbeam_FEA'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/scripts/run_7c.py", line 28, in safe_run
+#:     result = func()
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/scripts/run_7c.py", line 222, in <lambda>
+#:     lambda: opt.writeParAndInputFiles())
+#: KeyError: 'airbeam_FEA'
+#: 
+#:   writeParAndInputFiles failed.
+#:   Trying submit() directly (bypassing writeParAndInputFiles)...

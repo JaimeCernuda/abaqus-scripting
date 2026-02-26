@@ -1,0 +1,204 @@
+============================================
+Experiment 7e: Own Geometry + TO + submit()
+Started: Thu Feb 19 15:51:46 MST 2026
+Node: notch309
+============================================
+CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e
+
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<5 out of 11 licenses remain available>.
+
+============================================
+Exit code: 0
+Finished: Thu Feb 19 15:52:11 MST 2026
+============================================
+
+Files in run_7e/:
+total 98
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 15:52 .
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 15:51 ..
+-rw-r--r-- 1 u6074059 hochhalter  9861 Feb 19 15:52 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter  4194 Feb 19 15:52 authorization.log
+-rw-r--r-- 1 u6074059 hochhalter 53248 Feb 19 15:52 Block_7e.cae
+-rw-r--r-- 1 u6074059 hochhalter  3283 Feb 19 15:51 Block_7e.jnl
+-rw-r--r-- 1 u6074059 hochhalter  1843 Feb 19 15:51 Block_7e.par
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 15:52 block_7e_tosca
+-rw-r--r-- 1 u6074059 hochhalter 13006 Feb 19 15:51 Block_FEA_flat.inp
+-rw-r--r-- 1 u6074059 hochhalter 13205 Feb 19 15:51 Block_FEA.inp
+
+=== abaqus.rpy (script output) ===
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-07.00.46 RELr427 198590
+# Run by u6074059 on Thu Feb 19 15:51:48 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.36719, 1.36719), width=201.25, 
+    height=135.625)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    '/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/scripts/run_7e.py', 
+    __main__.__dict__)
+#: ======================================================================
+#:   EXPERIMENT 7e: Custom Geometry + TO (Hybrid)
+#:   CPUs: 1, Max cycles: 20, Mesh size: 10.0
+#: ======================================================================
+#: ======================================================================
+#:   [1/8] Create model and part (100x40x20 block)
+#: ======================================================================
+#: The model "Block_TO" has been created.
+#:   Part 'Block' created: 100 x 40 x 20 mm
+#: ======================================================================
+#:   [2/8] Material and section
+#: ======================================================================
+#:   Steel: E=210000 MPa, nu=0.3, rho=7.85e-9 tonne/mm^3
+#: ======================================================================
+#:   [3/8] Assembly, BCs, loads
+#: ======================================================================
+#:   Encastre BC on x=0 face, 1 MPa pressure on x=100 face
+#: ======================================================================
+#:   [4/8] Mesh
+#: ======================================================================
+#:   Nodes: 165, Elements: 80
+#: ======================================================================
+#:   [5/8] Create frozen elements set
+#: ======================================================================
+#:   FrozenElements: 8 elements near x=0 face
+#: ======================================================================
+#:   [6/8] Create prototype job + writeInput()
+#: ======================================================================
+#:   [OK] Prototype Job
+#:   [OK] Job.writeInput()
+#:   Generated: Block_FEA.inp (13205 bytes)
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/Block_7e.cae".
+#:   [OK] saveAs
+#: ======================================================================
+#:   [7/8] Flatten .inp + generate .par + run tosca optimize
+#: ======================================================================
+#:   Flattening Block_FEA.inp for Tosca compatibility...
+#:   Flattened: Block_FEA_flat.inp (327 lines -> 321 lines, 13006 bytes)
+#:   Generated: Block_7e.par (1843 bytes)
+#:   Filter radius: 20.0 mm
+#:   Max cycles: 20
+#: 
+#:   Running: tosca optimize -j block_7e_tosca -p Block_7e.par -s abaqus -scpus 1
+#:   tosca exit code: 0
+#:   Tosca                           : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64
+#:   Tosca Structure Server          : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATocToscaServerMain
+#:   Environment file                : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/command/tosca_env.sh
+#:   Python interpreter              : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/bin/python
+#:   Tosca Structure Python launcher : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/python3.10/lib/SMATsoPyControlMain.pyc
+#:   PATH                            : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands:/uufs/chpc.utah.edu/common/home/u6074059/.local/bin:/uufs/chpc.utah.edu/sys/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/uufs/notchpeak.peaks/sys/installdir/slurm/std/bin
+#:   CATInstallPath                  : 
+#:   LD_LIBRARY_PATH                 : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal//mesa/full:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/CAEresources:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/SMA:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal/Interop:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal/Elysium:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib/python3.10/lib-dynload:/uufs/notchpeak.peaks/sys/installdir/slurm/std/lib:/uufs/notchpeak.peaks/sys/installdir/slurm/std/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal
+#:   (NOTICE  ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+#:   (NOTICE  ) [15:51:49|tosca_driver] |                                                                          |
+#:   (NOTICE  ) [15:51:49|tosca_driver] |                             Tosca Structure                              |
+#:   (NOTICE  ) [15:51:49|tosca_driver] |                           3DEXPERIENCE R2025x                            |
+#:   (NOTICE  ) [15:51:49|tosca_driver] |                                                                          |
+#:   (NOTICE  ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+#:   (NOTICE  ) [15:51:49|tosca_driver] 
+#:   (NOTICE  ) [15:51:49|tosca_driver] Tosca started at Thu, 19 Feb 2026 15:51:49
+#:   (NOTICE  ) [15:51:49|tosca_driver] 
+#:   (NOTICE  ) [15:51:49|tosca_driver] Starting job block_7e_tosca
+#:   (NOTICE  ) [15:51:50|tosca_driver] Starting Tosca Structure Preprocessor
+#:   (NOTICE  ) [15:51:51|tosca_driver] Design cycle 0 started on 2026-02-19
+#:   (NOTICE  ) [15:51:51|tosca_driver] Starting Abaqus analysis - design cycle 0
+#:   (NOTICE  ) [15:51:55|tosca_driver] Starting Tosca Structure optimization module - design cycle 0
+#:   (NOTICE  ) [15:51:56|tosca_driver] Design cycle 1 started on 2026-02-19
+#:   (NOTICE  ) [15:51:56|tosca_driver] Starting Abaqus analysis - design cycle 1
+#:   (NOTICE  ) [15:51:56|tosca_driver] Starting Tosca Structure optimization module - design cycle 1
+#:   (NOTICE  ) [15:51:58|tosca_driver] Design cycle 2 started on 2026-02-19
+#:   (NOTICE  ) [15:51:58|tosca_driver] Starting Abaqus analysis - design cycle 2
+#:   (NOTICE  ) [15:51:58|tosca_driver] Starting Tosca Structure optimization module - design cycle 2
+#:   (NOTICE  ) [15:52:00|tosca_driver] Design cycle 3 started on 2026-02-19
+#:   (NOTICE  ) [15:52:00|tosca_driver] Starting Abaqus analysis - design cycle 3
+#:   (NOTICE  ) [15:52:00|tosca_driver] Starting Tosca Structure optimization module - design cycle 3
+#:   (NOTICE  ) [15:52:02|tosca_driver] Design cycle 4 started on 2026-02-19
+#:   (NOTICE  ) [15:52:02|tosca_driver] Starting Abaqus analysis - design cycle 4
+#:   (NOTICE  ) [15:52:03|tosca_driver] Starting Tosca Structure optimization module - design cycle 4
+#:   (NOTICE  ) [15:52:04|tosca_driver] Design cycle 5 started on 2026-02-19
+#:   (NOTICE  ) [15:52:04|tosca_driver] Starting Abaqus analysis - design cycle 5
+#:   (NOTICE  ) [15:52:05|tosca_driver] Starting Tosca Structure optimization module - design cycle 5
+#:   (NOTICE  ) [15:52:06|tosca_driver] Design cycle 6 started on 2026-02-19
+#:   (NOTICE  ) [15:52:06|tosca_driver] Starting Abaqus analysis - design cycle 6
+#:   (NOTICE  ) [15:52:07|tosca_driver] Starting Tosca Structure optimization module - design cycle 6
+#:   (NOTICE  ) [15:52:08|tosca_driver] Last design cycle completed
+#:   (NOTICE  ) [15:52:08|tosca_driver] Stopping solver process
+#:   (NOTICE  ) [15:52:09|tosca_driver] Starting Tosca Structure report module
+#:   (NOTICE  ) [15:52:09|tosca_driver] Starting Tosca Structure smooth module
+#:   (NOTICE  ) [15:52:10|tosca_driver] Application finished successfully
+#:   
+#: ======================================================================
+#:   [8/8] Summary
+#: ======================================================================
+#:   Model creation:  OK
+#:   Mesh:            165 nodes, 80 elements
+#:   Frozen elements: 8
+#:   writeInput():    OK
+#:   tosca optimize:  OK (exit 0)
+#: 
+#:   Files in CWD:
+#:     Block_7e.cae (1048576 bytes)
+#:     Block_7e.jnl (3283 bytes)
+#:     Block_7e.par (1843 bytes)
+#:     Block_FEA.inp (13205 bytes)
+#:     Block_FEA_flat.inp (13006 bytes)
+#:     abaqus.rpy (9229 bytes)
+#:     abaqus_acis.log (0 bytes)
+#:     authorization.log (4194 bytes)
+#:     block_7e_tosca/ (dir)
+#: 
+#:   Contents of block_7e_tosca/
+#:     Block_7e.par
+#:     Block_FEA_flat.inp
+#:     SAVE.dat
+#:     SAVE.inp
+#:     SAVE.msg
+#:     SAVE.onf
+#:     SAVE.sta
+#:     TOSCA.OUT
+#:     TOSCA_POST
+#:     fe_mtx_database.idx
+#:     fe_mtx_database.vtm
+#:     opt_res_database.idx
+#:     opt_res_database.vtm
+#:     optimization_report.csv
+#:     optimization_status_all.csv
+#:     resume_database.idx
+#:     resume_database.vtm
+#: 
+#: Experiment 7e finished.
+print('RT script done')
+#: RT script done
+
+=== Contents of ./block_7e_tosca/ ===
+total 22837
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 .
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 ..
+-rw-r--r-- 1 u6074059 hochhalter     1843 Feb 19 15:51 Block_7e.par
+-rw-r--r-- 1 u6074059 hochhalter    13006 Feb 19 15:51 Block_FEA_flat.inp
+-rw-r--r-- 1 u6074059 hochhalter    13256 Feb 19 15:52 fe_mtx_database.idx
+-rw-r--r-- 1 u6074059 hochhalter  2293760 Feb 19 15:52 fe_mtx_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter      524 Feb 19 15:52 optimization_report.csv
+-rw-r--r-- 1 u6074059 hochhalter     1331 Feb 19 15:52 optimization_status_all.csv
+-rw-r--r-- 1 u6074059 hochhalter    28136 Feb 19 15:52 opt_res_database.idx
+-rw-r--r-- 1 u6074059 hochhalter  7340032 Feb 19 15:52 opt_res_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter    29648 Feb 19 15:52 resume_database.idx
+-rw-r--r-- 1 u6074059 hochhalter 13565952 Feb 19 15:52 resume_database.vtm
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 SAVE.dat
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 SAVE.inp
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 SAVE.msg
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 SAVE.onf
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 SAVE.sta
+-rw-r--r-- 1 u6074059 hochhalter    95650 Feb 19 15:52 TOSCA.OUT
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 15:52 TOSCA_POST

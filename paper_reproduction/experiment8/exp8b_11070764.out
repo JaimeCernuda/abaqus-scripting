@@ -1,0 +1,106 @@
+============================================
+Experiment 8b: Optimization Setup Validation
+Started: Thu Feb 19 17:10:17 MST 2026
+Node: notch309
+============================================
+CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8b
+
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<4 out of 11 licenses remain available>.
+
+============================================
+Exit code: 0
+Finished: Thu Feb 19 17:10:20 MST 2026
+============================================
+
+Files in run_8b/:
+total 72
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:10 .
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:10 ..
+-rw-r--r-- 1 u6074059 hochhalter  4036 Feb 19 17:10 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter 65536 Feb 19 17:10 exp8b.cae
+-rw-r--r-- 1 u6074059 hochhalter  3835 Feb 19 17:10 exp8b.jnl
+
+=== abaqus.rpy (script output) ===
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-07.00.46 RELr427 198590
+# Run by u6074059 on Thu Feb 19 17:10:19 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.36719, 1.36719), width=201.25, 
+    height=135.625)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    '/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8b_optimization_setup.py', 
+    __main__.__dict__)
+#: ======================================================================
+#:   EXPERIMENT 8b: Optimization Setup Validation
+#:   Mesh size: 5.0
+#: ======================================================================
+#: ======================================================================
+#:   [1/9] Create model and part
+#: ======================================================================
+#:   Part 'Block' created: 100x40x20 mm
+#: ======================================================================
+#:   [2/9] Create sets and surfaces
+#: ======================================================================
+#:   Sets: AllCells, FixedFace
+#:   Surfaces: LoadSurface
+#: ======================================================================
+#:   [3/9] Material and section
+#: ======================================================================
+#:   Material 'Steel' and section assigned
+#: ======================================================================
+#:   [4/9] Assembly
+#: ======================================================================
+#:   Instance 'Block-1' created (dependent=ON)
+#: ======================================================================
+#:   [5/9] Step, output, BC, load
+#: ======================================================================
+#:   Step, output, BC, load configured
+#: ======================================================================
+#:   [6/9] Mesh
+#: ======================================================================
+#:   Mesh: 945 nodes, 640 elements
+#: ======================================================================
+#:   [7/9] Frozen elements set
+#: ======================================================================
+#:   Found 32 frozen element labels (touching x=0 face)
+#:   WARNING: No frozen elements found!
+#: ======================================================================
+#:   [8/9] Topology optimization setup
+#: ======================================================================
+#:   [OK] TopologyTask 'TopOpt' created
+#:   [OK] DR_StrainEnergy created
+#:   [OK] DR_Volume created
+#:   [OK] ObjectiveFunction 'MinStrainEnergy' created
+#:   [OK] OptimizationConstraint 'VolumeConstraint' created
+#:   [FAIL] FrozenArea: KeyError - 'Unknown key FrozenElements'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8b_optimization_setup.py", line 213, in <module>
+#:     region=model.rootAssembly.sets['FrozenElements'],
+#: KeyError: 'Unknown key FrozenElements'
+#: ======================================================================
+#:   [9/9] Verification and save
+#: ======================================================================
+#:   Design responses: ['DR_StrainEnergy', 'DR_Volume']
+#:   Objective functions: ['MinStrainEnergy']
+#:   Constraints: ['VolumeConstraint']
+#:   Geometric restrictions: []
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8b/exp8b.cae".
+#:   Saved exp8b.cae
+#: ======================================================================
+#:   Experiment 8b COMPLETE
+#: ======================================================================
+print('RT script done')
+#: RT script done

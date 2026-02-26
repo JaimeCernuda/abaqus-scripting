@@ -1,0 +1,67 @@
+<Description>
+      ABAQUS/ABQcaeK rank 0 encountered a SEGMENTATION VIOLATION referencing location (nil)
+
+</Description>
+
+
+<Context>
+   CAE
+</Context>
+
+
+<Memory>
+   <Current>            0 GB </Current>
+   <Resident>           0 GB </Resident>
+   <Physical>         377 GB </Physical>
+   <Limit>              0 GB </Limit>
+   <Accessible>       377 GB </Accessible>
+   <Free>             348 GB </Free>
+   <Allocator>            DL </Allocator>
+   <HugePages>         never </HugePages>
+</Memory>
+
+<Swap>
+       <Size>          95 GB </Size>
+       <Used>           0 GB </Used>
+       <Free>          95 GB </Free>
+</Swap>
+
+<Directories>
+  <current> /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8d </current> <free>   8048 GB </free>   <used>  66457 GB </used> 
+</Directories>
+
+<Installation>
+     <Version> 2025 2025 </Version>
+       <Build> 2024_09_20-07.00.46 RELr427 198590 </Build>
+</Installation>
+
+<Callstack>
+   1) libABQSMACcoAttributesGuiCommon.so 0x000ba490 ! cow_Virtual<ajbC_Job>::Copy ??:?
+   2) libABQSMACcoAttributesGuiCommon.so 0x000bb72b ! cow_COW<ajbC_Job, cow_Virtual<ajbC_Job> >::Get ??:?
+   3) libABQSMACcoAttributesGuiCommon.so 0x000c5906 ! mdl_MapOfCowsRepository<cow_String, ajbC_Job>::Get ??:?
+   4) libABQSMACkeCaeKerProcedures.so 0x003fad0f ! ajbK_OptimizationIntObj::Submit ??:?
+   5) libABQSMAPybPyoModule.so   0x0005479d ! pyo_Method::Makecall ??:?
+   6) libpython3.10.so           0x00152c71 ! _PyObject_MakeTpCall ??:?
+   7) libpython3.10.so           0x00095b79 ! _PyEval_EvalFrameDefault ??:?
+   8) libpython3.10.so           0x00157f18 ! _PyEval_Vector   ??:?
+   9) libpython3.10.so           0x00158131 ! PyEval_EvalCode  ??:?
+  10) libpython3.10.so           0x001325f9 ! PyBlake2_blake2s ??:?
+  11) libpython3.10.so           0x001ed2b8 ! PyBuffer_ToContiguous ??:?
+  12) libpython3.10.so           0x0009310b ! _PyEval_EvalFrameDefault ??:?
+  13) libpython3.10.so           0x00157f18 ! _PyEval_Vector   ??:?
+  14) libpython3.10.so           0x0009310b ! _PyEval_EvalFrameDefault ??:?
+  15) libpython3.10.so           0x00157f18 ! _PyEval_Vector   ??:?
+  16) libpython3.10.so           0x00158131 ! PyEval_EvalCode  ??:?
+  17) libpython3.10.so           0x002481f4 ! PyOS_double_to_string ??:?
+  18) libpython3.10.so           0x002483fc ! PyOS_double_to_string ??:?
+  19) libpython3.10.so           0x0024ab68 ! PyRun_StringFlags ??:?
+  20) libABQSMAPybPyoModule.so   0x00058080 ! pyo_NameSpace::ExecExpression ??:?
+  21) libABQSMAInbVwrPyUtils.so  0x0000cea7 ! pyt_InterpreterRole::RunCommand ??:?
+  22) libABQSMAInkVwrKer.so      0x0016f598 ! cmdK_CommandDeliveryPrv::ProcessCommand ??:?
+  23) libABQSMAInkVwrKer.so      0x00175039 ! cmdK_CommandDeliveryRole::ProcessCommandInternal ??:?
+  24) libABQSMAInkVwrKer.so      0x00218dcf ! ker_KernelActor::Main ??:?
+  25) libABQSMAInkVwrKer.so      0x0022b7bf ! ker_main         ??:?
+  26) ABQcaeK                    0x0042ff12 ! ABQmain          ??:?
+  27) ABQcaeK                    0x0042f4a7 ! main             ??:?
+</Callstack>
+

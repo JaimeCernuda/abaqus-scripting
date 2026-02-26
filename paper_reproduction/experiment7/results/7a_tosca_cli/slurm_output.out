@@ -1,0 +1,472 @@
+============================================
+Experiment 7: Built-in Tosca Example
+Started: Thu Feb 19 13:44:09 MST 2026
+Node: notch309
+which tosca: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands/tosca
+which abaqus: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands/abaqus
+============================================
+
+============================================
+[7a] tosca optimize
+============================================
+  CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7a
+  Files: airbeam_vol.inp
+airbeam_vol.par
+
+Tosca                           : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64
+Tosca Structure Server          : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATocToscaServerMain
+Environment file                : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/command/tosca_env.sh
+Python interpreter              : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/bin/python
+Tosca Structure Python launcher : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/python3.10/lib/SMATsoPyControlMain.pyc
+PATH                            : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands:/uufs/chpc.utah.edu/common/home/u6074059/.local/bin:/uufs/chpc.utah.edu/sys/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/uufs/chpc.utah.edu/common/home/u6074059/.dotnet/tools:/uufs/notchpeak.peaks/sys/installdir/slurm/std/bin:/uufs/chpc.utah.edu/common/home/u6074059/bin
+CATInstallPath                  : 
+LD_LIBRARY_PATH                 : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/notchpeak.peaks/sys/installdir/slurm/std/lib:/uufs/notchpeak.peaks/sys/installdir/slurm/std/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal
+(NOTICE  ) [13:44:11|tosca_driver]  -------------------------------------------------------------------------- 
+(NOTICE  ) [13:44:11|tosca_driver] |                                                                          |
+(NOTICE  ) [13:44:11|tosca_driver] |                             Tosca Structure                              |
+(NOTICE  ) [13:44:11|tosca_driver] |                           3DEXPERIENCE R2025x                            |
+(NOTICE  ) [13:44:11|tosca_driver] |                                                                          |
+(NOTICE  ) [13:44:11|tosca_driver]  -------------------------------------------------------------------------- 
+(NOTICE  ) [13:44:11|tosca_driver] 
+(NOTICE  ) [13:44:11|tosca_driver] Tosca started at Thu, 19 Feb 2026 13:44:11
+(NOTICE  ) [13:44:11|tosca_driver] 
+(NOTICE  ) [13:44:11|tosca_driver] Starting job airbeam_tosca
+(NOTICE  ) [13:44:11|tosca_driver] Starting Tosca Structure Preprocessor
+(NOTICE  ) [13:44:13|tosca_driver] Design cycle 0 started on 2026-02-19
+(NOTICE  ) [13:44:13|tosca_driver] Starting Abaqus analysis - design cycle 0
+(NOTICE  ) [13:44:24|tosca_driver] Starting Tosca Structure optimization module - design cycle 0
+(NOTICE  ) [13:44:25|tosca_driver] Design cycle 1 started on 2026-02-19
+(NOTICE  ) [13:44:25|tosca_driver] Starting Abaqus analysis - design cycle 1
+(NOTICE  ) [13:44:27|tosca_driver] Starting Tosca Structure optimization module - design cycle 1
+(NOTICE  ) [13:44:28|tosca_driver] Design cycle 2 started on 2026-02-19
+(NOTICE  ) [13:44:28|tosca_driver] Starting Abaqus analysis - design cycle 2
+(NOTICE  ) [13:44:30|tosca_driver] Starting Tosca Structure optimization module - design cycle 2
+(NOTICE  ) [13:44:31|tosca_driver] Design cycle 3 started on 2026-02-19
+(NOTICE  ) [13:44:31|tosca_driver] Starting Abaqus analysis - design cycle 3
+(NOTICE  ) [13:44:32|tosca_driver] Starting Tosca Structure optimization module - design cycle 3
+(NOTICE  ) [13:44:34|tosca_driver] Design cycle 4 started on 2026-02-19
+(NOTICE  ) [13:44:34|tosca_driver] Starting Abaqus analysis - design cycle 4
+(NOTICE  ) [13:44:35|tosca_driver] Starting Tosca Structure optimization module - design cycle 4
+(NOTICE  ) [13:44:37|tosca_driver] Design cycle 5 started on 2026-02-19
+(NOTICE  ) [13:44:37|tosca_driver] Starting Abaqus analysis - design cycle 5
+(NOTICE  ) [13:44:39|tosca_driver] Starting Tosca Structure optimization module - design cycle 5
+(NOTICE  ) [13:44:41|tosca_driver] Design cycle 6 started on 2026-02-19
+(NOTICE  ) [13:44:41|tosca_driver] Starting Abaqus analysis - design cycle 6
+(NOTICE  ) [13:44:43|tosca_driver] Starting Tosca Structure optimization module - design cycle 6
+(NOTICE  ) [13:44:45|tosca_driver] Design cycle 7 started on 2026-02-19
+(NOTICE  ) [13:44:46|tosca_driver] Starting Abaqus analysis - design cycle 7
+(NOTICE  ) [13:44:47|tosca_driver] Starting Tosca Structure optimization module - design cycle 7
+(NOTICE  ) [13:44:49|tosca_driver] Design cycle 8 started on 2026-02-19
+(NOTICE  ) [13:44:49|tosca_driver] Starting Abaqus analysis - design cycle 8
+(NOTICE  ) [13:44:50|tosca_driver] Starting Tosca Structure optimization module - design cycle 8
+(NOTICE  ) [13:44:53|tosca_driver] Design cycle 9 started on 2026-02-19
+(NOTICE  ) [13:44:53|tosca_driver] Starting Abaqus analysis - design cycle 9
+(NOTICE  ) [13:44:54|tosca_driver] Starting Tosca Structure optimization module - design cycle 9
+(NOTICE  ) [13:44:56|tosca_driver] Design cycle 10 started on 2026-02-19
+(NOTICE  ) [13:44:56|tosca_driver] Starting Abaqus analysis - design cycle 10
+(NOTICE  ) [13:44:58|tosca_driver] Starting Tosca Structure optimization module - design cycle 10
+(NOTICE  ) [13:45:00|tosca_driver] Design cycle 11 started on 2026-02-19
+(NOTICE  ) [13:45:00|tosca_driver] Starting Abaqus analysis - design cycle 11
+(NOTICE  ) [13:45:01|tosca_driver] Starting Tosca Structure optimization module - design cycle 11
+(NOTICE  ) [13:45:04|tosca_driver] Design cycle 12 started on 2026-02-19
+(NOTICE  ) [13:45:04|tosca_driver] Starting Abaqus analysis - design cycle 12
+(NOTICE  ) [13:45:05|tosca_driver] Starting Tosca Structure optimization module - design cycle 12
+(NOTICE  ) [13:45:08|tosca_driver] Design cycle 13 started on 2026-02-19
+(NOTICE  ) [13:45:08|tosca_driver] Starting Abaqus analysis - design cycle 13
+(NOTICE  ) [13:45:09|tosca_driver] Starting Tosca Structure optimization module - design cycle 13
+(NOTICE  ) [13:45:12|tosca_driver] Design cycle 14 started on 2026-02-19
+(NOTICE  ) [13:45:12|tosca_driver] Starting Abaqus analysis - design cycle 14
+(NOTICE  ) [13:45:13|tosca_driver] Starting Tosca Structure optimization module - design cycle 14
+(NOTICE  ) [13:45:15|tosca_driver] Design cycle 15 started on 2026-02-19
+(NOTICE  ) [13:45:15|tosca_driver] Starting Abaqus analysis - design cycle 15
+(NOTICE  ) [13:45:17|tosca_driver] Starting Tosca Structure optimization module - design cycle 15
+(NOTICE  ) [13:45:19|tosca_driver] Design cycle 16 started on 2026-02-19
+(NOTICE  ) [13:45:19|tosca_driver] Starting Abaqus analysis - design cycle 16
+(NOTICE  ) [13:45:21|tosca_driver] Starting Tosca Structure optimization module - design cycle 16
+(NOTICE  ) [13:45:24|tosca_driver] Design cycle 17 started on 2026-02-19
+(NOTICE  ) [13:45:24|tosca_driver] Starting Abaqus analysis - design cycle 17
+(NOTICE  ) [13:45:25|tosca_driver] Starting Tosca Structure optimization module - design cycle 17
+(NOTICE  ) [13:45:28|tosca_driver] Design cycle 18 started on 2026-02-19
+(NOTICE  ) [13:45:28|tosca_driver] Starting Abaqus analysis - design cycle 18
+(NOTICE  ) [13:45:29|tosca_driver] Starting Tosca Structure optimization module - design cycle 18
+(NOTICE  ) [13:45:34|tosca_driver] Design cycle 19 started on 2026-02-19
+(NOTICE  ) [13:45:34|tosca_driver] Starting Abaqus analysis - design cycle 19
+(NOTICE  ) [13:45:36|tosca_driver] Starting Tosca Structure optimization module - design cycle 19
+(NOTICE  ) [13:45:39|tosca_driver] Design cycle 20 started on 2026-02-19
+(NOTICE  ) [13:45:39|tosca_driver] Starting Abaqus analysis - design cycle 20
+(NOTICE  ) [13:45:41|tosca_driver] Starting Tosca Structure optimization module - design cycle 20
+(NOTICE  ) [13:45:48|tosca_driver] Design cycle 21 started on 2026-02-19
+(NOTICE  ) [13:45:48|tosca_driver] Starting Abaqus analysis - design cycle 21
+(NOTICE  ) [13:45:49|tosca_driver] Starting Tosca Structure optimization module - design cycle 21
+(NOTICE  ) [13:45:52|tosca_driver] Design cycle 22 started on 2026-02-19
+(NOTICE  ) [13:45:52|tosca_driver] Starting Abaqus analysis - design cycle 22
+(NOTICE  ) [13:45:53|tosca_driver] Starting Tosca Structure optimization module - design cycle 22
+(NOTICE  ) [13:45:57|tosca_driver] Design cycle 23 started on 2026-02-19
+(NOTICE  ) [13:45:57|tosca_driver] Starting Abaqus analysis - design cycle 23
+(NOTICE  ) [13:45:58|tosca_driver] Starting Tosca Structure optimization module - design cycle 23
+(NOTICE  ) [13:46:01|tosca_driver] Design cycle 24 started on 2026-02-19
+(NOTICE  ) [13:46:01|tosca_driver] Starting Abaqus analysis - design cycle 24
+(NOTICE  ) [13:46:02|tosca_driver] Starting Tosca Structure optimization module - design cycle 24
+(NOTICE  ) [13:46:06|tosca_driver] Design cycle 25 started on 2026-02-19
+(NOTICE  ) [13:46:06|tosca_driver] Starting Abaqus analysis - design cycle 25
+(NOTICE  ) [13:46:07|tosca_driver] Starting Tosca Structure optimization module - design cycle 25
+(NOTICE  ) [13:46:11|tosca_driver] Design cycle 26 started on 2026-02-19
+(NOTICE  ) [13:46:11|tosca_driver] Starting Abaqus analysis - design cycle 26
+(NOTICE  ) [13:46:12|tosca_driver] Starting Tosca Structure optimization module - design cycle 26
+(NOTICE  ) [13:46:16|tosca_driver] Design cycle 27 started on 2026-02-19
+(NOTICE  ) [13:46:16|tosca_driver] Starting Abaqus analysis - design cycle 27
+(NOTICE  ) [13:46:17|tosca_driver] Starting Tosca Structure optimization module - design cycle 27
+(NOTICE  ) [13:46:21|tosca_driver] Design cycle 28 started on 2026-02-19
+(NOTICE  ) [13:46:21|tosca_driver] Starting Abaqus analysis - design cycle 28
+(NOTICE  ) [13:46:22|tosca_driver] Starting Tosca Structure optimization module - design cycle 28
+(NOTICE  ) [13:46:26|tosca_driver] Design cycle 29 started on 2026-02-19
+(NOTICE  ) [13:46:26|tosca_driver] Starting Abaqus analysis - design cycle 29
+(NOTICE  ) [13:46:27|tosca_driver] Starting Tosca Structure optimization module - design cycle 29
+(NOTICE  ) [13:46:31|tosca_driver] Design cycle 30 started on 2026-02-19
+(NOTICE  ) [13:46:31|tosca_driver] Starting Abaqus analysis - design cycle 30
+(NOTICE  ) [13:46:33|tosca_driver] Starting Tosca Structure optimization module - design cycle 30
+(NOTICE  ) [13:46:37|tosca_driver] Design cycle 31 started on 2026-02-19
+(NOTICE  ) [13:46:37|tosca_driver] Starting Abaqus analysis - design cycle 31
+(NOTICE  ) [13:46:38|tosca_driver] Starting Tosca Structure optimization module - design cycle 31
+(NOTICE  ) [13:46:42|tosca_driver] Design cycle 32 started on 2026-02-19
+(NOTICE  ) [13:46:42|tosca_driver] Starting Abaqus analysis - design cycle 32
+(NOTICE  ) [13:46:43|tosca_driver] Starting Tosca Structure optimization module - design cycle 32
+(NOTICE  ) [13:46:47|tosca_driver] Design cycle 33 started on 2026-02-19
+(NOTICE  ) [13:46:47|tosca_driver] Starting Abaqus analysis - design cycle 33
+(NOTICE  ) [13:46:48|tosca_driver] Starting Tosca Structure optimization module - design cycle 33
+(NOTICE  ) [13:46:52|tosca_driver] Design cycle 34 started on 2026-02-19
+(NOTICE  ) [13:46:52|tosca_driver] Starting Abaqus analysis - design cycle 34
+(NOTICE  ) [13:46:54|tosca_driver] Starting Tosca Structure optimization module - design cycle 34
+(NOTICE  ) [13:46:58|tosca_driver] Design cycle 35 started on 2026-02-19
+(NOTICE  ) [13:46:58|tosca_driver] Starting Abaqus analysis - design cycle 35
+(NOTICE  ) [13:46:59|tosca_driver] Starting Tosca Structure optimization module - design cycle 35
+(NOTICE  ) [13:47:04|tosca_driver] Design cycle 36 started on 2026-02-19
+(NOTICE  ) [13:47:04|tosca_driver] Starting Abaqus analysis - design cycle 36
+(NOTICE  ) [13:47:06|tosca_driver] Starting Tosca Structure optimization module - design cycle 36
+(NOTICE  ) [13:47:10|tosca_driver] Design cycle 37 started on 2026-02-19
+(NOTICE  ) [13:47:10|tosca_driver] Starting Abaqus analysis - design cycle 37
+(NOTICE  ) [13:47:11|tosca_driver] Starting Tosca Structure optimization module - design cycle 37
+(NOTICE  ) [13:47:16|tosca_driver] Design cycle 38 started on 2026-02-19
+(NOTICE  ) [13:47:16|tosca_driver] Starting Abaqus analysis - design cycle 38
+(NOTICE  ) [13:47:17|tosca_driver] Starting Tosca Structure optimization module - design cycle 38
+(NOTICE  ) [13:47:22|tosca_driver] Design cycle 39 started on 2026-02-19
+(NOTICE  ) [13:47:22|tosca_driver] Starting Abaqus analysis - design cycle 39
+(NOTICE  ) [13:47:23|tosca_driver] Starting Tosca Structure optimization module - design cycle 39
+(NOTICE  ) [13:47:27|tosca_driver] Design cycle 40 started on 2026-02-19
+(NOTICE  ) [13:47:27|tosca_driver] Starting Abaqus analysis - design cycle 40
+(NOTICE  ) [13:47:28|tosca_driver] Starting Tosca Structure optimization module - design cycle 40
+(NOTICE  ) [13:47:32|tosca_driver] Design cycle 41 started on 2026-02-19
+(NOTICE  ) [13:47:32|tosca_driver] Starting Abaqus analysis - design cycle 41
+(NOTICE  ) [13:47:33|tosca_driver] Starting Tosca Structure optimization module - design cycle 41
+(NOTICE  ) [13:47:37|tosca_driver] Design cycle 42 started on 2026-02-19
+(NOTICE  ) [13:47:37|tosca_driver] Starting Abaqus analysis - design cycle 42
+(NOTICE  ) [13:47:38|tosca_driver] Starting Tosca Structure optimization module - design cycle 42
+(NOTICE  ) [13:47:43|tosca_driver] Design cycle 43 started on 2026-02-19
+(NOTICE  ) [13:47:43|tosca_driver] Starting Abaqus analysis - design cycle 43
+(NOTICE  ) [13:47:44|tosca_driver] Starting Tosca Structure optimization module - design cycle 43
+(NOTICE  ) [13:47:49|tosca_driver] Design cycle 44 started on 2026-02-19
+(NOTICE  ) [13:47:49|tosca_driver] Starting Abaqus analysis - design cycle 44
+(NOTICE  ) [13:47:50|tosca_driver] Starting Tosca Structure optimization module - design cycle 44
+(NOTICE  ) [13:47:55|tosca_driver] Design cycle 45 started on 2026-02-19
+(NOTICE  ) [13:47:55|tosca_driver] Starting Abaqus analysis - design cycle 45
+(NOTICE  ) [13:47:57|tosca_driver] Starting Tosca Structure optimization module - design cycle 45
+(NOTICE  ) [13:48:00|tosca_driver] Design cycle 46 started on 2026-02-19
+(NOTICE  ) [13:48:01|tosca_driver] Starting Abaqus analysis - design cycle 46
+(NOTICE  ) [13:48:02|tosca_driver] Starting Tosca Structure optimization module - design cycle 46
+(NOTICE  ) [13:48:07|tosca_driver] Design cycle 47 started on 2026-02-19
+(NOTICE  ) [13:48:07|tosca_driver] Starting Abaqus analysis - design cycle 47
+(NOTICE  ) [13:48:08|tosca_driver] Starting Tosca Structure optimization module - design cycle 47
+(NOTICE  ) [13:48:13|tosca_driver] Design cycle 48 started on 2026-02-19
+(NOTICE  ) [13:48:13|tosca_driver] Starting Abaqus analysis - design cycle 48
+(NOTICE  ) [13:48:15|tosca_driver] Starting Tosca Structure optimization module - design cycle 48
+(NOTICE  ) [13:48:20|tosca_driver] Design cycle 49 started on 2026-02-19
+(NOTICE  ) [13:48:20|tosca_driver] Starting Abaqus analysis - design cycle 49
+(NOTICE  ) [13:48:21|tosca_driver] Starting Tosca Structure optimization module - design cycle 49
+(NOTICE  ) [13:48:26|tosca_driver] Design cycle 50 started on 2026-02-19
+(NOTICE  ) [13:48:26|tosca_driver] Starting Abaqus analysis - design cycle 50
+(NOTICE  ) [13:48:27|tosca_driver] Starting Tosca Structure optimization module - design cycle 50
+(NOTICE  ) [13:48:32|tosca_driver] Design cycle 51 started on 2026-02-19
+(NOTICE  ) [13:48:32|tosca_driver] Starting Abaqus analysis - design cycle 51
+(NOTICE  ) [13:48:34|tosca_driver] Starting Tosca Structure optimization module - design cycle 51
+(NOTICE  ) [13:48:39|tosca_driver] Design cycle 52 started on 2026-02-19
+(NOTICE  ) [13:48:39|tosca_driver] Starting Abaqus analysis - design cycle 52
+(NOTICE  ) [13:48:40|tosca_driver] Starting Tosca Structure optimization module - design cycle 52
+(NOTICE  ) [13:48:46|tosca_driver] Design cycle 53 started on 2026-02-19
+(NOTICE  ) [13:48:46|tosca_driver] Starting Abaqus analysis - design cycle 53
+(NOTICE  ) [13:48:47|tosca_driver] Starting Tosca Structure optimization module - design cycle 53
+(NOTICE  ) [13:48:53|tosca_driver] Design cycle 54 started on 2026-02-19
+(NOTICE  ) [13:48:53|tosca_driver] Starting Abaqus analysis - design cycle 54
+(NOTICE  ) [13:48:54|tosca_driver] Starting Tosca Structure optimization module - design cycle 54
+(NOTICE  ) [13:48:59|tosca_driver] Last design cycle completed
+(NOTICE  ) [13:48:59|tosca_driver] Stopping solver process
+(NOTICE  ) [13:49:01|tosca_driver] Starting Tosca Structure report module
+(NOTICE  ) [13:49:02|tosca_driver] Starting Tosca Structure smooth module
+(NOTICE  ) [13:49:04|tosca_driver] Application finished successfully
+
+  7a exit code: 0
+  Files after run:
+total 336
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 13:44 .
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 13:44 ..
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 13:49 airbeam_tosca
+-rwxr-xr-x 1 u6074059 hochhalter 336480 Feb 19 13:44 airbeam_vol.inp
+-rwxr-xr-x 1 u6074059 hochhalter   2355 Feb 19 13:44 airbeam_vol.par
+-rw-r--r-- 1 u6074059 hochhalter   4120 Feb 19 13:49 authorization.log
+  airbeam_tosca/ contents:
+total 55552
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 .
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:44 ..
+-rw-r--r-- 1 u6074059 hochhalter   336480 Feb 19 13:44 airbeam_vol.inp
+-rwxr-xr-x 1 u6074059 hochhalter     2355 Feb 19 13:44 airbeam_vol.par
+-rw-r--r-- 1 u6074059 hochhalter    13256 Feb 19 13:48 fe_mtx_database.idx
+-rw-r--r-- 1 u6074059 hochhalter  2293760 Feb 19 13:48 fe_mtx_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter     3424 Feb 19 13:48 optimization_report.csv
+-rw-r--r-- 1 u6074059 hochhalter     8784 Feb 19 13:48 optimization_status_all.csv
+-rw-r--r-- 1 u6074059 hochhalter    87656 Feb 19 13:48 opt_res_database.idx
+-rw-r--r-- 1 u6074059 hochhalter 29491200 Feb 19 13:48 opt_res_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter    58040 Feb 19 13:48 resume_database.idx
+-rw-r--r-- 1 u6074059 hochhalter 23986176 Feb 19 13:48 resume_database.vtm
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 SAVE.dat
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 SAVE.inp
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 SAVE.msg
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 SAVE.onf
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 SAVE.sta
+-rw-r--r-- 1 u6074059 hochhalter   601866 Feb 19 13:49 TOSCA.OUT
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 TOSCA_POST
+
+============================================
+[7b] abaqus optimization
+============================================
+  CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7b
+  Files: airbeam_vol.inp
+airbeam_vol.par
+
+Abaqus Warning: The .par extension has been removed from the task identifier
+Tosca                           : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64
+Tosca Structure Server          : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATocToscaServerMain
+Environment file                : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/command/tosca_env.sh
+Python interpreter              : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/bin/python
+Tosca Structure Python launcher : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/python3.10/lib/SMATsoPyControlMain.pyc
+PATH                            : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands:/uufs/chpc.utah.edu/common/home/u6074059/.local/bin:/uufs/chpc.utah.edu/sys/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/uufs/notchpeak.peaks/sys/installdir/slurm/std/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/CAEresources:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/SMA
+CATInstallPath                  : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/CAEresources:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/SMA
+LD_LIBRARY_PATH                 : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/CAEresources:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/SMA:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal/Interop:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal/Elysium:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib/python3.10/lib-dynload:/uufs/notchpeak.peaks/sys/installdir/slurm/std/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal
+(NOTICE  ) [13:49:06|tosca_driver]  -------------------------------------------------------------------------- 
+(NOTICE  ) [13:49:06|tosca_driver] |                                                                          |
+(NOTICE  ) [13:49:06|tosca_driver] |                             Tosca Structure                              |
+(NOTICE  ) [13:49:06|tosca_driver] |                           3DEXPERIENCE R2025x                            |
+(NOTICE  ) [13:49:06|tosca_driver] |                                                                          |
+(NOTICE  ) [13:49:06|tosca_driver]  -------------------------------------------------------------------------- 
+(NOTICE  ) [13:49:06|tosca_driver] 
+(NOTICE  ) [13:49:06|tosca_driver] Tosca started at Thu, 19 Feb 2026 13:49:06
+(NOTICE  ) [13:49:06|tosca_driver] 
+(NOTICE  ) [13:49:06|tosca_driver] Starting job airbeam_abq
+(NOTICE  ) [13:49:06|tosca_driver] Starting Tosca Structure Preprocessor
+(NOTICE  ) [13:49:08|tosca_driver] Design cycle 0 started on 2026-02-19
+(NOTICE  ) [13:49:08|tosca_driver] Starting Abaqus analysis - design cycle 0
+(NOTICE  ) [13:49:13|tosca_driver] Starting Tosca Structure optimization module - design cycle 0
+(NOTICE  ) [13:49:15|tosca_driver] Design cycle 1 started on 2026-02-19
+(NOTICE  ) [13:49:15|tosca_driver] Starting Abaqus analysis - design cycle 1
+(NOTICE  ) [13:49:17|tosca_driver] Starting Tosca Structure optimization module - design cycle 1
+(NOTICE  ) [13:49:18|tosca_driver] Design cycle 2 started on 2026-02-19
+(NOTICE  ) [13:49:18|tosca_driver] Starting Abaqus analysis - design cycle 2
+(NOTICE  ) [13:49:20|tosca_driver] Starting Tosca Structure optimization module - design cycle 2
+(NOTICE  ) [13:49:21|tosca_driver] Design cycle 3 started on 2026-02-19
+(NOTICE  ) [13:49:21|tosca_driver] Starting Abaqus analysis - design cycle 3
+(NOTICE  ) [13:49:22|tosca_driver] Starting Tosca Structure optimization module - design cycle 3
+(NOTICE  ) [13:49:24|tosca_driver] Design cycle 4 started on 2026-02-19
+(NOTICE  ) [13:49:24|tosca_driver] Starting Abaqus analysis - design cycle 4
+(NOTICE  ) [13:49:26|tosca_driver] Starting Tosca Structure optimization module - design cycle 4
+(NOTICE  ) [13:49:28|tosca_driver] Design cycle 5 started on 2026-02-19
+(NOTICE  ) [13:49:28|tosca_driver] Starting Abaqus analysis - design cycle 5
+(NOTICE  ) [13:49:29|tosca_driver] Starting Tosca Structure optimization module - design cycle 5
+(NOTICE  ) [13:49:31|tosca_driver] Design cycle 6 started on 2026-02-19
+(NOTICE  ) [13:49:31|tosca_driver] Starting Abaqus analysis - design cycle 6
+(NOTICE  ) [13:49:32|tosca_driver] Starting Tosca Structure optimization module - design cycle 6
+(NOTICE  ) [13:49:34|tosca_driver] Design cycle 7 started on 2026-02-19
+(NOTICE  ) [13:49:34|tosca_driver] Starting Abaqus analysis - design cycle 7
+(NOTICE  ) [13:49:35|tosca_driver] Starting Tosca Structure optimization module - design cycle 7
+(NOTICE  ) [13:49:37|tosca_driver] Design cycle 8 started on 2026-02-19
+(NOTICE  ) [13:49:37|tosca_driver] Starting Abaqus analysis - design cycle 8
+(NOTICE  ) [13:49:39|tosca_driver] Starting Tosca Structure optimization module - design cycle 8
+(NOTICE  ) [13:49:41|tosca_driver] Design cycle 9 started on 2026-02-19
+(NOTICE  ) [13:49:41|tosca_driver] Starting Abaqus analysis - design cycle 9
+(NOTICE  ) [13:49:42|tosca_driver] Starting Tosca Structure optimization module - design cycle 9
+(NOTICE  ) [13:49:45|tosca_driver] Design cycle 10 started on 2026-02-19
+(NOTICE  ) [13:49:45|tosca_driver] Starting Abaqus analysis - design cycle 10
+(NOTICE  ) [13:49:46|tosca_driver] Starting Tosca Structure optimization module - design cycle 10
+(NOTICE  ) [13:49:48|tosca_driver] Design cycle 11 started on 2026-02-19
+(NOTICE  ) [13:49:48|tosca_driver] Starting Abaqus analysis - design cycle 11
+(NOTICE  ) [13:49:49|tosca_driver] Starting Tosca Structure optimization module - design cycle 11
+(NOTICE  ) [13:49:52|tosca_driver] Design cycle 12 started on 2026-02-19
+(NOTICE  ) [13:49:52|tosca_driver] Starting Abaqus analysis - design cycle 12
+(NOTICE  ) [13:49:53|tosca_driver] Starting Tosca Structure optimization module - design cycle 12
+(NOTICE  ) [13:49:55|tosca_driver] Design cycle 13 started on 2026-02-19
+(NOTICE  ) [13:49:55|tosca_driver] Starting Abaqus analysis - design cycle 13
+(NOTICE  ) [13:49:57|tosca_driver] Starting Tosca Structure optimization module - design cycle 13
+(NOTICE  ) [13:49:59|tosca_driver] Design cycle 14 started on 2026-02-19
+(NOTICE  ) [13:49:59|tosca_driver] Starting Abaqus analysis - design cycle 14
+(NOTICE  ) [13:50:00|tosca_driver] Starting Tosca Structure optimization module - design cycle 14
+(NOTICE  ) [13:50:03|tosca_driver] Design cycle 15 started on 2026-02-19
+(NOTICE  ) [13:50:03|tosca_driver] Starting Abaqus analysis - design cycle 15
+(NOTICE  ) [13:50:05|tosca_driver] Starting Tosca Structure optimization module - design cycle 15
+(NOTICE  ) [13:50:08|tosca_driver] Design cycle 16 started on 2026-02-19
+(NOTICE  ) [13:50:08|tosca_driver] Starting Abaqus analysis - design cycle 16
+(NOTICE  ) [13:50:09|tosca_driver] Starting Tosca Structure optimization module - design cycle 16
+(NOTICE  ) [13:50:12|tosca_driver] Design cycle 17 started on 2026-02-19
+(NOTICE  ) [13:50:12|tosca_driver] Starting Abaqus analysis - design cycle 17
+(NOTICE  ) [13:50:13|tosca_driver] Starting Tosca Structure optimization module - design cycle 17
+(NOTICE  ) [13:50:16|tosca_driver] Design cycle 18 started on 2026-02-19
+(NOTICE  ) [13:50:16|tosca_driver] Starting Abaqus analysis - design cycle 18
+(NOTICE  ) [13:50:17|tosca_driver] Starting Tosca Structure optimization module - design cycle 18
+(NOTICE  ) [13:50:20|tosca_driver] Design cycle 19 started on 2026-02-19
+(NOTICE  ) [13:50:20|tosca_driver] Starting Abaqus analysis - design cycle 19
+(NOTICE  ) [13:50:21|tosca_driver] Starting Tosca Structure optimization module - design cycle 19
+(NOTICE  ) [13:50:24|tosca_driver] Design cycle 20 started on 2026-02-19
+(NOTICE  ) [13:50:24|tosca_driver] Starting Abaqus analysis - design cycle 20
+(NOTICE  ) [13:50:25|tosca_driver] Starting Tosca Structure optimization module - design cycle 20
+(NOTICE  ) [13:50:28|tosca_driver] Design cycle 21 started on 2026-02-19
+(NOTICE  ) [13:50:28|tosca_driver] Starting Abaqus analysis - design cycle 21
+(NOTICE  ) [13:50:29|tosca_driver] Starting Tosca Structure optimization module - design cycle 21
+(NOTICE  ) [13:50:32|tosca_driver] Design cycle 22 started on 2026-02-19
+(NOTICE  ) [13:50:32|tosca_driver] Starting Abaqus analysis - design cycle 22
+(NOTICE  ) [13:50:33|tosca_driver] Starting Tosca Structure optimization module - design cycle 22
+(NOTICE  ) [13:50:36|tosca_driver] Design cycle 23 started on 2026-02-19
+(NOTICE  ) [13:50:36|tosca_driver] Starting Abaqus analysis - design cycle 23
+(NOTICE  ) [13:50:38|tosca_driver] Starting Tosca Structure optimization module - design cycle 23
+(NOTICE  ) [13:50:42|tosca_driver] Design cycle 24 started on 2026-02-19
+(NOTICE  ) [13:50:42|tosca_driver] Starting Abaqus analysis - design cycle 24
+(NOTICE  ) [13:50:43|tosca_driver] Starting Tosca Structure optimization module - design cycle 24
+(NOTICE  ) [13:50:48|tosca_driver] Design cycle 25 started on 2026-02-19
+(NOTICE  ) [13:50:48|tosca_driver] Starting Abaqus analysis - design cycle 25
+(NOTICE  ) [13:50:49|tosca_driver] Starting Tosca Structure optimization module - design cycle 25
+(NOTICE  ) [13:50:52|tosca_driver] Design cycle 26 started on 2026-02-19
+(NOTICE  ) [13:50:52|tosca_driver] Starting Abaqus analysis - design cycle 26
+(NOTICE  ) [13:50:53|tosca_driver] Starting Tosca Structure optimization module - design cycle 26
+(NOTICE  ) [13:50:57|tosca_driver] Design cycle 27 started on 2026-02-19
+(NOTICE  ) [13:50:57|tosca_driver] Starting Abaqus analysis - design cycle 27
+(NOTICE  ) [13:50:58|tosca_driver] Starting Tosca Structure optimization module - design cycle 27
+(NOTICE  ) [13:51:04|tosca_driver] Design cycle 28 started on 2026-02-19
+(NOTICE  ) [13:51:04|tosca_driver] Starting Abaqus analysis - design cycle 28
+(NOTICE  ) [13:51:05|tosca_driver] Starting Tosca Structure optimization module - design cycle 28
+(NOTICE  ) [13:51:09|tosca_driver] Design cycle 29 started on 2026-02-19
+(NOTICE  ) [13:51:09|tosca_driver] Starting Abaqus analysis - design cycle 29
+(NOTICE  ) [13:51:10|tosca_driver] Starting Tosca Structure optimization module - design cycle 29
+(NOTICE  ) [13:51:15|tosca_driver] Design cycle 30 started on 2026-02-19
+(NOTICE  ) [13:51:15|tosca_driver] Starting Abaqus analysis - design cycle 30
+(NOTICE  ) [13:51:16|tosca_driver] Starting Tosca Structure optimization module - design cycle 30
+(NOTICE  ) [13:51:20|tosca_driver] Design cycle 31 started on 2026-02-19
+(NOTICE  ) [13:51:20|tosca_driver] Starting Abaqus analysis - design cycle 31
+(NOTICE  ) [13:51:21|tosca_driver] Starting Tosca Structure optimization module - design cycle 31
+(NOTICE  ) [13:51:25|tosca_driver] Design cycle 32 started on 2026-02-19
+(NOTICE  ) [13:51:25|tosca_driver] Starting Abaqus analysis - design cycle 32
+(NOTICE  ) [13:51:26|tosca_driver] Starting Tosca Structure optimization module - design cycle 32
+(NOTICE  ) [13:51:30|tosca_driver] Design cycle 33 started on 2026-02-19
+(NOTICE  ) [13:51:30|tosca_driver] Starting Abaqus analysis - design cycle 33
+(NOTICE  ) [13:51:31|tosca_driver] Starting Tosca Structure optimization module - design cycle 33
+(NOTICE  ) [13:51:36|tosca_driver] Design cycle 34 started on 2026-02-19
+(NOTICE  ) [13:51:36|tosca_driver] Starting Abaqus analysis - design cycle 34
+(NOTICE  ) [13:51:37|tosca_driver] Starting Tosca Structure optimization module - design cycle 34
+(NOTICE  ) [13:51:42|tosca_driver] Design cycle 35 started on 2026-02-19
+(NOTICE  ) [13:51:42|tosca_driver] Starting Abaqus analysis - design cycle 35
+(NOTICE  ) [13:51:43|tosca_driver] Starting Tosca Structure optimization module - design cycle 35
+(NOTICE  ) [13:51:48|tosca_driver] Design cycle 36 started on 2026-02-19
+(NOTICE  ) [13:51:48|tosca_driver] Starting Abaqus analysis - design cycle 36
+(NOTICE  ) [13:51:49|tosca_driver] Starting Tosca Structure optimization module - design cycle 36
+(NOTICE  ) [13:51:54|tosca_driver] Design cycle 37 started on 2026-02-19
+(NOTICE  ) [13:51:54|tosca_driver] Starting Abaqus analysis - design cycle 37
+(NOTICE  ) [13:51:55|tosca_driver] Starting Tosca Structure optimization module - design cycle 37
+(NOTICE  ) [13:51:58|tosca_driver] Design cycle 38 started on 2026-02-19
+(NOTICE  ) [13:51:58|tosca_driver] Starting Abaqus analysis - design cycle 38
+(NOTICE  ) [13:52:00|tosca_driver] Starting Tosca Structure optimization module - design cycle 38
+(NOTICE  ) [13:52:04|tosca_driver] Design cycle 39 started on 2026-02-19
+(NOTICE  ) [13:52:04|tosca_driver] Starting Abaqus analysis - design cycle 39
+(NOTICE  ) [13:52:05|tosca_driver] Starting Tosca Structure optimization module - design cycle 39
+(NOTICE  ) [13:52:08|tosca_driver] Design cycle 40 started on 2026-02-19
+(NOTICE  ) [13:52:08|tosca_driver] Starting Abaqus analysis - design cycle 40
+(NOTICE  ) [13:52:10|tosca_driver] Starting Tosca Structure optimization module - design cycle 40
+(NOTICE  ) [13:52:14|tosca_driver] Design cycle 41 started on 2026-02-19
+(NOTICE  ) [13:52:14|tosca_driver] Starting Abaqus analysis - design cycle 41
+(NOTICE  ) [13:52:15|tosca_driver] Starting Tosca Structure optimization module - design cycle 41
+(NOTICE  ) [13:52:19|tosca_driver] Design cycle 42 started on 2026-02-19
+(NOTICE  ) [13:52:19|tosca_driver] Starting Abaqus analysis - design cycle 42
+(NOTICE  ) [13:52:20|tosca_driver] Starting Tosca Structure optimization module - design cycle 42
+(NOTICE  ) [13:52:25|tosca_driver] Design cycle 43 started on 2026-02-19
+(NOTICE  ) [13:52:25|tosca_driver] Starting Abaqus analysis - design cycle 43
+(NOTICE  ) [13:52:26|tosca_driver] Starting Tosca Structure optimization module - design cycle 43
+(NOTICE  ) [13:52:30|tosca_driver] Design cycle 44 started on 2026-02-19
+(NOTICE  ) [13:52:30|tosca_driver] Starting Abaqus analysis - design cycle 44
+(NOTICE  ) [13:52:31|tosca_driver] Starting Tosca Structure optimization module - design cycle 44
+(NOTICE  ) [13:52:35|tosca_driver] Design cycle 45 started on 2026-02-19
+(NOTICE  ) [13:52:35|tosca_driver] Starting Abaqus analysis - design cycle 45
+(NOTICE  ) [13:52:36|tosca_driver] Starting Tosca Structure optimization module - design cycle 45
+(NOTICE  ) [13:52:41|tosca_driver] Design cycle 46 started on 2026-02-19
+(NOTICE  ) [13:52:41|tosca_driver] Starting Abaqus analysis - design cycle 46
+(NOTICE  ) [13:52:42|tosca_driver] Starting Tosca Structure optimization module - design cycle 46
+(NOTICE  ) [13:52:46|tosca_driver] Design cycle 47 started on 2026-02-19
+(NOTICE  ) [13:52:46|tosca_driver] Starting Abaqus analysis - design cycle 47
+(NOTICE  ) [13:52:47|tosca_driver] Starting Tosca Structure optimization module - design cycle 47
+(NOTICE  ) [13:52:53|tosca_driver] Design cycle 48 started on 2026-02-19
+(NOTICE  ) [13:52:53|tosca_driver] Starting Abaqus analysis - design cycle 48
+(NOTICE  ) [13:52:54|tosca_driver] Starting Tosca Structure optimization module - design cycle 48
+(NOTICE  ) [13:52:59|tosca_driver] Design cycle 49 started on 2026-02-19
+(NOTICE  ) [13:52:59|tosca_driver] Starting Abaqus analysis - design cycle 49
+(NOTICE  ) [13:53:00|tosca_driver] Starting Tosca Structure optimization module - design cycle 49
+(NOTICE  ) [13:53:05|tosca_driver] Design cycle 50 started on 2026-02-19
+(NOTICE  ) [13:53:05|tosca_driver] Starting Abaqus analysis - design cycle 50
+(NOTICE  ) [13:53:06|tosca_driver] Starting Tosca Structure optimization module - design cycle 50
+(NOTICE  ) [13:53:11|tosca_driver] Design cycle 51 started on 2026-02-19
+(NOTICE  ) [13:53:11|tosca_driver] Starting Abaqus analysis - design cycle 51
+(NOTICE  ) [13:53:12|tosca_driver] Starting Tosca Structure optimization module - design cycle 51
+(NOTICE  ) [13:53:16|tosca_driver] Design cycle 52 started on 2026-02-19
+(NOTICE  ) [13:53:16|tosca_driver] Starting Abaqus analysis - design cycle 52
+(NOTICE  ) [13:53:18|tosca_driver] Starting Tosca Structure optimization module - design cycle 52
+(NOTICE  ) [13:53:23|tosca_driver] Design cycle 53 started on 2026-02-19
+(NOTICE  ) [13:53:23|tosca_driver] Starting Abaqus analysis - design cycle 53
+(NOTICE  ) [13:53:24|tosca_driver] Starting Tosca Structure optimization module - design cycle 53
+(NOTICE  ) [13:53:29|tosca_driver] Design cycle 54 started on 2026-02-19
+(NOTICE  ) [13:53:29|tosca_driver] Starting Abaqus analysis - design cycle 54
+(NOTICE  ) [13:53:30|tosca_driver] Starting Tosca Structure optimization module - design cycle 54
+(NOTICE  ) [13:53:35|tosca_driver] Last design cycle completed
+(NOTICE  ) [13:53:35|tosca_driver] Stopping solver process
+(NOTICE  ) [13:53:36|tosca_driver] Starting Tosca Structure report module
+(NOTICE  ) [13:53:36|tosca_driver] Starting Tosca Structure smooth module
+(NOTICE  ) [13:53:38|tosca_driver] Application finished successfully
+
+  7b exit code: 0
+  Files after run:
+total 337
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 13:49 .
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 13:49 ..
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 13:53 airbeam_abq
+-rwxr--r-- 1 u6074059 hochhalter    395 Feb 19 13:49 airbeam_abq.com
+-rwxr-xr-x 1 u6074059 hochhalter 336480 Feb 19 13:49 airbeam_vol.inp
+-rwxr-xr-x 1 u6074059 hochhalter   2355 Feb 19 13:49 airbeam_vol.par
+-rw-r--r-- 1 u6074059 hochhalter   4101 Feb 19 13:53 authorization.log
+  airbeam_abq/ contents:
+total 55552
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:53 .
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:49 ..
+-rw-r--r-- 1 u6074059 hochhalter   336480 Feb 19 13:49 airbeam_vol.inp
+-rwxr-xr-x 1 u6074059 hochhalter     2355 Feb 19 13:49 airbeam_vol.par
+-rw-r--r-- 1 u6074059 hochhalter    13256 Feb 19 13:53 fe_mtx_database.idx
+-rw-r--r-- 1 u6074059 hochhalter  2293760 Feb 19 13:53 fe_mtx_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter     3424 Feb 19 13:53 optimization_report.csv
+-rw-r--r-- 1 u6074059 hochhalter     8784 Feb 19 13:53 optimization_status_all.csv
+-rw-r--r-- 1 u6074059 hochhalter    87656 Feb 19 13:53 opt_res_database.idx
+-rw-r--r-- 1 u6074059 hochhalter 29491200 Feb 19 13:53 opt_res_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter    58040 Feb 19 13:53 resume_database.idx
+-rw-r--r-- 1 u6074059 hochhalter 23986176 Feb 19 13:53 resume_database.vtm
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:53 SAVE.dat
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:53 SAVE.inp
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:53 SAVE.msg
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:53 SAVE.onf
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:53 SAVE.sta
+-rw-r--r-- 1 u6074059 hochhalter   601398 Feb 19 13:53 TOSCA.OUT
+drwxr-xr-x 2 u6074059 hochhalter     4096 Feb 19 13:53 TOSCA_POST
+
+============================================
+Summary
+  7a (tosca optimize):      exit 0
+  7b (abaqus optimization): exit 0
+Finished: Thu Feb 19 13:53:39 MST 2026
+============================================

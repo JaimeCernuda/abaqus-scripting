@@ -3,6 +3,7 @@ paper/
 .old/
 docs/
 iowarp/
+abqpy_reference/
 
 # Python
 __pycache__/
@@ -55,6 +56,31 @@ abaqus.rpy.*
 # Abaqus input files (regenerated from scripts)
 *.inp
 
+# Abaqus CAE databases
+*.cae
+
+# Abaqus environment
+abaqus_v6.env
+
+# Tosca binary artifacts
+*.vtm
+*.vtfx
+*.idx
+*.onf
+
 # SLURM output
 *.out
 *.err
+
+# =========================================================
+# OVERRIDES: curated files we want tracked despite the above
+# =========================================================
+
+# Experiment 7 results (curated text outputs)
+!paper_reproduction/experiment7/results/**
+
+# Experiment 8 for_utah package (curated for sharing)
+!paper_reproduction/experiment8/for_utah/**
+
+# Experiment 8 SLURM outputs (contain test evidence)
+!paper_reproduction/experiment8/exp8*

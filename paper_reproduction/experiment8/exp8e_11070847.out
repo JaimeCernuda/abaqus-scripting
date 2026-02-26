@@ -1,0 +1,346 @@
+============================================
+Experiment 8e: API -> Tosca CLI
+Started: Thu Feb 19 17:21:13 MST 2026
+Node: notch309
+============================================
+CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e
+
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<5 out of 11 licenses remain available>.
+
+============================================
+Exit code: 0
+Finished: Thu Feb 19 17:21:19 MST 2026
+============================================
+
+Files in run_8e/:
+total 235
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 .
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 ..
+-rw-r--r-- 1 u6074059 hochhalter  9913 Feb 19 17:21 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter  4656 Feb 19 17:21 authorization.log
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 block_8e_tosca
+-rw-r--r-- 1 u6074059 hochhalter 76885 Feb 19 17:21 Block_Fallback.inp
+-rw-r--r-- 1 u6074059 hochhalter 76742 Feb 19 17:21 Block_flat.inp
+-rw-r--r-- 1 u6074059 hochhalter   846 Feb 19 17:21 Block_opt.par
+-rw-r--r-- 1 u6074059 hochhalter 65536 Feb 19 17:21 exp8e.cae
+-rw-r--r-- 1 u6074059 hochhalter  4217 Feb 19 17:21 exp8e.jnl
+
+=== abaqus.rpy (script output) ===
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-07.00.46 RELr427 198590
+# Run by u6074059 on Thu Feb 19 17:21:14 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.36719, 1.36719), width=201.25, 
+    height=135.625)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    '/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8e_par_to_tosca.py', 
+    __main__.__dict__)
+#: ======================================================================
+#:   EXPERIMENT 8e: writeParAndInputFiles() -> Tosca CLI
+#:   Mesh: 5.0, CPUs: 1, Max cycles: 20
+#: ======================================================================
+#: ======================================================================
+#:   [1/5] Build model
+#: ======================================================================
+#:   Model: 945 nodes, 640 elements
+#:   Frozen elements: 32
+#:   Optimization setup complete
+#: ======================================================================
+#:   [2/5] writeParAndInputFiles()
+#: ======================================================================
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e/exp8e.cae".
+#: The optimization process "BlockOpt" has been created.
+#:   [FAIL] writeParAndInputFiles(): KeyError - 'Block_Proto'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8e_par_to_tosca.py", line 152, in <module>
+#:     optProcess.writeParAndInputFiles()
+#: KeyError: 'Block_Proto'
+#: ======================================================================
+#:   [3/5] Fallback: writeInput() + manual .par
+#: ======================================================================
+#:   writeInput() done: Block_Fallback.inp exists: True
+#:   Flattened .inp: Block_flat.inp (76742 bytes)
+#:   Generated Block_opt.par: 846 bytes
+#: ======================================================================
+#:   [4/5] Verify .par content
+#: ======================================================================
+#:   --- Block_opt.par (846 bytes) ---
+#: TOPO_OPT
+#:   FEM_INPUT
+#:     ID_NAME = fem_input
+#:     FILE = Block_flat.inp
+#:     FEM_SOLVER = ABAQUS
+#:   END_
+#:   DV_TOPO
+#:     ID_NAME = dv_topo
+#:     EL_GROUP = ALL_ELEMENTS
+#:     FRZ_GROUP = FrozenElems
+#:     SIMP_PENALTY = 3.0
+#:     INITIAL_CONDITION = CONDINI FULL
+#:   END_
+#:   DRESP
+#:     ID_NAME = dresp_se
+#:     DEF_TYPE = SYSTEM
+#:     TYPE = STRAIN_ENERGY
+#:     EL_GROUP = ALL_ELEMENTS
+#:     STEP = 1
+#:   END_
+#:   DRESP
+#:     ID_NAME = dresp_vol
+#:     DEF_TYPE = SYSTEM
+#:     TYPE = VOLUME
+#:     EL_GROUP = ALL_ELEMENTS
+#:   END_
+#:   OBJ_FUNC
+#:     ID_NAME = obj_func
+#:     DRESP = dresp_se
+#:     TARGET = MIN
+#:   END_
+#:   CONSTRAINT
+#:     ID_NAME = constr_vol
+#:     DRESP = dresp_vol
+#:     LE_VALUE = 0.5
+#:     TYPE = RELATIVE
+#:   END_
+#:   OPTIMIZE
+#:     ID_NAME = optimizer
+#:     OBJ_FUNC = obj_func
+#:     CONSTRAINT = constr_vol
+#:     DV_TOPO = dv_topo
+#:     MAX_CYCLES = 20
+#:     TOPO_FILTER_RADIUS = 10.0
+#:   END_
+#: END_
+#:   .inp file: Block_flat.inp (76742 bytes)
+#: ======================================================================
+#:   [5/5] Run Tosca CLI
+#: ======================================================================
+#:   Found Tosca via: 'tosca'
+#:   Using command: 'tosca'
+#:   Par file: Block_opt.par
+#:   Inp file: Block_flat.inp
+#:   Full command: tosca optimize -j block_8e_tosca -p Block_opt.par -s abaqus -scpus 1
+#:   Tosca exit code: 1
+#:   ... (truncated, showing last 5000 chars)
+#: ***
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command CONSTRAINT.
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] The item LE_VALUE cannot be analyzed due to a missing entry of MAGNITUDE.
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command items, for the command CONSTRAINT
+#: (ERROR   ) [17:21:18|tosca_prep] Some items are not processed by the system.
+#: (ERROR   ) [17:21:18|tosca_prep] Command   : CONSTRAINT
+#: (ERROR   ) [17:21:18|tosca_prep] ID_NAME   : CONSTR_VOL
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] List of all unprocessed items:
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] TYPE = RELATIVE
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command CONSTRAINT.
+#: (ERROR   ) [17:21:18|tosca_prep] At least one constraint operator must be defined.
+#: (ERROR   ) [17:21:18|tosca_prep] Use one constraint operator to limit the DRESP
+#: (ERROR   ) [17:21:18|tosca_prep] value. Available operators are:
+#: (ERROR   ) [17:21:18|tosca_prep] EQ_VALUE = .....  or
+#: (ERROR   ) [17:21:18|tosca_prep] LT_VALUE = .....  or
+#: (ERROR   ) [17:21:18|tosca_prep] LE_VALUE = .....  or
+#: (ERROR   ) [17:21:18|tosca_prep] GT_VALUE = .....  or
+#: (ERROR   ) [17:21:18|tosca_prep] GE_VALUE = .....
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command CONSTRAINT.
+#: (ERROR   ) [17:21:18|tosca_prep] Command will be ignored due to incorrect data.
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command items, for the command OPTIMIZE
+#: (ERROR   ) [17:21:18|tosca_prep] The specified item was not found.
+#: (ERROR   ) [17:21:18|tosca_prep] Command   : OPTIMIZE
+#: (ERROR   ) [17:21:18|tosca_prep] Item      : DV
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command OPTIMIZE.
+#: (ERROR   ) [17:21:18|tosca_prep] Item CONSTRAINT = CONSTR_VOL is not admitted.
+#: (ERROR   ) [17:21:18|tosca_prep] Please ensure that the referenced entry is defined correctly.
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command items, for the command OPTIMIZE
+#: (ERROR   ) [17:21:18|tosca_prep] Some items are not processed by the system.
+#: (ERROR   ) [17:21:18|tosca_prep] Command   : OPTIMIZE
+#: (ERROR   ) [17:21:18|tosca_prep] ID_NAME   : OPTIMIZER
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] List of all unprocessed items:
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] DV_TOPO = dv_topo
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] MAX_CYCLES = 20
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] TOPO_FILTER_RADIUS = 10.0
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Analysis of the command OPTIMIZE.
+#: (ERROR   ) [17:21:18|tosca_prep] Command will be ignored due to incorrect data.
+#: (ERROR   ) [17:21:18|tosca_prep] 
+#: (WARNING ) [17:21:18|tosca_prep] *** SIMULIA Tosca Structure WARNING ***
+#: (WARNING ) [17:21:18|tosca_prep] Command not identified and will be ignored.
+#: (WARNING ) [17:21:18|tosca_prep] Command:    END_
+#: (ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:21:18|tosca_prep] Definition of the optimization task was not successful. One or more commands returned an
+#: (ERROR   ) [17:21:18|tosca_prep] error.
+#: (ERROR   ) [17:21:18|tosca_prep] The optimization will not run until all of the errors are corrected. Warnings should be
+#: (ERROR   ) [17:21:18|tosca_prep] inspected to avoid unwanted or unexpected results.
+#: (ERROR   ) [17:21:18|tosca_prep] Please check the listed command(s) in the table below and check the TOSCA.OUT file for
+#: (ERROR   ) [17:21:18|tosca_prep] detailed information about the error(s).
+#: (ERROR   ) [17:21:18|tosca_prep] Table of failed commands:
+#: (ERROR   ) [17:21:18|tosca_prep] FEM_INPUT                                FEM_INPUT
+#: (ERROR   ) [17:21:18|tosca_prep] DV_TOPO                                  DV_TOPO
+#: (ERROR   ) [17:21:18|tosca_prep] DRESP                                    DRESP_SE
+#: (ERROR   ) [17:21:18|tosca_prep] CONSTRAINT                               CONSTR_VOL
+#: (ERROR   ) [17:21:18|tosca_prep] OPTIMIZE                                 OPTIMIZER
+#: (ERROR   ) [17:21:18|tosca_prep] -> PROGRAM STOPS
+#: (ERROR   ) [17:21:18|tosca_prep] 111
+#: (ERROR   ) [17:21:18|tosca_driver] Module SMATsoToscaPrep failed
+#: (ERROR   ) [17:21:18|tosca_driver] Tosca Structure failed to run the optimization task
+#:   Final files:
+#:     Block_Fallback.inp: 76885 bytes
+#:     Block_flat.inp: 76742 bytes
+#:     Block_opt.par: 846 bytes
+#:     abaqus.rpy: 9330 bytes
+#:     abaqus_acis.log: 0 bytes
+#:     authorization.log: 4656 bytes
+#:     block_8e_tosca/
+#:     exp8e.cae: 1048576 bytes
+#:     exp8e.jnl: 4217 bytes
+#:     exp8e.rec: 614 bytes
+#:   Directory: block_8e_tosca/
+#:     DB_ERROR/
+#:     SAVE.inp/
+#:     TOSCA.OUT: 19557 bytes
+#:     TOSCA_POST/
+#:   No STL files found
+#: ======================================================================
+#:   Experiment 8e COMPLETE (exit code: 1)
+#: ======================================================================
+print('RT script done')
+#: RT script done
+
+=== Block_opt.par ===
+TOPO_OPT
+  FEM_INPUT
+    ID_NAME = fem_input
+    FILE = Block_flat.inp
+    FEM_SOLVER = ABAQUS
+  END_
+  DV_TOPO
+    ID_NAME = dv_topo
+    EL_GROUP = ALL_ELEMENTS
+    FRZ_GROUP = FrozenElems
+    SIMP_PENALTY = 3.0
+    INITIAL_CONDITION = CONDINI FULL
+  END_
+  DRESP
+    ID_NAME = dresp_se
+    DEF_TYPE = SYSTEM
+    TYPE = STRAIN_ENERGY
+    EL_GROUP = ALL_ELEMENTS
+    STEP = 1
+  END_
+  DRESP
+    ID_NAME = dresp_vol
+    DEF_TYPE = SYSTEM
+    TYPE = VOLUME
+    EL_GROUP = ALL_ELEMENTS
+  END_
+  OBJ_FUNC
+    ID_NAME = obj_func
+    DRESP = dresp_se
+    TARGET = MIN
+  END_
+  CONSTRAINT
+    ID_NAME = constr_vol
+    DRESP = dresp_vol
+    LE_VALUE = 0.5
+    TYPE = RELATIVE
+  END_
+  OPTIMIZE
+    ID_NAME = optimizer
+    OBJ_FUNC = obj_func
+    CONSTRAINT = constr_vol
+    DV_TOPO = dv_topo
+    MAX_CYCLES = 20
+    TOPO_FILTER_RADIUS = 10.0
+  END_
+END_
+
+=== Contents of ./block_8e_tosca/ ===
+total 20
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 .
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 ..
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 DB_ERROR
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 SAVE.inp
+-rw-r--r-- 1 u6074059 hochhalter 19557 Feb 19 17:21 TOSCA.OUT
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:21 TOSCA_POST
+=== ./block_8e_tosca/TOSCA.OUT (last 50 lines) ===
+(ERROR   ) [17:21:18|tosca_prep] 
+(ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+(ERROR   ) [17:21:18|tosca_prep] Analysis of the command items, for the command OPTIMIZE
+(ERROR   ) [17:21:18|tosca_prep] Some items are not processed by the system.
+(ERROR   ) [17:21:18|tosca_prep] Command   : OPTIMIZE
+(ERROR   ) [17:21:18|tosca_prep] ID_NAME   : OPTIMIZER
+(ERROR   ) [17:21:18|tosca_prep] 
+(ERROR   ) [17:21:18|tosca_prep] List of all unprocessed items:
+(ERROR   ) [17:21:18|tosca_prep] 
+(ERROR   ) [17:21:18|tosca_prep] DV_TOPO = dv_topo
+(ERROR   ) [17:21:18|tosca_prep] 
+(ERROR   ) [17:21:18|tosca_prep] MAX_CYCLES = 20
+(ERROR   ) [17:21:18|tosca_prep] 
+(ERROR   ) [17:21:18|tosca_prep] TOPO_FILTER_RADIUS = 10.0
+(ERROR   ) [17:21:18|tosca_prep] 
+(ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+(ERROR   ) [17:21:18|tosca_prep] Analysis of the command OPTIMIZE.
+(ERROR   ) [17:21:18|tosca_prep] Command will be ignored due to incorrect data.
+(ERROR   ) [17:21:18|tosca_prep] 
+(WARNING ) [17:21:18|tosca_prep] *** SIMULIA Tosca Structure WARNING ***
+(WARNING ) [17:21:18|tosca_prep] Command not identified and will be ignored.
+(WARNING ) [17:21:18|tosca_prep] Command:    END_
+(ERROR   ) [17:21:18|tosca_prep] **** SIMULIA Tosca Structure ERROR ****
+(ERROR   ) [17:21:18|tosca_prep] Definition of the optimization task was not successful. One or more commands returned an
+(ERROR   ) [17:21:18|tosca_prep] error.
+(ERROR   ) [17:21:18|tosca_prep] The optimization will not run until all of the errors are corrected. Warnings should be
+(ERROR   ) [17:21:18|tosca_prep] inspected to avoid unwanted or unexpected results.
+(ERROR   ) [17:21:18|tosca_prep] Please check the listed command(s) in the table below and check the TOSCA.OUT file for
+(ERROR   ) [17:21:18|tosca_prep] detailed information about the error(s).
+(ERROR   ) [17:21:18|tosca_prep] Table of failed commands:
+(ERROR   ) [17:21:18|tosca_prep] FEM_INPUT                                FEM_INPUT
+(ERROR   ) [17:21:18|tosca_prep] DV_TOPO                                  DV_TOPO
+(ERROR   ) [17:21:18|tosca_prep] DRESP                                    DRESP_SE
+(ERROR   ) [17:21:18|tosca_prep] CONSTRAINT                               CONSTR_VOL
+(ERROR   ) [17:21:18|tosca_prep] OPTIMIZE                                 OPTIMIZER
+(ERROR   ) [17:21:18|tosca_prep] -> PROGRAM STOPS
+(ERROR   ) [17:21:18|tosca_prep] 111
+(INFO    ) [17:21:18|tosca_driver] Module SMATsoToscaPrep has finished with exit code 111
+(ERROR   ) [17:21:18|tosca_driver] Module SMATsoToscaPrep failed
+(INFO    ) [17:21:18|tosca_driver] Moving all files and directories to DB_ERROR
+(INFO    ) [17:21:18|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [17:21:18|tosca_driver] Time consumption overview table
+(INFO    ) [17:21:18|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [17:21:18|tosca_driver] Cumulative elapsed time for module                tosca_prep: 0:00:00.529884 - 73.919% (1 calls)
+(INFO    ) [17:21:18|tosca_driver] Cumulative elapsed time for module                fem_to_onf: 0:00:00.065969 - 9.203% (1 calls)
+(INFO    ) [17:21:18|tosca_driver] Cumulative elapsed time for module               fem_include: 0:00:00.047327 - 6.602% (1 calls)
+(INFO    ) [17:21:18|tosca_driver] Total elapsed time for this script                          : 0:00:00.073663 - 10.276%
+(INFO    ) [17:21:18|tosca_driver] Total elapsed time of Tosca Structure                       : 0:00:00.716843 - Current time 17:21:18.276324
+(INFO    ) [17:21:18|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(ERROR   ) [17:21:18|tosca_driver] Tosca Structure failed to run the optimization task

@@ -1,0 +1,909 @@
+(NOTICE  ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(NOTICE  ) [15:51:49|tosca_driver] |                                                                          |
+(NOTICE  ) [15:51:49|tosca_driver] |                             Tosca Structure                              |
+(NOTICE  ) [15:51:49|tosca_driver] |                           3DEXPERIENCE R2025x                            |
+(NOTICE  ) [15:51:49|tosca_driver] |                                                                          |
+(NOTICE  ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(NOTICE  ) [15:51:49|tosca_driver] 
+(NOTICE  ) [15:51:49|tosca_driver] Tosca started at Thu, 19 Feb 2026 15:51:49
+(NOTICE  ) [15:51:49|tosca_driver] 
+(INFO    ) [15:51:49|tosca_driver] Log level              : INFO
+(INFO    ) [15:51:49|tosca_driver] Job name               : block_7e_tosca
+(INFO    ) [15:51:49|tosca_driver] Input directory        : /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e
+(INFO    ) [15:51:49|tosca_driver] Parameter file         : /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/Block_7e.par
+(INFO    ) [15:51:49|tosca_driver] Working directory      : /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca
+(INFO    ) [15:51:49|tosca_driver] Platform               : linux_a64
+(INFO    ) [15:51:49|tosca_driver] Optimization type      : Topo Sensitivity
+(INFO    ) [15:51:49|tosca_driver] Macros directory       : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/SMATsoResources/macros
+(INFO    ) [15:51:49|tosca_driver] Test type              : ALL
+(INFO    ) [15:51:49|tosca_driver] Num cpus               : 1
+(INFO    ) [15:51:49|tosca_driver] Fe-Solver              : abaqus
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] | Input Files                                                              |
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] Main input deck        : /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/Block_FEA_flat.inp
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] | Information about FE-Solver                                              |
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] abaqus                 : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMALauncher
+(INFO    ) [15:51:49|tosca_driver] Number of solver CPUs  : 1
+(INFO    ) [15:51:49|tosca_driver] Number of solver queues: 1
+(INFO    ) [15:51:49|tosca_driver] Command line           : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMALauncher -job __FE_MODEL__ analysis interactive -unified -resultsFormat ODB
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] | Post-Processing                                                          |
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] * Report to VTFX
+(INFO    ) [15:51:49|tosca_driver] * Smooth
+(INFO    ) [15:51:49|tosca_driver] 
+(NOTICE  ) [15:51:49|tosca_driver] Starting job block_7e_tosca
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] | Checking User Configuration                                              |
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoFemInclude --loglevel INFO --solver abaqus --out /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/_included_files.json /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/Block_FEA_flat.inp
+(INFO    ) [15:51:49|fem_include] SIMULIA Tosca Structure.fem_include - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:49|fem_include] SIMULIA Tosca Structure.fem_include finished successfully
+(INFO    ) [15:51:49|tosca_driver] Module SMATsoFemInclude has finished with exit code 0
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] | Creating archive directories                                             |
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] | Converting FEM files to ONF format                                       |
+(INFO    ) [15:51:49|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:49|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoFemToOnf --loglevel INFO --solver abaqus /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.inp
+(INFO    ) [15:51:50|fem_to_onf] SIMULIA Tosca Structure.fem_to_onf - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:50|fem_to_onf] 
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] |                              LOADCASE TABLE                              |
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] | #  |   Type   |     Name      |              File              |  Line   |
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] |  1 | STEP     | LOADSTEP      | Block_FEA_flat.inp             |     296 |
+(INFO    ) [15:51:50|fem_to_onf] |    |          |               | Block_FEA_flat.inp             |     321 |
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] 
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] |                              MATERIAL TABLE                              |
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] |  #   |     Name     |                  File                  |   Line    |
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] |    1 | STEEL        | Block_FEA_flat.inp                     |       281 |
+(INFO    ) [15:51:50|fem_to_onf]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|fem_to_onf] 
+(INFO    ) [15:51:50|fem_to_onf] SIMULIA Tosca Structure.fem_to_onf finished successfully
+(INFO    ) [15:51:50|tosca_driver] Module SMATsoFemToOnf has finished with exit code 0
+(NOTICE  ) [15:51:50|tosca_driver] Starting Tosca Structure Preprocessor
+(INFO    ) [15:51:50|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaPrep --loglevel INFO --input /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/Block_7e.par
+(INFO    ) [15:51:50|tosca_prep] SIMULIA Tosca Structure.tosca_prep - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:50|tosca_prep]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|tosca_prep] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:51:50|tosca_prep] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:51:50|tosca_prep] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:51:50|tosca_prep] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:51:50|tosca_prep] |                        _____                                             |
+(INFO    ) [15:51:50|tosca_prep] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:51:50|tosca_prep] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:51:50|tosca_prep] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:51:50|tosca_prep] |              ___  _                   _                                  |
+(INFO    ) [15:51:50|tosca_prep] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:51:50|tosca_prep] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:51:50|tosca_prep] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:51:50|tosca_prep] |                                                                          |
+(INFO    ) [15:51:50|tosca_prep]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|tosca_prep] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:51:50|tosca_prep] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:51:50|tosca_prep]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|tosca_prep] Reading command          : FEM_INPUT
+(INFO    ) [15:51:50|tosca_prep] Reading command          : DV_TOPO
+(INFO    ) [15:51:50|tosca_prep] Reading command          : DVCON_TOPO
+(INFO    ) [15:51:50|tosca_prep] Reading command          : DRESP
+(INFO    ) [15:51:50|tosca_prep] Reading command          : DRESP
+(INFO    ) [15:51:50|tosca_prep] Reading command          : OBJ_FUNC
+(INFO    ) [15:51:50|tosca_prep] Reading command          : CONSTRAINT
+(INFO    ) [15:51:50|tosca_prep] Reading command          : OPTIMIZE
+(INFO    ) [15:51:50|tosca_prep] Reading command          : OPT_PARAM
+(INFO    ) [15:51:50|tosca_prep] Reading command          : STOP
+(INFO    ) [15:51:50|tosca_prep] Reading command          : SMOOTH
+(INFO    ) [15:51:50|tosca_prep]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|tosca_prep] | ELEMENTS with LOADS are AUTOFROZEN                                       |
+(INFO    ) [15:51:50|tosca_prep]  --------------------------------------------------------------------------
+(INFO    ) [15:51:50|tosca_prep] System detected the following ELEMENTS as
+(INFO    ) [15:51:50|tosca_prep] loaded by pressure, boundary conditions or the.
+(INFO    ) [15:51:50|tosca_prep] connected nodes are loaded by forces, displacements
+(INFO    ) [15:51:50|tosca_prep] or with concentrated loads.
+(INFO    ) [15:51:50|tosca_prep] Number of elements:            8
+(INFO    ) [15:51:50|tosca_prep]   1  ->   8
+(INFO    ) [15:51:50|tosca_prep] 
+(INFO    ) [15:51:50|tosca_prep] 
+(INFO    ) [15:51:50|tosca_prep] The following LIST of elements can be used
+(INFO    ) [15:51:50|tosca_prep] for the topology optimization.
+(INFO    ) [15:51:50|tosca_prep] Number of elements:           72
+(INFO    ) [15:51:50|tosca_prep]   9  ->  80
+(INFO    ) [15:51:50|tosca_prep] 
+(INFO    ) [15:51:50|tosca_prep] 
+(INFO    ) [15:51:50|tosca_prep] 
+(INFO    ) [15:51:50|tosca_prep] DV Cluster information:
+(INFO    ) [15:51:50|tosca_prep]  Number of clustering groups          :            0
+(INFO    ) [15:51:50|tosca_prep]  Number of dv-elements being clustered:            0
+(INFO    ) [15:51:50|tosca_prep]  Number of free dv-elements           :           64
+(INFO    ) [15:51:50|tosca_prep]  Number of DV after clustering        :           64
+(INFO    ) [15:51:50|tosca_prep]  Setting automatic MIN_MEMBER size THICKNESS =    40.00000
+(INFO    ) [15:51:50|tosca_prep] Checked out 8 tokens tosca_topo from
+(INFO    ) [15:51:50|tosca_prep] 27004@ls1.chpc.utah.edu,27004@ls2.chpc.utah.edu,27004@ls3.chpc.utah.edu
+(INFO    ) [15:51:50|tosca_prep] Checked out 3 tokens tosca_adv_nonlinear from
+(INFO    ) [15:51:50|tosca_prep] 27004@ls1.chpc.utah.edu,27004@ls2.chpc.utah.edu,27004@ls3.chpc.utah.edu
+(INFO    ) [15:51:51|tosca_prep] Application finished successfully
+(INFO    ) [15:51:51|tosca_driver] Module SMATsoToscaPrep has finished with exit code 0
+(INFO    ) [15:51:51|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle -1 --static_data --onf_output ON
+(INFO    ) [15:51:51|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:51|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:51:51|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:51:51|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(INFO    ) [15:51:51|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:51|tosca_driver] | Loading User Configuration                                               |
+(INFO    ) [15:51:51|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:51|tosca_driver] Executing: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/SMATsoResources/config/tosca.cfg
+(INFO    ) [15:51:51|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:51:51|tosca_driver] | Checking Final Configuration                                             |
+(INFO    ) [15:51:51|tosca_driver]  -------------------------------------------------------------------------- 
+(NOTICE  ) [15:51:51|tosca_driver] Design cycle 0 started on 2026-02-19
+(INFO    ) [15:51:51|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoFemModif --loglevel INFO --solver abaqus --cycle 000 --perturbation 0 --format_matrices sim --pseudo_step_to_lc /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.inp
+(INFO    ) [15:51:51|fem_modif] SIMULIA Tosca Structure.fem_modif - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:51|fem_modif] Reading modification instructions from ONF file:
+(INFO    ) [15:51:51|fem_modif] /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat_mod.onf
+(INFO    ) [15:51:51|fem_modif] Reading ONF model file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat_fem.onf
+(INFO    ) [15:51:51|fem_modif] SIMULIA Tosca Structure.fem_modif finished successfully
+(INFO    ) [15:51:51|tosca_driver] Module SMATsoFemModif has finished with exit code 0
+(NOTICE  ) [15:51:51|tosca_driver] Starting Abaqus analysis - design cycle 0
+(INFO    ) [15:51:51|tosca_driver] Starting the solver
+(INFO    ) [15:51:51|tosca_driver] Calling hooks before module abaqus
+(INFO    ) [15:51:51|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoAbaqusTsProvider -j Block_FEA_flat --cycle 0
+(INFO    ) [15:51:51|hook] Timestamp file written successfully
+(INFO    ) [15:51:51|tosca_driver] Module hook has finished with exit code 0
+(INFO    ) [15:51:51|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMALauncher -job Block_FEA_flat analysis interactive -unified -resultsFormat ODB
+(INFO    ) [15:51:54|abaqus] Analysis initiated from SIMULIA established products
+(INFO    ) [15:51:54|abaqus] Abaqus JOB Block_FEA_flat
+(INFO    ) [15:51:54|abaqus] Abaqus 2025
+(INFO    ) [15:51:54|abaqus] Abaqus License Manager checked out the following licenses:
+(INFO    ) [15:51:54|abaqus] Abaqus/Standard checked out 5 tokens from Flexnet server ls1.chpc.utah.edu.
+(INFO    ) [15:51:54|abaqus] <214 out of 237 licenses remain available>.
+(INFO    ) [15:51:54|abaqus] Begin Abaqus/Standard Analysis
+(INFO    ) [15:51:54|abaqus] Thu 19 Feb 2026 03:51:52 PM MST
+(INFO    ) [15:51:54|abaqus] Run abaqusstd
+(INFO    ) [15:51:54|tosca_driver] Fe-solver abaqus finished with job Block_FEA_flat.inp
+(INFO    ) [15:51:54|tosca_driver] Elapsed time of abaqus : 0:00:03.262110  -  current time : 15:51:54.704210
+(INFO    ) [15:51:54|tosca_driver] Solution complete
+(INFO    ) [15:51:54|tosca_driver] Checking solver output file: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.msg
+(INFO    ) [15:51:54|tosca_driver] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [15:51:54|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoOdbToVtmMain --solver abaqus --loglevel INFO --format_matrices sim --cycle 0 --perturbation 0 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:51:54|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:54|odb_to_vtm] Reading Abaqus ODB output file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:51:54|odb_to_vtm] Reading results from the Abaqus result database /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.odb
+(INFO    ) [15:51:55|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm finished successfully
+(INFO    ) [15:51:55|tosca_driver] Module SMATsoOdbToVtmMain has finished with exit code 0
+(NOTICE  ) [15:51:55|tosca_driver] Starting Tosca Structure optimization module - design cycle 0
+(INFO    ) [15:51:55|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaOpt --loglevel INFO
+(INFO    ) [15:51:55|tosca_opt] SIMULIA Tosca Structure.tosca_opt - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:51:55|tosca_opt] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:51:55|tosca_opt] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:51:55|tosca_opt] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:51:55|tosca_opt] |                        _____                                             |
+(INFO    ) [15:51:55|tosca_opt] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:51:55|tosca_opt] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:51:55|tosca_opt] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:51:55|tosca_opt] |              ___  _                   _                                  |
+(INFO    ) [15:51:55|tosca_opt] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:51:55|tosca_opt] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:51:55|tosca_opt] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:51:55|tosca_opt] |                                                                          |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:51:55|tosca_opt] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | Begin of DESIGN CYCLE NUMBER: 0                                          |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] Checking for existence of results
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | ANALYZE VALUE OF VARIABLES before OPTIMIZATION                           |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | ANALYZE VALUE OF VARIABLES after OPTIMIZATION                            |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | VARIABLES and DESIGN RESPONSES                                           |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt]  DRESP_STRAIN_ENERGY                       :    2.8994
+(INFO    ) [15:51:55|tosca_opt]  DRESP_VOLUME                              :    40000.
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | Report of OPTIMIZATION Results                                           |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt]  DESIGN CYCLE                :     0 (values of startmodel)
+(INFO    ) [15:51:55|tosca_opt]  OPTIMIZE name               : TOPOLOGY_OPT
+(INFO    ) [15:51:55|tosca_opt]  OBJ_FUNC name               : MIN_SE
+(INFO    ) [15:51:55|tosca_opt]  OBJ_FUNC value              :     2.89942
+(INFO    ) [15:51:55|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:55|tosca_opt] |     Name of OBJ_FUNC_TERM      |   Value    |   Weight   |   Reference   |
+(INFO    ) [15:51:55|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:55|tosca_opt] | DRESP_STRAIN_ENERGY            | 2.89942    | 1.0        | 0.0           |
+(INFO    ) [15:51:55|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:55|tosca_opt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [15:51:55|tosca_opt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [15:51:55|tosca_opt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [15:51:55|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:55|tosca_opt] |  Name of CONSTRAINT   |  Act. Value   | Op. | Target  |  Norm  | Status  |
+(INFO    ) [15:51:55|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:55|tosca_opt] | VOL_CONSTRAINT        | 0.5           | <=  | 0.5     | 1.0    | TRUE    |
+(INFO    ) [15:51:55|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:55|tosca_opt] | End of DESIGN CYCLE NUMBER: 0                                            |
+(INFO    ) [15:51:55|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:56|tosca_opt] Application finished successfully
+(INFO    ) [15:51:56|tosca_driver] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [15:51:56|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle 0 --onf_output ON
+(INFO    ) [15:51:56|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:56|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:51:56|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:51:56|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(NOTICE  ) [15:51:56|tosca_driver] Design cycle 1 started on 2026-02-19
+(NOTICE  ) [15:51:56|tosca_driver] Starting Abaqus analysis - design cycle 1
+(INFO    ) [15:51:56|tosca_driver] Activating the solver
+(INFO    ) [15:51:56|tosca_driver] Calling hooks before module abaqus
+(INFO    ) [15:51:56|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoAbaqusTsProvider -j Block_FEA_flat --cycle 1
+(INFO    ) [15:51:56|hook] Timestamp file written successfully
+(INFO    ) [15:51:56|tosca_driver] Module hook has finished with exit code 0
+(INFO    ) [15:51:56|tosca_driver] Fe-solver abaqus finished with job Block_FEA_flat.inp
+(INFO    ) [15:51:56|tosca_driver] Elapsed time (inc. overhead): 0:00:00.200243
+(INFO    ) [15:51:56|tosca_driver] Elapsed time of abaqus : 0:00:00.250278  -  current time : 15:51:56.549002
+(INFO    ) [15:51:56|tosca_driver] Solution complete
+(INFO    ) [15:51:56|tosca_driver] Checking solver output file: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.msg
+(INFO    ) [15:51:56|tosca_driver] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [15:51:56|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoOdbToVtmMain --solver abaqus --loglevel INFO --format_matrices sim --cycle 1 --perturbation 0 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:51:56|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:56|odb_to_vtm] Reading Abaqus ODB output file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:51:56|odb_to_vtm] Reading results from the Abaqus result database /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.odb
+(INFO    ) [15:51:56|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm finished successfully
+(INFO    ) [15:51:56|tosca_driver] Module SMATsoOdbToVtmMain has finished with exit code 0
+(NOTICE  ) [15:51:56|tosca_driver] Starting Tosca Structure optimization module - design cycle 1
+(INFO    ) [15:51:56|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaOpt --loglevel INFO
+(INFO    ) [15:51:56|tosca_opt] SIMULIA Tosca Structure.tosca_opt - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:56|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:56|tosca_opt] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:51:56|tosca_opt] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:51:56|tosca_opt] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:51:56|tosca_opt] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:51:56|tosca_opt] |                        _____                                             |
+(INFO    ) [15:51:56|tosca_opt] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:51:56|tosca_opt] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:51:56|tosca_opt] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:51:56|tosca_opt] |              ___  _                   _                                  |
+(INFO    ) [15:51:56|tosca_opt] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:51:56|tosca_opt] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:51:56|tosca_opt] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:51:56|tosca_opt] |                                                                          |
+(INFO    ) [15:51:56|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:56|tosca_opt] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:51:56|tosca_opt] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:51:56|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | Begin of DESIGN CYCLE NUMBER: 1                                          |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] Checking for existence of results
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | ANALYZE VALUE OF VARIABLES before OPTIMIZATION                           |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | Convergence Criteria in Design Cycle 1                                   |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] Local objective function criterion : NOT_FULFILLED (Actual change / target:    0.00168/   0.00100)
+(INFO    ) [15:51:57|tosca_opt] Local design variables criterion   : NOT_FULFILLED (Actual change / target:    0.00737/   0.00500)
+(INFO    ) [15:51:57|tosca_opt] Global stop criterion              : NOT_FULFILLED (Max number of design cycles :  20)
+(INFO    ) [15:51:57|tosca_opt] 
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | ANALYZE VALUE OF VARIABLES after OPTIMIZATION                            |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | VARIABLES and DESIGN RESPONSES                                           |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt]  DRESP_STRAIN_ENERGY                       :    2.9043
+(INFO    ) [15:51:57|tosca_opt]  DRESP_VOLUME                              :    39981.
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | Report of OPTIMIZATION Results                                           |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt]  DESIGN CYCLE                :   1
+(INFO    ) [15:51:57|tosca_opt]  OPTIMIZE name               : TOPOLOGY_OPT
+(INFO    ) [15:51:57|tosca_opt]  OBJ_FUNC name               : MIN_SE
+(INFO    ) [15:51:57|tosca_opt]  OBJ_FUNC value              :     2.90430
+(INFO    ) [15:51:57|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:57|tosca_opt] |     Name of OBJ_FUNC_TERM      |   Value    |  Weight   |   Reference    |
+(INFO    ) [15:51:57|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:57|tosca_opt] | DRESP_STRAIN_ENERGY            | 2.9043     | 1.0       | 0.0            |
+(INFO    ) [15:51:57|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:57|tosca_opt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [15:51:57|tosca_opt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [15:51:57|tosca_opt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [15:51:57|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:57|tosca_opt] |  Name of CONSTRAINT  |  Act. Value  | Op.  | Target  |   Norm   | Status |
+(INFO    ) [15:51:57|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:57|tosca_opt] | VOL_CONSTRAINT       | 0.499762     | <=   | 0.5     | 0.999525 | TRUE   |
+(INFO    ) [15:51:57|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] | End of DESIGN CYCLE NUMBER: 1                                            |
+(INFO    ) [15:51:57|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:57|tosca_opt] Application finished successfully
+(INFO    ) [15:51:57|tosca_driver] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [15:51:57|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle 1 --onf_output ON
+(INFO    ) [15:51:57|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:57|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:51:58|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:51:58|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(NOTICE  ) [15:51:58|tosca_driver] Design cycle 2 started on 2026-02-19
+(NOTICE  ) [15:51:58|tosca_driver] Starting Abaqus analysis - design cycle 2
+(INFO    ) [15:51:58|tosca_driver] Activating the solver
+(INFO    ) [15:51:58|tosca_driver] Calling hooks before module abaqus
+(INFO    ) [15:51:58|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoAbaqusTsProvider -j Block_FEA_flat --cycle 2
+(INFO    ) [15:51:58|hook] Timestamp file written successfully
+(INFO    ) [15:51:58|tosca_driver] Module hook has finished with exit code 0
+(INFO    ) [15:51:58|tosca_driver] Fe-solver abaqus finished with job Block_FEA_flat.inp
+(INFO    ) [15:51:58|tosca_driver] Elapsed time (inc. overhead): 0:00:00.200304
+(INFO    ) [15:51:58|tosca_driver] Elapsed time of abaqus : 0:00:00.268845  -  current time : 15:51:58.494841
+(INFO    ) [15:51:58|tosca_driver] Solution complete
+(INFO    ) [15:51:58|tosca_driver] Checking solver output file: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.msg
+(INFO    ) [15:51:58|tosca_driver] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [15:51:58|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoOdbToVtmMain --solver abaqus --loglevel INFO --format_matrices sim --cycle 2 --perturbation 0 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:51:58|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:58|odb_to_vtm] Reading Abaqus ODB output file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:51:58|odb_to_vtm] Reading results from the Abaqus result database /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.odb
+(INFO    ) [15:51:58|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm finished successfully
+(INFO    ) [15:51:58|tosca_driver] Module SMATsoOdbToVtmMain has finished with exit code 0
+(NOTICE  ) [15:51:58|tosca_driver] Starting Tosca Structure optimization module - design cycle 2
+(INFO    ) [15:51:58|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaOpt --loglevel INFO
+(INFO    ) [15:51:58|tosca_opt] SIMULIA Tosca Structure.tosca_opt - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:51:58|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:58|tosca_opt] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:51:58|tosca_opt] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:51:58|tosca_opt] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:51:58|tosca_opt] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:51:58|tosca_opt] |                        _____                                             |
+(INFO    ) [15:51:58|tosca_opt] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:51:58|tosca_opt] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:51:58|tosca_opt] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:51:58|tosca_opt] |              ___  _                   _                                  |
+(INFO    ) [15:51:58|tosca_opt] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:51:58|tosca_opt] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:51:58|tosca_opt] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:51:58|tosca_opt] |                                                                          |
+(INFO    ) [15:51:58|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:58|tosca_opt] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:51:58|tosca_opt] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:51:58|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | Begin of DESIGN CYCLE NUMBER: 2                                          |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] Checking for existence of results
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | ANALYZE VALUE OF VARIABLES before OPTIMIZATION                           |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | Convergence Criteria in Design Cycle 2                                   |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] Local objective function criterion : FULFILLED     (Actual change / target:    0.00043/   0.00100)
+(INFO    ) [15:51:59|tosca_opt] Local design variables criterion   : FULFILLED     (Actual change / target:    0.00439/   0.00500)
+(INFO    ) [15:51:59|tosca_opt] Global stop criterion              : NOT_FULFILLED (Max number of design cycles :  20)
+(INFO    ) [15:51:59|tosca_opt] 
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | ANALYZE VALUE OF VARIABLES after OPTIMIZATION                            |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | VARIABLES and DESIGN RESPONSES                                           |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt]  DRESP_STRAIN_ENERGY                       :    2.9055
+(INFO    ) [15:51:59|tosca_opt]  DRESP_VOLUME                              :    39993.
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | Report of OPTIMIZATION Results                                           |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt]  DESIGN CYCLE                :   2
+(INFO    ) [15:51:59|tosca_opt]  OPTIMIZE name               : TOPOLOGY_OPT
+(INFO    ) [15:51:59|tosca_opt]  OBJ_FUNC name               : MIN_SE
+(INFO    ) [15:51:59|tosca_opt]  OBJ_FUNC value              :     2.90554
+(INFO    ) [15:51:59|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:59|tosca_opt] |     Name of OBJ_FUNC_TERM      |   Value    |   Weight   |   Reference   |
+(INFO    ) [15:51:59|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:59|tosca_opt] | DRESP_STRAIN_ENERGY            | 2.90554    | 1.0        | 0.0           |
+(INFO    ) [15:51:59|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:59|tosca_opt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [15:51:59|tosca_opt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [15:51:59|tosca_opt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [15:51:59|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:59|tosca_opt] |  Name of CONSTRAINT  |  Act. Value  | Op.  | Target  |   Norm   | Status |
+(INFO    ) [15:51:59|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:59|tosca_opt] | VOL_CONSTRAINT       | 0.499916     | <=   | 0.5     | 0.999833 | TRUE   |
+(INFO    ) [15:51:59|tosca_opt]  ==========================================================================
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:51:59|tosca_opt] | End of DESIGN CYCLE NUMBER: 2                                            |
+(INFO    ) [15:51:59|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:00|tosca_opt] Application finished successfully
+(INFO    ) [15:52:00|tosca_driver] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [15:52:00|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle 2 --onf_output ON
+(INFO    ) [15:52:00|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:00|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:52:00|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:52:00|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(NOTICE  ) [15:52:00|tosca_driver] Design cycle 3 started on 2026-02-19
+(NOTICE  ) [15:52:00|tosca_driver] Starting Abaqus analysis - design cycle 3
+(INFO    ) [15:52:00|tosca_driver] Activating the solver
+(INFO    ) [15:52:00|tosca_driver] Calling hooks before module abaqus
+(INFO    ) [15:52:00|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoAbaqusTsProvider -j Block_FEA_flat --cycle 3
+(INFO    ) [15:52:00|hook] Timestamp file written successfully
+(INFO    ) [15:52:00|tosca_driver] Module hook has finished with exit code 0
+(INFO    ) [15:52:00|tosca_driver] Fe-solver abaqus finished with job Block_FEA_flat.inp
+(INFO    ) [15:52:00|tosca_driver] Elapsed time (inc. overhead): 0:00:00.200343
+(INFO    ) [15:52:00|tosca_driver] Elapsed time of abaqus : 0:00:00.259407  -  current time : 15:52:00.657640
+(INFO    ) [15:52:00|tosca_driver] Solution complete
+(INFO    ) [15:52:00|tosca_driver] Checking solver output file: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.msg
+(INFO    ) [15:52:00|tosca_driver] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [15:52:00|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoOdbToVtmMain --solver abaqus --loglevel INFO --format_matrices sim --cycle 3 --perturbation 0 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:00|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:00|odb_to_vtm] Reading Abaqus ODB output file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:00|odb_to_vtm] Reading results from the Abaqus result database /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.odb
+(INFO    ) [15:52:00|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm finished successfully
+(INFO    ) [15:52:00|tosca_driver] Module SMATsoOdbToVtmMain has finished with exit code 0
+(NOTICE  ) [15:52:00|tosca_driver] Starting Tosca Structure optimization module - design cycle 3
+(INFO    ) [15:52:00|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaOpt --loglevel INFO
+(INFO    ) [15:52:01|tosca_opt] SIMULIA Tosca Structure.tosca_opt - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:52:01|tosca_opt] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:52:01|tosca_opt] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:52:01|tosca_opt] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:52:01|tosca_opt] |                        _____                                             |
+(INFO    ) [15:52:01|tosca_opt] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:52:01|tosca_opt] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:52:01|tosca_opt] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:52:01|tosca_opt] |              ___  _                   _                                  |
+(INFO    ) [15:52:01|tosca_opt] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:52:01|tosca_opt] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:52:01|tosca_opt] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:52:01|tosca_opt] |                                                                          |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:52:01|tosca_opt] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] | Begin of DESIGN CYCLE NUMBER: 3                                          |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] Checking for existence of results
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] | ANALYZE VALUE OF VARIABLES before OPTIMIZATION                           |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] | Convergence Criteria in Design Cycle 3                                   |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] Local objective function criterion : NOT_FULFILLED (Actual change / target:    0.00186/   0.00100)
+(INFO    ) [15:52:01|tosca_opt] Local design variables criterion   : FULFILLED     (Actual change / target:    0.00303/   0.00500)
+(INFO    ) [15:52:01|tosca_opt] Global stop criterion              : NOT_FULFILLED (Max number of design cycles :  20)
+(INFO    ) [15:52:01|tosca_opt] 
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] | ANALYZE VALUE OF VARIABLES after OPTIMIZATION                            |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] | VARIABLES and DESIGN RESPONSES                                           |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt]  DRESP_STRAIN_ENERGY                       :    2.9110
+(INFO    ) [15:52:01|tosca_opt]  DRESP_VOLUME                              :    39997.
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt] | Report of OPTIMIZATION Results                                           |
+(INFO    ) [15:52:01|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:01|tosca_opt]  DESIGN CYCLE                :   3
+(INFO    ) [15:52:01|tosca_opt]  OPTIMIZE name               : TOPOLOGY_OPT
+(INFO    ) [15:52:01|tosca_opt]  OBJ_FUNC name               : MIN_SE
+(INFO    ) [15:52:01|tosca_opt]  OBJ_FUNC value              :     2.91096
+(INFO    ) [15:52:01|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:01|tosca_opt] |     Name of OBJ_FUNC_TERM      |   Value    |   Weight   |   Reference   |
+(INFO    ) [15:52:01|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:01|tosca_opt] | DRESP_STRAIN_ENERGY            | 2.91096    | 1.0        | 0.0           |
+(INFO    ) [15:52:01|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:01|tosca_opt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [15:52:01|tosca_opt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [15:52:01|tosca_opt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [15:52:01|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:01|tosca_opt] |  Name of CONSTRAINT  |  Act. Value  | Op.  | Target  |   Norm   | Status |
+(INFO    ) [15:52:01|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:01|tosca_opt] | VOL_CONSTRAINT       | 0.499959     | <=   | 0.5     | 0.999918 | TRUE   |
+(INFO    ) [15:52:01|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:02|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:02|tosca_opt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [15:52:02|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:02|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:02|tosca_opt] | End of DESIGN CYCLE NUMBER: 3                                            |
+(INFO    ) [15:52:02|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:02|tosca_opt] Application finished successfully
+(INFO    ) [15:52:02|tosca_driver] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [15:52:02|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle 3 --onf_output ON
+(INFO    ) [15:52:02|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:02|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:52:02|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:52:02|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(NOTICE  ) [15:52:02|tosca_driver] Design cycle 4 started on 2026-02-19
+(NOTICE  ) [15:52:02|tosca_driver] Starting Abaqus analysis - design cycle 4
+(INFO    ) [15:52:02|tosca_driver] Activating the solver
+(INFO    ) [15:52:02|tosca_driver] Calling hooks before module abaqus
+(INFO    ) [15:52:02|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoAbaqusTsProvider -j Block_FEA_flat --cycle 4
+(INFO    ) [15:52:02|hook] Timestamp file written successfully
+(INFO    ) [15:52:02|tosca_driver] Module hook has finished with exit code 0
+(INFO    ) [15:52:02|tosca_driver] Fe-solver abaqus finished with job Block_FEA_flat.inp
+(INFO    ) [15:52:02|tosca_driver] Elapsed time (inc. overhead): 0:00:00.200341
+(INFO    ) [15:52:02|tosca_driver] Elapsed time of abaqus : 0:00:00.251918  -  current time : 15:52:02.801895
+(INFO    ) [15:52:02|tosca_driver] Solution complete
+(INFO    ) [15:52:02|tosca_driver] Checking solver output file: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.msg
+(INFO    ) [15:52:02|tosca_driver] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [15:52:02|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoOdbToVtmMain --solver abaqus --loglevel INFO --format_matrices sim --cycle 4 --perturbation 0 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:02|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:02|odb_to_vtm] Reading Abaqus ODB output file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:02|odb_to_vtm] Reading results from the Abaqus result database /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.odb
+(INFO    ) [15:52:03|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm finished successfully
+(INFO    ) [15:52:03|tosca_driver] Module SMATsoOdbToVtmMain has finished with exit code 0
+(NOTICE  ) [15:52:03|tosca_driver] Starting Tosca Structure optimization module - design cycle 4
+(INFO    ) [15:52:03|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaOpt --loglevel INFO
+(INFO    ) [15:52:03|tosca_opt] SIMULIA Tosca Structure.tosca_opt - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:52:03|tosca_opt] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:52:03|tosca_opt] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:52:03|tosca_opt] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:52:03|tosca_opt] |                        _____                                             |
+(INFO    ) [15:52:03|tosca_opt] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:52:03|tosca_opt] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:52:03|tosca_opt] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:52:03|tosca_opt] |              ___  _                   _                                  |
+(INFO    ) [15:52:03|tosca_opt] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:52:03|tosca_opt] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:52:03|tosca_opt] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:52:03|tosca_opt] |                                                                          |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:52:03|tosca_opt] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] | Begin of DESIGN CYCLE NUMBER: 4                                          |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] Checking for existence of results
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] | ANALYZE VALUE OF VARIABLES before OPTIMIZATION                           |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] | Convergence Criteria in Design Cycle 4                                   |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] Optimization converged. Both criteria checked.
+(INFO    ) [15:52:03|tosca_opt] Local objective function criterion : NOT_FULFILLED (Actual change / target:    0.00162/   0.00100)
+(INFO    ) [15:52:03|tosca_opt] Local design variables criterion   : FULFILLED     (Actual change / target:    0.00227/   0.00500)
+(INFO    ) [15:52:03|tosca_opt] Global stop criterion              : NOT_FULFILLED (Max number of design cycles :  20)
+(INFO    ) [15:52:03|tosca_opt] 
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] | ANALYZE VALUE OF VARIABLES after OPTIMIZATION                            |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] | VARIABLES and DESIGN RESPONSES                                           |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt]  DRESP_STRAIN_ENERGY                       :    2.9157
+(INFO    ) [15:52:03|tosca_opt]  DRESP_VOLUME                              :    39998.
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt] | Report of OPTIMIZATION Results                                           |
+(INFO    ) [15:52:03|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:03|tosca_opt]  DESIGN CYCLE                :   4
+(INFO    ) [15:52:03|tosca_opt]  OPTIMIZE name               : TOPOLOGY_OPT
+(INFO    ) [15:52:03|tosca_opt]  OBJ_FUNC name               : MIN_SE
+(INFO    ) [15:52:03|tosca_opt]  OBJ_FUNC value              :     2.91567
+(INFO    ) [15:52:03|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:03|tosca_opt] |     Name of OBJ_FUNC_TERM      |   Value    |   Weight   |   Reference   |
+(INFO    ) [15:52:03|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:03|tosca_opt] | DRESP_STRAIN_ENERGY            | 2.91567    | 1.0        | 0.0           |
+(INFO    ) [15:52:03|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:03|tosca_opt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [15:52:03|tosca_opt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [15:52:03|tosca_opt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [15:52:03|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:03|tosca_opt] |  Name of CONSTRAINT  |  Act. Value  | Op. | Target  |   Norm   | Status  |
+(INFO    ) [15:52:03|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:03|tosca_opt] | VOL_CONSTRAINT       | 0.49998      | <=  | 0.5     | 0.99996  | TRUE    |
+(INFO    ) [15:52:03|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:04|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:04|tosca_opt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [15:52:04|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:04|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:04|tosca_opt] | End of DESIGN CYCLE NUMBER: 4                                            |
+(INFO    ) [15:52:04|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:04|tosca_opt] Application finished successfully
+(INFO    ) [15:52:04|tosca_driver] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [15:52:04|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle 4 --onf_output ON
+(INFO    ) [15:52:04|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:04|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:52:04|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:52:04|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(NOTICE  ) [15:52:04|tosca_driver] Design cycle 5 started on 2026-02-19
+(NOTICE  ) [15:52:04|tosca_driver] Starting Abaqus analysis - design cycle 5
+(INFO    ) [15:52:04|tosca_driver] Activating the solver
+(INFO    ) [15:52:04|tosca_driver] Calling hooks before module abaqus
+(INFO    ) [15:52:04|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoAbaqusTsProvider -j Block_FEA_flat --cycle 5
+(INFO    ) [15:52:04|hook] Timestamp file written successfully
+(INFO    ) [15:52:04|tosca_driver] Module hook has finished with exit code 0
+(INFO    ) [15:52:04|tosca_driver] Fe-solver abaqus finished with job Block_FEA_flat.inp
+(INFO    ) [15:52:04|tosca_driver] Elapsed time (inc. overhead): 0:00:00.200348
+(INFO    ) [15:52:04|tosca_driver] Elapsed time of abaqus : 0:00:00.249038  -  current time : 15:52:04.854042
+(INFO    ) [15:52:04|tosca_driver] Solution complete
+(INFO    ) [15:52:04|tosca_driver] Checking solver output file: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.msg
+(INFO    ) [15:52:04|tosca_driver] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [15:52:04|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoOdbToVtmMain --solver abaqus --loglevel INFO --format_matrices sim --cycle 5 --perturbation 0 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:04|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:05|odb_to_vtm] Reading Abaqus ODB output file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:05|odb_to_vtm] Reading results from the Abaqus result database /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.odb
+(INFO    ) [15:52:05|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm finished successfully
+(INFO    ) [15:52:05|tosca_driver] Module SMATsoOdbToVtmMain has finished with exit code 0
+(NOTICE  ) [15:52:05|tosca_driver] Starting Tosca Structure optimization module - design cycle 5
+(INFO    ) [15:52:05|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaOpt --loglevel INFO
+(INFO    ) [15:52:05|tosca_opt] SIMULIA Tosca Structure.tosca_opt - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:52:05|tosca_opt] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:52:05|tosca_opt] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:52:05|tosca_opt] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:52:05|tosca_opt] |                        _____                                             |
+(INFO    ) [15:52:05|tosca_opt] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:52:05|tosca_opt] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:52:05|tosca_opt] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:52:05|tosca_opt] |              ___  _                   _                                  |
+(INFO    ) [15:52:05|tosca_opt] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:52:05|tosca_opt] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:52:05|tosca_opt] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:52:05|tosca_opt] |                                                                          |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:52:05|tosca_opt] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] | Begin of DESIGN CYCLE NUMBER: 5                                          |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] Checking for existence of results
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] | ANALYZE VALUE OF VARIABLES before OPTIMIZATION                           |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] | Convergence Criteria in Design Cycle 5                                   |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] Optimization converged. Both criteria checked.
+(INFO    ) [15:52:05|tosca_opt] Local objective function criterion : NOT_FULFILLED (Actual change / target:    0.00111/   0.00100)
+(INFO    ) [15:52:05|tosca_opt] Local design variables criterion   : FULFILLED     (Actual change / target:    0.00175/   0.00500)
+(INFO    ) [15:52:05|tosca_opt] Global stop criterion              : NOT_FULFILLED (Max number of design cycles :  20)
+(INFO    ) [15:52:05|tosca_opt] 
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] | ANALYZE VALUE OF VARIABLES after OPTIMIZATION                            |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] | VARIABLES and DESIGN RESPONSES                                           |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt]  DRESP_STRAIN_ENERGY                       :    2.9189
+(INFO    ) [15:52:05|tosca_opt]  DRESP_VOLUME                              :    39999.
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt] | Report of OPTIMIZATION Results                                           |
+(INFO    ) [15:52:05|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:05|tosca_opt]  DESIGN CYCLE                :   5
+(INFO    ) [15:52:05|tosca_opt]  OPTIMIZE name               : TOPOLOGY_OPT
+(INFO    ) [15:52:05|tosca_opt]  OBJ_FUNC name               : MIN_SE
+(INFO    ) [15:52:05|tosca_opt]  OBJ_FUNC value              :     2.91892
+(INFO    ) [15:52:05|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:05|tosca_opt] |     Name of OBJ_FUNC_TERM      |   Value    |   Weight   |   Reference   |
+(INFO    ) [15:52:05|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:05|tosca_opt] | DRESP_STRAIN_ENERGY            | 2.91892    | 1.0        | 0.0           |
+(INFO    ) [15:52:05|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:05|tosca_opt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [15:52:05|tosca_opt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [15:52:05|tosca_opt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [15:52:05|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:05|tosca_opt] |  Name of CONSTRAINT  |  Act. Value  | Op.  | Target  |   Norm   | Status |
+(INFO    ) [15:52:05|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:05|tosca_opt] | VOL_CONSTRAINT       | 0.499989     | <=   | 0.5     | 0.999978 | TRUE   |
+(INFO    ) [15:52:05|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:06|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:06|tosca_opt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [15:52:06|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:06|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:06|tosca_opt] | End of DESIGN CYCLE NUMBER: 5                                            |
+(INFO    ) [15:52:06|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:06|tosca_opt] Application finished successfully
+(INFO    ) [15:52:06|tosca_driver] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [15:52:06|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle 5 --onf_output ON
+(INFO    ) [15:52:06|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:06|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:52:06|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:52:06|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(NOTICE  ) [15:52:06|tosca_driver] Design cycle 6 started on 2026-02-19
+(NOTICE  ) [15:52:06|tosca_driver] Starting Abaqus analysis - design cycle 6
+(INFO    ) [15:52:06|tosca_driver] Activating the solver
+(INFO    ) [15:52:06|tosca_driver] Calling hooks before module abaqus
+(INFO    ) [15:52:06|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoAbaqusTsProvider -j Block_FEA_flat --cycle 6
+(INFO    ) [15:52:06|hook] Timestamp file written successfully
+(INFO    ) [15:52:06|tosca_driver] Module hook has finished with exit code 0
+(INFO    ) [15:52:06|tosca_driver] Fe-solver abaqus finished with job Block_FEA_flat.inp
+(INFO    ) [15:52:06|tosca_driver] Elapsed time (inc. overhead): 0:00:00.200355
+(INFO    ) [15:52:06|tosca_driver] Elapsed time of abaqus : 0:00:00.254213  -  current time : 15:52:06.991991
+(INFO    ) [15:52:06|tosca_driver] Solution complete
+(INFO    ) [15:52:06|tosca_driver] Checking solver output file: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.msg
+(INFO    ) [15:52:06|tosca_driver] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [15:52:06|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoOdbToVtmMain --solver abaqus --loglevel INFO --format_matrices sim --cycle 6 --perturbation 0 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:07|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:07|odb_to_vtm] Reading Abaqus ODB output file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat
+(INFO    ) [15:52:07|odb_to_vtm] Reading results from the Abaqus result database /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/Block_FEA_flat.odb
+(INFO    ) [15:52:07|odb_to_vtm] SIMULIA Tosca Structure.odb_to_vtm finished successfully
+(INFO    ) [15:52:07|tosca_driver] Module SMATsoOdbToVtmMain has finished with exit code 0
+(NOTICE  ) [15:52:07|tosca_driver] Starting Tosca Structure optimization module - design cycle 6
+(INFO    ) [15:52:07|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoToscaOpt --loglevel INFO
+(INFO    ) [15:52:07|tosca_opt] SIMULIA Tosca Structure.tosca_opt - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:07|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:07|tosca_opt] |                ___  ___  __  __  _   _  _     ___    _                   |
+(INFO    ) [15:52:07|tosca_opt] |               / __||_ _||  \/  || | | || |   |_ _|  /_\                  |
+(INFO    ) [15:52:07|tosca_opt] |               \__ \ | | | |\/| || |_| || |__  | |  / _ \                 |
+(INFO    ) [15:52:07|tosca_opt] |               |___/|___||_|  |_| \___/ |____||___|/_/ \_\                |
+(INFO    ) [15:52:07|tosca_opt] |                        _____                                             |
+(INFO    ) [15:52:07|tosca_opt] |                       |_   _|___  ___ __  __ _                           |
+(INFO    ) [15:52:07|tosca_opt] |                         | | / _ \(_-</ _|/ _` |                          |
+(INFO    ) [15:52:07|tosca_opt] |                         |_| \___//__/\__|\__,_|                          |
+(INFO    ) [15:52:07|tosca_opt] |              ___  _                   _                                  |
+(INFO    ) [15:52:07|tosca_opt] |             / __|| |_  _ _  _  _  __ | |_  _  _  _ _  ___                |
+(INFO    ) [15:52:07|tosca_opt] |             \__ \|  _|| `_|| || |/ _||  _|| || || `_|/ -_)               |
+(INFO    ) [15:52:07|tosca_opt] |             |___/ \__||_|   \_,_|\__| \__| \_,_||_|  \___|               |
+(INFO    ) [15:52:07|tosca_opt] |                                                                          |
+(INFO    ) [15:52:07|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:07|tosca_opt] | Version 3DEXPERIENCE R2025x                                              |
+(INFO    ) [15:52:07|tosca_opt] | DATE:   2026-02-19                                                       |
+(INFO    ) [15:52:07|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:07|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:07|tosca_opt] | Begin of DESIGN CYCLE NUMBER: 6                                          |
+(INFO    ) [15:52:07|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:07|tosca_opt] Checking for existence of results
+(INFO    ) [15:52:07|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:07|tosca_opt] | ANALYZE VALUE OF VARIABLES before OPTIMIZATION                           |
+(INFO    ) [15:52:07|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] | Convergence Criteria in Design Cycle 6                                   |
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] Optimization converged. Both criteria checked.
+(INFO    ) [15:52:08|tosca_opt] Local objective function criterion : FULFILLED     (Actual change / target:    0.00052/   0.00100)
+(INFO    ) [15:52:08|tosca_opt] Local design variables criterion   : FULFILLED     (Actual change / target:    0.00153/   0.00500)
+(INFO    ) [15:52:08|tosca_opt] Global stop criterion              : NOT_FULFILLED (Max number of design cycles :  20)
+(INFO    ) [15:52:08|tosca_opt] 
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] | ANALYZE VALUE OF VARIABLES after OPTIMIZATION                            |
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] | VARIABLES and DESIGN RESPONSES                                           |
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt]  DRESP_STRAIN_ENERGY                       :    2.9204
+(INFO    ) [15:52:08|tosca_opt]  DRESP_VOLUME                              :    39999.
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] | Report of OPTIMIZATION Results                                           |
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt]  DESIGN CYCLE                :   6
+(INFO    ) [15:52:08|tosca_opt]  OPTIMIZE name               : TOPOLOGY_OPT
+(INFO    ) [15:52:08|tosca_opt]  OBJ_FUNC name               : MIN_SE
+(INFO    ) [15:52:08|tosca_opt]  OBJ_FUNC value              :     2.92044
+(INFO    ) [15:52:08|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:08|tosca_opt] |     Name of OBJ_FUNC_TERM      |   Value    |   Weight   |   Reference   |
+(INFO    ) [15:52:08|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:08|tosca_opt] | DRESP_STRAIN_ENERGY            | 2.92044    | 1.0        | 0.0           |
+(INFO    ) [15:52:08|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:08|tosca_opt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [15:52:08|tosca_opt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [15:52:08|tosca_opt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [15:52:08|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:08|tosca_opt] |  Name of CONSTRAINT  |  Act. Value  | Op.  | Target  |   Norm   | Status |
+(INFO    ) [15:52:08|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:08|tosca_opt] | VOL_CONSTRAINT       | 0.499994     | <=   | 0.5     | 0.999987 | TRUE   |
+(INFO    ) [15:52:08|tosca_opt]  ==========================================================================
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] | STOP CONDITION satisfied for all OPTIMIZATION_AREA(s)                    |
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] | End of DESIGN CYCLE NUMBER: 6                                            |
+(INFO    ) [15:52:08|tosca_opt]  --------------------------------------------------------------------------
+(INFO    ) [15:52:08|tosca_opt] Application finished successfully
+(INFO    ) [15:52:08|tosca_driver] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [15:52:08|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtOptResExportTool --loglevel INFO --cycle 6 --onf_output ON
+(INFO    ) [15:52:08|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:08|opt_res_export_tool] Extracting results from opt_res_database
+(INFO    ) [15:52:08|opt_res_export_tool] SIMULIA Tosca Structure.opt_res_export_tool finished successfully
+(INFO    ) [15:52:08|tosca_driver] Module SMATrtOptResExportTool has finished with exit code 0
+(NOTICE  ) [15:52:08|tosca_driver] Last design cycle completed
+(NOTICE  ) [15:52:08|tosca_driver] Stopping solver process
+(INFO    ) [15:52:09|abaqus] Thu 19 Feb 2026 03:52:08 PM MST
+(INFO    ) [15:52:09|abaqus] End Abaqus/Standard Analysis
+(INFO    ) [15:52:09|abaqus] Begin SIM Wrap-up
+(INFO    ) [15:52:09|abaqus] Thu 19 Feb 2026 03:52:09 PM MST
+(INFO    ) [15:52:09|abaqus] Run SMASimUtility
+(INFO    ) [15:52:09|abaqus] Thu 19 Feb 2026 03:52:09 PM MST
+(INFO    ) [15:52:09|abaqus] End SIM Wrap-up
+(INFO    ) [15:52:09|abaqus] Abaqus JOB Block_FEA_flat COMPLETED
+(INFO    ) [15:52:09|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:52:09|tosca_driver] | Solver standard output                                                   |
+(INFO    ) [15:52:09|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [15:52:09|abaqus] Analysis initiated from SIMULIA established products
+(INFO    ) [15:52:09|abaqus] Abaqus JOB Block_FEA_flat
+(INFO    ) [15:52:09|abaqus] Abaqus 2025
+(INFO    ) [15:52:09|abaqus] Abaqus License Manager checked out the following licenses:
+(INFO    ) [15:52:09|abaqus] Abaqus/Standard checked out 5 tokens from Flexnet server ls1.chpc.utah.edu.
+(INFO    ) [15:52:09|abaqus] <214 out of 237 licenses remain available>.
+(INFO    ) [15:52:09|abaqus] Begin Abaqus/Standard Analysis
+(INFO    ) [15:52:09|abaqus] Thu 19 Feb 2026 03:51:52 PM MST
+(INFO    ) [15:52:09|abaqus] Run abaqusstd
+(INFO    ) [15:52:09|abaqus] Thu 19 Feb 2026 03:52:08 PM MST
+(INFO    ) [15:52:09|abaqus] End Abaqus/Standard Analysis
+(INFO    ) [15:52:09|abaqus] Begin SIM Wrap-up
+(INFO    ) [15:52:09|abaqus] Thu 19 Feb 2026 03:52:09 PM MST
+(INFO    ) [15:52:09|abaqus] Run SMASimUtility
+(INFO    ) [15:52:09|abaqus] Thu 19 Feb 2026 03:52:09 PM MST
+(INFO    ) [15:52:09|abaqus] End SIM Wrap-up
+(INFO    ) [15:52:09|abaqus] Abaqus JOB Block_FEA_flat COMPLETED
+(NOTICE  ) [15:52:09|tosca_driver] Starting Tosca Structure report module
+(INFO    ) [15:52:09|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtReportMain --loglevel INFO --add_user_data 001_OBJ_FUNC_REPORT_1.conf,001_OBJ_FUNC_REPORT_1.tab,002_CONSTR_VAL_REPORT_1.conf,002_CONSTR_VAL_REPORT_1.tab,003_CONSTR_VAL_NORM_REPORT_1.conf,003_CONSTR_VAL_NORM_REPORT_1.tab,004_VAR_DRESP_VAL_REPORT.conf,004_VAR_DRESP_VAL_REPORT.tab,005_VAR_DRESP_VAL_REPORT.conf,005_VAR_DRESP_VAL_REPORT.tab,006_VAR_DRESP_VAL_REPORT.conf,006_VAR_DRESP_VAL_REPORT.tab --input_file /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/TOSCA_POST/block_7e_tosca_ALL_ELEMENTS_report.par
+(INFO    ) [15:52:09|report] SIMULIA Tosca Structure.report - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:09|report] Checked out 2 tokens tosca_report from 27004@ls1.chpc.utah.edu,27004@ls2.chpc.utah.edu,27004@ls3.chpc.utah.edu
+(INFO    ) [15:52:09|report] Creating vtfx file "TOSCA_POST/block_7e_tosca_ALL_ELEMENTS_report.vtfx"
+(INFO    ) [15:52:09|report] VTFx file "TOSCA_POST/block_7e_tosca_ALL_ELEMENTS_report.vtfx" with results has been successfully created
+(INFO    ) [15:52:09|report] SIMULIA Tosca Structure.report finished successfully
+(INFO    ) [15:52:09|tosca_driver] Module SMATrtReportMain has finished with exit code 0
+(INFO    ) [15:52:09|tosca_driver] Number of smooth commands found: 1
+(NOTICE  ) [15:52:09|tosca_driver] Starting Tosca Structure smooth module
+(INFO    ) [15:52:09|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATrtTStructSmoothMain --loglevel INFO /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment7/run_7e/block_7e_tosca/TOSCA_POST/ISO_SMOOTHING
+(INFO    ) [15:52:09|smooth] SIMULIA Tosca Structure.smooth - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [15:52:09|smooth] Checked out 2 tokens tosca_smooth from 27004@ls1.chpc.utah.edu,27004@ls2.chpc.utah.edu,27004@ls3.chpc.utah.edu
+(INFO    ) [15:52:09|smooth] Processing SMOOTH task: ISO_SMOOTHING
+(INFO    ) [15:52:09|smooth] Preparations for isocut finished
+(INFO    ) [15:52:09|smooth] ISO cut surface generation finished
+(INFO    ) [15:52:09|smooth] Surface generation finished
+(INFO    ) [15:52:09|smooth] Model data released
+(INFO    ) [15:52:09|smooth] Surface orientation test finished
+(INFO    ) [15:52:09|smooth] Performing 10 cycles of smoothing (type=Border), 0 nodes are checked...
+(INFO    ) [15:52:09|smooth] Performing 10 cycles of smoothing (type=Laplace), 0 nodes are checked...
+(INFO    ) [15:52:09|smooth] Smoothing finished
+(INFO    ) [15:52:10|smooth] Maximal reduction rate 35%% instead of 60%% is attained, no node can be chosen for reduction
+(INFO    ) [15:52:10|smooth] Reduction finished
+(INFO    ) [15:52:10|smooth] Isosurface successfully generated:
+(INFO    ) [15:52:10|smooth] - isovalue: 0.300
+(INFO    ) [15:52:10|smooth] - relative volume: 100.0%
+(INFO    ) [15:52:10|smooth] Writing to TOSCA_POST/ISO_SMOOTHING.stl
+(INFO    ) [15:52:10|smooth] SMOOTH task with ID_NAME = "ISO_SMOOTHING" finished successfully.
+(INFO    ) [15:52:10|smooth] SIMULIA Tosca Structure.smooth finished
+(INFO    ) [15:52:10|tosca_driver] Module SMATrtTStructSmoothMain has finished with exit code 0
+(NOTICE  ) [15:52:10|tosca_driver] Application finished successfully
+(INFO    ) [15:52:10|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [15:52:10|tosca_driver] Time consumption overview table
+(INFO    ) [15:52:10|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module       opt_res_export_tool: 0:00:01.214684 - 6.004% (8 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module                    smooth: 0:00:00.286528 - 1.416% (1 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module                    report: 0:00:00.324759 - 1.605% (1 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module                odb_to_vtm: 0:00:02.143258 - 10.593% (7 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module                 tosca_opt: 0:00:08.365262 - 41.346% (7 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module                tosca_prep: 0:00:01.027726 - 5.080% (1 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module                 fem_modif: 0:00:00.058798 - 0.291% (1 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module                fem_to_onf: 0:00:00.064112 - 0.317% (1 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for module               fem_include: 0:00:00.047376 - 0.234% (1 calls)
+(INFO    ) [15:52:10|tosca_driver] Cumulative elapsed time for fe-solver                 Abaqus: 0:00:04.795809 - 23.703% (1 calls)
+(INFO    ) [15:52:10|tosca_driver] Total elapsed time for this script                          : 0:00:01.904223 - 9.412%
+(INFO    ) [15:52:10|tosca_driver] Total elapsed time of Tosca Structure                       : 0:00:20.232535 - Current time 15:52:10.137455
+(INFO    ) [15:52:10|tosca_driver] --------------------------------------------------------------------------------------------------------------

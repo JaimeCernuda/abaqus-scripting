@@ -1,0 +1,192 @@
+============================================
+Experiment 8c: writeParAndInputFiles() Test
+Started: Thu Feb 19 17:14:31 MST 2026
+Node: notch309
+============================================
+CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8c
+
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<4 out of 11 licenses remain available>.
+Exit code: 0
+
+============================================
+Exit code: 0
+Finished: Thu Feb 19 17:14:39 MST 2026
+============================================
+
+Files in run_8c/:
+total 594
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 17:14 .
+drwxr-xr-x 2 u6074059 hochhalter   4096 Feb 19 17:14 ..
+-rw-r--r-- 1 u6074059 hochhalter   5285 Feb 19 17:14 abaqus.rpy
+-rwxr--r-- 1 u6074059 hochhalter   3384 Feb 19 17:14 Block_Proto.com
+-rw-r--r-- 1 u6074059 hochhalter   9710 Feb 19 17:14 Block_Proto.dat
+-rw-r--r-- 1 u6074059 hochhalter  76882 Feb 19 17:14 Block_Proto.inp
+-rwxr-xr-x 1 u6074059 hochhalter    695 Feb 19 17:14 Block_Proto.log
+-rw-r--r-- 1 u6074059 hochhalter   7838 Feb 19 17:14 Block_Proto.msg
+-rw-r--r-- 1 u6074059 hochhalter 423884 Feb 19 17:14 Block_Proto.odb
+-rw-r--r-- 1 u6074059 hochhalter   1218 Feb 19 17:14 Block_Proto.prt
+-rw-r--r-- 1 u6074059 hochhalter    435 Feb 19 17:14 Block_Proto.sta
+-rw-r--r-- 1 u6074059 hochhalter  69632 Feb 19 17:14 exp8c.cae
+-rw-r--r-- 1 u6074059 hochhalter   6325 Feb 19 17:14 exp8c.jnl
+
+=== abaqus.rpy (script output) ===
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-07.00.46 RELr427 198590
+# Run by u6074059 on Thu Feb 19 17:14:33 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.36719, 1.36719), width=201.25, 
+    height=135.625)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    '/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8c_write_par.py', 
+    __main__.__dict__)
+#: ======================================================================
+#:   EXPERIMENT 8c: writeParAndInputFiles() Test
+#:   Mesh size: 5.0
+#: ======================================================================
+#: ======================================================================
+#:   [1/5] Build model + optimization setup
+#: ======================================================================
+#:   Model built: 945 nodes, 640 elements
+#:   Frozen elements: 32
+#:   Optimization setup complete
+#: ======================================================================
+#:   [2/5] Variation A: save -> OptProcess -> writePar
+#: ======================================================================
+#:   Proto job 'Block_Proto' created
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8c/exp8c.cae".
+#:   Saved exp8c.cae
+#: The optimization process "BlockOpt" has been created.
+#:   OptimizationProcess 'BlockOpt' created
+#:   [FAIL] Variation A: KeyError - 'Block_Proto'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8c_write_par.py", line 181, in <module>
+#:     optProcess.writeParAndInputFiles()
+#: KeyError: 'Block_Proto'
+#: ======================================================================
+#:   [3/5] Variation B: OptProcess -> save -> writePar
+#: ======================================================================
+#: The optimization process "BlockOpt" has been created.
+#:   OptimizationProcess created (before save)
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8c/exp8c.cae".
+#:   Saved exp8c.cae (after OptProcess)
+#:   [FAIL] Variation B: KeyError - 'Block_Proto'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8c_write_par.py", line 227, in <module>
+#:     optProcess.writeParAndInputFiles()
+#: KeyError: 'Block_Proto'
+#: ======================================================================
+#:   [4/5] Variation C: writeInput -> OptProcess -> writePar
+#: ======================================================================
+#:   Proto job created
+#:   writeInput() done - Block_Proto.inp exists: True
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8c/exp8c.cae".
+#: The optimization process "BlockOpt" has been created.
+#:   OptimizationProcess created
+#:   [FAIL] Variation C: KeyError - 'Block_Proto'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8c_write_par.py", line 276, in <module>
+#:     optProcess.writeParAndInputFiles()
+#: KeyError: 'Block_Proto'
+#: ======================================================================
+#:   [5/5] Variation D: run FEA -> OptProcess -> writePar
+#: ======================================================================
+#:   Proto job created
+#:   Submitting FEA...
+#:   FEA completed. ODB exists: True
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8c/exp8c.cae".
+#: The optimization process "BlockOpt" has been created.
+#:   OptimizationProcess created
+#:   [FAIL] Variation D: KeyError - 'Block_Proto'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8c_write_par.py", line 328, in <module>
+#:     optProcess.writeParAndInputFiles()
+#: KeyError: 'Block_Proto'
+#: ======================================================================
+#:   Experiment 8c: ALL VARIATIONS FAILED
+#: ======================================================================
+#:   Files in working directory:
+#:     Block_Proto.com: 3384 bytes
+#:     Block_Proto.dat: 9710 bytes
+#:     Block_Proto.inp: 76882 bytes
+#:     Block_Proto.log: 695 bytes
+#:     Block_Proto.msg: 7838 bytes
+#:     Block_Proto.odb: 423884 bytes
+#:     Block_Proto.prt: 1218 bytes
+#:     Block_Proto.sta: 435 bytes
+#:     abaqus.rpy: 4952 bytes
+#:     abaqus_acis.log: 0 bytes
+#:     exp8c.cae: 1048576 bytes
+#:     exp8c.jnl: 6325 bytes
+#:     exp8c.rec: 471 bytes
+#* Exit code: 0
+#* File 
+#* "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8c_write_par.py", 
+#* line 348, in <module>
+#*     sys.exit(1)
+
+=== Block_Proto.inp (first 50 lines) ===
+*Heading
+** Job name: Block_Proto Model name: Model-1
+** Generated by: Abaqus/CAE 2025
+*Preprint, echo=NO, model=NO, history=NO, contact=NO
+**
+** PARTS
+**
+*Part, name=Block
+*Node
+      1,         100.,          40.,          20.
+      2,         100.,          35.,          20.
+      3,         100.,          30.,          20.
+      4,         100.,          25.,          20.
+      5,         100.,          20.,          20.
+      6,         100.,          15.,          20.
+      7,         100.,          10.,          20.
+      8,         100.,           5.,          20.
+      9,         100.,           0.,          20.
+     10,         100.,          40.,          15.
+     11,         100.,          35.,          15.
+     12,         100.,          30.,          15.
+     13,         100.,          25.,          15.
+     14,         100.,          20.,          15.
+     15,         100.,          15.,          15.
+     16,         100.,          10.,          15.
+     17,         100.,           5.,          15.
+     18,         100.,           0.,          15.
+     19,         100.,          40.,          10.
+     20,         100.,          35.,          10.
+     21,         100.,          30.,          10.
+     22,         100.,          25.,          10.
+     23,         100.,          20.,          10.
+     24,         100.,          15.,          10.
+     25,         100.,          10.,          10.
+     26,         100.,           5.,          10.
+     27,         100.,           0.,          10.
+     28,         100.,          40.,           5.
+     29,         100.,          35.,           5.
+     30,         100.,          30.,           5.
+     31,         100.,          25.,           5.
+     32,         100.,          20.,           5.
+     33,         100.,          15.,           5.
+     34,         100.,          10.,           5.
+     35,         100.,           5.,           5.
+     36,         100.,           0.,           5.
+     37,         100.,          40.,           0.
+     38,         100.,          35.,           0.
+     39,         100.,          30.,           0.
+     40,         100.,          25.,           0.
+     41,         100.,          20.,           0.
+...
+1667 Block_Proto.inp

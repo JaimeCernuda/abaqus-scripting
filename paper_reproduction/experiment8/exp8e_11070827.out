@@ -1,0 +1,291 @@
+============================================
+Experiment 8e: API -> Tosca CLI
+Started: Thu Feb 19 17:18:19 MST 2026
+Node: notch309
+============================================
+CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e
+
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<5 out of 11 licenses remain available>.
+
+============================================
+Exit code: 0
+Finished: Thu Feb 19 17:18:24 MST 2026
+============================================
+
+Files in run_8e/:
+total 157
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:18 .
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:18 ..
+-rw-r--r-- 1 u6074059 hochhalter  8454 Feb 19 17:18 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter  1556 Feb 19 17:18 authorization.log
+drwxr-xr-x 2 u6074059 hochhalter  4096 Feb 19 17:18 block_8e_tosca
+-rw-r--r-- 1 u6074059 hochhalter 76885 Feb 19 17:18 Block_Fallback.inp
+-rw-r--r-- 1 u6074059 hochhalter  1057 Feb 19 17:18 Block_flat.inp
+-rw-r--r-- 1 u6074059 hochhalter   847 Feb 19 17:18 Block_opt.par
+-rw-r--r-- 1 u6074059 hochhalter 65536 Feb 19 17:18 exp8e.cae
+-rw-r--r-- 1 u6074059 hochhalter  4217 Feb 19 17:18 exp8e.jnl
+
+=== abaqus.rpy (script output) ===
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-07.00.46 RELr427 198590
+# Run by u6074059 on Thu Feb 19 17:18:20 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.36719, 1.36719), width=201.25, 
+    height=135.625)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    '/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8e_par_to_tosca.py', 
+    __main__.__dict__)
+#: ======================================================================
+#:   EXPERIMENT 8e: writeParAndInputFiles() -> Tosca CLI
+#:   Mesh: 5.0, CPUs: 1, Max cycles: 20
+#: ======================================================================
+#: ======================================================================
+#:   [1/5] Build model
+#: ======================================================================
+#:   Model: 945 nodes, 640 elements
+#:   Frozen elements: 32
+#:   Optimization setup complete
+#: ======================================================================
+#:   [2/5] writeParAndInputFiles()
+#: ======================================================================
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e/exp8e.cae".
+#: The optimization process "BlockOpt" has been created.
+#:   [FAIL] writeParAndInputFiles(): KeyError - 'Block_Proto'
+#: Traceback (most recent call last):
+#:   File "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8e_par_to_tosca.py", line 152, in <module>
+#:     optProcess.writeParAndInputFiles()
+#: KeyError: 'Block_Proto'
+#: ======================================================================
+#:   [3/5] Fallback: writeInput() + manual .par
+#: ======================================================================
+#:   writeInput() done: Block_Fallback.inp exists: True
+#:   Flattened .inp: Block_flat.inp (870 bytes)
+#:   Added frozen element set 'FROZEN_ELEMS' (32 elements)
+#:   Generated Block_opt.par: 847 bytes
+#: ======================================================================
+#:   [4/5] Verify .par content
+#: ======================================================================
+#:   --- Block_opt.par (847 bytes) ---
+#: TOPO_OPT
+#:   FEM_INPUT
+#:     ID_NAME = fem_input
+#:     FILE = Block_flat.inp
+#:     FEM_SOLVER = ABAQUS
+#:   END_
+#:   DV_TOPO
+#:     ID_NAME = dv_topo
+#:     EL_GROUP = ALL_ELEMENTS
+#:     FRZ_GROUP = FROZEN_ELEMS
+#:     SIMP_PENALTY = 3.0
+#:     INITIAL_CONDITION = CONDINI FULL
+#:   END_
+#:   DRESP
+#:     ID_NAME = dresp_se
+#:     DEF_TYPE = SYSTEM
+#:     TYPE = STRAIN_ENERGY
+#:     EL_GROUP = ALL_ELEMENTS
+#:     STEP = 1
+#:   END_
+#:   DRESP
+#:     ID_NAME = dresp_vol
+#:     DEF_TYPE = SYSTEM
+#:     TYPE = VOLUME
+#:     EL_GROUP = ALL_ELEMENTS
+#:   END_
+#:   OBJ_FUNC
+#:     ID_NAME = obj_func
+#:     DRESP = dresp_se
+#:     TARGET = MIN
+#:   END_
+#:   CONSTRAINT
+#:     ID_NAME = constr_vol
+#:     DRESP = dresp_vol
+#:     LE_VALUE = 0.5
+#:     TYPE = RELATIVE
+#:   END_
+#:   OPTIMIZE
+#:     ID_NAME = optimizer
+#:     OBJ_FUNC = obj_func
+#:     CONSTRAINT = constr_vol
+#:     DV_TOPO = dv_topo
+#:     MAX_CYCLES = 20
+#:     TOPO_FILTER_RADIUS = 10.0
+#:   END_
+#: END_
+#:   .inp file: Block_flat.inp (1057 bytes)
+#: ======================================================================
+#:   [5/5] Run Tosca CLI
+#: ======================================================================
+#:   Found Tosca via: 'tosca'
+#:   Using command: 'tosca'
+#:   Par file: Block_opt.par
+#:   Inp file: Block_flat.inp
+#:   Full command: tosca optimize -j block_8e_tosca -p Block_opt.par -s abaqus -scpus 1
+#:   Tosca exit code: 1
+#: Tosca                           : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64
+#: Tosca Structure Server          : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATocToscaServerMain
+#: Environment file                : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/command/tosca_env.sh
+#: Python interpreter              : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/bin/python
+#: Tosca Structure Python launcher : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/python3.10/lib/SMATsoPyControlMain.pyc
+#: PATH                            : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands:/uufs/chpc.utah.edu/common/home/u6074059/.local/bin:/uufs/chpc.utah.edu/sys/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/uufs/notchpeak.peaks/sys/installdir/slurm/std/bin
+#: CATInstallPath                  : 
+#: LD_LIBRARY_PATH                 : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal//mesa/full:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/CAEresources:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/SMA:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal/Interop:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal/Elysium:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/tools/SMApy/python3.10/lib/python3.10/lib-dynload:/uufs/notchpeak.peaks/sys/installdir/slurm/std/lib:/uufs/notchpeak.peaks/sys/installdir/slurm/std/lib:/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMAExternal
+#: (NOTICE  ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+#: (NOTICE  ) [17:18:23|tosca_driver] |                                                                          |
+#: (NOTICE  ) [17:18:23|tosca_driver] |                             Tosca Structure                              |
+#: (NOTICE  ) [17:18:23|tosca_driver] |                           3DEXPERIENCE R2025x                            |
+#: (NOTICE  ) [17:18:23|tosca_driver] |                                                                          |
+#: (NOTICE  ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+#: (NOTICE  ) [17:18:23|tosca_driver] 
+#: (NOTICE  ) [17:18:23|tosca_driver] Tosca started at Thu, 19 Feb 2026 17:18:23
+#: (NOTICE  ) [17:18:23|tosca_driver] 
+#: (NOTICE  ) [17:18:23|tosca_driver] Starting job block_8e_tosca
+#: (ERROR   ) [17:18:23|fem_to_onf] **** SIMULIA Tosca Structure ERROR ****
+#: (ERROR   ) [17:18:23|fem_to_onf] The option block *ELSET at line 59 is found to be between two *STEP definitions and cannot be processed
+#: (ERROR   ) [17:18:23|fem_to_onf] 
+#: (ERROR   ) [17:18:23|fem_to_onf] SIMULIA Tosca Structure.fem_to_onf finished with exitcode 128
+#: (ERROR   ) [17:18:23|tosca_driver] Module SMATsoFemToOnf failed
+#: (ERROR   ) [17:18:23|tosca_driver] Tosca Structure failed to run the optimization task
+#:   Final files:
+#:     Block_Fallback.inp: 76885 bytes
+#:     Block_flat.inp: 1057 bytes
+#:     Block_opt.par: 847 bytes
+#:     abaqus.rpy: 7872 bytes
+#:     abaqus_acis.log: 0 bytes
+#:     authorization.log: 1556 bytes
+#:     block_8e_tosca/
+#:     exp8e.cae: 1048576 bytes
+#:     exp8e.jnl: 4217 bytes
+#:     exp8e.rec: 614 bytes
+#:   Directory: block_8e_tosca/
+#:     DB_ERROR/
+#:     SAVE.inp/
+#:     TOSCA.OUT: 7559 bytes
+#:     TOSCA_POST/
+#:   No STL files found
+#: ======================================================================
+#:   Experiment 8e COMPLETE (exit code: 1)
+#: ======================================================================
+print('RT script done')
+#: RT script done
+
+=== Block_opt.par ===
+TOPO_OPT
+  FEM_INPUT
+    ID_NAME = fem_input
+    FILE = Block_flat.inp
+    FEM_SOLVER = ABAQUS
+  END_
+  DV_TOPO
+    ID_NAME = dv_topo
+    EL_GROUP = ALL_ELEMENTS
+    FRZ_GROUP = FROZEN_ELEMS
+    SIMP_PENALTY = 3.0
+    INITIAL_CONDITION = CONDINI FULL
+  END_
+  DRESP
+    ID_NAME = dresp_se
+    DEF_TYPE = SYSTEM
+    TYPE = STRAIN_ENERGY
+    EL_GROUP = ALL_ELEMENTS
+    STEP = 1
+  END_
+  DRESP
+    ID_NAME = dresp_vol
+    DEF_TYPE = SYSTEM
+    TYPE = VOLUME
+    EL_GROUP = ALL_ELEMENTS
+  END_
+  OBJ_FUNC
+    ID_NAME = obj_func
+    DRESP = dresp_se
+    TARGET = MIN
+  END_
+  CONSTRAINT
+    ID_NAME = constr_vol
+    DRESP = dresp_vol
+    LE_VALUE = 0.5
+    TYPE = RELATIVE
+  END_
+  OPTIMIZE
+    ID_NAME = optimizer
+    OBJ_FUNC = obj_func
+    CONSTRAINT = constr_vol
+    DV_TOPO = dv_topo
+    MAX_CYCLES = 20
+    TOPO_FILTER_RADIUS = 10.0
+  END_
+END_
+
+=== Contents of ./block_8e_tosca/ ===
+total 8
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 19 17:18 .
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 19 17:18 ..
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 19 17:18 DB_ERROR
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 19 17:18 SAVE.inp
+-rw-r--r-- 1 u6074059 hochhalter 7559 Feb 19 17:18 TOSCA.OUT
+drwxr-xr-x 2 u6074059 hochhalter 4096 Feb 19 17:18 TOSCA_POST
+=== ./block_8e_tosca/TOSCA.OUT (last 50 lines) ===
+(INFO    ) [17:18:23|tosca_driver] Fe-Solver              : abaqus
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] | Input Files                                                              |
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] Main input deck        : /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e/Block_flat.inp
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] | Information about FE-Solver                                              |
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] abaqus                 : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMALauncher
+(INFO    ) [17:18:23|tosca_driver] Number of solver CPUs  : 1
+(INFO    ) [17:18:23|tosca_driver] Number of solver queues: 1
+(INFO    ) [17:18:23|tosca_driver] Command line           : /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMALauncher -job __FE_MODEL__ analysis interactive -unified -resultsFormat ODB
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] | Post-Processing                                                          |
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] * Report to VTFX
+(INFO    ) [17:18:23|tosca_driver] * Smooth
+(INFO    ) [17:18:23|tosca_driver] 
+(NOTICE  ) [17:18:23|tosca_driver] Starting job block_8e_tosca
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] | Checking User Configuration                                              |
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoFemInclude --loglevel INFO --solver abaqus --out /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e/block_8e_tosca/_included_files.json /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e/Block_flat.inp
+(INFO    ) [17:18:23|fem_include] SIMULIA Tosca Structure.fem_include - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(INFO    ) [17:18:23|fem_include] SIMULIA Tosca Structure.fem_include finished successfully
+(INFO    ) [17:18:23|tosca_driver] Module SMATsoFemInclude has finished with exit code 0
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] | Creating archive directories                                             |
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] | Converting FEM files to ONF format                                       |
+(INFO    ) [17:18:23|tosca_driver]  -------------------------------------------------------------------------- 
+(INFO    ) [17:18:23|tosca_driver] Calling: /uufs/chpc.utah.edu/sys/installdir/abaqus/2025/linux_a64/code/bin/SMATsoFemToOnf --loglevel INFO --solver abaqus /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8e/block_8e_tosca/Block_flat.inp
+(INFO    ) [17:18:23|fem_to_onf] SIMULIA Tosca Structure.fem_to_onf - version 3DEXPERIENCE R2025x - build R427 - 20240925T190012Z 64 bit
+(ERROR   ) [17:18:23|fem_to_onf] **** SIMULIA Tosca Structure ERROR ****
+(ERROR   ) [17:18:23|fem_to_onf] The option block *ELSET at line 59 is found to be between two *STEP definitions and cannot be processed
+(ERROR   ) [17:18:23|fem_to_onf] 
+(ERROR   ) [17:18:23|fem_to_onf] SIMULIA Tosca Structure.fem_to_onf finished with exitcode 128
+(INFO    ) [17:18:23|tosca_driver] Module SMATsoFemToOnf has finished with exit code 128
+(ERROR   ) [17:18:23|tosca_driver] Module SMATsoFemToOnf failed
+(INFO    ) [17:18:23|tosca_driver] Moving all files and directories to DB_ERROR
+(INFO    ) [17:18:23|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [17:18:23|tosca_driver] Time consumption overview table
+(INFO    ) [17:18:23|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [17:18:23|tosca_driver] Cumulative elapsed time for module                fem_to_onf: 0:00:00.060069 - 31.819% (1 calls)
+(INFO    ) [17:18:23|tosca_driver] Cumulative elapsed time for module               fem_include: 0:00:00.054738 - 28.995% (1 calls)
+(INFO    ) [17:18:23|tosca_driver] Total elapsed time for this script                          : 0:00:00.073977 - 39.186%
+(INFO    ) [17:18:23|tosca_driver] Total elapsed time of Tosca Structure                       : 0:00:00.188784 - Current time 17:18:23.625178
+(INFO    ) [17:18:23|tosca_driver] --------------------------------------------------------------------------------------------------------------
+(ERROR   ) [17:18:23|tosca_driver] Tosca Structure failed to run the optimization task

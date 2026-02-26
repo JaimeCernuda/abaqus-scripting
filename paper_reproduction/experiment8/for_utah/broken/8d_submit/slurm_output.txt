@@ -1,0 +1,68 @@
+============================================
+Experiment 8d: Full submit() Pipeline
+Started: Thu Feb 19 17:16:24 MST 2026
+Node: notch309
+============================================
+CWD: /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8d
+
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<4 out of 11 licenses remain available>.
+
+*** ABAQUS/ABQcaeK rank 0 terminated by signal 11
+
+*** ERROR CATEGORY:  CAE
+
+Abaqus Error: cae exited with an error code -11 (-0XB).
+
+============================================
+Exit code: 1
+Finished: Thu Feb 19 17:16:27 MST 2026
+============================================
+
+Files in run_8d/:
+total 78
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 19 17:16 .
+drwxr-xr-x 2 u6074059 hochhalter    4096 Feb 19 17:16 ..
+-rw-r--r-- 1 u6074059 hochhalter       0 Feb 19 17:16 abaqus_acis.log
+-rw-r--r-- 1 u6074059 hochhalter    1515 Feb 19 17:16 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter    3061 Feb 19 17:16 ABQcaeK.00.3800539.exception
+-rw-r--r-- 1 u6074059 hochhalter 1048576 Feb 19 17:16 exp8d.cae
+-rw-r--r-- 1 u6074059 hochhalter    4217 Feb 19 17:16 exp8d.jnl
+-rw-r--r-- 1 u6074059 hochhalter     491 Feb 19 17:16 exp8d.rec
+
+=== abaqus.rpy (script output) ===
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2025 replay file
+# Internal Version: 2024_09_20-07.00.46 RELr427 198590
+# Run by u6074059 on Thu Feb 19 17:16:25 2026
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.36719, 1.36719), width=201.25, 
+    height=135.625)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile(
+    '/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/scripts/exp8d_submit.py', 
+    __main__.__dict__)
+#: ======================================================================
+#:   EXPERIMENT 8d: Full submit() Pipeline
+#:   Mesh size: 5.0, Max cycles: 20
+#: ======================================================================
+#: ======================================================================
+#:   [1/6] Variation A: submit() with defaults
+#: ======================================================================
+#:   Model built (dependent=ON): 945 nodes, 640 elements
+#:   Frozen elements: 32
+#:   Optimization setup complete
+#: The model database has been saved to "/uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment8/run_8d/exp8d.cae".
+#: The optimization process "BlockOpt" has been created.
+#:   OptimizationProcess created
+#:   Calling submit()...
