@@ -73,7 +73,7 @@ for_utah/
 - Abaqus 2025 with Tosca license
 - Linux (tested on RHEL 8, x86_64)
 
-### Run the working pipeline
+### Run the working pipeline (automated — single script)
 ```bash
 module load abaqus/2025
 unset SLURM_GTIDS
@@ -88,6 +88,27 @@ The script will:
 3. Fall back to `writeInput()` + flatten .inp + generate .par
 4. Run `tosca optimize` CLI
 5. Produce `ISO_SMOOTHING.stl` in the Tosca output directory
+
+### Run the Tosca CLI manually (step by step)
+
+If you already have a flattened `.inp` and a `.par` file, you can run Tosca directly:
+
+```bash
+module load abaqus/2025
+unset SLURM_GTIDS
+
+# The Tosca command used in our successful run:
+tosca optimize -j block_8e_tosca -p Block_opt.par -s abaqus -scpus 1
+```
+
+| Flag | Meaning |
+|------|---------|
+| `-j block_8e_tosca` | Job name (Tosca creates a directory with this name for outputs) |
+| `-p Block_opt.par` | Path to the Tosca parameter file |
+| `-s abaqus` | FE solver to use (Abaqus) |
+| `-scpus 1` | Number of CPUs for the FE solver |
+
+The `.par` file must reference the flattened `.inp` via `FILE = Block_flat.inp` in its `FEM_INPUT` block. Both files must be in the current working directory (or use absolute paths).
 
 ### Run the broken API tests
 ```bash
