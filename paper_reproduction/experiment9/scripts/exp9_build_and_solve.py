@@ -12,9 +12,7 @@ from abaqusConstants import *
 from caeModules import *
 import mesh
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
-WORK_DIR = os.path.join(PROJECT_DIR, 'run')
+WORK_DIR = os.path.join(os.environ['HOME'], 'Abaqus', 'paper_reproduction', 'experiment9', 'run')
 if not os.path.isdir(WORK_DIR):
     os.makedirs(WORK_DIR)
 os.chdir(WORK_DIR)

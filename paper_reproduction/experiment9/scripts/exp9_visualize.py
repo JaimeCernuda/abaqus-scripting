@@ -18,9 +18,7 @@ from abaqusConstants import *
 from caeModules import *
 import visualization
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, os.pardir))
-WORK_DIR = os.path.join(PROJECT_DIR, 'run')
+WORK_DIR = os.path.join(os.environ['HOME'], 'Abaqus', 'paper_reproduction', 'experiment9', 'run')
 os.chdir(WORK_DIR)
 
 ODB_NAME = 'Job_20kN.odb'
