@@ -1,0 +1,5 @@
+# Optimizing the Holeplate Model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Optimizing the Holeplate Model | | |  | | | |  | | --- | | Some additional settings must be specified before an optimization based on damage data can be started. | | ---  Before you begin:   * In fe-safe,   do a preprocessing for the damage calculation. All required data must be provided for the analysis.  The .stlx and .ldf files are exported from the fe-safe preprocessing system. | | |   1. Define a Design Response (DRESP) with the DAMAGE type: ```    DRESP     ID_NAME    = DRESP_MAX_DAMAGE     DEF_TYPE   = SYSTEM     TYPE       = DAMAGE     ND_GROUP   = design_nodes     GROUP_OPER = MAX    END_    ``` 2. To start the optimization, start the damage calculation solver on the command-line: ```    TOSCA810 HOLEPLATE_DAM -SOLVER <SOLVERNAME> -LIFE FE-SAFE    ```  The result looks as follows: |

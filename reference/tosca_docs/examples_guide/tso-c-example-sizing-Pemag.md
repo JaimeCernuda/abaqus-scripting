@@ -1,0 +1,5 @@
+# About the PEMAG Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the PEMAG Example | | |  | | | |  | | --- | | The actual model shows the main parts of a sizing optimization task: Definition of design variables, constraints, and objective function.  This page discusses:   * About the Model * Procedure Summary | | |   About the ModelIn this model, a rectangular plate which is fixed at its ends comes into contact with a rigid cylinder and deforms accordingly. The cylinder is displaced in the negative direction of the Z-axis while coming into contact with the plate.   The sizing optimization task is to minimize the plastic strain magnitude while using 100% of the initial volume. A plane symmetry constraint and thickness bounds of 70% and 150% of the initial thickness are added.  Procedure Summary |  |  | | --- | --- | | Model: | PEMAG with contact | | Design Area: | Plate elements | | Objective: | Minimize plastic strain magnitude | | Constraint: | Relative volume of less or equal 100% | |

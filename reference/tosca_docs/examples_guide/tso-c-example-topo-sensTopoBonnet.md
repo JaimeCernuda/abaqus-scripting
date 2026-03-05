@@ -1,0 +1,5 @@
+# About the Bonnet Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Bonnet Example | | |  | | | |  | | --- | | With this example, the difference between the MINMAX formulation and the MIN formulation of an optimization problem is shown. This page discusses:   * About the Model * Procedure Summary | | |   About the Model A simple example of a bonnet is used as finite element model. There are three different load cases applied to the model.  Procedure Summary |  |  | | --- | --- | | Model: | bonnet.ext | | Design Area: | All elements | | Objective: | Maximize stiffness (minimize compliance) | | Constraint: | Relative volume of 40% (less or equal constraint) | | Settings: | Filter radius 0.8 mm | |

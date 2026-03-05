@@ -1,0 +1,5 @@
+# Link and Coupling Conditions (LINK_SHAPE)
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Link and Coupling Conditions (LINK\_SHAPE) | | |  | | | |  | | --- | | Shape optimization involves determining displacement for every design node. The displacement of the neighboring nodes is not coupled, that is, each of the design nodes can move independent from the other design nodes. For example during optimization, free-form surfaces might develop from flat surfaces. By coupling the design nodes the optimization can maintain the regularity of planes.   --- | | In this section:   * Link and Coupling Conditions Overview * Plane Symmetry (PLANE\_SYM) * Plane Symmetry for Nonsymmetric Meshes (SURF\_PLANE\_SYM) * Cyclic Symmetry for Nonsymmetric Meshes (SURF\_CYCLIC\_SYM) * Cyclic-Plane Symmetry Combination (SURF\_CYCLIC\_PLANE\_SYM) * Point Symmetry (POINT\_SYM) * Rotational Symmetry (ROTATION\_SYM) * Coupling Displacements * Stampable, Turnable, and Drillable Surfaces * Demoldable Surface (SURF\_DEMOLD) | | | |

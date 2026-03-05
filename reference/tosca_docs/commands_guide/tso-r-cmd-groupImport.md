@@ -1,0 +1,5 @@
+# GROUP_IMPORT
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | GROUP\_IMPORT | | |  | | | |  | | --- | | Import of groups from files in different group definition formats.  This page discusses:   * Remarks * Examples | | |   |  |  |  | | --- | --- | --- | | ID\_NAME | =  `<name_of_group_import>` | Name of Group import command. | | FORMAT | `= ONF` | Optimization neutral file format. | | FILE\_NAME | = `<file_name>` | Name of the file from which the data is loaded. |   Remarks On using the file name (operator `FILE_NAME`):   * File names are used in the given style of writing. Using capital letters is not required.  Examples Loading group information from the file `GROUPS.NEW`. The file is written in ASCII format in and is given in the current directory.   ``` GROUP_IMPORT   FILE_NAME = DESIGN.NEW    FORMAT    = ONF END_ ``` |

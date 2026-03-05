@@ -1,0 +1,5 @@
+# Optimization of Structures with Nonlinear Behavior
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Optimization of Structures with Nonlinear Behavior | | |  | | | |  | | --- | | Topology optimization is well established for linear models. Whereas in the context of nonlinear structural analysis, topology optimization is less robust, often failing because of solver convergence issues. Therefore, a proper optimization setup is required. Within this section, guidelines are presented to build a stable optimization setup for topology optimization. In addition, these guidelines can assist the user to address the issues during the optimization run.   --- | | In this section:   * Review of Available Options and Possibilities * Guidelines for Optimization of Structures with Nonlinear Behavior * Summary of Guidelines | | | |

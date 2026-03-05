@@ -1,0 +1,5 @@
+# Settings for the General Sensitivity-Based Optimization
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Settings for the General Sensitivity-Based Optimization | | |  | | | |  | | --- | | There are different settings available to control the speed and convergence behavior of the topology optimization algorithms. This section discusses some settings concerning general sensitivity-based optimization.   --- | | In this section:   * Mode Tracking * Initial Values of Density (DENSITY\_INITIAL) * Removing Soft Elements for Increasing Performance (SOFT\_DELETE) * Limits for Design Variables and Changes * Update Strategy of the Convex Separable Approximations * Settings of the Mesh Filter * Filter Settings * Material Interpolation * Stabilization of \_ABS Design Responses | | | |

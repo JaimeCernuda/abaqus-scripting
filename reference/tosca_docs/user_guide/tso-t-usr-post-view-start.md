@@ -1,0 +1,5 @@
+# Starting and Using Tosca Structure.view
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Starting and Using Tosca Structure.view | | |  | | | |  | | --- | | Tosca Structure.view is installed during the installation of SIMULIA Tosca Structure. This section shows you the possibilities to start Tosca Structure.view. This task shows you how to:   * Start Tosca Structure.view in a Command Shell * Start Tosca Structure.view in   Tosca Structure.gui | | |     Start Tosca Structure.view in a Command Shell Start the executable `tosca_view` or `tosca_view.exe` in the directory `<install_dir>/<os>/code/bin/SMAExternal/ToscaView/`.  Start Tosca Structure.view in Tosca Structure.gui Select View Report in Tosca Structure.REPORT screen as shown in the following figure or Select View Result in Tosca Structure.SMOOTH screen. |

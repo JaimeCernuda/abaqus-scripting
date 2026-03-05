@@ -1,0 +1,5 @@
+# About the Airbeam Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Airbeam Example | | |  | | | |  | | --- | | This example shows the basic workflow in a controller-based topology optimization. This page discusses:   * About the Model * Procedure Summary | | |   About the Model A bending beam is fixed on the left side with a corresponding force on the right side. All nodes on the left side of the model are fixed in the x-axis direction. The node on the lower-left side is also fixed in the y-axis direction. A force of 40N is applied on the right side in a positive direction of the y-axis.  Procedure Summary |  |  | | --- | --- | | Model: | airbeam.ext | | Design Area: | All elements | | Design Variable Constraint: | A layer of one element on the surface is frozen (elements fixed during optimization) | | Objective: | Maximize stiffness | | Constraint: | Relative volume of 45 % (equality constraint) | | Iterations: | 15 (default) | |

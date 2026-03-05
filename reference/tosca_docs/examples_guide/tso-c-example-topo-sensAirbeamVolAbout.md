@@ -1,0 +1,5 @@
+# About the AirbeamVol Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the AirbeamVol Example | | |  | | | |  | | --- | | This example shows a sensitivity-based topology optimization minimizing the volume while keeping a displacement constraint. This page discusses:   * About the Model * Procedure Summary | | |   About the Model The model is a typical bending beam, here in a 2D variant. The left side is fixed while a force is applied on the corner node of the right bottom side. One layer of elements on the top, bottom, and the right side of the model are frozen. The red point in the following image is the node for which the absolute displacement is limited with a displacement constraint.  Procedure Summary |  |  | | --- | --- | | Model: | airbeam\_vol.ext | | Design Area: | All elements | | Objective: | Minimize the volume of the model. | | Constraint: | Maximum displacement of a node. | | Settings: | Filter radius of 2.5 mm. | |

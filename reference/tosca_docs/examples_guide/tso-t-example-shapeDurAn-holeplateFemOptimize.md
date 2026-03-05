@@ -1,0 +1,5 @@
+# Optimizing the Holeplate Model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Optimizing the Holeplate Model | | |  | | | |  | | --- | | Some additional settings must set before an optimization based on damage data can be started. | | ---  Before you begin:   * In FEMFAT®, do a preprocessing for the damage calculation.   All required data must be provided for the analysis. * Request the results in the SIMULIA Tosca Structure ONF 600 format. * Name the result file as <jobname>\_600.onf. | | |   1. Define a Design Response (DRESP) with the DAMAGE type: ```    DRESP     ID_NAME    = DRESP_MAX_DAMAGE     DEF_TYPE   = SYSTEM     TYPE       = DAMAGE     ND_GROUP   = design_nodes     GROUP_OPER = MAX    END_    ``` 2. To start the optimization, start the damage calculation solver on the command-line: ```    TOSCA810 HOLEPLATE_DAM -SOLVER <SOLVERNAME> -LIFE FEMFAT    ```  The result looks as follows: |

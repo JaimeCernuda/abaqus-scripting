@@ -1,0 +1,5 @@
+# Result Transfer
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Result Transfer | | |  | | | |  | | --- | | If requested, Tosca Structure.SMOOTH outputs the generated (iso)surface in a format suitable for the result transfer. Tosca Structure.SMOOTH enables the output of the (iso)surface in `IGES` and `STL` formats as well as the output of slices in `IGES` or `CLI` format.   * Result Transfer to CATIA RSO Module | | |  | | --- | | See Also | | Modification File for CATIA RSO Module | |   Result Transfer to CATIA RSO Module The results of the shape optimization can be transferred to the CAD model in such a way that the results are used to deform/modify the geometry of the CAD-based component. All modifications added by the optimization system are applied. To obtain the modification file, a specific `USERFILE` definition must be activated in your parameter file. In your installation directory, the macro `uf_shape_catia_rso.mac` already contains the required output request. |

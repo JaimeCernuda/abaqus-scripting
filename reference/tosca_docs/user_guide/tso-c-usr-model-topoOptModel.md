@@ -1,0 +1,5 @@
+# Models for Topology Optimization
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Models for Topology Optimization | | |  | | | |  | | --- | | The basic idea of topology optimization with respect to model requirements is described. | | |   Topology optimization determines the optimized material distribution in a given space for achieving an optimized design. Based on the external loads and boundary conditions, Tosca Structure.topology determines the optimum material distribution in the design space. The topology optimization creates holes and perforations that extensively alter the shape of the component. Alternatively, an existing component can be optimized where the topology optimization rearranges the material distribution of the component.  The available design space must exist as a FE model. The resolution of the designed structures depends strongly on the selected discretization. A fine mesh produces a structure with a higher resolution than a coarse mesh. It also substantially increase the processing time required. A compromise between structural resolution and processing time needs to be found. |

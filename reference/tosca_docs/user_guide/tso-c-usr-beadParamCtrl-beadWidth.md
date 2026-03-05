@@ -1,0 +1,5 @@
+# Bead Width (BEAD_WIDTH)
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Bead Width (BEAD\_WIDTH) | | |  | | | |  | | --- | | This section explains the BEAD\_WIDTH parameter. | | |   A geometrical parameter for the stiffeners is the bead width. The optimization system automatically determines a bead width based on the element edge length and the thickness of the shell structure. Default BEAD\_WIDTH=2\*max(2\*height\_of\_bead, 3.2\*mean\_edge\_length) of the elements attached to design nodes. The user can define own values for the bead width using the `OPT_PARAM` command.  |  | | --- | | Important:  * The value for the bead width is used for internal filtering. The generated   beads do not have the exact width specified by the user. * Because bead optimization is a very ill-posed optimization problem   (many "optimal" solutions), it is recommended that a couple of optimizations   are done with different `BEAD_WIDTH`’s. | |

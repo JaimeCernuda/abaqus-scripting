@@ -1,0 +1,5 @@
+# About the Design Area
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Design Area | | |  | | | |  | | --- | | During an optimization, only part of the model might be allowed to changed. This part is defined as the design area.  * Example | | |  | | --- | | See Also | | Defining Frozen Areas | | About Generic Design Variables | |   In sizing optimization, the design area denotes the set of elements whose thickness might be changed during the optimization, in contrast to the frozen areas that remain unchanged.  The model for the sizing optimization consists of shell or beam elements in the design area where the optimization system can increase or decrease the elemental thicknesses to get better structural performance.  A sizing optimization can be combined with generic design variables.  Example The following start model for sizing optimization represents a design of a car frame. The red areas of the component are not free for the optimization.  |  | | --- | | Yellow: Design Area  Gray: Frozen Area | |

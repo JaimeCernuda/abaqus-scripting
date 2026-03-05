@@ -1,0 +1,5 @@
+# About Long Plate Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About Long Plate Example | | |  | | | |  | | --- | | This example shows how a penetration check design variable constraint can be used to limit the design space. It demonstrates that the constraint takes into account the thickness associated with the shell element model This page discusses:   * About the Model * Procedure Summary | | |   About the ModelThe Long Plate model contains two parts: a forming part and the manufacturing sheet. The forming part is used as penetration check geometry. The metal sheet is clamped on one side, while the opposite edge is subjected a load.  Procedure Summary |  |  | | --- | --- | | Model: | long\_plate\_pen\_check.ext | | Design Area: | All nodes of the plate | | Design Variable Constraint: | Bead height (CHECK\_GROW/CHECK\_SHRINK) and CHECK\_ELGR | | Objective: | Minimize displacement on corner nodes of the loaded edge. | | Constraint: | None | |

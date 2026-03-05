@@ -1,0 +1,5 @@
+# Example LINK_BEAD
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example LINK\_BEAD | | |  | | | |  | | --- | | This example shows you how to create a plane symmetry condition about the global coordinate system in the y-axis for controller-based bead optimization.  This page discusses:   * Command Syntax * Realization within the Tosca Structure.gui | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | LINK\_BEAD | |   Command Syntax  ``` LINK_BEAD  ID_NAME    = MY_LINK_BEAD  CS         = CS_0  TYPE       = PLANE_SYM  CLIENT_DIR = 0.,1.,0. END_  DVCON_BEAD  ID_NAME    = MY_DVCON_BEAD_SYM  CHECK_BC   = NO  ND_GROUP   = DESIGN_NODES  CHECK_LINK = MY_LINK_BEAD END_ ```  Realization within the Tosca Structure.gui 1. Select Command >  LINK\_BEAD. 2. Set up a symmetry restriction as shown in the following figure:   |  | | --- | |  | |

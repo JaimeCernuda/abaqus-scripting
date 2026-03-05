@@ -1,0 +1,5 @@
+# Visualize Shape Optimization Results
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Visualize Shape Optimization Results | | |  | | | |  | | --- | | This task shows you how to visualize shape optimization results. | | |   There are three variants of shape optimization results saved in `VTFX` file that are accessible:  * Optimized geometry with the fringe plot of controller input values (items   under POST-PROCESSING > GENERATE\_REPORT\_FILE when TYPE\_PROPERTY   = NODAL CONTINUOUS (SHAPE) selected at CONTOUR\_PLOT); * Optimized geometry with the fringe plot of displacements (items under   POST-PROCESSING > GENERATE\_REPORT\_FILE when TYPE\_PROPERTY   = NODAL DISPLACEMENT (SHAPE) selected at CONTOUR\_PLOT); * Geometry with test displacements and the fringe plot of displacements   (items under TEST\_SHAPE\_CHECK in CHECK\_INPUTS).   See Changing Settings of the Fringe Plot to control the appearance of the fringe plot. |

@@ -1,0 +1,5 @@
+# INCLUDE
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | INCLUDE | | |  | | | |  | | --- | | Integration of other files which contain complex or repetitive commands..   * Remarks | | |   |  |  | | --- | --- | | `INCLUDE, filename` | | | `filename` | File name. |   Remarks  1. The command `INCLUDE` allows nesting of three stages. This means, a loaded (stage 1) can occur again in `INCLUDE` (stage 2) where this file can also be contained in an `INCLUDE` command (stage 3). 2. In the directories where `INCLUDE` files exist, path allocations must be set (for example, with `PATH`). 3. Complex group definitions within a parameter file can be written in a separate file `groups.par` which is connected to the actual parameter file by the command `INCLUDE`, `groups.par`. Predefined macros are also connected in this way. |

@@ -1,0 +1,5 @@
+# Controller-Based Shape Optimization
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Controller-Based Shape Optimization | | |  | | | |  | | --- | | The theoretical background of the controller-based shape optimization approach is briefly discussed.   * Theoretical Background | | |   Theoretical Background The process of minimization of the deviation from a reference stress is based on the following hypothesis by Neuber: Optimum form of a component is achieved when the stresses running along the considered surface zone is fully constant (stress homogenization). The targeted constant stress should then be declared as the reference stress. The stress homogenization can also be interpreted according to the principle of the fully stressed component (Fully Stressed Design), that is, the component is stressed in as many zones as possible by the predefined value allowed. |

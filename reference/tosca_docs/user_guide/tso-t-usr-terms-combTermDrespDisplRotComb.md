@@ -1,0 +1,5 @@
+# Combining Displacements and Rotations
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Combining Displacements and Rotations | | |  | | | |  | | --- | | This section shows how to combine displacements and rotations. | | |   1. The figure below shows two displacements in different coordinate    systems and different directions called `DRESP_1` and `DRESP_2`. 2. The displacements can be combined to a `DRESP`, which can be applied in the optimization like the following: ```    DRESP     ID_NAME  = .....     DEF_TYPE = OPER     VAR_OPER = COMBINE     VARIABLE = ....., .....     VARIABLE = DRESP_1,  0.6     VARIABLE = DRESP_2, -0.8     VARIABLE = ....., .....        ....................    END_    ```  Notes:  1. Different directions of displacements can be combined and weighted. 2. Displacements of different coordinate systems can be combined and    weighted. 3. Rotations can also be combined and weighted. |

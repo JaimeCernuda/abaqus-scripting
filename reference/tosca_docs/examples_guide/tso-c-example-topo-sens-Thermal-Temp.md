@@ -1,0 +1,5 @@
+# About the CPU Cooler (Temperature) Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the CPU Cooler (Temperature) Example | | |  | | | |  | | --- | | Shows how to set up a thermal optimization for a CPU cooler with temperature as objective. This page discusses:   * About the Model * Procedure Summary | | |   About the Model The considered model is a CPU cooler for thermal optimization.  The bottom section of the model represents the CPU and is frozen during the optimization. It is subjected to a surface heat flux at the buttom. The temperature in the center of the CPU is to be minimized.  Procedure Summary |  |  | | --- | --- | | Model: | topo\_thermal\_cpu\_temp.ext | | Design Area: | All elements except frozen regions | | Design Variable Constraints: | Casting manufacturing constraints  Fix regions of frozen elements  Symmetry constraints | | Objective: | Minimize temperature at a given point | | Constraint: | 40% of initial volume | |

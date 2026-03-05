@@ -1,0 +1,5 @@
+# Defining the Displacement Optimization Task
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining the Displacement Optimization Task | | |  | | | |  | | --- | | You can define the Displacement Optimization Task to get a structure with a minimum deflection or rotation. In case that the displacement at a node with a load is to be minimized, the problem is identical to the maximization of the stiffness.  This task shows you how to:   * Define the Displacement Optimization Task in Tosca Structure.gui | | |   Define the Displacement Optimization Task in Tosca Structure.gui 1. Choose Command > DRESP. 2. Define and reference the displacement design response    in OBJ\_FUNC as shown in the figure below:   The objective function is defined as the minimization problem of    the defined design response. |

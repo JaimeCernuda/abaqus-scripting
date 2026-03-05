@@ -1,0 +1,5 @@
+# About the Design Area
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Design Area | | |  | | | |  | | --- | | During an optimization, only part of the model might be allowed to changed. This part is defined as the design area.  * Example | | |  | | --- | | See Also | | About Generic Design Variables | |   In bead optimization, the design area denotes the set of nodes that might be moved during the optimization, in contrast to the frozen areas that remain unchanged.  The model for the bead optimization contains shell elements in the design area where the optimization system can move the respective nodes to get better structural performance.  A bead optimization can be combined with generic design variables.  Example The following start model for bead optimization represents a design of an angle bracket. The gray areas of the component are not free for the optimization because they are used for the fixtures and for the load application.  |  | | --- | | Red: Design Area  Gray: Frozen Area | |

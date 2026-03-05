@@ -1,0 +1,5 @@
+# Morphing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Morphing | | |  | | | |  | | --- | | With Tosca Structure.morph it is possible to apply changes to certain areas, so called morph areas, by moving the nodes of these morph areas. This can be used, for example, to automatically generate several model variants and submit analysis runs for these models. Further it allows to study the simultaneous influence of changes in the morph areas on certain design responses defining the quality of the design. These design responses are usually used to formulate optimization targets and constraints. Based on these quality criteria an optimum start design for a subsequent local shape optimization can be derived. Note, morphing is a new feature within Tosca Structure implemented to access more optimization potential. At this point not all practical requirements might be considered yet. We appreciate your feedback to continuously improve our user interfaces and workflow.   --- | | In this section:   * General Information * Morphing Areas * Morphing Task * Command Syntax * Postprocessing * Evaluation | | | |

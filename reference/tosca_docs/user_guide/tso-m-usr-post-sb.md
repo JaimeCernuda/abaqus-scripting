@@ -1,0 +1,5 @@
+# Postprocessing of Optimization Results
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Postprocessing of Optimization Results | | |  | | | |  | | --- | | Postprocessing of Tosca Structure optimization results consists mainly of visualizing the model changes in the optimization process and regarding plots and tables of optimization relevant values. These data can be combined and provided using Tosca Structure.REPORT. Visualization and processing are done using Tosca Structure.view. Certainly, the analysis results of the single optimization steps can be evaluated in your familiar FE-postprocessing system by reading the corresponding solver result file from the `SAVE.<ext>` directory. Further, the results of your validation run can also be processed in your postprocessing environment.   --- | | In this section:   * Generation of Postprocessing Data * Tosca Structure.view * Toolbox for Postprocessing | | | |

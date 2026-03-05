@@ -1,0 +1,5 @@
+# Visualize Bead Optimization Results
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Visualize Bead Optimization Results | | |  | | | |  | | --- | | This task shows you how to visualize bead optimization results. | | |   There are three variants of bead optimization results saved in `VTFX` file that are accessible:  * Optimized geometry with the fringe plot of controller input values (items   under POST-PROCESSING > GENERATE\_REPORT\_FILE when    TYPE\_PROPERTY   = NODAL CONTINUOUS (BEAD)    selected at CONTOUR\_PLOT); * Optimized geometry with the fringe plot of displacements (items under   POST-PROCESSING  > GENERATE\_REPORT\_FILE when    TYPE\_PROPERTY   = NODAL DISPLACEMENT (BEAD)    selected at CONTOUR\_PLOT); * Geometry with test displacements and the fringe plot of displacements   (items under TEST\_BEAD\_CHECK in CHECK\_INPUTS).   See Changing Settings of the Fringe Plot to control the appearance of the fringe plot. |

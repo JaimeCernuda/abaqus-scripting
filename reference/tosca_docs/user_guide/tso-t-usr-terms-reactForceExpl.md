@@ -1,0 +1,5 @@
+# Example: Defining an Reaction Force Design Response
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: Defining an Reaction Force Design Response | | |  | | | |  | | --- | | The task for this example is to define a reaction force in y-direction (`REACTION_FORCE_Y`) of the global coordinate system (`CS_0`) of node 112072.  This task shows you how to:   * Define an Reaction Force in Tosca Structure.gui * SIMULIA Tosca Structure   Parameter File | | |   Define an Reaction Force in Tosca Structure.gui 1. Choose Command > DRESP. The DRESP menu appears. 2. Define the reaction force as design response as shown in the following figure:  SIMULIA Tosca Structure Parameter File The resulting command in the parameter file look like follows: ``` DRESP  ID_NAME        = my_reac  DEF_TYPE       = SYSTEM  TYPE           = REACTION_FORCE_Y  NODE           = 112072  LC_SET         = ALL,2,All  GROUP_OPER     = Max  CS_REF         = CS_0 END_ ``` |

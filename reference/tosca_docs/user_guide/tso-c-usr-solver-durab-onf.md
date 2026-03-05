@@ -1,0 +1,5 @@
+# ONF
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ONF | | |  | | | |  | | --- | | This section summarizes remarks concerning ONF-format. | | |   This life option is for the users who might want to use their own fatigue program. The only requirement is that the program writes in ONF-format. This format can be acquired by contacting Dassault Systèmes.  The following variables must also be set in your Tosca Structure configuration:   ``` DRIVER   driver.LifeSolver.Name = "<name_of_life_solver>"   driver.LifeSolver.Path = "<path_to_life_executable>"   driver.LifeSolver.StandardCallArgs = "<list_of_parameters_for_program>" END_ ```   The optimization run starts like the other fatigue codes with the solver run, which results are first read into the Tosca Structure database. Then the defined life-solver is called, and the ONF-results are then read by Tosca Structure. |

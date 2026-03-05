@@ -1,0 +1,5 @@
+# Sequential Temperature Analysis
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Sequential Temperature Analysis | | |  | | | |  | | --- | | A sequentially coupled temperature analysis can be carried out during optimization when using Abaqus or ANSYS® as finite element solver. A temperature calculation is carried out first, then its results are used as boundary conditions for the following finite element calculation. | | |   The input file used for the temperature calculation is specified using `FEM_INPUT` command as shown below (the command-line parameter `-temp` is obsolete). All model changes because of the optimization are also reflected in the temperature model.   ``` FEM_INPUT  TEMPERATURE_FILE = temperature_analysis.ext  FILE = static_analysis.ext END_ ```   `ext` is the solver-specific file extension. |

@@ -1,0 +1,5 @@
+# Example: Defining a Weight Design Response
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: Defining a Weight Design Response | | |  | | | |  | | --- | | The task for this example is to define a weight design response for the element group DESIGN\_ELEMS and constraining it to 100 Kg.  This task shows you how to:   * Define a Weight Design Response inTosca Structure.gui * SIMULIA Tosca Structure   Parameter File | | |   Define a Weight Design Response inTosca Structure.gui 1. Choose Command > DRESP. The DRESP menu appears. 2. Define the design response of the type WEIGHT as shown in the following figure:  SIMULIA Tosca Structure Parameter File The resulting command in the parameter file look like follows: ``` DRESP   ID_NAME        = weight   DEF_TYPE       = SYSTEM   TYPE           = WEIGHT   EL_GROUP       = DESIGN_ELEMS   GROUP_OPER     = Sum END_ ``` |

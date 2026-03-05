@@ -1,0 +1,5 @@
+# About the Hood (Eigenfrequency) Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Hood (Eigenfrequency) Example | | |  | | | |  | | --- | | This example shows frequency optimization with controller-based optimization strategies. This page discusses:   * About the Model * Procedure Summary (Controller-Based Strategy) | | |   About the ModelThe goal of this optimization is to maximize the first eigenvalue of a bent plate. First eigenmode has the eigenvalue of 0.3098 (Using MSC Nastran®, other solvers might differ). In the following, the optimization is shown with a bead height of 0.5.  Procedure Summary (Controller-Based Strategy) |  |  | | --- | --- | | Model: | hood\_eig.ext | | Design Area: | All nodes | | Objective: | Maximize first eigenfrequency | | Constraint: | Maximum bead height 0.5 | | Settings: | BEAD\_WIDTH = 1.5 | |

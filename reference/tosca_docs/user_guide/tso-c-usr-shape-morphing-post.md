@@ -1,0 +1,5 @@
+# Postprocessing
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Postprocessing | | |  | | | |  | | --- | | Postprocessing shows fringe plots of the typical results shown for the associated optimization task (in shape optimization; controller input for the objective function, as well as optimization displacement) and a table of the requested design responses (values of objective, and constraint if required) for each morphing step. | | |   Note:  In general, Tosca Structure does not keep all input files and all solver output files for each design variant. If these should be saved for all design cycles, change the settings in your configuration file (for example, `tosca.cfg`) or using the `DRIVER` parameter in your parameter file:   ``` DRIVER   driver.registerSaveRule( UpdateRules.COPY, Checkpoints.CYCLE_COMPLETE, EventTimes.EVER, [ '*.sim', '*.odb', '*.msg', '*.dat', '*.sta' ], 'SAVE_DIR', '_%i' ) END_ ``` |

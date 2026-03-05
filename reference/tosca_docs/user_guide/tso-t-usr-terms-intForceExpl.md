@@ -1,0 +1,5 @@
+# Example: Defining Internal Forces
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: Defining Internal Forces | | |  | | | |  | | --- | | The task for this example is to define the sum of internal forces in the y-direction (INTERNAL\_FORCE\_Y) of the global coordinate system (CS\_0) of node group ND\_INTERNAL\_GROUP\_LEFT connected to the element group EL\_INTERNAL\_GROUP\_LEFT.  This task shows you how to:   * Define Internal Forces in Tosca Structure.gui * SIMULIA Tosca Structure   Parameter File | | |   Define Internal Forces in Tosca Structure.gui 1. Choose Command > DRESP. The DRESP menu appears. 2. Define the internal forces as design    response as shown in the following figure:  SIMULIA Tosca Structure Parameter File The resulting command in the parameter file look like follows: ``` DRESP  ID_NAME        = internal_force_response  DEF_TYPE       = SYSTEM  TYPE           = INTERNAL_FORCE_Y  EL_GROUP       = EL_INTERNAL_GROUP  ND_GROUP       = ND_INTERNAL_GROUP  LC_SET         = ALL,1,All  GROUP_OPER     = Sum  CS_REF         = CS_0 END_ ``` |

@@ -1,0 +1,5 @@
+# Adjust Eigenvalue
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Adjust Eigenvalue | | |  | | | |  | | --- | | This section describes the setup used to maximize a certain eigenvalue up to a specific value. | | |   The opposite of the former approach might also be the case—that is to force an eigenfrequency to achieve a certain value. This might be realized using constraint functions.   ``` DRESP  ID_NAME  = dresp_eig_2  DEF_TYPE = SYSTEM  TYPE     = DYN_FREQ  LC_SET   = Modal,All,2 END_  OBJ_FUNC  ID_NAME = max_dresp_eig_2  DRESP = dresp_eig_2  TARGET = MAX END_  CONSTRAINT  ID_NAME   = con_dresp_eig_2_le_15Hz  DRESP     = dresp_eig_2  MAGNITUDE = ABS  LE_VALUE  = 15. END_  OPTIMIZE  ID_NAME    = opt  DV         = my_design_nodes  STRATEGY   = BEAD_SENSITIVITY  OBJ_FUNC   = max_ dresp_eig2  CONSTRAINT = con_dresp_eig_2_le_15Hz END_ ```   The second eigenmode is maximized, but because of the constraint it might not become higher than 15. Hz. |

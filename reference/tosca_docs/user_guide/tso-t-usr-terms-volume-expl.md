@@ -1,0 +1,5 @@
+# Example: Defining the Volume Design Response
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: Defining the Volume Design Response | | |  | | | |  | | --- | | The task for this example is to define the volume design response for the element group `DESIGN_ELEMS`.  This task shows you how to:   * Define the Volume Design Response in Tosca Structure.gui * SIMULIA Tosca Structure   Parameter File | | |   Define the Volume Design Response in Tosca Structure.gui 1. Choose Command > DRESP. The DRESP menu appears. 2. Define the design response of the type VOLUME as shown in the following figure:  SIMULIA Tosca Structure Parameter File The resulting command in the parameter file look like follows: ``` DRESP   ID_NAME        = volume   DEF_TYPE       = SYSTEM   TYPE           = VOLUME   EL_GROUP       = DESIGN_ELEMS   GROUP_OPER     = Sum END_ ``` |

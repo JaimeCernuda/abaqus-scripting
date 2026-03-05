@@ -1,0 +1,5 @@
+# About the Control Arm Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Control Arm Example | | |  | | | |  | | --- | | This example shows the topology optimization of a control arm.  * Procedure Summary | | |   A control arm is a part of a car’s independent wheel suspension and supports against occurring cross forces. That means that it is a mass-produced component, so any material and cost reduction pays off. However, every weight reduction in cars is welcome in general because dynamic characteristics increase and less mass must be accelerated and slowed. The following figure shows the initial model and the optimized model:  Procedure Summary |  |  | | --- | --- | | Model: | control\_arm.ext | | Design Area: | All elements (excluding frozen areas) | | Objective: | Maximize stiffness | | Constraint: | Relative volume of 70 % (equality constraint) | | Geometrical Restrictions: | Casting | | Iterations: | 15 (default) | |

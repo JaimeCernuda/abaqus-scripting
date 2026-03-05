@@ -1,0 +1,5 @@
+# About the Picker Arm Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Picker Arm Example | | |  | | | |  | | --- | | This example discusses possible postprocessing steps with Tosca Structure.SMOOTH. This page discusses:   * About the Model * Procedure Summary | | |   About the Model The model in this example refers to a robotic picker arm. The functional surfaces of the picker arm are loaded with pressure. The picker arm is fixed radially in the middle cross-bored area.  Procedure Summary |  |  | | --- | --- | | Model: | picker\_arm.ext | | Design Area: | All elements | | Design Variable Constraint: | Fix elements of group frozen\_elements | | Constraint: | Relative volume of 50 % (equality constraint) | | Objective: | Maximize stiffness | | Iterations: | 15 (default) | | Run: | Smooth with target volume 0.5 | | Postprocessing: | Optimization progress (element density) | |

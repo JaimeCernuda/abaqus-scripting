@@ -1,0 +1,5 @@
+# SF_IDENT
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | SF\_IDENT | | |  | | | |  | | --- | | Identification and marking of all surface nodes of the active nodes. The nodes can be addressed with the `SELECT` command because of this marking.   * Remarks | | |   For example, if shells lie on the surface of solid elements, only the free boundary of the shell is identified as being a surface. In this case, the solid elements must be selected with the command `SF_IDENT`. The following commands might be used to perform the identification of the surface nodes for 3D element types only after the finite element model is read via `FEM_INPUT`:  ``` SELECT,ETYPE,S,ETYPE,SOLID_BRICK_8 SELECT,ETYPE,A,ETYPE,SOLID_TETRA_4 SELECT,ELEM,S,ETYPE SF_IDENT ```  Remarks  * In SHAPE optimization, only marked surface nodes can be defined as being   design nodes. The identification of the surface nodes can be done by   setting the command `OPTIONS``, READ_SF_IDENT = ON` already during   loading of the FE model (see `FEM_INPUT`). |

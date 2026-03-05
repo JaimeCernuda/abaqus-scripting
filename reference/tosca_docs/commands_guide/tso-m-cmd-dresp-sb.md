@@ -1,0 +1,5 @@
+# DRESP
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DRESP | | |  | | | |  | | --- | | The design response command `DRESP` defines the system response for the current analysis model.  The `DRESP` command extracts one scalar value from a given result field. Permitted dimensions can be load case independent or load case dependent (parameter `DEF_TYPE = SYSTEM`) as well as certain combinations of values (parameter `DEF_TYPE = OPER`).  For a general overview of design responses, see Design Responses, more detailed information about their use can be found in Topology Optimization, Shape Optimization and Bead Optimization in the SIMULIA Tosca Structure 2025 user manual.   --- | | In this section:   * General Information * Allowed Optimization Strategy for Design Responses * DEF\_TYPE = SYSTEM * DEF\_TYPE = OPER * Remarks and Examples | | | |

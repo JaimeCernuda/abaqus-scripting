@@ -1,0 +1,5 @@
+# Design Response Combination
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Design Response Combination | | |  | | | |  | | --- | | Creating response combinations like relative values, differences or mean values requires operations on a number of previously extracted design responses. For sensitivity-based topology optimization, only weighted sums are admitted in objective function and constraint definitions. For controller-based shape optimization, a large variety of other operators are admissible. All operators are available to create new responses for monitoring of optimization results.   --- | | In this section:   * General Information * Combined Responses in Sensitivity-Based Optimization * Combining Displacements and Rotations * Combining Reaction Forces and Internal Forces * About Combining Absolute Values of Responses * Controller-Based Combined Terms | | | |

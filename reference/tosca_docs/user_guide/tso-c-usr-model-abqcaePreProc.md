@@ -1,0 +1,5 @@
+# Abaqus/CAE
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Abaqus/CAE | | |  | | | |  | | --- | | The analysis model for the optimization procedure might be generated in the standard way in Abaqus/CAE. All groups that are required for the optimization should be generated in Abaqus/CAE. | | |   The use of parts and assemblies in the Abaqus input file is not supported by Tosca Structure. It is recommended to configure Abaqus/CAE such that neither parts and assemblies are written. To achieve this, the following parameter must be set in the configuration file `abaqus_v6.env`:   ```         cae_no_parts_input_file=ON ```   Alternatively before writing the input file, right-click the model in the Model Database, select `Edit Attributes...` and activate Do not use parts and assemblies in input files.   ```  ```  ```  ```  ```  ``` |

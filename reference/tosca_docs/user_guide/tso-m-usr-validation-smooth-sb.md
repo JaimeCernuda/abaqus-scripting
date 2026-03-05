@@ -1,0 +1,5 @@
+# Tosca Structure.SMOOTH
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Tosca Structure.SMOOTH | | |  | | | |  | | --- | | Tosca Structure.SMOOTH takes the `ONF` files produced during the optimization as input, generates the smooth isosurface or the model surface (depending on settings and optimization type) and saves the surface in one or several output formats.   --- | | In this section:   * Overview * Starting Tosca Structure.SMOOTH * Defining Parameters for Tosca Structure.SMOOTH * Processing Results of Topology Optimization * Processing Results from Shape or Bead Optimization * Isosurface and Smoothing Parameters * Reduction Parameters * Output Parameters * Slices through 3D models and border of 2D models * Processing of Groups * Volume Control * Correction of Defects in Topology Optimization Results * Troubleshooting | | | |

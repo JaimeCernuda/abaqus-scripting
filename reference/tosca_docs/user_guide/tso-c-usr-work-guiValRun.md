@@ -1,0 +1,5 @@
+# Result Transfer
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Result Transfer | | |  | | | |  | | --- | | Valid optimization results must be further processed in the design process. Tosca Structure.SMOOTH can be used to prepare the optimization results for a transfer to a CAD system or FE preprocessor. | | |   Tosca Structure.SMOOTH prepares the optimization result for transfer into a CAD-system for further treatment in the design process or into your FE-preprocessor for preparation of a validation run. Further, the results from Tosca Structure.SMOOTH can be displayed by Tosca Structure.view and added to vtfx visualization archives. In the Tosca Structure.SMOOTH window, which can be seen in the following figure, choose your task to perform (surface or isosurface calculation), select your job (corresponding parameter file) and eventually enter more parameters to control smoothing and data reduction and output formats (additional information see Tosca Structure.SMOOTH).   |  | | --- | |  | |

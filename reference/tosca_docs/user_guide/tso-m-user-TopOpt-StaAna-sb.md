@@ -1,0 +1,5 @@
+# Typical Optimization Tasks for Static Analysis
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Typical Optimization Tasks for Static Analysis | | |  | | | |  | | --- | | This section deals with the typical optimization tasks for the static, nonlinear static, and temperature static analysis types. Only some very common tasks are described here. For complex optimization tasks, it is useful and required to combine, for example, the static compliance as the objective with the displacement constraints and modal frequency constraints resulting from a modal analysis.   --- | | In this section:   * Minimizing Compliance under Volume Constraint * Minimizing Displacement / Rotation under Volume Constraint * Defining Constraint for Difference between two Displacements * Minimizing a Reaction or Internal Force * Minimizing the Volume under Displacement Constraint * Minimizing the Maximum Stress with Volume Constraint * Minimizing the Material Volume with Stress Constraint | | | |

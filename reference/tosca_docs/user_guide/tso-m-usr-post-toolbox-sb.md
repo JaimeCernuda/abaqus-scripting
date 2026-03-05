@@ -1,0 +1,5 @@
+# Toolbox for Postprocessing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Toolbox for Postprocessing | | |  | | | |  | | --- | | Tosca Structure provides the user with a large variety of postprocessing capabilities. Sometimes, the default settings are not sufficient for the experienced user who might be interested in a specific design response. This could be, for example, regarding stress peaks in an area, relative displacements,...) and its progress during the optimization run. To this end, a toolbox enabling more advanced output from the optimization task is available including the creation of variables, logical variables, tables, complex stop conditions, and user-defined output files (containing text or model and result information in a convertible neutral format (`ONF`)). In Tosca Structure.gui, the commands for the advanced functionalities are found in the commands menu.   --- | | In this section:   * Numerical Variables (VARIABLE) * Logical Variables (LOGICAL) * Stop Conditions (STOP) * User-Defined Output Files (USER\_FILE) | | | |

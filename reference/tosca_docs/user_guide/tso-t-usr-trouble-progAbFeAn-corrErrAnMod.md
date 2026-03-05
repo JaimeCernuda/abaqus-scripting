@@ -1,0 +1,5 @@
+# Correcting the Error in the Analysis Model
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Correcting the Error in the Analysis Model | | |  | | | |  | | --- | | If the result file of the FE program has not been generated propery, the following error message may appear:   ``` **** TOSCA Structure ERROR **** GROUP specified with ITEM ND_GROUP was not found in the database -> Enter an existing GROUP ```  This task shows you how to:   * Error Cause * Locate the Error * Correct the Error | | |   Error Cause Error in the analysis model.  Locate the Error 1. Validate the analysis model using a simple FE analysis (not using optimization-specific entries). 2. Check if all required files for the optimization have been created and check the optimization-specific entries in    the analysis model. 3. Check if all required FE data is written properly in these files. Especially groups and sets.  Correct the Error Modify the analysis model and validate new setup. |

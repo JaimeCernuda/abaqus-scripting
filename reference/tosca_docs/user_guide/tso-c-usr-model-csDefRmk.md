@@ -1,0 +1,5 @@
+# General Remarks about Coordinate Systems
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | General Remarks about Coordinate Systems | | |  | | | |  | | --- | | This section contains remarks about coordinate systems. | | |   1. When coordinate systems are loaded through the FE interface, their numbers    are treated as names (character strings) in SIMULIA Tosca Structure.    For example, the coordinate system 15 (number) in the FE system is defined    in SIMULIA Tosca Structure    as a coordinate system with the name “15”. 2. In SIMULIA Tosca Structure,    the following coordinate system is defined globally and can be addressed    at any time: CS\_0: Global Cartesian coordinate system 3. When defining more than    one such coordinate system, their names should be modified so that they    are unique. |

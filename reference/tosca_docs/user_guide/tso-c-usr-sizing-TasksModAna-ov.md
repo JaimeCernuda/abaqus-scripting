@@ -1,0 +1,5 @@
+# Overview
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Overview | | |  | | | |  | | --- | | For some optimization problems, it can be desirable that a sudden eigenfrequency is increased whereas the other eigenfrequencies are allowed to decrease as shown in the figure below (a). | | |   In Maximization of the First Eigenfrequencies is described how several lowest eigenfrequencies are increased (figure below (b)) and Maximizing the Torsional Modal Eigenfrequency addresses how a specific eigenfrequency in an eigenfrequency spectrum is optimized using mode tracking (figure below (a)).  When maximizing the stiffness under the condition that the first eigenfrequency is above 100 Hz or when minimizing the mass under the condition that the eigenfrequencies are below or above certain specified values, an eigenfrequency can be applied in a constraint.   |  | | --- | |  | |

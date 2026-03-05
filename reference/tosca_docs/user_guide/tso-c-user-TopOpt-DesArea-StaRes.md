@@ -1,0 +1,5 @@
+# Defining a Stamping Restriction
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining a Stamping Restriction | | |  | | | |  | | --- | | The stamping restriction means the following: If one element is removed from the structure, all elements positioned either behind or in front of the element (with respect to the pull direction) are removed too. | | |  | | --- | | See Also | | Defining Demold Restrictions | | About Prevention of Undercuts in the Model | |   The stamping restriction is a variant of the demold manufacturing constraint, with the MID\_PLANE parameter set to STAMP.  The following figure shows the stamping restriction for a crane hook:   |  | | --- | |  |   |  | | --- | | Important: The speed (step width) should not be set too high if the stamping restriction is activated for the optimization. An unsuitable choice leads to a detaching of the supports to the rest of the structure. | |

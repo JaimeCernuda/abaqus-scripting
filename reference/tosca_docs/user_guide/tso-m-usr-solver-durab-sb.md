@@ -1,0 +1,5 @@
+# Shape Optimization Based on a Durability Analysis
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Shape Optimization Based on a Durability Analysis | | |  | | | |  | | --- | | The homogenization of the stresses on a components surface often indirectly leads to a reduction of the maximum damage in these areas. In SIMULIA Tosca Structure, a durability analysis can be included in the optimization loop. The direct use of damage results for the homogenization strategy leads to a minimization of the maximum damage in the critical areas. In SIMULIA Tosca Structure, the damage values must be provided as equivalent stress values. The coupling of a durability analysis enables the consideration of the load-time histories. The notions fatigue, durability, and life analysis are all used in the following as the same thing.   --- | | In this section:   * Supported Durability Solvers * Workflow * FEMFAT® * fe-safe * ONF | | | |

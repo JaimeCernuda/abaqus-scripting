@@ -1,0 +1,5 @@
+# Include Files
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Include Files | | |  | | | |  | | --- | | The parameter files can consist of several parts which can be encapsulated in separate files. These files are referenced in the actual parameter file (`jobname.par`) with the command `INCLUDE`. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | INCLUDE | |   To include files is useful in cases where the file is too large due to long selection lists used to define groups. The user can save these group definitions in a separate file and link this with `INCLUDE` at the relevant position. A second command `INCLUDE` can be used also in the included file.  The `INCLUDE` files are searched for in the given directory. Should no directory be entered, a search is made in the current working directory or the subdirectory macros of the SIMULIA Tosca Structure installation directory. |

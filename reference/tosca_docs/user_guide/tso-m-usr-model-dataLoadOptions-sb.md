@@ -1,0 +1,5 @@
+# Options for Loading FE Data (OPTIONS)
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Options for Loading FE Data (OPTIONS) | | |  | | | |  | | --- | | The default settings for loading the FE data can be changed with the `OPTIONS` command. The settings influence, for example, the loading of the boundary conditions, the identification of the model surface and the loading of the FE results. The loading options refer to the command `FEM_INPUT` (see Analysis Files for Optimization (FEM\_INPUT)) and must be specified before loading the FE data. Using Tosca Structure.gui the `OPTIONS` command is available in the command drop down menu.   --- | | In this section:   * About Loading Displacement Restrictions * Identifying Surface Nodes for Shape Optimization | | | |

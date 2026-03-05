@@ -1,0 +1,5 @@
+# About Design Variables
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About Design Variables | | |  | | | |  | | --- | | The design variables represent the values to be changed during the optimization. | | |  | | --- | | See Also | | Defining Design Variables for Topology Optimization | |   The density of each individual element in the design space is a design variable in topology optimization in SIMULIA Tosca Structure. The densities change during the optimization to fulfill the optimization goals. The Young's modulus of each element is coupled with the density.  Valid design elements are 2D and 3D elements, including shell elements. Bars can be used as design variables, but not within mixed groups. The list of valid element types for the topology optimization is given in Solver Specific Features for the different FE solvers. |

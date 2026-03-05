@@ -1,0 +1,5 @@
+# Design Responses
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Design Responses | | |  | | | |  | | --- | | Most design responses are available only for certain analysis types. Others are independent of the analysis type because they are directly linked to the geometry of the FE-model. Each design response represents one scalar value, which can be extracted from the model information (like the volume) or from the FE-results.   --- | | In this section:   * About Design Responses * Bead Height * Center of Gravity * Compliance (Stiffness Optimization) * Displacement and Rotation * Eigenfrequency * Energy Stiffness Measure * Internal Force * Measure for Intermediate Densities * Moment of Inertia * Reaction Force * Stress and Strains * Thermal * Volume * Weight | | | |

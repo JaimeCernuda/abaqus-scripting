@@ -1,0 +1,5 @@
+# Parameters for Controller-Based Bead Optimization
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Parameters for Controller-Based Bead Optimization | | |  | | | |  | | --- | | The controller-based bead optimization has been given numerous default settings (OPT\_PARAM) that produce satisfactory results for various optimization models. Usually, these default settings do not need to be changed by the user. However, by specifically configuring the controller for a given optimization task, the controller response, and consequently the optimization procedure can be improved. The user can set several optimization parameters using the `OPT_PARAM` command and influence the controller response.   --- | | In this section:   * Scaling of Displacements (SCALE) * Update of Optimization Displacement Vectors (VECTOR) * Bead Width (BEAD\_WIDTH) * Number of Iterations (BEAD\_ITER) * Penalty Conditions (BEAD\_MIN\_STRESS and BEAD\_MAX\_MEMBRANE) * Mesh Enhancing Parameters (CURV\_SMOOTH and BEAD\_NODE\_SMOOTH) | | | |

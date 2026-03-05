@@ -1,0 +1,5 @@
+# About Frozen Areas
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About Frozen Areas | | |  | | | |  | | --- | | Sometimes it is required to maintain material in certain parts of the design area, such that they remain unchanged in the optimized model. Element groups describing these parts can be defined as a frozen area. | | |  | | --- | | See Also | | Defining Frozen Areas for Topology Optimization | |   Frozen areas are used to exclude the so-called frozen elements from being modified during the optimization, even though these elements are included in the design space. This is the case, for example, when the elements are used to fix the component and therefore should be preserved independently of their internal loads. The inclusion into the design space might be required, for example, to control the target volume |

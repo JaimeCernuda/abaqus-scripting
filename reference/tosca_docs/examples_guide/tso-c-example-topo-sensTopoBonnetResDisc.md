@@ -1,0 +1,5 @@
+# Discussion of the Bonnet Example Results
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Discussion of the Bonnet Example Results | | |  | | | |  | | --- | | The resulting structure of the MINMAX formulation looks totally different compared to the standard formulation. The reason for these differences becomes obvious if the compliances of the different load cases are compared. | | |   The MIN formulation ends up with a lesser total compliance of the sum of all load cases, but the load cases with the smaller loads have a compliance that is lesser (higher stiffness) than the load case with the doubled load in the middle of the structure.  The result of the MINMAX formulation shows a higher total compliance, but the compliances of all load cases are equal, which means that the structure can handle all load cases in the same effective way. It is impossible to reduce the compliance for one load case without increasing the compliance for another load case. This solution represents one point on a Pareto optimality front. |

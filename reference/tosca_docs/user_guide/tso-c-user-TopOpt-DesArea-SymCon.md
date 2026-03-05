@@ -1,0 +1,5 @@
+# About Symmetry Conditions
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About Symmetry Conditions | | |  | | | |  | | --- | | Different symmetry conditions can be defined for an optimization in SIMULIA Tosca Structure. They can be used to obtain symmetrical results also for non-symmetrical meshes. In addition, multiple symmetrical load cases can often be reduced in the FE model. | | |   The following symmetry conditions are available with SIMULIA Tosca Structure:   * reflection symmetry * point symmetry * rotational symmetry * cyclic symmetry (replication of an area with a given distance) * link condition (coupling of arbitrary areas of the model)   A beam without symmetry (left) and with reflection symmetry (right) is shown in the following figure.   |  | | --- | |  |   An example of point symmetry (left) and rotational symmetry (right) is demonstrated as next.   |  | | --- | |  |   The last example demonstrates the cyclic symmetry (left) and a link condition (right).   |  | | --- | |  | |

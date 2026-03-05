@@ -1,0 +1,5 @@
+# Start Optimization
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Start Optimization | | |  | | | |  | | --- | | Tosca Structure first starts a preprocessing step to check the definitions and write the complete optimization model to the database. Then the optimization loop runs until the stop criteria defined by the user is reached. | | |   Optimization with Tosca Structure.bead, Tosca Structure.shape, Tosca Structure.topology or Tosca Structure.sizing can be started on the "Start Tosca Structure" screen in Tosca Structure.gui. The job name of the optimization job (chosen by a parameter file), the start directory, and, if required, the name of the FE solver is defined here. Further (optional) settings can be made using the menu "Additional Parameters."  A protocol window, convergence plots, and a small queuing system are available to support the user. For more details about the optimization start, refer to Starting Tosca Structure from Command-Line. The following figure shows the Start Tosca Structure module with the selectable solvers.   |  | | --- | |  | |

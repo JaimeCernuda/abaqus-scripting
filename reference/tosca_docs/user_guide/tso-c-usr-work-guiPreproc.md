@@ -1,0 +1,5 @@
+# Preprocessing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Preprocessing | | |  | | | |  | | --- | | Tosca Structure.pre is used to define the settings for the optimization task, which are then stored in a parameter file.   * Arrangement of the Commands | | |   The optimization task can either be created by a wizard, by defining the individual commands, or by modifying an existing parameter file. A tree view with a logical sequence of the commands supports the user in the definition.  The parameters for the optimization commands and their syntax are described in detail in the SIMULIA Tosca Structure Commands Guide. The following figure shows the GUI interface with the parameter file on the left and - in this example - the interface for the objective function command on the right side:   |  | | --- | |  |   Arrangement of the Commands The arrangement of the individual commands in the parameter file is arbitrary. The referenced command must be defined in advance only if a command references another command. New commands are added automatically to the parameter file in a suitable position. |

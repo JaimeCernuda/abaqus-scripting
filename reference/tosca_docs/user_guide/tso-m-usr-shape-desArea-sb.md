@@ -1,0 +1,5 @@
+# Design Area
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Design Area | | |  | | | |  | | --- | | In shape optimization the form of the component is changed. The change in form is achieved by moving the surface or a part of the component surface. The surface area of the component that can be changed is called the design area. The design area is defined using a node group consisting of design nodes. The current position of a design node in a design cycle is derived by superimposing the position of the node in the start model with an optimization displacement vector. These displacements might be restricted by design variable constraints to ensure certain geometrical properties of the component. Further, nodes in an area surrounding the design nodes might be moved to ensure mesh quality for the FE calculation (Mesh smooth area).   --- | | In this section:   * About the Design Area * Design Variables (DV\_SHAPE) * Mesh Smoothing (MESH\_SMOOTH) * Restrictions (DVCON\_SHAPE) * Link and Coupling Conditions (LINK\_SHAPE) | | | |

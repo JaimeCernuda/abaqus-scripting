@@ -1,0 +1,5 @@
+# About the Booster Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Booster Example | | |  | | | |  | | --- | | This 2D example discusses possible postprocessing steps with Tosca Structure.SMOOTH. This page discusses:   * About the Model * Procedure Summary | | |   About the Model The model in this example refers to a bike booster half-model. At one point, the breaking force is applied.  Procedure Summary |  |  | | --- | --- | | Model: | booster.ext | | Design Area: | All elements | | Constraint: | Relative volume of 30 % (equality constraint) | | Objective: | Maximize stiffness | | Iterations: | 15 (default) | | Run: | Smooth with isovalue 0.3 | | Postprocessing: | Optimization progress (element density) | |

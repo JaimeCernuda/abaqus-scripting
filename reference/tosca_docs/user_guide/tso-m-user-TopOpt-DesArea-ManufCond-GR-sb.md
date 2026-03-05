@@ -1,0 +1,5 @@
+# Manufacturing Conditions and Geometrical Restrictions
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Manufacturing Conditions and Geometrical Restrictions | | |  | | | |  | | --- | | For the topology optimization with Tosca Structure, it is possible to define constraints (`DVCON_TOPO`) that have a direct influence on the individual design variables (`DV_TOPO`). This allows the manufacturing restrictions or geometrical design aspects to be taken into consideration in the topology optimization.   --- | | In this section:   * About Manufacturing Conditions and Geometrical Restrictions * About Defining Restrictions with Tosca Structure.gui * Frozen Areas * Prevention of Undercuts in the Model * Prevention of Overhangs in the Model * Milling Restriction * Symmetry Conditions * Member Size Restrictions * Rib Design * About Cluster Groups * Combination of Manufacturing Restrictions | | | |

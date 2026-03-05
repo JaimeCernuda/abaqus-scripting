@@ -1,0 +1,5 @@
+# Tosca Driver
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Tosca Driver | | |  | | | |  | | --- | | SIMULIA Tosca Structure consists of many individual software modules that load the FE input and result data or modify the input files when required. The complete optimization process is controlled from one principal module named tosca\_driver. It controls the calling sequence of the individual software modules and the relevant solver.   --- | | In this section:   * Program Sequence and Data Flow of Tosca Structure * Starting Tosca Structure from Command-Line * Logging * Solver Interface * Durability Interface * Tosca Structure.REPORT Run * Automatic Tosca Structure.SMOOTH Run * Testing the Optimization Process * Restart and Resume Modes * Help * Sequential Temperature Analysis * Arbitrary Analysis Sequence * Configuration * Script Entry Points * Optimization Preprocessing Modules * Solver Run * Optimization Modules * Completion of the Optimization Process | | | |

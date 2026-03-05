@@ -1,0 +1,5 @@
+# About Milling Restrictions
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About Milling Restrictions | | |  | | | |  | | --- | | The milling restriction gives the user the possibility to obtain optimization results that are millable from multiple directions. | | |  | | --- | | See Also | | Defining Demold Restrictions | | About Prevention of Undercuts in the Model | |   The milling restriction is a variant of the demold manufacturing constraint. Here, the milling tool has access to all regions of the optimization results from the defined directions.  Note: The diameter of the milling tool is not taken into account during the optimization.  The following figure shows the milling restriction for three milling directions, which represents a typical 3-axis milling process:   |  | | --- | |  | |

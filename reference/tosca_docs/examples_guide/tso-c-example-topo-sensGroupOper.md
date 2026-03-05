@@ -1,0 +1,5 @@
+# About the Group Operator Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Group Operator Example | | |  | | | |  | | --- | | This example shows how to use Abaqus group operators for design responses.  This page discusses:   * About the Model * Procedure Summary | | |   About the Model The initial model is illustrated in the following figure. The boundary elements of the left holes are fixed, and the inner nodes of the rightmost hole are loaded in the Y-direction.    All elements of the model are part of the optimization except for the elements with loads or boundary conditions.  The maximum displacement of all nodes of the loaded hole is to be constraint.  Procedure Summary |  |  | | --- | --- | | Model: | group\_oper.ext | | Design Area: | All elements except frozen | | Objective: | Minimize volume | | Constraint: | Maximum nodal displacement: 30 mm | |

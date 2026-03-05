@@ -1,0 +1,5 @@
+# Minimizing the Material Volume with Stress Constraint
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Minimizing the Material Volume with Stress Constraint | | |  | | | |  | | --- | | This section presents an example where the material volume is minimized under a stress constraint. | | |  | | --- | | See Also | | Stress in Topology Optimization | |   The described example uses the following model:  (Design elements are shown in blue, the elements in red are defined as nondesign elements because of loads and boundary conditions.)   |  | | --- | |  |   The optimization setup is to minimize material volume having a constraint on the ‘Maximum von Mises stress.’   |  | | --- | |  |   The following diagram shows the difference between the maximal elemental centroidal von Mises stress from the solver and from SIMULIA Tosca Structure:   |  | | --- | |  | |

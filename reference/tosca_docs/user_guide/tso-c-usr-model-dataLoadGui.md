@@ -1,0 +1,5 @@
+# About Loading FE Data in the GUI
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About Loading FE Data in the GUI | | |  | | | |  | | --- | | All FE models used for the optimization can be loaded using the `FEM_INPUT` command in Tosca Structure.gui. | | |   Here, several models can be linked to your optimization task:   * The FILE item refers to analysis files with always   the same geometry (node and element structure) which describe the design   space. * The ADD\_FILE item refers to analysis files which   might contain additional geometry for the definition of geometrical constraints. * The COPY\_FILE item allows to copy files to the working   directory. * The LIFE\_FILE item refers to an analysis model for   a durability solver. * The TEMPERATURE\_FILE item refers to an analysis   model for a temperature solver run.   The following figure shows the loading data by MODEL\_LINK in FEM\_INPUT command in Tosca Structure.gui (right).   |  | | --- | |  | |

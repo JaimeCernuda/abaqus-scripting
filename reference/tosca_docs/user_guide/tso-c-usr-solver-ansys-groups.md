@@ -1,0 +1,5 @@
+# Node and Element Groups
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Node and Element Groups | | |  | | | |  | | --- | | Some remarks concerning node and element groups are summarized within this section. | | |   Node and element components or assemblies from components in ANSYS® are defined as follows:   ``` CM, Cname, Entity  CMGRP, Aname, Cnam1, Cnam2, Cnam3, Cnam4, Cnam5, Cnam6,  Cnam7, Cnam8  CMBLOCK,Cname,Entity,NUMITEMS ```   These components or assemblies are treated in SIMULIA Tosca Structure as node or element groups. These groups are loaded from the ANSYS® input file during the optimization preprocessing and these groups are available for further definition in the parameter file along with the groups `ALL_NODES` and `ALL_ELEMENTS`. If components containing nodes and elements have identical names in the ANSYS® input file, the endings `_NODE` and `_ELEM` are added to the specified group name during importation. This guarantees that the group can be identically identified by SIMULIA Tosca Structure. |

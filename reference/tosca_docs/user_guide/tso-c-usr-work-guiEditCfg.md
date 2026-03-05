@@ -1,0 +1,5 @@
+# Edit Configuration
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Edit Configuration | | |  | | | |  | | --- | | Edit Configuration allows you to modify the defaults of Tosca Structure.gui. The defaults are only used within Tosca Structure.gui. | | |   To gain the most from all program functionalities, you might need to change a few default settings. Edit Configuration shows the paths of the external programs used by Tosca Structure.gui, the Tosca Structure installation directory ( Tosca Structure Home), and extensions of the solver files. The paths are set to standard paths during installation. Using Reset to Defaults the paths are read from the Tosca Structure configuration and entered on the screen.  The settings are saved (Save Configuration) in a file toscagui####.ini (#### = current Tosca Structure version) in the user directory (and in the user profile). This file also serves as a configuration file for Tosca Structure.pre. If there are deviations in the paths from standard installation of the modules, some paths might have to be set individually.   |  | | --- | |  | |

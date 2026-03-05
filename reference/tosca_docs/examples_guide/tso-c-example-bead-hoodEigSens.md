@@ -1,0 +1,5 @@
+# About the Hood (Eigenfrequency) Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Hood (Eigenfrequency) Example | | |  | | | |  | | --- | | This example shows frequency optimization with sensitivity-based optimization strategies. This page discusses:   * About the Model * Procedure Summary (Sensitivity-Based Strategy) | | |   About the ModelThe goal of this optimization is to maximize the first eigenvalue of a bent plate. First eigenmode has the eigenvalue of 0.3098 (Using MSC Nastran®, other solvers might differ). In the following, the optimization is shown with a `CHECK_GROW` and `CHECK_SHRINK` of 0.5.  Procedure Summary (Sensitivity-Based Strategy) |  |  | | --- | --- | | Model: | hood\_eig\_sens.ext | | Design Area: | All nodes | | Design Variable Constraint: | CHECK\_GROW and CHECK\_SHRINK = 0.5 | | Objective: | Maximize first eigenfrequency | | Settings: | BEAD\_FILTER\_RADIUS = 1.5 | | Stop Condition: | 20 iterations | |

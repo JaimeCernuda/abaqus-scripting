@@ -1,0 +1,5 @@
+# About the Plate Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Plate Example | | |  | | | |  | | --- | | This example shows how to set a thickness control using a minimum or maximum member size. This page discusses:   * About the Model * Procedure Summary | | |   About the Model The plate has a u-shaped nut that is stressed by two opposing forces on its edges.  Procedure Summary |  |  | | --- | --- | | Model: | plate\_min\_max.ext | | Design Area: | All elements | | Design Variable Constraint: | Minimal member size 6 mm or maximal member size 6.0 mm | | Objective: | Maximize stiffness | | Constraint: | Relative volume of 40 % (equality constraint) | | Iterations: | 15 (default) | |

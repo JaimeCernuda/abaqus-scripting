@@ -1,0 +1,5 @@
+# Optimization Parameters for Mode Tracking
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Optimization Parameters for Mode Tracking | | |  | | | |  | | --- | | This section describes how to control mode tracking in sensitivity-based bead optimizations. | | |   Mode tracking is controlled by two optimization parameters:   ``` MODETRACKING = <on/off>, <node_group> MODENUMBERS  = <number_modes> ```   Mode tracking is activated by setting the optimization parameter `MODETRACKING = ON`. The second item on `MODETRACKING` can be used with a (small) node group that is used for the mode tracking, which can improve performance.  By default, the mode tracking of SIMULIA Tosca Structure takes 5 modes into account, but this can be changed by the item `MODENUMBERS = <number_modes>`.  |  | | --- | | Important: The value should not be set too high because of computational effort. | |

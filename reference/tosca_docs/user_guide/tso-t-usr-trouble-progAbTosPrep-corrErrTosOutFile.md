@@ -1,0 +1,5 @@
+# Correcting Errors and Warnings in the TOSCA.OUT File
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Correcting Errors and Warnings in the TOSCA.OUT File | | |  | | | |  | | --- | | At the end of the `TOSCA.OUT` file, the list of commands that failed during the optimization preprocessing is written. Usually, the first command in the list has caused the error. The following commands fail because they reference the first command.  This task shows you how to:   * Error Causes * Locate the Errors * Correct the Errors | | |   Error Causes 1. Incorrect or missing definitions in the parameter file (syntax error): 2. If you need more information to track down the problem, increase the amount of output    in the `TOSCA.OUT` file by setting "--loglevel debug" (see also Logging).  Locate the Errors 1. Search for warnings in `TOSCA.OUT`. 2. If you need more information to track down the problem, increase the amount of output    in the `TOSCA.OUT` file by setting "--loglevel debug" (see also Logging).  Correct the Errors Correct the incorrect entries in the parameter file. |

@@ -1,0 +1,5 @@
+# Purpose of Shape Optimization in Combination of Durability Analysis
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Purpose of Shape Optimization in Combination of Durability Analysis | | |  | | | |  | | --- | | Shape optimization allows specific detail improvements of existing designs. | | |   Through shape optimization, the surface geometry of a given model is modified automatically to avoid material failure and increase durability or comfort. Often stress reduction already leads to a significant increase in durability. Nevertheless for realistic models, stress peaks as identified by static analysis might differ largely from areas of maximum damage. In these cases, stress-based shape optimization might even worsen the design performance. If the locations of maximum damage and maximum stress do not match, fatigue life simulation should always be included in the optimization loop. |

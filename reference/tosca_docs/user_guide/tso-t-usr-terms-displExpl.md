@@ -1,0 +1,5 @@
+# Example: Minimizing the Displacement Design Response
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: Minimizing the Displacement Design Response | | |  | | | |  | | --- | | The task for this example is to minimize the absolute displacement of node 10 in the local coordinate system CS\_1.  This task shows you how to:   * Choose a Displacement Design Response in Tosca Structure.gui * SIMULIA Tosca Structure   Parameter File | | |   Choose a Displacement Design Response in Tosca Structure.gui 1. Choose Command > DRESP. The DRESP menu appears. 2. Define a displacement design response as shown in the following figure:  SIMULIA Tosca Structure Parameter File The resulting command in the parameter file look like follows: ``` DRESP  ID_NAME  = disp_x_abs  TYPE     = DISP_X_ABS  CS_REF   = CS_1  DEF_TYPE = SYSTEM  LC_SET   = STATIC, 2,  NODE     = 10 END_ ``` |

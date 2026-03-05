@@ -1,0 +1,5 @@
+# DV_GENERIC
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DV\_GENERIC | | |  | | | |  | | --- | | Definition of generic design variables.  This page discusses:   * Remarks * Examples | | |   |  |  |  | | --- | --- | --- | | ID\_NAME | = `<id_name_of_dv_generic>` | Name of the `DV_GENERIC` definition. | | GENERIC\_GROUP | = `<name_of_generic_group>` | Name of the generic variable group. | | INITIAL\_DV\_FIELD | = `<name_of_file>` | Name of the file with the initial values to be used for the optimization. |   Remarks  1. All members of the generic group might be modified during optimization. 2. Generic design variables are not connected to nodes, elements, faces, or other entities from    mesh, geometry, or finite element models. 3. Generic design variables are available only for sensitivity-based optimization.  Examples  ``` DV_GENERIC   ID_NAME  = dv_generic_name   GENERIC_GROUP = dv_generic_grp END_ ``` |

@@ -1,0 +1,5 @@
+# Definition in SIMULIA Tosca Structure
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Definition in SIMULIA Tosca Structure | | |  | | | |  | | --- | | Cartesian and cylindrical coordinate systems defined in the FE model are accessible in SIMULIA Tosca Structure and can be referenced in the parameter file by their names. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | CS\_DEF | |   For details and exceptions refer to Coordinate Systems (Abaqus), Coordinate Systems (ANSYS®) and Coordinate Systems (MSC Nastran®). In addition, the command `CS_DEF` of the SIMULIA Tosca Structure parameter file defines the coordinate systems using either the IDs of existing nodes, or coordinates and rotation angles (if required). Each coordinate system has an `ID_NAME` value (editable by the user) that is then used to reference the coordinate system.  In Tosca Structure.gui, a new coordinate system is created by the `Command | CS_DEF` main menu command of the Tosca Structure.pre screen which can be seen in the following figure: |

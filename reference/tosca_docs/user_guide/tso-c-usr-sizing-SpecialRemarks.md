@@ -1,0 +1,5 @@
+# Special Remarks on The Sizing Algorithm
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Special Remarks on The Sizing Algorithm | | |  | | | |  | | --- | | Some remarks on the sizing optimization algorithm are given here.   * Semianalytical Sensitivity Calculation | | |   Semianalytical Sensitivity Calculation In the context of sizing optimization to obtain the sensitivity of design responses, a semianalytical approach is used. It is based on a finite difference of the elemental stiffness and mass matrices. That means that in addition to the original matrices perturbed matrices must be requested from the solver. This is done by a "matrix-step" (see figure below).   |  | | --- | |  |   This matrix step's only purpose is to perturb all pseudo densities to get the perturbed matrices - the original matrix is obtained in a usual solver step where also the results of the FE-problem are wanted. For situations where matrix step is required the solver is called twice in each iteration. |

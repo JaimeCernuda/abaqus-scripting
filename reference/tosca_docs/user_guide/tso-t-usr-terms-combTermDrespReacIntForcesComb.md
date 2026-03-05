@@ -1,0 +1,5 @@
+# Combining Reaction Forces and Internal Forces
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Combining Reaction Forces and Internal Forces | | |  | | | |  | | --- | | This section shows how to combine reaction and internal forces. | | |   1. The figure below shows two forces defined in different coordinates    system and different directions called `DRESP_1` and `DRESP_2`. 2. The displacements can be combined to a `DRESP`, which can be applied in the optimization like the following: ```    DRESP     ID_NAME  = .....     DEF_TYPE = OPER     VAR_OPER = COMBINE     VARIABLE = ....., .....     VARIABLE = DRESP_1,  0.6     VARIABLE = DRESP_2, -0.8     VARIABLE = ....., .....        ....................    END_    ```  Notes:  1. Internal forces and reaction forces can be combined and weighted. 2. Different directions of internal forces and reaction forces can be combined    and weighted. 3. Internal forces and reaction forces of different coordinate systems can be    combined and weighted. 4. Reaction force moments and internal force moments can also be combined    and weighted. |

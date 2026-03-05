@@ -1,0 +1,5 @@
+# About the Holeplate: FEMFAT® Example
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Holeplate: FEMFAT® Example | | |  | | | |  | | --- | | In this simple model (realized as a quarter model), two load cases are defined.  * About the Model | | |   About the Model |  |  | | --- | --- | | Task | minimize maximum damage | | Options | damage (fatigue) design response, FEMFAT® | | Commands | DRESP, TYPE = DAMAGE | In this simple model (realized as a quarter model), two load cases are defined as illustrated in the figure. The loads of the second load case are twice as large as the loads of the first load case.  The maximum von Mises stress in the initial model is located at the lower side of the notch. Nevertheless, the maximum damage because of cyclic loading is located at the upper side of the notch (see the figure). |

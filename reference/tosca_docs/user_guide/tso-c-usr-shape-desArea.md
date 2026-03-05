@@ -1,0 +1,5 @@
+# About the Design Area
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the Design Area | | |  | | | |  | | --- | | During an optimization, only part of the model might be allowed to changed. This part is defined as the design area.  * Example | | |  | | --- | | See Also | | About Generic Design Variables | |   In shape optimization, the design area denotes the set of surface nodes that might be moved during the optimization, in contrast to the frozen areas that remain unchanged.  The model for the shape optimization contains solid elements in the design area where the optimization system can move the respective surface nodes to get better structural performance.  A shape optimization can be combined with generic design variables.  Example The following start model for shape optimization represents a design of inner rim holes. The component must be manufactured by stamping.  |  | | --- | | Green: Design Area  Red: Frozen Area and Smooth Area | |

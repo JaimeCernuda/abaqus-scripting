@@ -1,0 +1,5 @@
+# Defining the Morphing Task
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining the Morphing Task | | |  | | | |  | | --- | | A morphing area is a node group, which is modified independently of other morphing areas during the morphing process. All nodes in one morphing area obtain the same morphing displacement in one morphing step. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | MORPH | | MORPH\_AREA | |   1. Choose Command > MORPH. 2. In the MORPH\_AREA dialog, select the corresponding optimization task. 3. To enter morph areas, click Add and activate    the corresponding areas. Enter a morph parameter file and the number of    processors. 4. To start the morphing run, start SIMULIA Tosca Structure    with your parameter file including the morphing commands. 5. Create your    visualization sequence using Tosca Structure.REPORT. |

@@ -1,0 +1,5 @@
+# Optimization of Structures with Nonlinear Behavior
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Optimization of Structures with Nonlinear Behavior | | |  | | | |  | | --- | | Sizing optimization is well established for linear models. Whereas in the context of nonlinear structural analysis, sizing optimization is less robust, often failing because of solver convergence issues. Therefore, a proper optimization setup is required. This section presents guidelines to build a stable optimization setup for sizing optimization. In addition, these guidelines can assist the user to address the issues during the optimization run.   --- | | In this section:   * Effects of Nonlinearities * Review of Available Options and Possibilities * Guidelines for Optimization of Structures with Nonlinear Behavior * Summary of Guidelines | | | |

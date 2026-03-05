@@ -1,0 +1,5 @@
+# Example: Defining the Eigenvalue
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: Defining the Eigenvalue | | |  | | | |  | | --- | | The task for this example is to define the Kreisselmeier-Steinhauser formulation for the first 5 eigenvalues of the first load case.  This task shows you how to:   * Define in Tosca Structure.gui * Tosca Structure   Parameter File | | |   Define in Tosca Structure.gui 1. Choose Command > DRESP. The DRESP menu appears. 2. Define the Kreisselmeier-Steinhauser formulation as design response as shown in the following figure:  Tosca Structure Parameter File The resulting command in the parameter file look like follows: ``` DRESP   ID_NAME  = freq_kreissel   TYPE     = DYN_FREQ_KREISSEL   DEF_TYPE = SYSTEM   LC_SET   = MODAL,ALL,1-5 END_ ``` |

@@ -1,0 +1,5 @@
+# Check of Program Installation and Paths
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Check of Program Installation and Paths | | |  | | | |  | | --- | | One needs to ensure that all programs are properly installed as various programs work interdependently in an optimization run (see the Installation Manual). It only makes sense to search for the error in a different place when it is certain that all individual programs can be started correctly. | | |   If SIMULIA Tosca Structure cannot be found, then a check must be made to see if the program was properly installed.  Only then the program starts and the system specific configuration is loaded. In order to find the user specific configuration (tosca.cfg), the environment variable "$HOME" must be set.  The name of the model to be optimized is called "`<jobname>`". Path settings, default names, and default extensions can be checked in `TOSCA_OUT`. |

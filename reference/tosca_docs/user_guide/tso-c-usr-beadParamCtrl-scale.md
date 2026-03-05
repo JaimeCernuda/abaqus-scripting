@@ -1,0 +1,5 @@
+# Scaling of Displacements (SCALE)
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Scaling of Displacements (SCALE) | | |  | | | |  | | --- | | This section describes the inversion of the optimization displacement vectors. | | |   By default, the positive normal vector of the elements in the design domain is used as an optimization displacement direction. This direction depends on the orientation of the finite elements in the design domain.  To invert the displacement direction, a negative `SCALE` parameter can be defined. Correspondingly, the absolute value of the optimization displacement is then applied in the negative direction.  Note:  The value of the scaling parameter is not required by SIMULIA Tosca Structure. Only the sign is required to determine direction.   ``` OPT_PARAM  ...  SCALE = -1  ... END_ ``` |

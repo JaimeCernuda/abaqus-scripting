@@ -1,0 +1,5 @@
+# Filter Settings
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Filter Settings | | |  | | | |  | | --- | | The filter technique for the objective and constraint functions can be changed using the parameter `FILTER_TYPE` in the optimization settings (`OPT_PARAM` command).  * Filter Type | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | OPT\_PARAM | |   Filter Type The `FILTER_TYPE` can be set to `AUTO`, `SENS`, `DV`, or `DV_LEGACY`, respectively.  `AUTO` defines automatic selection of the applied filter type as recommended by SIMULIA Tosca Structure.  The option `SENS` applies the filter to the sensitivities.  The option `DV` applies the filter to the design variables.  Using the option `DV_LEGACY`, applies an older version of the design variable filter. Use this option to achieve similar results to version 2020x and before.  |  | | --- | | Important:  * Changing the filter type has no effect when the objective is to minimize the mass. * Changing the filter type has no effect when manufacturing constraints are present. | |

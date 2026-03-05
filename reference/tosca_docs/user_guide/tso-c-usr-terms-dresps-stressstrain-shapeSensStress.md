@@ -1,0 +1,5 @@
+# Stress in Sensitivity-Based Shape Optimization
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Stress in Sensitivity-Based Shape Optimization | | |  | | | |  | | --- | | The stress in a sensitivity-based shape optimization SIG\_MISES is the elemental centroidal von Mises stress, and its sensitivities are approximated using the P-mean Norm. | | |  | | --- | | See Also | | Objective Function for Sensitivity-Based Shape Optimization | | Constraints for Sensitivity-Based Shape Optimization | |   | Parameter Name | Formula | | --- | --- | | SIG\_MISES |  |   The σvMises is the elemental centroidal von Mises stress evaluated over the elements in the DRESP definition. While the design response is the true maximum, the sensitivities are approximated using the P-mean Norm. `GROUP_OPER = MAX` must be used, other `GROUP_OPER` settings are not allowed.   |  | | --- | | Tip: Refer to the related topics for a list of all possible design responses supported for objective functions and constraints. | |

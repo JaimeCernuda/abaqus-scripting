@@ -1,0 +1,5 @@
+# Overview
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Overview | | |  | | | |  | | --- | | This section explains the purpose of Tosca Structure.SMOOTH. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | SMOOTH | |   The saved surface can be used for the following reasons:   * Validation run. * Surface for remeshing and generation of validation model (Reconstruct). * Transfer to CAD: surface in `STL` or `IGES`   format, slices in `IGES` or `CLI`  format. * Representation of the surface in solver formats (`INP, BDF, CDB`). * Visualization of the processed optimization results in `VTFX` format.   Also,the surface is saved in `ONF` format and can be viewed and processed further.  Tosca Structure.SMOOTH reads the names of input files and other parameters from a SIMULIA Tosca Structure parameter file. Although it is possible to set up the parameter file manually and start smoothing from the command-line, it is recommended to use the Tosca Structure.gui for setting up and executing a smooth job. |

@@ -1,0 +1,5 @@
+# Check Run
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Check Run | | |  | | | |  | | --- | | The check run should be performed before starting the optimization to avoid wrong or missing definitions for the optimization task. | | |   Once the optimization task is completely defined, a check run should be made. Tosca Structure then performs a complete syntax check of the optimization task to ensure a valid definition. Eventually some test runs for shape (see Check run (TEST\_SHAPE)) and bead optimization (see Testing the Optimization Setup (TEST\_BEAD)) are made which applies hypothetical optimization displacements to the model to enable the user to check restrictions etc. visually (for example, using Tosca Structure.view). The entries for check run can be made in Tosca Structure.pre which are executed at Start Tosca Structure  by selecting test1 as `Type`. Both are shown in the following figure:   |  | | --- | |  | |

@@ -1,0 +1,5 @@
+# Solver Specific Features
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Solver Specific Features | | |  | | | |  | | --- | | This chapter describes the formats and functionalities of the different solvers supported by SIMULIA Tosca Structure. The topological and physical properties of the analysis model (finite element input file) are required for the optimization of an FE model. Usually, not all the information contained in the analysis model is required for an optimization. The optimization module returns the modified model data to the FE solver. The node coordinates are changed during shape and bead optimization. New materials and element properties are generated during topology optimization and the assignments of the elements to the material definitions and material properties are changed. Therefore, there are very few restrictions to the FE modeling (finite element input file).   --- | | In this section:   * Overview * Abaqus * ANSYS® * MSC Nastran® * CST * Shape Optimization Based on a Durability Analysis | | | |

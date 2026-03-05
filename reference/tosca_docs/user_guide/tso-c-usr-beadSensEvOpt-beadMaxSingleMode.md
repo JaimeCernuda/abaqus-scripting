@@ -1,0 +1,5 @@
+# Maximize a Certain Mode
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Maximize a Certain Mode | | |  | | | |  | | --- | | You can use mode tracking to view a single mode. | | |   ``` DRESP  ID_NAME  = dresp_eig2  DEF_TYPE = SYSTEM  TYPE     = DYN_FREQ  LC_SET   = Modal,All,2 END_  OBJ_FUNC  ID_NAME = max_ dresp_eig2  DRESP   = dresp_eig2  TARGET  = MAX END_  OPTIMIZE  ID_NAME  = opt  DV       = my_design_nodes  STRATEGY = BEAD_SENSITIVITY  OBJ_FUNC = max_ dresp_eig2 END_  OPT_PARAM  ID_NAME      = my_parameters  OPTIMIZE     = opt  MODETRACKING = ON  MODENUMBERS  = 10 END_ ```   The second mode is chosen to be maximized. The important difference is that mode tracking is activated in the optimization parameters (`MODETRACKING= ON`). The default for mode tracking in SIMULIA Tosca Structure is to take 5 modes into account, but this can be changed with the item `MODENUMBERS`. This should not be set too high because of computational effort.   |  | | --- | |  | | Optimization displacements and convergence plots without (a) and with (b) mode tracking | |

@@ -1,0 +1,5 @@
+# Minimizing the Maximum Stress with Volume Constraint
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Minimizing the Maximum Stress with Volume Constraint | | |  | | | |  | | --- | | This section presents an example where the maximum stress is minimized under a volume constraint. | | |  | | --- | | See Also | | Stress in Topology Optimization | |   The described example uses the following model:  (Design elements are shown in blue, the elements in red are defined as nondesign elements because of loads and boundary conditions.)   |  | | --- | |  |   The optimization target is to minimize the maximum von Mises stress with a volume constraint of 30%:   |  | | --- | |  |   The following diagram shows the difference between the maximum elemental centroidal von Mises stress calculated by the FE solver and the stress interpolated by SIMULIA Tosca Structure:   |  | | --- | |  | |
