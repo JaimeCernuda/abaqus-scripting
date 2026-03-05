@@ -1,0 +1,134 @@
+============================================
+Experiment 10: PRODUCTION Stress-Constrained TO
+Started: Thu Feb 26 21:42:59 MST 2026
+Node: kp198
+Mesh size: 1.0 mm
+CPUs: 8
+Max cycles: 75
+Stress limit: 800.0 MPa
+============================================
+
+--- Environment ---
+/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands/abaqus
+abaqus: Abaqus JOB abaqus
+/uufs/chpc.utah.edu/sys/installdir/abaqus/2025/Commands/tosca
+tosca: found
+/usr/bin/Xvfb
+Xvfb: found
+
+============================================
+STEP 1: Optimization pipeline (noGUI)
+============================================
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<8 out of 11 licenses remain available>.
+
+Step 1 exit code: 0
+
+--- Files in work directory ---
+total 265331
+drwxr-xr-x 2 u6074059 hochhalter      4096 Feb 28 11:26 .
+drwxr-xr-x 2 u6074059 hochhalter      4096 Feb 26 21:43 ..
+-rw-r--r-- 1 u6074059 hochhalter     32524 Feb 28 11:26 abaqus.rpy
+-rw-r--r-- 1 u6074059 hochhalter      4933 Feb 28 10:55 authorization.log
+-rw-r--r-- 1 u6074059 hochhalter 135828923 Feb 26 21:43 Exp10_FEA_flat.inp
+-rw-r--r-- 1 u6074059 hochhalter 135829429 Feb 26 21:43 Exp10_FEA.inp
+-rw-r--r-- 1 u6074059 hochhalter      2073 Feb 26 21:44 Exp10_TO.par
+drwxr-xr-x 2 u6074059 hochhalter      4096 Feb 28 10:55 exp10_tosca
+
+--- Tosca output directory ---
+total 1987502
+drwxr-xr-x 2 u6074059 hochhalter       4096 Feb 28 10:55 .
+drwxr-xr-x 2 u6074059 hochhalter       4096 Feb 28 11:26 ..
+-rw-r--r-- 1 u6074059 hochhalter  135828923 Feb 26 21:44 Exp10_FEA_flat.inp
+-rw-r--r-- 1 u6074059 hochhalter       2073 Feb 26 21:44 Exp10_TO.par
+-rw-r--r-- 1 u6074059 hochhalter      21032 Feb 28 10:54 fe_mtx_database.idx
+-rw-r--r-- 1 u6074059 hochhalter   23527424 Feb 28 10:54 fe_mtx_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter       4657 Feb 28 10:54 optimization_report.csv
+-rw-r--r-- 1 u6074059 hochhalter      11070 Feb 28 10:54 optimization_status_all.csv
+-rw-r--r-- 1 u6074059 hochhalter  331218944 Feb 28 10:54 opt_res_001.vtm
+-rw-r--r-- 1 u6074059 hochhalter     612160 Feb 28 10:54 opt_res_database.idx
+-rw-r--r-- 1 u6074059 hochhalter 1048641536 Feb 28 10:54 opt_res_database.vtm
+-rw-r--r-- 1 u6074059 hochhalter     247160 Feb 28 10:54 resume_database.idx
+-rw-r--r-- 1 u6074059 hochhalter  494272512 Feb 28 10:54 resume_database.vtm
+drwxr-xr-x 2 u6074059 hochhalter       4096 Feb 28 10:54 SAVE.dat
+drwxr-xr-x 2 u6074059 hochhalter       4096 Feb 28 10:54 SAVE.inp
+drwxr-xr-x 2 u6074059 hochhalter       4096 Feb 28 10:54 SAVE.msg
+drwxr-xr-x 2 u6074059 hochhalter       4096 Feb 28 10:54 SAVE.onf
+drwxr-xr-x 2 u6074059 hochhalter       4096 Feb 28 10:54 SAVE.sta
+-rw-r--r-- 1 u6074059 hochhalter     811963 Feb 28 10:55 TOSCA.OUT
+Total files in exp10_tosca/: 18
+
+STL files found: 1
+-rw-r--r-- 1 u6074059 hochhalter 4434966 Feb 28 10:55 /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment10/run/exp10_tosca/TOSCA_POST/ISO_SMOOTHING.stl
+
+============================================
+STEP 2: Visualization (Xvfb)
+============================================
+Xvfb started on :833 (PID=3606176)
+Abaqus License Manager checked out the following license:
+"cae" from Flexnet server ls1.chpc.utah.edu
+<8 out of 11 licenses remain available>.
+X Error: code 2 major 150 minor 3: BadValue (integer parameter out of range for operation).
+
+Warning: There was a problem creating an OpenGL feedback context for printing.
+If you encounter any problems with printing, verify that indirect GLX context
+creation is enabled on your X server. For more information on indirect / direct
+GLX context and how to enable indirect GLX context creation, see Knowledge Base
+article QA00000043316
+X Error: code 8 major 130 minor 3: BadMatch (invalid parameter attributes).
+X Error: code 8 major 130 minor 3: BadMatch (invalid parameter attributes).
+X Error: code 8 major 130 minor 3: BadMatch (invalid parameter attributes).
+X Error: code 8 major 130 minor 3: BadMatch (invalid parameter attributes).
+
+*** ABAQUS/ABQcaeK rank 0 terminated by signal 15
+
+
+*** ABAQUS/ABQcaeG rank 0 terminated by signal 15
+
+*** ERROR CATEGORY:  CAE
+
+*** ERROR CATEGORY:  ABQcaeG
+
+Abaqus Error: Abaqus/CAE Kernel exited with an error code -15 (-0XF).
+
+Step 2 exit code: 124
+WARNING: Visualization timed out (300s)
+
+============================================
+RESULTS SUMMARY
+============================================
+
+--- Optimization outputs ---
+  Exp10_FEA_flat.inp: 135828923 bytes
+  Exp10_FEA.inp: 135829429 bytes
+  Exp10_TO.par: 2073 bytes
+
+--- Visualization images ---
+  displacement_magnitude.png: 53299 bytes
+  stress_mises.png: 62706 bytes
+  Images: 2
+
+--- STL outputs ---
+  /uufs/chpc.utah.edu/common/home/u6074059/Abaqus/paper_reproduction/experiment10/run/exp10_tosca/TOSCA_POST/ISO_SMOOTHING.stl
+
+--- Optimization convergence ---
+  First 5 and last 5 iterations:
+ITERATION, MIN_VOLUME, OBJ_FUNC_DRESP:DRESP_VOLUME, OBJ_FUNC_TERM:DRESP_VOLUME, STRESS_CONSTRAINT:LE:DRESP_STRESS
+Norm-Values:, 1.0379638e+5, 1.0379638e+5, 1.0379638e+5, 8.0000000e+2
+0, 1.0379638e+5, 1.0379638e+5, 1.0379638e+5, 1.3379354e+3
+1, 1.0552155e+5, 1.0552155e+5, 1.0552155e+5, 8.1875177e+2
+2, 1.0253667e+5, 1.0253667e+5, 1.0253667e+5, 7.0982202e+2
+3, 9.9739344e+4, 9.9739344e+4, 9.9739344e+4, 7.7589581e+2
+4, 9.6327500e+4, 9.6327500e+4, 9.6327500e+4, 7.3329926e+2
+  ...
+71, 5.1186102e+4, 5.1186102e+4, 5.1186102e+4, 7.9887823e+2
+72, 5.1161238e+4, 5.1161238e+4, 5.1161238e+4, 8.0330170e+2
+73, 5.1230336e+4, 5.1230336e+4, 5.1230336e+4, 7.9409631e+2
+74, 5.1152723e+4, 5.1152723e+4, 5.1152723e+4, 8.0325946e+2
+75, 5.1252043e+4, 5.1252043e+4, 5.1252043e+4, 7.9774292e+2
+
+============================================
+Experiment 10 PRODUCTION finished: Sat Feb 28 11:31:29 MST 2026
+Step 1 (optimization) exit: 0
+============================================
