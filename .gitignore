@@ -1,9 +1,9 @@
-reference/
 paper/
 .old/
 docs/
 iowarp/
 abqpy_reference/
+reference/abaqus_docs/
 
 # Python
 __pycache__/

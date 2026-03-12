@@ -13,8 +13,8 @@ This guide helps determine which Abaqus skill to invoke based on analysis type a
 | Heat transfer | `/abaqus-thermal-analysis` | geometry, material, mesh, bc, load, step, output, job, odb |
 | Coupled thermal-stress | `/abaqus-coupled-analysis` | geometry, material, mesh, bc, load, field, step, output, job, odb |
 | Contact/multi-body | `/abaqus-contact-analysis` | geometry, material, mesh, bc, load, interaction, step, output, job, odb |
-| Topology optimization | `/abaqus-topology-optimization` | geometry, material, mesh, bc, load, step, optimization, output, job, odb, export |
-| Shape optimization | `/abaqus-shape-optimization` | geometry, material, mesh, bc, load, step, optimization, output, job, odb |
+| Topology optimization | `/abaqus-topology-optimization` | geometry, material, mesh, bc, load, step, output, job + `/tosca` (.par) + `/tosca-cli` (execution) |
+| Shape optimization | `/abaqus-shape-optimization` | geometry, material, mesh, bc, load, step, output, job + `/tosca` (.par) + `/tosca-cli` (execution) |
 | Fatigue/durability | `/abaqus-fatigue-analysis` | static-analysis, amplitude, odb |
 
 ## By User Intent
@@ -25,7 +25,7 @@ This guide helps determine which Abaqus skill to invoke based on analysis type a
 |---------------|----------|
 | "Create a model from scratch" | Start with `/abaqus-geometry` |
 | "Build a cantilever beam" | `/abaqus-static-analysis` (full workflow) |
-| "Design an optimized bracket" | `/abaqus-topology-optimization` |
+| "Design an optimized bracket" | `/abaqus-topology-optimization` + `/tosca` + `/tosca-cli` |
 | "Set up a contact model" | `/abaqus-contact-analysis` |
 
 ### "I want to analyze..."
@@ -56,7 +56,8 @@ This guide helps determine which Abaqus skill to invoke based on analysis type a
 | "Check results" | `/abaqus-odb` |
 | "Extract stress data" | `/abaqus-odb` |
 | "Get displacement plot" | `/abaqus-odb` |
-| "Export to STL" | `/abaqus-export` |
+| "Export to STL" (general geometry) | `/abaqus-export` |
+| "Export to STL" (optimization results) | `/tosca-cli` |
 | "Run the analysis" | `/abaqus-job` |
 
 ### "I need help with..."
@@ -100,10 +101,13 @@ This guide helps determine which Abaqus skill to invoke based on analysis type a
 - "heat and deformation", "warping from temperature"
 
 ### Optimization Triggers
-- "optimize", "optimization", "topology"
-- "minimize weight", "lightweight", "reduce mass"
-- "material distribution", "where to remove material"
-- "shape optimization", "stress concentration"
+- "optimize", "optimization", "topology" --> `/abaqus-topology-optimization` (model setup)
+- "minimize weight", "lightweight", "reduce mass" --> `/abaqus-topology-optimization` + `/tosca` + `/tosca-cli`
+- "material distribution", "where to remove material" --> `/abaqus-topology-optimization`
+- "shape optimization", "stress concentration" --> `/abaqus-shape-optimization`
+- "design response", ".par file", "SIMP penalty", "constraint" --> `/tosca` (.par authoring)
+- "run optimization", "tosca optimize", "SLURM", "check run" --> `/tosca-cli` (execution)
+- "export STL from optimization", "smooth geometry" --> `/tosca-cli` (post-processing)
 
 ### Contact Analysis Triggers
 - "contact", "friction", "touching"
@@ -124,8 +128,11 @@ This guide helps determine which Abaqus skill to invoke based on analysis type a
 
 ### "Optimize this design"
 1. Ask: "Do you want to redistribute material (topology) or just modify the surface shape?"
-2. If topology --> `/abaqus-topology-optimization`
-3. If shape only --> `/abaqus-shape-optimization`
+2. If topology --> three-skill pipeline:
+   a. `/abaqus-topology-optimization` -- CAE model setup, writeInput, flatten .inp
+   b. `/tosca` -- author .par file with design responses, constraints, objectives
+   c. `/tosca-cli` -- run `tosca optimize`, monitor, post-process, export STL
+3. If shape only --> `/abaqus-shape-optimization` + `/tosca` + `/tosca-cli`
 
 ### "Temperature effects"
 1. Ask: "Do you need just the temperature distribution, or also the thermal stress?"

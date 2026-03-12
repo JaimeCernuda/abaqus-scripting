@@ -91,18 +91,19 @@ abaqus-contact-analysis
 ├── abaqus-job
 └── abaqus-odb
 
-abaqus-topology-optimization
-├── abaqus-geometry
-├── abaqus-material
-├── abaqus-mesh
-├── abaqus-bc
-├── abaqus-load
-├── abaqus-step
-├── abaqus-optimization (REQUIRED)
-├── abaqus-output
-├── abaqus-job
-├── abaqus-odb
-└── abaqus-export (for STL output)
+abaqus-topology-optimization (hybrid CAE + Tosca CLI pipeline)
+├── abaqus-geometry        # CAE: create design space geometry
+├── abaqus-material        # CAE: define material (E, nu, rho)
+├── abaqus-mesh            # CAE: generate FE mesh
+├── abaqus-bc              # CAE: boundary conditions
+├── abaqus-load            # CAE: applied loads
+├── abaqus-step            # CAE: static step
+├── abaqus-output          # CAE: field output requests
+├── abaqus-job             # CAE: writeInput() to generate .inp
+├── tosca (REQUIRED)       # Author .par file: design responses, constraints, objectives
+├── tosca-cli (REQUIRED)   # Run: tosca optimize, monitor, post-process
+├── abaqus-odb             # Post: extract results from optimized-design ODB
+└── abaqus-export          # Post: STL export (via SMOOTH block in .par or abaqus-export)
 ```
 
 ## Step Type Selection

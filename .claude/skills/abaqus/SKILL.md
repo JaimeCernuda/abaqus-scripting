@@ -36,7 +36,9 @@ Master orchestrator for all Abaqus FEA tasks. Routes requests to specialized ski
 | "thermal stress", "thermal expansion", "heat + deformation" | `/abaqus-coupled-analysis` |
 | "contact", "friction", "parts touching", "assembly", "bolt" | `/abaqus-contact-analysis` |
 | "fatigue", "cycles", "durability", "life prediction" | `/abaqus-fatigue-analysis` |
-| "optimize weight", "topology", "minimize material" | `/abaqus-topology-optimization` |
+| "optimize weight", "topology", "minimize material" | `/abaqus-topology-optimization` (model setup) + `/tosca` (.par file) + `/tosca-cli` (execution) |
+| "design response", ".par file", "SIMP", "constraint" | `/tosca` |
+| "run optimization", "tosca optimize", "check run", "SLURM" | `/tosca-cli` |
 | "reduce stress concentration", "smooth shape", "fillet" | `/abaqus-shape-optimization` |
 
 ### Module Skills (Single Tasks)
@@ -55,7 +57,8 @@ Master orchestrator for all Abaqus FEA tasks. Routes requests to specialized ski
 | Configure outputs | `/abaqus-output` |
 | Submit/monitor jobs | `/abaqus-job` |
 | Extract results from ODB | `/abaqus-odb` |
-| Optimization task setup | `/abaqus-optimization` |
+| Tosca .par file authoring | `/tosca` |
+| Run Tosca optimization CLI | `/tosca-cli` |
 | Export STL/STEP/INP | `/abaqus-export` |
 | API documentation | `/abaqus-docs` |
 
@@ -105,7 +108,10 @@ Master orchestrator for all Abaqus FEA tasks. Routes requests to specialized ski
 
 ### Ambiguous Optimization
 > "What kind of optimization?
-> - Topology: Redistribute material, add holes (requires full license)
+> - Topology: Redistribute material, add holes (requires full license with Tosca)
+>   - Model setup: `/abaqus-topology-optimization` (CAE model + writeInput)
+>   - .par file: `/tosca` (design responses, constraints, objectives)
+>   - Execution: `/tosca-cli` (tosca optimize, SLURM, post-processing)
 > - Shape: Modify surface only, reduce stress concentrations"
 
 ## Required Information by Analysis Type

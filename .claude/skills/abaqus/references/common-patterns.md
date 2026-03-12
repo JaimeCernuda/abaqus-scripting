@@ -290,46 +290,117 @@ odb.close()
 
 ## Topology Optimization
 
+Two paths available: CAE API (Abaqus built-in) or Tosca CLI hybrid pipeline.
+
+### Path A: CAE API (Abaqus Built-In Optimization)
+
 ```python
-# Create optimization task
-model.TopologyTask(
-    name='TopoTask',
-    region=MODEL,
-    materialInterpolationTechnique=SIMP,
-    materialInterpolationPenalty=3.0,
-    freezeBoundaryConditionRegions=ON,
-    freezeLoadRegions=ON
-)
+# Build your FE model in CAE as usual, then:
+model.TopologyTask(name='Task', region=model.rootAssembly.sets['DesignSpace'])
+model.optimizationTasks['Task'].DesignResponse(name='DR_Volume', region=MODEL, response=VOLUME)
+model.optimizationTasks['Task'].DesignResponse(name='DR_StrainEnergy', region=MODEL, response=STRAIN_ENERGY)
 
-# Design responses
-model.optimizationTasks['TopoTask'].SingleTermDesignResponse(
-    name='volume', region=MODEL, identifier=VOLUME
-)
-model.optimizationTasks['TopoTask'].SingleTermDesignResponse(
-    name='strain_energy', region=MODEL, identifier=STRAIN_ENERGY, stepOptions=LAST_STEP
-)
+# CRITICAL: objectives must be 4-tuples (suppress, designResponse, weight, referenceValue)
+# WRONG: (OFF, 'DR_StrainEnergy', 1.0, 0.0, '')  -- 5-tuple corrupts C++ state!
+model.optimizationTasks['Task'].ObjectiveFunction(
+    name='ObjFunc',
+    objectives=((OFF, 'DR_StrainEnergy', 1.0, 0.0),))  # 4-tuple!
 
-# Objective: minimize strain energy (maximize stiffness)
-model.optimizationTasks['TopoTask'].ObjectiveFunction(
-    name='MinEnergy',
-    objectives=((model.optimizationTasks['TopoTask'].designResponses['strain_energy'],
-                 MINIMIZE_MAXIMUM, 1.0, 0.0),)
-)
-
-# Constraint: volume <= 30%
-model.optimizationTasks['TopoTask'].OptimizationConstraint(
-    name='VolConstraint',
-    designResponse='volume',
-    restrictionMethod=RELATIVE_LESS_THAN_EQUAL,
-    restrictionValue=0.3
-)
-
-# Create and run optimization process
-opt = mdb.OptimizationProcess(
-    name='Optimization',
-    model='MyModel',
-    task='TopoTask',
-    maxDesignCycle=50
-)
-# opt.submit()
+mdb.OptimizationProcess(name='OptProcess', model='MyModel',
+                         task='Task', prototypeJob='MyJob')
+mdb.optimizationProcesses['OptProcess'].submit()
 ```
+
+### Path B: Tosca CLI Hybrid Pipeline
+
+### Step 1: CAE Model Setup + Flat .inp Generation
+
+```python
+# Build your FE model in CAE as usual (geometry, material, mesh, BCs, loads, step)
+# ...
+
+# Generate flat input file for Tosca (no manual flattening needed)
+mdb.models['MyModel'].setValues(noPartsInputFile=ON)
+job_name = 'MyJob'
+mdb.Job(name=job_name, model='MyModel', numCpus=4, numDomains=4)
+mdb.jobs[job_name].writeInput()
+# This produces MyJob.inp (flat format, ready for Tosca)
+```
+
+### Step 2: (Skipped — noPartsInputFile=ON produces flat .inp directly)
+
+No manual flattening needed when using `noPartsInputFile=ON`.
+
+### Step 3: Author .par File (use `/tosca` skill)
+
+```
+! Topology optimization .par file
+FEM_INPUT
+  ID_NAME   = FEA_MODEL
+  FILE      = MyJob.inp
+END_
+
+DV_TOPO
+  ID_NAME   = design_variables
+  EL_GROUP  = ALL_ELEMENTS
+END_
+
+DRESP
+  ID_NAME   = DRESP_VOLUME
+  DEF_TYPE  = SYSTEM
+  TYPE      = VOLUME
+  EL_GROUP  = ALL_ELEMENTS
+  GROUP_OPER = SUM
+END_
+
+DRESP
+  ID_NAME   = DRESP_ENERGY
+  DEF_TYPE  = SYSTEM
+  TYPE      = STRAIN_ENERGY
+  EL_GROUP  = ALL_ELEMENTS
+END_
+
+OBJ_FUNC
+  ID_NAME   = min_energy
+  DRESP     = DRESP_ENERGY
+  TARGET    = MIN
+END_
+
+CONSTRAINT
+  ID_NAME   = vol_constraint
+  DRESP     = DRESP_VOLUME
+  LE_VALUE  = 0.3
+  MAGNITUDE = REL
+END_
+
+OPTIMIZE
+  ID_NAME   = TOPOLOGY_OPT
+  DV        = design_variables
+  OBJ_FUNC  = min_energy
+  CONSTRAINT = vol_constraint
+  STRATEGY  = TOPO_SENSITIVITY
+END_
+
+STOP
+  ID_NAME   = global_stop
+  ITER_MAX  = 50
+END_
+
+SMOOTH
+  ID_NAME   = ISO_SMOOTHING
+  TASK      = iso
+  ISO_VALUE = 0.3
+  FORMAT    = stl
+END_
+```
+
+### Step 4: Run Tosca CLI (use `/tosca-cli` skill)
+
+```bash
+tosca optimize -j my_tosca -p MyJob.par -s abaqus -scpus 4
+```
+
+### Step 5: Post-process Results
+
+Run FEA on the last-cycle .inp from `SAVE.inp/<N>/` to get stress/displacement
+on the optimized topology. Then extract results with `/abaqus-odb`.
