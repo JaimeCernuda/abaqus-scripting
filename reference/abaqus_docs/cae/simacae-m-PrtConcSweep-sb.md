@@ -1,0 +1,5 @@
+# What are extruding, revolving, and sweeping?
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What are extruding, revolving, and sweeping? | | |  | | | |  | | --- | | The following sections describe the techniques you can use to extrude, revolve, and sweep a two-dimensional sketch to create a three-dimensional part or feature.   --- | | In this section:   * [Defining the extrusion distance](simacae-c-prtconcextrude.md) * [Controlling the direction of an extruded feature](simacae-c-prtconcextrudeflip.md) * [Including twist in an extrusion](simacae-c-prtconctwist.md) * [Including draft in an extrusion](simacae-c-prtconcdraft.md) * [Defining the axis of revolution for axisymmetric parts and for revolved features](simacae-c-prtconcrevolve.md) * [Controlling the direction of a revolved feature](simacae-c-prtconcrevolveflip.md) * [Controlling the cross-section of a revolved feature with pitch](simacae-c-prtconcrevolvenormal.md) * [Defining the sweep path and the sweep profile](simacae-c-prtconcsweeping.md) | | | |

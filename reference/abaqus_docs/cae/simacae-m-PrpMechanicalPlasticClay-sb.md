@@ -1,0 +1,5 @@
+# Defining clay plasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining clay plasticity | | |  | | | |  | | --- | | The clay plasticity model allows you to specify the plastic part of the material behavior for elastic-plastic materials that use the extended Cam-clay plasticity model. See [Critical State (Clay) Plasticity Model](.._SIMACAEMATRefMap_simamat-c-clayplastic.md) for more details.   --- | | In this section:   * [Specifying clay plasticity behavior](simacae-t-prpmechanicalplasticclayclay.md) * [Defining compressive clay hardening for a clay plasticity model](simacae-t-prpmechanicalplasticclayhardening.md) * [Defining tensile clay hardening for a clay plasticity model](simacae-t-prpmechanicalplasticclayhardeningtensile.md) * [Specifying softening regularization for a clay plasticity model](simacae-t-prpmechanicalplasticclayhardeningregularization.md) | | | |

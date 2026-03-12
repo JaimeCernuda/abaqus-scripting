@@ -1,0 +1,5 @@
+# Changing mesh controls for previously meshed regions
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Changing mesh controls for previously meshed regions | | |  | | | |  | | --- | | If you change any of the mesh controls assigned to a previously meshed region, that region's mesh may become invalid. | | |  | | --- | | See Also | | [Controlling mesh characteristics](simacae-m-MgnMeshChar-sb.md) | |   In these cases, the following warning dialog appears when you click OK in the Mesh Controls dialog box.  You can delete the mesh by clicking Delete Meshes, or you can keep your mesh and cancel the new settings in the Mesh Controls dialog box by clicking Cancel.  You can also avoid this warning message for the remainder of the current session by toggling on Automatically delete meshes invalidated by mesh control changes. The next time you attempt to change the controls assigned to a region that already contains a mesh, the mesh will be deleted immediately without the appearance of the warning dialog box. |

@@ -1,0 +1,5 @@
+# Specifying the number of user variables
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Specifying the number of user variables | | |  | | | |  | | --- | | You can allocate space at each material calculation point for user-defined output variables defined in user subroutine [UVARM](.._SIMACAESUBRefMap_simasub-c-uvarm.md#simasub-c-uvarm). | | |   1. From the menu bar in the Edit Material dialog box, select GeneralUser Output Variables. (For information on displaying the Edit Material dialog box, see [Creating or editing a material](simacae-t-prpmaterialcreate.md).) 2. Click the arrows to the right of the Number of user-defined variables at each material point field to specify how many user-defined variables you want to allocate space for at each material calculation point. Any number of user-defined output variables can be used. 3. Click OK to close the Edit Material dialog box. Alternatively, you can select another material behavior to define from the menus in the Edit Material dialog box (see [Browsing and modifying material behaviors](simacae-c-prpmaterialbrowser.md), for more information). |

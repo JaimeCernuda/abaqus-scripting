@@ -1,0 +1,5 @@
+# Understanding adaptivity processes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding adaptivity processes | | |  | | | |  | | --- | | This section provides an overview of adaptivity processes. You use an adaptivity process to control a succession of analysis jobs that are adaptively remeshed by Abaqus/CAE based on the contents of your remeshing rules. For more information about adaptive remeshing and the other adaptivity techniques that are available in Abaqus, see [About Adaptivity Techniques](.._SIMACAEANLRefMap_simaanl-c-adpchoicesover.md).   --- | | In this section:   * [What is an adaptivity process?](simacae-c-anaadaptivitysteps.md) * [When will my mesh adaptivity stop iterating?](simacae-c-anaadaptivityautomatic.md) * [Manual mesh adaptivity](simacae-c-anaadaptivitymanual.md) * [Using a combination of automatic and manual mesh adaptivity](simacae-c-anaadaptivitycombination.md) * [The Adaptivity Process Manager](simacae-c-anaadaptivitymanager.md) | | | |

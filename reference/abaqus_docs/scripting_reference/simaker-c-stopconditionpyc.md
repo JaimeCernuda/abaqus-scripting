@@ -1,0 +1,5 @@
+# StopCondition object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | StopCondition object | | |  | | | |  | | --- | | The StopCondition object is the abstract base type for other StopCondition objects. The StopCondition object has no explicit constructor. The methods and members of the StopCondition object are common to all objects derived from StopCondition.  This page discusses:   * [Access](#simaker-c-stopconditionpyc__simaker-c-stopconditionpyc-s-pyaccess1) * [Members](#simaker-c-stopconditionpyc-t-pymembersect1) | | |   Access  ```         import optimization         mdb.models[name].optimizationTasks[name].stopConditions[name] ```  Members The StopCondition object can have the following members:  name  A String specifying the stop condition repository key.  region  The SymbolicConstant MODEL or a [Region](simaker-c-regionpyc.md) object specifying the region to which the stop condition is applied. The default value is MODEL. |

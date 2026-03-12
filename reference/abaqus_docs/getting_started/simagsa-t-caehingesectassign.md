@@ -1,0 +1,5 @@
+# Assigning the section
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Assigning the section | | |  | | | |  | | --- | | You will now assign the section `SolidSection` to the hinge part. | | |   1. In the Model Tree, expand the Hinge-hole item underneath the Parts container and double-click Section Assignments in the list that appears. 2. Drag a rectangle around the hinge piece to select the entire part. Abaqus/CAE highlights all the regions of the part. 3. Click mouse button 2 to indicate that you have finished selecting the regions to be assigned the section. The Edit Section Assignment dialog box appears containing a list of existing sections. `SolidSection` is selected by default since there are no other sections currently defined. 4. In the Edit Section Assignment dialog box, accept the default selection of `SolidSection`, and click OK. Abaqus/CAE assigns the section to the part and colors the entire part aqua to indicate that the region has a section assignment. |

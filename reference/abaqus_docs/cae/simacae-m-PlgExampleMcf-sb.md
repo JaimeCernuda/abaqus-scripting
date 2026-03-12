@@ -1,0 +1,5 @@
+# Displaying modal contribution factors
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying modal contribution factors | | |  | | | |  | | --- | | The modal contribution factors (MCF) plug-ins are a noise, vibration, and harshness (NVH) application that allows you to compute the output from a modal frequency response analysis and to study the contribution of each mode to the total structural or acoustic response.   --- | | In this section:   * [Introduction](simacae-c-plgexamplemcfintro.md) * [Preparing the structural and/or acoustic data](simacae-c-plgexamplemcfprep.md) * [An overview of the MCF plug-in](simacae-c-plgexamplemcfoverview.md) * [Computing the modal contribution factors](simacae-c-plgexamplemcfcalc.md) * [Displaying modal contribution factors](simacae-c-plgexamplemcfview.md) * [Ranking criterion for modal contribution factors](simacae-c-plgexamplemcfrank.md) | | | |

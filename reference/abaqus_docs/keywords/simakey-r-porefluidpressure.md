@@ -1,0 +1,5 @@
+# *PORE FLUID PRESSURE
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*PORE FLUID PRESSURE | | |  | | | |  | | --- | | Specify a known pore fluid pressure field in a static or in an explicit dynamic stress analysis. This option is used to specify a known pore fluid pressure field in a [STATIC](simakey-r-static.md#simakey-r-static) analysis or in a [DYNAMIC](simakey-r-dynamic.md#simakey-r-dynamic), EXPLICIT analysis.  This page discusses:   * [Required parameters](#simakey-r-porefluidpressure__simakey-r-porefluidpressure-required) * [There are no data lines associated with this option.](#simakey-r-porefluidpressure__simakey-r-porefluidpressure-nodata) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Pore Fluid Pressure](.._SIMACAEMATRefMap_simamat-c-porefluidpressure.md) | |   Products Abaqus/Standard Abaqus/Explicit  Type Model data  LevelModel  Required parameters FIELD  Set this parameter equal to the predefined field variable number that corresponds to the pore fluid pressure.  There are no data lines associated with this option. |

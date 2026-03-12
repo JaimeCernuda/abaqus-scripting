@@ -1,0 +1,5 @@
+# Limitations while selecting
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Limitations while selecting | | |  | | | |  | | --- | | Limitations apply to picking procedures. | | |   The following limitations apply:   * The following entities cannot be picked:    + Sets   + Surfaces * Picking more than one kind of entity at the same time is not supported for a sequence style of   ARRAY; for example, the user cannot pick nodes and   elements in the same step. * Picking Features or Instances cannot be combined with picking other types of entities. In   addition, a sequence style of ARRAY is not supported. * There is no support for unselecting entities that belong to selected   entities. For example, when the user selects a face,   Abaqus   also selects all the edges belonging to the selected face. The user cannot   unselect one of those edges. * Probing is not supported.   These limitations may be removed in a future release of the Abaqus GUI Toolkit. |

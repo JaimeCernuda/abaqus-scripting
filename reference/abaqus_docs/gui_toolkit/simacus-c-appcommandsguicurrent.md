@@ -1,0 +1,5 @@
+# GUI commands and current objects
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | GUI commands and current objects | | |  | | | |  | | --- | | Most commands in Abaqus/CAE operate on the current object; for example, the current viewport or the current part. | | |   As a convenience, modes recognize a special syntax when interpreting the object specified in a GUI command. If you place `%s` between square brackets following certain repositories, the mode replaces the `%s` with the current name. You should always use this `%s` syntax, as opposed to hard-coding a name, so that the current name will always be used in commands.  The following current objects are supported:   | Object Specification | Mode Interpretation | | --- | --- | | `mdb.models[%s]` | Current model | | `mdb.models[%s].parts[%s]` | Current part | | `mdb.models[%s].sketches[%s]` | Current sketch | | `session.odbs[%s]` | Current output database | | `session.viewports[%s]` | Current viewport | |

@@ -1,0 +1,5 @@
+# Suggested reading
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Suggested reading | | |  | | | |  | | --- | | The following provides the interested user with additional references on material modeling. | | |   General texts on materials  * Ashby, M. F., and D. R. H. Jones,   Engineering   Materials, Pergamon Press, 1980. * Callister, W. D.,   Materials Science &   Engineering—An Introduction, John Wiley, 1994. * Pascoe, K. J.,   An Introduction to the   Properties of Engineering Materials, Van Nostrand, 1978.  Plasticity  * SIMULIA,   Metal Inelasticity in   Abaqus. * Lubliner, J.,   Plasticity   Theory, Macmillan Publishing Co., 1990. * Calladine, C. R.,   Engineering   Plasticity, Pergamon Press, 1969.  Rubber elasticity  * SIMULIA,   Modeling Rubber and   Viscoelasticity with   Abaqus. * Gent, A.,   Engineering with Rubber (How   to Design Rubber Components), Hanser Publishers, 1992. |

@@ -1,0 +1,5 @@
+# Specifying output requests
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Specifying output requests | | |  | | | |  | | --- | | You can specify field and history output requests. | | |   Edit the default field output request so that preselected field data are written to the output database at four equally spaced intervals for the step `BlastLoad`.  Delete the existing default history output request, and create a new set of history output requests. In the Create History Output dialog box, accept the default name of `H-Output-1` and select the `BlastLoad` step. Click Continue. Click the arrow next to the Domain field, select Set, and select `OUT`. In the Output Variables section, click on the triangle to the left of Stresses. Click on the triangle to the left of S, Stress components and invariants, and toggle on the S33 variable, which is the component of stress in the axial direction of the bar. Specify that output be saved at every increment. |

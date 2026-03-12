@@ -1,0 +1,5 @@
+# Modifying, copying, and offsetting objects
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Modifying, copying, and offsetting objects | | |  | | | |  | | --- | | The following section describes the techniques you can use to modify your sketch and to copy or offset Sketcher objects.   --- | | In this section:   * [Modifying a sketch by dragging objects](simacae-c-sketechmoddrag.md) * [Modifying objects by changing dimensions or adding parameters](simacae-c-skedimreltechniques.md) * [Modifying or copying objects by selecting edges](simacae-c-skemodifyingbyvector.md) * [Modifying edges by trimming, extending, splitting, or merging](simacae-c-sketrimextbreak.md) * [Copying sketch objects to create patterns](simacae-c-skecopyobjects.md) * [Offsetting objects](simacae-c-skeoffsetobjects.md) | | | |

@@ -1,0 +1,5 @@
+# Table widget
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Table widget | | |  | | | |  | | --- | | The AFXTable widget arranges items in rows and columns, similar to a spreadsheet.   --- | | In this section:   * [Table widget layout](simacus-c-wgttablelayout.md#simacus-c-wgttablelayout) * [Table constructor](simacus-c-wgttablesconstructor.md) * [Rows and columns](simacus-c-wgttablesrowsandcolumns.md) * [Spanning](simacus-c-wgttablesspanning.md) * [Justification](simacus-c-wgttablesjustification.md) * [Editing](simacus-c-wgttablesediting.md) * [Types](simacus-c-wgttablestypes.md) * [List type](simacus-c-wgttableslisttype.md) * [Boolean type](simacus-c-wgttablesbooleantype.md) * [Icon type](simacus-c-wgttablesicontype.md) * [Color type](simacus-c-wgttablescolortype.md) * [Popup menu](simacus-c-wgttablespopupmenu.md) * [Colors](simacus-c-wgttablescolors.md) * [Sorting](simacus-c-wgttablesorting.md) | | | |

@@ -1,0 +1,5 @@
+# Menu bar items
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Menu bar items | | |  | | | |  | | --- | | Menu bar items consist of a menu title that controls a menu pane. The menu pane, in turn, contains menu commands. Menu commands are buttons that invoke modes. | | |   The example in [GUI module example](simacus-c-appmoduleoverview.md#simacus-c-appmoduleoverview) creates a top-level menu pane that contains a submenu. The menu commands in the submenu specify the mode that the menu command will invoke by sending the mode an activate message. For more information, see [Mode processing](simacus-m-ModModesProcessing-sb.md). [Figure 1](simacus-c-appmodulemenus.md#simacus-c-appmodulemenus__simacus-c-app-module-menu) shows the menus and submenus created by the example. Figure 1. Creating menus. |

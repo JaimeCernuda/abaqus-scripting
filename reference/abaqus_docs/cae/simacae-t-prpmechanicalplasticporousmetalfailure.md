@@ -1,0 +1,5 @@
+# Defining porous material failure criteria
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining porous material failure criteria | | |  | | | |  | | --- | | You use the Suboption Editor to define failure in a porous metal plasticity model. See [Failure Criteria in Abaqus/Explicit](.._SIMACAEMATRefMap_simamat-c-pormetalplas.md#simamat-c-pormetalplas-failure) for more information. | | |   1. Create a material model as described in    [Defining a porous metal plasticity model](simacae-t-prpmechanicalplasticporousmetalmodel.md). 2. From the Suboptions menu in the Edit    Material dialog box, select Porous Failure    Criteria. A Suboption Editor appears. 3. Enter a value for the Total volume void fraction at total    failure, fF>0.    The default is 1. 4. Enter a value for the Critical void volume    fraction (threshold of rapid loss of stress carrying capacity),    fc≥0.    The default is fF. 5. Click OK to return to the Edit    Material dialog box. |

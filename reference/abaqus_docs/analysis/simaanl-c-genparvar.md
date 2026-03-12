@@ -1,0 +1,5 @@
+# aStudy.generate()
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | aStudy.generate() | | |  | | | |  | | --- | | This command is used to generate the analysis input files for a parametric study. This page discusses:   * [Command](#simaanl-c-genparvar__simaanl-c-genparvar-s-scrcommandsyntax1) * [Required Data](#simaanl-c-genparvar__simaanl-c-genparvar-s-datarequired1) | | |  | | --- | | See Also | | [Scripting Parametric Studies](simaanl-c-scriptparstudies.md) | |   ProductsAbaqus/StandardAbaqus/Explicit  Command  ``` aStudy.generate (template= ) ```  Required Data template  Set template equal to the name of the template input file from which the input files of each of the parametric study variations are to be generated; this name must be enclosed in matching quotation marks. |

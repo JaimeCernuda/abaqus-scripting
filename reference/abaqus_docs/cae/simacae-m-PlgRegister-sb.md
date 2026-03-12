@@ -1,0 +1,5 @@
+# How do I make a plug-in available from Abaqus/CAE?
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | How do I make a plug-in available from Abaqus/CAE? | | |  | | | |  | | --- | | To make a plug-in available from Abaqus/CAE, you must place specially named files containing registration commands in one of the directories that Abaqus/CAE searches for plug-ins. The registration commands can make a plug-in available from the Plug-ins menu in the main menu bar, from a separate plug-in toolbox, or from both. This section describes how you make a plug-in available from Abaqus/CAE.   --- | | In this section:   * [Where are plug-in files stored?](simacae-c-plgregisterstored.md) * [What are the kernel and GUI registration commands?](simacae-c-plgregistercommands.md) * [An example of adding a kernel plug-in to the Plug-ins menu](simacae-c-plgregistermenu.md) * [An example of adding a kernel plug-in to a plug-ins toolbox](simacae-c-plgregistertoolbox.md) * [An example of adding a GUI plug-in to the Plug-ins menu](simacae-c-plgregistergui.md) | | | |

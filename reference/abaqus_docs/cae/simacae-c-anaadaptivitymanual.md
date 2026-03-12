@@ -1,0 +1,5 @@
+# Manual mesh adaptivity
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Manual mesh adaptivity | | |  | | | |  | | --- | | As an alternative to automatic mesh adaptivity, you can submit a job using the Job manager. When you define a remeshing rule in the Mesh module, you request error indicator output variables that are written to the output database when the job executes. After the job has completed, you can return to the Mesh module and ask Abaqus/CAE to create a new mesh using a combination of your remesh rules and the error indicators in the output database. You can perform this process indefinitely to adapt your mesh successively until the goals of the remesh rules are met. For more information, see [What is the difference between automatic adaptive remeshing and manual adaptive remeshing?](simacae-c-mgnconcadaptivityautomanual.md). | | | |

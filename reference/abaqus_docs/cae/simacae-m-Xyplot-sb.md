@@ -1,0 +1,5 @@
+# X–Y plotting
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | X–Y plotting | | |  | | | |  | | --- | | This chapter explains the concept of X–Y plotting and gives details of how to create X–Y data objects and how to produce and customize an X–Y plot.   --- | | In this section:   * [Understanding X–Y plotting](simacae-m-XypConcept-sb.md) * [Specifying and saving X–Y data objects](simacae-m-XypSpecifying-sb.md) * [Producing an X–Y plot](simacae-c-xypproduce.md) * [Operating on saved X–Y data objects](simacae-m-XypOperating-sb.md) * [Customizing X–Y plot axes](simacae-m-XypCustomAxes-sb.md) * [Customizing X–Y curve appearance](simacae-m-XypCustomCurves-sb.md) * [Customizing X–Y plot appearance](simacae-m-XypCustomChartoptions-sb.md) * [Customizing the X–Y plot title](simacae-m-XypCustomTitle-sb.md) * [Customizing the appearance of the X–Y plot legend](simacae-m-XypCustomChartlegend-sb.md) * [Customizing border and fill colors for an X–Y plot](simacae-t-xypcustomplotborderfill.md) | | | |

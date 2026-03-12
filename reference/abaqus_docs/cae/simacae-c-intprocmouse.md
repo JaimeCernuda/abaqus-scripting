@@ -1,0 +1,5 @@
+# Using mouse shortcuts with procedures
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using mouse shortcuts with procedures | | |  | | | |  | | --- | | Mouse shortcuts are available for many of the actions that take place in the prompt area. To use the shortcuts, first make sure that the cursor is in the current viewport. | | |  | | --- | | See Also | | [Using the prompt area during procedures](simacae-m-IntProc-sb.md) | |   * To commit the contents of any text field that appears in the prompt area, click mouse button 2. * To accept any default option depicted by a highlighted button in the prompt area, click mouse button 2. * To reveal a menu containing options identical to those in the prompt area, click mouse button 3. For example, given the following prompt:  Clicking mouse button 3 will reveal the following menu:  Items above the horizontal line correspond to the option buttons on the right side of the prompt area, while items below the line correspond to the Previous and Cancel buttons. |

@@ -1,0 +1,5 @@
+# Accessing an Output Database
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Accessing an Output Database | | |  | | | |  | | --- | | This section describes how you access the data in an output database using either the Abaqus Scripting Interface or the C++ Application Programming Interface (API). You can read model data and field and history data from an output database. You can also write field and history data to an output database.\ The Abaqus Scripting Interface commands that read and write data from an output database are described in [Odb commands](.._SIMACAEKERRefMap_simaker-m-OdbPyc-sb.md).  The C++ commands that read and write data from an output database are described in [Odb commands](.._SIMACAEKERRefMap_simaker-m-OdbCpp-sb.md).   --- | | In this section:   * [Using the Abaqus Scripting Interface to access an output database](simacmd-m-OdbApiPyc-sb.md) * [Using C++ to access an output database](simacmd-m-OdbApiCpp-sb.md) | | | |

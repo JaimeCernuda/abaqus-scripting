@@ -1,0 +1,5 @@
+# Defining mechanical material models
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining mechanical material models | | |  | | | |  | | --- | | This section describes how you can specify mechanical material models and related material data.  For more information about mechanical material models, see the following sections:   * [Elastic Mechanical Properties](.._SIMACAEMATRefMap_simamat-m-ElasticMechanicalProperties-sb.md) * [Inelastic Mechanical Properties](.._SIMACAEMATRefMap_simamat-m-InelasticMechanicalProperties-sb.md) * [Progressive Damage and Failure](.._SIMACAEMATRefMap_simamat-m-ProgressiveDamageAndFailure-sb.md) * [Other Material Properties](.._SIMACAEMATRefMap_simamat-m-OtherMaterialProperties-sb.md)   --- | | In this section:   * [Defining elasticity](simacae-m-PrpMechanicalElastic-sb.md) * [Defining plasticity](simacae-m-PrpMechanicalPlastic-sb.md) * [Defining damage](simacae-m-PrpMechanicalDamage-sb.md) * [Defining other mechanical models](simacae-m-PrpMechanicalOther-sb.md) | | | |

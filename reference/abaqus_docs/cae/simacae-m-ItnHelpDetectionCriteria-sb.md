@@ -1,0 +1,5 @@
+# Specifying search criteria for contact detection
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Specifying search criteria for contact detection | | |  | | | |  | | --- | | The contact detection tool identifies potential contact pairs in a model using an array of user-defined parameters. Select InteractionFind contact pairs or ConstraintFind contact pairs from the main menu, then enter the contact detection parameters.   --- | | In this section:   * [Specifying general search options for contact detection](simacae-t-itndetectionsearch.md) * [Specifying naming options for contact detection](simacae-t-itndetectionnaming.md) * [Specifying entity options for contact detection](simacae-t-itndetectionentities.md) * [Defining default contact pair parameters](simacae-t-itndetectionrules.md) * [Specifying advanced search options for contact detection](simacae-t-itndetectionadvanced.md) | | | |

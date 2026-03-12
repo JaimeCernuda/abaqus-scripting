@@ -1,0 +1,5 @@
+# Exporting geometry, model, and mesh data
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Exporting geometry, model, and mesh data | | |  | | | |  | | --- | | This section describes how you can export sketches, parts, the assembly, or the model.   --- | | In this section:   * [Exporting a sketch to an ACIS-, IGES-, or STEP-format file](simacae-t-dbsexportsketchacis.md) * [Exporting a part to an ACIS-, IGES-, STEP-, or VDA-format file](simacae-t-dbsexportpartacis.md) * [Exporting the assembly to an ACIS-format file](simacae-t-dbsexportassemblyacis.md) * [Exporting viewport data to a VRML-format file](simacae-t-dbsexportmodelvrml.md) * [Exporting viewport data to a 3D XML-format file](simacae-t-dbsexportmodel3dxml.md) * [Exporting viewport data to an OBJ-format file](simacae-t-dbsexportmodelobj.md) * [Exporting model data to Nastran bulk data file format](simacae-c-dbsexportnastran.md) | | | |

@@ -1,0 +1,5 @@
+# Controlling adaptive remeshing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Controlling adaptive remeshing | | |  | | | |  | | --- | | This section describes how you can define an adaptive remeshing rule and how you can adaptively remesh your model manually.   --- | | In this section:   * [Creating a remeshing rule](simacae-t-mgnadaptivityrule.md) * [Selecting the step and error indicator output variables for the remeshing rule](simacae-t-mgnadaptivityrulestep.md) * [Choosing the remeshing rule sizing method](simacae-t-mgnadaptivityrulesizing.md) * [Choosing remeshing rule constraints](simacae-t-mgnadaptivityruleconstraints.md) * [The Remeshing Rules Manager](simacae-c-mgnadaptivitymanager.md) * [Manually resizing and remeshing](simacae-t-mgnadaptivityremeshing.md) | | | |

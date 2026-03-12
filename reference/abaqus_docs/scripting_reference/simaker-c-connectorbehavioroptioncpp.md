@@ -1,0 +1,5 @@
+# ConnectorBehaviorOption object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ConnectorBehaviorOption object | | |  | | | |  | | --- | | The ConnectorBehaviorOption object is the abstract base type for other ConnectorBehaviorOption objects. The ConnectorBehaviorOption object has no explicit constructor. The members of the ConnectorBehaviorOption object are common to all objects derived from the ConnectorBehaviorOption.  This page discusses:   * [Access](#simaker-c-connectorbehavioroptioncpp__simaker-c-connectorbehavioroptioncpp-s-cppaccess1) * [Members](#simaker-c-connectorbehavioroptioncpp-t-pymembersect1) | | |   Access  ``` sectionApi.sections()[name].behaviorOptions(i) ```  Members The ConnectorBehaviorOption object has no members. |

@@ -1,0 +1,5 @@
+# Visible edges
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Visible edges | | |  | | | |  | | --- | | Several options are available for choosing which edges will be visible in the model display. | | |   Context:  The previous plots show all exterior edges of the model; [Figure 1](simagsa-t-visibleedges.md#simagsa-t-visibleedges__simagsa-t-gss-wireframe-c) displays only feature edges. Figure 1. Deformed shape with only feature edges visible.  1. From the main menu bar, select    OptionsCommon. The Common Plot Options dialog box appears. 2. Click the Basic tab if it is not already    selected. 3. From the Visible Edges options, choose    Feature edges. 4. Click Apply. The deformed plot in the current viewport changes to display only    feature edges, as shown in    [Figure 1](simagsa-t-visibleedges.md#simagsa-t-visibleedges__simagsa-t-gss-wireframe-c). |

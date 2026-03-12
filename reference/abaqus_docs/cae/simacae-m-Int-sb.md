@@ -1,0 +1,5 @@
+# Understanding Abaqus/CAE windows, dialog boxes, and toolboxes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding Abaqus/CAE windows, dialog boxes, and toolboxes | | |  | | | |  | | --- | | This chapter explains how to interact with the various windows, dialog boxes, and toolboxes that appear throughout the Abaqus/CAE application.   --- | | In this section:   * [Using the prompt area during procedures](simacae-m-IntProc-sb.md) * [Interacting with dialog boxes](simacae-m-IntDialog-sb.md) * [Understanding and using toolboxes and toolbars](simacae-m-IntToolbox-sb.md) * [Managing objects](simacae-m-IntMgr-sb.md) * [Working with the Model Tree and the Results Tree](simacae-m-TopModeltree-sb.md) * [Understanding Abaqus/CAE GUI settings](simacae-c-intpreferences.md) | | | |

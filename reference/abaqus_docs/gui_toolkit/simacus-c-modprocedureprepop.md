@@ -1,0 +1,5 @@
+# Prepopulating a pick step
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Prepopulating a pick step | | |  | | | |  | | --- | | In some cases you may want to prepopulate a pick step with some selections. | | |   For example, let's say that you have a procedure that creates an object that includes selecting a region of the model and you want to allow the user to edit that object. In the edit procedure you will want to prepopulate the region selection step with the selection that the user originally made when creating the object. You can do this by adding a set of entities to the pick step as shown below:  ``` step = AFXPickStep(self, self.nodesKw, 'Select some nodes',      AFXPickStep.NODES, AFXPickStep.MANY, 1, AFXPickStep.ARRAY) step.addNodeSetSelection('NodeSet-1') ```  There are similar methods for adding entities from geometry sets (`addGeometrySetSelection`), element sets (`addElementSetSelection`), and surfaces (`addSurfaceSelection`). When this step is executed the added entities will automatically be highlighted, and the user can add or remove from that selection. |

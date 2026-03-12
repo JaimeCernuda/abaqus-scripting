@@ -1,0 +1,5 @@
+# Beam Elements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Beam Elements | | |  | | | |  | | --- | | --- | | In this section:   * [About Beam Modeling](simaelm-c-beamoverview.md) * [Choosing a Beam Cross-Section](simaelm-c-beamsections.md) * [Choosing a Beam Element](simaelm-c-beamelem.md) * [Beam Element Cross-Section Orientation](simaelm-c-beamcrosssection.md) * [Beam Section Behavior](simaelm-c-beamsectionbehavior.md) * [Using a Beam Section Integrated during the Analysis to Define the Section Behavior](simaelm-c-usingbeamsection.md) * [Using a General Beam Section to Define the Section Behavior](simaelm-c-usingbeamgensect.md) * [Beam Element Library](simaelm-r-beamlibrary.md) * [Beam Cross-Section Library](simaelm-c-beamcrosssectlib.md) | | | |

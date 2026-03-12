@@ -1,0 +1,5 @@
+# Obtaining information about the release and licensing
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Obtaining information about the release and licensing | | |  | | | |  | | --- | | The following Help menu items allow you to obtain additional information: | | |   About Abaqus  Select HelpAbout Abaqus to determine which release of Abaqus/CAE you are currently using. Abaqus also provides the location of release information for open source software used by Abaqus/CAE; for example, Python.  About Licensing  Select HelpAbout Licensing to determine product license information. Abaqus displays your site identification and the name of your license server along with your license number and the total number of licenses available from your site. |

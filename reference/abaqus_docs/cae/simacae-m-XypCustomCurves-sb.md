@@ -1,0 +1,5 @@
+# Customizing X–Y curve appearance
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing X–Y curve appearance | | |  | | | |  | | --- | | This section explains how you use the Curve Options dialog box to customize the appearance of a curve representing a selected X–Y data object. Only curves that appear in the most recent X–Y plot are available for customization.   --- | | In this section:   * [Using options to customize the appearance of X–Y curves](simacae-t-xypcurvesintro.md) * [Selecting one or more X–Y curves to customize](simacae-t-xypxydataset.md) * [Customizing the X–Y plot legend](simacae-t-xypcurvelegend.md) * [Customizing the appearance of an X–Y curve](simacae-t-xypcurvelinestyle.md) * [Customizing the symbols used on an X–Y curve](simacae-t-xypcurvesymbols.md) * [Editing the list of auto-colors for X–Y plots](simacae-t-xypcustomcolor.md) | | | |

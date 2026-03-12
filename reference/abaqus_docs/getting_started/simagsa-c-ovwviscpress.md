@@ -1,0 +1,5 @@
+# Viscous pressure
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Viscous pressure | | |  | | | |  | | --- | | Viscous pressure loads are commonly used in structural problems and quasi-static problems to damp out the low-frequency dynamic effects, thus allowing static equilibrium to be reached in a minimal number of increments. These loads are applied as distributed loads defined by the following formula: p =  -   c v ⁢  (   v ¯ ⋅  n ¯ ) , where   p  is the pressure applied to the body;    c v  is the coefficient of viscosity, given on the data line as the magnitude of the load;    v ¯  is the velocity vector of the point on the surface where the viscous pressure is being applied; and    n ¯  is the unit outward normal vector to the surface at the same point. For typical structural problems it is not desirable to absorb all of the energy. Typically,    c v  is set equal to a small percentage—perhaps 1 or 2 percent—of the quantity    ρ ⁢  c d  as an effective way of minimizing ongoing dynamic effects. | | | |

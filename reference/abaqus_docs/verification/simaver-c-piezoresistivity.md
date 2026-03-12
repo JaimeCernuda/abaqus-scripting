@@ -1,0 +1,5 @@
+# Piezoresistivity properties: Piezoresistive effect
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Piezoresistivity properties: Piezoresistive effect | | |  | | | |  | | --- | | This problem contains basic test cases for one or more Abaqus elements and features.  This page discusses:   * [Elements tested](#simaver-c-thermalprops-t-elementstested3) * [Problem description](#simaver-c-thermalprops-t-probdescr3) * [Results and discussion](#simaver-c-thermalprops-t-resultssect3) * [Input files](#simaver-c-thermalprops-t-inputfiles3) | | |   Products Abaqus/Standard  Elements tested Q3D8  QAX4  Problem description The tests in this section model one-dimensional electrical current flow using axisymmetric and three-dimensional elements. In all cases a steady-state thermal-electrical-structural analysis is performed.  Results and discussion The results match the exact solutions.  Input files Input files [prer38vfdf.inp](../SIMAINPRefResources/prer38vfdf.inp)  Piezoresistivity, Q3D8 elements.  [prera4vfdf.inp](../SIMAINPRefResources/prera4vfdf.inp)  Piezoresistivity, QAX4 elements. |

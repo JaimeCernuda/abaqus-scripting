@@ -1,0 +1,5 @@
+# Showing and hiding dialog boxes
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Showing and hiding dialog boxes | | |  | | | |  | | --- | | Dialog boxes have show and hide methods that post or unpost the dialog box from the screen. | | |   In most cases you do not need to call these methods because the mode infrastructure calls them for you. However, you may want to write your own show and hide methods to perform some special processing that will be executed just before your application posts or unposts the dialog box. For example, you can register and unregister queries inside the show and hide methods. You must call the base class versions of the show and hide methods, or the methods will not behave as expected. For example, in your dialog class code you could add the following lines:   ``` def show(self):      # Do some special processing here.     ...      # Call base class method.     AFXDataDialog.show(self)  def hide(self):      # Do some special processing here.     ...      # Call base class method.     AFXDataDialog.hide(self) ``` |

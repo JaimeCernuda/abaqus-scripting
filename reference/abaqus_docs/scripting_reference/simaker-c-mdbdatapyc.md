@@ -1,0 +1,5 @@
+# MdbData object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | MdbData object | | |  | | | |  | | --- | | The MdbData object has no constructor. Abaqus creates an MdbData object when a cae file is opened or a new model is created. There is one MdbData for each model in session. MdbData is updated when it is displayed in a viewport.  This page discusses:   * [Access](#simaker-c-mdbdatapyc__simaker-c-mdbdatapyc-s-pyaccess1) * [Members](#simaker-c-mdbdatapyc-t-pymembersect1) | | |   Access  ``` import visualization session.mdbData[name] ```  Members The MdbData object has the following members:  stepPeriods  A tuple of (String, Float) tuples specifying the stepName and the stepPeriod.  steps  A repository of [MdbDataStep](simaker-c-mdbdatasteppyc.md) objects specifying the list of steps. The repository is read-only.  instances  A repository of [MdbDataInstance](simaker-c-mdbdatainstancepyc.md) objects specifying the list of instances. The repository is read-only. |

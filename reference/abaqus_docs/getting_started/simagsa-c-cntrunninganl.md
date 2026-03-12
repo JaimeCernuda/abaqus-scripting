@@ -1,0 +1,5 @@
+# Job monitoring
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Job monitoring | | |  | | | |  | | --- | | This analysis should take approximately 180 increments to complete. The top of the Job Monitor is shown in [Figure 1](simagsa-c-cntrunninganl.md#simagsa-c-cntrunninganl__simagsa-c-gsi-channel-top-monitor). | | |   Figure 1. Top of the Job Monitor: channel forming analysis.    The value of the punch displacement appears in the Output tabbed page. This simulation contains many severe discontinuity iterations. Abaqus/Standard has a difficult time determining the contact state in the first increment of Step 2. It needs three attempts before it finds the proper configuration of the `PunchSurf` and `BlankTop` surfaces and achieves equilibrium. After this difficult start, Abaqus/Standard quickly increases the increment size to a more reasonable value. The end of the Job Monitor is shown in [Figure 2](simagsa-c-cntrunninganl.md#simagsa-c-cntrunninganl__simagsa-c-gsi-channel-bot-monitor). Figure 2. Bottom of the Job Monitor: channel forming analysis. |

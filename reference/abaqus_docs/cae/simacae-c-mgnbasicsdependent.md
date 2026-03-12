@@ -1,0 +1,5 @@
+# Meshing independent and dependent part instances
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Meshing independent and dependent part instances | | |  | | | |  | | --- | | The approach to meshing independent and dependent instances is different. For more information, see [What is the difference between a dependent and an independent part instance?](simacae-c-asmconcinstancesdifference.md). | | |   Independent  To mesh an independent instance, use the context bar to change the Object to Assembly and mesh the instance directly. You cannot mesh a part that you have used to create an independent instance.  Dependent  To mesh a dependent instance, use the context bar to change the Object to Part and select the part with which the dependent instance is associated. You can then mesh the part, and Abaqus/CAE applies the same mesh to each dependent instance in the assembly. Dependent instances are convenient when you have a linear or radial pattern of part instances. You can mesh the original part, and Abaqus/CAE applies the same mesh to each instance of the part in the pattern. |

@@ -1,0 +1,5 @@
+# Example: restarting the pipe vibration analysis
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: restarting the pipe vibration analysis | | |  | | | |  | | --- | | This example demonstrates how to restart an analysis. Take the pipe section example in [Example: vibration of a piping system](simagsa-m-StpExapipingsys-sb.md) and restart the simulation, adding two additional steps of load history. The first simulation predicted that the piping section would be vulnerable to resonance when extended axially; you must now determine how much additional axial load will increase the pipe's lowest vibrational frequency to an acceptable level. Step 3 will be a general step that increases the axial load on the pipe to 8 MN, and Step 4 will calculate the eigenmodes and eigenfrequencies again.   --- | | In this section:   * [Creating a restart analysis model](simagsa-c-stpcreaterestart.md) * [Monitoring the job](simagsa-c-stpstatfile.md) * [Postprocessing the restart analysis results](simagsa-m-StpPostrestartanal-sb.md) | | | |

@@ -1,0 +1,5 @@
+# The Filter toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Filter toolset | | |  | | | |  | | --- | | Filters allow you to remove extraneous field output data or history output data—noise—during the analysis of a model without a loss of resolution in the desired data range. You can also use filters to filter field output or history output before the data are saved to the output database (.odb) file; as a result, filters can also reduce the size of the output database. The Filter toolset allows you to create and manage filters in the Step module.   --- | | In this section:   * [Filtering field and history data](simacae-c-fltusing.md) * [Applying bounding values to field and history data](simacae-c-fltbound.md) * [Creating a filter](simacae-t-flthelp.md) | | | |

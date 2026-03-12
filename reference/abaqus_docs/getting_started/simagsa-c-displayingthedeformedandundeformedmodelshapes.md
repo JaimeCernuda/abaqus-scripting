@@ -1,0 +1,5 @@
+# Displaying the deformed and undeformed model shapes
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying the deformed and undeformed model shapes | | |  | | | |  | | --- | | You can display the deformed and undeformed model shapes with the Allow Multiple Plot States tool. | | |   Use the Allow Multiple Plot States  tool to display the deformed model shape with the undeformed model shape superimposed. Set the render style for both images to wireframe, and toggle off the translucency of the superimposed plot from the Superimpose Plot Options dialog box. Rotate the view to obtain a plot similar to that shown in [Figure 1](simagsa-c-displayingthedeformedandundeformedmodelshapes.md#simagsa-c-displayingthedeformedandundeformedmodelshapes__simagsa-c-gss-deform-plate-v). By default, the deformed shape is plotted for the last increment. (For clarity, the edges of the undeformed shape are plotted using a dashed style.) Figure 1. Deformed and undeformed model shapes of the skew plate. |

@@ -1,0 +1,5 @@
+# Acoustic and shock analyses
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Acoustic and shock analyses | | |  | | | |  | | --- | | --- | | In this section:   * [Fully and sequentially coupled acoustic-structural analysis of a muffler](simaexa-c-muffler.md) * [Coupled acoustic-structural analysis of a speaker](simaexa-c-speaker.md) * [Analysis of a speaker using Abaqus-Dymola co-simulation](simaexa-c-cosimspeaker.md) * [Response of a submerged cylinder to an underwater explosion shock wave](simaexa-c-undex.md) * [Convergence studies for shock analyses using shell elements](simaexa-c-convergence.md) * [UNDEX analysis of a detailed submarine model](simaexa-c-submarineundex.md) * [Coupled acoustic-structural analysis of a pick-up truck](simaexa-c-acouststructpickup.md) * [Long-duration response of a submerged cylinder to an underwater explosion](simaexa-c-subwhipping.md) * [Deformation of a sandwich plate under CONWEP blast loading](simaexa-c-conwepsandwichplate.md) | | | |

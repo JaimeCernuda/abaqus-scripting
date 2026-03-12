@@ -1,0 +1,5 @@
+# Browsing and searching the HTML guides
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Browsing and searching the HTML guides | | |  | | | |  | | --- | | You can open and browse and search the entire HTML collection using the Help menu. | | |   1. From the main menu bar, select    HelpSearch & Browse    Guides. The documentation displays in your web browser open to a topic that    contains an overview of the guides in the documentation. 2. To view a particular guide, click Abaqus in the    table of contents and click the title of interest. The guide that you selected opens in your browser window. 3. Navigate through the guide's contents using any of the following    techniques: Browsing  Expand and collapse the table of contents to vary the level of detail    displayed. Click the topic of interest. You can also use the web browser    functions to return to recently viewed pages.  Searching  Use the search panel located in the navigation frame to search for    specific words or phrases.  Using hyperlinks  Use hyperlinks to move from one part of a guide to another or from one    guide to another guide. |

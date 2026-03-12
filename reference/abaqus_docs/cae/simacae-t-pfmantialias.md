@@ -1,0 +1,5 @@
+# Using antialiasing
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using antialiasing | | |  | | | |  | | --- | | Abaqus/CAE uses antialiasing to improve the display of curved and diagonal lines on models. Antialiasing is enabled on compliant systems, and you can toggle off this option to improve performance for some systems. | | |  | | --- | | See Also | | [Using display lists](simacae-t-pfmlists.md) | | [Controlling drag mode](simacae-t-pfmdm.md) | | [Choosing background colors](simacae-t-pfmcolor.md) | |   1. Locate the graphics options. From the main menu bar, select ViewGraphics Options.  Abaqus/CAE displays the Graphics Options dialog box. 2. From the Hardware options, toggle on Anti-alias lines to enable antialiasing or toggle it off to disable antialiasing. 3. Click OK to implement your changes and to close the dialog box. Your changes are saved for the duration of the session. |

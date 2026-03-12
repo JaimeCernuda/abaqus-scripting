@@ -1,0 +1,5 @@
+# The Partition toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Partition toolset | | |  | | | |  | | --- | | You use the Partition toolset to divide a part or assembly into regions. Regions are used throughout the modeling process; for example, to indicate the location of a load, a change in material properties, or a mesh boundary. This chapter explains how you use the Partition toolset to create and position partitions on an edge, a face, or a cell.   --- | | In this section:   * [Understanding the role of partitions](simacae-c-parintro.md) * [Using the Partition toolset](simacae-c-parstart.md) * [Understanding partitions](simacae-m-ParConcepts-sb.md) * [Partitioning techniques](simacae-m-ParOverview-sb.md) * [Partitioning edges](simacae-m-ParPartEdges-sb.md) * [Partitioning faces](simacae-m-ParPartFaces-sb.md) * [Partitioning cells](simacae-m-ParPartCells-sb.md) | | | |

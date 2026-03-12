@@ -1,0 +1,5 @@
+# Defining a circular profile
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining a circular profile | | |  | | | |  | | --- | | Define a circular profile by providing geometric data for a solid circle. | | |  | | --- | | See Also | | [Defining profiles](simacae-c-prppropprofile.md) | | [Defining sections](simacae-c-prppropsection.md) |  |  | | --- | |  | | In Other Guides | | [Beam Cross-Section Library](.._SIMACAEELMRefMap_simaelm-c-beamcrosssectlib.md) | |   1. Display the Edit Profile dialog box, as described in [Choosing a profile type](simacae-t-prpsectionprofilescreate.md). 2. In the r field, enter the radius of the circle. 3. Click OK to save the profile and to close the Edit Profile dialog box. |

@@ -1,0 +1,5 @@
+# Understanding the Property module editors
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding the Property module editors | | |  | | | |  | | --- | | When you create or edit a material, profile, or section, you must enter data in the appropriate editor. For example, when you create a material, you must enter data in the material editor. This section provides information on each editor type.   --- | | In this section:   * [Creating materials](simacae-c-prpeditormaterial.md) * [Creating profiles](simacae-c-prpeditorprofile.md) * [Creating sections](simacae-c-prpeditorsection.md) * [Creating composite layups](simacae-c-prpeditorcomposite.md) * [Selecting material behaviors](simacae-c-prpeditormatopt.md) * [Specifying material parameters and data](simacae-c-prpeditormatdata.md) * [Evaluating hyperelastic, hyperfoam and viscoelastic material behavior](simacae-c-prpeditorevaluate.md) | | | |

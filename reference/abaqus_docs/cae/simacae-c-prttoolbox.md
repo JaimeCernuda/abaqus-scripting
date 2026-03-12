@@ -1,0 +1,5 @@
+# Using the Part module toolbox
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Part module toolbox | | |  | | | |  | | --- | | You can access all the Part module tools through either the main menu bar or the Part module toolbox. [Figure 1](simacae-c-prttoolbox.md#simacae-c-prttoolbox__simacae-c-prt-toolbox) shows the hidden icons for all the part tools in the Part module toolbox. | | |   Figure 1. The Part module toolbox.    For information on using each of the Part module tools, refer to the following sections:   * [Managing parts](simacae-m-PrtHelpManaging-sb.md) * [Using the Create Part dialog box](simacae-m-PrtHelpCreatepart-sb.md) * [Adding a feature to a part](simacae-c-prthelpaddfeature.md) * [Adding a solid feature](simacae-m-PrtHelpAddsolid-sb.md) * [Adding a shell feature](simacae-m-PrtHelpAddshell-sb.md) * [Adding a wire feature](simacae-m-PrtHelpAddwire-sb.md) * [Adding a cut feature](simacae-m-PrtHelpAddcut-sb.md) * [Blending edges](simacae-m-PrtHelpBlendedges-sb.md) |

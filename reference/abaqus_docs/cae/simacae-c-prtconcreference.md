@@ -1,0 +1,5 @@
+# Using the Reference Point toolset in the Part module
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Reference Point toolset in the Part module | | |  | | | |  | | --- | | From the main menu bar, select ToolsReference Point to create a reference point on a part. A part can include only one reference point. For more information, see [The reference point and point parts](simacae-m-PrtConcReferencePoint-sb.md), and [The Reference Point toolset](simacae-m-Ref-sb.md). | | |   Abaqus/CAE displays the reference point at the desired location and labels it RP. You can change the reference point label by clicking mouse button 3 on the feature in the Model Tree and selecting Rename from the menu that appears. If desired, you can turn off the display of the reference point symbol and the reference point label; for more information, see [Controlling reference point display](simacae-t-dspdynamicrefpoint.md). |

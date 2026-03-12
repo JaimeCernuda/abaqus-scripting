@@ -1,0 +1,5 @@
+# Using the Abaqus Scripting Interface with Abaqus/CAE
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Abaqus Scripting Interface with Abaqus/CAE | | |  | | | |  | | --- | | This section discusses how you can use the Abaqus Scripting Interface to control Abaqus/CAE models and analysis jobs.   --- | | In this section:   * [The Abaqus object model](simacmd-m-IntPythonaclDatamodel-sb.md) * [Copying, deleting, and renaming Abaqus Scripting Interface objects](simacmd-m-IntPythonaclObjects-sb.md) * [Abaqus/CAE sequences](simacmd-c-intacltypessequences.md) * [Namespace](simacmd-c-intpythonaclnamespace.md) * [Specifying what is displayed in the viewport](simacmd-c-intacldisplay.md) * [Specifying a region](simacmd-c-intaclregions.md) * [Prompting the user for input](simacmd-m-IntAclInteracting-sb.md) * [Interacting with Abaqus/Standard and Abaqus/Explicit](simacmd-m-IntAclSolver-sb.md) * [Using Abaqus Scripting Interface commands in your environment file](simacmd-c-intaclenvironment.md) | | | |

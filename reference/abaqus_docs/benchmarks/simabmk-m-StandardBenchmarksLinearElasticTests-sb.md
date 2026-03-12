@@ -1,0 +1,5 @@
+# Standard benchmarks: linear elastic tests
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Standard benchmarks: linear elastic tests | | |  | | | |  | | --- | | --- | | In this section:   * [LE1: Plane stress elements—elliptic membrane](simabmk-c-le1.md) * [LE2: Cylindrical shell bending patch test](simabmk-c-le2.md) * [LE3: Hemispherical shell with point loads](simabmk-c-le3.md) * [LE4: Axisymmetric hyperbolic shell under uniform internal pressure](simabmk-c-le4.md) * [LE5: Z-section cantilever](simabmk-c-le5.md) * [LE6: Skew plate under normal pressure](simabmk-c-le6.md) * [LE7: Axisymmetric cylinder/sphere under pressure](simabmk-c-le7.md) * [LE8: Axisymmetric shell under pressure](simabmk-c-le8.md) * [LE9: Axisymmetric branched shell under pressure](simabmk-c-le9.md) * [LE10: Thick plate under pressure](simabmk-c-le10.md) * [LE11: Solid cylinder/taper/sphere—temperature loading](simabmk-c-le11.md) | | | |

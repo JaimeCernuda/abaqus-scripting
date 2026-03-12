@@ -1,0 +1,5 @@
+# The Geometry Edit toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Geometry Edit toolset | | |  | | | |  | | --- | | The Geometry Edit toolset provides a set of tools in the Part module that allow you to create or edit the geometry of a part. You can use the tools to edit the regions of a part that make it invalid or imprecise.   --- | | In this section:   * [Editing techniques](simacae-c-reptoolbox.md) * [Editing techniques](simacae-m-RepConcOverview-sb.md) * [What is stitching?](simacae-c-repconcstitch.md) * [A strategy for repairing geometry](simacae-c-repconcstrategy.md) * [Creating a part from orphan elements](simacae-c-repconcpartfrommesh.md) * [Editing and repairing edges](simacae-m-RepHelpEdges-sb.md) * [Editing and repairing faces](simacae-m-RepHelpFaces-sb.md) * [Editing parts](simacae-m-RepHelpParts-sb.md) | | | |

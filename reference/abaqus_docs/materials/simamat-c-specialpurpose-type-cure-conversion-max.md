@@ -1,0 +1,5 @@
+# ABQ_Cure_ReactionKinetics_MaxConversion
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_Cure\_ReactionKinetics\_MaxConversion | | |  | | | |  | | --- | | You use this property table type to specify the maximum value of the conversion (or maximum degree of cure).  This page discusses:   * [Property Table Type Definition](#simamat-c-specialpurpose-type-cure-conversion-max-definition) * [Properties](#simamat-c-specialpurpose-type-cure-conversion-max-properties) | | |  | | --- | | See Also | | [Modeling the Cure Process in Thermosetting Polymers](simamat-c-curemodel.md) | |   Products Abaqus/Standard    Property Table Type Definition ``` [PROPERTY TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-propertytabletype.md#simakey-r-propertytabletype), NAME="ABQ_Cure_ReactionKinetics_MaxConversion", PROPERTIES=1 "Maximum Conversion αmax⁡" ```  Properties Maximum Conversion  Maximum value of conversion (degree of cure) that can be reached during the curing process, αmax⁡. |

@@ -1,0 +1,5 @@
+# Using Abaqus/Explicit Output Variable Identifiers
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using Abaqus/Explicit Output Variable Identifiers | | |  | | | |  | | --- | | --- | | In this section:   * [Abaqus/Explicit Output Variable Identifiers](simaout-c-expoutputvar.md) * [Element Integration Point Variables](simaout-c-exp-elementintegrationpointvariables.md) * [Element Section Variables](simaout-c-exp-elementsectionvariables.md) * [Whole Element Variables](simaout-c-exp-wholeelementvariables.md) * [Element Face Variables](simaout-c-exp-elementfacevariables.md) * [Nodal Variables](simaout-c-exp-nodalvariables.md) * [Surface Variables](simaout-c-exp-surfacevariables.md) * [Integrated Variables](simaout-c-exp-integratedvariables.md) * [Total Energy Output](simaout-c-exp-totalenergyoutput.md) * [Time Increment and Mass Output](simaout-c-exp-timeincrementandmassoutput.md) | | | |

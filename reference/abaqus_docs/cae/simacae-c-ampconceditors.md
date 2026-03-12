@@ -1,0 +1,5 @@
+# Understanding the amplitude editors
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding the amplitude editors | | |  | | | |  | | --- | | You create amplitudes by entering data in the amplitude editor; you can type the data in using the keyboard or you can read it in from a file. (For more information, see [Entering tabular data](simacae-c-intdialogspreadsheet.md).) | | |  | | --- | | See Also | | [Entering tabular data](simacae-c-intdialogspreadsheet.md) |  |  | | --- | |  | | In Other Guides | | [Amplitude Curves](.._SIMACAEPRCRefMap_simaprc-c-amplitude.md) | | [Response Spectrum Analysis](.._SIMACAEANLRefMap_simaanl-c-responsespectrum.md) | |   The top panel of the editor displays the name of the amplitude and the amplitude type. The format of the rest of the editor depends on the type of amplitude you are creating. For example, the editor for creating a periodic amplitude is shown in [Figure 1](simacae-c-ampconceditors.md#simacae-c-ampconceditors__simacae-c-amp-editor). Figure 1. The amplitude editor. |

@@ -1,0 +1,5 @@
+# Assembly commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Assembly commands | | |  | | | |  | | --- | | Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operations. Assembly commands create Feature objects on only the rootAssembly object. The commands that create Feature objects on only the Part object are described in [Part commands](simaker-m-PrtPyc-sb.md#simaker-m-PrtPyc-sb). The commands that create Feature objects on both the Part and the rootAssembly objects are described in [Feature commands](simaker-m-FtsPyc-sb.md#simaker-m-FtsPyc-sb).   --- | | In this section:   * [Assembly object](simaker-c-assemblypyc.md) * [ConnectorOrientation object](simaker-c-connectororientationpyc.md) * [Feature object](simaker-c-featureasmpyc.md) * [PartInstance object](simaker-c-partinstancepyc.md) * [ModelInstance object](simaker-c-modelinstancepyc.md) * [Model object](simaker-c-modelasmpyc.md) | | | |

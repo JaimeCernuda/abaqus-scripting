@@ -1,0 +1,5 @@
+# Defining data imperfections
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining data imperfections | | |  | | | |  | | --- | | You can define data imperfection on an assembly. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Introducing a Geometric Imperfection into a Model](.._SIMACAEANLRefMap_simaanl-c-imperfection.md) | |   1. From the main menu bar in the Interaction module, select     Special    Imperfection    Create    . 2. In the Create Imperfection dialog box that appears, name    the imperfection, select Data imperfection, and click    Continue. 3. Select System. 4. In the Imperfection Data table, enter the following: Node Number  Enter the node for which the imperfection is to be specified.  Components  Enter the `comp1`,    `comp2`, and    `comp3`    component values for the imperfection in the selected    system. 5. Click OK to save your data and to close the dialog    box. |

@@ -1,0 +1,5 @@
+# Displaying the drawing area in full screen mode
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying the drawing area in full screen mode | | |  | | | |  | | --- | | The drawing area is the visible portion of the canvas. You can display the drawing area in full screen mode. If you are in the Visualization module, the Animation Controls are available as a separate toolbar; otherwise, no menu bars or toolbars are accessible in full screen mode. To make a toolbar accessible in full screen mode, you can click and drag the toolbar's grip to “undock” the toolbar prior to switching modes. | | |  | | --- | | See Also | | [Managing viewports on the canvas](simacae-m-Cnv-sb.md) | |   1. From the main menu bar, select ViewFull Screen. |  |    | --- |    | Tip: You can also press F11 to toggle between full screen mode and normal mode. |  The drawing area enlarges to fill the entire screen. 2. Click the restore button in the title bar to return the drawing area to its previous size. |

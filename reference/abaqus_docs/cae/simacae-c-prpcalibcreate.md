@@ -1,0 +1,5 @@
+# What is material calibration?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What is material calibration? | | |  | | | |  | | --- | | Material calibration is the process of deriving Abaqus material behaviors like elasticity and plasticity from sets of material test data. You can create material calibrations in three general steps:   * Create data sets or import data sets into Abaqus/CAE. * Process these data sets using filters and tools that enable you to scale, smooth, and truncate the data and to convert the data between nominal and true forms. * Derive material properties such as Young's modulus, Poisson's ratio, or Mullins effect from your data sets.   To begin a new material calibration, double-click Calibrations in the Model Tree. In the Create Calibration dialog box that appears, enter a calibration name and click OK. Abaqus/CAE adds the new calibration to the Model Tree. | | | |

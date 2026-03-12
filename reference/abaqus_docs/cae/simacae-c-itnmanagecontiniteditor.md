@@ -1,0 +1,5 @@
+# Contact initialization editor
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Contact initialization editor | | |  | | | |  | | --- | | To create contact initialization rules for a general contact interaction in Abaqus/Standard, select InteractionContact InitializationCreate from the main menu bar. The contact initialization editor appears in which you can specify a name for the initialization definition and the rules associated with that definition. | | |  | | --- | | See Also | | [Creating contact initializations](simacae-t-itnhelptopicinitialization.md) | |   You can display help on the contact initialization editor by selecting HelpOn Context from the main menu bar and then clicking the editor. For more information, see [Creating contact initializations](simacae-t-itnhelptopicinitialization.md). |

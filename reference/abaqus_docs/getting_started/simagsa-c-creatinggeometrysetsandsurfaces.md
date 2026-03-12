@@ -1,0 +1,5 @@
+# Creating geometry sets and surfaces
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating geometry sets and surfaces | | |  | | | |  | | --- | | Next, you can create the geometry sets and surfaces. | | |   Create the geometry sets `TOP`, `BOT`, `FRONT`, `BACK`, `FIX`, and `OUT` as shown in [Figure 1](simagsa-c-creatinggeometrysetsandsurfaces.md#simagsa-c-creatinggeometrysetsandsurfaces__simagsa-c-gxi-node-sets). (The set `OUT` contains the edge shown in bold in [Figure 1](simagsa-c-creatinggeometrysetsandsurfaces.md#simagsa-c-creatinggeometrysetsandsurfaces__simagsa-c-gxi-node-sets).) Create the surface named `LOAD` shown in [Figure 2](simagsa-c-creatinggeometrysetsandsurfaces.md#simagsa-c-creatinggeometrysetsandsurfaces__simagsa-c-gxi-node-surfaces). These regions will be used later for the application of loads and boundary conditions, as well as for the definition of output requests. Figure 1. Sets.    Figure 2. Surface. |

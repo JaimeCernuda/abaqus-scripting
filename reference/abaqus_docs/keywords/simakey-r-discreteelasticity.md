@@ -1,0 +1,5 @@
+# *DISCRETE ELASTICITY
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*DISCRETE ELASTICITY | | |  | | | |  | | --- | | Specify effective elastic material properties for discrete particles. This option is used to define effective elastic moduli for PD3D elements for Hertz normal contact.  This page discusses:   * [There are no parameters associated with this option.](#simakey-r-discreteelasticity__simakey-r-discreteelasticity-s-noparams1) * [Data lines to define discrete elasticity](#simakey-r-discreteelasticity__simakey-r-discreteelasticity-s-datadesc1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Discrete Element Method](.._SIMACAEANLRefMap_simaanl-c-demanalysis.md) | |   ProductsAbaqus/Explicit  TypeModel data  LevelModel  Abaqus/CAEUnsupported  There are no parameters associated with this option.  Data lines to define discrete elasticity First (and only) line  1. Young's modulus, E. 2. Poisson's ratio, ν. |

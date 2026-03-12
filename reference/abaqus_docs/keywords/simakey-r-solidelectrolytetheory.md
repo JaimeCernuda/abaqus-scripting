@@ -1,0 +1,5 @@
+# *SOLID ELECTROLYTE THEORY
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*SOLID ELECTROLYTE THEORY | | |  | | | |  | | --- | | Activate use of the electrochemistry framework to model a solid electrolyte. This option is used in a material data block to activate the usage of the electrochemistry framework to model a solid electrolyte.   * [There are no parameters or data lines associated with this option.](#simakey-r-solidelectrolytetheory__simakey-r-porouselectrodetheory-noparamsordata) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Modeling Solid Electrolytes and Solid-State Batteries](.._SIMACAEANLRefMap_simaanl-c-modelingsolidelectrolyte-batteries.md) | |   Products Abaqus/Standard  Type Model data  LevelAssembly  There are no parameters or data lines associated with this option. |

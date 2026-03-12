@@ -1,0 +1,5 @@
+# Creating an analysis job
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating an analysis job | | |  | | | |  | | --- | | Now that you have configured your analysis, you will create a job that is associated with your model. | | |   1. In the Model Tree, double-click the Jobs container to create a job. Abaqus/CAE switches to the Job module, and the Create Job dialog box appears with a list of the models in the model database. When you are finished defining your job, the Jobs container will display a list of your jobs. 2. Name the job `Frame`, and click Continue. The Edit Job dialog box appears. 3. In the Description field, type `Two-dimensional overhead hoist frame`. 4. Click OK to accept all other default job settings in the job editor and to close the dialog box. |

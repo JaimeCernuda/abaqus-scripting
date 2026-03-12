@@ -1,0 +1,5 @@
+# OdbLoadCase object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | OdbLoadCase object | | |  | | | |  | | --- | | The OdbLoadCase object describes a load case.  This page discusses:   * [Access](#simaker-c-odbloadcasepyc__simaker-c-odbloadcasepyc-s-pyaccess1) * [LoadCase(...)](#simaker-odbloadcaseloadcasepyc) * [Members](#simaker-c-odbloadcasepyc-t-pymembersect1) | | |   Access  ``` import odbAccess session.odbs[name].steps[name].frames[i].loadCase session.odbs[name].steps[name].historyRegions[name].loadCase session.odbs[name].steps[name].loadCases[name] ```  LoadCase(...) This method creates an OdbLoadCase object.  Path session.odbs[name].steps[name].LoadCase  Required arguments name  A String specifying the name of the OdbLoadCase object.  Optional arguments None.  Return value An OdbLoadCase object.  Exceptions None.  Members The OdbLoadCase object has members with the same names and descriptions as the arguments to the [LoadCase](simaker-c-odbloadcasepyc.md#simaker-odbloadcaseloadcasepyc) method. |

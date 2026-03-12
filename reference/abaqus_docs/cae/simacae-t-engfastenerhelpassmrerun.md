@@ -1,0 +1,5 @@
+# Re-running a property generation script
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Re-running a property generation script | | |  | | | |  | | --- | | You use the Re-run tabbed page to have Abaqus/CAE re-copy properties from the template model and then re-run the property generation script. The script currently specified on the Properties tabbed page is run. The action occurs when you click OK to close the dialog box. | | |   Context:  The Re-run tabbed page is available only when you are editing an assembled fastener that has already been created.  Note:  Any time you make a change in the the Edit Fasteners dialog box, the re-run action occurs automatically when you click OK. You only need to use the Re-copy template model properties and re-run script option when no other changes have been made.  1. From the Edit Fasteners dialog box, display the Re-run tabbed page. 2. Toggle on Re-copy template model properties and re-run script. 3. Click OK to close the dialog box. |

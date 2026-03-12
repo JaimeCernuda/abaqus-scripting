@@ -1,0 +1,5 @@
+# The kernel and GUI
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The kernel and GUI | | |  | | | |  | | --- | | Abaqus/CAE executes in two separate processes: the kernel and the GUI. | | |   The role of the kernel is to provide access to Abaqus databases and the commands that create and modify those databases. The role of the GUI is to collect user input, which is then packaged as a command string and sent to the kernel for execution. The GUI is not essential to the execution of Abaqus—an entire model can be constructed, analyzed, and post-processed through the use of kernel scripts, without ever invoking the GUI.  Typically, when you develop some custom functionality you start by creating the kernel commands that implement that functionality. These commands can be debugged by executing them from the command line interface (CLI) in Abaqus/CAE. Once you have determined that the kernel commands are working correctly from the CLI, you can design a GUI to collect the user inputs needed by your commands. |

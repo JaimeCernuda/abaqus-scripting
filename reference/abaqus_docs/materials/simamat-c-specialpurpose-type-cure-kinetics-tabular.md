@@ -1,0 +1,5 @@
+# ABQ_Cure_ReactionKinetics_Tabular
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_Cure\_ReactionKinetics\_Tabular | | |  | | | |  | | --- | | You use this property table type to specify the cure kinetics in the tabular form.  This page discusses:   * [Property Table Type Definition](#simamat-c-specialpurpose-type-cure-kinetics-tabular-definition) * [Properties](#simamat-c-specialpurpose-type-cure-kinetics-tabular-properties) * [Independent Variables](#simamat-c-specialpurpose-type-cure-kinetics-tabular-indepvars) | | |  | | --- | | See Also | | [Modeling the Cure Process in Thermosetting Polymers](simamat-c-curemodel.md) | |   Products Abaqus/Standard    Property Table Type Definition ``` [PROPERTY TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-propertytabletype.md#simakey-r-propertytabletype), NAME="ABQ_Cure_ReactionKinetics_Tabular", PROPERTIES=1, INDEPENDENT VARIABLES=1 "Conversion Rate α˙" "Conversion α" ```  Properties Conversion Rate  Conversion rate (rate of degree of cure), α˙.  Independent Variables Conversion  Conversion (degree of cure), α. |

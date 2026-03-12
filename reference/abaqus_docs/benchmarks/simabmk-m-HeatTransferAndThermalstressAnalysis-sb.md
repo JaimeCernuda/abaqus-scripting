@@ -1,0 +1,5 @@
+# Heat transfer and thermal-stress analysis
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Heat transfer and thermal-stress analysis | | |  | | | |  | | --- | | --- | | In this section:   * [Convection and diffusion of a temperature pulse](simabmk-c-convectdifftemppulse.md) * [Freezing of a square solid: the two-dimensional Stefan problem](simabmk-c-freezingofsolid.md) * [Coupled temperature-displacement analysis: one-dimensional gap conductance and radiation](simabmk-c-coupledtempdisp.md) * [Quenching of an infinite plate](simabmk-c-quenchplate.md) * [Two-dimensional elemental cavity radiation view factor calculations](simabmk-c-radviewelemcalcs-2d.md) * [Axisymmetric elemental cavity radiation view factor calculations](simabmk-c-radviewelemcalcs-axisym.md) * [Three-dimensional elemental cavity radiation view factor calculations](simabmk-c-radviewelemcalcs-3d.md) * [Radiation analysis of a plane finned surface](simabmk-c-radiationfinnedsurf.md) | | | |

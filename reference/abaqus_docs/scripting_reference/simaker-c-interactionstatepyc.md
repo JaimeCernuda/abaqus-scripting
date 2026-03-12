@@ -1,0 +1,5 @@
+# InteractionState object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | InteractionState object | | |  | | | |  | | --- | | The InteractionState object is the abstract base type for other InteractionState objects. The InteractionState object has no explicit constructor. The members of the InteractionState object are common to all objects derived from InteractionState.  This page discusses:   * [Access](#simaker-c-interactionstatepyc__simaker-c-interactionstatepyc-s-pyaccess1) * [Members](#simaker-c-interactionstatepyc-t-pymembersect1) | | |   Access  ``` import interaction mdb.models[name].steps[name].interactionStates[name] ```  Members The InteractionState object has the following member:  status  A SymbolicConstant specifying the propagation state of the InteractionState object. Possible values are:   * NOT\_YET\_ACTIVE * CREATED * PROPAGATED * MODIFIED * DEACTIVATED * NO\_LONGER\_ACTIVE * TYPE\_NOT\_APPLICABLE * INSTANCE\_NOT\_APPLICABLE * BUILT\_INTO\_BASE\_STATE |

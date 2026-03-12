@@ -1,0 +1,5 @@
+# Connector Element Behavior
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Connector Element Behavior | | |  | | | |  | | --- | | --- | | In this section:   * [Connector Behavior](simaelm-c-connectorbehavior.md) * [Connector Elastic Behavior](simaelm-c-connelastbehav.md) * [Connector Damping Behavior](simaelm-c-conndampingbehav.md) * [Connector Functions for Coupled Behavior](simaelm-c-connderivedandpotential.md) * [Connector Friction Behavior](simaelm-c-connfrictionbehav.md) * [Connector Plastic Behavior](simaelm-c-connplastbehav.md) * [Connector Damage Behavior](simaelm-c-conndamagebehav.md) * [Connector Stops and Locks](simaelm-c-connstoplockbehav.md) * [Connector Failure Behavior](simaelm-c-connfailurebehav.md) * [Connector Uniaxial Behavior](simaelm-c-connuniaxialbehav.md) | | | |

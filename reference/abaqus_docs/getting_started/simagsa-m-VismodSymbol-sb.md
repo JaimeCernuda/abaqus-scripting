@@ -1,0 +1,5 @@
+# Displaying and customizing a symbol plot
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying and customizing a symbol plot | | |  | | | |  | | --- | | Symbol plots allow you to visualize the magnitude and direction of vector and tensor variables in the form of symbols (arrows) superimposed on the model. Each symbol starts at the location in the model where the value was obtained; symbols representing nodal quantities appear at nodes, and symbols representing integration point quantities appear at integration points. The length of the arrow indicates the magnitude of the vector or tensor, and the direction of the arrow indicates its direction. For example, in this section you will create a symbol plot of displacement. The symbol plot displays arrows representing the magnitude and the direction of the displacement vector at each node.   --- | | In this section:   * [Displaying a vector symbol plot](simagsa-t-vismodvectordisplay.md) * [Customizing the symbol plot](simagsa-t-vismodvectorcustom.md) | | | |

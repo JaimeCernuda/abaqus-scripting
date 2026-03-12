@@ -1,0 +1,5 @@
+# Hiding toolbars
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Hiding toolbars | | |  | | | |  | | --- | | Select ToolsCustomize from the main menu bar to set the visibility of toolbars in Abaqus/CAE. For other methods of hiding toolbars, see [Configuring the visibility of toolbars](simacae-c-cusvisibility.md). | | |  | | --- | | See Also | | [Components of the toolbars](simacae-c-toptoolbar.md) | | [Configuring the visibility of toolbars](simacae-c-cusvisibility.md) | | [Using the Customize toolset](simacae-m-CusUsing-sb.md) | |   1. From the main menu bar in any module, select ToolsCustomize. The Customize dialog box appears. 2. On the Toolbars tabbed page, toggle on the name of any toolbar you want to display; toggle off the name of any toolbar you want to hide. 3. When you have set the visibility for all toolbars as desired, click Dismiss to close the Customize dialog box. |

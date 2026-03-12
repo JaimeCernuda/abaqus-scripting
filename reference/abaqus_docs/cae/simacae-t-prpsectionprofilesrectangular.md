@@ -1,0 +1,5 @@
+# Defining a rectangular profile
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining a rectangular profile | | |  | | | |  | | --- | | Define a rectangular profile by providing geometric data for a solid rectangle. | | |  | | --- | | See Also | | [Defining profiles](simacae-c-prppropprofile.md) | | [Defining sections](simacae-c-prppropsection.md) |  |  | | --- | |  | | In Other Guides | | [Beam Cross-Section Library](.._SIMACAEELMRefMap_simaelm-c-beamcrosssectlib.md) | |   1. Display the Edit Profile dialog box, as described in [Choosing a profile type](simacae-t-prpsectionprofilescreate.md). 2. In the a field, enter the length of the rectangle edges parallel to the local 1-axis. 3. In the b field, enter the length of the rectangle edges parallel to the local 2-axis. 4. Click OK to save the profile and to close the Edit Profile dialog box. |

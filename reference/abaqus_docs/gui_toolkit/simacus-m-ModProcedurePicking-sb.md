@@ -1,0 +1,5 @@
+# Picking in procedure modes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Picking in procedure modes | | |  | | | |  | | --- | | This section describes picking in procedure modes.   --- | | In this section:   * [AFXPickStep](simacus-c-modprocedureafxpickstep.md) * [Refining what the user can select](simacus-c-modprocedurerefinements.md) * [Nonpickable entities](simacus-c-modprocedurenonpickable.md) * [Highlighting while selecting](simacus-c-modprocedurehighlighting.md) * [Selection options](simacus-c-modprocedureoptions.md) * [Allowing the user to type in points](simacus-c-modproceduretype.md) * [Picking by angle](simacus-c-modprocedureangle.md) * [AFXOrderedPickStep](simacus-c-modprocedureordered.md) * [Prepopulating a pick step](simacus-c-modprocedureprepop.md) * [Limitations while selecting](simacus-c-modprocedurelimits.md) | | | |

@@ -1,0 +1,5 @@
+# Monitoring the job
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Monitoring the job | | |  | | | |  | | --- | | Again, check the Job Monitor as the job is running. When the analysis completes, its contents will look similar to [Figure 1](simagsa-c-stpstatfile.md#simagsa-c-stpstatfile__simagsa-c-gsi-pipe-restart-monitor). | | |   Figure 1. Job Monitor: restart pipe vibration analysis.    This analysis starts at Step 3 since Steps 1 and 2 were completed in the previous analysis. There are now two output database (.odb) files associated with this simulation. Data for Steps 1 and 2 are in the file Pipe.odb; data for Steps 3 and 4 are in the file PipeRestart.odb. When plotting results, you need to remember which results are stored in each file, and you need to ensure that Abaqus/CAE is using the correct output database file. |

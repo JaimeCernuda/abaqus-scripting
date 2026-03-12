@@ -1,0 +1,5 @@
+# *EIGENSTRAIN
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*EIGENSTRAIN | | |  | | | |  | | --- | | Activate cure modeling capabilities. This option is used to define cure modeling capabilities for adhesives.  This page discusses:   * [Required parameters](#simakey-r-eigenstrain__simakey-r-eigenstrain-requiredparams) * [There are no data lines associated with this option.](#simakey-r-eigenstrain__simakey-r-diagnostics-s-nodata2) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Modeling the Cure Process in Thermosetting Polymers](.._SIMACAEMATRefMap_simamat-c-curemodel.md) | |   Products Abaqus/Standard  Type Model data  LevelModel  Required parameters USER  Include this parameter to activate cure modeling capabilities.  There are no data lines associated with this option. |

@@ -1,0 +1,5 @@
+# Creating, editing, and manipulating jobs
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating, editing, and manipulating jobs | | |  | | | |  | | --- | | This section describes how you create, edit, and manipulate jobs using either the main menu or the Job Manager.   --- | | In this section:   * [Creating a new analysis job](simacae-t-anajobmancreatebtn.md) * [Writing the input file only](simacae-c-anajobmanwritebtn.md) * [Performing a data check on a model](simacae-c-anajobmandatacheckbtn.md) * [Submitting an analysis job](simacae-c-anajobmansubmitbtn.md) * [Continuing an analysis job after a data check](simacae-c-anajobmancontinuebtn.md) * [Terminating an analysis job](simacae-c-anajobmankillbtn.md) * [Viewing the results of your job](simacae-t-anajobmanresultsbtn.md) | | | |

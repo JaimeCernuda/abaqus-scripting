@@ -1,0 +1,5 @@
+# Using the view manipulation tools
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the view manipulation tools | | |  | | | |  | | --- | | This section provides details of using the tools in the View Manipulation toolbar that allow you to manipulate the position, orientation, and scaling of the model or X–Y plot within a viewport. When the viewport you manipulate is linked to other viewports, Abaqus/CAE also changes the view within every linked viewport in your session.   --- | | In this section:   * [Centering the view](simacae-t-viwcenterview.md) * [Panning the view](simacae-t-viwpanbtn.md) * [Rotating the view](simacae-t-viwrotatebtn.md) * [Magnifying or reducing the view](simacae-t-viwmagnifybtn.md) * [Zooming in to a selected area of the view](simacae-t-viwzoombtn.md) * [Rescaling the view to fit the viewport](simacae-c-viwautofitbtn.md) * [Cycling through views](simacae-t-viwcyclebtn.md) * [Applying custom views](simacae-t-viwcustombtn.md) * [Saving a user-defined view](simacae-t-viwuserviewsavebtn.md) * [Applying a specified view](simacae-t-viwspecifybtn.md) | | | |

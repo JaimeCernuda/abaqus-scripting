@@ -1,0 +1,5 @@
+# OdbPretensionSection object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | OdbPretensionSection object | | |  | | | |  | | --- | | The pretension section object is used to define an assembly load. It associates a pretension node with a pretension section.  This page discusses:   * [Access](#simaker-c-odbpretensionsectionpyc__simaker-c-odbpretensionsectionpyc-s-pyaccess1) * [Members](#simaker-c-odbpretensionsectionpyc-t-pymembersect1) | | |   Access  ``` import odbAccess session.odbs[name].rootAssembly.pretensionSections[i] ```  Members The OdbPretensionSection object can have the following members:  node  An [OdbSet](simaker-c-odbsetpyc.md) object specifying the node set containing the pretension node.  element  An [OdbSet](simaker-c-odbsetpyc.md) object specifying the element set that defines the pretension section.  surface  An [OdbSet](simaker-c-odbsetpyc.md) object specifying the surface set that defines the pretension section.  normal  A tuple of Floats specifying the components of the normal to the pretension section. |

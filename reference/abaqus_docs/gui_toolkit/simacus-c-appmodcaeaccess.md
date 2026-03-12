@@ -1,0 +1,5 @@
+# Accessing Abaqus/CAE functions
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Accessing Abaqus/CAE functions | | |  | | | |  | | --- | | If you want to launch an Abaqus/CAE function from your own dialog, you can do so by connecting the appropriate target and selector to one of your buttons. | | |   You can get the target and selector for a particular function by using the main window's getTargetFromFunction and getSelectorFromFunction methods. For example:  ```     mainWindow = getAFXApp().getAFXMainWindow()     target = mainWindow.getTargetFromFunction('Part->Create')     selector = mainWindow.getSelectorFromFunction('Part->Create')     FXButton(self, 'Create Part...', tgt=target, sel=selector ) ```  The list of valid function names can be found in the Functions tab page in the ToolsCustomize dialog box. |

@@ -1,0 +1,5 @@
+# Contact properties
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Contact properties | | |  | | | |  | | --- | | This section defines the basic tests that are used to provide evidence that the implementation of the constraint options in Abaqus produces the expected results.   --- | | In this section:   * [Anisotropic friction for Abaqus/Explicit](simaver-c-anisotropicfriction.md) * [Thermal surface interaction](simaver-c-gapheattrans.md) * [Coupled thermal-electrical surface interaction](simaver-c-thermelectcont.md) * [Friction models in Abaqus/Standard](simaver-c-stdfricmodels.md) * [Friction models in Abaqus/Explicit](simaver-c-expfricmodels.md) * [Cohesive surface interaction](simaver-c-behavcohesivesurf.md) * [Modified contact pressure-overclosure relationship](simaver-c-contacttabular.md) | | | |

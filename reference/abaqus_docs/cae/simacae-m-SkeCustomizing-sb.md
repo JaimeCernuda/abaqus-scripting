@@ -1,0 +1,5 @@
+# Customizing the Sketcher
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing the Sketcher | | |  | | | |  | | --- | | This section describes how you customize the behavior and the appearance of the Sketcher.   --- | | In this section:   * [Using Sketcher customization options](simacae-t-skecustomoverview.md) * [Turning snapping on or off](simacae-t-skesnapgridbtn.md) * [Turning preselection on or off](simacae-t-skepreselectbtn.md) * [Customizing the sheet size and grid](simacae-t-skegridtext.md) * [Realigning the sketch grid](simacae-t-skealignbtn.md) * [Displaying and hiding construction geometry](simacae-t-skeshowconsbtn.md) * [Limiting the projection of coplanar entities](simacae-t-skeprojectcoplanar.md) * [Setting the maximum number of recorded sketching operations](simacae-t-skeundolevels.md) * [Customizing the format and use of dimensions in the Sketcher](simacae-t-skedimensionsframe.md) * [Customizing the use of constraints in the Sketcher](simacae-t-skeconstraintsframe.md) * [Managing images in the Sketcher background](simacae-t-skeimageframe.md) | | | |

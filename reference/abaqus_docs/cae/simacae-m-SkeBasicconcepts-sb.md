@@ -1,0 +1,5 @@
+# Basic Sketcher concepts
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Basic Sketcher concepts | | |  | | | |  | | --- | | You use the Sketcher to sketch the lines and curves that form the two-dimensional profile of a feature, to add constraints to the sketch, and to modify the sketch. This section describes some of the basic concepts used by the Sketcher and how these concepts influence the behavior of the Sketcher tools and appearance of the sketch.   --- | | In this section:   * [The Sketcher tools](simacae-c-sketoolbox.md) * [The Sketcher sheet and grid](simacae-c-skegrid.md) * [How Abaqus/CAE orients your sketch](simacae-c-skehoworient.md) * [Realigning the sketch grid relative to the sketch](simacae-c-skereorient.md) * [The Sketcher cursors and preselection](simacae-c-skesecondarycursor.md) * [Using the chain method to select edges in the Sketcher](simacae-c-skeselect.md) * [How Sketcher customization options are initialized and saved](simacae-c-skecustom.md) * [Using the Query toolset in the Sketcher](simacae-c-skequery.md) | | | |

@@ -1,0 +1,5 @@
+# DirectDampingComponent object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DirectDampingComponent object | | |  | | | |  | | --- | | A DirectDampingComponent object is used to define direct damping over a range of modes.  This page discusses:   * [Access](#simaker-c-directdampingcomponentpyc__simaker-c-directdampingcomponentpyc-s-pyaccess1) * [Members](#simaker-c-directdampingcomponentpyc-t-pymembersect1) | | |   Access  ``` import step mdb.models[name].steps[name].directDamping.components[i] ```  Members The DirectDampingComponent object has the following members:  start  An Int specifying the mode number of the lowest mode of a range.  end  An Int specifying the mode number of the highest mode of a range.  fraction  A Float specifying the fraction of critical damping. |

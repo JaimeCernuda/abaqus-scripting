@@ -1,0 +1,5 @@
+# Using display groups to display subsets of your model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using display groups to display subsets of your model | | |  | | | |  | | --- | | By default, Abaqus/CAE displays your entire model; however, you can choose to display subsets of your model by creating display groups. These subsets can contain combinations of part instances, geometry (cells, faces, or edges), datum geometry (points, axes, planes, or coordinate systems), elements, nodes, and surfaces from the current model or output database. This chapter explains the concept of display groups and how you can manage them.   --- | | In this section:   * [Understanding display groups](simacae-m-DgpRole-sb.md) * [Managing display groups](simacae-m-DgpHlp-sb.md) | | | |

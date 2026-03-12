@@ -1,0 +1,5 @@
+# Inelastic Mechanical Properties
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Inelastic Mechanical Properties | | |  | | | |  | | --- | | --- | | In this section:   * [Inelastic Behavior](simamat-c-plastic.md#simamat-c-plastic) * [Metal Plasticity](simamat-m-MetalPlasticity-sb.md) * [Other Plasticity Models](simamat-m-OtherPlasticityModels-sb.md) * [Fabric Material Behavior](simamat-c-fabric.md#simamat-c-fabric) * [Jointed Material Model](simamat-c-jointedmat.md#simamat-c-jointedmat) * [Concrete](simamat-m-Concrete-sb.md) * [Permanent Set in Rubberlike Materials](simamat-c-permanentset.md#simamat-c-permanentset) * [Plasticity Model for Superelastic Materials](simamat-c-plastsuperelastic.md#simamat-c-plastsuperelastic) * [Plasticity Model for Bidirectional Fabric-Reinforced Composite Materials](simamat-c-plastplyfabric.md) | | | |

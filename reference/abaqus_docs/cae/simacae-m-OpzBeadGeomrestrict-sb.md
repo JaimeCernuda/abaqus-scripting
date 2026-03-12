@@ -1,0 +1,5 @@
+# Creating a geometric restriction in a bead optimization
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating a geometric restriction in a bead optimization | | |  | | | |  | | --- | | This section describes how to create a geometric restriction in a bead optimization.   --- | | In this section:   * [Creating a filter restriction](simacae-t-opzbeadfilterrestrict.md) * [Creating a fixed region restriction](simacae-t-opzbeadfixedrestrict.md) * [Creating a growth restriction](simacae-t-opzbeadgrowthrestrict.md) * [Creating a penetration check restriction](simacae-t-opzbeadpenetrationhrestrict.md) * [Creating a planar symmetry restriction](simacae-t-opzbeadplanarrestrict.md) * [Creating a point symmetry restriction](simacae-t-opzbeadpointrestrict.md) * [Creating a rotational symmetry restriction](simacae-t-opzbeadrotationalrestrict.md) | | | |

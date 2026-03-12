@@ -1,0 +1,5 @@
+# Validating an optimization process
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Validating an optimization process | | |  | | | |  | | --- | | A validation checks the optimization process to ensure that the optimization task has been configured correctly and the Abaqus model exists. A validation does not check your Abaqus model. You should run a complete analysis of your model and make sure that it runs to completion before you attempt to run an optimization process. | | |  | | --- | | See Also | | [Understanding optimization processes](simacae-m-AnaOptimizationconcepts-sb.md) | | [Creating, editing, and manipulating optimization processes](simacae-m-AnaManageoptimization-sb.md) | |   To validate an optimization process, select OptimizationValidateoptimization process name from the main menu bar. You can also validate an optimization process by selecting the process name in the Optimization Process Manager and clicking Validate. |

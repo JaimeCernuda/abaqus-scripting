@@ -1,0 +1,5 @@
+# Material Verification
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Material Verification | | |  | | | |  | | --- | | This section defines the basic tests that are used to provide evidence that the implementation of the material options in Abaqus produces the expected results. Mechanical properties, thermal properties, and piezoresistivity properties are tested. For each mechanical material model listed, options and dependencies are exercised in stress/strain paths that are relevant to the particular material model. The material verification tests are also performed in all the different stress spaces available for each particular material model by choosing suitable finite elements.   --- | | In this section:   * [Mechanical properties](simaver-m-MechanicalProperties-sb.md) * [Thermal properties](simaver-m-ThermalProperties-sb.md) * [Piezoresistivity properties: Piezoresistive effect](simaver-c-piezoresistivity.md) | | | |

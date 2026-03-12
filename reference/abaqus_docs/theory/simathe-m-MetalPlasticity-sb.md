@@ -1,0 +1,5 @@
+# Metal plasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Metal plasticity | | |  | | | |  | | --- | | --- | | In this section:   * [About metal plasticity models](simathe-c-metalplastic.md#simathe-c-metalplastic) * [Isotropic elasto-plasticity](simathe-c-isoelastoplast.md) * [Stress potentials for anisotropic metal plasticity](simathe-c-stresspotent.md) * [Rate-dependent metal plasticity (creep)](simathe-c-ratedepplast.md) * [Models for metals subjected to cyclic loading](simathe-c-combinedhardening.md) * [Porous metal plasticity](simathe-c-pormetalplast.md) * [Cast iron plasticity](simathe-c-castironplasticity.md) * [ORNL constitutive theory](simathe-c-ornl.md) * [Deformation plasticity](simathe-c-deformplast.md) * [Heat generation caused by plastic straining](simathe-c-plasticheatgen.md) | | | |

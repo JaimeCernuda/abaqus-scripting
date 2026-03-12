@@ -1,0 +1,5 @@
+# Submitting an analysis job
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Submitting an analysis job | | |  | | | |  | | --- | | To submit a job for analysis, select JobSubmitjob of your choice from the main menu bar. You can also submit a job for analysis by selecting the job name in the Job Manager and clicking Submit. Abaqus/CAE submits the job for analysis using the job settings defined in the job editor. | | |  | | --- | | See Also | | [Understanding analysis jobs](simacae-m-AnaConcepts-sb.md) | | [Creating, editing, and manipulating jobs](simacae-m-AnaManagejob-sb.md) | |   For information on monitoring a job that you have submitted, see [Monitoring the progress of an analysis job](simacae-c-anaconcmonitor.md).  When you start an Abaqus/CAE session and submit an analysis job, Abaqus sends messages to Abaqus/CAE indicating the current status of the job, and Abaqus/CAE updates the Status column in the Job Manager accordingly. |

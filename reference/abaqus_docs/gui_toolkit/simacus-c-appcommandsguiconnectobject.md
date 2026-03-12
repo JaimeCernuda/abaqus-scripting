@@ -1,0 +1,5 @@
+# Object keyword example
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Object keyword example | | |  | | | |  | | --- | | The AFXObjectKeyword has a variable name for its value. | | |   In most cases you use an AFXObjectKeyword in a command that is preceded by some setup commands. For example,  ``` p = mdb.models['Model-1'].parts['Part-1'] session.viewports['Viewport: 1'].setValues(displayedObject=p) ```  In this example, in the form you would issue the first command manually, and use an object keyword as part of an AFXGuiCommand to have the second command issued using p as the variable name. For example,  ``` self.cmd = AFXGuiCommand(self, 'setValues',      'session.viewports[%s]') self.doKw = AFXObjectKeyword(self.cmd, 'displayedObject',      True, 'p') ```  You also use an AFXObjectKeyword in procedures that require picking. For more information, see [Picking in procedure modes](simacus-m-ModProcedurePicking-sb.md). |

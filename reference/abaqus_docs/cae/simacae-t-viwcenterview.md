@@ -1,0 +1,5 @@
+# Centering the view
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Centering the view | | |  | | | |  | | --- | | Click mouse button 3 in the viewport to access the option to center the view. | | |  | | --- | | See Also | | [Linking viewports for view manipulation](simacae-m-CnvLinking-sb.md) | | [The view manipulation tools](simacae-c-viwunderoverview.md) | | [Rescaling the view to fit the viewport](simacae-c-viwautofitbtn.md) | |   Context:  You can also use the auto-fit tool  from the View Manipulation toolbar to quickly pan and magnify or reduce a view so that the view fills the viewport and is centered within it.  1. Position the cursor in the viewport at the location to be used to    center the view, and click mouse button 3. 2. From the menu that appears, select Center View. Abaqus/CAE    shifts the position that you selected to the center of the viewport. |

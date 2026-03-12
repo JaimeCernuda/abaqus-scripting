@@ -1,0 +1,5 @@
+# AutoColors object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | AutoColors object | | |  | | | |  | | --- | | The AutoColors object defines a color palette.  This page discusses:   * [Access](#simaker-c-autocolorspyc__simaker-c-autocolorspyc-s-pyaccess1) * [setValues(...)](#simaker-autocolorssetvaluespyc) * [Members](#simaker-c-autocolorspyc-t-pymembersect1) | | |   Access  ``` session.autoColors ```  setValues(...) This method changes the color palette.  Required arguments colors  A sequence of Strings specifying the colors of the palette. Strings must be named colors or represent red, green, blue components in hexadecimal form. For instance, '#FF0000' for red, '#00FF00' for green and '#0000FF' for blue  Optional arguments None.  Return value None.  Exceptions None.  Members The AutoColors object has members with the same names and descriptions as the arguments to the [setValues](simaker-c-autocolorspyc.md#simaker-autocolorssetvaluespyc) method. |

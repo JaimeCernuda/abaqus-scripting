@@ -1,0 +1,5 @@
+# Displaying existing keyboard shortcuts
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying existing keyboard shortcuts | | |  | | | |  | | --- | | The Shortcut Listing dialog box displays a listing of all keyboard shortcuts currently assigned in Abaqus/CAE and the functions to which they map. | | |  | | --- | | See Also | | [Configuring keyboard shortcuts](simacae-c-cusfunc.md) | | [Creating, modifying, and removing keyboard shortcuts](simacae-t-cusfunctions.md) | | [Using the Customize toolset](simacae-m-CusUsing-sb.md) | |   1. From the main menu bar in any module, select ToolsCustomize. 2. From the Customize dialog box that opens, click the Functions tab. 3. To display a list of existing keyboard shortcuts, click Show all assignments. From the Shortcut Listing dialog box that appears, you can review all currently defined keyboard shortcuts. |

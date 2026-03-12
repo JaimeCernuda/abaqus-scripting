@@ -1,0 +1,5 @@
+# Additional Abaqus Scripting Interface exceptions
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Additional Abaqus Scripting Interface exceptions | | |  | | | |  | | --- | | Each command in the [Abaqus Scripting Reference Guide](.._SIMACAEKERRefMap_simaker-c-ov.md#simaker-c-ov) lists the standard Abaqus Scripting Interface exceptions that can be raised by a command. In addition, if the exception is not a standard Python or Abaqus Scripting Interface exception, the description lists the following: | | |   * A brief description of the problem. * The exception type. * The exception message.   For example, [Figure 1](simacmd-c-intaclexceptacl.md#simacmd-c-intaclexceptacl__simacmd-c-exception) shows the layout of a typical exception description in the online documentation. Figure 1. The layout of a typical exception description in the online documentation.     You use the exception type in your error handling routines. |

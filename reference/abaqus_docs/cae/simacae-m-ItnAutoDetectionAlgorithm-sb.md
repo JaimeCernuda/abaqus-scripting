@@ -1,0 +1,5 @@
+# Use of the contact detection algorithm
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Use of the contact detection algorithm | | |  | | | |  | | --- | | This section discusses the use of the contact detection algorithm.   --- | | In this section:   * [The contact detection algorithm](simacae-c-itnautodetectionexa.md#simacae-c-itnautodetectionexa) * [Additional criteria for defining contact pairs](simacae-c-itnautodetectionfilter.md) * [Contact detection for geometry](simacae-c-itnautodetectiongeometry.md) * [Contact detection for meshed models](simacae-c-itnautodetectionmesh.md) * [Detection of overclosed surfaces](simacae-c-itnautodetectionoverclosed.md) * [Defining contact within the same instance and self-contact](simacae-c-itnautodetectionself.md) * [Considerations for shells](simacae-c-itnautodetectionshells.md) | | | |

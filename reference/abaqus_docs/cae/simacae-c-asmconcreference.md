@@ -1,0 +1,5 @@
+# Creating reference points
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating reference points | | |  | | | |  | | --- | | From the main menu bar, select ToolsReference Point to create a reference point on a part instance or a model instance. You can create multiple reference points on the assembly; Abaqus/CAE labels them RP-1, RP-2, RP-3, etc. For more information, see [The Reference Point toolset](simacae-m-Ref-sb.md). | | |   Abaqus/CAE displays the reference point at the desired location along with its label. You can change the reference point label by clicking mouse button 3 on the feature in the Model Tree and selecting Rename from the menu that appears. If desired, you can turn off the display of the reference point symbol and the reference point label; for more information, see [Controlling reference point display](simacae-t-dspdynamicrefpoint.md). |

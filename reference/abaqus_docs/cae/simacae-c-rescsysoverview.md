@@ -1,0 +1,5 @@
+# Methods for creating a coordinate system
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Methods for creating a coordinate system | | |  | | | |  | | --- | | Select ToolsCoordinate SystemCreate from the main menu bar in the Visualization module to define a local coordinate system. You choose the type of coordinate system and follow the prompts in the prompt area to define the coordinate system axes. The following types of coordinate systems are available: | | |   * Fixed system * System following 3 nodes * System following 3 nodes on a circle * System following a single node   You can use the Session Coordinate Systems container in the Results Tree or the Coordinate System Manager to rename or delete user-defined coordinate systems and to save the coordinate systems to an output database file for use in later Abaqus/CAE sessions. |

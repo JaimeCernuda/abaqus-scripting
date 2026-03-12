@@ -1,0 +1,5 @@
+# What is a CORM?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What is a CORM? | | |  | | | |  | | --- | | CORM is an abbreviation for component of relative motion: relative displacements and rotations local to a connector. Available components of relative motion are relative displacements and rotations that are not kinematically constrained. Depending upon the connection type, some of the components may be available and some may be constrained. When you are creating or modifying a connector section, Abaqus/CAE displays the available and constrained components of relative motion in the editor for the specified connection type. In addition to applying behaviors to the components of relative motion, you can prescribe connector loads and connector boundary conditions to the available components of relative motion of a connector (see [Applying connector loads and connector boundary conditions](simacae-c-advconnloadsandbcs.md)). For more information on creating connector sections, see [Connector section editors](simacae-c-itnmanageconnpropeditor.md). | | | |

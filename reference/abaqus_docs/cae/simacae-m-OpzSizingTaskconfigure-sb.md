@@ -1,0 +1,5 @@
+# Configuring a sizing optimization task
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Configuring a sizing optimization task | | |  | | | |  | | --- | | A sizing optimization is a flexible, sensitivity-based optimization that allows you to apply a range of constraints and objective functions to your model. You use the optimization task editor to customize various aspects of a sizing optimization. To locate the editor, select TaskEditoptimization task name from the main menu bar.   --- | | In this section:   * [Configuring basic settings](simacae-t-opzsizingtaskconfigurebasic.md) * [Configuring the thickness settings](simacae-t-opzsizingtaskconfigurethickness.md) * [Configuring the perturbation settings](simacae-t-opzsizingtaskconfigureperturbation.md) * [Configuring convergence options](simacae-t-opzsizingtaskconfigureconvergence.md) * [Configuring advanced options](simacae-t-opzsizingtaskconfigureadvanced.md#simacae-t-opzsizingtaskconfigureadvanced) | | | |

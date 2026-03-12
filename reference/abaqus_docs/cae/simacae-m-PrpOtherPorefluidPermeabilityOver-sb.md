@@ -1,0 +1,5 @@
+# Defining permeability
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining permeability | | |  | | | |  | | --- | | Permeability is the relationship between the volumetric flow rate per unit area of a particular wetting liquid through a porous medium and the gradient of the effective fluid pressure.  You can use the Edit Material dialog box to define certain aspects of permeability.  For more information, see [Permeability](.._SIMACAEMATRefMap_simamat-c-permeabil.md).   --- | | In this section:   * [Defining permeability in an Abaqus/Standard analysis](simacae-t-prpotherporefluidpermeability.md) * [Defining the saturation dependence of permeability](simacae-t-prpotherporefluidsaturationdependence.md) * [Defining the velocity dependence of permeability](simacae-t-prpotherporefluidvelocitydependence.md) | | | |

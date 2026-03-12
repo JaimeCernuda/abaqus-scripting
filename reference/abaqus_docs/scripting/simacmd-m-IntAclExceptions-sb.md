@@ -1,0 +1,5 @@
+# Error handling in the Abaqus Scripting Interface
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Error handling in the Abaqus Scripting Interface | | |  | | | |  | | --- | | The basics of Python's exception handling apply to the Abaqus Scripting Interface. Python's exception handling is described in [Error handling](simacmd-c-intpytintroexceptions.md). If certain circumstances arise while a script is running, Python allows you to take the necessary action and still allows the script to continue. Alternatively, when Abaqus/CAE issues (or throws) an exception and the exception is not handled by the script, Abaqus/CAE displays the exception message in the message area and the script stops executing.   --- | | In this section:   * [Standard Python exceptions](simacmd-c-intaclexceptstandardpy.md) * [Standard Abaqus Scripting Interface exceptions](simacmd-c-intaclexceptstandardacl.md) * [Additional Abaqus Scripting Interface exceptions](simacmd-c-intaclexceptacl.md) * [Exception handling](simacmd-c-intaclexcepthandlepyc.md) | | | |

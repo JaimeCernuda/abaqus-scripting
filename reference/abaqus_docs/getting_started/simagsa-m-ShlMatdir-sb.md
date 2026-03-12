@@ -1,0 +1,5 @@
+# Shell material directions
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Shell material directions | | |  | | | |  | | --- | | Shell elements, unlike continuum elements, use material directions local to each element. Anisotropic material data, such as that for fiber-reinforced composites, and element output variables, such as stress and strain, are defined in terms of these local material directions. In large-displacement analyses the local material axes on a shell surface rotate with the average motion of the material at each integration point.   --- | | In this section:   * [Default local material directions](simagsa-c-shldefaultmatdir.md) * [Creating alternative material directions](simagsa-t-shlalternatematdir.md) | | | |

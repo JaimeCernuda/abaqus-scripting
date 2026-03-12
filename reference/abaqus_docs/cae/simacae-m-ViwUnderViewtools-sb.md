@@ -1,0 +1,5 @@
+# Understanding the view manipulation tools
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding the view manipulation tools | | |  | | | |  | | --- | | This section describes basic concepts you should understand before using the view manipulation tools.   --- | | In this section:   * [The view manipulation tools](simacae-c-viwunderoverview.md) * [The pan view tool](simacae-c-viwunderpantool.md) * [The rotate view tool](simacae-c-viwunderrotatetool.md) * [The magnify tool](simacae-c-viwundermagnifytool.md) * [The box zoom tool](simacae-c-viwunderzoomtool.md) * [The auto-fit tool](simacae-c-viwunderrescaletool.md) * [The cycle tool](simacae-c-viwundercycletool.md) * [Custom views](simacae-c-viwunderpredefviews.md) * [Numerically specifying a view](simacae-c-viwunderspecify.md) | | | |

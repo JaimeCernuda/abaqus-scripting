@@ -1,0 +1,5 @@
+# Creating and editing materials
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating and editing materials | | |  | | | |  | | --- | | This section describes each feature of the material editor individually.   --- | | In this section:   * [Creating or editing a material](simacae-t-prpmaterialcreate.md) * [Browsing and modifying material behaviors](simacae-c-prpmaterialbrowser.md) * [Entering strain-rate-dependent data](simacae-t-prpmaterialratedep.md) * [Entering temperature-dependent data](simacae-t-prpmaterialtempdep.md) * [Specifying field variable dependence](simacae-t-prpmaterialfieldvar.md) * [Selecting and modifying suboptions or test data](simacae-t-prpmaterialsuboptions.md) * [Displaying X–Y plots of hyperelastic material behavior](simacae-t-prpmaterialevalhyper.md) * [Displaying X–Y plots of viscoelastic material behavior](simacae-t-prpmaterialevalvisco.md) * [Displaying X–Y plots of hyperfoam material behavior](simacae-t-prpmaterialevalhyperfoam.md#simacae-t-prpmaterialevalhyperfoam) | | | |

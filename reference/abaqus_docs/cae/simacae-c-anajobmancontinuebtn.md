@@ -1,0 +1,5 @@
+# Continuing an analysis job after a data check
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Continuing an analysis job after a data check | | |  | | | |  | | --- | | When you perform a data check analysis (see [Performing a data check on a model](simacae-c-anajobmandatacheckbtn.md)), Abaqus creates and saves all the files necessary to continue the full analysis at a later time. To continue an analysis, select JobContinuejob of your choice from the main menu. You can also continue an analysis by selecting the job name in the Job Manager and clicking Continue. Abaqus/CAE continues the analysis using the job settings defined in the job editor. | | |  | | --- | | See Also | | [Understanding analysis jobs](simacae-m-AnaConcepts-sb.md) | | [Creating, editing, and manipulating jobs](simacae-m-AnaManagejob-sb.md) | |   For information on monitoring a job that you have submitted, see [Monitoring the progress of an analysis job](simacae-c-anaconcmonitor.md). |

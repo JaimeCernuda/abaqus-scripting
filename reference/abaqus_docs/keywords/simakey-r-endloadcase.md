@@ -1,0 +1,5 @@
+# *END LOAD CASE
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*END LOAD CASE | | |  | | | |  | | --- | | End the definition of a load case for multiple load case analysis. This option is used to end a load case definition.   * [There are no parameters or data lines associated with this option.](#simakey-r-endloadcase__simakey-r-endloadcase-s-noparamsordata1) | | |  | | --- | | See Also | | [\*LOAD CASE](simakey-r-loadcase.md#simakey-r-loadcase) |  |  | | --- | |  | | In Other Guides | | [Multiple Load Case Analysis](.._SIMACAEANLRefMap_simaanl-c-multiloadcase.md) | |   ProductsAbaqus/StandardAbaqus/CAE  TypeHistory data  LevelStep  Abaqus/CAELoad module  There are no parameters or data lines associated with this option. |

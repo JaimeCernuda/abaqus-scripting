@@ -1,0 +1,5 @@
+# Defining calibration behaviors
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining calibration behaviors | | |  | | | |  | | --- | | This section describes how to extract material behavior constants from calibration data sets.  You can also add support for custom calibration behaviors, which appear as new options in the Calibration Behavior dialog box. For more information, see "Creating custom material calibration plug-ins in Abaqus/CAE" in the Dassault Systèmes Knowledge Base at [http://support.3ds.com/knowledge-base/](http://support.3ds.com/knowledge-base/).  Abaqus/CAE assumes that the material is fully incompressible when it calculates material properties and plots material response curves from test data other than the volumetric test.   --- | | In this section:   * [Calibrating data for isotropic elastic material behavior](simacae-t-prpcalibelastiso.md) * [Calibrating data for isotropic elastic-plastic material behavior](simacae-t-prpcalibelastplastiso.md) * [Calibrating data for hyperelasticity with permanent set](simacae-t-prpcalibfefp.md) | | | |

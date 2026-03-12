@@ -1,0 +1,5 @@
+# Understanding the contents of an IGES file
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding the contents of an IGES file | | |  | | | |  | | --- | | The IGES neutral file format is an international standard that allows you to transfer geometric data between Abaqus/CAE and other CAD applications. You can use IGES-format files to import and export sketches and parts. This section describes the IGES format and the options that are available to you when importing and exporting IGES files.  For a detailed description of how to import and export IGES-format files, see [Importing a part from an IGES-format file](simacae-t-dbsimportpartiges.md), and [Exporting geometry, model, and mesh data](simacae-m-ImpExport-sb.md).   --- | | In this section:   * [What are the IGES options in Abaqus/CAE?](simacae-c-impconceptsigeswhatare.md) * [What is an IGES entity?](simacae-c-impconceptsigesentities.md) * [What is in the IGES log file?](simacae-c-impconceptsigeswhatisin.md) * [Exporting to an IGES file](simacae-c-impconceptsigesexport.md) | | | |

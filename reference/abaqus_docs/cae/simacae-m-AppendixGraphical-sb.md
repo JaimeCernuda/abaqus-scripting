@@ -1,0 +1,5 @@
+# Special graphical symbols
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Special graphical symbols | | |  | | | |  | | --- | | Abaqus/CAE uses special graphical symbols to represent prescribed conditions; interactions; constraints; connectors; special engineering features; and spring and dashpot elements, reference nodes, and tracer particles in the Visualization module.   --- | | In this section:   * [Symbols used to represent prescribed conditions](simacae-c-appgraphicallbi.md) * [Symbols used to represent interactions, constraints, and connectors](simacae-c-appgraphicalitn.md) * [Symbols used to represent special engineering features](simacae-c-appgraphicalengfeat.md) * [Symbols used in the Visualization module](simacae-c-appgraphicalvis.md) | | | |

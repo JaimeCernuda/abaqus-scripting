@@ -1,0 +1,5 @@
+# Creating new viewports
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating new viewports | | |  | | | |  | | --- | | You can create new viewports at any time; there is no limit to the number of viewports or their position on the canvas. | | |  | | --- | | See Also | | [Managing viewports on the canvas](simacae-m-Cnv-sb.md) | |   From the main menu bar, select ViewportCreate. Abaqus/CAE creates a new viewport in the drawing area. This viewport becomes the current viewport.  The new viewport size and position depend on the size of the current viewport and the drawing area. If the current viewport is maximized, Abaqus/CAE automatically maximizes the new viewport.  |  | | --- | | Tip: You can also create a new viewport by clicking  in the Viewport toolbar. | |

@@ -1,0 +1,5 @@
+# Custom toolbars
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Custom toolbars | | |  | | | |  | | --- | | The Customize toolset allows you to create custom toolbars containing shortcuts to most of the defined functions in Abaqus/CAE. A custom toolbar can be used to collect commonly used tools in a single location, create tools for functions that do not have an existing shortcut, or provide easily accessible controls for a common procedure (for example, the create part, instance part, and mesh part functions could all be part of the same toolbar). Custom toolbars are visible in all modules. If a tool acts as a shortcut to a module-specific function, Abaqus/CAE automatically switches to the appropriate module when that tool is invoked. | | |   The contents and locations of custom toolbars are saved between sessions.  To create a custom toolbar, select ToolsCustomize from the main menu bar. For detailed instructions on the creation of custom toolbars, see [Creating and modifying custom toolbars](simacae-t-cususingtoolbars.md). |

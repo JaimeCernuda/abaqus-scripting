@@ -1,0 +1,5 @@
+# The main window
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The main window | | |  | | | |  | | --- | | This section describes the layout, components, and behavior of the Abaqus main window.   --- | | In this section:   * [About the main window](simacus-c-appmainwindow.md) * [The title bar](simacus-c-appmaintitlebar.md) * [The menu bar](simacus-c-appmainmenubar.md) * [Toolbars](simacus-c-appmaintoolbar.md) * [The context bar](simacus-c-appmaincontextbar.md) * [The module toolbox](simacus-c-appmainmodule.md) * [The drawing area and canvas](simacus-c-appmaincanvas.md) * [The prompt area](simacus-c-appmainprompt.md) * [The message area](simacus-c-appmainmessage.md) * [The command line interface](simacus-c-appmaincli.md) | | | |

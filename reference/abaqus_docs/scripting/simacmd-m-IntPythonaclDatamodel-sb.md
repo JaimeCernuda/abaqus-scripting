@@ -1,0 +1,5 @@
+# The Abaqus object model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Abaqus object model | | |  | | | |  | | --- | | We have already discussed how Python provides built-in objects like integers, lists, dictionaries, and strings. When you are writing Abaqus Scripting Interface scripts, you need to access these built-in objects together with the objects used by Abaqus/CAE. These Abaqus Scripting Interface objects extend Python with new types of objects. The hierarchy and the relationship between these objects is called the Abaqus object model. The following sections describe the Abaqus object model in more detail.   --- | | In this section:   * [About the Abaqus object model](simacmd-c-intpythonaclobjectgeneral.md) * [Using tab completion to explore the object model](simacmd-c-intpythonaclobjecttab.md) * [The Model object model](simacmd-c-intpythonaclobjectmodel.md) * [Using the object model](simacmd-c-intmodelusing.md) * [Abstract base type](simacmd-c-intpythonaclobjecthigh.md) * [Importing modules to extend the object model](simacmd-c-intpythonaclobjectimport.md) | | | |

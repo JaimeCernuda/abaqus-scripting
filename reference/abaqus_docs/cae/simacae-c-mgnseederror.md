@@ -1,0 +1,5 @@
+# Relaxing constraints using the error dialog box
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Relaxing constraints using the error dialog box | | |  | | | |  | | --- | | Sometimes mesh generation fails if seeds are overconstrained. Several options are available to handle the overconstraints. | | |  | | --- | | See Also | | [Applying constraints to edge seeds](simacae-t-mgnseedconstraintedge.md) | |   When Abaqus/CAE is unable to create a mesh because of overconstrained seeds, the following dialog box appears:   In addition, the overconstrained seeds are highlighted in the viewport. You can choose one of the following options:   * Click Yes to relax the seed constraints and to   continue meshing the region. * Click No to save the seed constraints and to cancel   the meshing procedure. |

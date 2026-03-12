@@ -1,0 +1,5 @@
+# Reading from an output database
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Reading from an output database | | |  | | | |  | | --- | | The following sections describe how you use Abaqus Scripting Interface commands to read data from an output database.   --- | | In this section:   * [The Abaqus/CAE Visualization module tutorial output database](simacmd-c-odbintroreadtutpyc.md) * [Making the Odb commands available](simacmd-c-odbintroodbaccesspyc.md) * [Opening an output database](simacmd-c-odbintroreadopenpyc.md) * [Reading model data](simacmd-c-odbintroreadmodelpyc.md) * [Reading results data](simacmd-c-odbintroreadresultpyc.md) * [Reading field output data](simacmd-c-odbintroreadfieldpyc.md) * [Using regions to read a subset of field output data](simacmd-c-odbintroreadregpyc.md) * [Reading history output data](simacmd-c-odbintroreadhistpyc.md) * [An example of reading node and element information from an output database](simacmd-c-odbintroreadnodepyc.md) * [An example of reading field data from an output database](simacmd-c-odbintrosimpleexapyc.md) | | | |

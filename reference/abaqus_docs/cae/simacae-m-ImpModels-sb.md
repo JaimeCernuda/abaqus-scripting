@@ -1,0 +1,5 @@
+# What can you import from a model?
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What can you import from a model? | | |  | | | |  | | --- | | You can import a model from an input file, an output database, or an Abaqus/CAE model database. You can import the complete model from an input file or model database; however, you can import only parts, section definitions, materials, and beam profiles from an output database. The following sections describe how you can import a model. For a detailed description of how to import a model, see [Importing a model](simacae-t-impinputfilereader.md).   --- | | In this section:   * [Importing a model from an Abaqus/CAE model database](simacae-c-impmodeldatabases.md) * [Importing a model from an Abaqus input file](simacae-c-impinputfiles.md) * [Importing a model from an output database](simacae-c-impoutputdatabases.md) * [Importing a model from a Nastran input file](simacae-c-impnastran.md) * [Importing a model from an ANSYS input file](simacae-c-impansys.md) | | | |

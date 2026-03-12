@@ -1,0 +1,5 @@
+# Boolean, integer, float, and string keyword examples
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Boolean, integer, float, and string keyword examples | | |  | | | |  | | --- | | The following statements illustrate the use of Boolean, integer, float, and string keywords. | | |   ``` # Boolean keyword with a checkbox # FXCheckButton(self, 'Show node labels', mode.nodeLabelsKw, 0)  #Boolean keyword with option tree list # self.tree = AFXOptionTreeList(parent, 6) self.treeitem.addItemLast('Item 1', mode.item1Kw)  # Integer keyword # AFXTextField(self, 8, 'Number of CPUs:', mode.cpusKw, 0)  combo = AFXComboBox(self, 8, 3, 'Number:', mode.numberKw, 0) combo.appendItem('1', 1) combo.appendItem('2', 2)      combo.appendItem('3', 3)  # Float keyword # AFXTextField(self, 8, 'Radius:', mode.radiusKw, 0)  # String keyword # AFXTextField(self, 8, 'Name:', mode.nameKw, 0) ``` |

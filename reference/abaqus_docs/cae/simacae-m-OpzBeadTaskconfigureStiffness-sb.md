@@ -1,0 +1,5 @@
+# Configuring a condition-based bead optimization task
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Configuring a condition-based bead optimization task | | |  | | | |  | | --- | | A condition-based bead optimization is based upon a special bending hypothesis and uses special filters to generate beads along the bending trajectories. You use the optimization task editor to customize various aspects of a condition-based bead optimization. To locate the editor, select TaskEditoptimization task name from the main menu bar. To specify a condition-based bead optimization, select the Advanced tab and choose Condition-based optimization.   --- | | In this section:   * [Configuring basic settings](simacae-t-opzbeadstiffnesstaskconfigurebasic.md) * [Configuring advanced options](simacae-t-opzbeadstiffnesstaskconfigureadvanced.md) | | | |

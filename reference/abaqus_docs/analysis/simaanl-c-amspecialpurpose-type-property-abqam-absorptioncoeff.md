@@ -1,0 +1,5 @@
+# ABQ_AM_AbsorptionCoeff
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_AM\_AbsorptionCoeff | | |  | | | |  | | --- | | This property table type is used in special-purpose techniques for additive manufacturing.  This page discusses:   * [Property Table Type Definition](#sma-topic_8D1D23595F6D4242A0D2BBA4FFA6FBF3) * [Properties](#sma-topic_3A467D7261C1443D8F070ED3689B3FB8) | | |  | | --- | | See Also | | [Special-Purpose Techniques for Additive Manufacturing](simaanl-m-AMSpecialPurpose-sb.md#simaanl-m-AMSpecialPurpose-sb) | |   ProductsAbaqus/Standard  You can include a property table of type `"ABQ_AM_AbsorptionCoeff"` in the table collection for the distributed load definition to define the absorption coefficient of the material for laser heating.    Property Table Type Definition ``` [PROPERTY TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-propertytabletype.md#simakey-r-propertytabletype), NAME="ABQ_AM_AbsorptionCoeff", PROPERTIES=1 "Absorption Coefficient (between 0 and 1)" ```  Properties Absorption Coefficient  Absorption coefficient of the material (a value between 0 and 1). |

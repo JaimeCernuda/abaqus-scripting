@@ -1,0 +1,5 @@
+# Creating, editing, and manipulating optimization processes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating, editing, and manipulating optimization processes | | |  | | | |  | | --- | | This section describes how you create, edit, and manipulate optimization processes using either the main menu or the Optimization Process Manager.   --- | | In this section:   * [Creating and editing optimization processes](simacae-t-anaoptmancreatebtn.md) * [Creating the optimization files](simacae-c-anaoptmanwritefilesbtn.md) * [Validating an optimization process](simacae-c-anaoptmandatacheckbtn.md) * [Submitting an optimization process](simacae-c-anaoptmansubmitbtn.md) * [Continuing an optimization process that terminated](simacae-c-anaoptmancontinuebtn.md) * [Monitoring your optimization process](simacae-c-anaoptmanmonitorbtn.md) * [Extracting a smoothed mesh](simacae-t-anaoptmansmoothbtn.md) * [Combining optimization results](simacae-t-anaoptmancombinebtn.md) * [Viewing the results of your optimization process](simacae-c-anaoptmanresultsbtn.md) | | | |

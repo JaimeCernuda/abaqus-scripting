@@ -1,0 +1,5 @@
+# Creating construction geometry
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating construction geometry | | |  | | | |  | | --- | | This section describes each of the Sketcher tools used to create construction geometry. Construction geometry is used to help you create and align objects in your sketch and to define the axis of rotation for revolved solids and surfaces.   --- | | In this section:   * [Creating a horizontal construction line](simacae-t-skehorconstructbtn.md) * [Creating a vertical construction line](simacae-t-skeverconstructbtn.md) * [Creating an oblique construction line](simacae-t-skeoblconstructbtn.md) * [Creating angled construction lines](simacae-t-skeangconstructbtn.md) * [Creating a construction circle](simacae-t-skecirconstructbtn.md) * [Setting sketch components as construction geometry](simacae-t-skesetasconstructbtn.md) | | | |

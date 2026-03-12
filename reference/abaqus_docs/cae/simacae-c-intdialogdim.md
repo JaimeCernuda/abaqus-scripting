@@ -1,0 +1,5 @@
+# Using dimmed dialog box and toolbox components
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using dimmed dialog box and toolbox components | | |  | | | |  | | --- | | Some objects in dialog boxes and toolboxes are available only under certain circumstances. When an object is unavailable, it appears dimmed in the dialog box. | | |  | | --- | | See Also | | [Interacting with dialog boxes](simacae-m-IntDialog-sb.md) | |   Items are usually dimmed as a result of some other setting in the dialog box. For example, if Use settings below is not selected, the image size options below it are not available and appear dimmed, as shown below.   Context-sensitive help is available even for dimmed options, although tooltips are not. |

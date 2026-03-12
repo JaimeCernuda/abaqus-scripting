@@ -1,0 +1,5 @@
+# Entering strain-rate-dependent data
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Entering strain-rate-dependent data | | |  | | | |  | | --- | | If your material includes strain rate dependence, you can enter data to define how material properties vary with strain rate. | | |  | | --- | | See Also | | [Understanding the Property module editors](simacae-m-PrpEditor-sb.md) | |   1. Toggle on Use strain-rate-dependent data in the material editor. A column labeled Rate appears in the tabular data area. 2. Fill in each row with the appropriate values. For special table editing options or to read data from an ASCII file, press mouse button 3. (For more information, see [Entering tabular data](simacae-c-intdialogspreadsheet.md).) |

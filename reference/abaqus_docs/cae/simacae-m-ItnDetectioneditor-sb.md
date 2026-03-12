@@ -1,0 +1,5 @@
+# Using contact and constraint detection
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using contact and constraint detection | | |  | | | |  | | --- | | The contact detection tool greatly simplifies the process for defining contact interactions and tie constraints in a model. This section explains in detail how to use the contact detection dialog box to locate and create interactions or constraints automatically.  For an overview of contact detection and a discussion of the search methods used by Abaqus/CAE, see [Understanding contact and constraint detection](simacae-m-ItnAutoDetection-sb.md).   --- | | In this section:   * [Specifying search criteria for contact detection](simacae-m-ItnHelpDetectionCriteria-sb.md) * [Searching for contact pairs](simacae-t-itnhelpdetectionsearch.md) * [Reviewing and modifying detected contact pairs](simacae-m-ItnHelpDetectionResults-sb.md) * [Creating interactions for automatically detected contact pairs](simacae-t-itnhelpdetectioninteraction.md) | | | |

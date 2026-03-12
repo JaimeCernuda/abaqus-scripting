@@ -1,0 +1,5 @@
+# ABQ_Cure_ShrinkageCoeff_Iso
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_Cure\_ShrinkageCoeff\_Iso | | |  | | | |  | | --- | | You use this property table type to specify the isotropic shrinkage coefficient for the cure model.  This page discusses:   * [Property Table Type Definition](#simamat-c-specialpurpose-type-cure-shrinkage-iso-definition) * [Properties](#simamat-c-specialpurpose-type-cure-shrinkage-iso-properties) | | |  | | --- | | See Also | | [Modeling the Cure Process in Thermosetting Polymers](simamat-c-curemodel.md) | |   Products Abaqus/Standard    Property Table Type Definition ``` [PROPERTY TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-propertytabletype.md#simakey-r-propertytabletype), NAME="ABQ_Cure_ShrinkageCoeff_Iso", PROPERTIES=1 "Shrinkage Coefficient γ" ```  Properties Shrinkage Coefficient γ  Isotropic shrinkage coefficient, γ. |

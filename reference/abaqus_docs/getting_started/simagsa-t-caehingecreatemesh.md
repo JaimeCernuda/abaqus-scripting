@@ -1,0 +1,5 @@
+# Meshing the assembly
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Meshing the assembly | | |  | | | |  | | --- | | In this section you will mesh the parts. For convenience, you will begin with the hinge piece with the lubrication hole. | | |   1. Make the hinge piece with the hole current in the viewport. From the main menu bar, select MeshPart. 2. Click Yes in the prompt area to create the mesh. Abaqus/CAE meshes the part. 3. Repeat the above steps for the solid hinge piece.  The meshing operations are now complete. Display the model assembly in the viewport to see the final mesh, as illustrated in [Figure 1](simagsa-t-caehingecreatemesh.md#simagsa-t-caehingecreatemesh__simagsa-t-gst-tut2-mesh-done). Figure 1. Final view of the meshed model. |

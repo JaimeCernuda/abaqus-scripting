@@ -1,0 +1,5 @@
+# Object model for the output database
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Object model for the output database | | |  | | | |  | | --- | | An output database generated from an Abaqus analysis contains both model and results data.  Model data  Model data describe the parts and part instances that make up the root assembly; for example, nodal coordinates, set definitions, and element types.  Results data  Results data describe the results of your analysis; for example, stresses, strains, and displacements. You use output requests to configure the contents of the results data. Results data can be either field output data or history output data.  Note: For a description of object models, see [About the Abaqus object model](simacmd-c-intpythonaclobjectgeneral.md). You can find more information on the format of the output database in [Output to the Output Database](.._SIMACAEOUTRefMap_simaout-m-dboutput-sb.md#simaout-m-dboutput-sb).   --- | | In this section:   * [Model data](simacmd-c-odbintropycgeometricpyc.md) * [Results data](simacmd-c-odbintropycresultspyc.md) | | | |

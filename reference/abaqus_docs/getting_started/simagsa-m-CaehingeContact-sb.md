@@ -1,0 +1,5 @@
+# Defining contact between regions of the model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining contact between regions of the model | | |  | | | |  | | --- | | Interactions are objects that you create to model mechanical relationships between surfaces that are in contact or closely spaced. Mere physical proximity of two surfaces on an assembly is not enough to indicate any type of interaction between the surfaces. A contact interaction is required. The general contact approach is used in this example. A contact interaction requires a reference to an interaction property. Interaction properties are collections of information that help you to define certain types of interactions. You will create a mechanical interaction property that describes the tangential and normal behavior between all surfaces as frictionless. You will name this property `NoFric`.   --- | | In this section:   * [Creating an interaction property](simagsa-t-caehingeintprop.md) * [Defining a general contact interaction](simagsa-t-caehingeintcreate.md) | | | |

@@ -1,0 +1,5 @@
+# Sliding of the surfaces
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Sliding of the surfaces | | |  | | | |  | | --- | | In addition to determining whether contact has occurred at a particular point, an Abaqus analysis also must calculate the relative sliding of the two surfaces. | | |   This can be a very complex calculation; therefore, Abaqus makes a distinction between analyses where the magnitude of sliding is small and those where the magnitude of sliding may be finite. It is much less expensive computationally to model problems where the sliding between the surfaces is small. What constitutes “small sliding” is often difficult to define, but a general guideline to follow is that problems can use the “small-sliding” approximation if a point contacting a surface does not slide more than a small fraction of a typical element dimension. |

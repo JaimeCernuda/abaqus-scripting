@@ -1,0 +1,5 @@
+# Customizing the appearance of the X–Y plot legend
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing the appearance of the X–Y plot legend | | |  | | | |  | | --- | | This section explains how you use the Chart Legend Options dialog box to customize the appearance and contents of the legend for an X–Y plot. You can also display a title on the X–Y plot legend, and you can include on the legend a report of the minimum and maximum X–Y values.   --- | | In this section:   * [Displaying or hiding the X–Y plot legend](simacae-t-xypchartlegendtoggle.md) * [Customizing the title of the X–Y plot legend](simacae-t-xypchartlegendtitle.md) * [Adding minimum and maximum values to the X–Y plot legend](simacae-t-xypchartlegendnumbers.md) * [Customizing the location of the legend](simacae-t-xypchartlegendposition.md) * [Customizing the border and fill for the X–Y plot legend](simacae-t-xypchartlegendborderfill.md) | | | |

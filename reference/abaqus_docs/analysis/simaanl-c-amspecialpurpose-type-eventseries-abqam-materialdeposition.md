@@ -1,0 +1,5 @@
+# ABQ_AM_MaterialDeposition
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_AM\_MaterialDeposition | | |  | | | |  | | --- | | This event series type is used in special-purpose techniques for additive manufacturing.  This page discusses:   * [Event Series Type Definition](#sma-topic_750375BF67F347D5818A92099CC21EE3) * [Fields](#sma-topic_E28CE2DB48194537BFA668D2557B50A5) | | |  | | --- | | See Also | | [Special-Purpose Techniques for Additive Manufacturing](simaanl-m-AMSpecialPurpose-sb.md#simaanl-m-AMSpecialPurpose-sb) | |   ProductsAbaqus/Standard  An event series of type `"ABQ_AM_MaterialDeposition"` defines trajectories of the toolpath for material deposition.    Event Series Type Definition ``` [EVENT SERIES TYPE](.._SIMACAEKEYRefMap_simakey-r-eventseriestype.md#simakey-r-eventseriestype), NAME="ABQ_AM_MaterialDeposition", FIELDS=1   "On/Off State" ```  Fields On/Off State  Set to 1 to indicate the "on" state or to 0 to indicate the "off" state of the tool for the segment. |

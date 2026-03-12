@@ -1,0 +1,5 @@
+# Understanding the role of the Query toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding the role of the Query toolset | | |  | | | |  | | --- | | The Query toolset allows you to obtain information about your model.  In most cases Abaqus/CAE displays the requested information in the message area, and the same information is written to the replay file. Select ToolsQuery from the main menu bar to use the Query toolset, or select the query tool in the Query toolset.  The Query dialog box is split into two sections. The top section of the dialog box contains general queries that are available in each module except the Job module, where the Query toolset is not available at all. The bottom portion of the dialog box contains module-specific queries; as you switch between modules, Abaqus/CAE displays queries that are appropriate for the contents of the current module.   --- | | In this section:   * [General queries](simacae-c-qrerolegeneral.md) * [Module-specific queries](simacae-c-qrerolemodule.md) | | | |

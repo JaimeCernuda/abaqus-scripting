@@ -1,0 +1,5 @@
+# Querying your mesh
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Querying your mesh | | |  | | | |  | | --- | | The Query toolset in the Mesh module allows you to obtain information about the nodes and elements in the mesh. In addition, you can select ToolsQuery from the main menu bar to request the following information about the mesh: | | |   * The total number of nodes and elements in a selected part, part instance, or region along with the number of elements of each element shape. * The type and connectivity of a selected element. * The positive and negative sides of shell and membrane faces. * The direction of beam and truss tangents. * The mesh stack orientation. * Whether any edges of boundary faces have incompatible interfaces, cracks, or gaps and whether any edges intersect other faces. * The location of free or non-manifold edges—exterior shell or solid element edges that are not shared by exactly two exterior elements. * The location of any unmeshed regions.   For detailed information on using the Query toolset, see [Obtaining mesh information](simacae-t-mgnquerymesh.md). |

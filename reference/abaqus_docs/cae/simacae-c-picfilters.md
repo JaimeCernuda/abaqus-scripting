@@ -1,0 +1,5 @@
+# Available selection options
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Available selection options | | |  | | | |  | | --- | | When you are prompted to select an object from the viewport, Abaqus/CAE provides selection tools that can make it easier and more efficient for you to make the desired selection. | | |  | | --- | | See Also | | [Components of the toolbars](simacae-c-toptoolbar.md) | | [Using dimmed dialog box and toolbox components](simacae-c-intdialogdim.md) | | [Selecting objects within the current viewport](simacae-m-PicHelptopics-sb.md) | | [Using the selection options](simacae-m-PicUsingoptions-sb.md) | |   Use the Selection toolbar to configure the selection options. [Figure 1](simacae-c-picfilters.md#simacae-c-picfilters__simacae-c-obj-selection-toolbar-nls) shows the layout of the selection tools. Selection tools appear dimmed if they are not valid for the current procedure. Figure 1. The Selection toolbar. |

@@ -1,0 +1,5 @@
+# ABQ_Cure_HeatGeneration
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_Cure\_HeatGeneration | | |  | | | |  | | --- | | You use this parameter table type to specify the specific heat of reaction and the initial density for the cure model.  This page discusses:   * [Parameter Table Type Definition](#simamat-c-specialpurpose-type-cure-heatgen-definition) * [Parameters](#simamat-c-specialpurpose-type-cure-heatgen-parameters) | | |  | | --- | | See Also | | [Modeling the Cure Process in Thermosetting Polymers](simamat-c-curemodel.md) | |   Products Abaqus/Standard    Parameter Table Type Definition ``` [PARAMETER TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-parametertabletype.md#simakey-r-parametertabletype), NAME="ABQ_Cure_HeatGeneration", PARAMETERS=2 FLOAT, , "Specific Heat of Reaction Q", , , FLOAT, , "Density ρ0", , , ```  Parameters Specific Heat of Reaction  Specific heat of the reaction, Q.  Density  Initial density of the material, ρ0. |

@@ -1,0 +1,5 @@
+# What do you need to access the output database?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What do you need to access the output database? | | |  | | | |  | | --- | | To use the Abaqus Scripting Interface to access an output database, you need to understand the following: | | |   * How an   Abaqus   analysis outputs data to the output database as well as the difference between   field data, history data, and model data. The output database is described in   detail in   [Output to the Output Database](.._SIMACAEOUTRefMap_simaout-m-dboutput-sb.md#simaout-m-dboutput-sb)   and   [Assembly Definition](.._SIMACAEMODRefMap_simamod-c-partassy.md). * How to program using Python. An introduction to the Python programming   language is provided in   [Introduction to Python](simacmd-m-IntPytDescription-sb.md). * How to use   Abaqus   objects.   Abaqus   objects are explained in   [Using Python and the Abaqus Scripting Interface](simacmd-m-IntPythonandacl-sb.md). |

@@ -1,0 +1,5 @@
+# Examining a GUI module example
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Examining a GUI module example | | |  | | | |  | | --- | | This section shows how to create a module GUI.   --- | | In this section:   * [GUI module example](simacus-c-appmoduleoverview.md#simacus-c-appmoduleoverview) * [Deriving a new module class](simacus-c-appmoduleclass.md) * [Tree tabs](simacus-c-appmoduletreetabs.md) * [Menu bar items](simacus-c-appmodulemenus.md) * [Toolbar items](simacus-c-appmoduletoolbar.md) * [Toolbox items](simacus-c-appmoduletoolbox.md) * [Registering toolsets](simacus-c-appmoduletoolsets.md) * [Kernel module initialization](simacus-c-appmodulekernel.md) * [Instantiating the GUI module](simacus-c-appmoduleinstantiating.md) | | | |

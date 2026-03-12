@@ -1,0 +1,5 @@
+# Connectors
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Connectors | | |  | | | |  | | --- | | This section provides information on how to model connectors.   --- | | In this section:   * [Modeling connectors](simacae-t-advconnoverview.md) * [What is a connector?](simacae-c-advconnwhatis.md) * [What is a connector section?](simacae-c-advconnproperty.md) * [What is a CORM?](simacae-c-advconncorm.md) * [What are connector behaviors?](simacae-c-advconnbehavior.md) * [Creating the connector geometry, connector sections, and connector section assignments](simacae-c-advconncreating.md) * [What is the relationship between reference points and connectors?](simacae-c-advconnrefpts.md) * [Defining connector orientations in connector section assignments](simacae-c-advconnorientations.md) * [Requesting output from connectors](simacae-c-advconnoutput.md) * [Applying connector loads and connector boundary conditions](simacae-c-advconnloadsandbcs.md) * [Displaying connectors and connector output in the Visualization module](simacae-c-advconnvismod.md) | | | |

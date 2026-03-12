@@ -1,0 +1,5 @@
+# Miscellanous
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Miscellanous | | |  | | | |  | | --- | | This section defines basic tests that provide evidence that the implementation of miscellaneous contact options provide the expected results.   --- | | In this section:   * [Contact between discrete points](simaver-c-gapcont.md) * [Automatic element conversion for surface contact](simaver-c-autoelemconversion.md) * [Automatic surface definition and surface trimming](simaver-c-trim.md) * [Contact surface extensions](simaver-c-contactsurfexten.md) * [Adjusting contact surface normals at symmetry planes](simaver-c-contactsymnormal.md) * [Contact controls](simaver-c-contactcontrols.md) * [Multiple surface contact with penalty method](simaver-c-multpenaltycont.md) * [Automated contact patch algorithm for finite-sliding deformable surfaces](simaver-c-contactpatchfinsl.md) | | | |

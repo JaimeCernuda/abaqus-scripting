@@ -1,0 +1,5 @@
+# *PART
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*PART | | |  | | | |  | | --- | | Begin a part definition. This option is used to begin a part definition. It must be used in conjunction with the [ASSEMBLY](simakey-r-assembly.md#simakey-r-assembly), [END PART](simakey-r-endpart.md#simakey-r-endpart), and [INSTANCE](simakey-r-instance.md#simakey-r-instance) options.  This page discusses:   * [Required parameters](#simakey-r-part__simakey-r-part-s-paramsrequired1) * [There are no data lines associated with this option.](#simakey-r-part__simakey-r-part-s-nodata1) | | |  | | --- | | See Also | | [\*END PART](simakey-r-endpart.md#simakey-r-endpart) |  |  | | --- | |  | | In Other Guides | | [Assembly Definition](.._SIMACAEMODRefMap_simamod-c-partassy.md) | |   ProductsAbaqus/StandardAbaqus/ExplicitAbaqus/CAE  TypeModel data  LevelModel  Abaqus/CAEPart module  Required parameters NAME  Set this parameter equal to a label that will be used to refer to the part.  There are no data lines associated with this option. |

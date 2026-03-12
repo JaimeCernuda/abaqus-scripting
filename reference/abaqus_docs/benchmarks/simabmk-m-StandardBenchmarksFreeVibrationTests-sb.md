@@ -1,0 +1,5 @@
+# Standard benchmarks: free vibration tests
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Standard benchmarks: free vibration tests | | |  | | | |  | | --- | | --- | | In this section:   * [FV2: Pin-ended double cross: in-plane vibration](simabmk-c-fv2.md) * [FV4: Cantilever with off-center point masses](simabmk-c-fv4.md) * [FV12: Free thin square plate](simabmk-c-fv12.md) * [FV15: Clamped thin rhombic plate](simabmk-c-fv15.md) * [FV16: Cantilevered thin square plate](simabmk-c-fv16.md) * [FV22: Clamped thick rhombic plate](simabmk-c-fv22.md) * [FV32: Cantilevered tapered membrane](simabmk-c-fv32.md) * [FV41: Free cylinder: axisymmetric vibration](simabmk-c-fv41.md) * [FV42: Thick hollow sphere: uniform radial vibration](simabmk-c-fv42.md) * [FV52: Simply supported “solid” square plate](simabmk-c-fv52.md) | | | |

@@ -1,0 +1,5 @@
+# About dialog boxes
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About dialog boxes | | |  | | | |  | | --- | | The following general types of dialog boxes are available in the Abaqus GUI Toolkit: message, custom, data, and common. | | |   Message dialog boxes  Message dialog boxes allow you to post error, warning, or informational messages.  Custom dialog boxes  Custom dialog boxes allow you to build any custom interface. However, you must supply the infrastructure needed to make the dialog box behave as required.  Data dialog boxes  Data dialog boxes provide support for dialog boxes in which users enter data. Data dialog boxes are designed to supply user inputs to forms, which automatically issue commands. For more information, see [Form modes](simacus-m-ModModesForm-sb.md).  Common dialog boxes  Common dialog boxes are dialog boxes that provide standard functionality commonly found in many applications. The File Selection dialog box is a typical common dialog box.  These dialog boxes, along with other details related to dialog box construction and behavior, are described in this chapter. |

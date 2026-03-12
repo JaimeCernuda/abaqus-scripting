@@ -1,0 +1,5 @@
+# About data dialog boxes
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About data dialog boxes | | |  | | | |  | | --- | | A data dialog box is a dialog box in which data are collected from the user. In contrast, a message dialog box displays only a message, and a toolbox just holds buttons. AFXDataDialog is designed to be used in conjunction with a mode to gather data from the user. The data are then processed in a command. You should use AFXDataDialog if you need to issue a command. You should also use AFXDataDialog if the dialog box belongs to a module or nonpersistent toolset so that the GUI infrastructure can properly manage the dialog box when the user switches modules. | | |   The AFXDataDialog class is derived from AFXDialog and provides the following additional features:   * A bailout mechanism. * Standard action area button behavior designed to work with a form. * Keyword usage. * Transitions that define GUI state changes in the dialog box. |

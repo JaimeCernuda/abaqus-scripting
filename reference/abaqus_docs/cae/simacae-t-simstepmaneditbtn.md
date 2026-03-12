@@ -1,0 +1,5 @@
+# Editing a step
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Editing a step | | |  | | | |  | | --- | | You can use the step editor to edit the analysis procedure settings associated with an existing step. | | |  | | --- | | See Also | | [Understanding steps](simacae-m-SimConceptsStep-sb.md) | |   1. From the main menu bar, select StepEditstep name. The step editor appears.      |  |    | --- |    | Tip: You can also select the step name in the Step Manager and click Edit. | 2. Use the tabs within the step editor to modify the settings. (For detailed help on a particular editor feature, select HelpOn Context from the main menu bar and then click the feature of interest.) 3. Click OK to close the step editor and save the new settings. |

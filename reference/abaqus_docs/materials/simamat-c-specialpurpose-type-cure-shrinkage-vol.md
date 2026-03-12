@@ -1,0 +1,5 @@
+# ABQ_Cure_ShrinkageCoeff_Vol
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_Cure\_ShrinkageCoeff\_Vol | | |  | | | |  | | --- | | You use this property table type to specify the volumetric shrinkage coefficient for the cure model.  This page discusses:   * [Property Table Type Definition](#simamat-c-specialpurpose-type-cure-shrinkage-vol-definition) * [Properties](#simamat-c-specialpurpose-type-cure-shrinkage-vol-properties) | | |  | | --- | | See Also | | [Modeling the Cure Process in Thermosetting Polymers](simamat-c-curemodel.md) | |   Products Abaqus/Standard    Property Table Type Definition ``` [PROPERTY TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-propertytabletype.md#simakey-r-propertytabletype), NAME="ABQ_Cure_ShrinkageCoeff_Vol", PROPERTIES=1 "Shrinkage Coefficient γvol" ```  Properties Shrinkage Coefficient γvol  Volumetric shrinkage coefficient, γvol. |

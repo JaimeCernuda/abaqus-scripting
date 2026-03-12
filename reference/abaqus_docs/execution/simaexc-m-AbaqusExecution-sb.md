@@ -1,0 +1,5 @@
+# Abaqus Execution
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Abaqus Execution | | |  | | | |  | | --- | | This section describes using the abaqus command to run Abaqus and the abaqus doc command to run Abaqus documentation.   --- | | In this section:   * [Obtaining Information](simaexc-c-information.md) * [Abaqus/Standard and Abaqus/Explicit Execution](simaexc-c-analysisproc.md) * [Abaqus Job Execution Control](simaexc-c-suspend.md) * [Abaqus/CAE Execution](simaexc-c-caeproc.md) * [Abaqus/Viewer Execution](simaexc-c-viewerproc.md) * [Making User-Defined Executables and Subroutines](simaexc-c-makeproc.md) * [Optimization Execution](simaexc-c-topooptimizeproc.md) * [Parametric Studies](simaexc-c-parametricproc.md) * [Abaqus Documentation](simaexc-c-docproc.md) | | | |

@@ -1,0 +1,5 @@
+# Creating a low-density foam material model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating a low-density foam material model | | |  | | | |  | | --- | | You can create a material model to describe a low-density, highly compressible elastomeric foam with significant rate-sensitive behavior (such as polyurethane foam). Abaqus calculates material parameters from test data that you enter in the Test Data Editor. You must provide uniaxial test data for both tension and compression. Your test data must specify the uniaxial stress-strain curve for different strain-rate values.   --- | | In this section:   * [Specifying low-density foam material properties](simacae-t-prpmechanicalelasticlowdensfoamprops.md) * [Specifying uniaxial tension test data for a low-density foam material model](simacae-t-prpmechanicalelasticlowdensfoamttestdata.md) * [Specifying uniaxial compression test data for a low-density foam material model](simacae-t-prpmechanicalelasticlowdensfoamctestdata.md) | | | |

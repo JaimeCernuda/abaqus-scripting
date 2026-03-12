@@ -1,0 +1,5 @@
+# Time in general analysis steps
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Time in general analysis steps | | |  | | | |  | | --- | | Abaqus has two measures of time in a simulation. The total time increases throughout all general steps and is the accumulation of the time from each general step. Each step also has its own time scale (known as the step time), which begins at zero for each step. Time varying loads and boundary conditions can be specified in terms of either time scale. The time scales for an analysis whose history is divided into three steps, each 100 seconds long, are shown in [Figure 1](simagsa-c-stpgenanalstp.md#simagsa-c-stpgenanalstp__simagsa-c-gss-total-time). | | |   Figure 1. Step and total time for a simulation. |

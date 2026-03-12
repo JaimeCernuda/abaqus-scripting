@@ -1,0 +1,5 @@
+# Using substructures in Abaqus/CAE
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using substructures in Abaqus/CAE | | |  | | | |  | | --- | | Substructures are collections of elements that have been grouped together, so the internal degrees of freedom have been eliminated for the analysis. Using a substructure makes model definition easier and analysis faster when you analyze a model that contains identical pieces that appear multiple times (such as the teeth of a gear), because you can use a substructure repeatedly in a model. Substructures are connected to the rest of the model by the retained degrees of freedom at the retained nodes. Factors that determine how many and which nodes and degrees of freedom should be retained are discussed in [Generating Substructures](.._SIMACAEANLRefMap_simaanl-c-superelementdef.md). Substructure definition in your model follows two sets of steps.   --- | | In this section:   * [Creating substructures in your model database](simacae-t-advsubstroverviewcreate.md) * [Including substructures in your analysis](simacae-t-advsubstroverviewinclude.md) | | | |

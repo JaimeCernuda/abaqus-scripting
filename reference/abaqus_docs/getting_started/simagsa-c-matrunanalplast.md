@@ -1,0 +1,5 @@
+# Running the analysis with plastic hardening
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Running the analysis with plastic hardening | | |  | | | |  | | --- | | Create a job named `PlasticLugHard`. Submit the job for analysis, and monitor the solution progress. Correct any modeling errors, and investigate the source of any warning messages. | | |   Job Monitor  The summary of the analysis in the Job Monitor, shown in [Figure 1](simagsa-c-matrunanalplast.md#simagsa-c-matrunanalplast__simagsa-c-gsi-plasticlug-monitor), indicates that Abaqus/Standard found a converged solution when the full 60 kN load was applied. The hardening data added enough stiffness to the lug to prevent it from collapsing under the 60 kN load.  There are no convergence-related warnings issued during the analysis, so you can proceed directly to postprocessing the results. Figure 1. Job Monitor: connecting lug with plastic hardening. |

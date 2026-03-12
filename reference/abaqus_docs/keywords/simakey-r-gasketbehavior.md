@@ -1,0 +1,5 @@
+# *GASKET BEHAVIOR
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*GASKET BEHAVIOR | | |  | | | |  | | --- | | Begin the specification of a gasket behavior. This option is used to indicate the start of a gasket behavior definition.  This page discusses:   * [Required parameters](#simakey-r-gasketbehavior__simakey-r-gasketbehavior-s-paramsrequired1) * [There are no data lines associated with this option.](#simakey-r-gasketbehavior__simakey-r-gasketbehavior-s-nodata1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Defining the Gasket Behavior Directly Using a Gasket Behavior Model](.._SIMACAEELMRefMap_simaelm-c-gasketbehavior.md) | |   ProductsAbaqus/StandardAbaqus/CAE  TypeModel data  LevelModel  Abaqus/CAEProperty module  Required parameters NAME  Set this parameter equal to a label that will be used to refer to the behavior when it is referenced in the [GASKET SECTION](simakey-r-gasketsection.md#simakey-r-gasketsection) option. Gasket behavior names in the same input file must be unique.  There are no data lines associated with this option. |

@@ -1,0 +1,5 @@
+# Creating an assembly
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating an assembly | | |  | | | |  | | --- | | An assembly contains all the geometry included in the finite element model. Each Abaqus/CAE model contains a single assembly. The assembly is initially empty, even though you have already created a part. You will create an instance of the part in the Assembly module to include it in your model. | | |   1. In the Model Tree, expand the Assembly container and double-click Instances in the list that appears to create an instance of the part. 2. In the Create Instance dialog box, select Lug from the Parts list and click OK. The model is oriented by default so that the global 1-axis lies along the length of the lug, the global 2-axis is vertical, and the global 3-axis lies in the thickness direction. |

@@ -1,0 +1,5 @@
+# Decoding Material and Orientation Names
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Decoding Material and Orientation Names | | |  | | | |  | | --- | | Utility routines getMaterialName and getOrientationName can be called from Abaqus/Standard user subroutine UELEMDRESP to obtain the name of the material and orientation.  This page discusses:   * [Utility Routine Interface](#simasub-c-getnameutil-interface) * [Variables to Be Provided to the Utility Routine](#simasub-c-getnameutil-var-pro) * [Variables Returned from the Utility Routine](#simasub-c-getnameutil-var-ret) | | |   Products Abaqus/Standard  Utility Routine Interface ``` character*80 charName ... call getMaterialName(rName, charName) call getOrientationName(rName, charName) ... ```  Variables to Be Provided to the Utility Routine rName  Encoded name of the material or orientation that is made available in user subroutine [UELEMDRESP](simasub-c-uelemdresp.md#simasub-c-uelemdresp).  Variables Returned from the Utility Routine charName  Character string with the name of the material or orientation. |

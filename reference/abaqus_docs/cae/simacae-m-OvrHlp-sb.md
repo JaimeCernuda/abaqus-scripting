@@ -1,0 +1,5 @@
+# Producing and modifying overlay plots
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Producing and modifying overlay plots | | |  | | | |  | | --- | | This section explains how to overlay multiple plots by creating layers and plotting them in the same viewport and how to modify an overlay plot once you have created it. Each layer in an overlay plot is completely independent. You can change the output database, the plot state (or plot states), reorder the layers with respect to each other, manipulate the view for each individual layer, and change the various display options that are applied to the contents.   --- | | In this section:   * [Producing an overlay plot](simacae-t-ovrhlpproduce.md) * [Reordering the layers in an overlay plot](simacae-t-ovrhlpreposition.md) * [Manipulating the view for an overlay plot](simacae-t-ovrhlpviewmanip.md) * [Editing the layers in an overlay plot](simacae-t-ovrhlpplotoptions.md) | | | |

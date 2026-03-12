@@ -1,0 +1,5 @@
+# Shell elements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Shell elements | | |  | | | |  | | --- | | --- | | In this section:   * [About the Abaqus shell element library](simathe-c-shells.md#simathe-c-shells) * [Axisymmetric shell elements](simathe-c-axishells.md) * [Shear flexible small-strain shell elements](simathe-c-shearflexshells.md) * [Triangular facet shell elements](simathe-c-trifacetshells.md) * [Finite-strain shell element formulation](simathe-c-finitestrainshells.md) * [Small-strain shell elements in Abaqus/Explicit](simathe-c-smallstrainshells.md) * [Axisymmetric shell element allowing asymmetric loading](simathe-c-axiasymmshells.md) * [Transverse shear stiffness in composite shells and offsets from the midsurface](simathe-c-transshearshells.md) * [Rotary inertia for five degree of freedom shell elements](simathe-c-rotinertshells.md) | | | |

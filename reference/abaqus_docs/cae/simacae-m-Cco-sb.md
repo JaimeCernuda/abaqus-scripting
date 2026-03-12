@@ -1,0 +1,5 @@
+# Color coding geometry and mesh elements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Color coding geometry and mesh elements | | |  | | | |  | | --- | | This section explains how you can apply color coding to viewable geometry and mesh elements.   --- | | In this section:   * [Understanding color coding](simacae-m-CcoUnd-sb.md) * [Changing the initial color](simacae-t-ccoinitial.md) * [Changing the translucency](simacae-c-ccotranslucent.md) * [Coloring geometry and mesh elements](simacae-t-ccobyattribute.md) * [Coloring all geometry in the Visualization module](simacae-t-ccocolorattributes.md) * [Coloring nodes or elements in the Visualization module](simacae-c-ccocolornodeelem.md) * [Coloring constraints in the Visualization module](simacae-t-ccocolorconstraints.md) * [Customizing the display color of individual objects](simacae-c-ccoindividual.md) * [Displaying multiple color mappings](simacae-c-ccomultiple.md) * [Editing the colors in the Auto-Color List](simacae-t-ccoauto.md) * [Saving and restoring custom color mappings](simacae-t-ccomacro.md) | | | |

@@ -1,0 +1,5 @@
+# *ONE-STEP INVERSE
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*ONE-STEP INVERSE | | |  | | | |  | | --- | | Perform a one-step inverse analysis of a sheet metal part. This option is used to perform a one-step inverse analysis of a sheet metal part.  This page discusses:   * [Required parameters](#simakey-r-one-stepinverse__simakey-r-one-stepinverse-paramsrequired) * [There are no data lines associated with this option.](#simakey-r-one-stepinverse__simakey-r-one-stepinverse-nodata) | | |  | | --- | | See Also | | [\*STEP](simakey-r-step.md) |  |  | | --- | |  | | In Other Guides | | [One-Step Inverse Analysis](.._SIMACAEANLRefMap_simaanl-c-onestepinverse.md) | |   Products Abaqus/Standard  Type History data  LevelStep  Required parameters UNFOLD  This parameter is used to perform a one-step inverse analysis to obtain the initial shape of a sheet metal part given its final deformed configuration and a blank surface.  There are no data lines associated with this option. |

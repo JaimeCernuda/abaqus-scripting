@@ -1,0 +1,5 @@
+# Creating datum axes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating datum axes | | |  | | | |  | | --- | | This section describes the tools that you can use to create a datum axis.   --- | | In this section:   * [Creating a datum axis along a principal axis](simacae-t-dtmaxisprinc.md) * [Creating a datum axis along the intersection of two planes](simacae-t-dtmaxis2planes.md) * [Creating a datum axis along a straight edge](simacae-t-dtmaxisedge.md) * [Creating a datum axis through two points](simacae-t-dtmaxis2points.md) * [Creating a datum axis along the axis of a cylinder](simacae-t-dtmaxiscylinder.md) * [Creating a datum axis normal to a plane and passing through a point](simacae-t-dtmaxisnormal.md) * [Creating a datum axis parallel to a line and passing through a point](simacae-t-dtmaxisparallel.md) * [Creating a datum axis running along the axis of a circle defined by three points](simacae-t-dtmaxiscircle.md) * [Creating a datum axis by rotating an existing edge through a specified angle](simacae-t-dtmaxisrotate.md) | | | |

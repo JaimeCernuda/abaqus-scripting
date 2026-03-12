@@ -1,0 +1,5 @@
+# The Abaqus Python Development Environment
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Abaqus Python Development Environment | | |  | | | |  | | --- | | This section describes the Abaqus Python development environment (PDE). The Abaqus PDE provides a simple interface that you can use to develop—create, edit, test, and debug—Python scripts. The Abaqus PDE is primarily intended for use with Abaqus/CAE user interface (GUI) and kernel scripts, including plug-ins, but you can also use it to work on scripts that function independently from Abaqus/CAE.   --- | | In this section:   * [About the Abaqus Python development environment](simacmd-c-pdeover.md) * [Abaqus PDE basics](simacmd-m-PdeBasics-sb.md) * [Using the Abaqus PDE](simacmd-m-PdeUse-sb.md) | | | |

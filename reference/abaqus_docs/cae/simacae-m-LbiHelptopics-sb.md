@@ -1,0 +1,5 @@
+# Using the Load module
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Load module | | |  | | | |  | | --- | | This section provides general information on defining loads, boundary conditions, and predefined fields.  For information on other Load module topics, see the following sections:   * [What are step-dependent managers?](simacae-c-intstepmanager.md) * [Bolt loads](simacae-m-AdvBoltloads-sb.md) * [Load cases](simacae-m-AdvLoadcase-sb.md)   --- | | In this section:   * [Creating loads](simacae-t-lbihelptopicscreateload.md) * [Creating boundary conditions](simacae-t-lbihelptopicscreatebc.md) * [Creating predefined fields](simacae-t-lbihelptopicscreatefield.md) * [Editing the region to which a prescribed condition is applied](simacae-t-lbihelptopicseditreg.md) | | | |

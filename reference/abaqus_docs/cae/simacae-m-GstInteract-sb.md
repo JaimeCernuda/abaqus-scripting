@@ -1,0 +1,5 @@
+# The basics of interacting with Abaqus/CAE
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The basics of interacting with Abaqus/CAE | | |  | | | |  | | --- | | Before you can begin creating and analyzing a model or interpreting analysis results, it is helpful to become familiar with the basics of interacting with Abaqus/CAE. This chapter introduces you to the user interface.   --- | | In this section:   * [Starting and exiting Abaqus/CAE](simacae-m-GstStartexit-sb.md) * [The Abaqus/CAE main window](simacae-m-TopMainwindow-sb.md) * [What is a module?](simacae-c-topwhatismodule.md) * [What is a toolset?](simacae-c-topmenutoolset.md) * [Using the mouse with Abaqus/CAE](simacae-c-docconventmousebuttons.md) * [Getting help](simacae-m-Hlp-sb.md) | | | |

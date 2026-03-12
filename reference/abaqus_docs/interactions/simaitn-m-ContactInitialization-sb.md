@@ -1,0 +1,5 @@
+# Contact Initialization
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Contact Initialization | | |  | | | |  | | --- | | Contact initialization controls are available for general contact and contact pairs in Abaqus/Standard and Abaqus/Explicit. In Abaqus/Standard, for small-sliding contact in both contact pairs and general contact, you can define precise initial clearance or overclosure values and contact directions for contact initialization.   --- | | In this section:   * [Contact Initialization for General Contact in Abaqus/Standard](simaitn-c-genlcontinitializationstd.md) * [Contact Initialization for Contact Pairs in Abaqus/Standard](simaitn-c-adjustsurfaces.md) * [Additional Contact Initialization Options for Small-Sliding Contact in Abaqus/Standard](simaitn-c-contactclearanceoverclosure.md) * [Contact Initialization for General Contact in Abaqus/Explicit](simaitn-c-adjustgeneral.md) * [Contact Initialization for Contact Pairs in Abaqus/Explicit](simaitn-c-expadjustsurfaces.md) | | | |

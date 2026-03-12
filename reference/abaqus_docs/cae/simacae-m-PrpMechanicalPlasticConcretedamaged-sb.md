@@ -1,0 +1,5 @@
+# Defining concrete damaged plasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining concrete damaged plasticity | | |  | | | |  | | --- | | The concrete damaged plasticity model provides a general capability for modeling concrete and other quasi-brittle materials in all types of structures. This model uses concepts of isotropic damaged elasticity in combination with isotropic tensile and compressive plasticity to represent the inelastic behavior of concrete. See [Concrete Damaged Plasticity](.._SIMACAEMATRefMap_simamat-c-concretedamaged.md), for more information.   --- | | In this section:   * [Defining a concrete damaged plasticity model](simacae-t-prpmechanicalplasticconcretedamagedmodel.md) * [Defining concrete compression damage](simacae-t-prpmechanicalconcretedamagedcompdamage.md) * [Defining concrete tension damage](simacae-t-prpmechanicalconcretedamagedtensiondamage.md) | | | |

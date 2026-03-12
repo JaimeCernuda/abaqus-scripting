@@ -1,0 +1,5 @@
+# About Thermal Properties
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About Thermal Properties | | |  | | | |  | | --- | | Thermal behavior of a material can be used in heat transfer and thermal stress analyses. | | |   The following properties describe the thermal behavior of a material and can be used in heat transfer and thermal stress analyses (see [About Heat Transfer Analysis Procedures](.._SIMACAEANLRefMap_simaanl-c-heatproc.md)):  Thermal conductivity  When heat flows by conduction, the thermal conductivity must be defined ([Conductivity](simamat-c-conductivity.md)).  Specific heat  In transient heat transfer analyses as well as adiabatic stress analyses the specific heat of a material must be defined ([Specific Heat](simamat-c-specificheat.md)).  Latent heat  When a material changes phase, the change in internal energy can be significant. The amount of energy liberated or absorbed can be defined by specifying a latent heat for each phase change a material undergoes ([Latent Heat](simamat-c-latentheat.md)). |

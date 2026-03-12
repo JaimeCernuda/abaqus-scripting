@@ -1,0 +1,5 @@
+# Simulation of the shearing of a lap joint
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Simulation of the shearing of a lap joint | | |  | | | |  | | --- | | This simulation of the shearing of a lap joint illustrates the use of general contact in Abaqus/Standard. | | |   The model consists of two overlapping aluminum plates that are connected with a titanium rivet. The left end of the bottom plate is fixed, and the force is applied to the right end of the top plate to shear the joint. [Figure 1](simagsa-c-cntlapjoint.md#simagsa-c-cntlapjoint__simagsa-m-CntExalapjoint) shows the basic arrangement of the components. Because of symmetry, only half of the joint is modeled to reduce computational cost. Frictional contact is assumed. Figure 1. Lap joint analysis. |

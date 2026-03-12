@@ -1,0 +1,5 @@
+# Defining a pipe profile
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining a pipe profile | | |  | | | |  | | --- | | Define a pipe profile by providing geometric data for a hollow circle and by selecting an integration scheme for a thin-walled pipe or a thick-walled pipe. | | |  | | --- | | See Also | | [Defining profiles](simacae-c-prppropprofile.md) | | [Defining sections](simacae-c-prppropsection.md) |  |  | | --- | |  | | In Other Guides | | [Beam Cross-Section Library](.._SIMACAEELMRefMap_simaelm-c-beamcrosssectlib.md) | |   1. Display the Edit Profile dialog box, as described in [Choosing a profile type](simacae-t-prpsectionprofilescreate.md). 2. From the Integration scheme options, specify a thin-walled pipe or a thick-walled pipe. 3. In the Radius field, enter the radius of the circle from the center of the pipe to the outside edge of the pipe wall. 4. In the Thickness field, enter the thickness of the pipe wall. 5. Click OK to save the profile and to close the Edit Profile dialog box. |

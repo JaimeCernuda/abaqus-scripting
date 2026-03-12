@@ -1,0 +1,5 @@
+# Replacing the analysis step
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Replacing the analysis step | | |  | | | |  | | --- | | The step definition must change to reflect a dynamic, explicit analysis. | | |   1. In the Model Tree, expand the Steps container. Click mouse button 3 on the step named Apply load, and select Replace from the menu that appears. 2. In the Replace Step dialog box, select Dynamic, Explicit from the list of available General procedures. Click Continue. Model attributes such as boundary conditions, loads, and contact interactions are retained when replacing a step. Model attributes that cannot be converted will be deleted. In this simulation all necessary model attributes will be retained. 3. In the Basic tabbed page of the Edit Step dialog box, enter the step description `10 kN central load, suddenly applied` and set the time period of the step to `0.01` s. |

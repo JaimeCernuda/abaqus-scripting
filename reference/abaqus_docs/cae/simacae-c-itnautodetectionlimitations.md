@@ -1,0 +1,5 @@
+# Limitations of the contact detection tool
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Limitations of the contact detection tool | | |  | | | |  | | --- | | Although helpful for simplifying the contact definition process, several limitations exist for the contact detection tool. | | |   Contact detection cannot create contact pairs involving the following features:  * Two-dimensional models * Axisymmetric models * Beams and trusses * Face-to-edge contact * Edge-to-edge contact * Contact between orphan mesh elements and analytical rigid surfaces * Hybrid models containing both orphan mesh and unmeshed geometry  The minimum allowable separation tolerance is 1 × 10−5. The maximum allowable separation tolerance is 1 × 105. Abaqus/CAE cannot accurately calculate separations outside of this range. If your model requires the use of a separation tolerance that does not meet these requirements, you should scale the dimensions of the entire model so that they fall within the functional range. |

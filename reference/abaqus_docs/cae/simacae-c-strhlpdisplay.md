@@ -1,0 +1,5 @@
+# Displaying and hiding streams
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying and hiding streams | | |  | | | |  | | --- | | You can display or hide streams individually in the current viewport by toggling their Show check boxes in the Stream Manager, and you can display or hide all of the streams in your session by clicking Set All On or Set All Off. The manager displays all streams defined in your session and indicates whether each one is currently displayed. In addition, you can display or hide the upstream or downstream component of each stream by toggling its Upstream or Downstream check boxes. | | |   The Stream Manager also displays the number of points on the rake for each stream in your session. You can edit this number for a stream definition directly from the manager, except for streams defined on circular paths or streams defined using path definitions consisting of three or more points or nodes. |

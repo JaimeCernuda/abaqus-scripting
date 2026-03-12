@@ -1,0 +1,5 @@
+# Controlling the destination and appearance of printed images
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Controlling the destination and appearance of printed images | | |  | | | |  | | --- | | This section describes the options available for controlling the destination and appearance of printed images.   --- | | In this section:   * [Printing to a printer or to a file](simacae-c-priprintbtn.md) * [Selecting which part of the image to print](simacae-t-priselobjectsmenu.md) * [Choosing the color of your image](simacae-t-pricolorbtn.md) * [Choosing the destination of your image](simacae-t-pridestinationbtn.md) * [Customizing the image sent to a Windows printer](simacae-t-pricustomwin.md) * [Customizing the image sent to a PostScript printer or file](simacae-t-pricustomps.md) * [Customizing the image saved in an Encapsulated PostScript file](simacae-t-pricustomeps.md) * [Customizing the image saved in TIFF, PNG, or SVG files](simacae-t-pricustomtiffgif.md) | | | |

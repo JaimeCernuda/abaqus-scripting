@@ -1,0 +1,5 @@
+# Constraints
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Constraints | | |  | | | |  | | --- | | This section defines the basic tests that are used to provide evidence that the implementation of the constraint options in Abaqus produces the expected results.   --- | | In this section:   * [Boundary conditions](simaver-c-boundary.md) * [Multi-point constraints](simaver-c-mpc.md) * [Surface-based tie constraint](simaver-c-tie.md) * [Rigid bodies](simaver-m-RigidBodyVerification-sb.md) * [Coupling constraints](simaver-c-coupling.md) * [Kinematic coupling constraint](simaver-c-kinematiccoupling.md) * [Shell-to-solid coupling constraints](simaver-c-shelltosolidcoupling.md) * [Coupling of acoustic and structural elements](simaver-c-acousticcont.md) * [Mesh-independent spot welds](simaver-c-meshindepspotweld.md) * [Embedded element technique](simaver-c-embeddedelement.md) * [Miscellaneous](simaver-m-ConstraintsMisc-sb.md) | | | |

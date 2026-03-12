@@ -1,0 +1,5 @@
+# Defining the velocity dependence of permeability
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining the velocity dependence of permeability | | |  | | | |  | | --- | | Permeability is defined, in general, by Forchheimer's law, which accounts for changes in permeability as a function of fluid flow velocity. The Suboption Editor allows you define the velocity coefficient as a function of the void ratio of the material. For more information, see [Permeability](.._SIMACAEMATRefMap_simamat-c-permeabil.md). | | |   1. Define permeability, as described in [Defining permeability in an Abaqus/Standard analysis](simacae-t-prpotherporefluidpermeability.md).” 2. From the Suboptions menu in the Edit Material dialog box, select Velocity Dependence. A Suboption Editor appears. 3. Enter the following data in the Data table: Beta  Velocity coefficient, β⁢(e).  Void ratio  Void ratio, e.  For detailed information on how to enter data, see [Entering tabular data](simacae-c-intdialogspreadsheet.md). 4. Click OK to return to the Edit Material dialog box. |

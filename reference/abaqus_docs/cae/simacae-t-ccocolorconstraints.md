@@ -1,0 +1,5 @@
+# Coloring constraints in the Visualization module
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Coloring constraints in the Visualization module | | |  | | | |  | | --- | | You can apply color coding to constraints displayed in the current viewport when you are working in the Visualization module and when an output database is selected. To color code all geometry in the Visualization module, see [Coloring all geometry in the Visualization module](simacae-t-ccocolorattributes.md). | | |   1. Click the     tool in the    Color Code toolbar. Abaqus/CAE    displays the Color Code dialog box, which displays the    default color mappings for the current module. 2. From the Color Code list, select    Constraints. 3. In the Constraint Types list, edit any of the    assigned colors. 4. Click Apply. Abaqus/CAE    color codes the current viewport according to the selections in the    Color Code dialog box. |

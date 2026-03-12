@@ -1,0 +1,5 @@
+# About user subroutine verification tests
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About user subroutine verification tests | | |  | | | |  | | --- | | This section contains test cases that provide evidence that the implementation of user subroutines produces results that can be compared to independently calculated solutions or experimental results. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [About User Subroutines and Utilities](.._SIMACAESUBRefMap_simasub-c-subroutineover.md) | |   User subroutines are provided to increase the functionality of several Abaqus capabilities for which the usual data input methods alone may be too restrictive.  Information on writing user subroutines and detailed descriptions of each subroutine appear online in [Abaqus User Subroutines Guide](.._SIMACAESUBRefMap_simasub-c-ov.md#simasub-c-ov). A listing and explanations of associated utility routines also appear in that guide. |

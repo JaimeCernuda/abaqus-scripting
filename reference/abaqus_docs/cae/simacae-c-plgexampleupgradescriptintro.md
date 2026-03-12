@@ -1,0 +1,5 @@
+# Introduction
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Introduction | | |  | | | |  | | --- | | The upgrade script plug-in allows you to upgrade a script from a previous release of Abaqus to the current release of Abaqus. The plug-in allows you to do the following: | | |   * Upgrade across several releases of   Abaqus. * Choose both the release of the original script and the release of the   resulting upgraded script. * Upgrade a single script or all the scripts in a specified directory. * Preview the changes to your script that resulted from the upgrade   process, and, if the changes are acceptable, proceed with the upgrade.   For more information, see [Upgrade script commands](.._SIMACAEKERRefMap_simaker-c-utlupgradescriptpyc.md#simaker-c-utlupgradescriptpyc). You can access the plug-in from the Plug-ins menu in any module. |

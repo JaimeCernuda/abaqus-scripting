@@ -1,0 +1,5 @@
+# Controlling translucency for substructure parts
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Controlling translucency for substructure parts | | |  | | | |  | | --- | | You can specify that the substructure parts and part instances in your model be displayed with or without translucency. If you want to control the level of translucency for part and assembly display, see [Changing the translucency](simacae-c-ccotranslucent.md). | | |  | | --- | | See Also | | [Customizing geometry and mesh display](simacae-m-Dsp-sb.md) | |   1. Locate the substructure translucency control option. From the main menu bar, select ViewPart Display Options or ViewAssembly Display Options. In the dialog box that appears, click the General tab. 2. From the middle of the dialog box, toggle on Always show substructure with translucency from the set of mesh-related options. 3. Click OK to implement your changes and to close the dialog box. Your changes are saved for the duration of the session. |

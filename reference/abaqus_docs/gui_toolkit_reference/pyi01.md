@@ -1,0 +1,5 @@
+# Summary of changes between Abaqus 6.14 and 2016
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Summary of changes between Abaqus 6.14 and 2016 | | |  | | |  |   To upgrade your scripts to the latest version, select Plug-ins->Abaqus->Upgrade Scripts in Abaqus/CAE. Listed below are the changes to the toolkit in this release. They are color-coded as follows:  |  |  | | --- | --- | | (**Blue bold text**) | New method or argument | | (*Red italic text*) | Removed method or argument | | (*Green italic text*) | Changed argument; for example, the argument type has changed or the possible values of the SymbolicConstant have changed. |  Refer to the Abaqus 6.14 GUI Toolkit Reference manual for the description of methods that have been removed in Abaqus 2016.  **AFXMainWindow**  **AFXMainWindow.ID\_TOGGLE\_FULL\_SCREEN: Toggle full screen.** |

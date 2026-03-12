@@ -1,0 +1,5 @@
+# Object-oriented programming and the Abaqus Scripting Interface
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Object-oriented programming and the Abaqus Scripting Interface | | |  | | | |  | | --- | | You should now be familiar with some of the concepts behind object-oriented programming, such as objects, constructors, methods, and members. This section describes how object-oriented programming relates to the Abaqus Scripting Interface and summarizes some of the terminology.   --- | | In this section:   * [The Abaqus Scripting Interface and methods](simacmd-c-intaclmethods.md) * [The Abaqus Scripting Interface and members](simacmd-c-intaclmembers.md) * [Object-oriented programming and the Abaqus Scripting Interface—a summary](simacmd-c-intpythonandaclsummary.md) | | | |

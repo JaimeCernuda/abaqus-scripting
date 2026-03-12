@@ -1,0 +1,5 @@
+# The Edit Mesh toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Edit Mesh toolset | | |  | | | |  | | --- | | You can use the Edit Mesh toolset in the Mesh module to improve the mesh quality. You can modify an orphan mesh, or you can modify an Abaqus native mesh.   --- | | In this section:   * [What can I do with the Edit Mesh toolset?](simacae-m-EdtConcMeshedit-sb.md) * [What is the difference between editing an orphan mesh, a meshed part, and a meshed part instance in the assembly?](simacae-c-edtconceditdifference.md) * [Meshing strategies and mesh editing techniques](simacae-m-EdtConcStrategy-sb.md) * [Using the mesh editing tools](simacae-c-edthelpoverview.md) * [Editing nodes](simacae-m-EdtHelpNodes-sb.md) * [Editing elements](simacae-m-EdtHelpElements-sb.md) * [Editing the entire mesh](simacae-m-EdtHelpMesh-sb.md) * [Editing and refining an orphan mesh](simacae-t-edthelpmesheditremesh.md) * [Undoing or redoing a change in the Edit Mesh toolset](simacae-m-EdtHelpUndo-sb.md) | | | |

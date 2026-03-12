@@ -1,0 +1,5 @@
+# The Model object model
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Model object model | | |  | | | |  | | --- | | The Model object contains many objects. [Figure 1](simacmd-c-intpythonaclobjectmodel.md#simacmd-c-intpythonaclobjectmodel__simacmd-c-model-part) and [Figure 2](simacmd-c-intpythonaclobjectmodel.md#simacmd-c-intpythonaclobjectmodel__simacmd-c-model-assembly) show the most commonly used objects that are contained in the Part and RootAssembly. | | |   Figure 1. The Part object model.   Figure 2. The RootAssembly object model.    The Job object is separate from the Model object. The object model for the Job object is straightforward; the Job object owns no other objects. The Job object refers to a Model object but is not owned by the Model object. |

@@ -1,0 +1,5 @@
+# Translating Abaqus Output to Another Format
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Translating Abaqus Output to Another Format | | |  | | | |  | | --- | | This section describes using commands to convert content from Abaqus into formats that can be accessed in other solvers.   --- | | In this section:   * [Translating Abaqus Files to Nastran Bulk Data Files](simaexc-m-TranslatingAbaqusToNastran-sb.md) * [Translating Abaqus Output Database Files to Nastran Output2 Results Files](simaexc-c-odbtonasproc.md) * [Translating an Abaqus Substructure to an MSC.Adams Flexible Body](simaexc-c-abaadmproc.md) * [Translating an Abaqus Substructure to a Simpack Flexible Body](simaexc-c-simpackproc.md) * [Translating an Abaqus Substructure to an EXCITE Flexible Body](simaexc-c-exciteproc.md) | | | |

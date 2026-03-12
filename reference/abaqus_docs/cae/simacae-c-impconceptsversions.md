@@ -1,0 +1,5 @@
+# What can I do with the Elysium plug-ins?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What can I do with the Elysium plug-ins? | | |  | | | |  | | --- | | You can use a Neutral File-based translator from Elysium, Inc., to import parts into Abaqus/CAE that were created by CAD software that creates Parasolid-format files, such as SOLIDWORKS, NX, Solid Edge, FEMAP, and MSC.Patran. | | |   You can also use the Elysium translator to import the entire assembly or only selected part instances from the assembly.  In addition, you can import a part, the assembly, or selected part instances from the assembly into Abaqus/CAE using the Elysium Neutral File format. Abaqus provides a translator plug-in from Elysium that will generate a geometry file using the Elysium Neutral File format. The plug-in is available for the following products:   * CATIA V5 * NX * Pro/ENGINEER   For information about the versions of the CAD software supported by the Elysium translators, see the Dassault Systèmes Knowledge Base at [http://support.3ds.com/knowledge-base/](http://support.3ds.com/knowledge-base/). |

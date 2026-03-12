@@ -1,0 +1,5 @@
+# Axisymmetric mount analysis
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Axisymmetric mount analysis | | |  | | | |  | | --- | | You have been asked to find the axial stiffness of the rubber mount shown below and to identify any areas of high maximum principal stress that might limit the fatigue life of the mount. | | |   The mount is bonded at both ends to steel plates. It will experience axial loads up to 5.5 kN distributed uniformly across the plates. The cross-section geometry and dimensions are given in [Figure 1](simagsa-c-mataxisymexa.md#simagsa-c-mataxisymexa__simagsa-m-mount). Figure 1. Axisymmetric mount.     You can use axisymmetric elements for this simulation since both the geometry of the structure and the loading are axisymmetric. Therefore, you only need to model a plane through the component: each element represents a complete 360° ring. You will examine the static response of the mount; therefore, you will use Abaqus/Standard for your analysis. |

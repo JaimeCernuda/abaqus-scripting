@@ -1,0 +1,5 @@
+# DetailPlotOptions object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DetailPlotOptions object | | |  | | | |  | | --- | | The DetailPlotOptions object stores values and attributes associated with a [Viewport](simaker-c-viewportpyc.md) object. The DetailPlotOptions object has no constructor command. Abaqus creates the detailPlotOptions member whenever a [Viewport](simaker-c-viewportpyc.md) is created.  This page discusses:   * [Access](#simaker-c-detailplotoptionspyc__simaker-c-detailplotoptionspyc-s-pyaccess1) * [Members](#simaker-c-detailplotoptionspyc-t-pymembersect1) | | |   Access  ``` session.viewports[name].detailPlotOptions ```  Members The DetailPlotOptions object has the following member:  plyStackPlotOptions  A [PlyStackPlotOptions](simaker-c-plystackplotoptionspyc.md) object. |

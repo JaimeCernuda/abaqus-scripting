@@ -1,0 +1,5 @@
+# Entering and exiting the Optimization module
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Entering and exiting the Optimization module | | |  | | | |  | | --- | | You can enter the Optimization module at any time during an Abaqus/CAE session by clicking Optimization in the Module list located in the context bar. The Task, Design Response, Objective Function, Constraint, Geometric Restriction, Stop Condition, and Tools menus appear on the main menu bar. If the current viewport contains something other than the assembly, the contents of the viewport disappear when you start the Step module. | | |   To exit the Optimization module, select any other module from the Module list. You need not save your optimization definition before exiting the module; it will be saved automatically when you save the model database by selecting FileSave or FileSave As from the main menu bar. |

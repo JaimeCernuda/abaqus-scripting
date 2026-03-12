@@ -1,0 +1,5 @@
+# Heat transfer and thermal-stress analyses
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Heat transfer and thermal-stress analyses | | |  | | | |  | | --- | | --- | | In this section:   * [Thermal-stress analysis of a disc brake](simaexa-c-discbrake.md) * [A sequentially coupled thermomechanical analysis of a disc brake with an Eulerian approach](simaexa-c-discbrakesst.md) * [Exhaust manifold assemblage](simaexa-c-manifold.md) * [Coolant manifold cover gasketed joint](simaexa-c-manifoldgasket.md) * [Conductive, convective, and radiative heat transfer in an exhaust manifold](simaexa-c-heattransmanifold.md) * [Thermal-stress analysis of a reactor pressure vessel bolted closure](simaexa-c-reactor.md) * [Coupled thermomechanical analysis of viscoelastic dampers](simaexa-c-viscoelasticdamper.md) | | | |

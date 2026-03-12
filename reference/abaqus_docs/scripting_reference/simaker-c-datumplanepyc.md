@@ -1,0 +1,5 @@
+# DatumPlane object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DatumPlane object | | |  | | | |  | | --- | | The DatumPlane object has no direct constructor; it is created when a [Feature](simaker-c-featurepyc.md) object is created. For example, the DatumPlaneByPrincipalPlane method creates a Feature object that creates a DatumPlane object.  The DatumPlane object is derived from the [Datum](simaker-c-datumpyc.md) object.  This page discusses:   * [Access](#simaker-c-datumplanepyc__simaker-c-datumplanepyc-s-pyaccess1) * [Members](#simaker-c-datumplanepyc-t-pymembersect1) | | |   Access  ``` import part mdb.models[name].parts[name].datums[i] import assembly mdb.models[name].rootAssembly.allInstances[name].datums[i] mdb.models[name].rootAssembly.datums[i] mdb.models[name].rootAssembly.instances[name].datums[i] ```  Members The DatumPlane object has the following members:  pointOn  A tuple of Floats specifying the X-, Y-, and Z-coordinates of a point located on the datum.  normal  A tuple of Floats specifying a sequence of three Floats specifying the normal. |

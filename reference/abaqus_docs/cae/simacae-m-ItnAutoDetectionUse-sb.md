@@ -1,0 +1,5 @@
+# Tips for using the contact detection tool
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Tips for using the contact detection tool | | |  | | | |  | | --- | | The contact detection tool is available for use in any three-dimensional model requiring the creation of contact interactions and tie constraints. It quickly and thoroughly identifies and creates interactions and ties based on minimal specifications.  The tool greatly simplifies the contact definition process in models for which a general contact definition is not applicable. Some basic guidelines ensure the most effective and efficient use of the tool.   --- | | In this section:   * [Choosing a separation tolerance and extension angle](simacae-c-itnautodetectiontolerance.md) * [Reviewing contact pair candidates](simacae-c-itnautodetectionreview.md) * [Saving the search parameters](simacae-c-itnautodetectionsavecurrent.md) * [Features that may cause difficulties for the contact detection tool](simacae-c-itnautodetectionmodels.md) * [Limitations of the contact detection tool](simacae-c-itnautodetectionlimitations.md) | | | |

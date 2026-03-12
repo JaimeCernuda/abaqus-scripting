@@ -1,0 +1,5 @@
+# Moving viewports
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Moving viewports | | |  | | | |  | | --- | | You can move a selected viewport to any location on the canvas. This may be necessary to expose hidden viewports or simply to reduce clutter in the drawing area. To move a viewport, click anywhere on the viewport title bar and then drag it to the desired position. | | |  | | --- | | See Also | | [Selecting viewports](simacae-t-cnvselectview.md) | | [Managing viewports on the canvas](simacae-m-Cnv-sb.md) | |   1. Place the cursor anywhere on the viewport title bar. 2. Click mouse button 1, and drag the cursor to the new location. The cursor changes to a four-headed arrow . An outline of the viewport indicates its new position as you drag. 3. Release mouse button 1. The viewport moves to the new location, and it becomes the current viewport (if it was not previously). |

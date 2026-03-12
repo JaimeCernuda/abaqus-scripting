@@ -1,0 +1,5 @@
+# Substructuring
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Substructuring | | |  | | | |  | | --- | | --- | | In this section:   * [Substructure rotation, mirroring, transformation, and constraints](simaver-c-superrotation.md) * [Substructure recovery with The nodal Transformation](simaver-c-superrecovery.md) * [Degenerated elements within a substructure](simaver-c-superdegenelem.md) * [Substructure load case with centrifugal loads](simaver-c-centloadsloadcase.md) * [Substructure load case with nodal pressure loads](simaver-c-supernploadcases.md) * [Thermal-stress analysis with substructures](simaver-c-thermalsuper.md) * [Substructure preload history](simaver-c-superpreloadhist.md) * [Substructure removal](simaver-c-superremoval.md) * [Substructure damping](simaver-c-superdamping.md) * [Substructures with rebar](simaver-c-superrebar.md) * [Frequency extraction for substructures](simaver-c-superfrequency.md) * [Substructures with large rotations](simaver-c-substrlargerot.md) * [Coupled structural-acoustic analysis with substructures](simaver-c-substracousticstruct.md) | | | |

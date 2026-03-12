@@ -1,0 +1,5 @@
+# FXDrawable
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | FXDrawable | | |  | | |  |   Drawable is an abstract base class for any surface that can be drawn upon, such as a FXWindow, or FXImage.     getHeight  getHeight()  Height of drawable.  getVisual  getVisual()  Get the visual.  getWidth  getWidth()  Width of drawable.  resize  resize(w, h)  Resize drawable to the specified width and height.  Reimplemented in FXBitmap, FXIcon, FXIconList, FXImage, FXMDIChild, FXRootWindow, FXText, FXTopWindow, and FXWindow.   |  |  |  |  | | --- | --- | --- | --- | | **Argument** | **Type** | **Default** | **Description** | | w | Int |  |  | | h | Int |  |  | |

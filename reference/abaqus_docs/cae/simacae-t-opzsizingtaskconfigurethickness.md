@@ -1,0 +1,5 @@
+# Configuring the thickness settings
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Configuring the thickness settings | | |  | | | |  | | --- | | You can configure a sizing optimization task. | | |   1. In the optimization task editor, click the    Thickness tab. 2. Select the Thickness update strategy. This setting controls the rate at which the    Optimization module    updates the shell thickness of design elements during the optimization using    the method of moving asymptotes. In most cases you should accept the default    setting (Normal). However, if the design responses are    very sensitive and you have problems fulfilling the constraints, you may need a    more conservative rate that requires more optimization iterations. Selecting an    aggressive rate may lead to unstable optimization or prevent the optimization    from converging on a solution. 3. Enter the Maximum change per design cycle. This setting controls the limit on the change in shell element    thickness during each design cycle. |

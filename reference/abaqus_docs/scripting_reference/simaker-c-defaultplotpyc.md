@@ -1,0 +1,5 @@
+# DefaultPlot object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DefaultPlot object | | |  | | | |  | | --- | | The DefaultPlot object is used to hold on default plot attributes. The DefaultPlot object attributes are used whenever an [XYPlot](simaker-c-xyplotpyc.md) object is created. A DefaultPlot object is automatically created when opening a session.  This page discusses:   * [Access](#simaker-c-defaultplotpyc__simaker-c-defaultplotpyc-s-pyaccess1) * [Members](#simaker-c-defaultplotpyc-t-pymembersect1) | | |   Access  ``` import visualization session.defaultPlot ```  Members The DefaultPlot object can have the following members:  area  An [Area](simaker-c-areapyc.md) object specifying an [Area](simaker-c-areapyc.md) used to hold on to the default display properties for the plot area.  title  A [Title](simaker-c-titlepyc.md) object specifying a [Title](simaker-c-titlepyc.md) object used to hold on to the default properties of the XY-Plot title. |

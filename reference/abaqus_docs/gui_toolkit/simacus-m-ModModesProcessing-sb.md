@@ -1,0 +1,5 @@
+# Mode processing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Mode processing | | |  | | | |  | | --- | | Modes are typically activated by a button in the GUI. Once a mode is activated, it is responsible for gathering user input, processing the input, sending a command, and performing any error handling associated with the mode or the commands it sends. This section describes how modes are processed.   --- | | In this section:   * [The mode processing sequence](simacus-c-modmodesprocessingsequence.md) * [Activating a mode](simacus-c-modmodesprocessingactivating.md) * [Step and dialog box processing](simacus-c-modmodesprocessingstep.md) * [Command processing](simacus-c-modmodesprocessingcommand.md) * [Work in progress](simacus-c-modmodesprocessingwip.md) * [Command error handling](simacus-c-modmodesprocessingerror.md) | | | |

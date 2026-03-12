@@ -1,0 +1,5 @@
+# Modifying and manipulating features
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Modifying and manipulating features | | |  | | | |  | | --- | | This section describes how to use the Feature Manipulation toolset.   --- | | In this section:   * [Editing a feature](simacae-t-ftsfeatureeditbtn.md) * [Renaming a feature](simacae-t-ftsfeaturerenamebtn.md) * [Suppressing features](simacae-t-ftsfeaturesuppressbtn.md) * [Resuming suppressed features](simacae-t-ftsfeatureresumebtn.md) * [Deleting features](simacae-t-ftsfeaturedeletebtn.md) * [Regenerating a part or assembly](simacae-t-ftsregenbtn.md) * [Tuning regeneration performance](simacae-t-ftsperformance.md) * [Using the Model Tree to obtain feature information](simacae-t-ftsinfobtn.md) | | | |

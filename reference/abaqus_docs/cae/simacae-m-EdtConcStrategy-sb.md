@@ -1,0 +1,5 @@
+# Meshing strategies and mesh editing techniques
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Meshing strategies and mesh editing techniques | | |  | | | |  | | --- | | This section describes strategies for improving your mesh using the Edit Mesh toolset and techniques that you can use to create the desired mesh.   --- | | In this section:   * [A strategy for improving the mesh](simacae-c-edtconcstrategystrategy.md) * [Using offset meshes in Abaqus/CAE](simacae-c-edtconcstrategyoffsetshell.md) * [Reducing element distortion and collapse during mesh offsetting](simacae-c-edtconcstrategycurvature.md) * [Allowing for branching in offset solid meshes](simacae-c-edtconcstrategybranch.md) * [Creating a mid-plane shell mesh from a thin solid model](simacae-c-edtconcstrategymidplane.md) * [Using a combination of tools to mesh an imported solid part with tetrahedral elements](simacae-t-edtconcstrategycombination.md) | | | |

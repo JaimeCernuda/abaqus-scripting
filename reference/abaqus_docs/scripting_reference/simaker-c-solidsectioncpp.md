@@ -1,0 +1,5 @@
+# SolidSection object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | SolidSection object | | |  | | | |  | | --- | | The SolidSection object defines the properties of a solid section. The SolidSection object has no explicit constructor, no members, and no methods. The SolidSection object is an abstract base type.  The SolidSection object is derived from the [Section](simaker-c-sectioncpp.md) object.  This page discusses:   * [Access](#simaker-c-solidsectioncpp__simaker-c-solidsectioncpp-s-cppaccess1) * [Members](#simaker-c-solidsectioncpp-t-pymembersect1) | | |   Access  ``` sectionApi.sections()[name] ```  Members The SolidSection object has the following member:  Prototype  ``` odb_String name() const; ```  name  An odb\_String specifying the repository key. |

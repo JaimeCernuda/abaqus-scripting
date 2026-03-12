@@ -1,0 +1,5 @@
+# Registering modules
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Registering modules | | |  | | | |  | | --- | | Registering modules puts the module names into the Module combo box in the context bar. The order in which the modules are registered is the order in which the modules will appear in the Module combo box in the context bar. | | |   To register a module, you call the registerModule method. The registerModule method takes the following arguments:  displayedName  A string that the application will display in the Module combo box in the context bar.  moduleImportName  A string that specifies the name of the module to be imported. It is your responsibility to ensure that this name is the same as your GUI module file name (without the .py extension). For more information, see [Instantiating the GUI module](simacus-c-appmoduleinstantiating.md).  kernelInitializationCommand  A string that specifies the name of the Python command sent to the kernel when the module is loaded. |

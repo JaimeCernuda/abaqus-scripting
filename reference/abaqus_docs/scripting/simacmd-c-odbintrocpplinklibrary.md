@@ -1,0 +1,5 @@
+# Link library location
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Link library location | | |  | | | |  | | --- | | The libraries necessary to link applications that access the C++ interface are located in the following directories: | | |   Linux  abaqus\_dir/code/lib  Windows  abaqus\_dir\code\lib  where abaqus\_dir is the name of the directory in which Abaqus is installed. To determine the location of abaqus\_dir at your site, type `abaqus whereami` at an operating system prompt.  During linking, the ABQodb library and several other libraries shipped with the Abaqus release are used to resolve all the functions available in the interface to the output database. The command used by Abaqus to link runtime libraries (for example, for user subroutines) is available through the Abaqus environment variable link\_sl. Additional information about linking with the Abaqus libraries, including the names of all libraries which must be specified as part of the link command, may be obtained by running the abaqus make utility in verbose mode with a verbosity level of 3. |

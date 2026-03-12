@@ -1,0 +1,5 @@
+# An overview of the MCF plug-in
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | An overview of the MCF plug-in | | |  | | | |  | | --- | | The modal frequency response, such as the sound pressure or displacement, can be expressed as P⁢(x¯;Ω)=∑α=1Npα⁢(x¯;Ω)=∑α=1Nϕα⁢(x¯)⁢qα⁢(Ω). | | |   The first plug-in uses a script to recover the fluid-structure coupled MCF (ϕα⁢m⁢qα for each mode α at a response point m for a range of frequencies) based on the mode shapes, ϕα, (from the frequency step) and the modal amplitudes, qα, (from the steady-state dynamic step with modal output requested) in the output database. The plug-in sums these partial pressures and compares them against the Abaqus total. In addition, the script creates a ranking criterion based on a sensitivity analysis.  The second plug-in uses a script that displays polar or vector plots or bar graphs that allow you to identify the most significant modes at each excitation frequency. |

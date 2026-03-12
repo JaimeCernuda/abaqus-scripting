@@ -1,0 +1,5 @@
+# Circuit board drop test analysis
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Circuit board drop test analysis | | |  | | | |  | | --- | | In this example you will investigate the behavior of a circuit board in protective crushable foam packaging dropped at an angle onto a rigid surface. | | |   Your goal is to assess whether the foam packaging is adequate to prevent circuit board damage when the board is dropped from a height of 1 meter. You will use the general contact capability in Abaqus/Explicit to model the interactions between the different components.  [Figure 1](simagsa-c-cntdroptest.md#simagsa-c-cntdroptest__simagsa-m-gxi-dimen-milmat) shows the dimensions of the circuit board and foam packaging in millimeters and the material properties. Figure 1. Dimensions in millimeters and material properties. |

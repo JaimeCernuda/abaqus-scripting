@@ -1,0 +1,5 @@
+# Adding descriptions to your Abaqus/CAE model
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Adding descriptions to your Abaqus/CAE model | | |  | | | |  | | --- | | In Abaqus/CAE you can enter descriptions for the model and for the materials in your model in the Edit Model Attributes dialog box and the Edit Material dialog box, respectively. When you submit the job for analysis, Abaqus/CAE generates an input file and writes these descriptions to the input file using comment lines. The comment lines for the model description immediately precede the header of the input file, and the comment lines for the material descriptions immediately precede the material definitions. | | |  | | --- | | See Also | | [Specifying model attributes](simacae-t-dbseditmodel.md) | | [Creating or editing a material](simacae-t-prpmaterialcreate.md) | |   For related information on using descriptions, see [Importing descriptions](simacae-c-impinputfiles.md#simacae-impinpdesc). |

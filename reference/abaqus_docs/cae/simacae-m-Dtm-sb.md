@@ -1,0 +1,5 @@
+# The Datum toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Datum toolset | | |  | | | |  | | --- | | A datum is a construction aid that helps you progress through the modeling process when the model itself does not contain the desired geometry. You use the Datum toolset to create these construction aids. This section explains how you use the Datum toolset to create and position datum points, axes, planes, and coordinate systems.   --- | | In this section:   * [Understanding the role of datum geometry](simacae-c-dtmintro.md) * [Using the Datum toolset](simacae-c-dtmstart.md) * [Why are datum coordinate systems so important?](simacae-c-dtmconccsys.md) * [Understanding a datum as a feature](simacae-c-dtmconcepts.md) * [Datum creation techniques](simacae-m-DtmOverview-sb.md) * [Creating datum points](simacae-m-DtmPoint-sb.md) * [Creating datum axes](simacae-m-DtmAxis-sb.md) * [Creating datum planes](simacae-m-DtmPlane-sb.md) * [Creating datum coordinate systems](simacae-m-DtmCsys-sb.md) | | | |

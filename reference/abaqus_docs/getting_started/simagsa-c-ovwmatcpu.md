@@ -1,0 +1,5 @@
+# How the material affects the stable time increment and CPU time
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | How the material affects the stable time increment and CPU time | | |  | | | |  | | --- | | The same wave propagation analysis performed on different materials would take different amounts of CPU time, depending on the wave speed of the material. For example, if we were to change the material from steel to aluminum, the wave speed would change from 5.15 × 103 m/s to cd=Eρ=70×109    Pa2700    kg/m3=5.09×103    m/s. The change from aluminum to steel has minimal effect on the stable time increment, because the stiffness and the density differ by nearly the same amount. In the case of lead the difference is more substantial, as the wave speed decreases to cd=Eρ=14×109⁢   Pa11240⁢   kg/m3=1.12×103⁢   m/s, which is approximately one-fifth the wave speed of steel. The stable time increment for the lead bar would be five times the stable time increment of our steel bar. | | | |

@@ -1,0 +1,5 @@
+# Partitioning cells
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Partitioning cells | | |  | | | |  | | --- | | This section describes the partition tools that you use to partition a cell.   --- | | In this section:   * [Using the cutting plane method to partition cells](simacae-t-parsptcellplanebtn.md) * [Using the datum plane method to partition cells](simacae-t-parsptcelldatumbtn.md) * [Using the extended face method to partition cells](simacae-t-parsptcellextendbtn.md) * [Using the extrude/sweep method to partition cells](simacae-t-parsptcellsweepbtn.md) * [Using the N-sided patch method to partition a cell](simacae-t-parsptcellpatchbtn.md) * [Using the sketch planar partition method to partition a cell](simacae-t-parsptcellsketchbtn.md) | | | |

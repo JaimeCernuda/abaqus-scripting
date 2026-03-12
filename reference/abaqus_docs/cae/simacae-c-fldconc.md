@@ -1,0 +1,5 @@
+# Using the Analytical Field toolset
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Analytical Field toolset | | |  | | | |  | | --- | | The Analytical Field toolset allows you to create and manage analytical fields. Analytical fields defined using mathematical expressions are called expression fields. Analytical fields defined using an external data source, such as point cloud data, are called mapped fields. Analytical fields indicate points in space using coordinates of the global coordinate system or of a local coordinate system.  Select ToolsAnalytical FieldCreate from the main menu bar in the Property module, Interaction module, or Load module to create a new analytical field. Select Edit from the same menu to change an existing analytical field. | | | |

@@ -1,0 +1,5 @@
+# Defaults objects
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defaults objects | | |  | | | |  | | --- | | A defaults object can be used to restore the values of the keywords in a command to their default values when the user presses the Defaults button in the dialog box. | | |   You can register a defaults object with a command as follows:  ``` self.registerDefaultsObject(cmd,      'session.defaultGraphicsOptions') ```  In addition, the AFXGuiCommand class has a  setKeywordValuesToDefaults method that you can use to initialize the state of all keywords in a command. In most cases you use the  setKeywordValuesToDefaults method to initialize the state of all keywords in the getFirstDialog method of the mode. As a result, the application will initialize the value of the keywords in a command each time the dialog box is posted.  If no defaults object is specified, the command uses the default values specified in the keyword's constructor when the user presses the  Defaults button in the dialog box. |

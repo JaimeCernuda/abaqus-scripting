@@ -1,0 +1,5 @@
+# Defining loads and boundary conditions
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining loads and boundary conditions | | |  | | | |  | | --- | | A total load of 10 kN is applied in the negative y-direction to the ends of the truss. | | |   Recall there is a constraint equation connecting the y-displacement of sets `Tip-a` and `Tip-b`, where the degree of freedom for set `Tip-a` is eliminated from the system equations. Thus, apply the load as a concentrated force of magnitude `–10000` to set `Tip-b`. Name the load `Tip load`. Because of the constraint, the load will be carried equally by both trusses.  The crane is attached firmly to the parent structure. Create an encastre boundary condition named `Fixed end`, and apply it to set `Attach`. |

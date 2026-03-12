@@ -1,0 +1,5 @@
+# Using the extended finite element method to model fracture mechanics
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the extended finite element method to model fracture mechanics | | |  | | | |  | | --- | | You can use the extended finite element method (XFEM) to study the initiation and propagation of a crack along an arbitrary, solution-dependent path without needing to remesh your model. XFEM is available for three-dimensional solid and two-dimensional planar models; three-dimensional shell models are not supported.   --- | | In this section:   * [The extended finite element method (XFEM)](simacae-c-engconcxfemoverview.md) * [Choosing the type of XFEM analysis](simacae-c-engconcxfemtype.md) * [Viewing an XFEM crack](simacae-c-engconcxfemviewing.md) * [Creating an XFEM crack](simacae-t-enghelpxfem.md) * [Deactivating and activating an XFEM crack growth](simacae-t-engconcxfemactivating.md) * [Specifying a contact interaction property for XFEM](simacae-t-enghelpxfemcontact.md) * [Requesting contour integral output for XFEM](simacae-t-enghelpxfemoutput.md) | | | |

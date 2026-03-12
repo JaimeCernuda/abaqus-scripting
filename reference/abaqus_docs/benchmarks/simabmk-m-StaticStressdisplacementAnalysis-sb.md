@@ -1,0 +1,5 @@
+# Static stress/displacement analysis
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Static stress/displacement analysis | | |  | | | |  | | --- | | --- | | In this section:   * [Beam/gap example](simabmk-c-beamgap.md) * [Analysis of an anisotropic layered plate](simabmk-c-anisoplate.md) * [Composite shells in cylindrical bending](simabmk-c-compositeshells.md) * [Thick composite cylinder subjected to internal pressure](simabmk-c-thickcompcyl.md) * [Uniform collapse of straight and curved pipe segments](simabmk-c-unifcollapsepipe.md) * [Snap-through of a shallow, cylindrical roof under a point load](simabmk-c-roofsnapthrough.md) * [Pressurized rubber disc](simabmk-c-rubberdisk.md) * [Uniaxial stretching of an elastic sheet with a circular hole](simabmk-c-elasticsheet.md) * [Necking of a round tensile bar](simabmk-c-neckingtensilebar.md) * [Concrete slump test](simabmk-c-concreteslump.md) * [The Hertz contact problem](simabmk-c-hertzcontact.md) * [Crushing of a pipe](simabmk-c-pipecrushing.md) * [Radial stretching of a cylinder](simabmk-c-rad-stretch.md) | | | |

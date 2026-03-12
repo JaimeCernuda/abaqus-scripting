@@ -1,0 +1,5 @@
+# The CAD Connection toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The CAD Connection toolset | | |  | | | |  | | --- | | The CAD Connection toolset is used by the optional add-on associative interfaces for Abaqus/CAE to create a connection from Abaqus/CAE to another CAD system. You can use the CAD system to modify a model or to change its position, and you can use the established connection to update the model quickly in Abaqus/CAE. You can also modify some geometric features in Abaqus/CAE and use the CAD connection to update the original CAD system model.   --- | | In this section:   * [Creating a CAD connection](simacae-t-cadcad.md) * [Updating geometry parameters in an imported model](simacae-t-cadbidirectional.md) | | | |

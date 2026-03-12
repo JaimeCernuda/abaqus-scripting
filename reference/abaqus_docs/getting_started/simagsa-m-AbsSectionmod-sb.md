@@ -1,0 +1,5 @@
+# Defining and assigning section properties
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining and assigning section properties | | |  | | | |  | | --- | | You define the properties of a part through sections. After you create a section, you can use one of the following two methods to assign the section to the part in the current viewport:  * You can simply select the region from the part and assign the section   to the selected region. * You can use the   Set toolset   to create a homogeneous set containing the region and assign the section to the   set.  For the frame model you will create a single truss section that you will assign to the frame by selecting the frame from the viewport. The section will refer to the material `Steel` that you just created as well as define the cross-sectional area of the frame members.   --- | | In this section:   * [Defining a truss section](simagsa-t-definingatrusssection.md) * [Assigning the section to the frame](simagsa-t-assigningthesectiontotheframe.md) | | | |

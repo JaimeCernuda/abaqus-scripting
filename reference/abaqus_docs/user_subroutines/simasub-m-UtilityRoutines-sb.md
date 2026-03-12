@@ -1,0 +1,5 @@
+# General Utility Routines
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | General Utility Routines | | |  | | | |  | | --- | | A variety of utility routines are available to assist in the coding of user subroutines.   --- | | In this section:   * [Execution](simasub-m-UtilityRoutines-Execution-sb.md) * [Model Data](simasub-m-UtilityRoutines-ModelData-sb.md) * [History Data](simasub-m-UtilityRoutines-HistoryData-sb.md) * [Element Data](simasub-m-UtilityRoutines-ElementData-sb.md) * [Node Data](simasub-m-UtilityRoutines-NodeData-sb.md) * [Material Point Data](simasub-m-UtilityRoutines-MaterialPointData-sb.md) * [Contact Data: Obtaining Contact Constraint Point Information in an Abaqus/Standard Analysis](simasub-c-getvrc.md) | | | |

@@ -1,0 +1,5 @@
+# Metal Plasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Metal Plasticity | | |  | | | |  | | --- | | --- | | In this section:   * [Classical Metal Plasticity](simamat-c-metalplastic.md) * [Models for Metals Subjected to Cyclic Loading](simamat-c-hardening.md) * [Rate-Dependent Yield](simamat-c-ratedependent.md) * [Rate-Dependent Plasticity: Creep and Swelling](simamat-c-ratedepcreep.md) * [Annealing or Melting](simamat-c-annealmelt.md) * [Hill Anisotropic Yield/Creep](simamat-c-anisoyield.md) * [Nonquadratic Yield](simamat-c-nonquadraticyield.md#simamat-c-nonquadraticyield) * [Johnson-Cook Plasticity](simamat-c-johnsoncook.md) * [Dynamic Failure Models](simamat-c-failuremodels.md) * [Porous Metal Plasticity](simamat-c-pormetalplas.md) * [Cast Iron Plasticity](simamat-c-castironplasticity.md) * [Two-Layer Viscoplasticity](simamat-c-viscous.md) * [ORNL – Oak Ridge National Laboratory Constitutive Model](simamat-c-ornl.md) * [Deformation Plasticity](simamat-c-deformationplast.md) | | | |

@@ -1,0 +1,5 @@
+# Stress linearization
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Stress linearization | | |  | | | |  | | --- | | Stress linearization is the separation of stresses through a section into constant membrane, linear bending, and nonlinearly varying peak stresses. The capability for calculating linearized stresses is available in the Visualization module of Abaqus/CAE; it is most commonly used for two-dimensional axisymmetric models.   --- | | In this section:   * [Computing the stress components](simathe-c-stresslinear.md#simathe-c-stresslinear) * [Curvature correction for stress linearization](simathe-c-curvaturecorrection.md#simathe-c-curvaturecorrection) * [Computing the local coordinate system](simathe-c-computinglocalcoordsystem.md#simathe-c-computinglocalcoordsystem) | | | |

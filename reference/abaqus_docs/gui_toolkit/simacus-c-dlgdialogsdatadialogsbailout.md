@@ -1,0 +1,5 @@
+# Bailout
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Bailout | | |  | | | |  | | --- | | AFXDataDialog supports automatic bailout handling through the specification of a bit flag in the dialog box constructor. | | |   If you request bailout processing and the user changes some values in the dialog box and presses Cancel, the application posts a standard warning dialog box. The following statement requests bailout processing:  ``` AFXDataDialog.__init__(self, form, 'Create Part',     self.OK|self.CANCEL,     DIALOG_ACTIONS_SEPARATOR|DATADIALOG_BAILOUT) ``` Figure 1. An example of a bailout.     After the standard warning dialog box has been posted, the behavior is as follows:   * If the user clicks Yes from the standard warning   dialog box, the data dialog box will be processed as if the user had originally   pressed OK. * If the user clicks No from the standard warning   dialog box, the data dialog box will be unposted without any processing. * If the user clicks Cancel from the standard   warning dialog box, the data dialog box will remain posted and no action will   be taken. |

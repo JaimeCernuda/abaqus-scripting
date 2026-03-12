@@ -1,0 +1,5 @@
+# Selecting beam elements
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Selecting beam elements | | |  | | | |  | | --- | | Several guidelines are provided for selecting beam elements. | | |   * First-order, shear-deformable (Timoshenko) beam elements (B21, B31) should be used in any simulation that includes contact. * If the transverse shear deformation is important, use Timoshenko beam   elements (B21, B22, B31, B32). * If the structure is either very rigid or very flexible, the hybrid beam   elements (B21H, B32H, etc.) available in   Abaqus/Standard   should be used in geometrically nonlinear simulations. * The Euler-Bernoulli (cubic) beams (B23, B33) available in   Abaqus/Standard   are very accurate for simulations that include distributed loading, such as   dynamic vibration analyses. * Structures with open, thin-walled cross-sections should be modeled with   the elements that use open-section warping theory (B31OS, B32OS) available in   Abaqus/Standard. |

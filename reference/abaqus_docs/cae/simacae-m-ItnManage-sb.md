@@ -1,0 +1,5 @@
+# Understanding Interaction module managers and editors
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding Interaction module managers and editors | | |  | | | |  | | --- | | You can create and manage objects in the Interaction module using managers and editors.   --- | | In this section:   * [Managing objects in the Interaction module](simacae-c-itnmanagemanager.md) * [Interaction editors](simacae-c-itnmanageeditor.md) * [Interaction property editors](simacae-c-itnmanagepropeditor.md) * [Contact controls editors](simacae-c-itnmanagecontactctrleditor.md) * [Contact initialization editor](simacae-c-itnmanagecontiniteditor.md) * [Constraint editors](simacae-c-itnmanageconstrainteditor.md) * [Connector section editors](simacae-c-itnmanageconnpropeditor.md) * [Connector section assignment editors](simacae-c-itnmanageconneditor.md) | | | |

@@ -1,0 +1,5 @@
+# Entering and exiting the Property module
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Entering and exiting the Property module | | |  | | | |  | | --- | | You can enter the Property module at any time during an Abaqus/CAE session by clicking Property in the Module list located in the context bar. When you enter the Property module, Material, Section, Profile, Assign, Special, Feature, and Tools menus appear in the main menu bar. A Part list appears in the context bar that allows you to select the part to which you want to assign properties. | | |  | | --- | | See Also | | [Using the Special menu in the Property module](simacae-c-prpspecialmenu.md) | |   To exit the Property module, select another module from the Module list. You need not take any specific action to save your material, section, and other definitions before exiting the module; they are saved automatically when you save the entire model by selecting FileSave or FileSave As from the main menu bar. |

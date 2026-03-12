@@ -1,0 +1,5 @@
+# Restoring toolbars to their default settings
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Restoring toolbars to their default settings | | |  | | | |  | | --- | | The Reset button in the Customize dialog box restores all of the toolbars to their original settings. Resetting the toolbars:   * returns all default Abaqus/CAE toolbars to their original visibility settings; * relocates all default Abaqus/CAE toolbars to their original positions below the main menu bar; and * deletes all custom toolbars.   These setting do not take effect immediately; you must restart Abaqus/CAE to see the changes. Any changes you make to the toolbar settings between clicking the Reset button and restarting Abaqus/CAE will not be saved. | | |  | | --- | | See Also | | [Components of the toolbars](simacae-c-toptoolbar.md) | | [Using the Customize toolset](simacae-m-CusUsing-sb.md) | |   1. From the main menu bar in any module, select ToolsCustomize. The Customize dialog box appears. 2. On the Toolbars tabbed page, click Reset. 3. Restart Abaqus/CAE. |

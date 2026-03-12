@@ -1,0 +1,5 @@
+# Translating Other Solver Input to Abaqus Input
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Translating Other Solver Input to Abaqus Input | | |  | | | |  | | --- | | This section describes using commands to convert content from other solvers into formats that can be accessed in Abaqus.   --- | | In this section:   * [Translating Nastran Data to Abaqus Files](simaexc-m-TranslatingNastranToAbaqus-sb.md) * [Translating ANSYS Input Files to Partial Abaqus Input Files](simaexc-c-ansysabaproc.md) * [Translating PAM-CRASH Input Files to Partial Abaqus Input Files](simaexc-c-pamabaproc.md) * [Translating RADIOSS Input Files to Partial Abaqus Input Files](simaexc-c-radiossproc.md) * [Translating LS-DYNA Data Files to Abaqus Input Files](simaexc-c-dynaabaproc.md) * [Exchanging Abaqus Data with ZAERO](simaexc-c-tozaeroproc.md) * [Translating a Simpack Flexible Body to Abaqus Matrix Data](simaexc-c-fromsimpack.md) * [Translating Moldflow Data to Abaqus Input Files](simaexc-c-mflabaproc.md) | | | |

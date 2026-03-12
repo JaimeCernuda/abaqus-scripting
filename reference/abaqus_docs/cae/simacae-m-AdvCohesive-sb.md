@@ -1,0 +1,5 @@
+# Adhesive joints and bonded interfaces
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Adhesive joints and bonded interfaces | | |  | | | |  | | --- | | This section provides information on how to model adhesive joints and bonded interfaces.   --- | | In this section:   * [Modeling adhesive joints and bonded interfaces](simacae-c-advcohesiveoverview.md) * [Embedding cohesive elements in an existing three-dimensional mesh](simacae-c-advcohesiveoffset.md) * [Creating a model with cohesive elements using geometry and mesh tools](simacae-c-advcohesivemodelcreate.md) * [Defining tie constraints between the cohesive layer and the surrounding bulk material](simacae-c-advcohesivetie.md) * [Assigning cohesive modeling data](simacae-c-advcohesiveassigndata.md) | | | |

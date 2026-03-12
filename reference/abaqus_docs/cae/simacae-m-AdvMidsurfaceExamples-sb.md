@@ -1,0 +1,5 @@
+# Examples of creating a midsurface model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Examples of creating a midsurface model | | |  | | | |  | | --- | | This section provides examples of creating midsurface models from solid models. In the first example the solid part has reasonably uniform thickness, and creation of the midsurface model is relatively easy. The second example is more complex and requires multiple steps to create a midsurface model that accurately represents the original solid model.   --- | | In this section:   * [Midsurface modeling of a stamped bracket](simacae-c-advmidsimple.md) * [Midsurface modeling of a complex part](simacae-c-advmidcmplx.md) * [Creating the shell representation of the beam](simacae-t-advmidcmplxshell.md) | | | |

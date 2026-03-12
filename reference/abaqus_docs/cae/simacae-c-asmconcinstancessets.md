@@ -1,0 +1,5 @@
+# Sets and part instances
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Sets and part instances | | |  | | | |  | | --- | | Part sets are transferred when you create a part instance from a part. For example, you might create a set from a region of a part and use the Property module to assign a section to that set. When you instance the part in the Assembly module, Abaqus creates part instance sets that refer to any part sets that you previously created. Abaqus provides read-only access to these part instance sets in assembly-related modules. You cannot access a part instance set from the Set Manager; however, you can select an eligible part instance set during a procedure by clicking the Set  button and selecting the set from the Region Selection dialog box that appears. For more information, see [Understanding sets and surfaces](simacae-m-SetConcepts-sb.md). | | | |

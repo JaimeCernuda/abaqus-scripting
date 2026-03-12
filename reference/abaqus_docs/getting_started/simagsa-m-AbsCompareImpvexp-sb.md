@@ -1,0 +1,5 @@
+# Comparison of implicit and explicit procedures
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Comparison of implicit and explicit procedures | | |  | | | |  | | --- | | Abaqus/Standard and Abaqus/Explicit are capable of solving a wide variety of problems. The characteristics of implicit and explicit procedures determine which method is appropriate for a given problem. For those problems that can be solved with either method, the efficiency with which the problem can be solved can determine which product to use. Understanding the characteristics of implicit and explicit procedures will help you answer this question.   --- | | In this section:   * [Choosing between implicit and explicit analysis](simagsa-c-absadvexp.md) * [Cost of mesh refinement in implicit and explicit analyses](simagsa-c-abscostmeshref.md) | | | |

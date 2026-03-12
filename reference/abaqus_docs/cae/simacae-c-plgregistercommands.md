@@ -1,0 +1,5 @@
+# What are the kernel and GUI registration commands?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What are the kernel and GUI registration commands? | | |  | | | |  | | --- | | The plug-in registration commands are located in the Plug-in toolset, which you can access from the main menu bar of Abaqus/CAE. To access the registration commands, your script should start with the following statements:  ``` from abaqusGui import getAFXApp toolset=getAFXApp().getAFXMainWindow().getPluginToolset() ```  You can use the toolset variable to do the following: | | |   Add an item to the Plug-ins menu  The following statements add a kernel and a GUI plug-in to the Plug-ins menu:   ``` toolset.registerKernelMenuButton() toolset.registerGuiMenuButton() ```  Add an icon to a plug-ins toolbox  The following statements add a kernel and a GUI plug-in to a plug-ins toolbox:   ``` toolset.registerKernelToolButton() toolset.registerGuiToolButton() ```  The registration commands are described in [Plug-in registration commands](.._SIMACAEKERRefMap_simaker-c-plgpyc.md#simaker-c-plgpyc). |

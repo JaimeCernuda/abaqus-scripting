@@ -1,0 +1,5 @@
+# Other Material Properties
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Other Material Properties | | |  | | | |  | | --- | | --- | | In this section:   * [Mechanical Properties](simamat-m-MechanicalProperties-sb.md) * [Heat Transfer Properties](simamat-m-HeatTransferProperties-sb.md) * [Curing Processes in Polymers](simamat-c-curingprocesses.md) * [Acoustic Medium](simamat-c-acousticmed.md) * [Poroelastic Acoustic Medium](simamat-c-poroelasticacousticmed.md) * [Mass Diffusion Properties](simamat-m-MassDiffusionProperties-sb.md) * [Electromagnetic Properties](simamat-m-ElectromagneticProperties-sb.md) * [Pore Fluid Flow Properties](simamat-m-PoreFluidFlowProperties-sb.md) * [User Materials](simamat-m-UserMaterials-sb.md) | | | |

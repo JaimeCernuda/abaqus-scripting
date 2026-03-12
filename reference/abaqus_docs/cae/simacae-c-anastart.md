@@ -1,0 +1,5 @@
+# Entering and exiting the Job module
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Entering and exiting the Job module | | |  | | | |  | | --- | | You can enter the Job module at any time during a session by clicking Job in the Module list located in the context bar. The Job menu appears in the main menu bar. | | |   To exit the Job module, select any other module from the main menu. If your job completed successfully, you can also exit the Job module by selecting JobResults from the main menu bar; you will enter the Visualization module, and the output database for your analysis job will be opened automatically.  You need not save your job before exiting the module; it will be saved automatically when you save the entire model by selecting FileSave or FileSave As from the main menu bar. |

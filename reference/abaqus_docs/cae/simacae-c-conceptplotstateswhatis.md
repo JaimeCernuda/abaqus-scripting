@@ -1,0 +1,5 @@
+# What is a plot state?
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What is a plot state? | | |  | | | |  | | --- | | The Visualization module offers several distinct types of plots for viewing your model and results. These plot types are: | | |  | | --- | | See Also | | [Activating plot states](simacae-c-conceptplotstatesidentify.md) | | [Customizing your plots](simacae-c-conceptcustomization.md) | |   * [Undeformed shape](simacae-m-Deformed-sb.md) * [Deformed shape](simacae-m-Deformed-sb.md) * [Contour](simacae-m-Contour-sb.md) * [Symbol](simacae-m-Symbol-sb.md) * [Material orientation](simacae-m-Matorient-sb.md) * [History or X–Y data](simacae-m-Xyplot-sb.md) * [Time history animation](simacae-t-anmtimehistoryproduce.md) * [Scale factor animation](simacae-t-anmscalefactorproduce.md) * [Harmonic animation](simacae-t-anmharmonicproduce.md)   Each of these plots corresponds to a plot state. Plot states are important because some of the customization options provided by the Visualization module pertain only to a particular plot state. |

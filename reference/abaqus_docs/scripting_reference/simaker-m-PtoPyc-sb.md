@@ -1,0 +1,5 @@
+# Property commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Property commands | | |  | | | |  | | --- | | The Property commands are used to create and manage reinforcements and to assign properties to a part.  (See also [Material commands](simaker-m-MatPyc-sb.md#simaker-m-MatPyc-sb) and [Section commands](simaker-m-SctPyc-sb.md).) The Property commands are methods of a Part object.   --- | | In this section:   * [SectionAssignment object](simaker-c-sectionassignmentpyc.md) * [CompositeLayup object](simaker-c-compositelayuppyc.md) * [CompositePly object](simaker-c-compositeplypyc.md) * [MaterialOrientation object](simaker-c-materialorientationpyc.md) * [PlyStackPlot object](simaker-c-plystackplotpyc.md) * [Property assignment commands](simaker-c-propertypartpyc.md) | | | |

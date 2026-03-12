@@ -1,0 +1,5 @@
+# Example: stress wave propagation in a bar
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: stress wave propagation in a bar | | |  | | | |  | | --- | | This example demonstrates some of the fundamental ideas in explicit dynamics and illustrates stability limits and the effect of mesh refinement and material properties on the solution time.   --- | | In this section:   * [Stress wave propagation analysis](simagsa-c-ovwexample.md#simagsa-c-ovwexample) * [Preprocessing—creating the model with Abaqus/CAE](simagsa-m-OvwModel-sb.md) * [Postprocessing](simagsa-c-ovwpostprocessing.md) * [How the mesh affects the stable time increment and CPU time](simagsa-c-ovwstablecpu.md) * [How the material affects the stable time increment and CPU time](simagsa-c-ovwmatcpu.md) | | | |

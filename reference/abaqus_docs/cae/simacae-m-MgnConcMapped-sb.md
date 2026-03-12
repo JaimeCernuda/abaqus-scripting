@@ -1,0 +1,5 @@
+# Structured meshing and mapped meshing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Structured meshing and mapped meshing | | |  | | | |  | | --- | | This section describes the structured and mapped meshing techniques and the types of regions to which these techniques can be applied.   --- | | In this section:   * [What is structured meshing?](simacae-c-mgnconcmappedwhatis.md) * [What is mapped meshing?](simacae-c-mgnconcmappeddifference.md) * [Two-dimensional structured meshing](simacae-c-mgnconcmapped2d.md) * [Three-dimensional structured meshing](simacae-c-mgnconcmapped3d.md) * [Using structured meshing near concave boundaries](simacae-c-mgnconcmappedconcave.md) * [When can Abaqus/CAE apply mapped meshing?](simacae-c-mgnconcmappedwhen.md) | | | |

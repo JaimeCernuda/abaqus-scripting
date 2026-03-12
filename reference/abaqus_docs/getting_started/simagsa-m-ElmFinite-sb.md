@@ -1,0 +1,5 @@
+# Finite elements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Finite elements | | |  | | | |  | | --- | | A wide range of elements is available in Abaqus. This extensive element library provides you with a powerful set of tools for solving many different problems. The elements available in Abaqus/Explicit are (with a few exceptions) a subset of those available in Abaqus/Standard. This section introduces you to the five aspects of an element that influence how it behaves.   --- | | In this section:   * [Characterizing elements](simagsa-c-elmcharacterelm.md) * [Continuum elements](simagsa-c-elmcontinelem.md) * [Shell elements](simagsa-c-elmshell.md) * [Beam elements](simagsa-c-elmbeamelm.md) * [Truss elements](simagsa-c-elmtrusselem.md) | | | |

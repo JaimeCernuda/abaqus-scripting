@@ -1,0 +1,5 @@
+# Session commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Session commands | | |  | | | |  | | --- | | Session commands are used to create objects that are not stored with the model; for example, viewports and display groups. Abaqus/CAE retains Session objects only for the duration of the session; they are not saved when the model database is saved.   --- | | In this section:   * [Session object](simaker-c-sessionpyc.md) * [AutoColors object](simaker-c-autocolorspyc.md) * [Color object](simaker-c-colorpyc.md) * [Drawing object](simaker-c-drawingpyc.md) * [Image object](simaker-c-imagepyc.md) * [JournalOptions object](simaker-c-journaloptionspyc.md) * [MemoryReductionOptions object](simaker-c-memoryreductionoptionspyc.md) * [NetworkDatabaseConnector object](simaker-c-networkdatabaseconnectorpyc.md) * [NumberFormat object](simaker-c-numberformatpyc.md) | | | |

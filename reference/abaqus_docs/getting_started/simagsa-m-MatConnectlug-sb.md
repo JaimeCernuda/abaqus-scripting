@@ -1,0 +1,5 @@
+# Example: connecting lug with plasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example: connecting lug with plasticity | | |  | | | |  | | --- | | In this example you will investigate what happens if a steel connecting lug is subjected to an extreme load.   --- | | In this section:   * [Connecting lug with plasticity analysis](simagsa-c-matmodelexa.md#simagsa-c-matmodelexa) * [Modifications to the model](simagsa-c-matmodeldata.md) * [Job monitor and diagnostics](simagsa-c-matrunninganal.md) * [Postprocessing the results](simagsa-c-matpostprocessing.md) * [Adding hardening to the material model](simagsa-c-mathardening.md) * [Running the analysis with plastic hardening](simagsa-c-matrunanalplast.md) * [Postprocessing the results](simagsa-c-matpostprocess2.md) | | | |

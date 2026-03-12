@@ -1,0 +1,5 @@
+# Creating a GUI module
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating a GUI module | | |  | | | |  | | --- | | This section describes how you can create a GUI module. To create a new GUI module, you must follow these steps:  * Derive a new class from a module base class. * Create menus in the menu bar. * Create icons in the toolbar. This step is optional. * Create icons in the toolbox. This step is optional. * Create modes to collect input from the user and issue commands. Modes   include procedures and dialog boxes. * Create methods to handle any special behavior not handled by the   module’s modes. This step is optional.   These steps are described in detail in the following sections.   --- | | In this section:   * [Examining a GUI module example](simacus-m-AppModuleExampleCode-sb.md) * [Registering a GUI module](simacus-c-appmoduleregistering.md) * [Switching to a GUI module](simacus-c-appmoduleswitching.md) | | | |

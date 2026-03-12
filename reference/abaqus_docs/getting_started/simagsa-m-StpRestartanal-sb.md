@@ -1,0 +1,5 @@
+# Restart analysis
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Restart analysis | | |  | | | |  | | --- | | Multistep simulations need not be defined in a single job. Indeed, it is usually desirable to run a complex simulation in stages. This allows you to examine the results and confirm that the analysis is performing as expected before continuing with the next stage. The Abaqus restart analysis capability allows a simulation to be restarted and the model's response to additional load history to be calculated.  The restart analysis capability is discussed in detail in [Restarting an Analysis](.._SIMACAEANLRefMap_simaanl-c-restart.md).   --- | | In this section:   * [The restart and state files](simagsa-c-stpwriting.md) * [Restarting an analysis](simagsa-c-stpreading.md) | | | |

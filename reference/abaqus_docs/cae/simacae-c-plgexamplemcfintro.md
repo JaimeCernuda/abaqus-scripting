@@ -1,0 +1,5 @@
+# Introduction
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Introduction | | |  | | | |  | | --- | | When a modal frequency response analysis is performed in Abaqus/Standard, the response is calculated from a linear combination of mode shapes and the corresponding modal amplitudes. For a typical structural-acoustic or structural analysis, the number of modes being studied can number in the hundreds. The designer needs to closely examine these individual modes and find or rank the dominant modes (the modes with major contributions to the total response). The contribution of each mode to the total structural or acoustic response is called the Modal Contribution Factor (MCF). | | |   The NVH application requires two plug-ins that you can access from the Plug-ins menu in the Visualization module. The first computes the modal contribution factors, and the second allows you to view the modal contribution factors. |

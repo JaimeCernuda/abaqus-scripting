@@ -1,0 +1,5 @@
+# Selecting report data
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Selecting report data | | |  | | | |  | | --- | | This section explains how to select X–Y data objects to include in an X–Y data report, how to select field output variables to include in a field output report, and how to select the options and thresholds to use for a free body cut report.  To learn how to control the contents of a tabular report of probe values, see [Probing the model](simacae-m-Probe-sb.md).   --- | | In this section:   * [Selecting X–Y data objects](simacae-t-reportxysetuptabbtn.md) * [Selecting field output variables](simacae-t-reportfieldsetuptabbtn.md) * [Selecting field output section points](simacae-t-reportfieldsection.md) * [Selecting options and thresholds for free body cut reports](simacae-t-reportfreebody.md) | | | |

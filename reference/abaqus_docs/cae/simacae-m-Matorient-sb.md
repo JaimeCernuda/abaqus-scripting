@@ -1,0 +1,5 @@
+# Plotting material orientations
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Plotting material orientations | | |  | | | |  | | --- | | A material orientation plot shows the material directions of elements in the model at the element integration points. The material orientations are plotted at a specified step and frame of the analysis and at a specified section point for shell elements. Material orientation plots can also be created to show the material directions of reinforcements (rebar orientation) in membrane, shell, and surface elements. Abaqus/CAE represents the material orientations as triads. This section explains material orientation plotting.   --- | | In this section:   * [Understanding material orientation plotting](simacae-c-matorientconcept.md) * [Using material orientation plot options](simacae-c-matorientnavigating.md) * [Producing a material orientation plot](simacae-t-matorientproduce.md) * [Customizing material orientation plot triads](simacae-t-matorienttriadcolor.md#simacae-t-matorienttriadcolor) | | | |

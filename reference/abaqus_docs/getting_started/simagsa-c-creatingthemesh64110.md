@@ -1,0 +1,5 @@
+# Creating the mesh
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating the mesh | | |  | | | |  | | --- | | The cargo crane will be modeled with three-dimensional, slender, cubic beam elements (B33). The cubic interpolation in these elements allows us to use a single element for each member and still obtain accurate results under the applied bending load. The mesh that you should use in this simulation is shown in [Figure 1](simagsa-c-creatingthemesh64110.md#simagsa-c-creatingthemesh64110__simagsa-c-gss-cargo-crane). | | |   Figure 1. Mesh for cargo crane.    In the Model Tree, expand the Truss item underneath the Parts container. Then double-click Mesh in the list that appears. Specify a global part seed of `2.0` for all regions. Repeat this for the part named Cross brace.  |  | | --- | | Tip: In the context bar of the Mesh module, select the appropriate part from the Object pull-down list to switch between the parts more readily. |  Mesh both part instances with linear cubic beams in space (B33 elements). |

@@ -1,0 +1,5 @@
+# Spatial Modeling
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Spatial Modeling | | |  | | | |  | | --- | | --- | | In this section:   * [Node Definition](simamod-m-NodeDefinition-sb.md) * [Element Definition](simamod-m-ElementDefinition-sb.md) * [Surface Definition](simamod-m-SurfaceDefinition-sb.md) * [Rigid Body Definition](simamod-c-rigidoverview.md#simamod-c-rigidoverview) * [Integrated Output Section Definition](simamod-c-integratedoutputsect.md#simamod-c-integratedoutputsect) * [Mass Adjustment](simamod-c-massadjust.md#simamod-c-massadjust) * [Nonstructural Mass Definition](simamod-c-nonstructuralmass.md#simamod-c-nonstructuralmass) * [Distribution Definition](simamod-c-definingdistributions.md#simamod-c-definingdistributions) * [Display Body Definition](simamod-c-displaybody.md#simamod-c-displaybody) * [Assembly Definition](simamod-c-partassy.md#simamod-c-partassy) * [Probability Density Function](simamod-c-probdensityfunc.md#simamod-c-probdensityfunc) | | | |

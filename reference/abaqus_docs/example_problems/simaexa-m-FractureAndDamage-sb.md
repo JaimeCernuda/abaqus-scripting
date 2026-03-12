@@ -1,0 +1,5 @@
+# Fracture and damage
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Fracture and damage | | |  | | | |  | | --- | | --- | | In this section:   * [A plate with a part-through crack: elastic line spring modeling](simaexa-c-crackplate.md) * [Contour integrals for a conical crack in a linear elastic infinite half space](simaexa-c-conicalcrack.md) * [Elastic-plastic line spring modeling of a finite length cylinder with a part-through axial flaw](simaexa-c-inelasticlinespring.md) * [Crack growth in a three-point bend specimen](simaexa-c-crackgrowth.md) * [Analysis of skin-stiffener debonding under tension](simaexa-c-skinflangedebond.md) * [Failure of blunt notched fiber metal laminates](simaexa-c-damagefailfml.md) * [Debonding behavior of a double cantilever beam](simaexa-c-dcb2d3d.md) * [Debonding behavior of a single leg bending specimen](simaexa-c-slb2d3d.md) * [Postbuckling and growth of delaminations in composite panels](simaexa-c-postbuckdelamcompos.md) | | | |

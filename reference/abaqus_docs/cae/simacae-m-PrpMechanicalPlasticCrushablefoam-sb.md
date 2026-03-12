@@ -1,0 +1,5 @@
+# Defining crushable foam plasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining crushable foam plasticity | | |  | | | |  | | --- | | The crushable foam model allows you to define not only crushable foams that are typically used as energy absorption structures, but also other crushable materials other than foams. See [Crushable Foam Plasticity Models](.._SIMACAEMATRefMap_simamat-c-crushfoam.md) for more information.   --- | | In this section:   * [Specifying a crushable foam model](simacae-t-prpmechanicalplasticcrushablefoammodel.md) * [Defining crushable foam hardening](simacae-t-prpmechanicalplasticcrushablefoamhardening.md) * [Defining rate dependence for a crushable foam plasticity model](simacae-t-prpmechanicalplasticcrushablefoamrate.md) | | | |

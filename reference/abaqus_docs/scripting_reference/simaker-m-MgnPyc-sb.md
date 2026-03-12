@@ -1,0 +1,5 @@
+# Mesh commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Mesh commands | | |  | | | |  | | --- | | Mesh commands are used to mesh part instances and regions. Mesh commands are also used to assign element sizes, element types, and mesh control parameters.   --- | | In this section:   * [Assembly object](simaker-c-assemblymgnpyc.md) * [Part object](simaker-c-partmgnpyc.md) * [ElemType object](simaker-c-elemtypepyc.md) * [MeshEdge object](simaker-c-meshedgepyc.md) * [MeshEdgeArray object](simaker-c-meshedgearraypyc.md) * [MeshElement object](simaker-c-meshelementpyc.md) * [MeshElementArray object](simaker-c-meshelementarraypyc.md) * [MesherOptions object](simaker-c-mesheroptionspyc.md) * [MeshFace object](simaker-c-meshfacepyc.md) * [MeshFaceArray object](simaker-c-meshfacearraypyc.md) * [MeshNode object](simaker-c-meshnodepyc.md) * [MeshNodeArray object](simaker-c-meshnodearraypyc.md) * [MeshStats object](simaker-c-meshstatspyc.md) | | | |

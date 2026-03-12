@@ -1,0 +1,5 @@
+# Registered dictionaries
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Registered dictionaries | | |  | | | |  | | --- | | You use the RegisteredDictionary class to create a dictionary that can be queried from the GUI. In addition, the infrastructure can notify the GUI when the contents of the dictionary change. The key of a registered dictionary must be either a String or an Int. The values associated with a key must all be of the same type—all integers or all strings, for example—to prevent errors when accessing them from the GUI. The RegisteredDictionary class has the same methods as a Python dictionary. In addition, the RegisteredDictionary class has a changeKey method that you use to rename a key in the dictionary. For example,  ``` from customKernel import RegisteredDictionary mdb.customData.myDictionary = RegisteredDictionary()  mdb.customData.myDictionary['Key-1'] = 1  mdb.customData.myDictionary.changeKey('Key-1', 'Key-2') ``` | | | |

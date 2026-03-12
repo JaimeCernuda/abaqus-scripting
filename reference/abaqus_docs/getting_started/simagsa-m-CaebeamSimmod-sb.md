@@ -1,0 +1,5 @@
+# Defining your analysis steps
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining your analysis steps | | |  | | | |  | | --- | | Now that you have created your part, you can define your analysis steps. For the cantilever beam tutorial the analysis will consist of two steps:  * An initial step, in which you will apply a boundary condition that   constrains one end of the cantilever beam. * A general, static analysis step, in which you will apply a pressure   load to the top face of the beam.   Abaqus/CAE generates the initial step automatically, but you must create the analysis step yourself. You may also request output for any steps in the analysis.   --- | | In this section:   * [Creating an analysis step](simagsa-t-caebeamsimmodstep.md) * [Requesting data output](simagsa-t-caebeamsimmodoutput.md) | | | |

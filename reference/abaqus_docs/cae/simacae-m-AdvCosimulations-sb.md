@@ -1,0 +1,5 @@
+# Co-simulation
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Co-simulation | | |  | | | |  | | --- | | This section explains how to model and run a co-simulation in Abaqus/CAE.   --- | | In this section:   * [Overview of co-simulation](simacae-c-advcosimover.md) * [What is a co-simulation?](simacae-c-advcosimwhatis.md) * [Linking and excluding part instances for a co-simulation](simacae-c-advcosimlinking.md) * [Ensuring matching nodes at the interface regions](simacae-t-advcosimmesh.md) * [Specifying the interface region and coupling schemes](simacae-c-advcosiminter.md) * [Identifying the models involved and specifying job parameters](simacae-c-advcosimcoex.md) * [Viewing the results of the co-simulation](simacae-c-advcosimviewing.md) | | | |

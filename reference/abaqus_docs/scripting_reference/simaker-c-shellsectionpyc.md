@@ -1,0 +1,5 @@
+# ShellSection object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ShellSection object | | |  | | | |  | | --- | | The ShellSection object defines the properties of a shell section. The ShellSection object is derived from the [Section](simaker-c-sectionpyc.md) object. The ShellSection object has no explicit constructor and no methods or members.  The ShellSection object is derived from the [Section](simaker-c-sectionpyc.md) object.  This page discusses:   * [Access](#simaker-c-shellsectionpyc__simaker-c-shellsectionpyc-s-pyaccess1) * [Members](#simaker-c-shellsectionpyc-t-pymembersect1) | | |   Access  ``` import section mdb.models[name].sections[name] import odbSection session.odbs[name].sections[name] ```  Members The ShellSection object can have the following members:  name  A String specifying the repository key.  transverseShear  A [TransverseShearShell](simaker-c-transverseshearshellpyc.md) object specifying the transverse shear stiffness properties. |

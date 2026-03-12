@@ -1,0 +1,5 @@
+# DatumAxis object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DatumAxis object | | |  | | | |  | | --- | | The DatumAxis object has no direct constructor; it is created when a [Feature](simaker-c-featurepyc.md) object is created. For example, the DatumAxisByCylFace method creates a Feature object that creates a DatumAxis object.  The DatumAxis object is derived from the [Datum](simaker-c-datumpyc.md) object.  This page discusses:   * [Access](#simaker-c-datumaxispyc__simaker-c-datumaxispyc-s-pyaccess1) * [Members](#simaker-c-datumaxispyc-t-pymembersect1) | | |   Access  ``` import part mdb.models[name].parts[name].datums[i] import assembly mdb.models[name].rootAssembly.allInstances[name].datums[i] mdb.models[name].rootAssembly.datums[i] mdb.models[name].rootAssembly.instances[name].datums[i] ```  Members The DatumAxis object has the following members:  pointOn  A tuple of Floats specifying the X-, Y-, and Z-coordinates of a point located on the datum.  direction  A tuple of Floats specifying a sequence of three Floats specifying the direction of the axis. |

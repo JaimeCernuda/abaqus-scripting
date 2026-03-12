@@ -1,0 +1,5 @@
+# Regenerating partitions after modifying geometry
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Regenerating partitions after modifying geometry | | |  | | | |  | | --- | | Partitions are features associated with the part or part instance; therefore, you can modify and regenerate them like any other feature. | | |   For example, consider the partition on the right side of the part instance shown in [Figure 1](simacae-c-mgnconcpartitionregen.md#simacae-c-mgnconcpartitionregen__simacae-c-mgn-regenerate). Figure 1. A partitioned part instance.    If you return to the Part module and widen the right side of the model, the partition also expands and continues to divide the face into two regions, as shown in [Figure 2](simacae-c-mgnconcpartitionregen.md#simacae-c-mgnconcpartitionregen__simacae-c-mgn-regenerate2). Figure 2. The partition is regenerated.    Sometimes regeneration of a partition creates unmeshable regions. In this situation simply add, modify, or delete partitions until the part instance becomes meshable again. |

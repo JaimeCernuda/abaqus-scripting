@@ -1,0 +1,5 @@
+# Terminating an Analysis
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Terminating an Analysis | | |  | | | |  | | --- | | Utility routines XIT and XPLB\_EXIT can be called from within any Abaqus/Standard or Abaqus/Explicit user subroutine, respectively, (except UEXTERNALDB) to terminate an analysis.  XIT or XPLB\_EXIT should be used instead of `STOP` to ensure that all files associated with the analysis are closed properly.   * [Utility Routine Interface](#simasub-c-xit-t-utilroutinterface1) | | |  | | --- | | See Also | | [About User Subroutines and Utilities](simasub-c-subroutineover.md) |  |  | | --- | |  | | In Other Guides | | [UMAT and UHYPER](.._SIMACAEVERRefMap_simaver-c-umatuhyper.md) | | [UWAVE and UEXTERNALDB](.._SIMACAEVERRefMap_simaver-c-uwave.md) | | [VUMAT: rotating cylinder](.._SIMACAEVERRefMap_simaver-c-vumat.md) | |   ProductsAbaqus/StandardAbaqus/Explicit    Utility Routine Interface ``` CALL XIT or CALL XPLB_EXIT ``` |

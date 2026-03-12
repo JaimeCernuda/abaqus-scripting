@@ -1,0 +1,5 @@
+# Special-Purpose Material Modeling Techniques
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Special-Purpose Material Modeling Techniques | | |  | | | |  | | --- | | This section describes additional material modeling capabilities intended for special-purpose applications. They are based on specialized implementations of existing user-defined options that are built directly into the Abaqus software. They require the material name to start with “ABQ\_”, as described for each case.   --- | | In this section:   * [Modeling the Cure Process in Thermosetting Polymers](simamat-c-curemodel.md) * [Modeling Metallurgical Phase Transformations](simamat-c-specialpurpose-phasetrans.md) * [Parameter Table Type Reference](simamat-m-SpecialPurposeParameterTableTypeReferences-sb.md) * [Property Table Type Reference](simamat-m-SpecialPurposePropertyTableTypeReferences-sb.md) | | | |

@@ -1,0 +1,5 @@
+# aStudy.constrain()
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | aStudy.constrain() | | |  | | | |  | | --- | | This command is used to define constraints on parameter value combinations; combinations that violate any of the constraints are eliminated from the parametric study. This page discusses:   * [Command](#simaanl-c-constraincomb__simaanl-c-constraincomb-s-scrcommandsyntax1) * [Required Data](#simaanl-c-constraincomb__simaanl-c-constraincomb-s-datarequired1) | | |  | | --- | | See Also | | [Scripting Parametric Studies](simaanl-c-scriptparstudies.md) | |   ProductsAbaqus/StandardAbaqus/Explicit  Command  ``` aStudy.constrain (constraint expression) ```  Required Data constraint expression  Provide a constraint expression enclosed by matching quotation marks. This expression may involve operations among parameters, numbers, and previously defined Python variables; for example, `'height*width < maxArea-2.0'`. The constraint can be an equality or an inequality. |

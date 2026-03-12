@@ -1,0 +1,5 @@
+# SectorDefinition object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | SectorDefinition object | | |  | | | |  | | --- | | The SectorDefinition object describes the number of symmetry sectors and axis of symmetry for a cyclic symmetry model.  This page discusses:   * [Access](#simaker-c-sectordefinitioncpp__simaker-c-sectordefinitioncpp-s-cppaccess1) * [Members](#simaker-c-sectordefinitioncpp-t-pymembersect1) | | |   Access  ``` odb.sectorDefinition() ```  Members The SectorDefinition object has the following members:  Prototype  ``` int numSectors(); const odb_SequenceSequenceFloat symmetryAxis(); ```  numSectors  An Int specifying the number of sectors in the cyclic symmetry model.  symmetryAxis  An odb\_SequenceSequenceFloat specifying the coordinates of two points on the axis of symmetry. |

@@ -1,0 +1,5 @@
+# Customizing symbol plot appearance
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing symbol plot appearance | | |  | | | |  | | --- | | This section explains how to customize the style of symbol plot vector and tensor arrows, how to choose the quantity to display, and how to control the minimum and maximum values shown in the plot.  To learn how to customize the render style and the underlying model attributes of your symbol plot, see [Customizing plot display](simacae-m-PlotDisplay-sb.md).   --- | | In this section:   * [Customizing symbol plot arrows](simacae-t-symvectorcolor.md) * [Setting vector and tensor limits](simacae-t-symvectortensorlimits.md) * [Customizing vector and tensor labels](simacae-t-symvectortensorlabels.md) | | | |

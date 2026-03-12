@@ -1,0 +1,5 @@
+# Reading from an output database
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Reading from an output database | | |  | | | |  | | --- | | The following sections describe how you use Abaqus C++ API commands to read data from an output database.   --- | | In this section:   * [The Abaqus/CAE Visualization module tutorial output database](simacmd-c-odbintroreadtutcpp.md) * [Making the Odb commands available](simacmd-c-odbintroodbaccesscpp.md) * [Opening an output database](simacmd-c-odbintroreadopencpp.md) * [Reading model data](simacmd-c-odbintroreadmodelcpp.md) * [Reading results data](simacmd-c-odbintroreadresultcpp.md) * [Reading field output data](simacmd-c-odbintroreadfieldcpp.md) * [Using bulk data access to an output database](simacmd-c-odbintrobulkdatacpp.md) * [Using regions to read a subset of field output data](simacmd-c-odbintroreadregcpp.md) * [Reading history output data](simacmd-c-odbintroreadhistcpp.md) * [An example of reading field data from an output database](simacmd-c-odbintrosimpleexacpp.md) | | | |

@@ -1,0 +1,5 @@
+# Defining equations of state
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining equations of state | | |  | | | |  | | --- | | The Edit Material dialog box allows you to define a hydrodynamic model in the form of an equation of state.   --- | | In this section:   * [Defining an equation of state](simacae-t-prpmechanicalothereosdefine.md) * [Defining an ignition and growth equation of state](simacae-t-prpmechanicalothereosignition.md) * [Defining plastic compaction behavior for an equation of state](simacae-t-prpmechanicalothereoscompaction.md) * [Defining detonation points for an explosive material](simacae-t-prpmechanicalothereosdetonationpoints.md) * [Defining tensile failure for an equation of state](simacae-t-prpmechanicalothereostensilefailure.md) | | | |

@@ -1,0 +1,5 @@
+# Basic geometry commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Basic geometry commands | | |  | | | |  | | --- | | The basic geometry commands create geometric entities that are referenced by Part objects, Instance objects, and GeometrySet objects.   --- | | In this section:   * [Cell object](simaker-c-cellpyc.md) * [CellArray object](simaker-c-cellarraypyc.md) * [Edge object](simaker-c-edgepyc.md) * [EdgeArray object](simaker-c-edgearraypyc.md) * [Face object](simaker-c-facepyc.md) * [FaceArray object](simaker-c-facearraypyc.md) * [IgnoredEdge object](simaker-c-ignorededgepyc.md) * [IgnoredEdgeArray object](simaker-c-ignorededgearraypyc.md) * [IgnoredVertex object](simaker-c-ignoredvertexpyc.md) * [IgnoredVertexArray object](simaker-c-ignoredvertexarraypyc.md) * [InterestingPoint object](simaker-c-interestingpointpyc.md) * [ModelDot object](simaker-c-modeldotpyc.md) * [ReferencePoint object](simaker-c-referencepointpyc.md) * [Transform object](simaker-c-transformpyc.md) * [Vertex object](simaker-c-vertexpyc.md) * [VertexArray object](simaker-c-vertexarraypyc.md) | | | |

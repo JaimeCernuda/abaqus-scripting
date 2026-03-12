@@ -1,0 +1,5 @@
+# XYZ format
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | XYZ format | | |  | | | |  | | --- | | A point cloud data file in XYZ format must contain rows of data. For a rectangular coordinate system, each row must consist of X-, Y-, and Z-coordinates followed by the field value at that point. The values in each row can be separated by any combination of spaces, tabs, or commas; each space, tab, or comma is considered a single field delimiter. Comma-separated values (CSV), shown in the following example, is a commonly used format:  ``` X1,Y1,Z1,value X2,Y2,Z2,value X3,Y3,Z3,value etc. ```  If you use a cylindrical or spherical local coordinate system, the appropriate coordinates must be given in the data file; see [Coordinate system for point cloud mapped fields](simacae-c-fldusingmapcsys.md). | | |   [Figure 1](simacae-c-fldusingmappointxyz.md#simacae-c-fldusingmappointxyz__simacae-c-fld-pointcloud-nls) shows an example of point cloud data in XYZ format that have been imported into the Edit Mapped Field dialog box. Figure 1. Point cloud data in XYZ format. |

@@ -1,0 +1,5 @@
+# Selecting the results step and frame
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Selecting the results step and frame | | |  | | | |  | | --- | | You can control the step and frame at which Abaqus/CAE obtains model data and results from an output database.  You can select a specific step and frame using the Step/Frame dialog box, or you can step through frames using controls available in the context bar. If viewport linking is activated, you can link frame display across viewports. For more information, see [Linking viewports](simacae-t-cnvlinkoptions.md#simacae-t-cnvlinkoptions).  Note: If you are displaying model data from the current model database in the Visualization module, you can select a specific step using the Step/Frame dialog box, but the frame controls are disabled. Model database data does not include individual frames.   --- | | In this section:   * [Selecting a specific results step and frame](simacae-t-resvisframedb.md) * [Stepping through frames](simacae-t-resframearrows.md) | | | |

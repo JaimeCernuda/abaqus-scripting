@@ -1,0 +1,5 @@
+# Terminating a co-execution
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Terminating a co-execution | | |  | | | |  | | --- | | To terminate a co-execution, you should use the Co-execution Manager to display the co-execution that is running and to end the analysis jobs. Ending the jobs terminates the co-execution. Abaqus/CAE asks you for confirmation, terminates the jobs, and updates the status of the co-execution in the Co-execution Manager to `Terminated`. Note that co-execution termination may result in various error messages written to the message area, reflecting the unpredictable manner in which co-execution inter-job messaging is terminated. These error messages occurring immediately following co-execution termination can generally be disregarded | | |  | | --- | | See Also | | [Understanding co-executions](simacae-m-AnaCoexecutionconcepts-sb.md) | | [Creating, editing, and manipulating co-executions](simacae-m-AnaManagecoexecution-sb.md) | | |

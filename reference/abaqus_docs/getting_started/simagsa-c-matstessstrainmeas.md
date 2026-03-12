@@ -1,0 +1,5 @@
+# Stress and strain measures for finite deformations
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Stress and strain measures for finite deformations | | |  | | | |  | | --- | | Strains in compression and tension are the same only if considered in the limit as Δ⁢l→d⁢l→0; i.e., | | |   d⁢ε=d⁢ll  and  ε=∫l0ld⁢ll=ln⁡(ll0),  where l is the current length, l0 is the original length, and ε is the true strain or logarithmic strain.  The stress measure that is the conjugate to the true strain is called the true stress and is defined as  σ=FA,  where F is the force in the material and A is the current area. A ductile metal subjected to finite deformations will have the same stress-strain behavior in tension and compression if true stress is plotted against true strain. |

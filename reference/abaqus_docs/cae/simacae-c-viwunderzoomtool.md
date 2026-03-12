@@ -1,0 +1,5 @@
+# The box zoom tool
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The box zoom tool | | |  | | | |  | | --- | | You use the box zoom tool to select a rectangular area of your model or plot; Abaqus/CAE enlarges your view of the selected portion of your model or plot to fill the viewport. | | |  | | --- | | See Also | | [The view manipulation tools](simacae-c-viwunderoverview.md) | | [Zooming in to a selected area of the view](simacae-t-viwzoombtn.md) | |   When you select the box zoom tool  and the viewport in which to work, Abaqus/CAE enters box zoom mode, as indicated by a crosshair-shaped cursor. For X–Y plots, Abaqus/CAE enlarges your view of the selected X–Y curves and updates the axis values to match the data that you select. |

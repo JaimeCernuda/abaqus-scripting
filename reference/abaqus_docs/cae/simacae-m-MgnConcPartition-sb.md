@@ -1,0 +1,5 @@
+# Verifying and improving meshes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Verifying and improving meshes | | |  | | | |  | | --- | | This section explains how you use the tools in the Mesh module to verify your mesh quality, to control mesh generation, and to improve the mesh quality.   --- | | In this section:   * [Verifying your mesh](simacae-c-mgnconcpartitionverify.md) * [Querying your mesh](simacae-c-mgnconcpartitionquery.md) * [Why partition in the Mesh module?](simacae-c-mgnconcpartitionwhy.md) * [How are seeds and other attributes affected by partitioning?](simacae-c-mgnconcpartitionseed.md) * [Regenerating partitions after modifying geometry](simacae-c-mgnconcpartitionregen.md) * [Using virtual topology to improve your mesh](simacae-c-mgnconcpartitionvirtual.md) * [Using adaptive remeshing to improve your mesh](simacae-c-mgnconcpartitionadaptivity.md) | | | |

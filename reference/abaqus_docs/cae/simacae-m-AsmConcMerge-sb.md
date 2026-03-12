@@ -1,0 +1,5 @@
+# Performing Boolean operations on part instances
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Performing Boolean operations on part instances | | |  | | | |  | | --- | | This section describes how you merge and cut part instances.  You can select instances of parts that you created using Abaqus/CAE and merge them into a single instance.In addition, you can cut away the geometric portion of a part instance using the geometric portion of other part instances to make the cut. You can also merge instances of parts containing both geometry and orphan elements.   --- | | In this section:   * [Merging and cutting part instances](simacae-c-asmconcmergehybrid.md) * [Merging and cutting independent and dependent part instances](simacae-c-asmconcmergedependent.md) | | | |

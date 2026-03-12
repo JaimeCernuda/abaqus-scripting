@@ -1,0 +1,5 @@
+# The basics of Python
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The basics of Python | | |  | | | |  | | --- | | The following sections introduce you to the basics of the Python language.   --- | | In this section:   * [Variable names and assignment](simacmd-c-intpytintronames.md) * [Python data types](simacmd-c-intpytintrodatatypes.md) * [Determining the type of a variable](simacmd-c-intpytintrogettype.md) * [Sequences](simacmd-c-intpytintrosequences.md) * [Sequence operations](simacmd-c-intpytintrosequenceops.md) * [Python None](simacmd-c-intpytintronone.md) * [Continuation lines and comments](simacmd-c-intpytintrocomments.md) * [Printing variables using formatted output](simacmd-c-intpytintroformat.md) * [Control blocks](simacmd-c-intpytintrocontrol.md) | | | |

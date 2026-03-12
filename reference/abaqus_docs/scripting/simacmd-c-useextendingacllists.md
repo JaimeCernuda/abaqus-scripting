@@ -1,0 +1,5 @@
+# Registered lists
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Registered lists | | |  | | | |  | | --- | | You use the RegisteredList class to create a list that can be queried from the GUI. In addition, the infrastructure can notify the GUI when the contents of the list change. The values in the list must all be of the same type—all integers or all strings, for example—to prevent errors when accessing them from the GUI. The values must all be of the same type; for example, all integers or all strings. The RegisteredList has the same methods as a Python list. For example, appending  `Item-1` to the list in the following statements causes the infrastructure to notify the GUI that the contents of the list have changed:  ``` from customKernel import RegisteredList  mdb.customData.myList = RegisteredList() mdb.customData.myList.append('Item-1') ``` | | | |

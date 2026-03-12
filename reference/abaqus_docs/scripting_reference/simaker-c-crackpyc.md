@@ -1,0 +1,5 @@
+# Crack object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Crack object | | |  | | | |  | | --- | | The Crack object is the abstract base type for [ContourIntegral](simaker-c-contourintegralpyc.md) and future crack objects.  This page discusses:   * [Access](#simaker-c-crackpyc__simaker-c-crackpyc-s-pyaccess1) * [resume()](#simaker-crackresumepyc) * [suppress()](#simaker-cracksuppresspyc) * [Members](#simaker-c-crackpyc-t-pymembersect1) | | |   Access  ``` import part mdb.models[name].parts[name].engineeringFeatures.cracks[name] import assembly mdb.models[name].rootAssembly.engineeringFeatures.cracks[name] ```  resume() This method resumes the crack that was previously suppressed.  Arguments None.  Return value None.  Exceptions None.  suppress() This method suppresses the crack.  Arguments None.  Return value None.  Exceptions None.  Members The Crack object has the following members:  name  A String specifying the repository key.  suppressed  A Boolean specifying whether the crack is suppressed or not. The default value is OFF. |

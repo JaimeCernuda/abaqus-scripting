@@ -1,0 +1,5 @@
+# Interaction with the GUI
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Interaction with the GUI | | |  | | | |  | | --- | | In addition to providing a persistence mechanism, the customKernel module contains classes that provide the following capabilities: | | |   * Querying custom kernel data values from the GUI. From a GUI script you   can access some attribute of your custom kernel object, just as you would from   the kernel. For example,     ```   print(mdb.customData.myObject.name)   ``` * Notification to the GUI when custom kernel data change. For example, you   can have a manager dialog box that lists the objects in a repository. When the   contents of the repository change, you can be notified and take the appropriate   action to update the list of objects in the manager dialog box.   To make use of these features, you must derive your custom kernel objects from the classes listed in the following sections. For more details on GUI customization, see the [Abaqus GUI Toolkit Reference Guide](.._SIMACAEGUIRefHtml_simagui-c-ov.md). |

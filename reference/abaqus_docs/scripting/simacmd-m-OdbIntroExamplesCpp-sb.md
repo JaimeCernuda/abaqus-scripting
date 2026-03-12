@@ -1,0 +1,5 @@
+# Example programs that access data from an output database
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Example programs that access data from an output database | | |  | | | |  | | --- | | The following examples illustrate how you use the output database commands to access data from an output database.   --- | | In this section:   * [Finding the maximum value of von Mises stress](simacmd-c-odbintroexamaxmisescpp.md) * [Creating an output database](simacmd-c-odbintroexasectioncpp.md) * [Reading data from an output database](simacmd-c-odbintroexareadcpp.md) * [Decreasing the amount of data in an output database by retaining data at specific frames](simacmd-c-odbintroexaodbfiltercpp.md) * [Stress range for multiple load cases](simacmd-c-odbintrostressrangecpp.md) * [A C++ version of FELBOW](simacmd-c-odbintrofelbowcpp.md) | | | |

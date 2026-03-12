@@ -1,0 +1,5 @@
+# Starting Abaqus/CAE
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Starting Abaqus/CAE | | |  | | | |  | | --- | | To start Abaqus/CAE, you enter the command  ``` abaqus cae ```  at your operating system prompt, where abaqus is the command used to run Abaqus. This command may be different on your system. | | |   When Abaqus/CAE begins, the Start Session dialog box appears. The following session startup options are available:   * Create Model Database: With Standard/Explicit Model   allows you to begin a new   Abaqus/Standard   or   Abaqus/Explicit   analysis. * Create Model Database: With   Electromagnetic Model allows you to   begin a new electromagnetic analysis. * Open Database allows you to open a previously   saved model or output database file. * Run Script allows you to run a file containing   Abaqus/CAE   commands. * Start Tutorial allows you to begin an   introductory tutorial from the online documentation. * Recent Files allows you to open one of the five   most recently opened model or output database files. |

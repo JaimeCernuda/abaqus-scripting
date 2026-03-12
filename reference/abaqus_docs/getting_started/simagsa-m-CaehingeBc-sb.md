@@ -1,0 +1,5 @@
+# Applying boundary conditions and loads to the assembly
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Applying boundary conditions and loads to the assembly | | |  | | | |  | | --- | | The example demonstrates how to apply boundary conditions and loads to the assembly.   --- | | In this section:   * [Application of boundary conditions and load](simagsa-c-caehingebcexa.md#simagsa-c-caehingebcexa) * [Constraining the hinge piece with the lubrication hole](simagsa-t-caehingebchingehole.md) * [Constraining the pin](simagsa-t-caehingebcpin.md) * [Modifying the boundary condition applied to the pin](simagsa-t-caehingemodbcpin.md) * [Constraining the solid hinge piece](simagsa-t-caehingebchingesolid.md) * [Applying a load to the solid hinge](simagsa-t-caehingeloadhinge.md) | | | |

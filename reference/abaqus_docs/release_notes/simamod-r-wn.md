@@ -1,0 +1,5 @@
+# Introduction & Spatial Modeling
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Introduction & Spatial Modeling | | |  | | | |  | | --- | | This page describes recent changes in Introduction & Spatial Modeling.   * [2024 FD01](#simamod-r-wn__rs-R2024x-FD01) | | |   2024 FD01 Generating a Node Set from a Surface You can specify the name of a previously defined surface, in which case the nodes included in the surface will be assigned to the specified node set. This method can be used only to define sorted node sets.  Benefits: This surface-based node set feature makes it easier to create a node set that includes all the nodes on a predefined surface.  Related topics:  [About Surfaces](.._SIMACAEMODRefMap_simamod-c-surfoverview.md) and [Generating a Node Set from a Surface](.._SIMACAEMODRefMap_simamod-c-node.md#simamod-c-node-t-AssigningPreviouslyDefinedNodesToANodeSet-sma-topic10__simamod-c-node-s-GeneratingANodeSetFromASurface-section3). |

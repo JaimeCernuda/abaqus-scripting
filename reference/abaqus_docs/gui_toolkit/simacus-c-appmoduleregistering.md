@@ -1,0 +1,5 @@
+# Registering a GUI module
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Registering a GUI module | | |  | | | |  | | --- | | To make a GUI module accessible to the GUI infrastructure, you must register the module in the main window code. The register command takes two arguments: one for the name to be displayed in the Module combo box in CAE, and a second that specifies the name of the module to import. | | |   For more information, see [Registering modules](simacus-c-appcustommainregmodules.md). In most cases you register the module in the main window code by calling the module constructor at the end of the module GUI file.  If the example shown in [GUI module example](simacus-c-appmoduleoverview.md#simacus-c-appmoduleoverview) resides in a file named `myModuleGui.py`, `myModuleGui` must be used as the second argument to the registerModule method, as shown in the following statement:   ``` # Register modules  # self.registerModule(     displayedName='My Module', moduleImportName='myModuleGui') ``` |

@@ -1,0 +1,5 @@
+# The Abaqus C++ API architecture
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Abaqus C++ API architecture | | |  | | | |  | | --- | | This section describes the architecture of the Abaqus C++ interface to an output database. The output database is an object-oriented database, which means that the data are held by “objects” (C++ classes) that have certain behavior (C++ methods). The methods of an object in the database allow access to and manipulation of the data held by the object. The data members of an object can be either primitives (integer, floating point, string) or other objects.   --- | | In this section:   * [Class naming convention](simacmd-c-odbintrocpparchnames.md) * [Constructors](simacmd-c-odbintrocpparchcnstrc.md) * [Header files](simacmd-c-odbintrocpparchhead.md) | | | |

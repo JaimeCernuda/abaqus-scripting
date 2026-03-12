@@ -1,0 +1,5 @@
+# Defining a section
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining a section | | |  | | | |  | | --- | | Next, you will create a section that includes a reference to the material `Steel`. | | |   1. In the Model Tree, double-click the Sections container to create a section. The Create Section dialog box appears. 2. In the Create Section dialog box:    1. Name the section `SolidSection`.    2. In the Category list, accept Solid as the default selection.    3. In the Type list, accept Homogeneous as the default selection, and click Continue. The section editor appears. 3. In the editor, accept `Steel` as the material selection and click OK. If you had defined other materials, you could click the arrow next to the Material text box to see a list of available materials and to select the material of your choice. |

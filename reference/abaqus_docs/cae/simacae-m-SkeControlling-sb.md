@@ -1,0 +1,5 @@
+# Constraining, dimensioning, and parameterizing a sketch
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Constraining, dimensioning, and parameterizing a sketch | | |  | | | |  | | --- | | This section describes each of the Sketcher tools used to add constraints, dimensions, and parameters to sketches. You can use these tools to create relationships between individual entities in a sketch or to create a fully constrained and parametric sketch.   --- | | In this section:   * [Automatically constraining a sketch](simacae-t-skeautoconstrainbtn.md) * [Automatically dimensioning a sketch](simacae-t-skeautodimensionbtn.md) * [Adding individual constraints](simacae-t-skeconstrainbtn.md) * [Adding individual dimensions](simacae-t-skedimbtn.md) * [Adding and editing parameters](simacae-t-skeparameterbtn.md) * [Creating parametric equations](simacae-t-skeexpbuilder.md) | | | |

@@ -1,0 +1,5 @@
+# FXIconItem
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | FXIconItem | | |  | | |  |   Icon item     Global flags  **Icon list styles**  |  |  | | --- | --- | | **ICONLIST\_EXTENDEDSELECT** | Extended selection mode. | | **ICONLIST\_SINGLESELECT** | At most one selected item. | | **ICONLIST\_BROWSESELECT** | Always exactly one selected item. | | **ICONLIST\_MULTIPLESELECT** | Multiple selection mode. | | **ICONLIST\_AUTOSIZE** | Automatically size item spacing. | | **ICONLIST\_DETAILED** | List mode. | | **ICONLIST\_MINI\_ICONS** | Mini Icon mode. | | **ICONLIST\_BIG\_ICONS** | Big Icon mode. | | **ICONLIST\_ROWS** | Row-wise mode. | | **ICONLIST\_COLUMNS** | Column-wise mode. | |

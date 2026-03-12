@@ -1,0 +1,5 @@
+# Understanding quantity types
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding quantity types | | |  | | | |  | | --- | | A quantity type is a category that describes the data in one of the columns of an X–Y data object. Abaqus/CAE includes over eighty predefined quantity types that describe the output of every variable in Abaqus, including commonly used types like temperature, time, stress, and strain. The quantity types associated with each column appear in X–Y reports and as the default axis labels in an X–Y plot of that data object. | | |   When you create an X–Y data object from field output data or history output data, Abaqus/CAE automatically uses the quantity types specified in the output database. When you create an X–Y data object by loading data from an ASCII file or by entering data directly from the keyboard, you can specify quantity types for each column as you create the object. In either case, you can change the quantity types associated with either column by editing the data object in the Edit XY Data dialog box. |

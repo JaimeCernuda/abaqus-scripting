@@ -1,0 +1,5 @@
+# Fracture mechanics
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Fracture mechanics | | |  | | | |  | | --- | | --- | | In this section:   * [Contour integral evaluation: two-dimensional case](simabmk-c-jintegral2d.md) * [Contour integral evaluation: three-dimensional case](simabmk-c-jintegral3d.md) * [Center slant cracked plate under tension](simabmk-c-cracktensile.md) * [A penny-shaped crack under concentrated forces](simabmk-c-pennycrack.md) * [Fully plastic J-integral evaluation](simabmk-c-jintegralplastic.md) * [Ct-integral evaluation](simabmk-c-ctintegral.md) * [Nonuniform crack-face loading and J-integrals](simabmk-c-crackloadingjint.md) * [Single-edged notched specimen under a thermal load](simabmk-c-jintegraltherm.md) | | | |

@@ -1,0 +1,5 @@
+# Tire analyses
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Tire analyses | | |  | | | |  | | --- | | --- | | In this section:   * [Symmetric results transfer for a static tire analysis](simaexa-c-resultstrans.md) * [Steady-state rolling analysis of a tire](simaexa-c-rollingtire.md) * [Subspace-based steady-state dynamic tire analysis](simaexa-c-dynamic.md) * [Steady-state dynamic analysis of a tire substructure](simaexa-c-substructtire.md) * [Coupled acoustic-structural analysis of a tire filled with air](simaexa-c-acoustic.md) * [Import of a steady-state rolling tire](simaexa-c-importrolling.md) * [Analysis of a solid disc with Mullins effect and permanent set](simaexa-c-mullinstire.md) * [Tread wear simulation using adaptive meshing in Abaqus/Standard](simaexa-c-treadwear.md) * [Dynamic analysis of an air-filled tire with rolling transport effects](simaexa-c-rollingfilledtireacoustic.md) * [Acoustics in a circular duct with flow](simaexa-c-acousticrotatingflow.md) | | | |

@@ -1,0 +1,5 @@
+# *PARTICLE GENERATOR INLET
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*PARTICLE GENERATOR INLET | | |  | | | |  | | --- | | Specify a particle generator inlet surface. This option is used to specify an inlet surface to be used by a particle generator.  This page discusses:   * [Required parameters](#simakey-r-particlegeneratorinlet__simakey-r-particlegeneratorinlet-s-paramsrequired1) * [There are no data lines associated with this option.](#simakey-r-particlegeneratorinlet__simakey-r-particlegeneratorinlet-s-nodata1) | | |  | | --- | | See Also | | [\*PARTICLE GENERATOR](simakey-r-particlegenerator.md#simakey-r-particlegenerator) |  |  | | --- | |  | | In Other Guides | | [Particle Generator](.._SIMACAEANLRefMap_simaanl-c-particlegenerator.md) | |   ProductsAbaqus/Explicit  TypeModel data  LevelPartPart instance  Required parameters SURFACE  Set this parameter equal to the name of the inlet surface for the particle generator.  There are no data lines associated with this option. |

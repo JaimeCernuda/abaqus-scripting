@@ -1,0 +1,5 @@
+# Using substructure part instances in an assembly
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using substructure part instances in an assembly | | |  | | | |  | | --- | | Once you import substructure parts into your model database, you can add them to your assembly by instancing them in the same manner you would for any part. Substructure part instances are displayed in a translucent color in the viewport. | | |  | | --- | | See Also | | [Creating and manipulating part and model instances](simacae-m-AsmPosition-sb.md) | |   You can move and apply constraints to substructure part instances; however, substructure part instances have the following modeling limitations:   * You cannot assign sections to a substructure part instance. * You cannot apply attributes to a substructure part instance. * Substructure part instances are not eligible for definition of contact pairs. * Gravity loads are the only load definition that can be applied to substructure part instances. |

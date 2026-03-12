@@ -1,0 +1,5 @@
+# Entering temperature-dependent data
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Entering temperature-dependent data | | |  | | | |  | | --- | | If your material includes temperature dependence, you can enter data to define how material properties vary with increasing temperature. | | |  | | --- | | See Also | | [Understanding the Property module editors](simacae-m-PrpEditor-sb.md) | |   1. Toggle on Use temperature-dependent data in the material editor. A column labeled Temp appears in the tabular data area. 2. Fill in each row with the appropriate values. For special table editing options or to read data from an ASCII file, press mouse button 3. (For more information, see [Entering tabular data](simacae-c-intdialogspreadsheet.md).) |

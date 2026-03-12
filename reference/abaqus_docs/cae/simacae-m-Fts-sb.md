@@ -1,0 +1,5 @@
+# The Feature Manipulation toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Feature Manipulation toolset | | |  | | | |  | | --- | | You build a model in Abaqus/CAE by creating a series of features. For detailed discussions of features and feature-based modeling, see [The relationship between parts and features](simacae-c-prtconcpartsfeatures.md) and [Manipulating features in the Assembly module](simacae-c-asmconcfeatureset.md). This chapter explains how to use the Feature Manipulation toolset to modify and manage the existing features in your model and how to tune the performance of feature regeneration.   --- | | In this section:   * [Using the Feature Manipulation toolset](simacae-c-ftsconcepts.md) * [Using the Model Tree to manage features](simacae-c-ftsmanagerconcept.md) * [Tuning feature regeneration](simacae-m-FtsConcRegenerate-sb.md) * [Modifying and manipulating features](simacae-m-FtsHelptopics-sb.md) | | | |

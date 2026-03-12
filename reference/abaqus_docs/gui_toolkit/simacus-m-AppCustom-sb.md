@@ -1,0 +1,5 @@
+# Customizing the main window
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing the main window | | |  | | | |  | | --- | | The main window base class provides the basic infrastructure for the application's user interface. For example, you can use this base class to enable user interaction in the interface, manipulate modules and toolsets, and display objects in the viewport. However, this base class does not provide access to any functionality in the application; for example, you cannot use the base class to create parts or run an analysis job. This section describes how you can assign functionality to the application by deriving from the main window base class and then registering modules and toolsets.   --- | | In this section:   * [Modules and toolsets](simacus-c-appcustommodules.md) * [The Abaqus/CAE main window](simacus-m-AppCustomMain-sb.md) | | | |

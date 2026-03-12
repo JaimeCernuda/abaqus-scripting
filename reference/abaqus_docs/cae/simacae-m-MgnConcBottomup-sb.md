@@ -1,0 +1,5 @@
+# Bottom-up meshing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Bottom-up meshing | | |  | | | |  | | --- | | This section explains the bottom-up meshing technique and describes the types of regions to which this meshing technique can be applied. The related topic of mesh associativity is also explained.   --- | | In this section:   * [What is bottom-up meshing?](simacae-c-mgnconcmeshingbottomup.md) * [The bottom-up meshing domain](simacae-c-mgnconcmeshingbudomain.md) * [Bottom-up meshing methods](simacae-c-mgnconcmeshingbumethods.md) * [Selecting parameters for a bottom-up mesh](simacae-c-mgnconcmeshingbuparams.md) * [Creating the boundary mesh for a bottom-up region](simacae-t-mgnconcmeshingbupreview.md) * [Improving the quality of boundary meshes for a bottom-up region](simacae-c-mgnconcmeshingbupreviewedit.md) * [Defining connecting sides for a bottom-up swept mesh](simacae-c-mgnconcmeshingbuconnecting.md) * [Creating a bottom-up mesh](simacae-t-mgnhlpcreatebottomup.md) * [An example including bottom-up meshing techniques](simacae-m-MgnConcMeshingBuexample-sb.md) | | | |

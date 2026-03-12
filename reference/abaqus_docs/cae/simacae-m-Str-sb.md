@@ -1,0 +1,5 @@
+# The Stream toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Stream toolset | | |  | | | |  | | --- | | A streamline is a curve that is instantaneously tangent to the velocity vector of the flow, and a stream is a set of streamlines that enable you to visualize the velocity or vorticity data in a fluid flow analysis. The Stream toolset is available only in the Visualization module.  This chapter explains how to use the Stream toolset to create, modify, and delete streams; display or hide them in the viewport; and customize several aspects of their appearance.   --- | | In this section:   * [Understanding stream display](simacae-c-strintro.md) * [Creating a stream](simacae-t-strhlpcreate.md) * [Displaying and hiding streams](simacae-c-strhlpdisplay.md) * [Customizing stream display](simacae-m-StrHlpOptions-sb.md) | | | |

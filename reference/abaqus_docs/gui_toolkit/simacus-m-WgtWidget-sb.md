@@ -1,0 +1,5 @@
+# Widgets
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Widgets | | |  | | | |  | | --- | | This section describes how you can create widgets in your application. There are many widgets in the Abaqus GUI Toolkit; however, only the most commonly used widgets are described here. You should refer to the [Abaqus GUI Toolkit Reference Guide](.._SIMACAEGUIRefHtml_simagui-c-ov.md) for a complete listing of widget classes.   --- | | In this section:   * [Labels and buttons](simacus-m-WgtWidgetLabels-sb.md) * [Text widgets](simacus-m-WgtWidgetText-sb.md) * [Lists and combo boxes](simacus-m-WgtWidgetLists-sb.md) * [Range widgets](simacus-m-WgtWidgetRange-sb.md) * [Tree widgets](simacus-m-WgtWidgetTree-sb.md) * [Table widget](simacus-m-WgtWidgetTables-sb.md) * [Miscellaneous widgets](simacus-m-WgtWidgetMisc-sb.md) * [The create method](simacus-c-wgtwidgetcreate.md) * [Widgets and fonts](simacus-c-wgtwidgetfonts.md) | | | |

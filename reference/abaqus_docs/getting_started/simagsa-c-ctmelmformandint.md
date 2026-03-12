@@ -1,0 +1,5 @@
+# About element formulation and integration
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About element formulation and integration | | |  | | | |  | | --- | | This is a classic test used to assess the behavior of a given finite element. | | |   The cantilever beam is shown in [Figure 1](simagsa-c-ctmelmformandint.md#simagsa-c-ctmelmformandint__simagsa-m-gss-pointload). Since the beam is relatively slender, we would normally model it with beam elements. However, it is used here to help assess the effectiveness of various solid elements. Figure 1. Cantilever beam under a point load P at its free end.     The beam is 150 mm long, 2.5 mm wide, and 5 mm deep; built-in at one end; and carrying a tip load of 5 N at the free end. The material has a Young's modulus, E, of 70 GPa and a Poisson's ratio of 0.0. Using beam theory, the static deflection of the tip of the beam for a load P is given as  δt⁢i⁢p=P⁢l33⁢E⁢I,  where I=b⁢d3/12, l is the length, b is the width, and d is the depth of the beam.  For P=​ 5 N the tip deflection is 3.09 mm. |

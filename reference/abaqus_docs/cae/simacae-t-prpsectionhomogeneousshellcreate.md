@@ -1,0 +1,5 @@
+# Creating a homogeneous shell section
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating a homogeneous shell section | | |  | | | |  | | --- | | You can create a homogeneous shell section. | | |   1. From the main menu bar, select    SectionCreate. A Create Section dialog box appears.      |  |    | --- |    | Tip: You can also click Create in the Section Manager or select the create section tool  in the Property module toolbox. | 2. Enter a section name. For more information on naming objects, see    [Using basic dialog box components](simacae-c-intdialogbasic.md). 3. Select Shell as the section    Category and Homogeneous as the    section Type, and click Continue. The shell section editor appears. 4. Choose the Section integration method. Choose    During analysis to specify properties for homogeneous    shell sections integrated during the analysis. Choose Before    analysis to specify properties for pre-integrated homogeneous shell    sections. |

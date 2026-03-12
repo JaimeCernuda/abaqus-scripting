@@ -1,0 +1,5 @@
+# Keeping the GUI and commands up-to-date
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Keeping the GUI and commands up-to-date | | |  | | | |  | | --- | | If a command edits an object, you should request that a query be registered on that object by specifying  True for the registerQuery argument in the GUI command constructor. Registering a query will cause the keywords associated with the AFXGuiCommand to be updated with the kernel values when the mode is started and any time the kernel values change. | | |   For example,  ```  cmd = AFXGuiCommand(      mode, 'PointSection', 'mdb.models[%s]', True) ```  In addition, modes recognize `session.viewports[%s]` as a special repository. The mode registers a query on the session automatically so that the command will be kept up-to-date if the user switches the current viewport. The following examples illustrate the special syntax:   ``` cmd = AFXGuiCommand(     mode,'setValues','session.viewports[%s]', True)  cmd = AFXGuiCommand(     mode,'bringToFront','session.viewports[%s]', True) ``` |

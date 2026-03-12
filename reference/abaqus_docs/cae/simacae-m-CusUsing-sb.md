@@ -1,0 +1,5 @@
+# Using the Customize toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Customize toolset | | |  | | | |  | | --- | | All of the functionality of the Customize toolset is accessible through the Customize dialog box. Select ToolsCustomize or ViewToolbarsCustomize from the main menu bar in any module to open the Customize dialog box. This section explains how to use the features of the Customize dialog box.   --- | | In this section:   * [Hiding toolbars](simacae-t-cususinghide.md) * [Creating, modifying, and removing keyboard shortcuts](simacae-t-cusfunctions.md) * [Displaying existing keyboard shortcuts](simacae-t-cusfunctionsassignments.md) * [Creating and modifying custom toolbars](simacae-t-cususingtoolbars.md) * [Changing icon assignments](simacae-t-cususingicons.md) * [Restoring toolbars to their default settings](simacae-t-cususingreset.md) | | | |

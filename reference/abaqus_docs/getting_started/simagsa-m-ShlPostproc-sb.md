@@ -1,0 +1,5 @@
+# Postprocessing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Postprocessing | | |  | | | |  | | --- | | This section discusses postprocessing with Abaqus/CAE. Both contour and symbol plots are useful for visualizing shell analysis results. Since contour plotting was discussed in detail in [Using Continuum Elements](simagsa-m-Continuumelem-sb.md), we use symbol plots here. In the Module list located in the context bar, click Visualization to enter the Visualization module. Then, open the .odb file created by this job (SkewPlate.odb).  By default, Abaqus/CAE plots the undeformed shape of the model.   --- | | In this section:   * [Element normals](simagsa-t-elementnormals.md) * [Symbol plots](simagsa-t-symbolplots.md) * [Material directions](simagsa-t-materialdirections.md) * [Evaluating results based on tabular data](simagsa-c-evaluatingresultsbasedontabulardata.md) | | | |

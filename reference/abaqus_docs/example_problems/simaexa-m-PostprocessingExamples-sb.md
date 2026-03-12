@@ -1,0 +1,5 @@
+# Postprocessing examples
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Postprocessing examples | | |  | | | |  | | --- | | Sample postprocessing programs that perform commonly exercised tasks are presented in this section.   --- | | In this section:   * [Joining data from multiple results files and converting file format: FJOIN](simaexa-c-fjoin.md) * [Calculation of principal stresses and strains and their directions: FPRIN](simaexa-c-fprin.md) * [Creation of a perturbed mesh from original coordinate data and eigenvectors: FPERT](simaexa-c-fpert.md) * [Output radiation view factors and facet areas: FRAD](simaexa-c-frad.md) * [Creation of a data file to facilitate the postprocessing of elbow element results: FELBOW](simaexa-c-felbow.md) * [Visualizing beam outputs with actual beam cross-section representation for contact](simaexa-c-realbeamcrosssectoutputs.md) * [Translating Abaqus data to modal neutral file format for analysis in MSC.ADAMS](simaexa-c-adams.md) | | | |

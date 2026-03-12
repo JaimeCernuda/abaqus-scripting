@@ -1,0 +1,5 @@
+# Defining tie constraints
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining tie constraints | | |  | | | |  | | --- | | You will use tie constraints to attach the chips to the board. | | |   Begin by defining a surface named `Board` for the circuit board. Select Both sides in the prompt area to specify that the surface is double-sided. In the Model Tree, double-click the Constraints container; define a tie constraint named `TopChip`. Select `Board` as the main surface and `TopChip` as the secondary node region. Toggle off Tie rotational DOFs if applicable in the Edit Constraint dialog box since only the effects of the chip masses are of interest, and click OK. Yellow circles appear on the model to represent the constraint. Similarly, create tie constraints named `MidChip` and `BotChip` for the middle and bottom chips. |

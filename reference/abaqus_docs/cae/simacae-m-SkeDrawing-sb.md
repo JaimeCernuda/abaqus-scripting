@@ -1,0 +1,5 @@
+# Sketching simple objects
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Sketching simple objects | | |  | | | |  | | --- | | This section describes how to use the Sketcher tools to draw simple objects.   --- | | In this section:   * [Sketching an isolated point](simacae-t-skespotbtn.md) * [Sketching lines and polygons](simacae-t-skelinesbtn.md) * [Sketching rectangles](simacae-t-skerectanglebtn.md) * [Sketching circles](simacae-t-skecirclectrradbtn.md) * [Sketching arcs using a center point and two endpoints](simacae-t-skearcctrendsbtn.md) * [Sketching arcs through three points](simacae-t-skearcthreeptsbtn.md) * [Sketching arcs tangent to a line](simacae-t-skearctanadjbtn.md) * [Sketching ellipses](simacae-t-skeellipsebtn.md) * [Sketching fillets between two lines](simacae-t-skefilletbtn.md) * [Sketching splines](simacae-t-skesplinebtn.md) | | | |

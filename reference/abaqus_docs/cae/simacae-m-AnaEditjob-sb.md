@@ -1,0 +1,5 @@
+# Using the job editor
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the job editor | | |  | | | |  | | --- | | This section describes how you use the job editor to configure the settings of a job.   --- | | In this section:   * [Navigating the job customization options](simacae-c-anajobmaneditor.md) * [Configuring job submission attributes](simacae-c-anajobeditorbasicbtn.md) * [Choosing the job type](simacae-t-anajobeditortype.md) * [Setting the license type for the SimUnit license model](simacae-t-anajobeditorlicensetype.md) * [Choosing the job run mode](simacae-t-anajobeditorrunmode.md) * [Setting the job submit time](simacae-t-anajobeditorsubmittime.md) * [Specifying general job settings](simacae-c-anajobeditorotherbtn.md) * [Controlling job memory settings](simacae-c-anajobeditormemorybtn.md) * [Controlling job parallel execution](simacae-c-anajobeditorparallelizationbtn.md) * [Controlling job precision](simacae-c-anajobeditorprecisionbtn.md) | | | |

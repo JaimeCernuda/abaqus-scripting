@@ -1,0 +1,5 @@
+# Working with part instances
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Working with part instances | | |  | | | |  | | --- | | This section describes part instances, how they relate to the original part, how you link and exclude part instances, and how you use them to create the assembly.   --- | | In this section:   * [Understanding the relationship between models, parts, instances, and assemblies](simacae-c-asmconcinstancesrelationship.md) * [What is the difference between a dependent and an independent part instance?](simacae-c-asmconcinstancesdifference.md) * [How do I decide whether to create a dependent or an independent part instance?](simacae-c-asmconcinstancesdeciding.md) * [Changing from a dependent to an independent part instance or vice versa](simacae-c-asmconcinstanceschanging.md) * [Linking part instances between models](simacae-c-asmconcinstanceslinking.md) * [Excluding part instances from an analysis](simacae-c-asmconcinstancesexcluding.md) * [Sets and part instances](simacae-c-asmconcinstancessets.md) | | | |

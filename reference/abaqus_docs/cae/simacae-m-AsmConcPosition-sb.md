@@ -1,0 +1,5 @@
+# Creating the assembly
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating the assembly | | |  | | | |  | | --- | | After you create a part instance or a model instance, you apply a succession of position constraints and positioning operations to position it relative to other instances in the global coordinate system. This section describes the tools that Abaqus/CAE provides to position and constrain part and model instances. This section also describes how you can replace a part instance.   --- | | In this section:   * [The position tools in the Assembly module](simacae-c-asmconceptassembly.md) * [How the position constraint methods differ](simacae-c-asmconceptalignmate.md) * [How conflicts can arise between position constraints, translations, and rotations](simacae-c-asmconcconstrain.md) * [Positioning a part or model instance using the Translate To tool](simacae-c-asmconceptcontact.md) * [Replacing an instance](simacae-c-asmconceptsreplace.md) | | | |

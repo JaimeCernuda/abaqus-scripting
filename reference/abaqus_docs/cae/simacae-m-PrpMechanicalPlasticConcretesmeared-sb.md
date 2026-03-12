@@ -1,0 +1,5 @@
+# Defining concrete smeared cracking
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining concrete smeared cracking | | |  | | | |  | | --- | | You can use the concrete smeared cracking model to define the properties of plain concrete outside the elastic range in an Abaqus/Standard analysis. For more information, see [Concrete Smeared Cracking](.._SIMACAEMATRefMap_simamat-c-concrete.md).   --- | | In this section:   * [Specifying a concrete smeared cracking model](simacae-t-prpmechanicalplasticconcretesmearedmodel.md) * [Defining tension stiffening for a concrete smeared cracking model](simacae-t-prpmechanicalplasticconcretesmearedtensionstiffening.md) * [Defining shear retention for a concrete smeared cracking model](simacae-t-prpmechanicalplasticconcretesmearedshearretention.md) * [Defining the shape of the failure surface for a concrete smeared cracking model](simacae-t-prpmechanicalplasticconcretesmearedfailureratios.md) | | | |

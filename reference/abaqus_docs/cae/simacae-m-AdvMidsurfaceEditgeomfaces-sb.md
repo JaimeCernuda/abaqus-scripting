@@ -1,0 +1,5 @@
+# Creating shell faces for the midsurface model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating shell faces for the midsurface model | | |  | | | |  | | --- | | Once you have a reference representation, you must manually build a shell model to replace the solid cells that have been removed from the model. You can use the shell feature tools and the tools in the Geometry Edit toolset (for more information, see [Adding a shell feature](simacae-m-PrtHelpAddshell-sb.md) and [The Geometry Edit toolset](simacae-m-Rep-sb.md), respectively) to create and edit shell faces. This section discusses some special conditions that may apply when you use these tools to create faces for a midsurface model.   --- | | In this section:   * [Using the offset face tool for midsurface modeling](simacae-c-advmidoffset.md) * [Using the extend faces tool for midsurface modeling](simacae-c-advmidextend.md) | | | |

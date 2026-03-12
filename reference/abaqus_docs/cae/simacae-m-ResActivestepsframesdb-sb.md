@@ -1,0 +1,5 @@
+# Customizing the display of steps and frames in the results
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing the display of steps and frames in the results | | |  | | | |  | | --- | | You can customize your display of an output database's steps and frames by activating only a subset of these steps and frames or by changing the duration or arc length of one or more steps. Abaqus/CAE displays only active steps and frames when you examine output data by stepping through data frame by frame, when you animate the data, and when you generate X–Y history data from field data.   --- | | In this section:   * [Activating and deactivating steps and frames](simacae-t-resactive.md) * [Changing the period of a step](simacae-t-resstepperiod.md) | | | |

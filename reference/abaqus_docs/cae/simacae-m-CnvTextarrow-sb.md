@@ -1,0 +1,5 @@
+# Working with viewport arrow and text annotations
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Working with viewport arrow and text annotations | | |  | | | |  | | --- | | This section explains how to create, modify, and manage arrow and text annotations.   --- | | In this section:   * [Annotating viewports](simacae-c-cnvannotateview.md) * [Creating an arrow annotation](simacae-t-cnvarrowbtn.md) * [Creating a text annotation](simacae-t-cnvtextbtn.md) * [Creating combined arrow and text annotations](simacae-t-cnvarrowtextcombo.md) * [Manipulating annotations in the current viewport](simacae-t-cnvmoveannotation.md) * [Editing arrow annotation attributes](simacae-t-cnveditarrowanno.md) * [Editing text annotation attributes](simacae-t-cnvedittextanno.md) * [Plotting annotations in the current viewport](simacae-t-cnvplotann.md) * [Hiding annotations in the current viewport](simacae-t-cnvhideann.md) * [Copying viewport annotations to another database](simacae-t-cnvcopyann.md) * [Rearranging the annotation list order](simacae-t-cnvorderann.md) | | | |

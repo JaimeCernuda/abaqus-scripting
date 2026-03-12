@@ -1,0 +1,5 @@
+# Working with the Model Tree and the Results Tree
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Working with the Model Tree and the Results Tree | | |  | | | |  | | --- | | The Model Tree and Results Tree are convenient tools for navigating and managing your models and analysis results. You can use the Model Tree to view a model and the items that it contains, and you can use the Results Tree to display analysis results from output databases as well as session-specific data such as X–Y plots. Both trees provides shortcuts to much of the functionality of the main menu bar, the module toolboxes, and the various managers. This section describes both the Model Tree and Results Tree.   --- | | In this section:   * [The Model Tree](simacae-c-topmodeltreeoverview.md) * [The Results Tree](simacae-c-topresultstreeoverview.md) * [Using popup menus in the Model Tree and the Results Tree](simacae-c-topmodeltreeshortcuts.md) * [Changing the view of the model](simacae-c-topmodeltreeview.md) | | | |

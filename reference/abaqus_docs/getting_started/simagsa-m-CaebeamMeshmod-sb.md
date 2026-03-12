@@ -1,0 +1,5 @@
+# Meshing the model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Meshing the model | | |  | | | |  | | --- | | You will now generate the finite element mesh. You can choose the meshing technique that Abaqus/CAE will use to create the mesh, the element shape, and the element type. Abaqus/CAE uses a number of different meshing techniques. The default meshing technique assigned to the model is indicated by the color of the model when you enter the Mesh module; if Abaqus/CAE displays the model in orange, it cannot be meshed without assistance from you.   --- | | In this section:   * [Assigning mesh controls](simagsa-t-caebeammeshcontrols.md) * [Assigning an Abaqus element type](simagsa-t-caebeammeshelement.md) * [Creating the mesh](simagsa-t-caebeammeshmodel.md) | | | |

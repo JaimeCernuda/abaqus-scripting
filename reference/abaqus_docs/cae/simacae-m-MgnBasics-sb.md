@@ -1,0 +1,5 @@
+# Mesh module basics
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Mesh module basics | | |  | | | |  | | --- | | This section provides brief explanations of terms and concepts that you must understand to use the Mesh module effectively. It gives you an overview of the functions available and describes the role that each function plays in the mesh creation process.   --- | | In this section:   * [The meshing process](simacae-c-mgnbasicsprocess.md) * [Mesh attributes and controls](simacae-c-mgnbasicsattributes.md) * [Mesh generation](simacae-c-mgnbasicsgeneration.md) * [Top-down meshing](simacae-c-mgnbasicstopdown.md) * [Bottom-up meshing](simacae-c-mgnbasicsbottomup.md) * [Mesh technique color coding](simacae-c-mgnbasicscolor.md) * [Mesh refinement](simacae-c-mgnbasicsrefining.md) * [Mesh optimization](simacae-c-mgnbasicsoptimize.md) * [Mesh verification](simacae-c-mgnbasicsverification.md) * [Meshing independent and dependent part instances](simacae-c-mgnbasicsdependent.md) * [Displaying a native mesh](simacae-c-mgnbasicsdisplaynative.md) | | | |

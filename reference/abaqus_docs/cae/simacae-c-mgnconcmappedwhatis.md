@@ -1,0 +1,5 @@
+# What is structured meshing?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What is structured meshing? | | |  | | | |  | | --- | | The structured meshing technique generates structured meshes using simple predefined mesh topologies. Abaqus/CAE transforms the mesh of a regularly shaped region, such as a square or a cube, onto the geometry of the region you want to mesh. For example, [Figure 1](simacae-c-mgnconcmappedwhatis.md#simacae-c-mgnconcmappedwhatis__simacae-c-mgn-mapped1) illustrates how simple mesh patterns for triangles, squares, and pentagons are applied to more complex shapes. | | |   Figure 1. Two-dimensional structured mesh patterns.    You can apply the structured meshing technique to simple two-dimensional regions (planar or curved) or to simple three-dimensional regions that have been assigned the Hex or Hex-dominated element shape option. For more information about assigning element shapes to a region, see [Choosing an element shape](simacae-t-mgnattributesshape.md). |

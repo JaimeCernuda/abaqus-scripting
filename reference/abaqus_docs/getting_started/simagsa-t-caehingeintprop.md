@@ -1,0 +1,5 @@
+# Creating an interaction property
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating an interaction property | | |  | | | |  | | --- | | In this procedure you will create a mechanical contact interaction property. | | |   1. In the Model Tree, double-click the Interaction Properties container to create a contact property. The Create Interaction Property dialog box appears. 2. In the Create Interaction Property dialog box:    1. Name the property `NoFric`.    2. In the Type list, accept Contact as the default selection.    3. Click Continue. The Edit Contact Property dialog box appears. 3. From the dialog box's menu bar, select MechanicalTangential Behavior and accept Frictionless for the friction formulation. 4. Click OK to save your settings and to close the Edit Contact Property dialog box. |

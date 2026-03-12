@@ -1,0 +1,5 @@
+# Skin and stringer reinforcements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Skin and stringer reinforcements | | |  | | | |  | | --- | | This section provides information on how to model skin and stringer reinforcements.   --- | | In this section:   * [Defining skin reinforcements](simacae-c-engskinoverview.md) * [Defining stringer reinforcements](simacae-c-engstringeroverview.md) * [Managing skin and stringer reinforcements](simacae-c-engskinmanage.md) * [Generating elements on a skin or stringer reinforcement](simacae-c-engskinmesh.md) * [Assigning element types to skin or stringer reinforcements](simacae-c-engskinassign.md) * [Using offset meshes to create skin reinforcements](simacae-c-engskinoffset.md) * [Assigning surface properties to skins and stringers](simacae-c-engskinsurf.md) * [Creating and editing skin reinforcements](simacae-t-engskincreate.md) * [Creating and editing stringer reinforcements](simacae-t-engstringercreate.md) | | | |

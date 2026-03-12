@@ -1,0 +1,5 @@
+# Editing and repairing faces
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Editing and repairing faces | | |  | | | |  | | --- | | This section describes the tools that you can use to repair faces.   --- | | In this section:   * [Removing faces](simacae-t-rephelprepairremovefacestitch.md) * [Covering edges with a new face](simacae-t-rephelprepairnewface.md) * [Replace faces](simacae-t-rephelprepairreplacefaces.md) * [Repairing small faces](simacae-t-rephelprepairsmallfaces.md) * [Repairing a sliver](simacae-t-rephelprepairremovesliver.md) * [Repairing face normals](simacae-t-rephelprepairfacenormals.md) * [Offset faces](simacae-t-rephelprepairoffset.md) * [Extend faces](simacae-t-rephelprepairextend.md) * [Blend faces](simacae-t-rephelprepairblend.md) * [Create face from element faces](simacae-t-rephelprepairfromelem.md) | | | |

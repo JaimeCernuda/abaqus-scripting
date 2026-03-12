@@ -1,0 +1,5 @@
+# Constraint commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Constraint commands | | |  | | | |  | | --- | | The Constraint commands define constraints between regions of the model.   --- | | In this section:   * [Constraint object](simaker-c-constraintpyc.md) * [AdjustPoints object](simaker-c-adjustpointspyc.md) * [Coupling object](simaker-c-couplingpyc.md) * [DisplayBody object](simaker-c-displaybodypyc.md) * [EmbeddedRegion object](simaker-c-embeddedregionpyc.md) * [Equation object](simaker-c-equationpyc.md) * [MultipointConstraint object](simaker-c-multipointconstraintpyc.md) * [RigidBody object](simaker-c-rigidbodypyc.md) * [ShellSolidCoupling object](simaker-c-shellsolidcouplingpyc.md) * [Tie object](simaker-c-tiepyc.md) | | | |

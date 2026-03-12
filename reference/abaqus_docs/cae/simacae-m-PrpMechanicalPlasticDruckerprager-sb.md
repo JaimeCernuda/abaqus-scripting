@@ -1,0 +1,5 @@
+# Defining Drucker-Prager plasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining Drucker-Prager plasticity | | |  | | | |  | | --- | | You can define a Drucker-Prager model to model frictional materials, which are typically granular-like soils and rock and exhibit pressure-dependent yield. See [Extended Drucker-Prager Models](.._SIMACAEMATRefMap_simamat-c-druckerprager.md) for more information.   --- | | In this section:   * [Defining a Drucker-Prager model](simacae-t-prpmechanicalplasticdruckerpragermodel.md) * [Defining Drucker-Prager hardening](simacae-t-prpmechanicalplasticdruckerpragerhardening.md) * [Defining Drucker-Prager creep](simacae-t-prpmechanicalplasticdruckerpragercreep.md) * [Specifying triaxial test data for a Drucker-Prager material model](simacae-t-prpmechanicalplasticdruckerpragertriaxial.md) | | | |

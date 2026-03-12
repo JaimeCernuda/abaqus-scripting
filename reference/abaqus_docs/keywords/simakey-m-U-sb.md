@@ -1,0 +1,5 @@
+# U
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | U | | |  | | | |  | | --- | | This section describes each Abaqus input option that begins with U, including the intended use, Abaqus product support, whether it is model or history data, and the relevant parameters and data lines.   --- | | In this section:   * [\*UEL PROPERTY](simakey-r-uelproperty.md) * [\*UNDEX CHARGE PROPERTY](simakey-r-undexchargeproperty.md) * [\*UNIAXIAL](simakey-r-uniaxial.md) * [\*UNIAXIAL TEST DATA](simakey-r-uniaxialtestdata.md) * [\*UNIFORM](simakey-r-uniform.md) * [\*UNIT SYSTEM](simakey-r-unitsystem.md#simakey-r-unitsystem) * [\*UNLOADING DATA](simakey-r-unloadingdata.md) * [\*USER DEFINED FIELD](simakey-r-userdefinedfield.md) * [\*USER ELEMENT](simakey-r-userelement.md) * [\*USER MATERIAL](simakey-r-usermaterial.md) * [\*USER OUTPUT VARIABLES](simakey-r-useroutputvariables.md) | | | |

@@ -1,0 +1,5 @@
+# Defining analysis steps
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining analysis steps | | |  | | | |  | | --- | | Before you apply loads or boundary conditions to the model or define contact within the model, you must define the different steps in the analysis. Once the steps are created, you can specify in which steps loads, boundary conditions, and interactions should be applied.  When you create a step, Abaqus/CAE selects a default set of output variables corresponding to the analysis procedure and selects a default rate at which the variables are written to the output database. In this tutorial you will edit the default output frequency for the first step and edit the list of default output variables for the second step.   --- | | In this section:   * [Creating the analysis steps](simagsa-t-caehingecreatesteps.md) * [Requesting output](simagsa-t-caehingeoutput.md) * [Selecting a degree of freedom to monitor](simagsa-t-caehingemonitor.md) | | | |

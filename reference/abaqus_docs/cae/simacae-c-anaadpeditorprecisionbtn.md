@@ -1,0 +1,5 @@
+# Controlling adaptivity process precision
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Controlling adaptivity process precision | | |  | | | |  | | --- | | To locate the adaptivity process editor, select AdaptivityEditadaptivity process name from the main menu bar. Use the Precision tabbed page to control the precision of nodal output. You can select either single or full nodal output precision. This option is equivalent to the `output_precision` option in the Abaqus execution procedure. For more information, see [Abaqus/Standard and Abaqus/Explicit Execution](.._SIMACAEEXCRefMap_simaexc-c-analysisproc.md). | | |  | | --- | | See Also | | [Understanding adaptivity processes](simacae-m-AnaAdaptivityconcepts-sb.md) | | [Using the adaptivity process editor](simacae-m-AnaEditadaptivity-sb.md) |  |  | | --- | |  | | In Other Guides | | [About Adaptive Remeshing](.._SIMACAEANLRefMap_simaanl-c-adpover.md) | | |

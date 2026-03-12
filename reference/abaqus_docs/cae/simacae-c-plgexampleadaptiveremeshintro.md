@@ -1,0 +1,5 @@
+# Introduction
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Introduction | | |  | | | |  | | --- | | When you execute an adaptivity analysis, Abaqus/CAE submits a succession of Abaqus/Standard jobs as it attempts to reduce the mesh discretization error in your model. This error is characterized by error indicator measures calculated by Abaqus/Standard. Global norms of these indicators are calculated by Abaqus/CAE, and you can use these norms to evaluate the performance and effectiveness of the adaptive remeshing process. For more information, see [Selection of Error Indicators Influencing Adaptive Remeshing](.._SIMACAEANLRefMap_simaanl-c-adperrorindicators.md). | | |   The adaptivity plotter plug-in enables you to plot these error indicator norms and to view a graphical representation of the effectiveness of the adaptive remeshing process. You can access the plug-in from the Plug-ins menu in any module. The plug-in reads the model database (.cae) file associated with the adaptive remeshing jobs; therefore, the file must be available. |

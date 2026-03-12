@@ -1,0 +1,5 @@
+# About design responses
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About design responses | | |  | | | |  | | --- | | The inputs to your optimization are called the design responses. Design responses can be read from the Abaqus output database file; for example, stiffness, stresses, eigenfrequencies, and displacements. Alternatively, the Optimization module can extract the design responses from the position of nodes or the layout of elements in your model; for example, its weight, center of mass, or inertia. | | |   A design response is associated with a region of your model; however, it consists of a single scalar value, such as the maximum stress in a region or the total volume of the model. In addition, a design response can be associated with a particular step or load case. For more information, see [Configuring design responses](simacae-m-OpzDesignresponsedit-sb.md), and [Design Responses](.._SIMACAEANLRefMap_simaanl-c-optdesignresponses.md). |

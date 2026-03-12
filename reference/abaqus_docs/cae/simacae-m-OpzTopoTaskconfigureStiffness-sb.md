@@ -1,0 +1,5 @@
+# Configuring a condition-based topology optimization task
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Configuring a condition-based topology optimization task | | |  | | | |  | | --- | | A condition-based topology optimization uses a strain energy objective function and a volume constraint. You use the optimization task editor to customize various aspects of the condition-based topology optimization. To locate the editor, select TaskEditoptimization task name from the main menu bar. To specify a condition-based topology optimization, select the Advanced tab and choose Condition-based optimization.   --- | | In this section:   * [Configuring basic settings](simacae-t-opztopotaskconfigurestiffnessgeneral.md) * [Configuring advanced options](simacae-t-opztopotaskconfigurestiffnessadvanced.md) | | | |

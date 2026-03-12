@@ -1,0 +1,5 @@
+# Support for academic institutions
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Support for academic institutions | | |  | | | |  | | --- | | Under the terms of the Academic Software License Agreement we do not provide support to users at academic institutions apart from an initial period to cover resolving licensing and installation issues. | | |   Academics should become part of the SIMULIA Learning Community at [https://www.3ds.com/products-services/simulia/simulia-academic-program/learning-community/](https://www.3ds.com/products-services/simulia/simulia-academic-program/learning-community/). Academic users can purchase a technical support account to coincide with their annual software lease. For more information, please contact your support office. |

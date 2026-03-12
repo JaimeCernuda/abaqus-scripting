@@ -1,0 +1,5 @@
+# Icon type
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Icon type | | |  | | | |  | | --- | | If you want to display an icon in an item, you must set the type of the column to be ICON and assign the icons to be shown. | | |   This type of column is not editable by the user. The following example shows how you can include an icon in a table cell:  ``` vf = FXVerticalFrame(parent, FRAME_SUNKEN|FRAME_THICK,     0,0,0,0, 0,0,0,0) table = AFXTable(vf, 4, 2, 4, 2, None, 0,     AFXTABLE_NORMAL|AFXTABLE_EDITABLE) table.setLeadingRows(1) table.setLeadingRowLabels(' \tStatus')  table.showHorizontalGrid(True) table.showVerticalGrid(True)       table.setColumnType(0, table.ICON) table.setColumnWidth(0, 30) table.setColumnJustify(0, AFXTable.CENTER)  from appIcons import circleData, squareData  circleIcon = FXXPMIcon(getAFXApp(), circleData) squareIcon = FXXPMIcon(getAFXApp(), squareData) table.setItemIcon(1, 0, circleIcon) table.setItemIcon(2, 0, squareIcon) table.setItemIcon(3, 0, circleIcon) ``` Figure 1. Including icons in table cells. |

@@ -1,0 +1,5 @@
+# Interactions
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Interactions | | |  | | | |  | | --- | | This section defines the basic tests that are used to provide evidence that the implementation of the interaction options in Abaqus produces the expected results.   --- | | In this section:   * [Small engineering tests with contact](simaver-m-SmallEngTests-Contact-sb.md) * [Contact properties](simaver-m-ContactProperties-sb.md) * [Interference fit and specified clearance](simaver-m-InterferenceFit-sb.md) * [Contact formulations](simaver-m-ContactFormulations-sb.md) * [Surface smoothing for surface-to-surface contact](simaver-c-smoothsurftosurf.md) * [Initial contact stress](simaver-c-continit.md#simaver-c-continit) * [Contact wear modeling](simaver-c-contactwear.md) * [Miscellanous](simaver-m-ContactTests-sb.md) | | | |

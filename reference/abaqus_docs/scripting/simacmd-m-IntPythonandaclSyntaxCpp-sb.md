@@ -1,0 +1,5 @@
+# Abaqus Scripting Interface documentation style
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Abaqus Scripting Interface documentation style | | |  | | | |  | | --- | | This section describes the style that is used to describe a command in the [Abaqus Scripting Reference Guide](.._SIMACAEKERRefMap_simaker-c-ov.md#simaker-c-ov). You may want to refer to the [Abaqus Scripting Reference Guide](.._SIMACAEKERRefMap_simaker-c-ov.md#simaker-c-ov) while you read this section and compare the style of a documented command with the descriptions provided here.   --- | | In this section:   * [How the commands are ordered](simacmd-c-intacldocsordercpp.md) * [Access](simacmd-c-intacldocsaccesscpp.md) * [Path](simacmd-c-intacldocspathcpp.md) * [Prototype](simacmd-c-intacldocsprototypecpp.md) * [Return value](simacmd-c-intacldocsreturncpp.md) | | | |

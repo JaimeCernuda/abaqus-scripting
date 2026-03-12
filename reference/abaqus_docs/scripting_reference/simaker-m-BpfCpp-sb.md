@@ -1,0 +1,5 @@
+# Beam Section profile commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Beam Section profile commands | | |  | | | |  | | --- | | The Beam Section profile commands are used to create profiles. A profile definition specifies the properties of a beam that are related to its cross-section geometry. When you define a beam section, you must include a reference to a profile in the section definition.   --- | | In this section:   * [Profile object](simaker-c-profilecpp.md) * [ArbitraryProfile object](simaker-c-arbitraryprofilecpp.md) * [BoxProfile object](simaker-c-boxprofilecpp.md) * [CircularProfile object](simaker-c-circularprofilecpp.md) * [GeneralizedProfile object](simaker-c-generalizedprofilecpp.md) * [HexagonalProfile object](simaker-c-hexagonalprofilecpp.md) * [IProfile object](simaker-c-iprofilecpp.md) * [LProfile object](simaker-c-lprofilecpp.md) * [PipeProfile object](simaker-c-pipeprofilecpp.md) * [RectangularProfile object](simaker-c-rectangularprofilecpp.md) * [TProfile object](simaker-c-tprofilecpp.md) * [TrapezoidalProfile object](simaker-c-trapezoidalprofilecpp.md) | | | |

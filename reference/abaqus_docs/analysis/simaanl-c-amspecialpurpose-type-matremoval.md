@@ -1,0 +1,5 @@
+# ABQ_AM_MaterialRemoval
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_AM\_MaterialRemoval | | |  | | | |  | | --- | | This parameter table type is used in special-purpose techniques for additive manufacturing.  This page discusses:   * [Parameter Table Type Definition](#simaanl-c-amspecialpurpose-progelem-therm-matdep-def) * [Parameters](#simaanl-c-amspecialpurpose-progelem-therm-matdep-fields) | | |  | | --- | | See Also | | [Special-Purpose Techniques for Additive Manufacturing](simaanl-m-AMSpecialPurpose-sb.md#simaanl-m-AMSpecialPurpose-sb) | |   Products Abaqus/Standard  You must include a parameter table of type `"ABQ_AM_MaterialRemoval"` in the table collection that you specify to deactivate elements in the step.    Parameter Table Type Definition ``` [PARAMETER TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-parametertabletype.md#simakey-r-parametertabletype), NAME="ABQ_AM_MaterialRemoval", PARAMETERS=1 STRING, , "Event Series", , ```  Parameters Event Series  Name of the event series. |

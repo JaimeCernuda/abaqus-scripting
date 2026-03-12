@@ -1,0 +1,5 @@
+# Command error handling
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Command error handling | | |  | | | |  | | --- | | If the command sent to the kernel raises an exception, the mode infrastructure calls the handleException method. The handleException posts an error dialog with the message contained in the exception. Alternatively, if you want to perform your own error handling, you can redefine the  handleException method. | | |   You can redefine the  handleException method as shown in the following example:  ``` def handleException(self, exception):      exceptionType = exception[0]     exceptionValue = exception[1]      # Do some special error handling here      # Post an error dialog     #      db = self.getCurrentDialog()     showAFXErrorDialog(db, str(exceptionValue)) ``` |

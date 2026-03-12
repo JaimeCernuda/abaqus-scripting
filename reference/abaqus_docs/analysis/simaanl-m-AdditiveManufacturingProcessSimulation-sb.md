@@ -1,0 +1,5 @@
+# Additive Manufacturing Process Simulation
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Additive Manufacturing Process Simulation | | |  | | | |  | | --- | | Additive manufacturing offers the ability to produce complex designs not possible to create with traditional manufacturing methods.   --- | | In this section:   * [About Additive Manufacturing Process Simulation](simaanl-c-amabout.md#simaanl-c-amabout) * [Toolpath-Mesh Intersection Module](simaanl-m-AMToolpathMeshIntersect-sb.md#simaanl-m-AMToolpathMeshIntersect-sb) * [Thermomechanical Simulation of Additive Manufacturing Processes](simaanl-c-amthermomechanical.md#simaanl-c-amthermomechanical) * [Eigenstrain-Based Simulation of Additive Manufacturing Processes](simaanl-c-ameigenstrainbased.md#simaanl-c-ameigenstrainbased) * [Special-Purpose Techniques for Additive Manufacturing](simaanl-m-AMSpecialPurpose-sb.md#simaanl-m-AMSpecialPurpose-sb) | | | |

@@ -1,0 +1,5 @@
+# Overlaying multiple plots
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Overlaying multiple plots | | |  | | | |  | | --- | | This chapter explains the concept of overlaying plots and how you can create and manage such plots. By default, Abaqus/CAE displays only one plot at a time in the current viewport. A plot may display multiple plot states, such as the contours and material orientations of the same model. However, a single plot cannot display data from more than one output database nor can it display both the model and an X–Y plot in the same viewport. If you want to display data in this fashion, you must overlay individual plots in the same viewport.   --- | | In this section:   * [Understanding how to overlay plots](simacae-c-ovrrole.md) * [Producing and modifying overlay plots](simacae-m-OvrHlp-sb.md) | | | |

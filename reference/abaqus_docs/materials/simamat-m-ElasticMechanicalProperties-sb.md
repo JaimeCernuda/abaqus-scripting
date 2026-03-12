@@ -1,0 +1,5 @@
+# Elastic Mechanical Properties
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Elastic Mechanical Properties | | |  | | | |  | | --- | | Abaqus provides several models to define the elastic behavior of the material.   --- | | In this section:   * [Elastic Behavior](simamat-c-elasticbehav.md#simamat-c-elasticbehav) * [Linear Elasticity](simamat-m-LinearElasticity-sb.md) * [Elastic Behavior of Porous Materials](simamat-c-elasticporous.md#simamat-c-elasticporous) * [Hypoelastic Behavior](simamat-c-hypoelastic.md#simamat-c-hypoelastic) * [Hyperelasticity](simamat-m-Hyperelasticity-sb.md) * [Stress Softening in Elastomers](simamat-m-StressSofteningInElastomers-sb.md) * [Linear Viscoelasticity](simamat-m-LinearViscoelasticity-sb.md) * [Nonlinear Viscoelasticity](simamat-m-NonlinearViscoelasticity-sb.md) * [Low-Density Foams](simamat-c-lowdensfoam.md#simamat-c-lowdensfoam) * [Superelasticity](simamat-c-superelasticity.md#simamat-c-superelasticity) | | | |

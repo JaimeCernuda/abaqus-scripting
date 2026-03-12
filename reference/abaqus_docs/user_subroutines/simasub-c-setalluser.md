@@ -1,0 +1,5 @@
+# Setting a User-Defined Value
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Setting a User-Defined Value | | |  | | | |  | | --- | | Utility routine SETALLUSER can be called from within Abaqus/Standard user subroutines used in heat transfer analyses to define a user value that is accumulated incrementally during the analysis. The accumulated value can be requested as output variable ALLUSER.  This page discusses:   * [Utility Routine Interface](#simasub-c-setalluser-interface) * [Variables to Be Provided to the Utility Routine](#simasub-c-setalluser-vari-provide) | | |   ProductsAbaqus/Standard    Utility Routine Interface ```       CALL SETALLUSER(userValue) ```  Variables to Be Provided to the Utility Routine userValue  User-defined value to be accumulated with each utility call. |

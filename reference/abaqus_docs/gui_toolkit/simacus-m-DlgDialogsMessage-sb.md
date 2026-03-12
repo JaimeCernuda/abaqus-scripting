@@ -1,0 +1,5 @@
+# Message dialog boxes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Message dialog boxes | | |  | | | |  | | --- | | The AFXMessageDialog class extends the FXMessageDialog class by enforcing certain characteristics of the dialog box; for example, the window title and message symbol.  These characteristics make message dialog boxes in Abaqus/CAE consistent and easy to use. This section describes the message dialog boxes that you can create with the Abaqus GUI Toolkit.   --- | | In this section:   * [Error dialog boxes](simacus-c-dlgdialogsmessageerror.md) * [Warning dialog boxes](simacus-c-dlgdialogsmessagewarning.md) * [Information dialog boxes](simacus-c-dlgdialogsmessageinformation.md) * [Specialized message dialog boxes](simacus-c-dlgdialogsmessagespecialized.md) | | | |

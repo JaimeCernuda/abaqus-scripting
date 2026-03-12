@@ -1,0 +1,5 @@
+# Configuring basic settings
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Configuring basic settings | | |  | | | |  | | --- | | You can configure a condition-based bead optimization task. | | |   1. In the optimization task editor, click the Basic    tab. 2. Choose whether to respect boundary conditions that have been applied    to the model. It is recommended that you freeze regions to which boundary    conditions are applied because you do not want these regions to be moved during    the optimization. Freezing these regions stabilizes the optimization and often    leads to a significantly lower number of iterations. 3. By default, the    Optimization module    freezes boundary conditions for the whole model. If desired, click     and select the region in which the boundary conditions should be    frozen. |

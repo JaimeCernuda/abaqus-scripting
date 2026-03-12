@@ -1,0 +1,5 @@
+# The command line interface
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The command line interface | | |  | | | |  | | --- | | The command line interface (CLI) provides an interface to the kernel-side Python command interpreter. | | |   The CLI does not provide any access to the GUI-side Python interpreter. The user can enter Abaqus scripting interface commands in the CLI, which are then sent to the kernel for processing. In addition, the user can enter standard Python commands in the CLI. For example, the user can use the CLI as a simple calculator, as shown in [Figure 1](simacus-c-appmaincli.md#simacus-c-appmaincli__simacus-c-cli). Figure 1. The command line interface.     The Abaqus GUI Toolkit does not expect users to use the CLI to issue Abaqus Scripting Interface commands. Normally all commands sent from the GUI process are sent by the GUI via modes. For more information, see [Modes](simacus-m-ModModes-sb.md). You can hide the CLI if it is not used by your application, as shown in the following statements:   ``` mainWindow = getAFXApp().getAFXMainWindow() mainWindow.hideCli() ``` |

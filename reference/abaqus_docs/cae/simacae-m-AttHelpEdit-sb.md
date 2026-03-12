@@ -1,0 +1,5 @@
+# Editing attachment points and lines
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Editing attachment points and lines | | |  | | | |  | | --- | | You can edit several parameters for attachment points created by choosing a direction and spacing, attachment points created in patterns along or offset from edges, and attachment lines created by projecting points. You cannot edit attachment points created by picking or reading from a file. Attachment features created in the Part module or Property module can be edited only from those two modules; attachment features created in the Assembly module or Interaction module can be edited only from those two modules. By default, Abaqus/CAE regenerates the model when the edit procedure is finished.   --- | | In this section:   * [Editing attachment points created by choosing a direction and a spacing](simacae-t-atthelpeditdir.md) * [Editing attachment points created by a pattern based on edges](simacae-t-atthelpeditoffset.md) * [Editing attachment lines created by projecting points](simacae-t-atthelpeditline.md) | | | |

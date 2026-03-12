@@ -1,0 +1,5 @@
+# About modes
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About modes | | |  | | | |  | | --- | | There are two types of modes: form modes and procedure modes. | | |   Form Modes  Form modes provide an interface to standalone dialog boxes.  Procedure Modes  Procedure modes provide an interface that uses the prompt area to guide the user through a sequence of steps that collect input from dialog boxes or from selections in the viewport.  If a mode needs to perform drawing or highlighting in the current viewport, the mode must be a procedure mode. Because Abaqus/CAE highlights objects that the user picks, any mode that requires the user to pick in the viewport must also be a procedure mode. Procedure modes ensure that only one procedure at a time has control over the scene in the current viewport. If two different procedures could highlight different portions of the model for different purposes, the resulting display would be confusing and ambiguous. |

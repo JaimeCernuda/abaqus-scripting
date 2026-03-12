@@ -1,0 +1,5 @@
+# Option tree list
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Option tree list | | |  | | | |  | | --- | | The AFXOptionTreeList widget provides a tree structure of children that can be toggled. | | |   The tree structure includes branches along with leaves at the end of a branch. The user can toggle the leaves of the tree on or off. The user can also toggle the entire branch on or off. The toggle controls the settings of all the children of the branch—if the branch is toggled off, all the children are toggled off and vice versa. For example,  ``` tree = AFXOptionTreeList(parent, 6) tree.addItemLast('Item 1') item = tree.addItemLast('Item 2') item.addItemLast('Item 3') item.addItemLast('Item 4') item.addItemLast('Item 5') ``` Figure 1. An example of an option tree list from AFXOptionTreeList. |

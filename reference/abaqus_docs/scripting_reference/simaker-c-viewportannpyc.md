@@ -1,0 +1,5 @@
+# Viewport object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Viewport object | | |  | | | |  | | --- | | The following commands operate on Viewport objects. For more information about the Viewport object, see [Viewport object](simaker-c-viewportpyc.md).  This page discusses:   * [Access](#simaker-c-viewportannpyc__simaker-c-viewportannpyc-s-pyaccess1) * [plotAnnotation(...)](#simaker-viewportplotannotationpyc) | | |   Access  ``` import annotationToolset ```  plotAnnotation(...) This method plots an [Annotation](simaker-c-annotationpyc.md) object in aViewport.  Required arguments annotation  An [Annotation](simaker-c-annotationpyc.md) object to plot.  Optional arguments index  An Int specifying the index of the [Annotation](simaker-c-annotationpyc.md) object in the sequence of annotations to plot. The default value is zero.  Return value None.  Exceptions None. |

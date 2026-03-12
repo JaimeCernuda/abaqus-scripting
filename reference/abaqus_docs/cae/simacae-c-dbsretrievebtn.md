@@ -1,0 +1,5 @@
+# Opening an existing model
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Opening an existing model | | |  | | | |  | | --- | | To open a model and associate it with the current viewport, select the desired model from the Model list in the context bar. The Model list contains all the models in the current model database. | | |  | | --- | | See Also | | [What is an Abaqus/CAE model?](simacae-m-DbsConcWhatismodel-sb.md) | |   Abaqus/CAE switches to the selected model and associates it with the current viewport (indicated by a red border). The new model appears in the list of models in the context bar.  You can have multiple models open at any one time; the title bar of a viewport indicates the model associated with the current viewport. You do not have to save the current model prior to opening an existing model because Abaqus/CAE stores all models in the model database. |

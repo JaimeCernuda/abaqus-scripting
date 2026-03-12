@@ -1,0 +1,5 @@
+# Return value
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Return value | | |  | | | |  | | --- | | All commands return a value. Many commands return the value `void`. Constructors (methods that create an object) always return the object being created. The return value of a command can be assigned to a variable. For example, in the following statement the Odb constructor returns an Odb object, and the variable `newOdb` refers to this new object.  ``` odb_Odb newOdb& = Odb("new", "", "", fileName); ```  You can use the object returned by a command in subsequent statements. The following statement uses the output database created by the previous statement:  ``` odb_Part& part = newOdb.Part("PART-1-1",     odb_Enum::THREE_D, odb_Enum::DEFORMABLE_BODY); ```  If an exception is raised while a statement is executing, the command does not return a value. | | | |

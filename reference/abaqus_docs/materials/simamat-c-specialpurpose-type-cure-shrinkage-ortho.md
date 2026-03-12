@@ -1,0 +1,5 @@
+# ABQ_Cure_ShrinkageCoeff_Ortho
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_Cure\_ShrinkageCoeff\_Ortho | | |  | | | |  | | --- | | You use this property table type to specify orthotropic coefficients of shrinkage for the cure model.  This page discusses:   * [Property Table Type Definition](#simamat-c-specialpurpose-type-cure-shrinkage-ortho-definition) * [Properties](#simamat-c-specialpurpose-type-cure-shrinkage-ortho-properties) | | |  | | --- | | See Also | | [Modeling the Cure Process in Thermosetting Polymers](simamat-c-curemodel.md) | |   Products Abaqus/Standard    Property Table Type Definition ``` [PROPERTY TABLE TYPE](.._SIMACAEKEYRefMap_simakey-r-propertytabletype.md#simakey-r-propertytabletype), NAME="ABQ_Cure_ShrinkageCoeff_Ortho", PROPERTIES=3 "Shrinkage Coefficient γ11" "Shrinkage Coefficient γ22" "Shrinkage Coefficient γ33" ```  Properties Shrinkage Coefficient γ11  Orthotropic shrinkage coefficient, γ11.  Shrinkage Coefficient γ22  Orthotropic shrinkage coefficient, γ22.  Shrinkage Coefficient γ33  Orthotropic shrinkage coefficient, γ33. |

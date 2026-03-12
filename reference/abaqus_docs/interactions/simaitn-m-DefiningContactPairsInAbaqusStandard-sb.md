@@ -1,0 +1,5 @@
+# Defining Contact Pairs in Abaqus/Standard
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining Contact Pairs in Abaqus/Standard | | |  | | | |  | | --- | | --- | | In this section:   * [About Contact Pairs in Abaqus/Standard](simaitn-c-contactpair.md) * [Assigning Surface Properties for Contact Pairs in Abaqus/Standard](simaitn-c-contpairsurfacesstd.md) * [Assigning Contact Properties for Contact Pairs in Abaqus/Standard](simaitn-c-contpairpropassignstd.md) * [Modeling Contact Interference Fits in Abaqus/Standard](simaitn-c-contactinterference.md) * [Defining Tied Contact in Abaqus/Standard](simaitn-c-tiedcontact.md) * [Extending Main Surfaces and Slide Lines](simaitn-c-extendsurfaces.md) * [Contact Modeling If Substructures Are Present](simaitn-c-contactsuperelem.md) * [Contact Modeling If Asymmetric-Axisymmetric Elements Are Present](simaitn-c-contactasymmaxisymm.md) | | | |

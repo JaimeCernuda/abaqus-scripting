@@ -1,0 +1,5 @@
+# Choosing which objects are selected by the drag-select region
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Choosing which objects are selected by the drag-select region | | |  | | | |  | | --- | | The selection tools allow you to choose which objects are selected by the drag-select region. | | |  | | --- | | See Also | | [Using the selection options](simacae-m-PicUsingoptions-sb.md#simacae-m-PicUsingoptions-sb) | |   From the Selection toolbar, choose one of the following:  Inside  Select only the objects that fall inside the drag-select region.  Inside and crossing  Select only the objects that fall inside or cross the drag-select region. This tool is selected by default.  Crossing  Select only the objects that cross the drag-select region.  Outside and crossing  Select only the objects that fall outside or cross the drag-select region.  Outside  Select only the objects that fall outside the drag-select region. |

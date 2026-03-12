@@ -1,0 +1,5 @@
+# Shell Elements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Shell Elements | | |  | | | |  | | --- | | --- | | In this section:   * [About Shell Elements](simaelm-c-shelloverview.md) * [Choosing a Shell Element](simaelm-c-shellelem.md) * [Defining the Initial Geometry of Conventional Shell Elements](simaelm-c-shellgeometry.md) * [Shell Section Behavior](simaelm-c-shellsectionbehavior.md) * [Using a Shell Section Integrated during the Analysis to Define the Section Behavior](simaelm-c-usingshellsection.md) * [Using a General Shell Section to Define the Section Behavior](simaelm-c-usingshellgensect.md) * [Three-Dimensional Conventional Shell Element Library](simaelm-r-shellgeneral.md) * [Continuum Shell Element Library](simaelm-r-contshellgeneral.md) * [Axisymmetric Shell Element Library](simaelm-r-shellaxi.md) * [Axisymmetric Shell Elements with Nonlinear, Asymmetric Deformation](simaelm-r-shellaxiasymm.md) | | | |

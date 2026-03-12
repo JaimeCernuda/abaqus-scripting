@@ -1,0 +1,5 @@
+# Electromagnetic analysis
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Electromagnetic analysis | | |  | | | |  | | --- | | --- | | In this section:   * [Eigenvalue analysis of a piezoelectric cube with various electrode configurations](simabmk-c-piezocube.md) * [Modal dynamic analysis for piezoelectric materials](simabmk-c-piezomodaldyn.md) * [Steady-state dynamic analysis for piezoelectric materials](simabmk-c-piezoststdyn.md) * [TEAM 2: Eddy current simulations of long cylindrical conductors in an oscillating magnetic field](simabmk-c-team2cylindrical.md) * [TEAM 4: Eddy current simulation of a conducting brick in a decaying magnetic field](simabmk-c-em-team4.md) * [TEAM 6: Eddy current simulations for spherical conductors in an oscillating magnetic field](simabmk-c-team6spherical.md) * [TEAM 13: Three-dimensional nonlinear magnetostatic analysis](simabmk-c-team13.md) * [Induction heating of a cylindrical rod by an encircling coil carrying time-harmonic current](simabmk-c-emsrcrod.md) | | | |

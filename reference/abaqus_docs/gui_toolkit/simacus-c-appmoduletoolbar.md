@@ -1,0 +1,5 @@
+# Toolbar items
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Toolbar items | | |  | | | |  | | --- | | Toolbar items are displayed across the top of the main window under the menu bar and consist of a button that contains an icon. Toolbar items are placed in a group that is shown only when its module or toolset is current. The group also contains a separator that provides a visual distinction from the other groups of icons in the toolbar. | | |   The example in [GUI module example](simacus-c-appmoduleoverview.md#simacus-c-appmoduleoverview) creates a toolbar group and adds a button to the toolbar. The new button invokes the same mode that will be invoked by the first menu item in the example. For more information, see [Mode processing](simacus-m-ModModesProcessing-sb.md). |

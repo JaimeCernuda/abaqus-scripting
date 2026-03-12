@@ -1,0 +1,5 @@
+# Creating and analyzing a model using the Abaqus/CAE modules
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating and analyzing a model using the Abaqus/CAE modules | | |  | | | |  | | --- | | This part describes how to use the modules in Abaqus/CAE to define a model's geometry and other physical properties and then submit the model for analysis.   --- | | In this section:   * [The Part module](simacae-m-Prt-sb.md) * [The Property module](simacae-m-Prp-sb.md) * [The Assembly module](simacae-m-Asm-sb.md) * [The Step module](simacae-m-Sim-sb.md) * [The Interaction module](simacae-m-Itn-sb.md) * [The Load module](simacae-m-Lbi-sb.md) * [The Mesh module](simacae-m-Mgn-sb.md) * [The Optimization module](simacae-m-Opz-sb.md) * [The Job module](simacae-m-Ana-sb.md) * [The Sketch module](simacae-m-Ske-sb.md) | | | |

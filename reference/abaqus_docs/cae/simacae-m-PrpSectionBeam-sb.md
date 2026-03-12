@@ -1,0 +1,5 @@
+# Creating beam sections
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating beam sections | | |  | | | |  | | --- | | Beam section behavior is defined in terms of the response of the beam section to stretching, bending, shear, and torsion. For more information, see [Beam Section Behavior](.._SIMACAEELMRefMap_simaelm-c-beamsectionbehavior.md). When you create beam sections, you must choose a section integration method. You can choose to provide the section property data before the analysis (a general beam section) or to have Abaqus calculate (integrate) the cross-sectional behavior from section integration points during the analysis.   --- | | In this section:   * [Specifying properties for beam sections integrated during analysis](simacae-t-prpsectionbeamintegrateduring.md) * [Specifying properties for general beam sections](simacae-t-prpsectionbeamintegratebefore.md) | | | |

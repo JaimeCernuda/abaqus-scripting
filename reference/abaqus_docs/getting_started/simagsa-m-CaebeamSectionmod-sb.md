@@ -1,0 +1,5 @@
+# Defining and assigning section properties
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining and assigning section properties | | |  | | | |  | | --- | | You define the properties of a part through sections. After you create the section, you can use one of the following two methods to assign the section to the part in the current viewport:  * You can simply select the region from the part and assign the section   to the selected region. * You can use the   Set toolset   to create a homogeneous set containing the region and assign the section to the   set.   For the cantilever beam tutorial you will create a single homogeneous solid section that you will assign to the beam by selecting the beam from the viewport. The solid section will contain a reference to the material `Steel` that you just created.   --- | | In this section:   * [Defining a homogeneous solid section](simagsa-t-caebeamsectionmoddefine.md) * [Assigning the section to the cantilever beam](simagsa-t-ceabeamsectionmodassign.md) | | | |

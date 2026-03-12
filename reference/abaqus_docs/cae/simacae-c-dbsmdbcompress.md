@@ -1,0 +1,5 @@
+# Compressing the file size of the current model database
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Compressing the file size of the current model database | | |  | | | |  | | --- | | Select FileCompress MDB from the main menu bar to compress the current model database (MDB). Compressing the MDB attempts to reduce the file size. The change will be most noticeable if you have deleted multiple items from your model. | | |  | | --- | | See Also | | [Using file selection dialog boxes](simacae-c-intdialogselection.md) | | [What is an Abaqus/CAE model database?](simacae-c-dbsconcepts.md) | | [What is an Abaqus/CAE model?](simacae-m-DbsConcWhatismodel-sb.md) | | [Using the File menu](simacae-c-dbsfilepopmenu.md) | |   Abaqus/CAE uses the compression function if you select FileSave As to save a file with a new file name. |

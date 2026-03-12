@@ -1,0 +1,5 @@
+# Displaying a contour plot
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying a contour plot | | |  | | | |  | | --- | | You will first display a contour plot of the default variable. Before continuing, toggle off the multiple plot states option. | | |   1. From the main menu bar, select PlotContoursOn Deformed Shape. |  |    | --- |    | Tip: You can also display a contour plot using the  tool in the Visualization module toolbox. |  The state block indicates that the variable plotted is `S, MISES`, the default variable chosen by Abaqus. Abaqus displays the results at the same step and frame that you used to display the deformed shape plot. 2. Use the buttons in the context bar or the Step/Frame dialog box to view the contour plot in different frames and in different steps. Note:     The legend changes as you move between frames. Abaqus updates the maximum and minimum values and computes the contour intervals in every frame. |

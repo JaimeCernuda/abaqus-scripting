@@ -1,0 +1,5 @@
+# Defining thermal material models
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining thermal material models | | |  | | | |  | | --- | | This section describes how you can define a thermal material model.   --- | | In this section:   * [Specifying thermal conductivity](simacae-t-prpthermalconductivity.md) * [Including volumetric heat flux due to internal heat generation](simacae-t-prpthermalheatgeneration.md) * [Specifying an inelastic heat fraction](simacae-t-prpthermalinelasticheatfraction.md) * [Specifying a joule heat fraction](simacae-t-prpthermaljouleheatfraction.md) * [Specifying latent heat data](simacae-t-prpthermallatentheat.md) * [Defining specific heat](simacae-t-prpthermalspecificheat.md) * [Defining thermal conductance for gasket/cohesive elements](simacae-t-prpthermalgapconductance.md) * [Defining thermal radiation for cohesive elements](simacae-t-prpthermalgapradiation.md) | | | |

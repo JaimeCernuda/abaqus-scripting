@@ -1,0 +1,5 @@
+# Understanding printing
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding printing | | |  | | | |  | | --- | | Abaqus/CAE allows you to take a snapshot of one or more viewports and their contents and to send the image either directly to a printer or to a file for later use; for example, to include in a presentation, embed in a printed report, or display in an HTML document. Additional options allow you to select the appearance of viewports in the resulting image, as well as the color, resolution, and size of the image. This section describes basic concepts you should understand before sending output to a printer or to a file.   --- | | In this section:   * [Printed image formats](simacae-c-priconcgif.md) * [Windows and PostScript image layout](simacae-c-priconclayout.md) * [Windows printer image size](simacae-c-priconcsize.md) * [EPS, TIFF, PNG, and SVG image size](simacae-c-priconclayoutfile.md) * [Hard-copy image quality](simacae-c-priconcresolution.md) * [Importing Abaqus/CAE images into other software products](simacae-c-priconcimport.md) | | | |

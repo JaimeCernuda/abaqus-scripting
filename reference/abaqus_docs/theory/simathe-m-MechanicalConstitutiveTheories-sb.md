@@ -1,0 +1,5 @@
+# Mechanical Constitutive Theories
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Mechanical Constitutive Theories | | |  | | | |  | | --- | | --- | | In this section:   * [About mechanical constitutive models](simathe-c-mechconstmod.md#simathe-c-mechconstmod) * [Plasticity](simathe-m-PlasticityOverview-sb.md) * [Metal plasticity](simathe-m-MetalPlasticity-sb.md) * [Plasticity for nonmetals](simathe-m-PlasticityForNonmetals-sb.md#simathe-m-PlasticityForNonmetals-sb) * [Other inelastic models](simathe-m-OtherInelasticModels-sb.md) * [Large-strain elasticity and hysteresis](simathe-m-LargestrainElasticity-sb.md#simathe-m-LargestrainElasticity-sb) * [Mullins effect and permanent set](simathe-m-MullinsEffectAndPermanentSet-sb.md) * [Viscoelasticity](simathe-m-Viscoelasticity-sb.md) | | | |

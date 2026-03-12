@@ -1,0 +1,5 @@
+# Assigning sections, orientations, normals, and tangents to a part
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Assigning sections, orientations, normals, and tangents to a part | | |  | | | |  | | --- | | This section describes how to use the Assign menu to assign properties to a part and how to manage section assignments.   --- | | In this section:   * [Assigning a section](simacae-t-prpassignsection.md) * [Managing section assignments](simacae-t-prpassignsectionmanage.md) * [Assigning a beam orientation](simacae-t-prpassignorient.md) * [Assigning a material orientation or rebar reference orientation](simacae-m-PrpAssignMatrebar-sb.md) * [Assigning shell/membrane normal directions](simacae-t-prpassignnormals.md) * [Assigning beam/truss tangent directions](simacae-t-prpassigntangents.md) | | | |

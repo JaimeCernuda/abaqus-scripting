@@ -1,0 +1,5 @@
+# *MEDIA TRANSPORT
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*MEDIA TRANSPORT | | |  | | | |  | | --- | | Activate or deactivate a periodic media. This option is used to activate or deactivate a periodic media.  This page discusses:   * [There are no parameters associated with this option.](#simakey-r-mediatransport__simakey-r-mediatransport-s-noparams1) * [Data lines to define a periodic media](#simakey-r-mediatransport__simakey-r-mediatransport-s-datadesc1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Periodic Media Analysis](.._SIMACAEANLRefMap_simaanl-c-periodicmedia.md) | |   ProductsAbaqus/Explicit  TypeHistory data  LevelStep  There are no parameters associated with this option.  Data lines to define a periodic media First line  1. Periodic media name. 2. The word “ACTIVE”' or “INACTIVE”.  Repeat this data line as often as necessary. |

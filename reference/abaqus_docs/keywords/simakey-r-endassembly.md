@@ -1,0 +1,5 @@
+# *END ASSEMBLY
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*END ASSEMBLY | | |  | | | |  | | --- | | End the definition of an assembly. This option is used to end an assembly definition.   * [There are no parameters or data lines associated with this option.](#simakey-r-endassembly__simakey-r-endassembly-s-noparamsordata1) | | |  | | --- | | See Also | | [\*ASSEMBLY](simakey-r-assembly.md#simakey-r-assembly) |  |  | | --- | |  | | In Other Guides | | [Assembly Definition](.._SIMACAEMODRefMap_simamod-c-partassy.md) | |   ProductsAbaqus/StandardAbaqus/ExplicitAbaqus/CAE  TypeModel data  LevelModel  Abaqus/CAEAssembly module  There are no parameters or data lines associated with this option. |

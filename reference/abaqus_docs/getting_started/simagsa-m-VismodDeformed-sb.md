@@ -1,0 +1,5 @@
+# Displaying the deformed model shape
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying the deformed model shape | | |  | | | |  | | --- | | You can display a plot of your model showing the deformed shape during each frame of the analysis. When you request a deformed shape plot of data from a force-displacement analysis, Abaqus plots the nodal displacements by default; but you can display any nodal vector field output variable that is available on the output database. You can also use the plot options to customize the appearance of a deformed plot.   --- | | In this section:   * [Displaying a deformed shape plot](simagsa-t-vismoddefdisplay.md) * [Superimposing the undeformed shape on the deformed shape](simagsa-t-vismoddefcustom.md) | | | |

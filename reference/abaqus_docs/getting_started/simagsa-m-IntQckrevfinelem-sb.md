@@ -1,0 +1,5 @@
+# A quick review of the finite element method
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | A quick review of the finite element method | | |  | | | |  | | --- | | This section reviews the basics of the finite element method. The first step of any finite element simulation is to discretize the actual geometry of the structure using a collection of finite elements. Each finite element represents a discrete portion of the physical structure. The finite elements are joined by shared nodes. The collection of nodes and finite elements is called the mesh. The number of elements per unit of length, area, or in a mesh is referred to as the mesh density. In a stress analysis the displacements of the nodes are the fundamental variables that Abaqus calculates. Once the nodal displacements are known, the stresses and strains in each finite element can be determined easily.   --- | | In this section:   * [Obtaining nodal displacements using implicit methods](simagsa-c-intimplicit.md) * [Stress wave propagation illustrated](simagsa-c-ovwstresswave.md) | | | |

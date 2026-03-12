@@ -1,0 +1,5 @@
+# Applying a cutoff filter to a design response for a shape optimization
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Applying a cutoff filter to a design response for a shape optimization | | |  | | | |  | | --- | | You can apply a filter that cuts off local peaks of the design response for a shape optimization. You can specify the following: | | |  | | --- | | See Also | | [Creating and editing a design response](simacae-t-opzdesignresponseditor.md) | | [Selecting the data source of a design response](simacae-t-opzdesignresponsesource.md) | |   * The lower bound of the design response. All values less than this lower bound are assumed to be zero. * The upper bound of the design response. All values greater than this upper bound are assumed to be the value of the upper bound. |

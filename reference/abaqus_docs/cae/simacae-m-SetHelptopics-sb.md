@@ -1,0 +1,5 @@
+# Using the Set and Surface toolsets
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Set and Surface toolsets | | |  | | | |  | | --- | | This section outlines the various tasks you can perform with the Set and Surface toolsets and describes the procedures for each.   --- | | In this section:   * [Creating, editing, copying, renaming, and deleting sets and surfaces](simacae-c-sethelpmanager.md) * [Creating sets](simacae-t-sethelpcreateset.md) * [Creating unsorted node sets](simacae-t-sethelpcreateunsortedset.md#simacae-t-sethelpcreateunsortedset) * [Creating surfaces](simacae-t-sethelpcreatesurf.md) * [Performing Boolean operations on sets or surfaces](simacae-t-sethelpbool.md) * [Editing sets and surfaces](simacae-t-sethelpeditsets.md) * [Associating objects (such as loads and sections) with sets and surfaces](simacae-c-sethelpselect.md) | | | |

@@ -1,0 +1,5 @@
+# Applying a boundary condition and a load to the model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Applying a boundary condition and a load to the model | | |  | | | |  | | --- | | Prescribed conditions, such as loads and boundary conditions, are step-dependent, which means that you must specify the step or steps in which they become active. Now that you have defined the steps in the analysis, you can define the following prescribed conditions:  * A boundary condition that constrains one end of the cantilever beam in   the X-, Y-, and   Z-directions; the boundary condition is applied   during the initial step. * A load that you apply to the top face of the beam; the load is applied   during the general analysis step.   --- | | In this section:   * [Applying a boundary condition to one end of the cantilever beam](simagsa-t-caebeamloadmodbc.md) * [Applying a load to the top of the cantilever beam](simagsa-t-caebeamloadmodload.md) | | | |

@@ -1,0 +1,5 @@
+# Understanding X–Y plotting
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding X–Y plotting | | |  | | | |  | | --- | | An X–Y data object is a two-dimensional array of data that Abaqus/CAE stores in two columns. You can display X–Y data as a graph in an X–Y plot or as a table in an X–Y report. In addition, you can probe an X–Y plot to display the X- and Y-coordinates of graph points. This section discusses X–Y data objects and the various methods you can use to create them. For more information on X–Y reports, see [Generating tabular data reports](simacae-m-Report-sb.md); for information on probing X–Y plots, see [Probing the model](simacae-m-Probe-sb.md).   --- | | In this section:   * [What is an X–Y data object, and what is an X–Y plot?](simacae-c-xypconceptwhatisdata.md) * [Understanding how to specify an X–Y data object](simacae-c-xypspecify.md) * [Understanding “Temp” and other X–Y data object names](simacae-c-xypconceptnames.md) * [Understanding quantity types](simacae-c-xypquantitytypes.md) | | | |

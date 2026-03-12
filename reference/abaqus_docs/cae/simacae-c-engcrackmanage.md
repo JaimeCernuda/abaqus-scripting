@@ -1,0 +1,5 @@
+# Managing cracks
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Managing cracks | | |  | | | |  | | --- | | The Crack Manager allows you to create and manage cracks. The manager includes a list of the names and types of cracks that you have defined. The Create, Edit, Copy, Rename, and Delete buttons in the manager allow you to create new cracks or to edit, copy, rename, and delete existing ones. The icons in the column along the left side of the manager allow you to suppress and resume existing cracks. You can also initiate these procedures using the SpecialCrack menu from the main menu bar in the Interaction module. After you select a management operation from the main menu bar, the procedure is exactly the same as if you had clicked the corresponding button inside the manager dialog box. | | |  | | --- | | See Also | | [Suppressing and resuming objects](simacae-c-intstepsuppressresume.md) | | [Fracture mechanics](simacae-m-EngFracture-sb.md) | | |

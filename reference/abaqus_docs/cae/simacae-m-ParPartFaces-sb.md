@@ -1,0 +1,5 @@
+# Partitioning faces
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Partitioning faces | | |  | | | |  | | --- | | This section describes the tools that you use to partition a selected face.   --- | | In this section:   * [Using the sketch method to partition faces](simacae-t-parsptfacesketchbtn.md) * [Using the shortest path method to partition faces](simacae-t-parsptfacestraightbtn.md) * [Using the datum plane method to partition faces](simacae-t-parsptfacedatumbtn.md) * [Using the curved path method to partition a face](simacae-t-parsptfacecurvebtn.md) * [Using the extended face method to partition faces](simacae-t-parsptfaceextendbtn.md) * [Using the intersection method to partition faces](simacae-t-parsptfaceintersectbtn.md) * [Using the project edges method to partition faces](simacae-t-parsptfacepedgebtn.md) * [Using the automatic generation method to partition faces](simacae-t-parsptfaceautobtn.md) | | | |

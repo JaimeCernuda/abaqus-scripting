@@ -1,0 +1,5 @@
+# CommandRegister class
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | CommandRegister class | | |  | | | |  | | --- | | You can use the CommandRegister class to derive a general class that can be queried from the GUI. In addition, the class can notify the GUI when its contents change. For example,  ```  class Block(CommandRegister):      def __init__(self, name, ...):          CommandRegister.__init__(self)          ... ``` | | |   If a query is registered by the GUI on an instance of this class, the GUI will be notified when a member of this instance is changed, added, or deleted, For more details on registering queries, see the [Abaqus GUI Toolkit Reference Guide](.._SIMACAEGUIRefHtml_simagui-c-ov.md).  If your object is to be stored in a repository (see below), the first argument to the constructor must be a string representing the name of the object. That string will automatically be assigned by the infrastructure to a member called name. |

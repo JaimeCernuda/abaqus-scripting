@@ -1,0 +1,5 @@
+# Loading rates
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Loading rates | | |  | | | |  | | --- | | The actual time taken for a physical process is called its natural time. Generally, it is safe to assume that performing an analysis in the natural time for a quasi-static process will produce accurate static results. After all, if the real-life event actually occurs in a natural time scale in which velocities are zero at the conclusion, a dynamic analysis should be able to capture the fact that the analysis has, in fact, achieved a steady state. You can increase the loading rate so that the same physical event occurs in less time as long as the solution remains nearly the same as the true static solution and dynamic effects remain insignificant.   --- | | In this section:   * [Smooth amplitude curves](simagsa-c-qsismoothampcve.md) * [Structural problems](simagsa-c-qsistructproblems.md) * [Metal forming problems](simagsa-c-qsimetformprob.md) | | | |

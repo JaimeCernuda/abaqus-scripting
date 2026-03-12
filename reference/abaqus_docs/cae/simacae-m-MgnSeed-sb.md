@@ -1,0 +1,5 @@
+# Seeding a model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Seeding a model | | |  | | | |  | | --- | | This section explains how to use the seeding tools to apply seeds throughout a part instance.   --- | | In this section:   * [Defining seed density for an entire part or part instance](simacae-t-mgnpartbtn.md) * [Seeding an edge by prescribing the number of elements](simacae-t-mgnedgebynobtn.md) * [Seeding an edge by prescribing element size](simacae-t-mgnedgebyszbtn.md) * [Prescribing biased seeding along an edge](simacae-t-mgnedgebiasedbtn.md) * [Applying constraints to edge seeds](simacae-t-mgnseedconstraintedge.md) * [Seeding previously meshed parts, part instances, or regions](simacae-c-mgnreseed.md) * [Deleting part or instance seeds](simacae-t-mgndeletepartseeds.md) * [Deleting edge seeds](simacae-t-mgndeleteseedbtn.md) * [Relaxing constraints using the error dialog box](simacae-c-mgnseederror.md) | | | |

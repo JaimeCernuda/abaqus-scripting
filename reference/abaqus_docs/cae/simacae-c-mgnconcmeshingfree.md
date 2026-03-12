@@ -1,0 +1,5 @@
+# What is free meshing?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What is free meshing? | | |  | | | |  | | --- | | Unlike structured meshing, free meshing uses no preestablished mesh patterns. When you mesh a region using the structured meshing technique, you can predict the pattern of the mesh based on the region topology. In contrast, it is impossible to predict a free mesh pattern before creating the mesh. | | |   Because it is unstructured, free meshing allows more flexibility than structured meshing. The topology of regions that you mesh with the free mesh technique can be very complex.  You can use this technique to mesh a region with the Tri, Quad, or Quad-dominated element shape options for two-dimensional regions or the Tet element shape option for three-dimensional regions. For more information on assigning element shapes to a region, see [Choosing an element shape](simacae-t-mgnattributesshape.md). |

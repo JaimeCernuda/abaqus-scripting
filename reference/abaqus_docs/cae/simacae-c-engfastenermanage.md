@@ -1,0 +1,5 @@
+# Managing fasteners
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Managing fasteners | | |  | | | |  | | --- | | The Fasteners Manager allows you to create and manage fasteners. The manager includes a list of the names and types of fasteners that you have defined. The Create, Edit, Copy, Rename, and Delete buttons in the manager allow you to create new fasteners or to edit, copy, rename, and delete existing ones. The icons in the column along the left side of the manager allow you to suppress and resume existing fasteners. You can also initiate these procedures using the SpecialFasteners menu from the main menu bar in the Interaction module. After you select a management operation from the main menu bar, the procedure is exactly the same as if you had clicked the corresponding button inside the manager dialog box. | | |  | | --- | | See Also | | [Suppressing and resuming objects](simacae-c-intstepsuppressresume.md) | | [Creating point-based fasteners](simacae-m-EngFastenerHelpPoint-sb.md) | | [Creating discrete fasteners](simacae-t-engfastenerhelpdiscrete.md) | | |

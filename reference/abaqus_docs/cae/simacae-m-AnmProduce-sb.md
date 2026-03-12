@@ -1,0 +1,5 @@
+# Object-based animation
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Object-based animation | | |  | | | |  | | --- | | This section explains how to produce and customize Abaqus/CAE object-based time history, scale factor, and harmonic animations.   --- | | In this section:   * [Producing and customizing an object-based animation](simacae-c-anmproduce.md#simacae-c-anmproduce) * [Producing a time history animation](simacae-t-anmtimehistoryproduce.md) * [Producing a scale factor animation](simacae-t-anmscalefactorproduce.md) * [Producing a harmonic animation](simacae-t-anmharmonicproduce.md) * [Customizing a scale factor or harmonic animation](simacae-t-anmscaleframe.md) * [Customizing the underlying plot of an animation](simacae-t-anmunderlying.md) | | | |

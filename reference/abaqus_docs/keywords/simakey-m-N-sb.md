@@ -1,0 +1,5 @@
+# N
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | N | | |  | | | |  | | --- | | This section describes each Abaqus input option that begins with N, including the intended use, Abaqus product support, whether it is model or history data, and the relevant parameters and data lines.   --- | | In this section:   * [\*NCOPY](simakey-r-ncopy.md) * [\*NETWORK STIFFNESS RATIO](simakey-r-networkstiffnessratio.md) * [\*NFILL](simakey-r-nfill.md) * [\*NGEN](simakey-r-ngen.md) * [\*NMAP](simakey-r-nmap.md) * [\*NO COMPRESSION](simakey-r-nocompression.md) * [\*NODAL ENERGY RATE](simakey-r-nodalenergyrate.md) * [\*NODAL THICKNESS](simakey-r-nodalthickness.md) * [\*NODE](simakey-r-node.md) * [\*NODE FILE](simakey-r-nodefile.md) * [\*NODE OUTPUT](simakey-r-nodeoutput.md) * [\*NODE PRINT](simakey-r-nodeprint.md) * [\*NODE RESPONSE](simakey-r-noderesponse.md) * [\*NONLINEAR BH](simakey-r-nonlinearbh.md) * [\*NONSTRUCTURAL MASS](simakey-r-nonstructuralmass.md) * [\*NORMAL](simakey-r-normal.md) * [\*NO TENSION](simakey-r-notension.md) * [\*NSET](simakey-r-nset.md) | | | |

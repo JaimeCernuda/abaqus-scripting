@@ -1,0 +1,5 @@
+# More on copying objects
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | More on copying objects | | |  | | | |  | | --- | | To create a copy of an object, some objects use the base type described in [Abstract base type](simacmd-c-intpythonaclobjecthigh.md). For example, to copy a HomogeneousSolidSection object, you use the abstract base type Section constructor.  ``` import material import section impactModel = mdb.Model(name='Model A') mySteel = impactModel.Material(name='Steel')  # Create a section  firstSection = impactModel.HomogeneousSolidSection(     name='steelSection 1', material='Steel',      thickness=1.0)  # Copy the section  secondSection = impactModel.Section(     name='steelSection 2', objectToCopy=firstSection) ``` | | | |

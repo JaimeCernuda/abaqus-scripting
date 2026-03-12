@@ -1,0 +1,5 @@
+# SolidSection object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | SolidSection object | | |  | | | |  | | --- | | The SolidSection object defines the properties of a solid section. The SolidSection object has no explicit constructor, no members, and no methods. The SolidSection object is an abstract base type.  The SolidSection object is derived from the [Section](simaker-c-sectionpyc.md) object.  This page discusses:   * [Access](#simaker-c-solidsectionpyc__simaker-c-solidsectionpyc-s-pyaccess1) * [Members](#simaker-c-solidsectionpyc-t-pymembersect1) | | |   Access  ``` import section mdb.models[name].sections[name] import odbSection session.odbs[name].sections[name] ```  Members The SolidSection object has the following member:  name  A String specifying the repository key. |

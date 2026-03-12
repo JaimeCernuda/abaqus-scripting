@@ -1,0 +1,5 @@
+# Creating and editing midsurface models
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating and editing midsurface models | | |  | | | |  | | --- | | The typical process for creating a midsurface model in Abaqus/CAE begins with the solid model. From the solid model, you select cells for which you want to create a midsurface model. Assigning these solid cells as a midsurface region creates a reference representation in the viewport from which you can create shell faces for the midsurface model. You can use tools from the Geometry Edit toolset to create the shell faces, then you can assign thicknesses to the new shells. When you assign thicknesses and offsets to the shell geometry, the default settings typically center the shell representation within the thickness.   --- | | In this section:   * [Assigning a midsurface region](simacae-t-advmidassign.md) * [Assigning thicknesses and offsets](simacae-c-advmidassignthick.md) * [Assigning thickness to shell faces](simacae-t-advmidassignthickshell.md) * [Visualizing shell thicknesses](simacae-c-advmidvisualthick.md) | | | |

@@ -1,0 +1,5 @@
+# What can I do with the Edit Mesh toolset?
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What can I do with the Edit Mesh toolset? | | |  | | | |  | | --- | | This section describes how you can use the Edit Mesh toolset to modify a mesh in the Mesh module. All of the tools are available when you are modifying a mesh that contains orphan elements and nodes; however, only a few of the tools are available for modifying mesh nodes or elements that are tied to geometry, including meshed part instances in the assembly.   --- | | In this section:   * [Manipulating nodes](simacae-c-edtconcmeshediteditnodes.md) * [Manipulating elements](simacae-c-edtconcmeshediteditelements.md) * [Manipulating the mesh](simacae-c-edtconcmeshediteditmesh.md) * [Refining the mesh](simacae-c-edtconcmeshediteditrefine.md) | | | |

@@ -1,0 +1,5 @@
+# *ANNEAL
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*ANNEAL | | |  | | | |  | | --- | | Anneal the structure. This option is used to anneal a structure by setting the velocities and all appropriate state variables to zero.  This page discusses:   * [Optional parameters](#simakey-r-anneal__simakey-r-anneal-s-paramsoptional1) * [There are no data lines associated with this option.](#simakey-r-anneal__simakey-r-anneal-s-nodata1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Annealing](.._SIMACAEANLRefMap_simaanl-c-anneal.md) | |   ProductsAbaqus/ExplicitAbaqus/CAE  TypeHistory data  LevelStep  Abaqus/CAEStep module  Optional parameters TEMPERATURE  Set this parameter equal to the temperature, θ, to which all nodes in the model will be set after the annealing has been completed. The default is to maintain the current temperature at all nodes in the model after the annealing has been completed.  There are no data lines associated with this option. |

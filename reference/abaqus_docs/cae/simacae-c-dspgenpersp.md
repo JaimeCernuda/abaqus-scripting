@@ -1,0 +1,5 @@
+# Controlling perspective
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Controlling perspective | | |  | | | |  | | --- | | Perspective representation accurately depicts the spatial relationship of three-dimensional objects in a two-dimensional plane. In other words, a three-dimensional model on your screen appears more realistic when perspective is turned on. Alternatively, parallel lines in the model appear parallel when perspective is turned off. Perspective affects all plots except X–Y plots, applies in all modules, and is turned on by default. | | |  | | --- | | See Also | | [Manipulating the view and controlling perspective](simacae-m-Viw-sb.md) | |   * To turn perspective on, select the  icon located in the View Options toolbar or select ViewPerspective from the main menu bar. * To turn perspective off, select the  icon located in the View Options toolbar or select ViewParallel from the main menu bar.   Your changes apply only to the current viewport and are saved for the duration of the session. |

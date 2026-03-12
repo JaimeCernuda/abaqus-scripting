@@ -1,0 +1,5 @@
+# *SUBCYCLING
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*SUBCYCLING | | |  | | | |  | | --- | | Define a subcycling zone. This option is used to define a subcycling zone.  This page discusses:   * [Required parameters](#simakey-r-subcycling__simakey-r-subcycling-s-paramsrequired1) * [There are no data lines associated with this option.](#simakey-r-subcycling__simakey-r-subcycling-s-nodata1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Explicit Dynamic Analysis](.._SIMACAEANLRefMap_simaanl-c-expdynamic.md) | | [Fully Coupled Thermal-Stress Analysis](.._SIMACAEANLRefMap_simaanl-c-couptempdisp.md) | | [Selective Subcycling](.._SIMACAEANLRefMap_simaanl-c-selectivesubcycling.md) | |   ProductsAbaqus/Explicit  TypeModel data  LevelModel  Required parameters ELSET  Set this parameter equal to the name of the element set to define a subcycling zone.  There are no data lines associated with this option. |

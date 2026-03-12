@@ -1,0 +1,5 @@
+# When will my mesh adaptivity stop iterating?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | When will my mesh adaptivity stop iterating? | | |  | | | |  | | --- | | When you create an adaptivity process, you define a sequence of jobs to be run successively. You can specify the number of jobs in the sequence by specifying the maximum number of analysis iterations allowed, i⁢t⁢e⁢rmax. The maximum number of remeshing operations will be i⁢t⁢e⁢rmax−1, because no remeshing will be performed after the final analysis job is run. When you submit the remesh process, Abaqus/CAE runs each job in the sequence until one of the following conditions is met: | | |   * All active remeshing rules are satisfied. For more information, see [What are remeshing rules?](simacae-c-mgnconcadaptivityrulerole.md). * All jobs are completed, indicating that Abaqus/CAE has reached the maximum number of analysis iterations that you specified. * A job fails to complete. This failure can be due to convergence difficulties or to machine resource problems. |

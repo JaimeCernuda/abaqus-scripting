@@ -1,0 +1,5 @@
+# Prototype
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Prototype | | |  | | | |  | | --- | | [Odb commands](.._SIMACAEKERRefMap_simaker-m-OdbCpp-sb.md) contains a prototype section for each C++ command. The prototype provides the type returned by the command, the name of the command, and a list of all its arguments along with the type of each argument. Required arguments appear first in the list followed by default arguments along with their default value. For example, the `Frame` constructor is given as  ``` odb_Frame Frame(int incrementNumber, float frameValue,         const odb_String& description=""); ```  indicating that the incrementNumber and frameValue arguments are required, that the optional description argument has a default value of the empty string, and that the method returns a reference to the Frame object created. | | | |

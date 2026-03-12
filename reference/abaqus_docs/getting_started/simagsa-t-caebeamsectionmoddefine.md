@@ -1,0 +1,5 @@
+# Defining a homogeneous solid section
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining a homogeneous solid section | | |  | | | |  | | --- | | A homogeneous solid section is the simplest section type that you can define; it includes only a material reference and an optional plane stress/plane strain thickness definition. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Creating and editing sections](.._SIMACAECAERefMap_simacae-m-PrpSection-sb.md) | |   1. In the Model Tree, double-click the Sections container to create a section. The Create Section dialog box appears. 2. In the Create Section dialog box:    1. Name the section `BeamSection`.    2. In the Category list, accept Solid as the default category selection.    3. In the Type list, accept Homogeneous as the default type selection.    4. Click Continue. The Edit Section dialog box appears. 3. In the dialog box:    1. Accept the default selection of `Steel` for the Material associated with the section.    2. Click OK. |

@@ -1,0 +1,5 @@
+# Applying constraints to part and model instances
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Applying constraints to part and model instances | | |  | | | |  | | --- | | This section describes how you use the Assembly module's Constraint menu to apply positioning constraints to part and model instances in the assembly.   --- | | In this section:   * [Using the Constraint menu](simacae-c-asmhelppositionmenu.md) * [Constraining two instances with parallel planar faces](simacae-t-asmparallelfacebtn.md) * [Constraining two instances with parallel planar faces separated by a specified distance](simacae-t-asmoffsetfacebtn.md) * [Constraining two instances with parallel edges](simacae-t-asmparalleledgebtn.md) * [Constraining two instances with parallel edges separated by a specified distance](simacae-t-asmoffsetedgebtn.md) * [Constraining two instances with coaxial faces](simacae-t-asmcoaxialbtn.md) * [Constraining two instances with coincident points](simacae-t-asmcoincidentbtn.md) * [Constraining two instances with parallel coordinate systems](simacae-t-asmparallelcsysbtn.md) | | | |

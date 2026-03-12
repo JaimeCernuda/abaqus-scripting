@@ -1,0 +1,5 @@
+# Defining hyperfoam materials
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining hyperfoam materials | | |  | | | |  | | --- | | When you define a hyperfoam material, you have the option of either specifying material parameters directly or allowing Abaqus to calculate them from test data that you provide. | | |   For detailed instructions, see the following sections:   * [Entering material parameters to define a hyperelastic foam material](simacae-t-prpmechanicalelastichyperfoamdirect.md) * [Providing test data to define a hyperelastic foam material model](simacae-t-prpmechanicalelastichyperfoamtestdata.md)   See [Hyperelastic Behavior in Elastomeric Foams](.._SIMACAEMATRefMap_simamat-c-hyperfoam.md) for more information on hyperfoam materials. |

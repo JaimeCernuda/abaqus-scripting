@@ -1,0 +1,5 @@
+# Understanding properties
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding properties | | |  | | | |  | | --- | | You can specify the properties of a part or part region by creating a section and assigning it to the part. In most cases, sections refer to materials that you have defined. Beam sections also refer to profiles that you have defined. This section of the guide explains materials, profiles, sections, rebar, and section assignment. You create materials, profiles, and sections using the Property module editors, as described in [Understanding the Property module editors](simacae-m-PrpEditor-sb.md).   --- | | In this section:   * [Defining materials](simacae-c-prppropmaterial.md) * [Defining profiles](simacae-c-prppropprofile.md) * [Defining sections](simacae-c-prppropsection.md) * [Defining composite layups](simacae-c-prppropcomposites.md) * [Understanding rebar in shell sections](simacae-c-prpproprebar.md) | | | |

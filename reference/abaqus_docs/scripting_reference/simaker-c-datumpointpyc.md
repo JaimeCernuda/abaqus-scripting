@@ -1,0 +1,5 @@
+# DatumPoint object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | DatumPoint object | | |  | | | |  | | --- | | The DatumPoint object has no direct constructor; it is created when a [Feature](simaker-c-featurepyc.md) object is created. For example, the DatumPointByCoordinate method creates a Feature object that creates a DatumPoint object.  The DatumPoint object is derived from the [Datum](simaker-c-datumpyc.md) object.  This page discusses:   * [Access](#simaker-c-datumpointpyc__simaker-c-datumpointpyc-s-pyaccess1) * [Members](#simaker-c-datumpointpyc-t-pymembersect1) | | |   Access  ``` import part mdb.models[name].parts[name].datums[i] import assembly mdb.models[name].rootAssembly.allInstances[name].datums[i] mdb.models[name].rootAssembly.datums[i] mdb.models[name].rootAssembly.instances[name].datums[i] ```  Members The DatumPoint object has the following member:  pointOn  A tuple of Floats specifying the X-, Y-, and Z-coordinates of a point located on the datum. |

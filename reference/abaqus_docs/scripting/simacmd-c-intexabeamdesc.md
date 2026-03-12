@@ -1,0 +1,5 @@
+# About the cantilever beam example
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | About the cantilever beam example | | |  | | | |  | | --- | | The cantilever beam example is a basic tutorial for the experienced Abaqus user. | | |   The example leads you through the Abaqus/CAE modeling process by visiting each of the modules and shows you the basic steps to create and analyze a simple model. In [Creating and Analyzing a Simple Model in Abaqus/CAE](.._SIMACAEGSARefMap_simagsa-m-Caebeam-sb.md#simagsa-m-Caebeam-sb), you create a model of a steel cantilever beam and load its top surface. You then analyze the beam and plot the resulting stresses and displacements. [Figure 1](simacmd-c-intexabeamdesc.md#simacmd-c-intexabeamdesc__simacmd-c-intexabeamdesc-beam) illustrates the model that you create and analyze. Figure 1. A loaded cantilever beam. |

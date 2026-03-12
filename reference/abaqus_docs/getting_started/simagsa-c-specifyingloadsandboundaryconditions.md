@@ -1,0 +1,5 @@
+# Specifying loads and boundary conditions
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Specifying loads and boundary conditions | | |  | | | |  | | --- | | Constrain the reference point on the floor in all directions; for example, you could prescribe an ENCASTRE boundary condition. | | |   Two methods could be used to simulate the circuit board being dropped from a height of 1 m. You could model the circuit board and foam at a height of 1 m above the floor and allow Abaqus/Explicit to calculate the motion under the influence of gravity; however, this method is impractical because of the large number of increments required to complete the “free-fall” part of the simulation. The more efficient method is to model the circuit board and packaging in an initial position very close to the surface of the floor (as you have done in this problem) and specify an initial velocity of 4.43 m/s to simulate the 1 m drop. Create a predefined field in the initial step to specify an initial velocity of V3 = `−4.43` m/s for the board, chips, and packaging. |

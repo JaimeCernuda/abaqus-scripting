@@ -1,0 +1,5 @@
+# Creating, editing, and manipulating adaptivity processes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating, editing, and manipulating adaptivity processes | | |  | | | |  | | --- | | This section describes how you create, edit, and manipulate adaptivity processes using either the main menu or the Adaptivity Process Manager.   --- | | In this section:   * [Creating a new adaptivity process](simacae-t-anaadpmancreatebtn.md) * [Performing a data check on an adaptivity process](simacae-c-anaadpmandatacheckbtn.md) * [Submitting an adaptivity process](simacae-c-anaadpmansubmitbtn.md) * [Continuing an adaptivity process after a data check](simacae-c-anaadpmancontinuebtn.md) * [Terminating an adaptivity process](simacae-c-anaadpmankillbtn.md) | | | |

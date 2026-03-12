@@ -1,0 +1,5 @@
+# Understanding connector sections and functions
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding connector sections and functions | | |  | | | |  | | --- | | The connector section defines the connection type and may include connector behavior and section data. For some complex coupled connector behaviors, additional functions describing the nature of the coupling effects (connector derived components and connector potential) must be defined. A connector section can be referred to by one or more different connector section assignments.   --- | | In this section:   * [Connection types](simacae-c-itnconnproptypes.md) * [Connector behaviors](simacae-c-itnconnpropbehavior.md) * [What types of friction models are available?](simacae-c-itnconnpropfriction.md) * [Connector derived components and connector potentials](simacae-c-itnconnpropfunctions.md) | | | |

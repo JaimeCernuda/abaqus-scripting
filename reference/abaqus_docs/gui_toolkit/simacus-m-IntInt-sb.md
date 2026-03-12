@@ -1,0 +1,5 @@
+# Introduction
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Introduction | | |  | | | |  | | --- | | This chapter provides an overview of the Abaqus GUI Toolkit. The Abaqus GUI Toolkit is one of the Abaqus Process Automation tools that allow you to modify and extend the capabilities of the Abaqus/CAE graphical user interface (GUI) to enable a wide range of users to generate more efficient Abaqus solutions.   --- | | In this section:   * [What can I do with the Abaqus GUI Toolkit?](simacus-c-intintwhatdo.md) * [Prerequisites for using the Abaqus GUI Toolkit](simacus-c-intintprequisites.md) * [Abaqus GUI Toolkit basics](simacus-c-intintbasics.md) * [Organization of the Abaqus GUI Toolkit User's Guide](simacus-c-intintorganization.md) | | | |

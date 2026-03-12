@@ -1,0 +1,5 @@
+# Registered tuples
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Registered tuples | | |  | | | |  | | --- | | You use the RegisteredTuple class to create a tuple that can be queried from the GUI. In addition, the infrastructure can notify the GUI when the contents of any of the members of the tuple change. The members in the tuple must derive from the CommandRegister class, and the values in the tuple must all be of the same type; for example, all integers or all strings. For example,  ``` from abaqus import * from customKernel import CommandRegister, RegisteredTuple  class Block(CommandRegister):      def __init__(self, name):           CommandRegister.__init__(self)  mdb.customData.Repository('blocks', Block)   block1 = mdb.customData.Block(name='Block-1')   block2 = mdb.customData.Block(name='Block-2') tuple = (block1, block2)   mdb.customData.myTuple = RegisteredTuple(tuple) ``` | | | |

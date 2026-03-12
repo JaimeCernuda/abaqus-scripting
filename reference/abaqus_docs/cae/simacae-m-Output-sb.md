@@ -1,0 +1,5 @@
+# Viewing diagnostic output
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Viewing diagnostic output | | |  | | | |  | | --- | | Abaqus/CAE provides a visual diagnostics tool to help you understand the convergence behavior of your job. You can use diagnostic output to assess the quality of analysis results or to locate the source of convergence problems in a model.  This chapter explains how you locate and use diagnostic output within Abaqus/CAE.   --- | | In this section:   * [Understanding job diagnostics](simacae-c-outoverview.md) * [Generating diagnostic information](simacae-c-outgenerate.md) * [Interpreting diagnostic information](simacae-m-OutInterpret-sb.md) * [Accessing diagnostic information](simacae-t-outaccess.md) | | | |

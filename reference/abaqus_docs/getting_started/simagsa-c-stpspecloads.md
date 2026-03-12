@@ -1,0 +1,5 @@
+# Specifying loads in general steps
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Specifying loads in general steps | | |  | | | |  | | --- | | In general steps the loads must be specified as total values, not incremental values. For example, if a concentrated load has a value of 1000 N in the first step and it is increased to 3000 N in the second general step, the magnitude given for the load in the two steps should be 1000 N and 3000 N, not 1000 N and 2000 N. | | |   By default, all previously defined loads are propagated to the current step. In the current step you can define additional loads as well as modify any previously defined load (for example, change its magnitude or deactivate it). Any previously defined load that is not specifically modified in the current step continues to follow its associated amplitude definition, provided that the amplitude curve is defined in terms of total time; otherwise, the load is maintained at the magnitude it had at the end of the last general step. |

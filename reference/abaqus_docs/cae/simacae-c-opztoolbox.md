@@ -1,0 +1,5 @@
+# Using the Optimization module toolbox
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Optimization module toolbox | | |  | | | |  | | --- | | You can access all the Optimization module tools through either the main menu bar or through the Optimization module toolbox. [Figure 1](simacae-c-opztoolbox.md#simacae-c-opztoolbox__simacae-c-opz-toolbox) shows the icons for all the Optimization module tools in the toolbox. | | |   Figure 1. The Optimization module tools.    To see a tooltip containing a brief definition of an Optimization module tool, hold the mouse over the tool for a moment. For information on using toolboxes and selecting hidden icons, see [Using toolboxes and toolbars that contain hidden icons](simacae-t-inttoolboxusing.md). |

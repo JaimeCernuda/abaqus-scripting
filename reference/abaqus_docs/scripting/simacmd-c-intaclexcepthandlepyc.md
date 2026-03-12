@@ -1,0 +1,5 @@
+# Exception handling
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Exception handling | | |  | | | |  | | --- | | The Python exception handling techniques described in [Error handling](simacmd-c-intpytintroexceptions.md) apply to the Abaqus Scripting Interface. You should use the command description in the [Abaqus Scripting Reference Guide](.._SIMACAEKERRefMap_simaker-c-ov.md#simaker-c-ov) to decide for which exception types you need to account. For example, the following Abaqus Scripting Interface script attempts to create a viewport and prints a message if the width or height are too small:  ``` try:      session.Viewport(name='tiny',width=1, height=1)  except RangeError as message:      print('Viewport too small:', message) print('Script continues running and prints this line') ```  The resulting output is  ``` Viewport too small: width must be a Float >= 30  Script continues running and prints this line ```  The exception has been handled, and the script continues. | | | |

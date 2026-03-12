@@ -1,0 +1,5 @@
+# Obtaining the Abaqus Job Name
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Obtaining the Abaqus Job Name | | |  | | | |  | | --- | | Utility routines GETJOBNAME and VGETJOBNAME can be called from any Abaqus/Standard or Abaqus/Explicit user subroutine, respectively, to obtain the name of the current job.  This page discusses:   * [Utility Routine Interface](#simasub-c-getjobname-t-utilroutinterface1) * [Variables Returned from the Utility Routine](#simasub-c-getjobname-t-varreturned1) | | |  | | --- | | See Also | | [About User Subroutines and Utilities](simasub-c-subroutineover.md) |  |  | | --- | |  | | In Other Guides | | [UWAVE and UEXTERNALDB](.._SIMACAEVERRefMap_simaver-c-uwave.md) | |   ProductsAbaqus/StandardAbaqus/Explicit    Utility Routine Interface ``` character*256 JOBNAME ... CALL GETJOBNAME( JOBNAME, LENJOBNAME ) CALL VGETJOBNAME( JOBNAME, LENJOBNAME ) ... ```  Variables Returned from the Utility Routine JOBNAME  Character string to receive the value of the job name.  LENJOBNAME  Length of the character string JOBNAME. |

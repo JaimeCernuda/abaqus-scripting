@@ -1,0 +1,5 @@
+# Using the Discrete Field toolset
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Discrete Field toolset | | |  | | | |  | | --- | | The Discrete Field toolset allows you to define spatially varying parameters. The parameters in a discrete field can be associated with specified elements or nodes. For example, you can define a spatially varying thickness or orientation (Cartesian, cylindrical, or spherical). The Discrete Field toolset is available in the Property module, Interaction module, and Load module.  Select ToolsDiscrete FieldCreate from the main menu bar to create a new discrete field; select Edit from the same menu to change an existing discrete field. Either command opens the discrete field editor, which allows you to associate data with elements or nodes. | | | |

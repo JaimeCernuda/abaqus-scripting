@@ -1,0 +1,5 @@
+# Scaling calibration data
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Scaling calibration data | | |  | | | |  | | --- | | The Scale option enables you to apply different scaling factors to either column in a calibration data set. | | |   1. In the Model Tree, click mouse button 3 on the data set that you want to convert and select Process from the menu that appears. The Data Set Processing dialog box appears. 2. Select Scale, and click Continue. The Scale Data Set dialog box appears. 3. Specify a scaling factor for either column in the data set by editing the values in the Col 1 or Col 2 fields. 4. If desired, click Preview to review the new data values created by the scaling factor values. Abaqus/CAE reflects the new scale factor for each column in the data set. 5. If desired, you can retain the original data set and create a new data set when you perform the data conversion. You can also customize the name of the newly created data set. 6. Click OK. Abaqus/CAE performs the selected scaling for the data. |

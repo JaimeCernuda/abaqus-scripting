@@ -1,0 +1,5 @@
+# EmagTimeHarmonicFrequency object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | EmagTimeHarmonicFrequency object | | |  | | | |  | | --- | | A EmagTimeHarmonicFrequency is an object used to define frequency over range of modes.  This page discusses:   * [Access](#simaker-c-emagtimeharmonicfrequencypyc__simaker-c-emagtimeharmonicfrequencypyc-s-pyaccess1) * [Members](#simaker-c-emagtimeharmonicfrequencypyc-t-pymembersect1) | | |   Access  ``` import step mdb.models[name].steps[name].frequencyRange[i] ```  Members The EmagTimeHarmonicFrequency object has the following members:  lower  A Float specifying the lower limit of frequency range or a single frequency, in cycles/time.  upper  A Float specifying the upper limit of frequency range, in cycles/time.  nPoints  An Int specifying the number of points in the frequency range at which results should be given. |

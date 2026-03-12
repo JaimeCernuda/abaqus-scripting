@@ -1,0 +1,5 @@
+# How are position constraints regenerated?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | How are position constraints regenerated? | | |  | | | |  | | --- | | By default, when Abaqus/CAE regenerates the assembly, it regenerates all of the position constraints before regenerating other features that might depend on the position, such as partitions and datums. | | |   However, if the position constraint uses an entity that was created by selecting from a part instance in the Assembly module, such as a face created by a partition or a datum axis running through two vertices, Abaqus/CAE changes its behavior and regenerates features in the order that you created them. As a result, partitions and datums that you created before the position constraint may not move along with the movable instance.  If you are working in the assembly-related modules, the Feature Options dialog box includes a Constraints field that allows you to control this regeneration behavior. For more information, see [Tuning regeneration performance](simacae-t-ftsperformance.md). |

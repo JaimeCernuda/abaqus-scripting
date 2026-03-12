@@ -1,0 +1,5 @@
+# Related Abaqus examples
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Related Abaqus examples | | |  | | | |  | | --- | | Related Abaqus examples are available. | | |   * [Elastic-plastic collapse of a thin-walled elbow under in-plane bending and internal pressure](.._SIMACAEEXARefMap_simaexa-c-elbowcollapse.md) * [Laminated composite shells: buckling of a cylindrical panel with a circular hole](.._SIMACAEEXARefMap_simaexa-c-laminpanel.md) * [Unstable static problem: reinforced plate under compressive loads](.._SIMACAEEXARefMap_simaexa-c-unstablestaticplate.md) * [Large rotation of a one degree of freedom system](.._SIMACAEBMKRefMap_simabmk-c-largerotation1dof.md) * [Vibration of a cable under tension](.._SIMACAEBMKRefMap_simabmk-c-vibrationcable.md) |

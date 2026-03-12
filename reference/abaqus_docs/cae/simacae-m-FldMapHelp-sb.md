@@ -1,0 +1,5 @@
+# Creating mapped fields
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating mapped fields | | |  | | | |  | | --- | | Select ToolsAnalytical FieldCreate from the main menu bar in the Property module, Interaction module, or Load module to create an analytical mapped field. Analytical fields defined from an external data source are referred to as mapped fields. The external data source can be either point cloud data files or an Abaqus output database (.odb) file. See [Using analytical mapped fields](simacae-m-FldUsingmap-sb.md) for an overview of mapped fields.   --- | | In this section:   * [Creating mapped fields from point cloud data](simacae-t-fldmapptcloudhelp.md) * [Creating mapped fields from output database mesh data](simacae-t-fldmapodbmeshhelp.md) * [Search controls for mapped fields](simacae-c-fldmapcontrolshelp.md) | | | |

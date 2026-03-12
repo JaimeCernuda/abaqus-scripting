@@ -1,0 +1,5 @@
+# Plotting the eigenmodes of the pipe
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Plotting the eigenmodes of the pipe | | |  | | | |  | | --- | | Plot the same six eigenmode shapes of the pipe section for this simulation as were plotted in the previous analysis. The eigenmode shapes can be plotted using the procedures described for the original analysis. These eigenmodes and their natural frequencies are shown in [Figure 1](simagsa-c-plottingtheeigenmodesofthepipe.md#simagsa-c-plottingtheeigenmodesofthepipe__simagsa-c-gss-internalpress); again, the corresponding mode shapes lie in planes orthogonal to each other. | | |   Figure 1. Shapes and frequencies of eigenmodes 1 through 6 with 8 MN tensile load.     Under 8 MN of axial load, the lowest mode is now at 53.1 Hz, which is greater than the required minimum of 50 Hz. If you want to find the exact load at which the lowest mode is just above 50 Hz, you can repeat this restart analysis and change the value of the applied load. |

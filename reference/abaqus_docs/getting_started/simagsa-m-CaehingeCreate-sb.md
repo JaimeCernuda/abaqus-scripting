@@ -1,0 +1,5 @@
+# Creating the first hinge piece
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating the first hinge piece | | |  | | | |  | | --- | | To start the tutorial, you create the first part—half of the hinge. Abaqus/CAE models are composed of features; you create a part by combining features. This portion of the hinge is composed of the following features:  * A cube—the base feature, since it is the first feature of the part. * A flange that extends from the cube. The flange also includes a   large-diameter hole through which the pin is inserted. * A small lubrication hole in one corner of the flange.   --- | | In this section:   * [Creating the cube](simagsa-t-caehingecube.md) * [Adding the flange to the base feature](simagsa-t-caehingeaddflange.md) * [Modifying a feature](simagsa-t-caehingemodflange.md) * [Creating the sketch plane](simagsa-t-caehingelubeplane.md) * [Sketching the lubrication hole](simagsa-t-caehingelubesketch.md) | | | |

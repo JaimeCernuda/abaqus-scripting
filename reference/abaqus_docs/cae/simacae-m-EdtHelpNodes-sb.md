@@ -1,0 +1,5 @@
+# Editing nodes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Editing nodes | | |  | | | |  | | --- | | This section describes how you can use the Edit Mesh toolset to edit the nodes that comprise orphan meshes and Abaqus/CAE native meshes.   --- | | In this section:   * [Creating a node](simacae-t-edthelpmesheditcreatenode.md) * [Editing the position of selected nodes](simacae-t-edthelpmeshediteditmultnodes.md) * [Dragging nodes](simacae-t-edthelpmesheditdragnodes.md) * [Projecting nodes](simacae-t-edthelpmesheditprojectnodes.md) * [Deleting nodes](simacae-t-edthelpmesheditdeletenode.md) * [Merging nodes](simacae-t-edthelpmesheditmerge.md) * [Adjusting the position of midside nodes](simacae-t-edthelpmesheditmidsidenode.md) * [Smoothing external nodes](simacae-t-edthelpmesheditsmoothnodes.md) * [Renumbering nodes](simacae-t-edthelpmesheditrenumber.md) * [Selecting the nodes to edit](simacae-t-edthelpmesheditselectnodes.md) | | | |

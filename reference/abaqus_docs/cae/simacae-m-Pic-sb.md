@@ -1,0 +1,5 @@
+# Selecting objects within the viewport
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Selecting objects within the viewport | | |  | | | |  | | --- | | This chapter explains how to select objects that appear within a viewport, such as nodes, elements, vertices, edges, faces, and cells.  Selecting dialog box options is discussed in [Interacting with dialog boxes](simacae-m-IntDialog-sb.md). Selecting viewports is discussed in [Selecting viewports](simacae-t-cnvselectview.md).   --- | | In this section:   * [Understanding selection within viewports](simacae-m-PicConcepts-sb.md) * [Selecting objects within the current viewport](simacae-m-PicHelptopics-sb.md) * [Using the selection options](simacae-m-PicUsingoptions-sb.md) | | | |

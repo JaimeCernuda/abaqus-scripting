@@ -1,0 +1,5 @@
+# *TORQUE PRINT
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*TORQUE PRINT | | |  | | | |  | | --- | | Print a summary of the total torque that can be transmitted across axisymmetric slide lines. This option is used to obtain a summary of the total torque that can be transmitted across all axisymmetric slide lines in a model.  This page discusses:   * [Optional parameters](#simakey-r-torqueprint__simakey-r-torqueprint-s-paramsoptional1) * [There are no data lines associated with this option.](#simakey-r-torqueprint__simakey-r-torqueprint-s-nodata1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Slide Line Contact Elements](.._SIMACAEITNRefMap_simaitn-c-slidelineelem.md) | |   ProductsAbaqus/Standard  TypeHistory data  LevelStep  Optional parameters FREQUENCY  Set this parameter equal to the output frequency, in increments. When this option is used, the torque output will always be printed at the last increment of each step unless FREQUENCY=0. The default is FREQUENCY=1.  There are no data lines associated with this option. |

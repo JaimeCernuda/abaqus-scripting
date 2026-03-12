@@ -1,0 +1,5 @@
+# UserDefinedField object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | UserDefinedField object | | |  | | | |  | | --- | | The UserDefinedField object redefines field variables at a material point.  This page discusses:   * [Access](#simaker-c-userdefinedfieldcpp__simaker-c-userdefinedfieldcpp-s-cppaccess1) * [UserDefinedField()](#simaker-userdefinedfielduserdefinedfieldcpp) * [Members](#simaker-c-userdefinedfieldcpp-t-pymembersect1) * [Corresponding analysis keywords](#simaker-c-userdefinedfieldcpp-t-pykeywordsect1) | | |   Access  ``` materialApi.materials()[name].userDefinedField() ```  UserDefinedField() This method defines a UserDefinedField object.  Path  ``` materialApi.materials()[name].UserDefinedField ```  Prototype  ``` odb_UserDefinedField& UserDefinedField(); ```  Arguments None.  Return value A UserDefinedField object.  Exceptions None.  Members The UserDefinedField object has no members.  Corresponding analysis keywords * [USER DEFINED FIELD](.._SIMACAEKEYRefMap_simakey-r-userdefinedfield.md#simakey-r-userdefinedfield) |

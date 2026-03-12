@@ -1,0 +1,5 @@
+# Interaction between surfaces
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Interaction between surfaces | | |  | | | |  | | --- | | The interaction between contacting surfaces consists of two components: one normal to the surfaces and one tangential to the surfaces. The tangential component consists of the relative motion (sliding) of the surfaces and, possibly, frictional shear stresses. Each contact interaction can refer to a contact property that specifies a model for the interaction between the contacting surfaces. There are several contact interaction models available in Abaqus; the default model is frictionless contact with no bonding.   --- | | In this section:   * [Behavior normal to the surfaces](simagsa-c-cntintnormsurf.md) * [Sliding of the surfaces](simagsa-c-cntsliding.md) * [Friction models](simagsa-c-cntfriction.md) * [Other contact interaction options](simagsa-c-cntotherconstraints.md) * [Surface-based constraints](simagsa-c-cntsurfbasedconstraints.md) | | | |

@@ -1,0 +1,5 @@
+# Custom dialog boxes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Custom dialog boxes | | |  | | | |  | | --- | | AFXDialog is the base class for the other dialog box classes in the toolkit.  If none of the other dialog box classes suit your needs, you must derive your dialog box from AFXDialog and provide most of the dialog processing yourself. This section describes how you can use AFXDialog to create custom dialog boxes.   --- | | In this section:   * [About custom dialog boxes](simacus-c-dlgdialogsdialogsoverview.md) * [Constructors](simacus-c-dlgdialogsdialogsconstructors.md) * [Sizing and location](simacus-c-dlgdialogssizing.md) * [Action area](simacus-c-dlgdialogsdialogsactionarea.md) * [Custom action area button names](simacus-c-dlgdialogsdialogsactionareanames.md) * [Action button handling](simacus-c-dlgdialogsdialogsactionareahandling.md) | | | |

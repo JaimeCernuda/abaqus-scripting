@@ -1,0 +1,5 @@
+# Normalizing a design response for a shape optimization
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Normalizing a design response for a shape optimization | | |  | | | |  | | --- | | You can normalize the vectors used as terms for the algorithm that calculates a shape optimization. You may want to normalize design responses before you combine them using a weighted combination; for example, if different loads are applied to different regions. If desired, you can apply either of the following nomalizations: | | |  | | --- | | See Also | | [Creating and editing a design response](simacae-t-opzdesignresponseditor.md) | | [Selecting the data source of a design response](simacae-t-opzdesignresponsesource.md) | |   * A normalization based on the maximum value in each design cycle (in effect, a normalization of 1.0 for each cycle). * A normalization based on the initial value of the design response (the maximum value during the first design cycle). |

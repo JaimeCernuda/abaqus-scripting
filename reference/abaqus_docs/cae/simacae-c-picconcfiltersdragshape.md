@@ -1,0 +1,5 @@
+# Modifying the shape of the drag-select region
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Modifying the shape of the drag-select region | | |  | | | |  | | --- | | The selection tools allow you to change the shape of the drag-select region. | | |  | | --- | | See Also | | [Using the selection options](simacae-m-PicUsingoptions-sb.md#simacae-m-PicUsingoptions-sb) | |   From the Selection toolbar, choose one of the following:  Rectangle  Click to indicate one corner of the rectangle, and drag the cursor to the second corner. This tool is selected by default.  Circle  Click to indicate the center of the circle, and drag the cursor to a point on the circumference.  Polygon  Click to indicate one vertex of the polygon, and drag the cursor to the second vertex. You then continue to click on each vertex of the polygon. Click mouse button 2 to indicate you have finished entering vertices. There is no limit to the number of vertices in the polygon. |

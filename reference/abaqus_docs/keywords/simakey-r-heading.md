@@ -1,0 +1,5 @@
+# *HEADING
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*HEADING | | |  | | | |  | | --- | | Print a heading on the output. This option is used to define a title for the analysis.  This page discusses:   * [There are no parameters associated with this option.](#simakey-r-heading__simakey-r-heading-s-noparams1) * [Data lines to print   a heading](#simakey-r-heading__simakey-r-heading-s-datadesc1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Abaqus Model Definition](.._SIMACAEMODRefMap_simamod-c-model.md) | |   ProductsAbaqus/StandardAbaqus/ExplicitAbaqus/CAE  TypeModel data  LevelModel  Abaqus/CAEJob module  There are no parameters associated with this option.  Data lines to print a heading First line  1. The heading.   The heading can be several lines long, but only the first 80 characters of the first line will be saved and printed as a heading. |

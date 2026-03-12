@@ -1,0 +1,5 @@
+# ShellSection object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ShellSection object | | |  | | | |  | | --- | | The ShellSection object defines the properties of a shell section. The ShellSection object is derived from the [Section](simaker-c-sectioncpp.md) object. The ShellSection object has no explicit constructor and no methods or members.  The ShellSection object is derived from the [Section](simaker-c-sectioncpp.md) object.  This page discusses:   * [Access](#simaker-c-shellsectioncpp__simaker-c-shellsectioncpp-s-cppaccess1) * [Members](#simaker-c-shellsectioncpp-t-pymembersect1) | | |   Access  ``` sectionApi.sections()[name] ```  Members The ShellSection object can have the following members:  Prototype  ``` odb_String name() const; odb_TransverseShearShell transverseShear() const; ```  name  An odb\_String specifying the repository key.  transverseShear  A [TransverseShearShell](simaker-c-transverseshearshellcpp.md) object specifying the transverse shear stiffness properties. |

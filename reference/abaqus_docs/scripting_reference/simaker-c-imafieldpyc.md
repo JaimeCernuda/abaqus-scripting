@@ -1,0 +1,5 @@
+# IMAField object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | IMAField object | | |  | | | |  | | --- | | A IMAField is an object used to define material instance name volume fractions for the [MaterialAssignment](simaker-c-materialassignmentpyc.md) predefined field.  This page discusses:   * [Access](#simaker-c-imafieldpyc__simaker-c-imafieldpyc-s-pyaccess1) * [Members](#simaker-c-imafieldpyc-t-pymembersect1) | | |   Access  ``` import load mdb.models[name].predefinedFields[name].fieldList ```  Members The IMAField object can have the following members:  region  A [Region](simaker-c-regionpyc.md) object specifying the sub-region of the selected part instance to which the volume fractions will be applied.  discFieldList  A tuple of Strings specifying the name of the discrete fields that contain the volume fraction data. The length of the tuple corresponds to the number of material instance names, as established by the assigned Eulerian section. |

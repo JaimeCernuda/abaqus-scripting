@@ -1,0 +1,5 @@
+# Using the Mesh module toolbox
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Mesh module toolbox | | |  | | | |  | | --- | | You can access all the Mesh module tools through either the main menu bar or the toolbox. [Figure 1](simacae-c-mgntoolbox.md#simacae-c-mgntoolbox__simacae-c-mgn-toolbox) shows the hidden icons for all the tools in the Mesh module toolbox. | | |   Figure 1. The Mesh module toolbox.    For information on using each of the Mesh module tools, refer to the following sections:   * [Bottom-up meshing](simacae-m-MgnConcBottomup-sb.md) * [Mesh-geometry association](simacae-c-mgnconcassociate.md) * [Seeding a model](simacae-m-MgnSeed-sb.md) * [Creating and deleting meshes](simacae-m-MgnMesh-sb.md) * [Controlling mesh characteristics](simacae-m-MgnMeshChar-sb.md) * [Obtaining mesh information and statistics](simacae-m-MgnQuery-sb.md) |

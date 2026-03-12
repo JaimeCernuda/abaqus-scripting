@@ -1,0 +1,5 @@
+# Work in progress
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Work in progress | | |  | | | |  | | --- | | If the command sent to the kernel takes more than a certain amount of time (approximately one second), the GUI will lock and the busy cursor will be displayed. If you want to provide additional feedback about the progress of your command, you can add work-in-progress commands to your kernel code. For more information, see [Status commands](.._SIMACAEKERRefMap_simaker-c-utlstatuspyc.md). | | |   The following statements illustrate how you can use the milestone command to provide feedback on the progress of a volume computation:   ``` numObjects = 4 for i in range(numObjects+1):     milestone('Computing total volume', 'parts', i, numObjects)     ...     compute volume here      ... ```  Figure 1. Displaying the progress of a command. |

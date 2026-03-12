@@ -1,0 +1,5 @@
+# The Virtual Topology toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Virtual Topology toolset | | |  | | | |  | | --- | | The Virtual Topology toolset allows you to ignore details, such as very small faces and edges, when you mesh a part or a part instance.   --- | | In this section:   * [What is virtual topology?](simacae-c-vtoconcepts.md) * [What can I do with the Virtual Topology toolset?](simacae-c-vtoconceptswhatto.md) * [What can I do with a part or a part instance containing virtual topology?](simacae-c-vtoconceptswhatdo.md) * [Why repair a part if I can use virtual topology?](simacae-c-vtoconceptswhy.md) * [Creating virtual topology based on geometric parameters](simacae-c-vtoconceptsauto.md) * [Using the Virtual Topology toolset](simacae-m-VtoHelp-sb.md) | | | |

@@ -1,0 +1,5 @@
+# Sizing and location
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Sizing and location | | |  | | | |  | | --- | | By default, the user cannot resize a dialog box. However, if a dialog box contains text fields or lists that can be stretched to show more entries, the user should be allowed to resize the dialog box. | | |   Resizing can be allowed by specifying the DECOR\_RESIZE flag in the dialog box constructor.  Note: Dialog boxes created by AFXDialog do not support minimizing and maximizing; they ignore these flags if they are included in the dialog box constructor.  You should never specify the size and location of the dialog box in its constructor. The Abaqus GUI Toolkit will place the dialog box on the screen and determine its proper size. |

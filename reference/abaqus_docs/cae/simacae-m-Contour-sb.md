@@ -1,0 +1,5 @@
+# Contouring analysis results
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Contouring analysis results | | |  | | | |  | | --- | | This section explains contour plotting.  A contour plot displays the values of an analysis variable at a specified step and frame. In addition, a contour plot can be used to show the value of attributes such as loads or predefined fields at a specified step of a model in the current model database. Abaqus/CAE represents the values as customized colored lines, colored bands, colored faces, colored isosurfaces, or tick marks on your model.   --- | | In this section:   * [Understanding contour plotting](simacae-m-ConConcept-sb.md) * [Using contour plot options](simacae-c-connavigating.md) * [Producing a contour plot](simacae-t-conproduce.md) * [Producing a contour plot of linear beam section stresses](simacae-t-conproducebeam.md) * [Customizing a contour plot](simacae-m-ConCustomize-sb.md) | | | |

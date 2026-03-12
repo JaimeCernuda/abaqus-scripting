@@ -1,0 +1,5 @@
+# Model object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Model object | | |  | | | |  | | --- | | The following commands operate on Model objects. For more information about the Model object, see [Model object](simaker-c-modelpyc.md).  This page discusses:   * [Access](#simaker-c-modelkarpyc__simaker-c-modelkarpyc-s-pyaccess1) * [adaptiveRemesh(...)](#simaker-modeladaptiveremeshpyc) | | |   Access  ``` import mesh ```  adaptiveRemesh(...) This method remeshes the model using the active remesh rules in the model and the error indicator results from a previous analysis.  Required arguments odb  An [Odb](simaker-c-odbpyc.md) object containing error output field results.  Optional arguments None.  Return value An [AdaptivityIteration](simaker-c-adaptivityiterationpyc.md) Object.  Exceptions None. |

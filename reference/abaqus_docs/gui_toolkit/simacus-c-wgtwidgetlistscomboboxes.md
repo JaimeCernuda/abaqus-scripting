@@ -1,0 +1,5 @@
+# Combo boxes
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Combo boxes | | |  | | | |  | | --- | | AFXComboBox provides a one-of-many selection from its items.  AFXComboBox combines a read-only text field with a drop-down list. | | |   After the parent argument, the next three arguments to the AFXComboBox constructor are the width of the text field, the number of visible list items when the list is exposed, and the label. If you specify the width as zero, the combo box will automatically size itself to the widest item in its list. For example,   ``` comboBox = AFXComboBox(p, 0, 3, 'AFXComboBox:') comboBox.appendItem('Item 1') comboBox.appendItem('Item 2') comboBox.appendItem('Item 3') ```  Figure 1. An example of a combo box from AFXComboBox. |

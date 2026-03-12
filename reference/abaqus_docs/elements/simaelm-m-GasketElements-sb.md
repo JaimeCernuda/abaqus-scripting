@@ -1,0 +1,5 @@
+# Gasket Elements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Gasket Elements | | |  | | | |  | | --- | | --- | | In this section:   * [About Gasket Elements](simaelm-c-gasketoverview.md) * [Choosing a Gasket Element](simaelm-c-gasketelem.md) * [Including Gasket Elements in a Model](simaelm-c-gasketusage.md) * [Defining the Gasket Element's Initial Geometry](simaelm-c-gasketinit.md) * [Defining the Gasket Behavior Using a Material Model](simaelm-c-gasketmatbehavior.md) * [Defining the Gasket Behavior Directly Using a Gasket Behavior Model](simaelm-c-gasketbehavior.md) * [Defining a Thermal Interaction for a Gasket Element](simaelm-c-gasketthermalinteraction.md#simaelm-c-gasketthermalinteraction) * [Two-Dimensional Gasket Element Library](simaelm-r-gasket2d.md) * [Three-Dimensional Gasket Element Library](simaelm-r-gasket3d.md) * [Axisymmetric Gasket Element Library](simaelm-r-gasketaxi.md) | | | |

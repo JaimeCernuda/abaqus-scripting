@@ -1,0 +1,5 @@
+# Displaying a material orientation plot
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying a material orientation plot | | |  | | | |  | | --- | | The material orientation plot will be created at the step and frame of the analysis you specified previously. | | |   From the main menu bar, select PlotMaterial OrientationsOn Deformed Shape. |  | | --- | | Tip: You can also display a material orientation plot using the  tool in the Visualization module toolbox. |  A material orientation plot appears, as shown in [Figure 1](simagsa-t-vismodmatorientdisplay.md#simagsa-t-vismodmatorientdisplay__simagsa-t-gst-tut3-matorientplot). Figure 1. Material orientation plot.    Material orientation triads at element integration points indicate the material directions of each element in the model. |

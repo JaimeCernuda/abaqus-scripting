@@ -1,0 +1,5 @@
+# Step commands (output)
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Step commands (output) | | |  | | | |  | | --- | | Step output commands are used for configuring output requests, integrated output sections, diagnostic printing, monitoring, and restart.   --- | | In this section:   * [DiagnosticPrint object](simaker-c-diagnosticprintpyc.md) * [FieldOutputRequest object](simaker-c-fieldoutputrequestpyc.md) * [FieldOutputRequestState object](simaker-c-fieldoutputrequeststatepyc.md) * [HistoryOutputRequest object](simaker-c-historyoutputrequestpyc.md) * [HistoryOutputRequestState object](simaker-c-historyoutputrequeststatepyc.md) * [IntegratedOutputSection object](simaker-c-integratedoutputsectionpyc.md) * [Monitor object](simaker-c-monitorpyc.md) * [Restart object](simaker-c-restartpyc.md) * [TimePoint object](simaker-c-timepointpyc.md) | | | |

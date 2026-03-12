@@ -1,0 +1,5 @@
+# Importing and exporting geometry data and models
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Importing and exporting geometry data and models | | |  | | | |  | | --- | | This section describes the files that can be imported into and exported from Abaqus/CAE.   --- | | In this section:   * [Importing files into and exporting files from Abaqus/CAE](simacae-m-ImpConcepts-sb.md) * [Valid parts, precise parts, and tolerance](simacae-m-ImpConceptsPrecision-sb.md) * [Controlling the import process](simacae-m-ImpConceptsRepair-sb.md) * [Understanding the contents of an IGES file](simacae-m-ImpConceptsIges-sb.md) * [What can you import from a model?](simacae-m-ImpModels-sb.md) * [A logical approach to successful import of IGES files](simacae-c-impconceptsapproach.md) * [Importing sketches and parts](simacae-m-ImpHelptopics-sb.md) * [Importing a model](simacae-t-impinputfilereader.md) * [Exporting geometry, model, and mesh data](simacae-m-ImpExport-sb.md) | | | |

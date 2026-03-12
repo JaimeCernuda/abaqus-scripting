@@ -1,0 +1,5 @@
+# Suggested reading
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Suggested reading | | |  | | | |  | | --- | | The following references provide additional information on contact analysis with finite element methods. They allow the interested user to explore the topic in more depth. | | |   General texts on contact analysis  * Belytschko, T., W. K. Liu, and B. Moran,   Nonlinear Finite Elements for   Continua and Structures, Wiley & Sons, 2000. * Crisfield, M. A.,   Non-linear Finite Element   Analysis of Solids and Structures, Volume II: Advanced   Topics, Wiley & Sons, 1997. * Johnson, K. L.,   Contact   Mechanics, Cambridge, 1985. * Oden, J. T., and G. F. Carey,   Finite Elements: Special   Problems in Solid Mechanics, Prentice-Hall, 1984.  General text on digital signal proccesing  * Stearns, S. D., and R. A. David,   Signal Processing Algorithms   in MATLAB, Prentice Hall P T R, 1996. |

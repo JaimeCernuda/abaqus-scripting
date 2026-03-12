@@ -1,0 +1,5 @@
+# Reproducing the cantilever beam tutorial
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Reproducing the cantilever beam tutorial | | |  | | | |  | | --- | | This section explains how to use the Abaqus Scripting Interface commands to reproduce a tutorial that shows the basic steps to create and analyze a simple model. The tutorial, [Creating and Analyzing a Simple Model in Abaqus/CAE](.._SIMACAEGSARefMap_simagsa-m-Caebeam-sb.md#simagsa-m-Caebeam-sb), is available in [Getting Started with Abaqus/CAE](.._SIMACAEGSARefMap_simagsa-c-ov.md#simagsa-c-ov).   --- | | In this section:   * [About the cantilever beam example](simacmd-c-intexabeamdesc.md#simacmd-c-intexabeamdesc) * [Running the example](simacmd-t-intexabeamstart.md) * [The cantilever beam example script](simacmd-c-intexabeamscript.md) | | | |

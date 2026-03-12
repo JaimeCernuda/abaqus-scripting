@@ -1,0 +1,5 @@
+# Using the constraint editors
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the constraint editors | | |  | | | |  | | --- | | This section explains how to enter data in the constraint editor to define specific types of constraints.   --- | | In this section:   * [Defining tie constraints](simacae-t-itnhelptied.md) * [Defining rigid body constraints](simacae-t-itnhelptopicrigid.md) * [Defining display body constraints](simacae-t-itnhelptopicdisplay.md) * [Defining coupling constraints](simacae-t-itnhelptopiccoupling.md) * [Defining adjust points constraints](simacae-t-itnhelptopicadjustpts.md) * [Defining MPC constraints](simacae-t-itnhelptopicmultipoint.md) * [Defining shell-to-solid coupling constraints](simacae-t-itnhelptopicstscoup.md) * [Defining embedded region constraints](simacae-t-itnhelptopicembedded.md) * [Defining equation constraints](simacae-t-itnhelptopicequation.md) | | | |

@@ -1,0 +1,5 @@
+# Defining an L-shaped profile
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining an L-shaped profile | | |  | | | |  | | --- | | Define an L-shaped profile by providing geometric data for an L-beam section. | | |  | | --- | | See Also | | [Defining profiles](simacae-c-prppropprofile.md) | | [Defining sections](simacae-c-prppropsection.md) |  |  | | --- | |  | | In Other Guides | | [Beam Cross-Section Library](.._SIMACAEELMRefMap_simaelm-c-beamcrosssectlib.md) | |   1. Display the Edit Profile dialog box, as described in [Choosing a profile type](simacae-t-prpsectionprofilescreate.md). 2. In the a field, enter the length of the flange parallel to the local 1-axis. 3. In the b field, enter the length of the flange parallel to the local 2-axis. 4. In the t1 field, enter the thickness of the flange parallel to the local 1-axis. 5. In the t2 field, enter the thickness of the flange parallel to the local 2-axis. 6. Click OK to save the profile and to close the Edit Profile dialog box. |

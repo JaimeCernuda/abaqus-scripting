@@ -1,0 +1,5 @@
+# Creating datum points
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating datum points | | |  | | | |  | | --- | | This section describes the tools that you can use to create a datum point.   --- | | In this section:   * [Creating a datum point by entering its coordinates](simacae-t-dtmpointcoord.md) * [Creating a datum point at an offset from a selected point](simacae-t-dtmpointoffset.md) * [Creating a datum point midway between two points](simacae-t-dtmpointmidway.md) * [Creating a datum point at a specified distance from two edges](simacae-t-dtmpointedges.md) * [Creating a datum point by entering an edge parameter](simacae-t-dtmpointedgeparam.md) * [Creating a datum point by projecting a point on a face or plane](simacae-t-dtmpointface.md) * [Creating a datum point by projecting a point on an edge or datum axis](simacae-t-dtmpointedge.md) | | | |

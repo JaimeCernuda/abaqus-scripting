@@ -1,0 +1,5 @@
+# Substructures
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Substructures | | |  | | | |  | | --- | | This section explains how to integrate substructures into your analysis in Abaqus/CAE.   --- | | In this section:   * [Using substructures in Abaqus/CAE](simacae-m-AdvSubstrOverview-sb.md) * [Generating a substructure](simacae-c-advsubstrgenerate.md) * [Specifying the retained nodal degrees of freedom and load cases for a substructure](simacae-c-advsubstrdofs.md) * [Importing a substructure into Abaqus/CAE](simacae-c-advsubstrimport.md) * [Using substructure part instances in an assembly](simacae-c-advsubstrinstance.md) * [Activating load cases during substructure usage](simacae-c-advsubstrload.md) * [Recovering field output for substructures](simacae-c-advsubstrrecovery.md) * [Visualizing substructure output](simacae-c-advsubstrvis.md) | | | |

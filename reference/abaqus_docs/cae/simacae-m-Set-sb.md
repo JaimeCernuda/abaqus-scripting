@@ -1,0 +1,5 @@
+# The Set and Surface toolsets
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Set and Surface toolsets | | |  | | | |  | | --- | | When you need to specify a region of your model (for example, to apply a load or to define contact), you can select the region from the viewport or you can define a set or a surface that contains the region. You use the Set and Surface toolsets to create and manage sets and surfaces.  The Set and Surface toolsets are available from the Tools menu in the main menu bar in all modules except the Visualization module.   --- | | In this section:   * [Understanding the role of the Set and Surface toolsets](simacae-c-setintro.md) * [Understanding sets and surfaces](simacae-m-SetConcepts-sb.md) * [Using the Set and Surface toolsets](simacae-m-SetHelptopics-sb.md) | | | |

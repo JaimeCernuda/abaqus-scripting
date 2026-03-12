@@ -1,0 +1,5 @@
+# Records Written for Any Radiation File Output Request
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Records Written for Any Radiation File Output Request | | |  | | | |  | | --- | | This section describes the format of the individual records in the Abaqus results file.   * [Record Format: Records Written for Any Radiation File Output Request](#simaout-c-format-t-RecordsWrittenForAnyRadiationFileOutputRequest-recordlist44) | | |     Record Format: Records Written for Any Radiation File Output Request 1603 Output request definition  1. Radiation file output (1). 2. Cavity    name. 3. Surface name. 4. Element set    name.  1604 Facet header record  1. (Underlying)    user element number. 2. Element face key    (1–S1, 2–S2,    3–S3, 4–S4,    5–S5, 6–S6,    7–SPOS,    8–SNEG) 3. Facet    area.  231 Radiation flux density  1. Magnitude.  232 Radiation flux  1. Magnitude.  233 Time integrated radiation flux density  1. Magnitude.  234 Time integrated radiation flux  1. Magnitude.  235 Total view factor (sum of view factor matrix row)  1. Magnitude.  236 Facet temperature  1. Magnitude. |

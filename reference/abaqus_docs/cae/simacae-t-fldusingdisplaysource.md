@@ -1,0 +1,5 @@
+# Displaying symbols to visualize mapping source data
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Displaying symbols to visualize mapping source data | | |  | | | |  | | --- | | You can plot your mapping source data separately from the load, interaction, or predefined field where it is applied. Plotting of source data is supported only for analytical mapped fields created from point cloud data in XYZ format. | | |   1. From the Model Tree, expand the Fields container and the Analytical Fields container to display the mapped field object. 2. Click mouse button 3 on the mapped field object, and select Plot source data from the menu that appears.  The displayed symbols represent the locations and relative magnitudes (field values) of the source data points. The magnitudes are color coded using a rainbow color spectrum from red (for the maximum value) to blue (for the minimum value), as shown in [Figure 1](simacae-t-fldusingdisplaysource.md#simacae-t-fldusingdisplaysource__simacae-t-fld-mapsrc-colors). Figure 1. Color coding used for visualizing mapping source data. |

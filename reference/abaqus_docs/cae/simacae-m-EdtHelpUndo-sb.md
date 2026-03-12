@@ -1,0 +1,5 @@
+# Undoing or redoing a change in the Edit Mesh toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Undoing or redoing a change in the Edit Mesh toolset | | |  | | | |  | | --- | | This section describes how you can undo or redo mesh changes that you make with the tools in the Edit Mesh toolset. This section also explains how you can configure the cache that stores the rollback information for your Edit Mesh operations.  These topics also apply to undoing and redoing bottom-up meshing operations (for more information on bottom-up meshing, see [Bottom-up meshing](simacae-m-MgnConcBottomup-sb.md)).   --- | | In this section:   * [Support for undo and redo in the Edit Mesh toolset](simacae-c-edthelpundoexa.md#simacae-c-edthelpundoexa) * [Undoing or redoing mesh editing actions](simacae-t-edthelpundoundoredo.md) * [Enabling undo and managing the cache](simacae-t-edthelpundocache.md) | | | |

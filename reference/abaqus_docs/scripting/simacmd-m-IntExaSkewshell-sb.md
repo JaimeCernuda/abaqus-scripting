@@ -1,0 +1,5 @@
+# Investigating the skew sensitivity of shell elements
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Investigating the skew sensitivity of shell elements | | |  | | | |  | | --- | | In this example you will use Abaqus/CAE to create the model and store the model in a model database. The script opens the model database and performs a parametric study on the model. The example illustrates how you can use a combination of Abaqus/CAE and the Abaqus Scripting Interface to analyze a problem.   --- | | In this section:   * [Creating the model to analyze](simacmd-c-intexaaclskewcreate.md) * [Changing the skew angle](simacmd-t-intexaaclskeweditgeom.md) * [Using a script to perform a parametric study](simacmd-c-intexaaclskewparametric.md) | | | |

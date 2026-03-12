@@ -1,0 +1,5 @@
+# Terminating an analysis job
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Terminating an analysis job | | |  | | | |  | | --- | | You can use one of the following methods to terminate an analysis job: | | |  | | --- | | See Also | | [Understanding analysis jobs](simacae-m-AnaConcepts-sb.md) | | [Creating, editing, and manipulating jobs](simacae-m-AnaManagejob-sb.md) | |   * From the main menu bar, select JobKilljob of your choice. * In the Job Manager, select the job name and then click Kill. * In the job monitor dialog box for that particular job, click Kill. (For more information, see [Monitoring the progress of an analysis job](simacae-c-anaconcmonitor.md).)   Abaqus/CAE asks you for confirmation, terminates the job, and updates the status of the job in the Job Manager to `Terminated`. |

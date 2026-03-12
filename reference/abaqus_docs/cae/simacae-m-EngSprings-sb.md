@@ -1,0 +1,5 @@
+# Springs and dashpots
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Springs and dashpots | | |  | | | |  | | --- | | This section provides information on how to model springs and dashpots.   --- | | In this section:   * [Defining springs and dashpots](simacae-c-engspringsoverview.md) * [Managing springs and dashpots](simacae-c-engspringsmanage.md) * [Creating springs and dashpots connecting two points](simacae-t-engspringscreatetwo.md) * [Editing springs and dashpots connecting two points](simacae-t-engspringsedit.md) * [Creating springs and dashpots connecting points to ground](simacae-t-engspringscreateground.md) * [Editing the region to which springs and dashpots connecting points to ground are applied](simacae-t-engspringseditregion.md) | | | |

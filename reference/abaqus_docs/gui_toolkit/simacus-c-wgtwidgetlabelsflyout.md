@@ -1,0 +1,5 @@
+# Flyout buttons
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Flyout buttons | | |  | | | |  | | --- | | The AFXFlyoutButton widget displays a flyout popup window. | | |   The flyout popup window contains AFXFlyoutItem widgets and appears when the user presses mouse button 1 on the button and holds down mouse button 1 for a certain time span. If the user simply clicks mouse button 1 quickly on the button, the flyout popup window will not be displayed, and the flyout button will act just like a regular button. The AFXFlyoutButton widget displays the icon of the current target along with a right triangle in the lower right corner to indicate that a flyout popup window can be invoked. For example,  ``` group = AFXToolbarGroup(self) popup = FXPopup(getAFXApp().getAFXMainWindow()) AFXFlyoutItem(popup, '\tFlyout Button 1', squareIcon) AFXFlyoutItem(popup, '\tFlyout Button 2', circleIcon) AFXFlyoutItem(popup, '\tFlyout Button 3', triangleIcon) AFXFlyoutButton(group, popup) popup.create() ``` Figure 1. An example of flyout buttons from AFXFlyoutItem. |

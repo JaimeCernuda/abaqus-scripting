@@ -1,0 +1,5 @@
+# Using the adaptivity process editor
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the adaptivity process editor | | |  | | | |  | | --- | | This section describes how you use the adaptivity process editor to configure the settings of an adaptive remeshing process.   --- | | In this section:   * [Navigating the adaptivity process customization options](simacae-c-anaadpmaneditor.md) * [Configuring adaptivity process attributes](simacae-c-anaadpeditorbasicbtn.md) * [Specifying general adaptivity process settings](simacae-c-anaadpeditorotherbtn.md) * [Controlling adaptivity process memory settings](simacae-c-anaadpeditormemorybtn.md) * [Controlling adaptivity process parallel execution](simacae-c-anaadpeditorparallelizationbtn.md) * [Controlling adaptivity process precision](simacae-c-anaadpeditorprecisionbtn.md) | | | |

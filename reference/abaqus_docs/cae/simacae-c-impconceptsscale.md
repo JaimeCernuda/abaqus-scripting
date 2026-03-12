@@ -1,0 +1,5 @@
+# Scaling a part during the import process
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Scaling a part during the import process | | |  | | | |  | | --- | | When you import a part, you can choose to maintain the dimensions stored in the file, or you can change the scale of the part during the import process. You can do the following: | | |   * Enter a scale factor that Abaqus/CAE will apply to all of the coordinates in the file. Any offset from the origin will be scaled accordingly. * If you are importing a part from an ACIS file, you can read the scale factor, the rotation matrix, and the translation matrix from the file.   You can also change the scale of a part while copying it to a new part. For more information, see [Copying a part](simacae-c-prtconccopy.md). |

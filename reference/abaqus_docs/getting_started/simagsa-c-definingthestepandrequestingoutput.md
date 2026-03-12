@@ -1,0 +1,5 @@
+# Defining the step and requesting output
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining the step and requesting output | | |  | | | |  | | --- | | You can define an explicit step and request output. | | |   Create a single dynamic, explicit step named `Drop`; set the time period to `0.02` s. Accept the default history and field output requests. In addition, request vertical displacement (U3), velocity (V3), and acceleration (A3) history output every 7 × 10−5 s for each of the three chips.   |  | | --- | | Tip: Define the history output request for the first chip; using the History Output Requests Manager, copy the request and edit the domain to define the requests for the other chips. |   Request history output every 7 × 10−5 s for the logarithmic strain components (LE11, LE22, and LE12) and the principal logarithmic strains (LEP) at the top face (section point 5) of the set `BotBoard`. |

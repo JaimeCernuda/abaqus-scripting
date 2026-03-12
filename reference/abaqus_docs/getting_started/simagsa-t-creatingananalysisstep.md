@@ -1,0 +1,5 @@
+# Creating an analysis step
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating an analysis step | | |  | | | |  | | --- | | Create a static, linear perturbation step that follows the initial step of the analysis. | | |   1. In the Model Tree, double-click the Steps container to create a step. Abaqus/CAE switches to the Step module, and the Create Step dialog box appears. A list of all the general procedures and a default step name of `Step-1` is provided. 2. Change the step name to `Apply load`. 3. Select Linear perturbation as the Procedure type. 4. From the list of available linear perturbation procedures in the Create Step dialog box, select Static, Linear perturbation and click Continue. The Edit Step dialog box appears with the default settings for a static linear perturbation step. 5. The Basic tab is selected by default. In the Description field, type `10 kN central load`. 6. Click the Other tab to see its contents; you can accept the default values provided for the step. 7. Click OK to create the step and to exit the Edit Step dialog box. |

@@ -1,0 +1,5 @@
+# Defining superelasticity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining superelasticity | | |  | | | |  | | --- | | You can use the superelastic material model to model Nitinol-type materials that undergo solid-solid, martensitic phase transformation and exhibit superelastic response. This model can also be used to model the stress-induced transformation of austenite to single variant martensite, the stress-induced transformation of martensite to austenite, reorientation of martensite, and the shape setting process.   --- | | In this section:   * [Defining a superelasticity model](simacae-t-prpmechanicalothersuperelasticity.md) * [Defining superelastic hardening](simacae-t-prpmechanicalothersuperelasticityhard.md) * [Defining superelastic hardening modifications](simacae-t-prpmechanicalothersuperelasticityhardmod.md) | | | |

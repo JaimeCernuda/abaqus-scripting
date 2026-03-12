@@ -1,0 +1,5 @@
+# Abaqus/CAE
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Abaqus/CAE | | |  | | | |  | | --- | | This section lists the topics in this guide that apply to Abaqus/CAE.  This page discusses:   * [Eulerian analysis](#simabmk-c-cae-prodidx__genSection17) * [Modeling discontinuities using XFEM](#simabmk-c-cae-prodidx__genSection24) | | |   Eulerian analysis [Deflection of an elastic dam under water pressure](simabmk-c-dambreak.md#simabmk-c-dambreak)  [Eulerian analysis of a collapsing water column](simabmk-c-watercollapse.md#simabmk-c-watercollapse)  Modeling discontinuities using XFEM [Crack propagation in a plate with a hole simulated using XFEM](simabmk-c-xfemplatewithhole.md#simabmk-c-xfemplatewithhole)  [Crack propagation of a single-edge notch simulated using XFEM](simabmk-c-xfemsingleedgenotch.md#simabmk-c-xfemsingleedgenotch) |

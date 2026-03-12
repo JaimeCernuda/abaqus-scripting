@@ -1,0 +1,5 @@
+# Viewing the results of your co-execution
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Viewing the results of your co-execution | | |  | | | |  | | --- | | Once your co-execution is completed, Abaqus/CAE stores the results of each analysis job in an output database. You can use the Visualization module to view the combined results graphically. | | |  | | --- | | See Also | | [Understanding co-executions](simacae-m-AnaCoexecutionconcepts-sb.md) | | [Creating, editing, and manipulating co-executions](simacae-m-AnaManagecoexecution-sb.md) | |   1. From the Co-execution Manager, select the    co-execution name and click Results. The Visualization module starts and presents you with an overlay plot    of both models. 2. Use    the Visualization module    to create and customize different plots of your results. For more information    on using overlay plots, see    [Overlaying multiple plots](simacae-m-Ovr-sb.md). |

@@ -1,0 +1,5 @@
+# Visualizing substructure output
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Visualizing substructure output | | |  | | | |  | | --- | | Abaqus/CAE creates separate output database (.odb) files for each substructure part instance used in the analysis, so you must perform some additional steps if you want to display substructure results in context with the rest of the assembly. The Visualization module provides the following tools that enable you to incorporate substructure results into the rest of the model: | | |  | | --- | | See Also | | [Producing and modifying overlay plots](simacae-m-OvrHlp-sb.md) | | [Combining data from multiple output databases](simacae-t-plgexamplecombineodbs.md) | |   * You can use an overlay plot to display plots of substructure data in the same viewport as a plot of the rest of the assembly. * You can use the Combine ODBs plug-in to combine the data in one or more substructure output database files with the data from the rest of the assembly. |

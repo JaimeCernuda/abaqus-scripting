@@ -1,0 +1,5 @@
+# Defining the load history
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining the load history | | |  | | | |  | | --- | | The blast load is applied at its maximum value instantaneously and is held constant for 3.88 × 10−5 s. Then the load is suddenly removed and held constant at zero. | | |   Create an amplitude definition named `Blast` using the data shown in [Figure 1](simagsa-c-definingtheloadhistory.md#simagsa-c-definingtheloadhistory__simagsa-c-gxi-blast-ampdef). For this problem the pressure load at any given time is the specified magnitude of the pressure load times the value interpolated from the amplitude curve. Figure 1. Tabular data for the blast load amplitude definition.     Create a pressure load named `Blast load`, and select `BlastLoad` as the step in which it will be applied. Apply the load to the surface `LOAD`. Select Uniform for the distribution, specify a value of `1.0E5` Pa for the load magnitude, and select Blast for the amplitude. |

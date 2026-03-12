@@ -1,0 +1,5 @@
+# Data dialog boxes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Data dialog boxes | | |  | | | |  | | --- | | A data dialog box is a dialog box in which data are collected from the user. In contrast, a message dialog box displays only a message and a toolbox just holds buttons. This section describes how you can create a data dialog box.   --- | | In this section:   * [About data dialog boxes](simacus-c-dlgdialogsdatadialogsoverview.md) * [Constructors](simacus-c-dlgdialogsdatadialogsconstructor.md) * [Bailout](simacus-c-dlgdialogsdatadialogsbailout.md) * [Constructor contents](simacus-c-dlgdialogsdatadialogskeywords.md) * [Transitions](simacus-c-dlgdialogsdatadialogstransitions.md) * [Updating your GUI](simacus-c-dlgdialogsprocessupdates.md) * [Action area](simacus-c-dlgdialogsdatadialogsactionarea.md) | | | |

@@ -1,0 +1,5 @@
+# Creating datum planes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating datum planes | | |  | | | |  | | --- | | This section describes the tools that you can use to create a datum plane.   --- | | In this section:   * [Creating a datum plane offset from a principal plane](simacae-t-dtmplanepoffset.md) * [Creating a datum plane at an offset from a selected plane](simacae-t-dtmplaneoffset.md) * [Creating a datum plane passing through three points](simacae-t-dtmplane3pts.md) * [Creating a datum plane through a line and a point](simacae-t-dtmplanelinepoint.md) * [Creating a datum plane passing through a point and normal to an edge](simacae-t-dtmplanepointnormal.md) * [Create a datum plane midway between two points and normal to the line connecting the two points](simacae-t-dtmplane2point.md) * [Creating a datum plane by rotating an existing face through a specified angle](simacae-t-dtmplanerotate.md) | | | |

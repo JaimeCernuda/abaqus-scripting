@@ -1,0 +1,5 @@
+# Understanding optimization
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Understanding optimization | | |  | | | |  | | --- | | An optimization is an iterative process that modifies the structure of your model while it searches for an optimized solution given a set of objectives and constraints that must be satisfied. This section briefly describes the components of an optimization that you can create with the Optimization module. For more detailed information, see [About Structural Optimization](.._SIMACAEANLRefMap_simaanl-c-optover.md).   --- | | In this section:   * [About tasks](simacae-c-opzunderstandingtasks.md) * [About design responses](simacae-c-opzunderstandingdesignresponses.md) * [About objective functions](simacae-c-opzunderstandingobjectivefunctions.md) * [About constraints](simacae-c-opzunderstandingconstraints.md) * [About geometric restrictions](simacae-c-opzunderstandinggeometricrestrictions.md) * [About stop conditions](simacae-c-opzunderstandingstopconditions.md) * [About optimization processes](simacae-c-opzunderstandingprocesses.md) | | | |

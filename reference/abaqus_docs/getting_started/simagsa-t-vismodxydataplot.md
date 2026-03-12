@@ -1,0 +1,5 @@
+# Plotting and customizing the stress-strain curve
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Plotting and customizing the stress-strain curve | | |  | | | |  | | --- | | You will now use the `Stress-Strain` data object that you just created to plot the stress-strain curve. | | |   1. In the XYData container, double-click `Stress-Strain`. A plot of the stress-strain curve appears in the viewport. 2. Your plot of stress versus strain inherited the customized chart settings from your previous plot. To restore the default chart options, do the following:    1. Open the Chart Options dialog box.    2. Toggle off Major in both the X Grid Lines and Y Grid Lines fields.    3. Click Dismiss. 3. The plot of stress versus strain appears, as shown in [Figure 1](simagsa-t-vismodxydataplot.md#simagsa-t-vismodxydataplot__simacae-xyplotcombine). In this figure, the visibility of the plot legend has been suppressed (open the Chart Legend Options dialog box; in the Contents tabbed page, toggle off Show legend). Figure 1. X–Y plot of stress versus strain. |

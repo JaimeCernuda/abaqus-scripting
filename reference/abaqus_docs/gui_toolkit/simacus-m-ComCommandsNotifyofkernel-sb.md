@@ -1,0 +1,5 @@
+# Receiving notification of kernel data changes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Receiving notification of kernel data changes | | |  | | | |  | | --- | | This section describes how the GUI can be notified when kernel objects and custom kernel objects are modified outside the GUI process.   --- | | In this section:   * [Automatically registering a query on kernel objects](simacus-c-comcommandsnotifyofkernelautoregister.md) * [Manually registering a query on kernel objects](simacus-c-comcommandsnotifyofkernelmanualregister.md) * [Using registerQuery on kernelAccess proxy objects](simacus-c-comcommandsnotifyofkernelregisterissues.md) * [Recognizing when custom kernel data change](simacus-c-comcommandsnotifyofkernelcustom.md) | | | |

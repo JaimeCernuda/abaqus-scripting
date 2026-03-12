@@ -1,0 +1,5 @@
+# Using the Query toolset in the Sketcher
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using the Query toolset in the Sketcher | | |  | | | |  | | --- | | You can use the Query toolset to request either general information or module-specific information.  For a discussion of the information displayed by general queries, see [Obtaining general information about the model](simacae-c-qregeneral.md). | | |  | | --- | | See Also | | [Basic Sketcher concepts](simacae-m-SkeBasicconcepts-sb.md) | | [The Query toolset](simacae-m-Qre-sb.md) | |   Select ToolsQuery from the main menu bar, or click the  tool in the Query toolset to start the Query toolset.  The following queries are specific to the Sketcher:  Constraint  Abaqus/CAE displays the constraint type and the names of the constrained entities in the message area and highlights the entities in the sketch.  Detail  Abaqus/CAE displays the number of geometries, vertices, constraints, dimensions, and unconstrained degrees of freedom in the message area. |

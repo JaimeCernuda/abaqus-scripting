@@ -1,0 +1,5 @@
+# Plotting analysis results as symbols
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Plotting analysis results as symbols | | |  | | | |  | | --- | | A symbol plot shows the magnitude and direction of a particular vector or tensor variable at a specified step and frame of the analysis. In addition, a symbol plot can be used to show the magnitude and direction of attributes such as loads or predefined fields at a specified step of a model in the current model database. Abaqus/CAE represents the values as symbols (for example, arrows) at locations on your model. This section explains symbol plotting.   --- | | In this section:   * [Understanding symbol plotting](simacae-c-symconcept.md) * [Using symbol plot options](simacae-c-symnavigating.md) * [Producing a results symbol plot](simacae-t-symproduce.md) * [Producing a symbol plot of free body nodal forces](simacae-t-symfreebody.md) * [Customizing symbol plot appearance](simacae-m-SymBasic-sb.md) | | | |

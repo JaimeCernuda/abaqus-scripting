@@ -1,0 +1,5 @@
+# ABQ_AM_HeatSourceTrajectory_RuleID
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_AM\_HeatSourceTrajectory\_RuleID | | |  | | | |  | | --- | | This event series type is used in special-purpose techniques for additive manufacturing.  This page discusses:   * [Event Series Type Definition](#sma-topic_330C21B894E84B6B92F5F07432F7CD2D) * [Fields](#sma-topic_D72CD997D8634FBE9EC81A8D3D687B80) | | |  | | --- | | See Also | | [Special-Purpose Techniques for Additive Manufacturing](simaanl-m-AMSpecialPurpose-sb.md#simaanl-m-AMSpecialPurpose-sb) | |   ProductsAbaqus/Standard  An event series of type `"ABQ_AM_HeatSourceTrajectory_RuleID"` defines trajectories of the toolpath and eigenstrain rule ID.    Event Series Type Definition ``` [EVENT SERIES TYPE](.._SIMACAEKEYRefMap_simakey-r-eventseriestype.md#simakey-r-eventseriestype), NAME="ABQ_AM_HeatSourceTrajectory_RuleID", FIELDS=1   "Rule ID" ```  Fields Rule ID  Integer strain rule ID (see parameter table type `ABQ_AM_EigenStrain_TrajectoryBased_Rules`). |

@@ -1,0 +1,5 @@
+# Registering persistent toolsets
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Registering persistent toolsets | | |  | | | |  | | --- | | Toolsets that are registered with the main window, as opposed to being registered with a module, are available in the GUI when the application first starts up. In addition, toolsets that are registered with the main window remain available throughout a session as the user switches modules. | | |   To register a toolset, you call the registerToolset method and pass in an instance of the toolset class. You can register a help toolset with the application using the registerHelpToolset method. A toolset that is registered in this manner always appears to the right of all other menus in the menu bar. For more information, see [Registering toolsets](simacus-c-appmoduletoolsets.md). Note: Every application must register viewManipToolsetGui. |

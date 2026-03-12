@@ -1,0 +1,5 @@
+# Modeling Abstractions
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Modeling Abstractions | | |  | | | |  | | --- | | All Abaqus models involve certain abstractions. In addition to the traditional abstractions associated with the finite element method, you can include techniques in your model to obtain more cost-effective solutions.   --- | | In this section:   * [Substructures](simaanl-m-Substructuring-sb.md) * [Submodeling](simaanl-m-Submodeling-sb.md) * [Matrices](simaanl-m-GeneratingMatrices-sb.md) * [Symmetric Model Generation, Results Transfer, and Analysis of Cyclic Symmetry Models](simaanl-m-SymmetricModelGenerationResultsTransferAndAnalysisOfCyclicSymmetryModels-sb.md) * [Periodic Media Analysis](simaanl-c-periodicmedia.md#simaanl-c-periodicmedia) * [Meshed Beam Cross-Sections](simaanl-c-meshedsection.md#simaanl-c-meshedsection) * [Using the Extended Finite Element Method](simaanl-m-UsingXFEM-sb.md) * [Reduced Basis Generation](simaanl-c-reducedbasisgenerationgeneral.md#simaanl-c-reducedbasisgenerationgeneral) | | | |

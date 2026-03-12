@@ -1,0 +1,5 @@
+# ABQ_AM_PowerMagnitude
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | ABQ\_AM\_PowerMagnitude | | |  | | | |  | | --- | | This event series type is used in special-purpose techniques for additive manufacturing.  This page discusses:   * [Event Series Type Definition](#sma-topic_3F217B410BB544C98D6B89C876B11C9D) * [Fields](#sma-topic_21E07474BC7F4978830FB94539185299) | | |  | | --- | | See Also | | [Special-Purpose Techniques for Additive Manufacturing](simaanl-m-AMSpecialPurpose-sb.md#simaanl-m-AMSpecialPurpose-sb) | |   ProductsAbaqus/Standard  An event series of type `"ABQ_AM_PowerMagnitude"` defines trajectories of the toolpath for the laser.    Event Series Type Definition ``` [EVENT SERIES TYPE](.._SIMACAEKEYRefMap_simakey-r-eventseriestype.md#simakey-r-eventseriestype), NAME="ABQ_AM_PowerMagnitude", FIELDS=1   "Power Magnitude (unit of JT^-1)" ```  Fields Power Magnitude  Magnitude of the power of the laser for the segment. |

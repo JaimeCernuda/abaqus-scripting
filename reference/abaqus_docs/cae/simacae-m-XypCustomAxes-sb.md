@@ -1,0 +1,5 @@
+# Customizing X–Y plot axes
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing X–Y plot axes | | |  | | | |  | | --- | | This section explains how you use the Axis Options dialog box to customize the appearance of the plot axes of an X–Y plot.   --- | | In this section:   * [Using X–Y plot axis options](simacae-c-xypnavigate.md) * [Plotting multiple X–Y data objects with different variables](simacae-c-xypaxesmultiple.md) * [Customizing the X–Y plot axis scale](simacae-t-xypaxestype.md) * [Customizing the X–Y plot axis range](simacae-t-xypaxisrange.md) * [Customizing the X–Y plot axis tick mode](simacae-t-xypaxistickmode.md) * [Customizing X–Y plot axis tick marks](simacae-t-xypaxisticks.md) * [Customizing the X–Y plot axis titles](simacae-t-xypaxistitle.md) * [Customizing the placement of X–Y plot axes](simacae-t-xypaxisplacement.md) * [Customizing the X–Y plot axis labels](simacae-t-xypaxislabels.md) * [Customizing the X–Y plot axis color and style](simacae-t-xypaxisstyle.md) | | | |

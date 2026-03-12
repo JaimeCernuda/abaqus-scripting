@@ -1,0 +1,5 @@
+# OdbLoadCase object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | OdbLoadCase object | | |  | | | |  | | --- | | The OdbLoadCase object describes a load case.  This page discusses:   * [Access](#simaker-c-odbloadcasecpp__simaker-c-odbloadcasecpp-s-cppaccess1) * [LoadCase(...)](#simaker-odbloadcaseloadcasecpp) * [Members](#simaker-c-odbloadcasecpp-t-pymembersect1) | | |   Access  ``` odb.steps()[name].frames(i).loadCase() odb.steps()[name].historyRegions()[name].loadCase() odb.steps()[name].loadCases()[name] ```  LoadCase(...) This method creates an OdbLoadCase object.  Path odb.steps()[name].LoadCase  Prototype  ``` odb_LoadCase& LoadCase(const odb_String& name); ```  Required arguments name  An odb\_String specifying the name of the OdbLoadCase object.  Optional arguments None.  Return value An OdbLoadCase object.  Exceptions None.  Members The OdbLoadCase object has members with the same names and descriptions as the arguments to the [LoadCase](simaker-c-odbloadcasecpp.md#simaker-odbloadcaseloadcasecpp) method. |

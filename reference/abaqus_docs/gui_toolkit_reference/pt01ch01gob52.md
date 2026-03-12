@@ -1,0 +1,5 @@
+# AFXStringTarget
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | AFXStringTarget | | |  | | |  |   This class is designed for string targets.     AFXStringTarget  AFXStringTarget(initialValue='')  Constructor.   |  |  |  |  | | --- | --- | --- | --- | | **Argument** | **Type** | **Default** | **Description** | | initialValue | String | '' | Initial value. |  getTypeName  getTypeName()  Returns the name of the target type ("String").  Implements AFXTarget.  getValue  getValue()  Returns the target's current value.  setValue  setValue(newValue)  Sets the target's current value.   |  |  |  |  | | --- | --- | --- | --- | | **Argument** | **Type** | **Default** | **Description** | | newValue | String |  | New value. | |

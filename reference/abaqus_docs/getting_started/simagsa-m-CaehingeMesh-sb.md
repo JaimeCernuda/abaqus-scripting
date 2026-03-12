@@ -1,0 +1,5 @@
+# Meshing the assembly
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Meshing the assembly | | |  | | | |  | | --- | | Meshing the assembly is divided into the following operations:   * Making sure the part instances can be meshed and creating additional partitions where necessary. * Assigning mesh attributes to the part instances. * Seeding the part instances. * Meshing the part instances.   --- | | In this section:   * [Deciding what needs to be partitioned](simagsa-t-caehingepartition1.md) * [Partitioning the flange with the lubrication hole](simagsa-t-caehingepartition2.md) * [Assigning mesh controls](simagsa-t-caehingemeshcontrols.md) * [Assigning the Abaqus element type](simagsa-t-caehingeelement.md) * [Seeding the part instances](simagsa-t-caehingeseed.md) * [Meshing the assembly](simagsa-t-caehingecreatemesh.md) | | | |

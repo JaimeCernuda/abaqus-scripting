@@ -1,0 +1,5 @@
+# Stress wave propagation analysis
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Stress wave propagation analysis | | |  | | | |  | | --- | | In this example you will create a model of a stress wave propagation in a bar. | | |  | | --- | | See Also | | [Abaqus Basics](simagsa-m-Abasics-sb.md#simagsa-m-Abasics-sb) | |   The bar has the dimensions shown in [Figure 1](simagsa-c-ovwexample.md#simagsa-c-ovwexample__simagsa-m-gxi-probdescwaveprp). Figure 1. Schematic for wave propagation in a bar.     To make the problem a one-dimensional strain problem, all four lateral faces are on rollers; thus, the three-dimensional model simulates a one-dimensional problem. The material is steel with the properties shown in [Figure 1](simagsa-c-ovwexample.md#simagsa-c-ovwexample__simagsa-m-gxi-probdescwaveprp). The free end of the bar is subjected to a blast load with a magnitude of 1.0 × 105 Pa and a duration of 3.88 × 10−5 s. The normalized load versus time is shown in [Figure 2](simagsa-c-ovwexample.md#simagsa-c-ovwexample__simagsa-m-gxi-blast-amp-time-v). Figure 2. Blast amplitude versus time. |

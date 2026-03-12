@@ -1,0 +1,5 @@
+# Path and Probe commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Path and Probe commands | | |  | | | |  | | --- | | Path commands are used to define a line through your model by specifying a series of points. You can view results along the path in the form of an X–Y plot. Probe commands are used to determine model data and analysis results at selected locations.   --- | | In this section:   * [Path object](simaker-c-pathpyc.md) * [CurrentProbeValues object](simaker-c-currentprobevaluespyc.md) * [FreeBody object](simaker-c-freebodypyc.md) * [NodeQuery object](simaker-c-nodequerypyc.md) * [ProbeOptions object](simaker-c-probeoptionspyc.md) * [ProbeReport object](simaker-c-probereportpyc.md) * [SelectedProbeValues object](simaker-c-selectedprobevaluespyc.md) * [Spectrum object](simaker-c-spectrumpyc.md) * [Stream object](simaker-c-streampyc.md) | | | |

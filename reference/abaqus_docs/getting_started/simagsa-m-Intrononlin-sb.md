@@ -1,0 +1,5 @@
+# Nonlinearity
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Nonlinearity | | |  | | | |  | | --- | | This chapter discusses nonlinear structural analysis in Abaqus.   --- | | In this section:   * [Linear analyses versus nonlinear analyses](simagsa-c-nlnlinvsnonlin.md#simagsa-c-nlnlinvsnonlin) * [Sources of nonlinearity](simagsa-m-NlnSourcenonlin-sb.md) * [The solution of nonlinear problems](simagsa-m-NlnSolution-sb.md) * [Including nonlinearity in an Abaqus analysis](simagsa-c-nlngeometric.md#simagsa-c-nlngeometric) * [Example: nonlinear skew plate](simagsa-m-NlnSkewplate-sb.md) * [Related Abaqus examples](simagsa-c-nlnrelatedexa.md) * [Suggested reading](simagsa-c-nlnsuggestread.md) * [Summary](simagsa-c-nlnsummary.md) | | | |

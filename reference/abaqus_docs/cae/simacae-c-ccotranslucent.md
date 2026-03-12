@@ -1,0 +1,5 @@
+# Changing the translucency
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Changing the translucency | | |  | | | |  | | --- | | By default, Abaqus/CAE displays geometry and mesh elements in the shaded render style using opaque colors. Interior features and features that are behind other objects in the viewport are not visible. | | |   In some cases, Abaqus/CAE applies translucency to the model to help you select interior or hidden entities during a procedure. You can also use the  tool in the Color Code toolbar to toggle translucency on and off when it is not required by a procedure.  To set the percentage of translucency that Abaqus/CAE uses, click the arrow to the right of the  tool. Abaqus/CAE displays a vertical slider. Drag the slider up to make the display colors more opaque or down to make them more transparent. Note:  In the Visualization module, you control translucency from the Other page of the Common plot options or Superimpose plot options dialog box. See [Customizing render style, translucency, and fill color](simacae-m-CustomRender-sb.md) for more information. |

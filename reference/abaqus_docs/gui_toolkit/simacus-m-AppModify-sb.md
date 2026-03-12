@@ -1,0 +1,5 @@
+# Customizing an existing module or toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing an existing module or toolset | | |  | | | |  | | --- | | The previous sections describe how you can create a new module or toolset by starting from an empty base class and adding all the functionality that you need. Alternatively, you may find that you want to use most of the functionality of an existing module or toolset. If a suitable module or toolset exists, it may be easier for you to derive a new module or toolset from it and then add or remove functionality from it. This chapter describes how to make various modifications to an existing module or toolset.   --- | | In this section:   * [Modifying and accessing Abaqus/CAE GUI modules and toolsets](simacus-m-AppModifyCae-sb.md) * [The File toolset](simacus-c-appmodifyfile.md) * [The Tree toolset](simacus-c-appmodifytree.md) * [The Selection toolset](simacus-c-appmodifyselection.md) * [The Help toolset](simacus-c-appmodifyhelp.md) * [An example of customizing a toolset](simacus-c-appmodifyexample.md) | | | |

@@ -1,0 +1,5 @@
+# Point cloud data file formats for mapping
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Point cloud data file formats for mapping | | |  | | | |  | | --- | | Point cloud data files must be plain text files in one of two formats: XYZ or Grid. A point cloud data file in XYZ format must contain the desired field values at a set of coordinates. For a rectangular coordinate system, the points must be given by X-, Y-, and Z-coordinates. If you use a cylindrical or spherical local coordinate system, the appropriate coordinates must be used. The Grid format contains field values at points in a three-dimensional grid. Abaqus/CAE interpolates to fill in any missing field values in your grid data files.   --- | | In this section:   * [XYZ format](simacae-c-fldusingmappointxyz.md) * [Grid format](simacae-c-fldusingmappointgrid.md) | | | |

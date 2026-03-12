@@ -1,0 +1,5 @@
+# Shear panel elements
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Shear panel elements | | |  | | | |  | | --- | | This problem contains basic test cases for one or more Abaqus elements and features.  This page discusses:   * [Elements tested](#simaver-c-shearpanel-t-elementstested1) * [Problem description](#simaver-c-shearpanel-t-probdescr1) * [Results and discussion](#simaver-c-shearpanel-t-resultssect1) * [Input files](#simaver-c-shearpanel-t-inputfiles1) | | |   ProductsAbaqus/Standard  Elements tested SHEAR4  Problem description In this problem a state of simple shear is induced in a single element up to a nominal shear strain of 2%. The material model is isotropic linear elasticity.  The material properties used are Young's modulus = 1.0 × 107 and Poisson's ratio = 0.3.  Results and discussion The computed equivalent shear flow and reaction forces agree well with analytic solutions.  Input files [shear\_shear4.inp](../SIMAINPRefResources/shear_shear4.inp)  SHEAR4 element. |

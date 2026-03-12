@@ -1,0 +1,5 @@
+# Requesting a warning reply from the user
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Requesting a warning reply from the user | | |  | | | |  | | --- | | The getWarningReply function displays a warning dialog box in the center of the main window, and the user clicks on one of the standard reply buttons in the dialog box. The clicked button value is returned to the executing script. For more information, see [getWarningReply](.._SIMACAEKERRefMap_simaker-c-utlgetinputpyc.md#simaker-utlgetinputgetwarningreplypyc). | | |   The following example illustrates the use of the getWarningReply function:   ``` from abaqus import getWarningReply, YES, NO  reply = getWarningReply(message='Okay to continue?', buttons=(YES,NO)) if reply == YES:     print('YES clicked') elif reply == NO:     print('NO clicked') ```   The following figure shows the dialog box that appears when this script is executed: |

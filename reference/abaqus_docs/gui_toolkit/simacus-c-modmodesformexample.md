@@ -1,0 +1,5 @@
+# Form example
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Form example | | |  | | | |  | | --- | | The following example illustrates how to write a form mode. | | |   This first example contains only one dialog box; a subsequent example will extend this form to include multiple dialog boxes.  ``` from abaqusGui import * from plateDB import PlateDB    class PlateForm(AFXForm):      #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     def __init__(self, owner):          AFXForm.__init__(self, owner)          self.cmd = AFXGuiCommand(self, 'Plate', 'examples')         self.nameKw = AFXStringKeyword(self.cmd, 'name', True)         self.widthKw = AFXFloatKeyword(self.cmd, 'width', True)         self.heightKw = AFXFloatKeyword(self.cmd, 'height', True)      #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     def getFirstDialog(self):          self.cmd.setKeywordValuesToDefaults()         return PlateDB(self) ``` |

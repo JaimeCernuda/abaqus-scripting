@@ -1,0 +1,5 @@
+# General-purpose layout managers
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | General-purpose layout managers | | |  | | | |  | | --- | | The Abaqus GUI Toolkit includes three general-purpose layout managers that have similar layout capabilities. | | |   FXPacker  FXPacker is a general-purpose layout manager.  AFXDialog  AFXDialog provides similar capabilities to FXPacker. As a result, you do not need to provide a top-level layout manager as the first child in a dialog box; you can use the layout capabilities of the dialog box instead.  FXGroupBox  FXGroupBox provides the same capabilities as FXPacker. In addition, FXGroupBox can display a labeled border around its children. Abaqus/CAE uses the FRAME\_GROOVE flag to produce a thin border around the children of the group box.  For example,   ``` gb = FXGroupBox(parent, 'Render Style', FRAME_GROOVE) FXRadioButton(gb, 'Wireframe') FXRadioButton(gb, 'Filled') FXRadioButton(gb, 'Shaded') ```  Figure 1. An example of a group box with a labeled border from FXGroupBox. |

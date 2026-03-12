@@ -1,0 +1,5 @@
+# *FOUNDATION
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*FOUNDATION | | |  | | | |  | | --- | | Prescribe element foundations. This option is used to model foundations on elements.  This page discusses:   * [There are no parameters associated with this option.](#simakey-r-foundation__simakey-r-foundation-s-noparams1) * [Data lines to define element foundations](#simakey-r-foundation__simakey-r-foundation-s-datadesc1) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Element Foundations](.._SIMACAEMODRefMap_simamod-c-foundation.md) | |   ProductsAbaqus/StandardAbaqus/CAE  TypeModel data  LevelPartPart instanceAssembly  Abaqus/CAEInteraction module  There are no parameters associated with this option.  Data lines to define element foundations First line  1. Element number or element set label. 2. Foundation type identification, Fn. 3. Foundation stiffness per area (or per length for beams).   Repeat this data line as often as necessary to define foundations for various elements or element sets. |

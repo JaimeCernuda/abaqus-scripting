@@ -1,0 +1,5 @@
+# Adding a feature to a part
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Adding a feature to a part | | |  | | | |  | | --- | | Use the Shape menu to add a feature to the current part. You can do the following:   * Use the Solid tools to add a solid feature to a to a three-dimensional solid part. For more information, see [Adding a solid feature](simacae-m-PrtHelpAddsolid-sb.md). * Use the Shell tools to add a shell feature to a part. For more information, see [Adding a shell feature](simacae-m-PrtHelpAddshell-sb.md). * Use the Wire tools to add a wire feature to a part. For more information, see [Adding a wire feature](simacae-m-PrtHelpAddwire-sb.md). * Use the Cut tools to add a cut feature to a part. For more information, see [Adding a cut feature](simacae-m-PrtHelpAddcut-sb.md). * Use the Blend tools to add a blend feature to a three-dimensional solid part. For more information, see [Blending edges](simacae-m-PrtHelpBlendedges-sb.md). * Use the Transform tool to mirror a part about a selected plane. For more information, see [Mirroring a part](simacae-t-prthelptransformpart.md). | | | |

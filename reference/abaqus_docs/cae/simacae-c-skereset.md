@@ -1,0 +1,5 @@
+# Resetting the view
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Resetting the view | | |  | | | |  | | --- | | The Sketcher toolbox contains a tool for resetting the view. | | |  | | --- | | See Also | | [Using the view manipulation tools](simacae-m-ViwViewManipulate-sb.md) | |   Use the reset view tool  from the Sketcher toolbox to return to the original view. For a diagram of the tools in the Sketcher toolbox, see [The Sketcher tools](simacae-c-sketoolbox.md).  If you are unsure of the part's or assembly's orientation relative to the sketch plane, you can use the view manipulation tools to examine the sketch plane and the object on which you are sketching. When you click the reset view tool, Abaqus/CAE restores the view to the original view orientation displayed when you entered the Sketcher. |

@@ -1,0 +1,5 @@
+# Creating a GUI toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating a GUI toolset | | |  | | | |  | | --- | | Toolsets are similar to modules, except that they can be used in more than one module. Toolsets typically have less functionality than modules because toolsets specialize in performing a specific task, such as partitioning. To create a new GUI toolset, you must follow these steps:  * Derive a new class from a toolset base class. * Create menus in the menu bar. This step is optional. * Create items in the Tools menu. This step is optional. * Create buttons in the toolbar. This step is optional. * Create buttons in the toolbox. This step is optional. * Create modes to collect input from the user and to issue commands.   --- | | In this section:   * [GUI Toolset example](simacus-c-apptoolsetclass.md) * [Creating toolset components](simacus-c-apptoolsetcomponents.md) * [Registering toolsets](simacus-c-apptoolsetregister.md) | | | |

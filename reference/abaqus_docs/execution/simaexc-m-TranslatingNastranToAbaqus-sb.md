@@ -1,0 +1,5 @@
+# Translating Nastran Data to Abaqus Files
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Translating Nastran Data to Abaqus Files | | |  | | | |  | | --- | | The translator from Nastran to Abaqus converts finite element entities in a Nastran text input file into their equivalent in an Abaqus text input file. It can also convert matrix data (DMIGs) to their equivalent in an Abaqus binary SIM file.   --- | | In this section:   * [Translating Nastran Bulk Data in Text Files to Partial Abaqus Input Files](simaexc-c-nasabaproc.md) * [Translating Nastran DMIG Data in Bulk Data Files to an Abaqus Binary SIM File](simaexc-c-nasdmig.md) * [Translating Nastran DMIG Matrix Data in Output2 Binary Files to an Abaqus Binary SIM File](simaexc-c-nasdmigbinary.md) | | | |

@@ -1,0 +1,5 @@
+# Overview of co-simulation
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Overview of co-simulation | | |  | | | |  | | --- | | The procedure for modeling and running a co-simulation in Abaqus/CAE involves the following general steps:  1. Create the models in a single model database. 2. Optionally, link part instances between models and exclude the linked    instances from the analyses. 3. Optionally, ensure matching nodes at the interface regions. 4. In each model, create a co-simulation interaction to specify the interface    region and coupling schemes. 5. Create a co-execution to identify the two models involved and specify the    job parameters for each analysis. 6. Submit the co-execution to perform the co-simulation. 7. View the results of the co-simulation using overlay plots. | | | |

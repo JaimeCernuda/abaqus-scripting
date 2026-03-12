@@ -1,0 +1,5 @@
+# Return value
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Return value | | |  | | | |  | | --- | | All commands return a value. Many commands return the `None` object described in [Python None](simacmd-c-intpytintronone.md). Constructors (methods that create an object) always return the object being created. The return value of a command can be assigned to a Python variable. For example, in the following statement the Viewport constructor returns a Viewport object, and the variable `newViewport` refers to this new object.  ``` newViewport = session.Viewport(name='myViewport',      origin=(10, 10), width=100, height=50) ```  You can use the object returned by a command in subsequent statements. For example, the titlebar member of a Viewport object is a Boolean specifying whether the viewport title bar is displayed and can have a value of either ON or OFF. The following statement tests the titlebar member of the new viewport created by the previous statement:  ``` if newViewport.titleBar:     print('The title bar will be displayed.') ``` | | | |

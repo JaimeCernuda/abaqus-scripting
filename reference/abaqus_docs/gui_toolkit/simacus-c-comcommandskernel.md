@@ -1,0 +1,5 @@
+# Kernel commands
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Kernel commands | | |  | | | |  | | --- | | A kernel command can include a method, an object, and arguments. | | |   A kernel command can consist of the following parts:  ``` object + method + arguments (keywords) ```  Commands do not always have an object or even arguments, but they will always have a method.  For example:   ``` session.viewports['Viewport: 1'].setValues(width=50, height=100) |----------- object ------------|  method |---- arguments ----|  mdb.models[Model-1'].PointSection(name='Section-3', mass=1.0) |----- object ------|-- method --|------- arguments --------|  session.viewports['Viewport: 1']. bringToFront() |---------- object -------------|-- method --|  LeafFromElementSets(elementSets='PART-1-1.E1') |----- method -----|------- arguments -------| ``` |

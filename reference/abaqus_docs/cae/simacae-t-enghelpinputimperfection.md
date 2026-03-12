@@ -1,0 +1,5 @@
+# Defining input imperfections
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining input imperfections | | |  | | | |  | | --- | | You can define input imperfection on an assembly. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Introducing a Geometric Imperfection into a Model](.._SIMACAEANLRefMap_simaanl-c-imperfection.md) | |   1. From the main menu bar in the Interaction module, select     Special    Imperfection    Create. 2. In the Create Imperfection dialog box that appears, name    the imperfection, select Input imperfection, and click    Continue. 3. Select System. 4. Select Input file, which is an .odb    file that is used in the imperfection definition. 5. Click OK to save your data and to close the dialog    box. |

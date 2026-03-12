@@ -1,0 +1,5 @@
+# Entering and exiting the Interaction module
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Entering and exiting the Interaction module | | |  | | | |  | | --- | | You can enter the Interaction module at any time during an Abaqus/CAE session by clicking Interaction in the Module list located in the context bar. Interaction, Constraint, Connector, Special, Feature, and Tools menus appear on the main menu bar; and a Step list appears under the context bar. | | |  | | --- | | See Also | | [Using the Special menu in the Interaction module](simacae-m-ItnSpecialMenu-sb.md) | |   To exit the Interaction module, click another module in the Module list. You need not take any specific action to save objects created in the Interaction module before exiting the module; they are saved automatically when you save the entire model by selecting FileSave or FileSave As from the main menu bar. |

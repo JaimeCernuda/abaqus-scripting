@@ -1,0 +1,5 @@
+# Two-dimensional test cases in linear elastic fracture mechanics
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Two-dimensional test cases in linear elastic fracture mechanics | | |  | | | |  | | --- | | --- | | In this section:   * [Test 1.1: Center cracked plate in tension](simabmk-c-2dlefracturetest1-1.md) * [Test 1.2: Center cracked plate with thermal load](simabmk-c-2dlefracturetest1-2.md) * [Test 2.1: Single edge cracked plate in tension](simabmk-c-2dlefracturetest2-1.md) * [Test 3: Angle crack embedded in a plate](simabmk-c-2dlefracturetest3.md) * [Test 4: Cracks at a hole in a plate](simabmk-c-2dlefracturetest4.md) * [Test 5: Axisymmetric crack in a bar](simabmk-c-2dlefracturetest5.md) * [Test 6: Compact tension specimen](simabmk-c-2dlefracturetest6.md) * [Test 7.1: T-joint weld attachment](simabmk-c-2dlefracturetest7-1.md) * [Test 8.1: V-notch specimen in tension](simabmk-c-2dlefracturetest8-1.md) | | | |

@@ -1,0 +1,5 @@
+# Row and column layout manager
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Row and column layout manager | | |  | | | |  | | --- | | The FXMatrix widget arranges its children in rows and columns. | | |   You can perform the layout row-wise using the default value of the opts argument (MATRIX\_BY\_ROWS) or column-wise by setting opts=MATRIX\_BY\_COLUMNS. If you specify opts=MATRIX\_BY\_ROWS, the matrix will create the specified number of rows and as many columns as are needed to accommodate all its children. Conversely, if you specify opts=MATRIX\_BY\_COLUMNS, the matrix will create the specified number of columns and as many rows as are needed to accommodate all its children.  For example, using the default opts=MATRIX\_BY\_ROWS setting,   ``` m = FXMatrix(parent, 2) FXButton(m, 'Button 1') FXButton(m, 'Button 2') FXButton(m, 'Button 3') FXButton(m, 'Button 4') FXButton(m, 'Button 5') FXButton(m, 'Button 6') ```  Figure 1. An example of a matrix with two rows from FXMatrix. |

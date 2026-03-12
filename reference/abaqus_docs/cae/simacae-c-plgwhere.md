@@ -1,0 +1,5 @@
+# Where can I get plug-ins?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Where can I get plug-ins? | | |  | | | |  | | --- | | Several plug-ins are provided with the Abaqus installation.  You can view these plug-ins by selecting  Plug-ins Abaqus  or Tools from the main menu bar. | | |   For information on how to view a document that describes the plug-in and its usage, see [How can I get information about a plug-in?](simacae-c-plggetinfo.md).  Additional plug-ins are available in the SIMULIA Community ([SIMUILA Community > Learning Resources > 3DEXPERIENCE and Traditional Products > Abaqus > Plug-ins/Scripts](https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/#community:39/wiki:kPVdC6F4QoCUARl7PGhtEA)), which provides example plug-ins as well as access to a community of users that fosters the advance of the Abaqus Scripting Interface and the Abaqus GUI Toolkit. Click Blog and filter by Process Automation to browse plug-in examples in this community. You can also write your own plug-ins, as described in this section. |

@@ -1,0 +1,5 @@
+# HeatGeneration object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | HeatGeneration object | | |  | | | |  | | --- | | The HeatGeneration object includes volumetric heat generation in heat transfer analyses.  This page discusses:   * [Access](#simaker-c-heatgenerationpyc__simaker-c-heatgenerationpyc-s-pyaccess1) * [HeatGeneration()](#simaker-heatgenerationheatgenerationpyc) * [Members](#simaker-c-heatgenerationpyc-t-pymembersect1) * [Corresponding analysis keywords](#simaker-c-heatgenerationpyc-t-pykeywordsect1) | | |   Access  ``` import material mdb.models[name].materials[name].heatGeneration import odbMaterial session.odbs[name].materials[name].heatGeneration ```  HeatGeneration() This method creates a HeatGeneration object.  Path  ``` mdb.models[name].materials[name].HeatGeneration session.odbs[name].materials[name].HeatGeneration ```  Arguments None.  Return value A HeatGeneration object.  Exceptions None.  Members The HeatGeneration object has no members.  Corresponding analysis keywords * [HEAT GENERATION](.._SIMACAEKEYRefMap_simakey-r-heatgeneration.md#simakey-r-heatgeneration) |

@@ -1,0 +1,5 @@
+# Using analytical expression fields
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Using analytical expression fields | | |  | | | |  | | --- | | Analytical expression fields define analytical functions—special types of mathematical functions.  You can use expression fields in many prescribed conditions to define spatially varying parameters. For more information, see the following sections:   * [Using the interaction editors](simacae-m-ItnInteractioneditors-sb.md) * [Using the load editors](simacae-m-LbiLoadeditors-sb.md) * [Using the boundary condition editors](simacae-m-LbiBceditors-sb.md) * [Using the predefined field editors](simacae-m-LbiIceditors-sb.md)   --- | | In this section:   * [Building valid expressions](simacae-c-fldusingcreate.md) * [Operations and functions in expressions](simacae-c-fldusingoperators.md) * [Evaluating expression fields](simacae-c-fldusingevaluate.md) | | | |

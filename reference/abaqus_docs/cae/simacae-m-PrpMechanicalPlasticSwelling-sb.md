@@ -1,0 +1,5 @@
+# Defining swelling
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining swelling | | |  | | | |  | | --- | | You can enter swelling data in tabular form. In addition, user subroutine [CREEP](.._SIMACAESUBRefMap_simasub-c-creep.md#simasub-c-creep) ([CREEP](.._SIMACAESUBRefMap_simasub-c-creep.md)) provides a very general capability for implementing viscoplastic models such as creep and swelling models. See [Volumetric Swelling Behavior](.._SIMACAEMATRefMap_simamat-c-ratedepcreep.md#simamat-c-ratedepcreep-swelling) for more information.   --- | | In this section:   * [Defining a volumetric swelling model](simacae-t-prpmechanicalplasticswellingmodel.md) * [Defining anisotropic swelling](simacae-t-prpmechanicalplasticswellingratios.md) | | | |

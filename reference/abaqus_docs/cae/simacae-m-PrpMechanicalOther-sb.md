@@ -1,0 +1,5 @@
+# Defining other mechanical models
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining other mechanical models | | |  | | | |  | | --- | | You can model deformation plasticity, damping, expansion, brittle cracking, equations of state, viscosity, superelasticity and crush stress.   --- | | In this section:   * [Defining deformation plasticity](simacae-t-prpmechanicalotherdeformation.md) * [Defining damping](simacae-t-prpmechanicalotherdamping.md) * [Defining thermal expansion](simacae-t-prpmechanicalotherexpansion.md) * [Defining brittle cracking](simacae-m-PrpMechanicalOtherBrittlecracking-sb.md) * [Defining equations of state](simacae-m-PrpMechanicalOtherEos-sb.md) * [Defining viscosity](simacae-t-prpmechanicalotherviscosity.md) * [Defining superelasticity](simacae-m-PrpMechanicalOtherSuperelasticity-sb.md) * [Defining crush stress](simacae-m-PrpMechanicalOtherCrushstress-sb.md) * [Defining plasticity correction](simacae-m-PrpMechanicalOtherPlasticitycorrection-sb.md) | | | |

@@ -1,0 +1,5 @@
+# Table Collection commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Table Collection commands | | |  | | | |  | | --- | | Table Collection commands are used to create dynamic table types and tables.   --- | | In this section:   * [ActivateElements object](simaker-c-activateelementspyc.md) * [DataTable object](simaker-c-parameterDataTablepyc.md) * [ElementProgressiveActivation object](simaker-c-elemProgActivationpyc.md) * [EventSeries object](simaker-c-eventseriespyc.md) * [EventSeriesType object](simaker-c-eventseriestypepyc.md) * [ParameterColumn object](simaker-c-parameterColumnpyc.md) * [ParameterTable object](simaker-c-parameterTablepyc.md) * [PropertyTable object](simaker-c-propertytabletypepyc.md) * [PropertyTableData object](simaker-c-propertytabledatapyc.md) * [TableCollection object](simaker-c-tableCollectionpyc.md) | | | |

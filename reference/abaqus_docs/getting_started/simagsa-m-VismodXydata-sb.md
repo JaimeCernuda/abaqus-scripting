@@ -1,0 +1,5 @@
+# Operating on X–Y data
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Operating on X–Y data | | |  | | | |  | | --- | | An X–Y data object is a collection of ordered pairs that Abaqus stores in two columns—an X-column and a Y-column. The Operate on XY Data dialog box allows you to create new X–Y data objects by performing operations on previously saved X–Y data objects. In this tutorial you will create a stress versus strain data object by combining a stress versus time data object with a strain versus time data object. Then, you will plot the stress-strain curve.   --- | | In this section:   * [Creating the stress versus time and strain versus time data objects](simagsa-t-vismodxydatacreate.md) * [Combining the data objects](simagsa-t-vismodxydatacombine.md) * [Plotting and customizing the stress-strain curve](simagsa-t-vismodxydataplot.md) | | | |

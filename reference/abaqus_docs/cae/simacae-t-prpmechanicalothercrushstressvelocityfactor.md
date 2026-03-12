@@ -1,0 +1,5 @@
+# Defining crush stress velocity factor
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining crush stress velocity factor | | |  | | | |  | | --- | | You can specify the influence of the approach velocity at a crushing interface on a material's resistance to crushing. | | |   1. Create a material model as described in [Defining a crush stress model](simacae-t-prpmechanicalothercrushstress.md#simacae-t-prpmechanicalothercrushstress). 2. From the Suboptions menu in the Edit    Material dialog box, select Velocity Factor. A Suboption Editor appears. 3. Enter the following data in the Data table: Scaling factor  Scaling factor.  Relative velocity  Relative velocity between the two surfaces.  For detailed information on how to enter data, see [Entering tabular data](simacae-c-intdialogspreadsheet.md). 4. Click OK to return to the Edit    Material dialog box. |

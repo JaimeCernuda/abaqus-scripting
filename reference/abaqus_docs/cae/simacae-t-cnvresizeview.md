@@ -1,0 +1,5 @@
+# Resizing viewports
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Resizing viewports | | |  | | | |  | | --- | | You can change the size and shape of a viewport by dragging its borders. | | |  | | --- | | See Also | | [Selecting viewports](simacae-t-cnvselectview.md) | | [Managing viewports on the canvas](simacae-m-Cnv-sb.md) | |   1. Place the cursor anywhere on the viewport border that you want to move. The cursor changes to a set of opposing arrows. The direction of the arrows is dependent on the relative position between the cursor and the viewport. 2. Click mouse button 1, and drag the cursor to change the position of the borders. 3. Release mouse button 1. The viewport is displayed with the new size, and it becomes the current viewport (if it was not previously). |

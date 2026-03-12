@@ -1,0 +1,5 @@
+# Default display properties
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Default display properties | | |  | | | |  | | --- | | The previous examples show how you can use commands to set the default field variable and deformed field variable. Abaqus/CAE uses the default field variable setting to determine the variable to display in a contour plot; for example, stress. Similarly, the default deformed field variable determines the variable that distinguishes a deformed plot from an undeformed plot. Typically, you will use displacement for the default deformed field variable; you cannot specify an invariant or a component. The default variable settings apply for each frame in the step. For example, the following statements use the deformation `'U'` as the default setting for both field variable and deformed field variable settings during a particular step:  ```   step1.setDefaultField(tensorField);   step1.setDefaultDeformedField(vectorField); ``` | | |   You can set a different default field variable and deformed field variable for different steps. |

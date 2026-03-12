@@ -1,0 +1,5 @@
+# Submitting a co-execution
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Submitting a co-execution | | |  | | | |  | | --- | | To submit a co-execution, select Co-executionSubmitco-execution name from the main menu bar. (You can also submit a co-execution by selecting the co-execution name in the Co-execution Manager and clicking Submit.) Abaqus/CAE submits the jobs for analysis using the job settings defined in the co-execution editor or the individual job editors. | | |  | | --- | | See Also | | [Understanding co-executions](simacae-m-AnaCoexecutionconcepts-sb.md) | | [Creating, editing, and manipulating co-executions](simacae-m-AnaManagecoexecution-sb.md) | |   The jobs involved in the co-execution appear in the Model Tree in the Jobs container inside the Co-executions container. You can monitor the jobs that you have submitted by clicking mouse button 3 on the job in the Model Tree and selecting Monitor to display the job monitor dialog box. For more information, see [Monitoring the progress of an analysis job](simacae-c-anaconcmonitor.md). |

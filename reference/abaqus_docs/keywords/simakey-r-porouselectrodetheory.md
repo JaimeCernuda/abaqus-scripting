@@ -1,0 +1,5 @@
+# *POROUS ELECTRODE THEORY
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*POROUS ELECTRODE THEORY | | |  | | | |  | | --- | | Activate use of the electrochemistry framework to model a porous electrode. This option is used in a material data block to activate the usage of the electrochemistry framework to model a porous electrode.   * [There are no parameters or data lines associated with this option.](#simakey-r-porouselectrodetheory__simakey-r-porouselectrodetheory-noparamsordata) | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Coupled Thermal-Electrochemical Analysis](.._SIMACAEANLRefMap_simaanl-c-coupthermalelecchem.md) | |   Products Abaqus/Standard  Type Model data  LevelAssembly  There are no parameters or data lines associated with this option. |

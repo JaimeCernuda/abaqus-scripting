@@ -1,0 +1,5 @@
+# Contact capabilities in Abaqus
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Contact capabilities in Abaqus | | |  | | | |  | | --- | | Contact simulations in Abaqus/Standard can either be surface based or contact element based. Contact simulations in Abaqus/Explicit are surface based only. In this guide, surface-based contact is discussed. | | |   Surface-based contact can utilize either the general (“automatic”) contact algorithm or the contact pair algorithm. The general contact algorithm allows for a highly automated contact definition, where contact is based on an automatically generated all-inclusive surface definition. Conversely, the contact pair algorithm requires you to explicitly pair surfaces that may potentially come into contact. Both algorithms require specification of contact properties between surfaces (for example, friction).  The discussion of contact in this guide addresses the contact pair approach and general contact in Abaqus/Standard and general contact in Abaqus/Explicit. |

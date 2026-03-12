@@ -1,0 +1,5 @@
+# Creating a linear elastic material model
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating a linear elastic material model | | |  | | | |  | | --- | | Linear elasticity is the simplest form of elasticity available in Abaqus. The linear elastic model can define isotropic, orthotropic, or anisotropic material behavior and is valid for small elastic strains. See [Specifying elastic material properties](simacae-t-prpmechanicalelasticelasticoverview.md) for details on how to define a linear elastic material model. Failure theories are provided for use with linear elasticity. They can be used to obtain postprocessed output requests.   --- | | In this section:   * [Specifying elastic material properties](simacae-t-prpmechanicalelasticelasticoverview.md) * [Defining stress-based failure measures for an elastic model](simacae-t-prpmechanicalelasticelasticstressfailure.md) * [Defining strain-based failure measures for an elastic model](simacae-t-prpmechanicalelasticelasticstrainfailure.md) | | | |

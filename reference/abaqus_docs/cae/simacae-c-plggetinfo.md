@@ -1,0 +1,5 @@
+# How can I get information about a plug-in?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | How can I get information about a plug-in? | | |  | | | |  | | --- | | The Plug-ins menu that appears in the Abaqus/CAE main menu bar contains an About Plug-ins item that displays the About Plug-ins dialog box. This dialog box lists all the plug-ins that are currently installed. As you click on each plug-in in the tree list, Abaqus/CAE displays information about that plug-in, such as the author and the version. In addition, you can click View in the About Plug-ins dialog box to view a document that describes the plug-in. For more information, see [How can I provide information about a plug-in?](simacae-c-plginfo.md). | | |   This information is specified as optional arguments to the plug-in registration command. As a result, if the author of the plug-in chose not to supply some of these optional arguments, the corresponding information will not be available in the About Plug-ins dialog box. |

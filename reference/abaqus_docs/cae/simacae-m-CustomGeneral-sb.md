@@ -1,0 +1,5 @@
+# Customizing general model display
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Customizing general model display | | |  | | | |  | | --- | | This section explains several of the general model display options.   --- | | In this section:   * [Sweeping and extruding your model](simacae-t-gensweepextrude.md) * [Using mirrors and patterns to display your results](simacae-t-genmirrorpattern.md) * [Refining curved edges and faces](simacae-t-genrefinementframe.md) * [Coloring elements with no results](simacae-t-gennoresultsframe.md) * [Controlling beam profile display for postprocessing](simacae-t-genbeamprofiles.md) * [Controlling shell thickness display for postprocessing](simacae-t-genshellthickness.md) * [Controlling the display of thermal fluid pipe elements](simacae-t-genfluidpipethermal.md#simacae-t-genfluidpipethermal) * [Viewing removed elements](simacae-t-gendeactivelem.md) | | | |

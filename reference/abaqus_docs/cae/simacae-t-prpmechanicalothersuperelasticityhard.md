@@ -1,0 +1,5 @@
+# Defining superelastic hardening
+
+|  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Defining superelastic hardening | | |  | | | |  | | --- | | You specify the dependence of the yield stress on the total strain to define the piecewise linear hardening of martensite. | | |  | | --- | | See Also |  |  | | --- | |  | | In Other Guides | | [Plasticity Model for Superelastic Materials](.._SIMACAEMATRefMap_simamat-c-plastsuperelastic.md#simamat-c-plastsuperelastic) | |   1. Create a material model as described in    [Defining a superelasticity model](simacae-t-prpmechanicalothersuperelasticity.md#simacae-t-prpmechanicalothersuperelasticity). 2. From the Suboptions menu in the Edit    Material dialog box, select Superelastic    Hardening. A Suboption Editor appears. 3. Enter the following data in the Data table: Yield Stress  Yield stress.  Total Strain  Total    strain.  For detailed information on how to enter data, see    [Entering tabular data](simacae-c-intdialogspreadsheet.md). 4. Click OK to return to the Edit    Material dialog box. |

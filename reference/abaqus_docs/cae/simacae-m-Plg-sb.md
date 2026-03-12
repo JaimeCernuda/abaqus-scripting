@@ -1,0 +1,5 @@
+# The Plug-in toolset
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | The Plug-in toolset | | |  | | | |  | | --- | | The Plug-in toolset loads plug-in files into Abaqus/CAE.   --- | | In this section:   * [What is a plug-in?](simacae-c-plgwhatis.md) * [Where can I get plug-ins?](simacae-c-plgwhere.md) * [How can I get information about a plug-in?](simacae-c-plggetinfo.md) * [An example of a Python module and a function](simacae-c-plgwrite.md) * [What can I do with a GUI plug-in?](simacae-c-plgwhatdo.md) * [How do I make a plug-in available from Abaqus/CAE?](simacae-m-PlgRegister-sb.md) * [How are kernel plug-ins executed?](simacae-c-plgexecute.md) * [Overwriting plug-ins](simacae-c-plgoverwrite.md) * [How are GUI plug-ins executed?](simacae-c-plgexecutegui.md) * [Hiding a plug-in's source code](simacae-c-plgregisterhiding.md) * [Displaying exceptions for imported plug-ins at startup](simacae-c-plgregisterexposeexceptions.md) * [Abaqus/CAE modules and plug-ins](simacae-c-plgregistermodules.md) * [How can I provide information about a plug-in?](simacae-c-plginfo.md) | | | |

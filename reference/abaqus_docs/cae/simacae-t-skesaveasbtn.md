@@ -1,0 +1,5 @@
+# Saving the current sketch as a stand-alone sketch
+
+|  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Saving the current sketch as a stand-alone sketch | | |  | | | |  | | --- | | While you are sketching, you can save the current sketch as a stand-alone sketch. Stand-alone sketches are maintained independent of any features; they can be subsequently retrieved into the Sketcher and will overlay any existing geometry. | | |  | | --- | | See Also | | [Managing stand-alone sketches](simacae-m-SkeManaging-sb.md) | | [Stand-alone sketches](simacae-c-skestandalone.md) | |   Context:  Abaqus/CAE saves only items within the sketch. [Reference geometry](simacae-c-skerefgeo.md) is not saved. Similarly, dimensions between vertices and lines from reference geometry are not saved.  1. From the Sketcher toolbox, select the save as tool . For a diagram of the tools in the Sketcher toolbox, see [The Sketcher tools](simacae-c-sketoolbox.md). 2. In the text field that appears in the prompt area, enter the name of the sketch. Abaqus/CAE saves the sketch and returns to the Sketcher. |

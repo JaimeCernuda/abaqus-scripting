@@ -1,0 +1,5 @@
+# Part commands
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Part commands | | |  | | | |  | | --- | | Features in Abaqus/CAE include Parts, Datums, Partitions, and Assembly operations. Part commands create Feature objects on only the Part object. The commands that create Feature objects on only the rootAssembly object are described in [Assembly commands](simaker-m-AsmPyc-sb.md#simaker-m-AsmPyc-sb). The commands that create Feature objects on both the Part and the rootAssembly objects are described in [Feature commands](simaker-m-FtsPyc-sb.md#simaker-m-FtsPyc-sb).   --- | | In this section:   * [Part object](simaker-c-partpyc.md) * [Feature object](simaker-c-featureprtpyc.md) * [AcisFile object](simaker-c-acisfilepyc.md) | | | |

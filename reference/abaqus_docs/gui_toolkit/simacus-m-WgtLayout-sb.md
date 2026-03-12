@@ -1,0 +1,5 @@
+# Layout managers
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Layout managers | | |  | | | |  | | --- | | This section describes how to use the various layout managers in the Abaqus GUI Toolkit to arrange widgets in a dialog box.   --- | | In this section:   * [About layout managers](simacus-c-wgtlayoutmanagers.md) * [Padding and spacing](simacus-c-wgtlayoutmanagerspadding.md) * [Horizontal and vertical frames](simacus-c-wgtlayoutmanagershvframes.md) * [Vertical alignment for composite children](simacus-c-wgtlayoutmanagersvalign.md) * [General-purpose layout managers](simacus-c-wgtlayoutmanagersgeneral.md) * [Row and column layout manager](simacus-c-wgtlayoutmanagersrowcolumn.md) * [Resizable regions](simacus-c-wgtlayoutmanagersresizable.md) * [Rotating regions](simacus-c-wgtlayoutmanagersrotating.md) * [Tab books](simacus-c-wgtlayoutmanagerstab.md) * [Layout hints](simacus-c-wgtlayoutmanagerslayhints.md) * [Layout examples](simacus-c-wgtlayoutmanagerslayexamples.md) * [Tips for specifying layout hints](simacus-c-wgtlayoutmanagerslaytips.md) | | | |

@@ -1,0 +1,5 @@
+# Modules and toolsets
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Modules and toolsets | | |  | | | |  | | --- | | Modules are one of the fundamental concepts of an interactive Abaqus application. A module serves to group functionality into logical units; for example, a unit that creates parts or a unit that meshes the assembly. | | |   An interactive Abaqus application presents only one module at a time to the user. Presenting only one module makes the interface less complicated because the interface shows fewer GUI controls and allows the user to focus on one major task at a time. Abaqus is designed to manipulate modules by swapping in one module’s GUI while swapping out the previous module’s GUI when requested by the user.  Toolsets are similar to modules in that they group functionality into logical units. However, toolsets generally contain less functionality than modules because toolsets focus on one particular task; for example, partitioning. Toolsets can be used in more than one module. |

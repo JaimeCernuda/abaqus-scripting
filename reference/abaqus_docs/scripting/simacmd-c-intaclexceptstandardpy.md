@@ -1,0 +1,5 @@
+# Standard Python exceptions
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Standard Python exceptions | | |  | | | |  | | --- | | Python exceptions arise from either system-related problems, such as a disk or network error, or from programming errors, such as numeric overflow or reference to an index that does not exist. Standard Python exceptions are not described in this guide and are not listed as possible exceptions in the [Abaqus Scripting Reference Guide](.._SIMACAEKERRefMap_simaker-c-ov.md#simaker-c-ov). | | |   Look at the standard Python documentation on the official Python website ([http://www.python.org](http://www.python.org)) for a list of standard Python exceptions. Standard exceptions are described in the Built-in Exceptions section of the Python Library Reference. |

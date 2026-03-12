@@ -1,0 +1,5 @@
+# Amplitude object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Amplitude object | | |  | | | |  | | --- | | The Amplitude object is the abstract base type for other Amplitude objects. The Amplitude object has no explicit constructor. The methods and members of the Amplitude object are common to all objects derived from the Amplitude.  This page discusses:   * [Access](#simaker-c-amplitudecpp__simaker-c-amplitudecpp-s-cppaccess1) * [Members](#simaker-c-amplitudecpp-t-pymembersect1) | | |   Access  ``` amplitudeApi.amplitudes()[name] ```  Members The Amplitude object has the following members:  Prototype  ``` odb_String name() const; odb_String timeSpan() const; ```  name  An odb\_String specifying the repository key.  timeSpan  An odb\_String specifying the time span of the amplitude. Possible values are "STEP" and "TOTAL". The default value is "STEP". |

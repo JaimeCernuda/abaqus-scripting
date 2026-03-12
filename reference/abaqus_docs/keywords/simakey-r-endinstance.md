@@ -1,0 +1,5 @@
+# *END INSTANCE
+
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | \*END INSTANCE | | |  | | | |  | | --- | | End the definition of an instance. This option is used to end an instance definition.   * [There are no parameters or data lines associated with this option.](#simakey-r-endinstance__simakey-r-endinstance-s-noparamsordata1) | | |  | | --- | | See Also | | [\*INSTANCE](simakey-r-instance.md#simakey-r-instance) |  |  | | --- | |  | | In Other Guides | | [Assembly Definition](.._SIMACAEMODRefMap_simamod-c-partassy.md) | |   ProductsAbaqus/StandardAbaqus/ExplicitAbaqus/CAE  TypeModel data  LevelAssembly  Abaqus/CAE[Assembly module](.._SIMACAECAERefMap_simacae-m-Asm-sb.md) for part instances not imported from a previous analysis; [Load module](.._SIMACAECAERefMap_simacae-m-Lbi-sb.md) for part instances imported from a previous analysis  There are no parameters or data lines associated with this option. |

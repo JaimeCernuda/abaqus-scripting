@@ -1,0 +1,5 @@
+# OdbDataStep object
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | OdbDataStep object | | |  | | | |  | | --- | | The OdbDataStep object.  This page discusses:   * [Access](#simaker-c-odbdatasteppyc__simaker-c-odbdatasteppyc-s-pyaccess1) * [setValues(...)](#simaker-odbdatastepsetvaluespyc) * [Members](#simaker-c-odbdatasteppyc-t-pymembersect1) | | |   Access  ``` import visualization session.odbData[name].steps[i] ```  setValues(...) This method modifies the OdbDataStep object.  Required arguments activateFrames  A Boolean specifying whether to activate all the frames in the step.  Optional arguments update  A Boolean specifying whether to update the model. The default value is ON  Return value None.  Exceptions None.  Members The OdbDataStep object has the following member:  frames  An [OdbDataFrameArray](simaker-c-odbdataframepyc.md) object specifying the list of frames. The list is read-only. |

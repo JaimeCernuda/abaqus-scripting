@@ -1,0 +1,5 @@
+# What is in the IGES log file?
+
+|  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | What is in the IGES log file? | | |  | | | |  | | --- | | When you import a part from an IGES file, Abaqus/CAE creates a file called abaqus\_read\_iges.log in the directory from which you started the session. The IGES log file contains information about the entities that were translated along with any problems that were encountered. | | |   Abaqus/CAE overwrites the abaqus\_read\_iges.log file after each IGES import. The following information is written to the IGES log file:   * The global header information. * A summary of the IGES entities found. * IGES read options. The options displayed are the options used by the ACIS geometry engine in Abaqus/CAE during the import. You can control only the following options:    + MSBO   + Read trim curves * A conversion log. * Errors. |

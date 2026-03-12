@@ -1,0 +1,5 @@
+# Creating point-based fasteners
+
+|  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| |  |  | | --- | --- | | Creating point-based fasteners | | |  | | | |  | | --- | | You can create point-based fasteners in the Interaction module by picking each positioning point from the viewport or by reading the coordinates of the positioning points from a file. You can allow Abaqus/CAE to project the positioning point to the closest face along a normal to the surface, or you can specify the direction vector along which the point is projected to the closest face. For more information, see [About fasteners](simacae-m-EngFastenerOverview-sb.md).   --- | | In this section:   * [Defining the surfaces where fasteners will be connected](simacae-t-engfastenerhelppointdomain.md) * [Defining the fastener attachment zone](simacae-t-engfastenerhelppointcriteria.md) * [Defining the fastener properties](simacae-t-engfastenerhelppointproperty.md) * [Defining the fastener formulation](simacae-t-engfastenerhelppointformulation.md) * [Adjusting the fastener definition](simacae-t-engfastenerhelppointadjust.md) | | | |
