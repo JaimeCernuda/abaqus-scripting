@@ -46,11 +46,15 @@ Reproduction of the paper's fatigue specimen using Plato instead of Abaqus+Tosca
 - **Constraint**: 30% volume fraction
 - **HPC**: 2 nodes, 3 MPI ranks, 16 OpenMP threads each
 
-| Side View (Density) | Optimized Shape | Mid-Plane Cross Section |
+| 3D Isometric (ParaView) | Front View (ParaView) | Density Field (matplotlib) |
 |---|---|---|
-| ![IN718 density](plato-tests/in718_specimen/topology_side_view.png) | ![IN718 shape](plato-tests/in718_specimen/topology_thresholded.png) | ![IN718 midplane](plato-tests/in718_specimen/topology_midplane.png) |
+| ![IN718 3D](plato-tests/in718_specimen/in718_shape_iso.png) | ![IN718 front](plato-tests/in718_specimen/in718_shape_front.png) | ![IN718 density](plato-tests/in718_specimen/topology_side_view.png) |
 
-The topology shows load paths from the upper pin to the two lower pins — matching the expected Y-bracket pattern from the Abaqus experiments.
+| Mid-Thickness Clip | Thresholded Shape |
+|---|---|
+| ![IN718 clip](plato-tests/in718_specimen/in718_midclip.png) | ![IN718 thresh](plato-tests/in718_specimen/topology_thresholded.png) |
+
+The topology shows clear Y-bracket load paths from the upper pin to the two lower pins, with void channels carved through the interior — matching the expected pattern from the Abaqus experiments. 26,543 nodes, 135,206 tet4 elements, 2mm mesh, SIMP p=4, 150 iterations.
 
 ### Abaqus vs Plato — IN718 Specimen Comparison
 
@@ -58,8 +62,8 @@ The same 3-pin fatigue specimen analyzed with both stacks:
 
 | | Abaqus (Commercial) | Plato (Open-Source) |
 |---|---|---|
-| **Geometry** | ![Abaqus geometry](paper_reproduction/experiment4/screenshots/geometry/holes_iso_view_wireframe.png) | ![Plato density](plato-tests/in718_specimen/topology_side_view.png) |
-| **Results** | ![Abaqus 20kN](paper_reproduction/experiment4/screenshots/results/results_20kN_elastic_iso.png) | ![Plato shape](plato-tests/in718_specimen/topology_thresholded.png) |
+| **Geometry** | ![Abaqus geometry](paper_reproduction/experiment4/screenshots/geometry/holes_iso_view_wireframe.png) | ![Plato 3D](plato-tests/in718_specimen/in718_shape_iso.png) |
+| **Results** | ![Abaqus 20kN](paper_reproduction/experiment4/screenshots/results/results_20kN_elastic_iso.png) | ![Plato front](plato-tests/in718_specimen/in718_shape_front.png) |
 | **Analysis type** | Static FEA (elastic-plastic, 20/60/100 kN) | Topology optimization (3 load cases, 30% volume) |
 | **Mesh** | C3D10 (quadratic tet), Abaqus CAE | Tet4 (linear tet), Gmsh + netCDF4 |
 | **Solver** | Abaqus Standard | Plato Analyze + ROL |
