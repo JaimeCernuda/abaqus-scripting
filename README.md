@@ -52,6 +52,26 @@ Reproduction of the paper's fatigue specimen using Plato instead of Abaqus+Tosca
 
 The topology shows load paths from the upper pin to the two lower pins — matching the expected Y-bracket pattern from the Abaqus experiments.
 
+### Abaqus vs Plato — IN718 Specimen Comparison
+
+The same 3-pin fatigue specimen analyzed with both stacks:
+
+| | Abaqus (Commercial) | Plato (Open-Source) |
+|---|---|---|
+| **Geometry** | ![Abaqus geometry](paper_reproduction/experiment4/screenshots/geometry/holes_iso_view_wireframe.png) | ![Plato density](plato-tests/in718_specimen/topology_side_view.png) |
+| **Results** | ![Abaqus 20kN](paper_reproduction/experiment4/screenshots/results/results_20kN_elastic_iso.png) | ![Plato shape](plato-tests/in718_specimen/topology_thresholded.png) |
+| **Analysis type** | Static FEA (elastic-plastic, 20/60/100 kN) | Topology optimization (3 load cases, 30% volume) |
+| **Mesh** | C3D10 (quadratic tet), Abaqus CAE | Tet4 (linear tet), Gmsh + netCDF4 |
+| **Solver** | Abaqus Standard | Plato Analyze + ROL |
+| **Parallelism** | Single node | 2 nodes, 3 MPI ranks |
+| **License** | Commercial (Abaqus + Tosca) | Free (BSD) |
+
+**Experiment 10 (Abaqus+Tosca)** — stress-constrained TO with Tosca CLI:
+
+| Stress (von Mises) | Displacement |
+|---|---|
+| ![Stress](paper_reproduction/experiment10/results/production/stress_mises.png) | ![Displacement](paper_reproduction/experiment10/results/production/displacement_magnitude.png) |
+
 ### Running Plato
 
 ```bash
